@@ -4,7 +4,7 @@
 
 - ✅ Un parcours sur un seul téléphone : créer 1 à 4 équipes, choisir 5/10/20 manches, sélectionner les mini-jeux, jouer, puis voir le classement. Implémenté dans `index.html`.
 - ✅ Transfert : révélation chronologique, tentative ou passe, pénalité de −1, points dégressifs, carte à club unique, porteur de téléphone désigné, confirmation de la réponse saisie. Implémenté dans `index.html`.
-- ⏳ Le prototype tourne actuellement avec **6 cartes factices** codées en dur (variété insuffisante pour une vraie soirée). Il faut le premier lot de cartes Transfert vérifiées avant de tester avec du monde.
+- ✅ Premier lot de 25 cartes dans `src/data/transfert-cards.json`, dont **9 vérifiées** (chargées en jeu) et **16 encore à vérifier** (statut marqué par carte, exclues du jeu tant qu'elles ne le sont pas). Variété encore faible pour une vraie soirée — continuer la vérification pour élargir le pool jouable.
 - ⏳ Une vraie partie test à consigner ensuite dans `PLAYTESTS.md`.
 
 ## Arbitrages de game design à faire avant le déroulé complet
