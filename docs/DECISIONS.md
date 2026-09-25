@@ -2,6 +2,11 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-25] Un club peut apparaître deux fois sur une même carte
+- Décision : si un joueur revient dans un club déjà cité plus tôt dans sa carrière (ex. Griezmann, Neymar, Sergio Ramos, Pogba), les deux passages sont affichés normalement dans les indices chronologiques, sans traitement spécial.
+- Raison : c'est un fait réel de carrière, pas une ambiguïté à corriger.
+- Impact technique : aucun — le format de carte gère déjà ce cas nativement.
+
 ## [2026-09-25] Faire tourner le téléphone et vérifier les réponses saisies
 - Décision : avec plusieurs équipes, celle qui suit l'équipe active dans l'ordre tient le téléphone. Avec une seule équipe, elle le tient elle-même. L'équipe active confirme le texte saisi avant validation.
 - Raison : attribuer sans ambiguïté le rôle de meneur et éviter qu'une erreur de saisie soit comptée comme une mauvaise réponse.
