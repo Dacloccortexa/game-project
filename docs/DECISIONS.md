@@ -2,6 +2,11 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-25] Une manche est un tour complet
+- Décision : à chaque manche, chaque équipe joue une carte distincte du mini-jeu sélectionné pour cette manche. Le nombre de manches choisi correspond donc au nombre de cartes jouées par équipe.
+- Raison : garantir le même nombre d'occasions de jouer à chaque équipe, y compris lorsque 5 ou 10 manches ne se divisent pas par 3 ou 4 équipes.
+- Impact technique : une partie de 20 manches à 4 équipes requiert 80 cartes jouables sans répétition ; la composition des manches et le volume de contenu doivent en tenir compte.
+
 ## [2026-09-25] Construire le prototype jeu par jeu
 - Décision : commencer par un prototype jouable de Transfert, puis intégrer les autres mini-jeux un par un.
 - Raison : tester une mécanique réelle avant d'étendre la plateforme.
