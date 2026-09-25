@@ -1,15 +1,23 @@
 # DECISIONS.md
 
-Journal des arbitrages, dans l'ordre chronologique (le plus récent en haut). Chaque entrée explique CE qui a été décidé et POURQUOI.
+Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
-## Format d'une entrée
-```
-## [YYYY-MM-DD] Titre court de la décision
-- Décision : ...
-- Raison : ...
-- Impact technique (si applicable) : ...
-```
+## [2026-09-25] Construire le prototype jeu par jeu
+- Décision : commencer par un prototype jouable de Transfert, puis intégrer les autres mini-jeux un par un.
+- Raison : tester une mécanique réelle avant d'étendre la plateforme.
+- Impact technique : prévoir un socle de configuration de partie, de score et de classement auquel d'autres jeux pourront s'ajouter.
 
----
+## [2026-09-25] Configurer la partie avant de jouer
+- Décision : jouer d'abord sur un seul téléphone, avec 1 à 4 équipes, 5, 10 ou 20 manches, et une sélection de mini-jeux. Tous les jeux disponibles sont cochés par défaut ; au moins un doit rester sélectionné.
+- Raison : permettre aussi bien une partie centrée sur un jeu qu'un mélange de jeux, tout en gardant l'usage actuel simple.
+- Impact technique : la configuration et la composition des manches doivent fonctionner quand un seul mini-jeu est disponible. Le jeu à plusieurs téléphones reste une possibilité future, sans règle ni implémentation décidée à ce stade.
 
-_Aucune décision enregistrée pour l'instant._
+## [2026-09-25] Règles de Transfert et risque d'une tentative
+- Décision : révéler jusqu'à cinq passages de clubs avec leurs années, dans l'ordre chronologique. Une équipe peut répondre une fois ou passer à chaque indice. Une bonne réponse vaut 5, 4, 3, 2 ou 1 point selon l'indice ; une mauvaise réponse retire 1 point et fait passer au suivant ; passer ne coûte rien. Pour un joueur à club unique, l'unique indice « club + années » vaut 5 points.
+- Raison : récompenser une réponse précoce tout en pénalisant les tentatives hasardeuses, sans exclure les joueurs ayant connu un seul club.
+- Impact technique : le score général peut diminuer et le résultat net d'une carte peut être négatif. Les prêts, retours et extraits de carrière doivent être présentés sans ambiguïté.
+
+## [2026-09-25] Vérifier les contenus avant leur mise en jeu
+- Décision : préparer plusieurs cartes, puis faire vérifier leurs faits par un agent avant intégration. La validation factuelle ne dépend pas d'une IA pendant la partie.
+- Raison : une carrière ou une date erronée ferait perdre confiance dans le jeu.
+- Impact technique : les cartes doivent pouvoir conserver leurs sources et leur statut de vérification.
