@@ -4,7 +4,7 @@
 
 - Un parcours sur un seul téléphone : créer 1 à 4 équipes, choisir 5/10/20 manches, sélectionner les mini-jeux (tous cochés par défaut, au moins un), jouer, puis voir le classement.
 - Transfert seulement pour le premier prototype : révélation chronologique des clubs et années, tentative ou passe, pénalité de −1, points dégressifs, carte à club unique.
-- Un lot suffisant de cartes Transfert vérifiées pour tester les durées proposées sans répétition : chaque équipe joue une carte par manche, soit jusqu'à 80 cartes distinctes pour 4 équipes et 20 manches.
+- Un premier lot de cartes Transfert vérifiées, puis des tests pour mesurer si la variété reste suffisante sur 5, 10 et 20 manches. Avec 4 équipes et 20 manches, il y a 80 tirages, mais les cartes peuvent revenir.
 - Une vraie partie test à consigner ensuite dans `PLAYTESTS.md`.
 
 ## Arbitrages de game design à faire avant le déroulé complet
@@ -27,4 +27,4 @@
 ## Questions techniques en attente
 
 - Proposer un format de carte qui conserve clubs, années, prêts/retours, réponse attendue, variantes acceptées, sources et statut de vérification.
-- Proposer la manière de gérer le contenu disponible pour les parties de 5, 10 ou 20 manches sans répétition.
+- Proposer un tirage aléatoire des cartes pour chaque équipe, avec répétition possible, et un moyen d'évaluer les répétitions pendant les tests.
