@@ -2,10 +2,10 @@
 
 ## À prototyper
 
-- Un parcours sur un seul téléphone : créer 1 à 4 équipes, choisir 5/10/20 manches, sélectionner les mini-jeux (tous cochés par défaut, au moins un), jouer, puis voir le classement.
-- Transfert seulement pour le premier prototype : révélation chronologique des clubs et années, tentative ou passe, pénalité de −1, points dégressifs, carte à club unique, porteur de téléphone désigné dans l'ordre des équipes et confirmation de la réponse saisie.
-- Un premier lot de cartes Transfert vérifiées, puis des tests pour mesurer si la variété reste suffisante sur 5, 10 et 20 manches. Avec 4 équipes et 20 manches, il y a 80 tirages, mais les cartes peuvent revenir.
-- Une vraie partie test à consigner ensuite dans `PLAYTESTS.md`.
+- ✅ Un parcours sur un seul téléphone : créer 1 à 4 équipes, choisir 5/10/20 manches, sélectionner les mini-jeux, jouer, puis voir le classement. Implémenté dans `index.html`.
+- ✅ Transfert : révélation chronologique, tentative ou passe, pénalité de −1, points dégressifs, carte à club unique, porteur de téléphone désigné, confirmation de la réponse saisie. Implémenté dans `index.html`.
+- ⏳ Le prototype tourne actuellement avec **6 cartes factices** codées en dur (variété insuffisante pour une vraie soirée). Il faut le premier lot de cartes Transfert vérifiées avant de tester avec du monde.
+- ⏳ Une vraie partie test à consigner ensuite dans `PLAYTESTS.md`.
 
 ## Arbitrages de game design à faire avant le déroulé complet
 
