@@ -17,7 +17,7 @@ Avant de commencer, les joueurs choisissent :
 
 Tous les mini-jeux disponibles sont sélectionnés par défaut. Les joueurs peuvent en retirer, mais doivent en garder au moins un. Si un seul jeu est sélectionné, la partie utilise uniquement ce jeu. Une carte ne doit pas être répétée dans la même partie.
 
-Les équipes cumulent des points au fil des manches. Un classement final est affiché à la fin du nombre de manches choisi. Le déroulé exact d'une manche lorsqu'il y a plusieurs équipes reste à définir avant implémentation.
+Une **manche est un tour complet** : un mini-jeu est choisi parmi ceux inclus dans la partie, puis **chaque équipe joue une carte distincte de ce mini-jeu**. Ainsi, avec 3 équipes et 5 manches, chacune joue 5 cartes. L'ordre des équipes peut tourner entre les manches. Les équipes cumulent leurs points ; le classement final s'affiche après le nombre de manches choisi.
 
 ## Premier mini-jeu : Transfert
 
