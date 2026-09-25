@@ -481,73 +481,27 @@
 (function () {
   "use strict";
 
-  // ---------- Content: cartes Transfert factices (à remplacer par le lot vérifié) ----------
-  var CARDS = [
-    {
-      id: "t1",
-      career: [
-        { club: "AS Cannes", years: "1988–1992" },
-        { club: "Bordeaux", years: "1992–1996" },
-        { club: "Juventus", years: "1996–2001" },
-        { club: "Real Madrid", years: "2001–2006" }
-      ],
-      answer: "Zinedine Zidane",
-      variants: ["zidane", "zizou", "zinedine zidane"]
-    },
-    {
-      id: "t2",
-      career: [
-        { club: "AJ Auxerre", years: "1997–1999" },
-        { club: "Arsenal", years: "1999–2011" },
-        { club: "Barcelone", years: "2011–2014" }
-      ],
-      answer: "Thierry Henry",
-      variants: ["henry", "titi", "thierry henry"]
-    },
-    {
-      id: "t3",
-      career: [
-        { club: "Sporting CP", years: "2002–2003" },
-        { club: "Manchester United", years: "2003–2009" },
-        { club: "Real Madrid", years: "2009–2018" },
-        { club: "Juventus", years: "2018–2021" },
-        { club: "Al-Nassr", years: "2023–présent" }
-      ],
-      answer: "Cristiano Ronaldo",
-      variants: ["ronaldo", "cr7", "cristiano ronaldo", "cristiano"]
-    },
-    {
-      id: "t4",
-      career: [
-        { club: "Sochaux", years: "2011–2013" },
-        { club: "Monaco", years: "2013–2017" },
-        { club: "Paris Saint-Germain", years: "2017–2024" },
-        { club: "Real Madrid", years: "2024–présent" }
-      ],
-      answer: "Kylian Mbappé",
-      variants: ["mbappe", "mbappé", "kylian mbappe", "kylian mbappé"]
-    },
-    {
-      id: "t5",
-      career: [
-        { club: "AS Monaco", years: "2004–2007" }
-      ],
-      answer: "Ludovic Giuly",
-      variants: ["giuly", "ludovic giuly"]
-    },
-    {
-      id: "t6",
-      career: [
-        { club: "Le Havre", years: "2012–2013" },
-        { club: "Lille", years: "2013–2016" },
-        { club: "Napoli", years: "2016–2020" },
-        { club: "Chelsea", years: "2020–2022" },
-        { club: "AC Milan", years: "2022–présent" }
-      ],
-      answer: "Rafael Leão",
-      variants: ["leao", "leão", "rafael leao", "rafael leão"]
-    }
-  ];
+  // ---------- Content: cartes Transfert chargées depuis le fichier vérifié ----------
+  // Seules les cartes au statut "vérifié" dans transfert-cards.json sont chargées en jeu.
+  var CARDS = [];
+  var CARDS_READY = false;
+
+  function loadCards() {
+    return fetch("src/data/transfert-cards.json")
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        CARDS = data.cards
+          .filter(function (c) { return c.verification_status === "vérifié"; })
+          .map(function (c) {
+            return { id: c.id, career: c.career, answer: c.answer, variants: c.variants };
+          });
+        CARDS_READY = CARDS.length > 0;
+      })
+      .catch(function (err) {
+        console.error("Impossible de charger transfert-cards.json", err);
+        CARDS_READY = false;
+      });
+  }
 
   var POINTS_BY_INDEX = [5, 4, 3, 2, 1];
 
@@ -641,8 +595,16 @@
       el("setup-error").classList.remove("hidden-screen");
       return;
     }
+    if (!CARDS_READY) {
+      el("setup-error").textContent = "Les cartes ne sont pas encore chargées (ou le fichier est introuvable). Réessaie dans un instant.";
+      el("setup-error").classList.remove("hidden-screen");
+      return;
+    }
+    el("setup-error").classList.add("hidden-screen");
     startGame();
   });
+
+  loadCards();
 
   // ---------- GAME ENGINE ----------
   function startGame() {

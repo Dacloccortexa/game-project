@@ -1,0 +1,385 @@
+{
+  "_format_notes": "verification_status: 'vérifié' = recherché et confirmé cette session (source fournie). 'à vérifier' = repris du lot brut fourni par David, pas encore recherché individuellement. 'extrait' dans notes = carrière réduite aux passages les plus significatifs (règle des 5 max), les clubs omis ne sont pas listés ici.",
+  "cards": [
+    {
+      "id": "t001",
+      "answer": "Zinédine Zidane",
+      "variants": ["zidane", "zizou"],
+      "career": [
+        { "club": "Cannes", "years": "1989–1992" },
+        { "club": "Bordeaux", "years": "1992–1996" },
+        { "club": "Juventus", "years": "1996–2001" },
+        { "club": "Real Madrid", "years": "2001–2006" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": ""
+    },
+    {
+      "id": "t002",
+      "answer": "Cristiano Ronaldo",
+      "variants": ["ronaldo", "cr7", "cristiano"],
+      "career": [
+        { "club": "Sporting CP", "years": "2002–2003" },
+        { "club": "Manchester United", "years": "2003–2009" },
+        { "club": "Real Madrid", "years": "2009–2018" },
+        { "club": "Juventus", "years": "2018–2021" },
+        { "club": "Al-Nassr", "years": "2023–présent" }
+      ],
+      "sources": ["en.wikipedia.org/wiki/Career_of_Cristiano_Ronaldo", "fourfourtwo.com/cristiano-ronaldo"],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-25",
+      "notes": "extrait — retour à Manchester United (2021–2022) omis pour tenir dans la limite de 5 passages."
+    },
+    {
+      "id": "t003",
+      "answer": "Lionel Messi",
+      "variants": ["messi", "lionel messi"],
+      "career": [
+        { "club": "FC Barcelone", "years": "2004–2021" },
+        { "club": "PSG", "years": "2021–2023" },
+        { "club": "Inter Miami", "years": "2023–présent" }
+      ],
+      "sources": ["skysports.com", "sharesansar.com"],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-25",
+      "notes": ""
+    },
+    {
+      "id": "t004",
+      "answer": "Kylian Mbappé",
+      "variants": ["mbappe", "mbappé", "kylian mbappe"],
+      "career": [
+        { "club": "Monaco", "years": "2015–2017" },
+        { "club": "PSG", "years": "2017–2024" },
+        { "club": "Real Madrid", "years": "2024–présent" }
+      ],
+      "sources": ["pl.soccerway.com/zawodnik/mbappe-kylian", "reuters/ahram.org"],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-25",
+      "notes": "CORRIGÉ — le lot brut indiquait Monaco 2015–2018 (chevauchement erroné avec PSG). Départ réel de Monaco : août 2017."
+    },
+    {
+      "id": "t005",
+      "answer": "Thierry Henry",
+      "variants": ["henry", "titi", "thierry henry"],
+      "career": [
+        { "club": "Monaco", "years": "1994–1999" },
+        { "club": "Arsenal", "years": "1999–2007" },
+        { "club": "FC Barcelone", "years": "2007–2010" },
+        { "club": "New York Red Bulls", "years": "2010–2014" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "extrait — court passage à la Juventus (1999) et prêt retour à Arsenal (2012) omis."
+    },
+    {
+      "id": "t006",
+      "answer": "Ronaldinho",
+      "variants": ["ronaldinho", "ronaldinho gaucho"],
+      "career": [
+        { "club": "Grêmio", "years": "1998–2001" },
+        { "club": "PSG", "years": "2001–2003" },
+        { "club": "FC Barcelone", "years": "2003–2008" },
+        { "club": "AC Milan", "years": "2008–2011" },
+        { "club": "Flamengo", "years": "2011–2012" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "extrait — fin de carrière (Atlético Mineiro, Querétaro, Fluminense) omise."
+    },
+    {
+      "id": "t007",
+      "answer": "David Beckham",
+      "variants": ["beckham", "david beckham"],
+      "career": [
+        { "club": "Manchester United", "years": "1992–2003" },
+        { "club": "Real Madrid", "years": "2003–2007" },
+        { "club": "LA Galaxy", "years": "2007–2012" },
+        { "club": "PSG", "years": "2013" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "extrait — prêts à l'AC Milan (2009, 2010) omis."
+    },
+    {
+      "id": "t008",
+      "answer": "Karim Benzema",
+      "variants": ["benzema", "karim benzema"],
+      "career": [
+        { "club": "Lyon", "years": "2004–2009" },
+        { "club": "Real Madrid", "years": "2009–2023" },
+        { "club": "Al-Ittihad", "years": "2023–présent" }
+      ],
+      "sources": ["flashscore.fi", "gulf-times.com"],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-25",
+      "notes": ""
+    },
+    {
+      "id": "t009",
+      "answer": "Luis Suárez",
+      "variants": ["suarez", "suárez", "luis suarez"],
+      "career": [
+        { "club": "Ajax", "years": "2007–2011" },
+        { "club": "Liverpool", "years": "2011–2014" },
+        { "club": "FC Barcelone", "years": "2014–2020" },
+        { "club": "Grêmio", "years": "2023" },
+        { "club": "Inter Miami", "years": "2024–présent" }
+      ],
+      "sources": ["fotomac.com.tr", "90min.com"],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-25",
+      "notes": "extrait — Nacional (débuts et 2022), Atlético Madrid (2020–2022) omis."
+    },
+    {
+      "id": "t010",
+      "answer": "Robert Lewandowski",
+      "variants": ["lewandowski", "robert lewandowski"],
+      "career": [
+        { "club": "Lech Poznań", "years": "2008–2010" },
+        { "club": "Borussia Dortmund", "years": "2010–2014" },
+        { "club": "Bayern Munich", "years": "2014–2022" },
+        { "club": "FC Barcelone", "years": "2022–présent" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "extrait — premier club (Znicz Pruszków) omis."
+    },
+    {
+      "id": "t011",
+      "answer": "Erling Haaland",
+      "variants": ["haaland", "erling haaland"],
+      "career": [
+        { "club": "Molde", "years": "2017–2019" },
+        { "club": "RB Salzbourg", "years": "2019–2020" },
+        { "club": "Borussia Dortmund", "years": "2020–2022" },
+        { "club": "Manchester City", "years": "2022–présent" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "extrait — club amateur d'origine (Bryne) omis."
+    },
+    {
+      "id": "t012",
+      "answer": "Mohamed Salah",
+      "variants": ["salah", "mohamed salah", "mo salah"],
+      "career": [
+        { "club": "Bâle", "years": "2012–2014" },
+        { "club": "Chelsea", "years": "2014–2016" },
+        { "club": "Roma", "years": "2016–2017" },
+        { "club": "Liverpool", "years": "2017–présent" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "extrait — Al Mokawloon et prêts (Fiorentina, Roma) omis."
+    },
+    {
+      "id": "t013",
+      "answer": "Antoine Griezmann",
+      "variants": ["griezmann", "antoine griezmann"],
+      "career": [
+        { "club": "Real Sociedad", "years": "2009–2014" },
+        { "club": "Atlético Madrid", "years": "2014–2019" },
+        { "club": "FC Barcelone", "years": "2019–2022" },
+        { "club": "Atlético Madrid", "years": "2022–présent" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "attention règle du jeu : ce joueur revient deux fois au même club — vérifier que le format de carte gère bien ce cas avant intégration."
+    },
+    {
+      "id": "t014",
+      "answer": "Neymar",
+      "variants": ["neymar", "neymar jr"],
+      "career": [
+        { "club": "Santos", "years": "2009–2013" },
+        { "club": "FC Barcelone", "years": "2013–2017" },
+        { "club": "PSG", "years": "2017–2023" },
+        { "club": "Al-Hilal", "years": "2023–2025" },
+        { "club": "Santos", "years": "2025–présent" }
+      ],
+      "sources": ["rthk.hk", "eleconomista.com.ar"],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-25",
+      "notes": "même remarque que Griezmann : retour à Santos, même club qu'en début de carrière."
+    },
+    {
+      "id": "t015",
+      "answer": "Zlatan Ibrahimović",
+      "variants": ["ibrahimovic", "ibrahimović", "zlatan"],
+      "career": [
+        { "club": "Malmö", "years": "1999–2001" },
+        { "club": "Ajax", "years": "2001–2004" },
+        { "club": "PSG", "years": "2012–2016" },
+        { "club": "AC Milan", "years": "2020–2023" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "extrait fort — Juventus, Inter, Barcelone, Man United, LA Galaxy et premier passage Milan omis (carrière à plus de 10 clubs)."
+    },
+    {
+      "id": "t016",
+      "answer": "Andrés Iniesta",
+      "variants": ["iniesta", "andres iniesta"],
+      "career": [
+        { "club": "FC Barcelone", "years": "2002–2018" },
+        { "club": "Vissel Kobe", "years": "2018–2023" },
+        { "club": "Emirates Club", "years": "2023–2024" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": ""
+    },
+    {
+      "id": "t017",
+      "answer": "Luka Modrić",
+      "variants": ["modric", "modrić", "luka modric"],
+      "career": [
+        { "club": "Dinamo Zagreb", "years": "2003–2008" },
+        { "club": "Tottenham", "years": "2008–2012" },
+        { "club": "Real Madrid", "years": "2012–2025" },
+        { "club": "AC Milan", "years": "2025–présent" }
+      ],
+      "sources": ["ewn.co.za", "bluewin.ch"],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-25",
+      "notes": "extrait — prêts de jeunesse (Zrinjski Mostar, Inter Zaprešić) omis."
+    },
+    {
+      "id": "t018",
+      "answer": "Sergio Ramos",
+      "variants": ["ramos", "sergio ramos"],
+      "career": [
+        { "club": "Séville", "years": "2004–2005" },
+        { "club": "Real Madrid", "years": "2005–2021" },
+        { "club": "PSG", "years": "2021–2023" },
+        { "club": "Séville", "years": "2023–2024" },
+        { "club": "Monterrey", "years": "2025–présent" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "carte avec retour au même club (Séville) — non vérifiée cette session, à checker en priorité."
+    },
+    {
+      "id": "t019",
+      "answer": "Olivier Giroud",
+      "variants": ["giroud", "olivier giroud"],
+      "career": [
+        { "club": "Montpellier", "years": "2010–2012" },
+        { "club": "Arsenal", "years": "2012–2018" },
+        { "club": "Chelsea", "years": "2018–2021" },
+        { "club": "AC Milan", "years": "2021–2024" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "extrait — clubs de jeunesse et fin de carrière (LAFC, Lille) omis."
+    },
+    {
+      "id": "t020",
+      "answer": "Paul Pogba",
+      "variants": ["pogba", "paul pogba"],
+      "career": [
+        { "club": "Manchester United", "years": "2011–2012" },
+        { "club": "Juventus", "years": "2012–2016" },
+        { "club": "Manchester United", "years": "2016–2022" },
+        { "club": "Juventus", "years": "2022–2024" },
+        { "club": "Monaco", "years": "2025–présent" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "carte avec allers-retours entre deux clubs — non vérifiée cette session, à checker en priorité."
+    },
+    {
+      "id": "t021",
+      "answer": "Eden Hazard",
+      "variants": ["hazard", "eden hazard"],
+      "career": [
+        { "club": "Lille", "years": "2007–2012" },
+        { "club": "Chelsea", "years": "2012–2019" },
+        { "club": "Real Madrid", "years": "2019–2023" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": ""
+    },
+    {
+      "id": "t022",
+      "answer": "Kevin De Bruyne",
+      "variants": ["de bruyne", "kevin de bruyne", "kdb"],
+      "career": [
+        { "club": "Genk", "years": "2008–2012" },
+        { "club": "Chelsea", "years": "2012–2014" },
+        { "club": "Wolfsburg", "years": "2014–2015" },
+        { "club": "Manchester City", "years": "2015–2025" },
+        { "club": "Naples", "years": "2025–présent" }
+      ],
+      "sources": ["90min.com/pt-br", "supersport.com"],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-25",
+      "notes": ""
+    },
+    {
+      "id": "t023",
+      "answer": "Romelu Lukaku",
+      "variants": ["lukaku", "romelu lukaku"],
+      "career": [
+        { "club": "Anderlecht", "years": "2009–2011" },
+        { "club": "Chelsea", "years": "2011–2014" },
+        { "club": "Everton", "years": "2014–2017" },
+        { "club": "Manchester United", "years": "2017–2019" },
+        { "club": "Inter", "years": "2019–2021" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "extrait — deuxième passage Chelsea, prêts Inter/Roma et Naples (actuel) omis ; carrière encore active."
+    },
+    {
+      "id": "t024",
+      "answer": "James Rodríguez",
+      "variants": ["james", "james rodriguez", "james rodríguez"],
+      "career": [
+        { "club": "Envigado", "years": "2006–2008" },
+        { "club": "Porto", "years": "2010–2013" },
+        { "club": "Monaco", "years": "2013–2014" },
+        { "club": "Real Madrid", "years": "2014–2020" },
+        { "club": "León", "years": "2025–présent" }
+      ],
+      "sources": [],
+      "verification_status": "à vérifier",
+      "verified_date": null,
+      "notes": "extrait fort — Bayern Munich, Everton, Al-Rayyan, Olympiacos, São Paulo, Rayo Vallecano omis. Dernier club (León) non vérifié — priorité de check vu la récence."
+    },
+    {
+      "id": "t025",
+      "answer": "Mario Balotelli",
+      "variants": ["balotelli", "mario balotelli", "super mario"],
+      "career": [
+        { "club": "Inter", "years": "2007–2010" },
+        { "club": "Manchester City", "years": "2010–2013" },
+        { "club": "Liverpool", "years": "2014–2016" },
+        { "club": "Genoa", "years": "2024–2025" },
+        { "club": "Al-Ittifaq", "years": "2026–présent" }
+      ],
+      "sources": ["goal.com/en-sa", "beinsports.com"],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-25",
+      "notes": "CORRIGÉ — le lot brut indiquait Genoa 2024–2026 (chevauchement erroné). Genoa l'a libéré à l'été 2025 ; signature Al-Ittifaq confirmée janvier 2026. Extrait fort — AC Milan, Nice, Marseille, Brescia, Monza, Adana Demirspor, Sion omis."
+    }
+  ]
+}
