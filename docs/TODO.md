@@ -1,10 +1,5 @@
 # TODO.md
 
-## À corriger dans la V1 avant un playtest réel
-
-- Remplacer ou retirer les cartes factices qui utilisent de vrais joueurs avec des carrières erronées : `t2` (Thierry Henry), `t4` (Kylian Mbappé), `t5` (Ludovic Giuly) et `t6` (Rafael Leão). La carte `t3` omet le retour de Cristiano Ronaldo à Manchester United sans indiquer qu'elle montre des extraits. Références : [UEFA — Henry](https://www.uefa.com/news-media/news/0254-0d7ccf47eebd-332ce22005f2-1000--henry-sets-sail-for-new-york/), [Real Madrid — Mbappé](https://www.realmadrid.com/en-US/football/squad/kylian-mbappe), [FC Barcelone — Giuly](https://www.fcbarcelona.com/en/football/barca-legends/jugadores/1061570/giuly), [AC Milan — Leão](https://www.acmilan.com/it/news/articoli/statistiche/2019-08-02/rafael-leao-il-nostro-focus), [Manchester United — Ronaldo](https://www.manutd.com/en/news/detail/man-utd-official-statement-on-cristiano-ronaldo-22-november-2022?os=io___).
-- Après la carte d'une équipe, le bouton affiche toujours « Manche suivante », même lorsqu'une autre équipe doit encore jouer dans la même manche. Afficher « Équipe suivante » tant que le tour complet n'est pas fini.
-
 ## À prototyper
 
 - ✅ Un parcours sur un seul téléphone : créer 1 à 4 équipes, choisir 5/10/20 manches, sélectionner les mini-jeux, jouer, puis voir le classement. Implémenté dans `index.html`.
