@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mario Party du Foot — Prototype</title>
+<style>
+  :root {
+    --pitch: #0F3D2E;
+    --pitch-line: #1C5940;
+    --chalk: #F5F3EC;
+    --chalk-dim: #CFE3D8;
+    --gold: #D9A441;
+    --gold-dim: #B8862F;
+    --red: #C0453F;
+    --ink: #0A1712;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: var(--pitch);
+    color: var(--chalk);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(245,243,236,0.03) 39px, rgba(245,243,236,0.03) 40px);
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px) 0;
+    min-height: 100%;
+  }
+
+  .app {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-family: "Arial Black", "Archivo Black", sans-serif;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    margin: 0 0 4px;
+    color: var(--chalk);
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    color: var(--chalk-dim);
+    font-size: 14px;
+    margin: 0 0 28px;
+  }
+
+  h2 {
+    font-family: "Arial Black", "Archivo Black", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+    margin: 0 0 14px;
+    color: var(--gold);
+  }
+
+  .card {
+    background: var(--pitch-line);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(245,243,236,0.08);
+  }
+
+  .field { margin-bottom: 16px; }
+  .field:last-child { margin-bottom: 0; }
+
+  label {
+    display: block;
+    font-size: 13px;
+    color: var(--chalk-dim);
+    margin-bottom: 6px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    background: var(--pitch);
+    border: 1px solid rgba(245,243,236,0.2);
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: var(--chalk);
+    font-size: 16px;
+  }
+  input[type="text"]:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 1px;
+  }
+
+  .team-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .team-row input[type="text"] { flex: 1; }
+  .team-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+
+  .choice-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .choice-btn {
+    flex: 1;
+    min-width: 60px;
+    background: var(--pitch);
+    border: 1px solid rgba(245,243,236,0.2);
+    color: var(--chalk);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .choice-btn.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(245,243,236,0.08);
+  }
+  .checkbox-row:last-child { border-bottom: none; }
+  .checkbox-row input { width: 18px; height: 18px; accent-color: var(--gold); }
+
+  button.primary {
+    width: 100%;
+    background: var(--gold);
+    color: var(--ink);
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  button.primary:disabled {
+    background: #6b6250;
+    color: rgba(10,23,18,0.5);
+    cursor: not-allowed;
+  }
+  button.primary:active:not(:disabled) { transform: scale(0.98); }
+
+  button.secondary {
+    width: 100%;
+    background: transparent;
+    color: var(--chalk);
+    border: 1px solid rgba(245,243,236,0.3);
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  button.text-btn {
+    background: none;
+    border: none;
+    color: var(--chalk-dim);
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 6px;
+  }
+
+  .error-msg {
+    color: var(--red);
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+  /* --- Game screen --- */
+  .round-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+  .round-banner .round-count {
+    font-family: "Arial Black", "Archivo Black", sans-serif;
+    font-size: 15px;
+    color: var(--gold);
+  }
+  .round-banner .minigame-name {
+    font-size: 13px;
+    color: var(--chalk-dim);
+  }
+
+  .turn-info {
+    text-align: center;
+    padding: 20px 0 8px;
+  }
+  .turn-info .active-team {
+    font-family: "Arial Black", "Archivo Black", sans-serif;
+    font-size: 26px;
+    color: var(--chalk);
+    text-transform: uppercase;
+  }
+  .turn-info .holder-note {
+    font-size: 13px;
+    color: var(--gold);
+    margin-top: 4px;
+  }
+
+  .card-stage {
+    background: var(--chalk);
+    color: var(--ink);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 18px 0;
+    min-height: 180px;
+  }
+
+  .clue-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .clue {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: rgba(15,61,46,0.06);
+    font-size: 16px;
+  }
+  .clue .club-name { font-weight: 700; }
+  .clue .years { color: #5a6a63; font-size: 13px; }
+  .clue.hidden {
+    opacity: 0.25;
+    background: transparent;
+    border: 1px dashed rgba(10,23,18,0.2);
+  }
+  .clue-points {
+    text-align: right;
+    font-size: 12px;
+    color: var(--gold-dim);
+    font-weight: 700;
+    margin-top: -4px;
+    margin-bottom: 10px;
+  }
+
+  .feedback {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .feedback.good { background: rgba(217,164,65,0.15); color: var(--gold); }
+  .feedback.bad { background: rgba(192,69,63,0.15); color: #e08b86; }
+
+  .confirm-box {
+    background: var(--pitch-line);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 14px;
+  }
+  .confirm-box .typed {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .confirm-actions {
+    display: flex;
+    gap: 10px;
+  }
+  .confirm-actions button { flex: 1; margin-top: 0; }
+
+  .answer-btns {
+    display: flex;
+    gap: 10px;
+  }
+  .answer-btns button { flex: 1; margin-top: 0; }
+  .btn-pass {
+    background: transparent;
+    border: 1px solid rgba(245,243,236,0.3);
+    color: var(--chalk);
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .btn-answer {
+    background: var(--gold);
+    border: none;
+    color: var(--ink);
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .scoreboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .score-chip {
+    flex: 1;
+    min-width: 90px;
+    background: var(--pitch-line);
+    border-radius: 10px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+  .score-chip .name { font-size: 12px; color: var(--chalk-dim); }
+  .score-chip .score {
+    font-family: "Arial Black", "Archivo Black", sans-serif;
+    font-size: 22px;
+    color: var(--chalk);
+  }
+  .score-chip.active { border: 1px solid var(--gold); }
+
+  /* --- Final screen --- */
+  .podium {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  .podium-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--pitch-line);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .podium-row.first { border: 2px solid var(--gold); }
+  .medal { font-size: 24px; width: 32px; text-align: center; }
+  .podium-row .p-name { flex: 1; font-weight: 700; font-size: 17px; }
+  .podium-row .p-score {
+    font-family: "Arial Black", "Archivo Black", sans-serif;
+    font-size: 20px;
+    color: var(--gold);
+  }
+
+  .hidden-screen { display: none; }
+</style>
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- SCREEN: SETUP -->
+  <section id="screen-setup">
+    <h1>Mario Party du Foot</h1>
+    <p class="subtitle">Prototype — Transfert</p>
+
+    <div class="card">
+      <h2>Équipes</h2>
+      <div class="field">
+        <label>Combien d'équipes ?</label>
+        <div class="choice-group" id="team-count-group">
+          <button class="choice-btn" data-value="1">1</button>
+          <button class="choice-btn" data-value="2">2</button>
+          <button class="choice-btn active" data-value="3">3</button>
+          <button class="choice-btn" data-value="4">4</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>Noms des équipes</label>
+        <div id="team-names-list"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Manches</h2>
+      <div class="field">
+        <label>Combien de manches ? (une manche = chaque équipe joue une carte)</label>
+        <div class="choice-group" id="rounds-group">
+          <button class="choice-btn" data-value="5">5</button>
+          <button class="choice-btn active" data-value="10">10</button>
+          <button class="choice-btn" data-value="20">20</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Mini-jeux</h2>
+      <div class="checkbox-row">
+        <input type="checkbox" id="mg-transfert" checked>
+        <label for="mg-transfert" style="margin:0; font-size:15px; color:var(--chalk);">Transfert</label>
+      </div>
+    </div>
+
+    <button class="primary" id="btn-start">Lancer la partie</button>
+    <p class="error-msg hidden-screen" id="setup-error"></p>
+  </section>
+
+  <!-- SCREEN: PLAY -->
+  <section id="screen-play" class="hidden-screen">
+    <div class="round-banner">
+      <span class="round-count" id="round-count">Manche 1/10</span>
+      <span class="minigame-name" id="minigame-name">Transfert</span>
+    </div>
+
+    <div class="turn-info">
+      <div class="active-team" id="active-team-name">ÉQUIPE A</div>
+      <div class="holder-note" id="holder-note">Équipe B tient le téléphone</div>
+    </div>
+
+    <div class="card-stage">
+      <div class="clue-points" id="clue-points">Cet indice vaut 5 points</div>
+      <div class="clue-list" id="clue-list"></div>
+    </div>
+
+    <div id="feedback-zone"></div>
+
+    <div id="answer-zone">
+      <div class="answer-btns">
+        <button class="btn-pass" id="btn-pass">Passer</button>
+        <button class="btn-answer" id="btn-answer">Répondre</button>
+      </div>
+      <div class="confirm-box hidden-screen" id="type-box">
+        <div class="field">
+          <label>Nom du joueur</label>
+          <input type="text" id="answer-input" placeholder="Tape le nom ici" autocomplete="off">
+        </div>
+        <button class="primary" id="btn-submit-answer" style="margin-top:4px;">Valider</button>
+      </div>
+      <div class="confirm-box hidden-screen" id="confirm-box">
+        <div class="typed">Tu as tapé : « <span id="typed-text"></span> »</div>
+        <div class="confirm-actions">
+          <button class="secondary" id="btn-edit-answer">Modifier</button>
+          <button class="primary" id="btn-confirm-answer">Confirmer</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden-screen" id="next-card-zone">
+      <button class="primary" id="btn-next-card">Manche suivante</button>
+    </div>
+
+    <div class="scoreboard" id="scoreboard"></div>
+  </section>
+
+  <!-- SCREEN: FINAL -->
+  <section id="screen-final" class="hidden-screen">
+    <h1>Résultat final</h1>
+    <p class="subtitle" id="final-subtitle"></p>
+    <div class="podium" id="podium"></div>
+    <button class="primary" id="btn-rematch">Revanche</button>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------- Content: cartes Transfert factices (à remplacer par le lot vérifié) ----------
+  var CARDS = [
+    {
+      id: "t1",
+      career: [
+        { club: "AS Cannes", years: "1988–1992" },
+        { club: "Bordeaux", years: "1992–1996" },
+        { club: "Juventus", years: "1996–2001" },
+        { club: "Real Madrid", years: "2001–2006" }
+      ],
+      answer: "Zinedine Zidane",
+      variants: ["zidane", "zizou", "zinedine zidane"]
+    },
+    {
+      id: "t2",
+      career: [
+        { club: "AJ Auxerre", years: "1997–1999" },
+        { club: "Arsenal", years: "1999–2011" },
+        { club: "Barcelone", years: "2011–2014" }
+      ],
+      answer: "Thierry Henry",
+      variants: ["henry", "titi", "thierry henry"]
+    },
+    {
+      id: "t3",
+      career: [
+        { club: "Sporting CP", years: "2002–2003" },
+        { club: "Manchester United", years: "2003–2009" },
+        { club: "Real Madrid", years: "2009–2018" },
+        { club: "Juventus", years: "2018–2021" },
+        { club: "Al-Nassr", years: "2023–présent" }
+      ],
+      answer: "Cristiano Ronaldo",
+      variants: ["ronaldo", "cr7", "cristiano ronaldo", "cristiano"]
+    },
+    {
+      id: "t4",
+      career: [
+        { club: "Sochaux", years: "2011–2013" },
+        { club: "Monaco", years: "2013–2017" },
+        { club: "Paris Saint-Germain", years: "2017–2024" },
+        { club: "Real Madrid", years: "2024–présent" }
+      ],
+      answer: "Kylian Mbappé",
+      variants: ["mbappe", "mbappé", "kylian mbappe", "kylian mbappé"]
+    },
+    {
+      id: "t5",
+      career: [
+        { club: "AS Monaco", years: "2004–2007" }
+      ],
+      answer: "Ludovic Giuly",
+      variants: ["giuly", "ludovic giuly"]
+    },
+    {
+      id: "t6",
+      career: [
+        { club: "Le Havre", years: "2012–2013" },
+        { club: "Lille", years: "2013–2016" },
+        { club: "Napoli", years: "2016–2020" },
+        { club: "Chelsea", years: "2020–2022" },
+        { club: "AC Milan", years: "2022–présent" }
+      ],
+      answer: "Rafael Leão",
+      variants: ["leao", "leão", "rafael leao", "rafael leão"]
+    }
+  ];
+
+  var POINTS_BY_INDEX = [5, 4, 3, 2, 1];
+
+  // ---------- State ----------
+  var state = {
+    teamCount: 3,
+    teamNames: ["Équipe A", "Équipe B", "Équipe C", "Équipe D"],
+    roundsTotal: 10,
+    minigamesSelected: ["transfert"],
+    teams: [],       // {name, score}
+    roundsPlayed: 0,
+    currentTeamIndex: 0,
+    currentCard: null,
+    revealedCount: 0,
+    cardEnded: false,
+    typedAnswer: ""
+  };
+
+  // ---------- Helpers ----------
+  function normalize(str) {
+    return str
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, " ");
+  }
+
+  function drawCard() {
+    var idx = Math.floor(Math.random() * CARDS.length);
+    return CARDS[idx];
+  }
+
+  function el(id) { return document.getElementById(id); }
+  function show(id) { el(id).classList.remove("hidden-screen"); }
+  function hide(id) { el(id).classList.add("hidden-screen"); }
+
+  // ---------- SETUP SCREEN ----------
+  function renderTeamNameInputs() {
+    var list = el("team-names-list");
+    list.innerHTML = "";
+    for (var i = 0; i < state.teamCount; i++) {
+      var row = document.createElement("div");
+      row.className = "team-row";
+      var dot = document.createElement("div");
+      dot.className = "team-dot";
+      var input = document.createElement("input");
+      input.type = "text";
+      input.value = state.teamNames[i];
+      input.setAttribute("data-team-idx", i);
+      input.addEventListener("input", function (e) {
+        var idx = parseInt(e.target.getAttribute("data-team-idx"), 10);
+        state.teamNames[idx] = e.target.value || ("Équipe " + (idx + 1));
+      });
+      row.appendChild(dot);
+      row.appendChild(input);
+      list.appendChild(row);
+    }
+  }
+
+  function setupChoiceGroup(groupId, onSelect) {
+    var group = el(groupId);
+    var btns = group.querySelectorAll(".choice-btn");
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        btns.forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        onSelect(parseInt(btn.getAttribute("data-value"), 10));
+      });
+    });
+  }
+
+  setupChoiceGroup("team-count-group", function (val) {
+    state.teamCount = val;
+    renderTeamNameInputs();
+  });
+
+  setupChoiceGroup("rounds-group", function (val) {
+    state.roundsTotal = val;
+  });
+
+  renderTeamNameInputs();
+
+  el("mg-transfert").addEventListener("change", function (e) {
+    state.minigamesSelected = e.target.checked ? ["transfert"] : [];
+  });
+
+  el("btn-start").addEventListener("click", function () {
+    if (state.minigamesSelected.length === 0) {
+      el("setup-error").textContent = "Sélectionne au moins un mini-jeu pour lancer la partie.";
+      el("setup-error").classList.remove("hidden-screen");
+      return;
+    }
+    startGame();
+  });
+
+  // ---------- GAME ENGINE ----------
+  function startGame() {
+    state.teams = [];
+    for (var i = 0; i < state.teamCount; i++) {
+      state.teams.push({ name: state.teamNames[i] || ("Équipe " + (i + 1)), score: 0 });
+    }
+    state.roundsPlayed = 0;
+    state.currentTeamIndex = 0;
+
+    hide("screen-setup");
+    show("screen-play");
+
+    beginTurn();
+  }
+
+  function beginTurn() {
+    state.cardEnded = false;
+    state.revealedCount = 1; // premier indice visible d'entrée
+    state.currentCard = drawCard();
+    state.typedAnswer = "";
+
+    var activeTeam = state.teams[state.currentTeamIndex];
+    var holderIdx = state.teams.length > 1
+      ? (state.currentTeamIndex + 1) % state.teams.length
+      : state.currentTeamIndex;
+    var holderTeam = state.teams[holderIdx];
+
+    el("round-count").textContent = "Manche " + (state.roundsPlayed + 1) + "/" + state.roundsTotal;
+    el("minigame-name").textContent = "Transfert";
+    el("active-team-name").textContent = activeTeam.name;
+    el("holder-note").textContent = state.teams.length > 1
+      ? holderTeam.name + " tient le téléphone"
+      : "Vous tenez le téléphone";
+
+    el("feedback-zone").innerHTML = "";
+    hide("next-card-zone");
+    resetAnswerZone();
+    renderClueList();
+    renderScoreboard();
+  }
+
+  function renderClueList() {
+    var card = state.currentCard;
+    var list = el("clue-list");
+    list.innerHTML = "";
+
+    var maxClues = card.career.length;
+    for (var i = 0; i < maxClues; i++) {
+      var clueDiv = document.createElement("div");
+      if (i < state.revealedCount) {
+        clueDiv.className = "clue";
+        var nameSpan = document.createElement("span");
+        nameSpan.className = "club-name";
+        nameSpan.textContent = card.career[i].club;
+        var yearsSpan = document.createElement("span");
+        yearsSpan.className = "years";
+        yearsSpan.textContent = card.career[i].years;
+        clueDiv.appendChild(nameSpan);
+        clueDiv.appendChild(yearsSpan);
+      } else {
+        clueDiv.className = "clue hidden";
+        clueDiv.textContent = "?";
+      }
+      list.appendChild(clueDiv);
+    }
+
+    var pointsForCurrent = POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
+    el("clue-points").textContent = maxClues === 1
+      ? "Indice unique — vaut 5 points"
+      : "Cet indice vaut " + pointsForCurrent + " point" + (pointsForCurrent > 1 ? "s" : "");
+  }
+
+  function resetAnswerZone() {
+    hide("type-box");
+    hide("confirm-box");
+    el("answer-input").value = "";
+    document.querySelector(".answer-btns").style.display = "flex";
+  }
+
+  el("btn-answer").addEventListener("click", function () {
+    document.querySelector(".answer-btns").style.display = "none";
+    show("type-box");
+    el("answer-input").focus();
+  });
+
+  el("btn-submit-answer").addEventListener("click", function () {
+    var val = el("answer-input").value.trim();
+    if (!val) return;
+    state.typedAnswer = val;
+    el("typed-text").textContent = val;
+    hide("type-box");
+    show("confirm-box");
+  });
+
+  el("btn-edit-answer").addEventListener("click", function () {
+    hide("confirm-box");
+    show("type-box");
+    el("answer-input").focus();
+  });
+
+  el("btn-confirm-answer").addEventListener("click", function () {
+    hide("confirm-box");
+    document.querySelector(".answer-btns").style.display = "flex";
+    checkAnswer(state.typedAnswer);
+  });
+
+  el("btn-pass").addEventListener("click", function () {
+    advanceClue(false);
+  });
+
+  function checkAnswer(typed) {
+    var card = state.currentCard;
+    var normTyped = normalize(typed);
+    var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
+    var isCorrect = validAnswers.indexOf(normTyped) !== -1;
+
+    if (isCorrect) {
+      var maxClues = card.career.length;
+      var pointsEarned = maxClues === 1
+        ? 5
+        : POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
+      awardPoints(pointsEarned);
+      showFeedback("good", "Bonne réponse ! +" + pointsEarned + " points — c'était bien " + card.answer + ".");
+      endCard();
+    } else {
+      awardPoints(-1);
+      showFeedback("bad", "Mauvaise réponse. −1 point.");
+      advanceClue(true);
+    }
+  }
+
+  function advanceClue(fromWrongAnswer) {
+    var card = state.currentCard;
+    var maxClues = card.career.length;
+
+    if (state.revealedCount >= maxClues) {
+      // dernier indice déjà révélé : passe ou erreur termine la carte
+      if (!fromWrongAnswer) {
+        showFeedback("bad", "Fin des indices. C'était " + card.answer + ".");
+      } else {
+        el("feedback-zone").innerHTML += '<div class="feedback bad">C\'était ' + card.answer + '.</div>';
+      }
+      endCard();
+      return;
+    }
+
+    state.revealedCount += 1;
+    renderClueList();
+    if (!fromWrongAnswer) {
+      el("feedback-zone").innerHTML = "";
+    }
+  }
+
+  function showFeedback(kind, text) {
+    el("feedback-zone").innerHTML = '<div class="feedback ' + kind + '">' + text + "</div>";
+  }
+
+  function awardPoints(delta) {
+    state.teams[state.currentTeamIndex].score += delta;
+    renderScoreboard();
+  }
+
+  function endCard() {
+    state.cardEnded = true;
+    document.getElementById("answer-zone").style.display = "none";
+    show("next-card-zone");
+  }
+
+  function renderScoreboard() {
+    var board = el("scoreboard");
+    board.innerHTML = "";
+    state.teams.forEach(function (team, idx) {
+      var chip = document.createElement("div");
+      chip.className = "score-chip" + (idx === state.currentTeamIndex ? " active" : "");
+      var name = document.createElement("div");
+      name.className = "name";
+      name.textContent = team.name;
+      var score = document.createElement("div");
+      score.className = "score";
+      score.textContent = team.score;
+      chip.appendChild(name);
+      chip.appendChild(score);
+      board.appendChild(chip);
+    });
+  }
+
+  el("btn-next-card").addEventListener("click", function () {
+    document.getElementById("answer-zone").style.display = "block";
+
+    state.currentTeamIndex += 1;
+    if (state.currentTeamIndex >= state.teams.length) {
+      state.currentTeamIndex = 0;
+      state.roundsPlayed += 1;
+    }
+
+    if (state.roundsPlayed >= state.roundsTotal) {
+      endGame();
+      return;
+    }
+
+    beginTurn();
+  });
+
+  // ---------- FINAL SCREEN ----------
+  function endGame() {
+    hide("screen-play");
+    show("screen-final");
+
+    var sorted = state.teams.slice().sort(function (a, b) { return b.score - a.score; });
+    var medals = ["🥇", "🥈", "🥉"];
+
+    el("final-subtitle").textContent = state.roundsTotal + " manches jouées";
+
+    var podium = el("podium");
+    podium.innerHTML = "";
+    sorted.forEach(function (team, idx) {
+      var row = document.createElement("div");
+      row.className = "podium-row" + (idx === 0 ? " first" : "");
+      var medal = document.createElement("div");
+      medal.className = "medal";
+      medal.textContent = medals[idx] || (idx + 1) + ".";
+      var name = document.createElement("div");
+      name.className = "p-name";
+      name.textContent = team.name;
+      var score = document.createElement("div");
+      score.className = "p-score";
+      score.textContent = team.score;
+      row.appendChild(medal);
+      row.appendChild(name);
+      row.appendChild(score);
+      podium.appendChild(row);
+    });
+  }
+
+  el("btn-rematch").addEventListener("click", function () {
+    hide("screen-final");
+    show("screen-setup");
+  });
+
+})();
+</script>
+</body>
+</html>
