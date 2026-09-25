@@ -31,7 +31,7 @@ Un joueur ayant connu un seul club peut aussi faire l'objet d'une carte : le clu
 
 ### Déroulé sur un téléphone
 
-Une équipe cherche la réponse. Lorsqu'il y a plusieurs équipes, un membre d'une autre équipe tient le téléphone et révèle les indices ; ce rôle tourne entre les cartes. Avec une seule équipe, les joueurs utilisent le téléphone eux-mêmes. La réponse n'est montrée à personne avant la vérification de la tentative ou la fin de la carte.
+Une équipe cherche la réponse. Avec 2 à 4 équipes, **l'équipe suivante dans l'ordre des équipes tient le téléphone** et révèle les indices : A joue / B tient, puis B joue / C tient, puis C joue / A tient (avec trois équipes). Ainsi, l'équipe qui cherche ne tient pas l'appareil pendant sa carte. Avec une seule équipe, les joueurs utilisent le téléphone eux-mêmes. La réponse n'est montrée à personne avant la vérification de la tentative ou la fin de la carte.
 
 À chaque indice, l'équipe qui cherche choisit **une réponse** ou passe :
 - Bonne réponse : les points affichés sont ajoutés au score de l'équipe et la carte se termine.
@@ -39,6 +39,10 @@ Une équipe cherche la réponse. Lorsqu'il y a plusieurs équipes, un membre d'u
 - Passe : l'indice suivant apparaît sans pénalité.
 
 Après le dernier indice, une mauvaise réponse ou une passe termine la carte et révèle le joueur. Les pénalités se cumulent ; le résultat net d'une carte peut être négatif.
+
+### Réponses acceptées
+
+Chaque carte possède un nom attendu et une liste de variantes vérifiées pour ce joueur. La comparaison ignore les majuscules et les accents. Elle n'applique **aucune correction automatique des fautes** : une variante supplémentaire doit être vérifiée et ajoutée à la carte. Avant de soumettre la réponse, l'équipe qui cherche voit et confirme le texte saisi sur le téléphone.
 
 ### Points
 
