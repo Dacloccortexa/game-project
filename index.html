@@ -461,7 +461,7 @@
     </div>
 
     <div class="hidden-screen" id="next-card-zone">
-      <button class="primary" id="btn-next-card">Manche suivante</button>
+      <button class="primary" id="btn-next-card">Suivant</button>
     </div>
 
     <div class="scoreboard" id="scoreboard"></div>
@@ -771,6 +771,15 @@
   function endCard() {
     state.cardEnded = true;
     document.getElementById("answer-zone").style.display = "none";
+
+    var isLastTeamOfRound = state.currentTeamIndex >= state.teams.length - 1;
+    var isLastRound = state.roundsPlayed >= state.roundsTotal - 1;
+    el("btn-next-card").textContent = (isLastTeamOfRound && isLastRound)
+      ? "Voir le classement final"
+      : isLastTeamOfRound
+        ? "Manche suivante"
+        : "Équipe suivante";
+
     show("next-card-zone");
   }
 
