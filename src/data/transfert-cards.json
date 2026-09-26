@@ -312,13 +312,20 @@
         },
         {
           "club": "FC Barcelone",
-          "years": "2022–présent"
+          "years": "2022–2026"
+        },
+        {
+          "club": "Chicago Fire",
+          "years": "2026–présent"
         }
       ],
-      "sources": [],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "extrait — premier club (Znicz Pruszków) omis."
+      "sources": [
+        "https://en.wikipedia.org/wiki/Robert_Lewandowski",
+        "https://www.chicagofirefc.com/news/a-defining-moment-in-chicago-sports-chicago-fire-fc-acquires-global-football-icon-robert-lewandowski"
+      ],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "extrait — premier club (Znicz Pruszków) omis. Départ du FC Barcelone et arrivée à Chicago Fire confirmés par Chicago Fire le 29 juin 2026."
     },
     {
       "id": "t011",
@@ -1068,8 +1075,8 @@
           "years": "2005–2006"
         },
         {
-          "club": "Manchester United",
-          "years": "prêt"
+          "club": "Manchester United (prêt)",
+          "years": "2007–2009"
         },
         {
           "club": "Manchester City",
@@ -1244,12 +1251,12 @@
           "years": "2004–2010"
         },
         {
-          "club": "Eibar",
-          "years": "prêt"
+          "club": "Eibar (prêt)",
+          "years": "2004–2005"
         },
         {
-          "club": "Celta",
-          "years": "prêt"
+          "club": "Celta (prêt)",
+          "years": "2005–2006"
         },
         {
           "club": "Manchester City",
@@ -1607,8 +1614,8 @@
           "years": "1997–2005"
         },
         {
-          "club": "Monaco",
-          "years": "prêt"
+          "club": "Monaco (prêt)",
+          "years": "2003–2004"
         },
         {
           "club": "Liverpool",
@@ -1711,8 +1718,8 @@
           "years": "1995–2001"
         },
         {
-          "club": "Swansea City",
-          "years": "prêt"
+          "club": "Swansea City (prêt)",
+          "years": "1995–1996"
         },
         {
           "club": "Chelsea",
@@ -1803,8 +1810,8 @@
           "years": "2004–2008"
         },
         {
-          "club": "Zaragoza",
-          "years": "prêt"
+          "club": "Zaragoza (prêt)",
+          "years": "2006–2007"
         },
         {
           "club": "Barcelona",
@@ -1843,8 +1850,8 @@
           "years": "2016–2020"
         },
         {
-          "club": "AC Milan",
-          "years": "prêt"
+          "club": "AC Milan (prêt)",
+          "years": "2018–2019"
         }
       ],
       "sources": [
@@ -1915,8 +1922,8 @@
           "years": "2003–2008"
         },
         {
-          "club": "AC Milan",
-          "years": "prêt"
+          "club": "AC Milan (prêt)",
+          "years": "2004–2005"
         }
       ],
       "sources": [
@@ -2003,8 +2010,8 @@
           "years": "2001–2007"
         },
         {
-          "club": "Monaco",
-          "years": "prêt"
+          "club": "Monaco (prêt)",
+          "years": "2004–2005"
         },
         {
           "club": "Real Madrid",
@@ -2070,8 +2077,8 @@
           "years": "1998–2017"
         },
         {
-          "club": "Nottingham Forest",
-          "years": "prêt"
+          "club": "Nottingham Forest (prêt)",
+          "years": "2000"
         },
         {
           "club": "Aston Villa",
@@ -2218,8 +2225,8 @@
           "years": "2003–2007"
         },
         {
-          "club": "Inter Milan",
-          "years": "prêt"
+          "club": "Inter Milan (prêt)",
+          "years": "2004–2006"
         }
       ],
       "sources": [
@@ -2241,8 +2248,8 @@
           "years": "2004–2006"
         },
         {
-          "club": "Espanyol",
-          "years": "prêt"
+          "club": "Espanyol (prêt)",
+          "years": "2005–2006"
         },
         {
           "club": "Osasuna",
@@ -2491,8 +2498,8 @@
           "years": "2005–2014"
         },
         {
-          "club": "Real Madrid",
-          "years": "prêt"
+          "club": "Real Madrid (prêt)",
+          "years": "2012–2013"
         },
         {
           "club": "AC Milan",
@@ -3031,8 +3038,8 @@
           "years": "2008–2010"
         },
         {
-          "club": "Chelsea",
-          "years": "prêt"
+          "club": "Chelsea (prêt)",
+          "years": "2009"
         }
       ],
       "sources": [
@@ -3055,8 +3062,8 @@
           "years": "1995–2000"
         },
         {
-          "club": "AFC Bournemouth",
-          "years": "prêt"
+          "club": "AFC Bournemouth (prêt)",
+          "years": "1996–1997"
         },
         {
           "club": "Leeds United",
@@ -3668,8 +3675,8 @@
           "years": "1999–2004"
         },
         {
-          "club": "Eibar",
-          "years": "prêt"
+          "club": "Eibar (prêt)",
+          "years": "2000–2001"
         },
         {
           "club": "Liverpool",
