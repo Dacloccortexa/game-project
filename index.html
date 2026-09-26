@@ -540,6 +540,7 @@
     { file: "src/data/stats-premier-league-goals.json", label: "Buts en Premier League" }
   ];
   var POM_REAL_POOLS = []; // [{label, players: [{name, value}]}]
+  var POM_READY = false;
 
   function loadPomRealCategories() {
     return Promise.all(
@@ -553,7 +554,9 @@
             console.error("Impossible de charger " + cat.file, err);
           });
       })
-    );
+    ).then(function () {
+      POM_READY = POM_REAL_POOLS.length > 0;
+    });
   }
 
   // Catégories test — valeurs fictives, utilisées tant que toutes les vraies catégories ne sont pas prêtes.
@@ -713,6 +716,11 @@
     }
     if (state.minigamesSelected.indexOf("transfert") !== -1 && !CARDS_READY) {
       el("setup-error").textContent = "Les cartes ne sont pas encore chargées (ou le fichier est introuvable). Réessaie dans un instant.";
+      el("setup-error").classList.remove("hidden-screen");
+      return;
+    }
+    if (state.minigamesSelected.indexOf("plusoumoins") !== -1 && !POM_READY) {
+      el("setup-error").textContent = "Les catégories Plus ou Moins ne sont pas encore chargées. Réessaie dans un instant.";
       el("setup-error").classList.remove("hidden-screen");
       return;
     }
