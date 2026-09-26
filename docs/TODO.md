@@ -4,8 +4,9 @@
 
 - ✅ Un parcours sur un seul téléphone : créer 1 à 4 équipes, choisir 5/10/20 manches, sélectionner les mini-jeux, jouer, puis voir le classement. Implémenté dans `index.html`.
 - ✅ Transfert : révélation chronologique, tentative ou passe, pénalité de −1, points dégressifs, carte à club unique, porteur de téléphone désigné, confirmation de la réponse saisie. Implémenté dans `index.html`.
-- ✅ Premier lot de 25 cartes dans `src/data/transfert-cards.json`, dont **9 vérifiées** (chargées en jeu) et **16 encore à vérifier** (statut marqué par carte, exclues du jeu tant qu'elles ne le sont pas). Variété encore faible pour une vraie soirée — continuer la vérification pour élargir le pool jouable.
+- ✅ Lot de 112 cartes dans `src/data/transfert-cards.json`, dont **100 vérifiées** (chargées en jeu) et **12 encore à vérifier** (exclues du jeu tant qu'elles ne le sont pas).
 - ⏳ Une vraie partie test à consigner ensuite dans `PLAYTESTS.md`.
+- ⏳ Avant chaque vraie soirée test, revalider manuellement les cartes jouables dont un club porte « –présent ». Corriger et sourcer tout départ confirmé ; si la situation reste incertaine, remettre la carte « à vérifier » pour l'exclure du jeu.
 
 ## Arbitrages de game design à faire avant le déroulé complet
 
@@ -27,4 +28,3 @@
 
 - Proposer un format de carte qui conserve clubs, années, prêts/retours, réponse attendue, variantes acceptées, sources et statut de vérification.
 - Proposer un tirage aléatoire des cartes pour chaque équipe, avec répétition possible, et un moyen d'évaluer les répétitions pendant les tests.
-- Choisir comment gérer la péremption des cartes marquées « –présent » (un transfert réel peut rendre une carte fausse du jour au lendemain — vu avec Salah, parti de Liverpool à l'été 2026). Deux options à trancher : revalidation manuelle avant chaque vraie soirée test, ou date de péremption automatique par carte (le champ `verified_date` existe déjà dans le format).
