@@ -580,9 +580,9 @@
         "espn.com",
         "fanatik.com.tr"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "CORRIGÉ partiellement — le lot brut indiquait Monterrey en cours ('présent'), mais Ramos a quitté Monterrey à l'expiration de son contrat (~janvier 2026). Son club actuel est incertain : sources contradictoires (Paris FC, Galatasaray évoqués, rien de confirmé). Ne pas intégrer tant que la situation n'est pas stabilisée."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t019",
@@ -847,9 +847,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Alan_Shearer"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t027",
@@ -883,9 +883,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Arjen_Robben"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t028",
@@ -919,9 +919,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Asamoah_Gyan"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t029",
@@ -955,9 +955,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Ashley_Cole"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t030",
@@ -991,9 +991,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Bacary_Sagna"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t031",
@@ -1027,9 +1027,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Blaise_Matuidi"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t032",
@@ -1047,9 +1047,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Carles_Puyol"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t033",
@@ -1083,9 +1083,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Carlos_Tevez"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t034",
@@ -1119,9 +1119,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Cesc_F%C3%A0bregas"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t035",
@@ -1155,9 +1155,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Christian_Karembeu"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t036",
@@ -1191,9 +1191,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t037",
@@ -1227,9 +1227,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Dani_Alves"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t038",
@@ -1263,9 +1263,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/David_Silva"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t039",
@@ -1299,9 +1299,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/David_Trezeguet"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t040",
@@ -1335,9 +1335,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/David_Villa"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t041",
@@ -1370,9 +1370,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Deco"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t042",
@@ -1406,9 +1406,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Didier_Deschamps"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t043",
@@ -1442,9 +1442,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Didier_Drogba"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t044",
@@ -1478,9 +1478,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Diego_Costa"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t045",
@@ -1514,9 +1514,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t046",
@@ -1550,9 +1550,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Emmanuel_Adebayor"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t047",
@@ -1586,9 +1586,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Fernando_Llorente"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t048",
@@ -1622,9 +1622,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Fernando_Morientes"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t049",
@@ -1658,9 +1658,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Fernando_Torres"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t050",
@@ -1694,9 +1694,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Franck_Rib%C3%A9ry"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t051",
@@ -1730,9 +1730,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Frank_Lampard"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t052",
@@ -1766,9 +1766,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Gary_Lineker"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t053",
@@ -1786,9 +1786,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Gary_Neville"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t054",
@@ -1814,9 +1814,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Gerard_Piqu%C3%A9"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t055",
@@ -1850,9 +1850,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t056",
@@ -1886,9 +1886,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Hatem_Ben_Arfa"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t057",
@@ -1922,9 +1922,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Hern%C3%A1n_Crespo"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t058",
@@ -1946,9 +1946,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Iker_Casillas"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t059",
@@ -1982,9 +1982,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Javier_Mascherano"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t060",
@@ -2018,9 +2018,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Javier_Saviola"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t061",
@@ -2053,9 +2053,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_%28footballer%2C_born_1981%29"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t062",
@@ -2081,9 +2081,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/John_Terry"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t063",
@@ -2117,9 +2117,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Jos%C3%A9_Bosingwa"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t064",
@@ -2153,9 +2153,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Jo%C3%A3o_Moutinho"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t065",
@@ -2189,9 +2189,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t066",
@@ -2225,9 +2225,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Ver%C3%B3n"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t067",
@@ -2260,9 +2260,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Juanfran_%28footballer%2C_born_1985%29"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t068",
@@ -2296,9 +2296,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Juninho_Pernambucano"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t069",
@@ -2331,9 +2331,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Kak%C3%A1"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t070",
@@ -2367,9 +2367,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Laurent_Koscielny"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t071",
@@ -2399,9 +2399,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Lu%C3%ADs_Figo"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t072",
@@ -2435,9 +2435,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Marcel_Desailly"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t073",
@@ -2466,9 +2466,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Marcelo_%28footballer%2C_born_1988%29"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t074",
@@ -2502,9 +2502,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Michael_Essien"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t075",
@@ -2538,9 +2538,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Michael_Owen"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t076",
@@ -2566,9 +2566,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Michel_Platini"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t077",
@@ -2602,9 +2602,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Mikel_John_Obi"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t078",
@@ -2637,9 +2637,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Nani_%28footballer%29"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t079",
@@ -2673,9 +2673,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Nicolas_Anelka"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t080",
@@ -2709,9 +2709,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Patrice_Evra"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t081",
@@ -2745,9 +2745,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Patrick_Vieira"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t082",
@@ -2765,9 +2765,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Paul_Scholes"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t083",
@@ -2796,9 +2796,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Pedro_%28footballer%2C_born_1987%29"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t084",
@@ -2831,9 +2831,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Pepe_%28footballer%2C_born_February_1983%29"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t085",
@@ -2867,9 +2867,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Pepe_Reina"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t086",
@@ -2903,9 +2903,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Peter_Crouch"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t087",
@@ -2935,9 +2935,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Rapha%C3%ABl_Varane"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t088",
@@ -2966,9 +2966,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Ra%C3%BAl_Gonz%C3%A1lez"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t089",
@@ -3002,9 +3002,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Ricardo_Carvalho"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t090",
@@ -3038,9 +3038,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Ricardo_Quaresma"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t091",
@@ -3074,9 +3074,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Rio_Ferdinand"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t092",
@@ -3109,9 +3109,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Rivaldo"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t093",
@@ -3145,9 +3145,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Riyad_Mahrez"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t094",
@@ -3181,9 +3181,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Robbie_Fowler"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t095",
@@ -3217,9 +3217,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Robert_Pires"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t096",
@@ -3253,9 +3253,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Roberto_Carlos"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t097",
@@ -3288,9 +3288,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Ronaldinho"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t098",
@@ -3323,9 +3323,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Ronaldo_%28Brazilian_footballer%29"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t099",
@@ -3359,9 +3359,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Sadio_Man%C3%A9"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t100",
@@ -3395,9 +3395,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Samir_Nasri"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t101",
@@ -3431,9 +3431,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Samuel_Eto%27o"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t102",
@@ -3467,9 +3467,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Santi_Cazorla"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t103",
@@ -3499,9 +3499,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Sergio_Ag%C3%BCero"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t104",
@@ -3523,9 +3523,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Sergio_Busquets"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t105",
@@ -3547,9 +3547,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Steven_Gerrard"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t106",
@@ -3583,9 +3583,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Teddy_Sheringham"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t107",
@@ -3615,9 +3615,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Virgil_van_Dijk"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t108",
@@ -3651,9 +3651,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Wayne_Rooney"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t109",
@@ -3687,9 +3687,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Xabi_Alonso"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t110",
@@ -3710,9 +3710,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Xavi_%28footballer%2C_born_1980%29"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t111",
@@ -3746,9 +3746,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Yaya_Tour%C3%A9"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     },
     {
       "id": "t112",
@@ -3782,9 +3782,9 @@
       "sources": [
         "https://en.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa"
       ],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "lot ChatGPT #2, sourcé Wikipédia mais non vérifié individuellement cette session."
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "vérifié sur la base de la source Wikipédia citée par ChatGPT (pas de recherche indépendante par Claude cette session)."
     }
   ]
 }

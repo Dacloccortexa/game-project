@@ -2,6 +2,12 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-26] Une source Wikipédia citée vaut vérification pour le lot #2
+- Décision : les 88 cartes du 2e lot fourni par ChatGPT (sourcées individuellement avec un lien Wikipédia) sont marquées « vérifié » et jouables, sans recherche indépendante par Claude carte par carte.
+- Raison : David juge la citation Wikipédia suffisante à ce stade du prototype.
+- Nuance à garder en tête : une source citée par une IA n'est pas la preuve qu'elle a été relue (le cas Salah — carte fausse malgré une apparence correcte — reste possible même avec une source). Si une carte de ce lot s'avère fausse en test, c'est un signal pour resserrer la règle, pas un hasard isolé.
+- Impact technique : aucun — bascule de statut uniquement.
+
 ## [2026-09-25] Un club peut apparaître deux fois sur une même carte
 - Décision : si un joueur revient dans un club déjà cité plus tôt dans sa carrière (ex. Griezmann, Neymar, Sergio Ramos, Pogba), les deux passages sont affichés normalement dans les indices chronologiques, sans traitement spécial.
 - Raison : c'est un fait réel de carrière, pas une ambiguïté à corriger.
