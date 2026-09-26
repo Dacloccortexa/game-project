@@ -7,12 +7,14 @@
 - ✅ Lot de 112 cartes dans `src/data/transfert-cards.json`, dont **100 vérifiées** (chargées en jeu) et **12 encore à vérifier** (exclues du jeu tant qu'elles ne le sont pas).
 - ⏳ Une vraie partie test à consigner ensuite dans `PLAYTESTS.md`.
 - ⏳ Avant chaque vraie soirée test, revalider manuellement les cartes jouables dont un club porte « –présent ». Corriger et sourcer tout départ confirmé ; si la situation reste incertaine, remettre la carte « à vérifier » pour l'exclure du jeu.
+- ⏳ Plus ou Moins : définir pour chacune des quatre catégories le périmètre exact du chiffre, une source de référence et une date d'arrêté ; préparer **50 entrées joueur + valeur + source + date de vérification par catégorie** (200 entrées statistiques au total).
+- ⏳ À partir de cette base, composer et tester des chaînes de six joueurs : cinq comparaisons au maximum, aucune égalité entre voisins, écarts intéressants et directions PLUS/MOINS variées. Intégrer le mini-jeu après Transfert.
 
 ## Arbitrages de game design à faire avant le déroulé complet
 
 - Définir la procédure de correction et de signalement lorsqu'une réponse valable est refusée malgré les variantes vérifiées.
 - Fixer les critères de sélection et de difficulté des cartes Transfert, y compris le traitement des carrières de plus de cinq passages.
-- Définir les règles des autres mini-jeux, chacun avec ses réponses valables, son déroulé et son score, avant leur intégration.
+- Définir les règles des mini-jeux qui suivront Plus ou Moins, chacun avec ses réponses valables, son déroulé et son score, avant leur intégration.
 
 ## Zones où Claude peut décider librement
 
