@@ -27,3 +27,4 @@
 
 - Proposer un format de carte qui conserve clubs, années, prêts/retours, réponse attendue, variantes acceptées, sources et statut de vérification.
 - Proposer un tirage aléatoire des cartes pour chaque équipe, avec répétition possible, et un moyen d'évaluer les répétitions pendant les tests.
+- Choisir comment gérer la péremption des cartes marquées « –présent » (un transfert réel peut rendre une carte fausse du jour au lendemain — vu avec Salah, parti de Liverpool à l'été 2026). Deux options à trancher : revalidation manuelle avant chaque vraie soirée test, ou date de péremption automatique par carte (le champ `verified_date` existe déjà dans le format).
