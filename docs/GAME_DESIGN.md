@@ -50,6 +50,16 @@ Les indices successifs valent **5, 4, 3, 2, puis 1 point**. Une carte plus court
 
 Pour une carte à club unique, l'unique indice vaut **5 points** : bonne réponse +5, mauvaise réponse −1, passe 0.
 
+## Deuxième mini-jeu prévu : Plus ou Moins
+
+Une carte utilise **une seule statistique** et une chaîne de **six joueurs** : elle propose exactement **cinq comparaisons PLUS ou MOINS au maximum**. La valeur du premier joueur est affichée. Pour chacun des cinq suivants, l'équipe prédit si sa valeur est strictement supérieure ou inférieure à celle du joueur qui sert alors de référence. La vraie valeur est révélée immédiatement après la réponse ; en cas de réussite, ce joueur devient la nouvelle référence. Deux joueurs consécutifs d'une chaîne n'ont jamais la même valeur.
+
+Une mauvaise réponse termine la carte avec **0 point**. Après chaque bonne réponse, l'équipe possède autant de points potentiels que de comparaisons réussies (de 1 à 5) et choisit **ENCAISSER** ou **CONTINUER**. Encaisser ajoute ces points au score et termine la carte ; continuer met tous les points potentiels en jeu. Une erreur ultérieure fait perdre tous les points potentiels de cette carte. Après la cinquième bonne réponse, les **5 points sont encaissés automatiquement**.
+
+Le premier contenu couvre quatre catégories : **buts en Premier League**, **buts en Ligue des champions**, **buts en Coupe du monde** et **sélections en équipe nationale**. Chacune disposera de **50 entrées joueur + valeur**, soit 200 entrées statistiques ; un même joueur peut figurer dans plusieurs catégories. Chaque entrée conserve une source et une date de vérification. Le périmètre exact de chaque statistique est fixé avant la collecte.
+
+Les chaînes sont construites à partir de cette base avec des valeurs voisines sans être égales, quelques surprises et un ordre qui évite les comparaisons évidentes ou une suite prévisible de PLUS ou de MOINS. Leur difficulté sera ajustée en partie test. Plus ou Moins sera intégré après Transfert, dans le cadre commun de configuration des équipes, des manches et du score.
+
 ## Contenus et difficulté
 
 Les cartes sont préparées et leurs faits vérifiés par un agent avant d'être intégrées. La vérification des faits se fait en amont, pas par une génération ou un jugement d'IA pendant la partie. La difficulté réelle des cartes sera ajustée à partir des parties jouées et documentées dans `PLAYTESTS.md`.
