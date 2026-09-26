@@ -265,12 +265,12 @@
         { "club": "Real Madrid", "years": "2005–2021" },
         { "club": "PSG", "years": "2021–2023" },
         { "club": "Séville", "years": "2023–2024" },
-        { "club": "Monterrey", "years": "2025–présent" }
+        { "club": "Monterrey", "years": "2025–2026" }
       ],
-      "sources": [],
+      "sources": ["nst.com.my", "espn.com", "fanatik.com.tr"],
       "verification_status": "à vérifier",
       "verified_date": null,
-      "notes": "carte avec retour au même club (Séville) — non vérifiée cette session, à checker en priorité."
+      "notes": "CORRIGÉ partiellement — le lot brut indiquait Monterrey en cours ('présent'), mais Ramos a quitté Monterrey à l'expiration de son contrat (~janvier 2026). Son club actuel est incertain : sources contradictoires (Paris FC, Galatasaray évoqués, rien de confirmé). Ne pas intégrer tant que la situation n'est pas stabilisée."
     },
     {
       "id": "t019",
@@ -298,10 +298,10 @@
         { "club": "Juventus", "years": "2022–2024" },
         { "club": "Monaco", "years": "2025–présent" }
       ],
-      "sources": [],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "carte avec allers-retours entre deux clubs — non vérifiée cette session, à checker en priorité."
+      "sources": ["africanews.com", "beinsports.com", "bluewin.ch"],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "contrat Juventus rompu à l'amiable en novembre 2024 (à la suite de sa suspension pour dopage réduite à 18 mois) ; signé à Monaco le 28 juin 2025 jusqu'en 2027."
     },
     {
       "id": "t021",
