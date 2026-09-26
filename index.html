@@ -494,6 +494,27 @@
     </div>
 
     <div class="scoreboard" id="scoreboard"></div>
+
+    <button class="secondary hidden-screen" id="btn-tackle" style="border-color: var(--red); color: var(--red); margin-top: 16px;">🚨 TACKLE</button>
+
+    <div class="hidden-screen" id="tackle-team-picker">
+      <div class="confirm-box">
+        <div class="typed">Quelle équipe tackle ?</div>
+        <div class="choice-group" id="tackle-team-buttons"></div>
+        <button class="text-btn" id="btn-tackle-cancel">Annuler</button>
+      </div>
+    </div>
+
+    <div class="hidden-screen" id="tackle-answer-zone">
+      <div class="confirm-box">
+        <div class="typed" id="tackle-team-label"></div>
+        <div class="field">
+          <label>Réponse du tackle</label>
+          <input type="text" id="tackle-answer-input" placeholder="Nom du joueur" autocomplete="off">
+        </div>
+        <button class="primary" id="btn-tackle-submit" style="margin-top:4px;">Valider le tackle</button>
+      </div>
+    </div>
   </section>
 
   <!-- SCREEN: FINAL -->
@@ -533,6 +554,24 @@
   }
 
   var POINTS_BY_INDEX = [5, 4, 3, 2, 1];
+  var TACKLE_DELAY_SECONDS = 12; // avant le coup de sifflet — valeur par défaut, à ajuster en playtest
+
+  function playWhistle() {
+    try {
+      var ctx = new (window.AudioContext || window.webkitAudioContext)();
+      [0, 0.18].forEach(function (t) {
+        var osc = ctx.createOscillator();
+        var gain = ctx.createGain();
+        osc.type = "square";
+        osc.frequency.value = 2200;
+        gain.gain.value = 0.15;
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(ctx.currentTime + t);
+        osc.stop(ctx.currentTime + t + 0.15);
+      });
+    } catch (e) { /* audio non disponible, tant pis */ }
+  }
 
   // ---------- Content: chaînes Plus ou Moins ----------
   // Catégories réelles vérifiées, chargées depuis des fichiers sourcés (une par catégorie).
@@ -803,11 +842,86 @@
     el("feedback-zone").innerHTML = "";
     resetAnswerZone();
     renderClueList();
+    startTackleWindow();
   }
+
+  // ---------- Tackle (Transfert uniquement pour l'instant) ----------
+  function clearTackleTimer() {
+    if (state.tackleTimerId) {
+      clearTimeout(state.tackleTimerId);
+      state.tackleTimerId = null;
+    }
+  }
+
+  function hideTackleUI() {
+    hide("btn-tackle");
+    hide("tackle-team-picker");
+    hide("tackle-answer-zone");
+  }
+
+  function startTackleWindow() {
+    clearTackleTimer();
+    hideTackleUI();
+    if (state.teams.length < 2) return; // personne pour tackler en solo
+    state.tackleTimerId = setTimeout(function () {
+      if (state.cardEnded) return;
+      playWhistle();
+      show("btn-tackle");
+    }, TACKLE_DELAY_SECONDS * 1000);
+  }
+
+  el("btn-tackle").addEventListener("click", function () {
+    hide("btn-tackle");
+    var buttonsDiv = el("tackle-team-buttons");
+    buttonsDiv.innerHTML = "";
+    state.teams.forEach(function (team, idx) {
+      if (idx === state.currentTeamIndex) return; // l'équipe active ne tackle pas son propre tour
+      var btn = document.createElement("button");
+      btn.className = "choice-btn";
+      btn.textContent = team.name;
+      btn.addEventListener("click", function () {
+        state.tackleTeamIndex = idx;
+        hide("tackle-team-picker");
+        el("tackle-team-label").textContent = team.name + " tackle !";
+        el("tackle-answer-input").value = "";
+        show("tackle-answer-zone");
+        el("tackle-answer-input").focus();
+      });
+      buttonsDiv.appendChild(btn);
+    });
+    show("tackle-team-picker");
+  });
+
+  el("btn-tackle-cancel").addEventListener("click", function () {
+    hide("tackle-team-picker");
+    show("btn-tackle");
+  });
+
+  el("btn-tackle-submit").addEventListener("click", function () {
+    var typed = el("tackle-answer-input").value.trim();
+    if (!typed) return;
+    var card = state.currentCard;
+    var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
+    var isCorrect = validAnswers.indexOf(normalize(typed)) !== -1;
+    var tacklingTeam = state.teams[state.tackleTeamIndex];
+
+    hide("tackle-answer-zone");
+
+    if (isCorrect) {
+      awardPointsToTeam(state.tackleTeamIndex, 5);
+      showFeedback("good", "TACKLE réussi par " + tacklingTeam.name + " ! +5 points. La carte s'arrête là — c'était " + card.answer + ".");
+    } else {
+      awardPointsToTeam(state.tackleTeamIndex, -5);
+      showFeedback("bad", "TACKLE raté par " + tacklingTeam.name + ". −5 points. La carte s'arrête là — c'était " + card.answer + ".");
+    }
+    endCard();
+  });
 
   // ---------- Plus ou Moins ----------
   function beginPomTurn() {
     setActiveMinigameUI("plusoumoins");
+    clearTackleTimer();
+    hideTackleUI(); // Tackle pas encore défini pour Plus ou Moins
     state.cardEnded = false;
     state.pomChain = drawPomChain();
     state.pomIndex = 0;        // index du joueur de référence actuel dans la chaîne
@@ -1016,12 +1130,18 @@
   }
 
   function awardPoints(delta) {
-    state.teams[state.currentTeamIndex].score += delta;
+    awardPointsToTeam(state.currentTeamIndex, delta);
+  }
+
+  function awardPointsToTeam(teamIdx, delta) {
+    state.teams[teamIdx].score += delta;
     renderScoreboard();
   }
 
   function endCard() {
     state.cardEnded = true;
+    clearTackleTimer();
+    hideTackleUI();
     hide("answer-zone");
     hide("pom-answer-zone");
     hide("pom-decision-zone");
