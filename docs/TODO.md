@@ -15,6 +15,9 @@
 - Définir la procédure de correction et de signalement lorsqu'une réponse valable est refusée malgré les variantes vérifiées.
 - Fixer les critères de sélection et de difficulté des cartes Transfert, y compris le traitement des carrières de plus de cinq passages.
 - Définir les règles des mini-jeux qui suivront Plus ou Moins, chacun avec ses réponses valables, son déroulé et son score, avant leur intégration.
+- Tackle : préciser ce qu'il advient de la carte interrompue (l'équipe active reprend où elle en était, ou la carte s'arrête définitivement).
+- Tackle : décider si l'équipe qui tient le téléphone (et voit donc déjà les indices révélés sur Transfert) a le droit de tackler, vu l'avantage d'information que ça lui donnerait.
+- Tackle : définir précisément son fonctionnement sur Plus ou Moins, où il n'y a pas de « réponse finale » unique à proposer en cours de chaîne.
 
 ## Zones où Claude peut décider librement
 
