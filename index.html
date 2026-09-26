@@ -534,21 +534,30 @@
 
   var POINTS_BY_INDEX = [5, 4, 3, 2, 1];
 
-  // ---------- Content: chaînes Plus ou Moins — VALEURS TEST FICTIVES, pas de vraies stats ----------
-  // À remplacer par les 4 catégories x 50 entrées vérifiées prévues dans GAME_DESIGN.md.
+  // ---------- Content: chaînes Plus ou Moins ----------
+  // Catégories réelles vérifiées, chargées depuis des fichiers sourcés (une par catégorie).
+  var POM_REAL_CATEGORIES = [
+    { file: "src/data/stats-premier-league-goals.json", label: "Buts en Premier League" }
+  ];
+  var POM_REAL_POOLS = []; // [{label, players: [{name, value}]}]
+
+  function loadPomRealCategories() {
+    return Promise.all(
+      POM_REAL_CATEGORIES.map(function (cat) {
+        return fetch(cat.file)
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            POM_REAL_POOLS.push({ label: data.category_label || cat.label, players: data.players });
+          })
+          .catch(function (err) {
+            console.error("Impossible de charger " + cat.file, err);
+          });
+      })
+    );
+  }
+
+  // Catégories test — valeurs fictives, utilisées tant que toutes les vraies catégories ne sont pas prêtes.
   var POM_TEST_CHAINS = [
-    {
-      id: "pom-test-1",
-      category: "Buts en Premier League (TEST — valeurs fictives)",
-      chain: [
-        { name: "Joueur Alpha", value: 260 },
-        { name: "Joueur Bravo", value: 210 },
-        { name: "Joueur Charlie", value: 175 },
-        { name: "Joueur Delta", value: 140 },
-        { name: "Joueur Echo", value: 95 },
-        { name: "Joueur Foxtrot", value: 40 }
-      ]
-    },
     {
       id: "pom-test-2",
       category: "Sélections en équipe nationale (TEST — valeurs fictives)",
@@ -575,7 +584,30 @@
     }
   ];
 
+  // Construit une chaîne de 6 joueurs à valeurs distinctes, tirés au hasard dans un pool réel.
+  function buildChainFromPool(pool) {
+    var players = pool.players.slice();
+    var chosen = [];
+    while (chosen.length < 6 && players.length > 0) {
+      var idx = Math.floor(Math.random() * players.length);
+      var candidate = players.splice(idx, 1)[0];
+      if (!chosen.some(function (p) { return p.value === candidate.value; })) {
+        chosen.push(candidate);
+      }
+    }
+    // Ordre d'affichage mélangé (la comparaison utilise les vraies valeurs, pas l'ordre de la liste).
+    for (var i = chosen.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = chosen[i]; chosen[i] = chosen[j]; chosen[j] = tmp;
+    }
+    return { category: pool.label, chain: chosen };
+  }
+
   function drawPomChain() {
+    if (POM_REAL_POOLS.length > 0) {
+      var pool = POM_REAL_POOLS[Math.floor(Math.random() * POM_REAL_POOLS.length)];
+      return buildChainFromPool(pool);
+    }
     var idx = Math.floor(Math.random() * POM_TEST_CHAINS.length);
     return POM_TEST_CHAINS[idx];
   }
@@ -689,6 +721,7 @@
   });
 
   loadCards();
+  loadPomRealCategories();
 
   // ---------- GAME ENGINE ----------
   function startGame() {
