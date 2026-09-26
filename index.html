@@ -414,6 +414,10 @@
         <input type="checkbox" id="mg-transfert" checked>
         <label for="mg-transfert" style="margin:0; font-size:15px; color:var(--chalk);">Transfert</label>
       </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="mg-plusoumoins" checked>
+        <label for="mg-plusoumoins" style="margin:0; font-size:15px; color:var(--chalk);">Plus ou Moins <span style="color:var(--gold-dim); font-size:12px;">(valeurs test)</span></label>
+      </div>
     </div>
 
     <button class="primary" id="btn-start">Lancer la partie</button>
@@ -432,7 +436,7 @@
       <div class="holder-note" id="holder-note">Équipe B tient le téléphone</div>
     </div>
 
-    <div class="card-stage">
+    <div class="card-stage" id="stage-transfert">
       <div class="clue-points" id="clue-points">Cet indice vaut 5 points</div>
       <div class="clue-list" id="clue-list"></div>
     </div>
@@ -456,6 +460,31 @@
         <div class="confirm-actions">
           <button class="secondary" id="btn-edit-answer">Modifier</button>
           <button class="primary" id="btn-confirm-answer">Confirmer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plus ou Moins -->
+    <div class="card-stage hidden-screen" id="stage-pom">
+      <div class="clue-points" id="pom-category"></div>
+      <div class="clue-list" id="pom-chain-list"></div>
+    </div>
+
+    <div id="pom-feedback-zone" class="hidden-screen"></div>
+
+    <div id="pom-answer-zone" class="hidden-screen">
+      <div class="answer-btns">
+        <button class="btn-pass" id="pom-btn-moins">− Moins</button>
+        <button class="btn-answer" id="pom-btn-plus">+ Plus</button>
+      </div>
+    </div>
+
+    <div class="hidden-screen" id="pom-decision-zone">
+      <div class="confirm-box">
+        <div class="typed" id="pom-potential-points"></div>
+        <div class="confirm-actions">
+          <button class="secondary" id="pom-btn-encaisser">Encaisser</button>
+          <button class="primary" id="pom-btn-continuer">Continuer</button>
         </div>
       </div>
     </div>
@@ -505,12 +534,58 @@
 
   var POINTS_BY_INDEX = [5, 4, 3, 2, 1];
 
+  // ---------- Content: chaînes Plus ou Moins — VALEURS TEST FICTIVES, pas de vraies stats ----------
+  // À remplacer par les 4 catégories x 50 entrées vérifiées prévues dans GAME_DESIGN.md.
+  var POM_TEST_CHAINS = [
+    {
+      id: "pom-test-1",
+      category: "Buts en Premier League (TEST — valeurs fictives)",
+      chain: [
+        { name: "Joueur Alpha", value: 260 },
+        { name: "Joueur Bravo", value: 210 },
+        { name: "Joueur Charlie", value: 175 },
+        { name: "Joueur Delta", value: 140 },
+        { name: "Joueur Echo", value: 95 },
+        { name: "Joueur Foxtrot", value: 40 }
+      ]
+    },
+    {
+      id: "pom-test-2",
+      category: "Sélections en équipe nationale (TEST — valeurs fictives)",
+      chain: [
+        { name: "Joueur Golf", value: 145 },
+        { name: "Joueur Hotel", value: 120 },
+        { name: "Joueur India", value: 98 },
+        { name: "Joueur Juliett", value: 70 },
+        { name: "Joueur Kilo", value: 55 },
+        { name: "Joueur Lima", value: 20 }
+      ]
+    },
+    {
+      id: "pom-test-3",
+      category: "Buts en Coupe du monde (TEST — valeurs fictives)",
+      chain: [
+        { name: "Joueur Mike", value: 16 },
+        { name: "Joueur November", value: 13 },
+        { name: "Joueur Oscar", value: 10 },
+        { name: "Joueur Papa", value: 7 },
+        { name: "Joueur Quebec", value: 4 },
+        { name: "Joueur Romeo", value: 1 }
+      ]
+    }
+  ];
+
+  function drawPomChain() {
+    var idx = Math.floor(Math.random() * POM_TEST_CHAINS.length);
+    return POM_TEST_CHAINS[idx];
+  }
+
   // ---------- State ----------
   var state = {
     teamCount: 3,
     teamNames: ["Équipe A", "Équipe B", "Équipe C", "Équipe D"],
     roundsTotal: 10,
-    minigamesSelected: ["transfert"],
+    minigamesSelected: ["transfert", "plusoumoins"],
     teams: [],       // {name, score}
     roundsPlayed: 0,
     currentTeamIndex: 0,
@@ -586,8 +661,17 @@
   renderTeamNameInputs();
 
   el("mg-transfert").addEventListener("change", function (e) {
-    state.minigamesSelected = e.target.checked ? ["transfert"] : [];
+    syncMinigamesSelected();
   });
+  el("mg-plusoumoins").addEventListener("change", function (e) {
+    syncMinigamesSelected();
+  });
+  function syncMinigamesSelected() {
+    var list = [];
+    if (el("mg-transfert").checked) list.push("transfert");
+    if (el("mg-plusoumoins").checked) list.push("plusoumoins");
+    state.minigamesSelected = list;
+  }
 
   el("btn-start").addEventListener("click", function () {
     if (state.minigamesSelected.length === 0) {
@@ -595,7 +679,7 @@
       el("setup-error").classList.remove("hidden-screen");
       return;
     }
-    if (!CARDS_READY) {
+    if (state.minigamesSelected.indexOf("transfert") !== -1 && !CARDS_READY) {
       el("setup-error").textContent = "Les cartes ne sont pas encore chargées (ou le fichier est introuvable). Réessaie dans un instant.";
       el("setup-error").classList.remove("hidden-screen");
       return;
@@ -622,11 +706,34 @@
   }
 
   function beginTurn() {
-    state.cardEnded = false;
-    state.revealedCount = 1; // premier indice visible d'entrée
-    state.currentCard = drawCard();
-    state.typedAnswer = "";
+    // Une manche = un mini-jeu tiré au hasard parmi ceux sélectionnés, joué par toutes les équipes.
+    if (state.currentTeamIndex === 0) {
+      var idx = Math.floor(Math.random() * state.minigamesSelected.length);
+      state.currentRoundMinigame = state.minigamesSelected[idx];
+    }
 
+    if (state.currentRoundMinigame === "plusoumoins") {
+      beginPomTurn();
+    } else {
+      beginTransfertTurn();
+    }
+  }
+
+  function setActiveMinigameUI(name) {
+    var isTransfert = name === "transfert";
+    el("stage-transfert").classList.toggle("hidden-screen", !isTransfert);
+    el("answer-zone").classList.toggle("hidden-screen", !isTransfert);
+    el("stage-pom").classList.toggle("hidden-screen", isTransfert);
+    el("pom-answer-zone").classList.toggle("hidden-screen", isTransfert);
+    if (isTransfert) {
+      el("pom-feedback-zone").classList.add("hidden-screen");
+      hide("pom-decision-zone");
+    } else {
+      el("feedback-zone").innerHTML = "";
+    }
+  }
+
+  function beginTurnCommon(minigameLabel) {
     var activeTeam = state.teams[state.currentTeamIndex];
     var holderIdx = state.teams.length > 1
       ? (state.currentTeamIndex + 1) % state.teams.length
@@ -634,18 +741,122 @@
     var holderTeam = state.teams[holderIdx];
 
     el("round-count").textContent = "Manche " + (state.roundsPlayed + 1) + "/" + state.roundsTotal;
-    el("minigame-name").textContent = "Transfert";
+    el("minigame-name").textContent = minigameLabel;
     el("active-team-name").textContent = activeTeam.name;
     el("holder-note").textContent = state.teams.length > 1
       ? holderTeam.name + " tient le téléphone"
       : "Vous tenez le téléphone";
 
-    el("feedback-zone").innerHTML = "";
     hide("next-card-zone");
-    resetAnswerZone();
-    renderClueList();
     renderScoreboard();
   }
+
+  function beginTransfertTurn() {
+    setActiveMinigameUI("transfert");
+    state.cardEnded = false;
+    state.revealedCount = 1; // premier indice visible d'entrée
+    state.currentCard = drawCard();
+    state.typedAnswer = "";
+
+    beginTurnCommon("Transfert");
+    el("feedback-zone").innerHTML = "";
+    resetAnswerZone();
+    renderClueList();
+  }
+
+  // ---------- Plus ou Moins ----------
+  function beginPomTurn() {
+    setActiveMinigameUI("plusoumoins");
+    state.cardEnded = false;
+    state.pomChain = drawPomChain();
+    state.pomIndex = 0;        // index du joueur de référence actuel dans la chaîne
+    state.pomPotential = 0;    // points potentiels accumulés
+
+    beginTurnCommon("Plus ou Moins");
+    el("pom-feedback-zone").innerHTML = "";
+    el("pom-feedback-zone").classList.add("hidden-screen");
+    hide("pom-decision-zone");
+    show("pom-answer-zone");
+    renderPomChain(false);
+  }
+
+  function renderPomChain(revealNext) {
+    var chain = state.pomChain.chain;
+    el("pom-category").textContent = state.pomChain.category;
+    var list = el("pom-chain-list");
+    list.innerHTML = "";
+
+    for (var i = 0; i <= state.pomIndex; i++) {
+      var row = document.createElement("div");
+      row.className = "clue";
+      var nameSpan = document.createElement("span");
+      nameSpan.className = "club-name";
+      nameSpan.textContent = chain[i].name;
+      var valSpan = document.createElement("span");
+      valSpan.className = "years";
+      valSpan.textContent = chain[i].value;
+      row.appendChild(nameSpan);
+      row.appendChild(valSpan);
+      list.appendChild(row);
+    }
+
+    if (state.pomIndex + 1 < chain.length) {
+      var nextRow = document.createElement("div");
+      nextRow.className = "clue hidden";
+      nextRow.textContent = chain[state.pomIndex + 1].name + " — ?";
+      list.appendChild(nextRow);
+    }
+  }
+
+  function pomGuess(direction) {
+    var chain = state.pomChain.chain;
+    var refValue = chain[state.pomIndex].value;
+    var nextValue = chain[state.pomIndex + 1].value;
+    var actualDirection = nextValue > refValue ? "plus" : "moins";
+    var correct = direction === actualDirection;
+
+    state.pomIndex += 1;
+    renderPomChain();
+
+    if (correct) {
+      state.pomPotential += 1;
+      var isFifth = state.pomIndex >= chain.length - 1;
+      if (isFifth) {
+        awardPoints(state.pomPotential);
+        el("pom-feedback-zone").classList.remove("hidden-screen");
+        el("pom-feedback-zone").innerHTML = '<div class="feedback good">5/5 ! +' + state.pomPotential + ' points encaissés automatiquement.</div>';
+        endCard();
+      } else {
+        el("pom-feedback-zone").classList.remove("hidden-screen");
+        el("pom-feedback-zone").innerHTML = '<div class="feedback good">Bonne réponse !</div>';
+        hide("pom-answer-zone");
+        el("pom-potential-points").textContent = state.pomPotential + " point" + (state.pomPotential > 1 ? "s" : "") + " en jeu";
+        show("pom-decision-zone");
+      }
+    } else {
+      el("pom-feedback-zone").classList.remove("hidden-screen");
+      el("pom-feedback-zone").innerHTML = '<div class="feedback bad">Mauvaise réponse. 0 point pour cette carte.</div>';
+      awardPoints(0);
+      endCard();
+    }
+  }
+
+  el("pom-btn-plus").addEventListener("click", function () { pomGuess("plus"); });
+  el("pom-btn-moins").addEventListener("click", function () { pomGuess("moins"); });
+
+  el("pom-btn-encaisser").addEventListener("click", function () {
+    awardPoints(state.pomPotential);
+    hide("pom-decision-zone");
+    el("pom-feedback-zone").innerHTML += '<div class="feedback good">Encaissé : +' + state.pomPotential + ' points.</div>';
+    endCard();
+  });
+
+  el("pom-btn-continuer").addEventListener("click", function () {
+    hide("pom-decision-zone");
+    show("pom-answer-zone");
+    el("pom-feedback-zone").innerHTML = "";
+    el("pom-feedback-zone").classList.add("hidden-screen");
+  });
 
   function renderClueList() {
     var card = state.currentCard;
@@ -770,7 +981,9 @@
 
   function endCard() {
     state.cardEnded = true;
-    document.getElementById("answer-zone").style.display = "none";
+    hide("answer-zone");
+    hide("pom-answer-zone");
+    hide("pom-decision-zone");
 
     var isLastTeamOfRound = state.currentTeamIndex >= state.teams.length - 1;
     var isLastRound = state.roundsPlayed >= state.roundsTotal - 1;
@@ -802,8 +1015,6 @@
   }
 
   el("btn-next-card").addEventListener("click", function () {
-    document.getElementById("answer-zone").style.display = "block";
-
     state.currentTeamIndex += 1;
     if (state.currentTeamIndex >= state.teams.length) {
       state.currentTeamIndex = 0;
