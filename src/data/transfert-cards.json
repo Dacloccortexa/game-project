@@ -174,12 +174,13 @@
         { "club": "Bâle", "years": "2012–2014" },
         { "club": "Chelsea", "years": "2014–2016" },
         { "club": "Roma", "years": "2016–2017" },
-        { "club": "Liverpool", "years": "2017–présent" }
+        { "club": "Liverpool", "years": "2017–2026" },
+        { "club": "Trabzonspor", "years": "2026–présent" }
       ],
-      "sources": [],
-      "verification_status": "à vérifier",
-      "verified_date": null,
-      "notes": "extrait — Al Mokawloon et prêts (Fiorentina, Roma) omis."
+      "sources": ["aljazeera.com/sports/2026/8/6", "footballtransfers.com"],
+      "verification_status": "vérifié",
+      "verified_date": "2026-09-26",
+      "notes": "CORRIGÉ — a quitté Liverpool à l'expiration de son contrat (juin 2026, après une saison décevante) et signé à Trabzonspor début août 2026. extrait — Al Mokawloon (débuts) omis."
     },
     {
       "id": "t013",
