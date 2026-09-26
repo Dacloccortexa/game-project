@@ -33,3 +33,4 @@
 
 - Proposer un format de carte qui conserve clubs, années, prêts/retours, réponse attendue, variantes acceptées, sources et statut de vérification.
 - Proposer un tirage aléatoire des cartes pour chaque équipe, avec répétition possible, et un moyen d'évaluer les répétitions pendant les tests.
+- Clarifier dans l'interface, une fois plusieurs mini-jeux en place, quand le Tackle est disponible ou non selon le mini-jeu en cours de manche (actuellement silencieux : le bouton n'apparaît juste pas sur les jeux qui ne le supportent pas encore). À traiter une fois qu'on a plusieurs mini-jeux, pas urgent avec seulement deux.
