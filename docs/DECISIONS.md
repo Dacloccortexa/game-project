@@ -2,6 +2,12 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] On prend large sur les fautes de frappe (Transfert, Qui suis-je, Tackle)
+- Contexte : « Ronaldino » (sans le h) tapé sur Qui suis-je a été refusé, alors que « Ronaldinho » était la bonne réponse — la comparaison n'ignorait que les majuscules/accents, pas les fautes de frappe. David a demandé qu'on prenne large.
+- Décision : une réponse tapée est acceptée si elle est assez proche d'une réponse valide au sens de la distance de Levenshtein (nombre de lettres à ajouter/retirer/changer), avec une tolérance croissante selon la longueur : 1 lettre pour un mot de 7 caractères ou moins, 2 jusqu'à 14, 3 au-delà. En dessous de 4 caractères, aucune tolérance (trop risqué). S'applique partout où une réponse est comparée à `answer`/`variants` : Transfert, Qui suis-je et le Tackle sur ces deux jeux.
+- Risque assumé : sur des noms courts, une tolérance de 1 lettre peut accepter à tort un nom différent qui s'écrit presque pareil (ex. « Messi » et « Kessi » ne sont qu'à une lettre d'écart). C'est le compromis explicitement voulu par David en échange de ne plus pénaliser les fautes de frappe courantes ; à resserrer si ça pose problème en playtest.
+- Impact technique : ajout de `levenshtein()` et `matchesAnyAnswer()` dans `index.html`, utilisés à la place des comparaisons exactes dans `checkAnswer()` (Transfert), `checkQsjAnswer()` (Qui suis-je) et la validation du Tackle.
+
 ## [2026-09-27] Correctif : mauvaise réponse sur Qui suis-je = −1 point, la carte continue
 - Correction de David : une mauvaise réponse de l'équipe active ne termine pas la carte. Elle retire 1 point du score général et révèle l'indice suivant, exactement comme sur Transfert. La carte ne se termine que sur une bonne réponse, ou après une mauvaise réponse/une passe au dernier indice.
 - Cette règle remplace celle notée juste avant (« mauvaise réponse termine la carte sans point de réponse ni autre pénalité »), qui était une mauvaise lecture de la mécanique voulue.

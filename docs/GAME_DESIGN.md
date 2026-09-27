@@ -42,7 +42,7 @@ Après le dernier indice, une mauvaise réponse ou une passe termine la carte et
 
 ### Réponses acceptées
 
-Chaque carte possède un nom attendu et une liste de variantes vérifiées pour ce joueur. La comparaison ignore les majuscules et les accents. Elle n'applique **aucune correction automatique des fautes** : une variante supplémentaire doit être vérifiée et ajoutée à la carte. Avant de soumettre la réponse, l'équipe qui cherche voit et confirme le texte saisi sur le téléphone.
+Chaque carte possède un nom attendu et une liste de variantes vérifiées pour ce joueur. La comparaison ignore les majuscules et les accents et **tolère les fautes de frappe** : une réponse tapée est acceptée si elle est assez proche (au sens du nombre de lettres à ajouter/retirer/changer) d'une réponse valide, avec une tolérance qui grandit avec la longueur du mot (1 lettre pour un mot court, jusqu'à 3 pour un mot long). Une variante volontairement différente (un autre nom, un surnom non prévu) doit toujours être ajoutée explicitement à la carte. Avant de soumettre la réponse, l'équipe qui cherche voit et confirme le texte saisi sur le téléphone. S'applique à Transfert, à Qui suis-je et au Tackle sur ces deux jeux.
 
 ### Points
 

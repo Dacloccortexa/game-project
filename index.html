@@ -864,6 +864,46 @@
       .replace(/\s+/g, " ");
   }
 
+  // Distance de Levenshtein (nombre minimal d'ajouts/suppressions/substitutions d'un
+  // caractère pour passer d'une chaîne à l'autre) — sert à tolérer les fautes de frappe.
+  function levenshtein(a, b) {
+    var m = a.length, n = b.length;
+    var d = [];
+    for (var i = 0; i <= m; i++) { d[i] = [i]; }
+    for (var j = 0; j <= n; j++) { d[0][j] = j; }
+    for (i = 1; i <= m; i++) {
+      for (j = 1; j <= n; j++) {
+        var cost = a.charAt(i - 1) === b.charAt(j - 1) ? 0 : 1;
+        d[i][j] = Math.min(
+          d[i - 1][j] + 1,      // suppression
+          d[i][j - 1] + 1,      // ajout
+          d[i - 1][j - 1] + cost // substitution
+        );
+      }
+    }
+    return d[m][n];
+  }
+
+  // On prend large sur les fautes de frappe (décision de David, 2026-09-27) : au-delà des
+  // variantes déjà validées, une réponse tapée est aussi acceptée si elle est "assez proche"
+  // d'une réponse valide (accents/majuscules déjà ignorés par normalize()). La tolérance
+  // grandit avec la longueur du mot pour rester raisonnable sur les noms courts.
+  function isCloseEnough(typedNorm, validNorm) {
+    if (typedNorm === validNorm) return true;
+    if (typedNorm.length < 4 || validNorm.length < 4) return false; // trop court, trop risqué
+    var maxLen = Math.max(typedNorm.length, validNorm.length);
+    var threshold = maxLen <= 7 ? 1 : (maxLen <= 14 ? 2 : 3);
+    return levenshtein(typedNorm, validNorm) <= threshold;
+  }
+
+  function matchesAnyAnswer(typed, validAnswersNorm) {
+    var typedNorm = normalize(typed);
+    for (var i = 0; i < validAnswersNorm.length; i++) {
+      if (isCloseEnough(typedNorm, validAnswersNorm[i])) return true;
+    }
+    return false;
+  }
+
   function drawCard() {
     var idx = Math.floor(Math.random() * CARDS.length);
     return CARDS[idx];
@@ -1129,7 +1169,7 @@
     if (!typed) return;
     var card = state.currentCard;
     var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
-    var isCorrect = validAnswers.indexOf(normalize(typed)) !== -1;
+    var isCorrect = matchesAnyAnswer(typed, validAnswers);
     var tacklingTeam = state.teams[state.tackleTeamIndex];
 
     hide("tackle-answer-zone");
@@ -1512,9 +1552,8 @@
 
   function checkQsjAnswer(typed) {
     var card = state.currentCard;
-    var normTyped = normalize(typed);
     var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
-    var isCorrect = validAnswers.indexOf(normTyped) !== -1;
+    var isCorrect = matchesAnyAnswer(typed, validAnswers);
 
     if (isCorrect) {
       var pointsEarned = POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
@@ -1617,9 +1656,8 @@
 
   function checkAnswer(typed) {
     var card = state.currentCard;
-    var normTyped = normalize(typed);
     var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
-    var isCorrect = validAnswers.indexOf(normTyped) !== -1;
+    var isCorrect = matchesAnyAnswer(typed, validAnswers);
 
     if (isCorrect) {
       var maxClues = card.career.length;
