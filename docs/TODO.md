@@ -12,12 +12,15 @@
 - ⏳ À partir de cette base, composer et tester des chaînes de six joueurs : cinq comparaisons au maximum, aucune égalité entre voisins, écarts intéressants et directions PLUS/MOINS variées.
 - ✅ Vrai ou Faux (remplace Le Faux) : jeu de données de 2 000 affirmations intégré (`src/data/vraifaux-statements.json`, toutes vérifiées) et mini-jeu implémenté dans `index.html` (5 affirmations, cagnotte 1→5, ENCAISSER/CONTINUER, Tackle déclenché par la réponse de l'équipe active). Voir DECISIONS.md du 2026-09-27.
 - ⏳ Relecture éditoriale du jeu de données Vrai ou Faux avant une vraie soirée test (recommandée par sa propre note de contrôle, pas encore faite — seul un contrôle automatique de cohérence a été effectué).
+- ⏳ Qui suis-je ? : préparer des cartes sourcées avec **un joueur et cinq indices courts dans l'ordre fixe club → titre gagné → poste → coéquipier → nationalité** ; vérifier pour chaque carte la progression réelle de la difficulté et les variantes de réponse acceptées.
+- ⏳ Qui suis-je ? : implémenter buzzer pour les équipes encore en jeu, réponse verrouillée, Tackle avant révélation (+5/−5) et élimination d'une équipe après une mauvaise réponse. Jeu non encore intégré.
 
 ## Arbitrages de game design à faire avant le déroulé complet
 
 - Définir la procédure de correction et de signalement lorsqu'une réponse valable est refusée malgré les variantes vérifiées.
 - Fixer les critères de sélection et de difficulté des cartes Transfert, y compris le traitement des carrières de plus de cinq passages.
 - Définir les règles des mini-jeux qui suivront Plus ou Moins, chacun avec ses réponses valables, son déroulé et son score, avant leur intégration.
+- Qui suis-je ? : décider comment une question jouée simultanément par toutes les équipes s'insère dans une manche actuellement définie comme un tour avec une carte par équipe ; fixer le nombre de questions et la durée exacte de la fenêtre de Tackle sur un seul téléphone.
 - ✅ Tackle sur Transfert : tranché (délai + sifflet, la carte s'arrête toujours après une tentative de Tackle). Voir DECISIONS.md du 2026-09-26.
 - ✅ Tackle sur le futur Vrai ou Faux : tranché (déclenché par la réponse de l'équipe active, avant révélation ; le tour actif continue normalement si le Tackle échoue). Voir DECISIONS.md du 2026-09-27.
 - Tackle : décider si l'équipe qui tient le téléphone (et voit donc déjà les indices révélés sur Transfert) a le droit de tackler, vu l'avantage d'information que ça lui donnerait.
