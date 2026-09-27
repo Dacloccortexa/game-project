@@ -102,7 +102,7 @@ Une carte vise un match de football. **La compétition seule** est affichée dè
 
 **Tackle sur Le Match :** à chaque nouvel événement, l'équipe active dispose de **12 secondes** avant un coup de sifflet. Après le sifflet, la première équipe adverse qui annonce Tackle donne **sa propre réponse** avec les deux équipes du match. Bonne réponse : **+5 points** ; mauvaise réponse : **−5 points**, même si le score devient négatif. Toute tentative de Tackle termine la carte. L'équipe active peut répondre avant un Tackle ; si sa réponse est correcte, elle reçoit les points de l'événement et la carte s'arrête. Il n'y a pas de contestation binaire de sa réponse après coup.
 
-Restent à définir avant l'implémentation : la conséquence d'une mauvaise réponse de l'équipe active, la possibilité de passer et le traitement d'une carte non trouvée après le cinquième événement. Les matchs sélectionnés doivent comporter cinq événements suffisamment distincts et sourcés ; leur identification réelle sera testée en partie.
+Comme sur Qui suis-je, après chaque événement l'équipe active peut donner **une seule réponse** ou **passer**. Une mauvaise réponse retire **1 point** de son score général puis révèle l'événement suivant ; une passe révèle l'événement suivant sans pénalité. Après une mauvaise réponse ou une passe au cinquième événement, la carte se termine et les deux équipes du match sont révélées. Les pénalités de mauvaises réponses se cumulent. Les matchs sélectionnés doivent comporter cinq événements suffisamment distincts et sourcés ; leur identification réelle sera testée en partie.
 
 ## Contenus et difficulté
 
