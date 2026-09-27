@@ -1,0 +1,313 @@
+{
+  "category_id": "serie_a_goals",
+  "category_label": "Buts en Serie A",
+  "unit": "buts",
+  "scope": "Total des buts marqués en Serie A masculine à poule unique depuis 1929-1930, tous clubs confondus ; compétitions de 1944 et 1945-1946 exclues.",
+  "snapshot_date": "2026-08-31",
+  "source": "Wikipedia — classement historique des buteurs",
+  "source_leaderboard_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+  "selection_note": "50 premières entrées du classement Wikipédia arrêté aux matchs du 31 août 2026.",
+  "verification_note": "Chiffres relevés dans le tableau de la source le 27 septembre 2026 ; contrôle de cohérence des noms, valeurs et doublons. Les joueurs encore actifs devront être réactualisés avant une vraie partie test.",
+  "players": [
+    {
+      "name": "Silvio Piola",
+      "value": 274,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Francesco Totti",
+      "value": 250,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gunnar Nordahl",
+      "value": 225,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Giuseppe Meazza",
+      "value": 216,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "José Altafini",
+      "value": 216,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Antonio Di Natale",
+      "value": 209,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Roberto Baggio",
+      "value": 205,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ciro Immobile",
+      "value": 201,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Kurt Hamrin",
+      "value": 190,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Giuseppe Signori",
+      "value": 188,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Alessandro Del Piero",
+      "value": 188,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Alberto Gilardino",
+      "value": 188,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gabriel Batistuta",
+      "value": 183,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Fabio Quagliarella",
+      "value": 182,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Giampiero Boniperti",
+      "value": 178,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Amedeo Amadei",
+      "value": 174,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Giuseppe Savoldi",
+      "value": 168,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Guglielmo Gabetto",
+      "value": 164,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Roberto Boninsegna",
+      "value": 162,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Luca Toni",
+      "value": 157,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Zlatan Ibrahimović",
+      "value": 156,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gigi Riva",
+      "value": 156,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Filippo Inzaghi",
+      "value": 156,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Roberto Mancini",
+      "value": 156,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Luís Vinício",
+      "value": 155,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Carlo Reguzzoni",
+      "value": 155,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "István Nyers",
+      "value": 153,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Hernán Crespo",
+      "value": 153,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Adriano Bassetto",
+      "value": 149,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Omar Sívori",
+      "value": 147,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Christian Vieri",
+      "value": 142,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Benito Lorenzi",
+      "value": 142,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Marco Di Vaio",
+      "value": 142,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Paolo Pulici",
+      "value": 142,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Vincenzo Montella",
+      "value": 141,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "John Hansen",
+      "value": 139,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Enrico Chiesa",
+      "value": 138,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Sergio Brighenti",
+      "value": 136,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Roberto Pruzzo",
+      "value": 133,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Lautaro Martínez",
+      "value": 132,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Alessandro Altobelli",
+      "value": 132,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Felice Borel",
+      "value": 131,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Domenico Berardi",
+      "value": 131,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Paulo Dybala",
+      "value": 131,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ezio Pascutti",
+      "value": 130,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Francesco Graziani",
+      "value": 130,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Roberto Bettega",
+      "value": 129,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gianni Rivera",
+      "value": 128,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Andriy Shevchenko",
+      "value": 127,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Duván Zapata",
+      "value": 127,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Serie_A_players_with_100_or_more_goals",
+      "verified_at": "2026-09-27"
+    }
+  ]
+}
