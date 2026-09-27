@@ -2,6 +2,13 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] Le Match et les deux formes de Tackle
+- David valide **Le Match** : la compétition est affichée au départ, sans édition ; cinq événements vérifiés sont révélés dans l'ordre chronologique du match, pour 5, 4, 3, 2 puis 1 point. Une équipe active doit retrouver les deux équipes du match, acceptées dans n'importe quel ordre. La chronologie prime sur une difficulté artificiellement croissante.
+- Sur Le Match, le Tackle reprend le **vol de réponse** de Transfert/Qui suis-je : 12 secondes de jeu exclusif pour l'équipe active **à chaque événement**, puis sifflet. La première équipe adverse à annoncer Tackle propose elle-même les deux équipes : +5 si elle trouve, −5 sinon. Sa tentative termine la carte dans les deux cas. Il n'y a pas de contestation binaire après une réponse de l'équipe active.
+- Sur **Plus ou Moins** et **Vrai ou Faux**, le Tackle reste une **contestation** après la réponse verrouillée de l'équipe active, avant révélation. Les adversaires disposent de **5 secondes** ; la première annonce compte. Ils ne donnent pas d'autre réponse : +5 si l'équipe active se trompe, −5 si elle a raison. Un seul Tackle est possible par comparaison ou affirmation. Le Tackle ne porte ni sur ENCAISSER ni sur CONTINUER. Un Tackle raté ne change pas la suite normale de la carte active.
+- Avec une seule équipe, il n'y a pas de Tackle. Le délai de 5 secondes et celui de 12 secondes pourront être éprouvés en playtest.
+- Restent à arbitrer pour Le Match : effet d'une mauvaise réponse active, passe et fin sans réponse après le cinquième événement. L'implémentation du Tackle sur Plus ou Moins et la conformité de la fenêtre de 5 secondes sur Vrai ou Faux restent à vérifier dans le code.
+
 ## [2026-09-27] Qui suis-je ? : les 4 fiches de test sont remplacées par les 100 vraies cartes
 - David a fourni 100 cartes sourcées (`src/data/quisuisje-cards.json`, revue lisible dans `docs/QUI_SUIS_JE_100_FICHES.md`) et a demandé de retirer les fiches de test.
 - Implémentation : `QSJ_TEST_CARDS` (embarqué dans le code) est remplacé par `loadQsjCards()`, qui charge le fichier comme les autres contenus (`cache: "no-store"`, un seul `fetch`), avec un flag `QSJ_READY` bloquant le lancement de partie tant que le chargement n'est pas terminé, à l'identique de Transfert/Plus ou Moins/Vrai ou Faux. La case « Qui suis-je ? » est maintenant cochée par défaut comme les autres mini-jeux, puisque le contenu n'est plus du placeholder.
