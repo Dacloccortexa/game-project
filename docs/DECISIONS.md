@@ -2,6 +2,12 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] Qui suis-je ? : cinq indices atomiques dans un ordre fixe
+- Décision de David : une question vise un seul joueur mystère et révèle cinq indices un par un, toujours dans cet ordre : **un club (5 points), un titre gagné (4), le poste (3), un coéquipier (2), la nationalité (1)**. Chaque indice contient une seule information ; les cinq indices ne correspondent pas à cinq joueurs différents.
+- Toutes les équipes encore en jeu peuvent buzzer. La première à buzzer répond une seule fois. Avant révélation, une autre équipe peut contester cette réponse par un Tackle unique : si la réponse est fausse, le tackleur gagne 5 points ; si elle est juste, il perd 5 points.
+- Bonne réponse : points de l'indice et fin de la question. Mauvaise réponse : équipe éliminée pour cette question, puis indice suivant pour les autres. Une équipe éliminée ne peut ni répondre ni tackler. Sans bonne réponse après les cinq indices, le joueur est révélé.
+- À régler avant implémentation : place de ce jeu simultané dans la structure actuelle des manches, nombre de questions par manche et durée de la fenêtre de Tackle.
+
 ## [2026-09-27] Étendre Plus ou Moins aux trois grands championnats voisins
 - Décision de David : ajouter les buts en Liga, Serie A et Ligue 1 à Plus ou Moins, avec 50 joueurs par catégorie comme pour les quatre lots existants.
 - Raison : augmenter la variété des comparaisons sans changer la mécanique de jeu.
