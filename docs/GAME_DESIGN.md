@@ -78,6 +78,24 @@ Remplace l'ancien concept « Le Faux ». Une carte présente jusqu'à **5 affirm
 
 Le contenu provient d'un jeu de 2 000 affirmations (1 000 vraies, 1 000 fausses) préparé par David, dérivées de données déjà vérifiées (années de naissance, tailles, pied fort, poste, ordre des clubs, ville de naissance, débuts professionnels) avec sources par affirmation. Chaque fait dispose d'une version vraie et d'une version fausse regroupées par un identifiant commun, pour ne jamais réunir deux énoncés sur le même fait dans une même carte. Implémenté dans `index.html` (`src/data/vraifaux-statements.json`).
 
+## Quatrième mini-jeu prévu : Qui suis-je ?
+
+Une question porte sur **un seul joueur mystère**. Ses cinq indices sont révélés un par un, dans cet ordre fixe. Chaque indice apporte **une seule information courte** :
+
+1. **Un club où il a joué** — réponse à cet indice : **5 points**.
+2. **Une coupe ou un championnat qu'il a gagné** — **4 points**.
+3. **Son poste** — **3 points**.
+4. **Un coéquipier avec qui il a joué** — **2 points**.
+5. **Sa nationalité** — **1 point**.
+
+Toutes les équipes encore en jeu pour cette question peuvent buzzer à chaque indice. Sans buzzer, l'indice suivant apparaît. **La première équipe à buzzer donne une réponse unique.** L'application verrouille cette réponse et ouvre une courte fenêtre de Tackle **avant** de révéler le joueur. Une seule équipe adverse peut tackler cette réponse : la première à le faire est retenue. Tackle signifie seulement « cette réponse est fausse » ; le tackleur ne propose pas d'autre joueur.
+
+Si la réponse est correcte, l'équipe qui a buzzé gagne les points de l'indice et la question se termine. Si une autre équipe a tacklé, elle perd **5 points**. Si la réponse est fausse, l'équipe qui a buzzé est éliminée **pour cette question** ; si elle a été tacklée, le tackleur gagne **5 points**. Les autres équipes encore en jeu passent à l'indice suivant. Une équipe éliminée ne peut plus buzzer ni tackler sur cette question. Le score général peut devenir négatif. Une mauvaise réponse ne retire pas d'autres points à l'équipe qui a buzzé.
+
+Si personne ne trouve après le cinquième indice, ou si toutes les équipes sont éliminées avant, le joueur est révélé. Aucun point de réponse n'est attribué ; les éventuels points de Tackle restent acquis. Avec une seule équipe, il n'y a pas de Tackle.
+
+Les cinq indices d'une carte sont préparés, sourcés et relus **dans cet ordre** avant mise en jeu. La nature fixe des indices ne garantit pas à elle seule une difficulté croissante : il faut vérifier que chaque nouvelle information rend effectivement le joueur plus identifiable dans le contexte des indices déjà révélés.
+
 ## Contenus et difficulté
 
 Les cartes sont préparées et leurs faits vérifiés par un agent avant d'être intégrées. La vérification des faits se fait en amont, pas par une génération ou un jugement d'IA pendant la partie. La difficulté réelle des cartes sera ajustée à partir des parties jouées et documentées dans `PLAYTESTS.md`.
