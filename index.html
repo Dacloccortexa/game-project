@@ -584,7 +584,7 @@
   var CARDS_READY = false;
 
   function loadCards() {
-    return fetch("src/data/transfert-cards.json")
+    return fetch("src/data/transfert-cards.json", { cache: "no-store" })
       .then(function (res) { return res.json(); })
       .then(function (data) {
         CARDS = data.cards
@@ -631,7 +631,7 @@
   function loadPomRealCategories() {
     return Promise.all(
       POM_REAL_CATEGORIES.map(function (cat) {
-        return fetch(cat.file)
+        return fetch(cat.file, { cache: "no-store" })
           .then(function (res) { return res.json(); })
           .then(function (data) {
             POM_REAL_POOLS.push({ label: data.category_label || cat.label, players: data.players });
@@ -707,7 +707,7 @@
   var VF_READY = false;
 
   function loadVraiFauxStatements() {
-    return fetch("src/data/vraifaux-statements.json")
+    return fetch("src/data/vraifaux-statements.json", { cache: "no-store" })
       .then(function (res) { return res.json(); })
       .then(function (data) {
         VF_POOL = data.statements.filter(function (s) { return s.verification_status === "vérifié"; });
