@@ -2,6 +2,11 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] Étendre Plus ou Moins aux trois grands championnats voisins
+- Décision de David : ajouter les buts en Liga, Serie A et Ligue 1 à Plus ou Moins, avec 50 joueurs par catégorie comme pour les quatre lots existants.
+- Raison : augmenter la variété des comparaisons sans changer la mécanique de jeu.
+- Contenu : trois fichiers sourcés et datés, chargés avec les autres catégories ; le jeu dispose ainsi de sept catégories et 350 entrées statistiques.
+
 ## [2026-09-27] Tackle binaire : −5 points possibles et révélation différée sur Plus ou Moins
 - Décision de David : sur Vrai ou Faux et Plus ou Moins, l'équipe active verrouille d'abord sa réponse. Une autre équipe peut alors tackler immédiatement, avant la révélation, sans attendre le délai ou le sifflet propre à Transfert. Un seul Tackle est retenu par affirmation ; il conteste la réponse active sans fournir d'autre réponse.
 - Score : si la réponse active est fausse, le tackleur reçoit **+5** ; si elle est juste, il reçoit **−5**. Le score général peut devenir **négatif**, y compris lorsque le tackleur part de zéro. La cagnotte de l'équipe active suit sa règle normale.
