@@ -13,7 +13,9 @@
 - ✅ Vrai ou Faux (remplace Le Faux) : jeu de données de 2 000 affirmations intégré (`src/data/vraifaux-statements.json`, toutes vérifiées) et mini-jeu implémenté dans `index.html` (5 affirmations, cagnotte 1→5, ENCAISSER/CONTINUER, Tackle déclenché par la réponse de l'équipe active). Voir DECISIONS.md du 2026-09-27.
 - ⏳ Relecture éditoriale du jeu de données Vrai ou Faux avant une vraie soirée test (recommandée par sa propre note de contrôle, pas encore faite — seul un contrôle automatique de cohérence a été effectué).
 - ✅ Qui suis-je ? : mini-jeu implémenté dans `index.html` avec le buzzer de Transfert (12 secondes, sifflet, première équipe adverse à répondre, +5/−5, fin de carte). Case décochée par défaut dans la configuration (contenu de test uniquement).
-- ⏳ Qui suis-je ? : le jeu tourne pour l'instant avec **4 fiches de test écrites par Claude** (`QSJ_TEST_CARDS` dans `index.html`, joueurs réels mais non sourcées formellement) — à remplacer par de vraies cartes sourcées avec **un joueur et cinq indices courts dans l'ordre fixe club → titre gagné → poste → coéquipier → nationalité** avant toute vraie soirée test ; vérifier pour chaque carte la progression réelle de la difficulté et les variantes de réponse acceptées.
+- ✅ Qui suis-je ? : **100 fiches sourcées** préparées dans `src/data/quisuisje-cards.json`, avec une version lisible dans `docs/QUI_SUIS_JE_100_FICHES.md`. Chaque fiche suit l'ordre club → titre gagné → poste → coéquipier → nationalité, pour 5 → 1 points. Les fiches sont construites à partir des profils Wikipédia et des carrières Transfert du dépôt ; les sources figurent dans les données.
+- ⏳ Qui suis-je ? : remplacer les **4 fiches de test** de `QSJ_TEST_CARDS` dans `index.html` par les 100 nouvelles fiches et vérifier les variantes de réponse dans le jeu.
+- ⏳ Qui suis-je ? : faire une relecture éditoriale et un playtest de la difficulté réelle des indices avant une vraie soirée test.
 
 ## Arbitrages de game design à faire avant le déroulé complet
 
