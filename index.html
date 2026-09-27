@@ -422,6 +422,10 @@
         <input type="checkbox" id="mg-vraifaux" checked>
         <label for="mg-vraifaux" style="margin:0; font-size:15px; color:var(--chalk);">Vrai ou Faux</label>
       </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="mg-quisuisje">
+        <label for="mg-quisuisje" style="margin:0; font-size:15px; color:var(--chalk);">Qui suis-je ? (cartes test)</label>
+      </div>
     </div>
 
     <button class="primary" id="btn-start">Lancer la partie</button>
@@ -536,6 +540,35 @@
       </div>
     </div>
 
+    <!-- Qui suis-je ? (cartes de test, voir DECISIONS.md) -->
+    <div class="card-stage hidden-screen" id="stage-qsj">
+      <div class="clue-points" id="qsj-points">Cet indice vaut 5 points</div>
+      <div class="clue-list" id="qsj-clue-list"></div>
+    </div>
+
+    <div id="qsj-feedback-zone"></div>
+
+    <div id="qsj-answer-zone">
+      <div class="answer-btns">
+        <button class="btn-pass" id="btn-qsj-pass">Passer</button>
+        <button class="btn-answer" id="btn-qsj-answer">Répondre</button>
+      </div>
+      <div class="confirm-box hidden-screen" id="qsj-type-box">
+        <div class="field">
+          <label>Nom du joueur</label>
+          <input type="text" id="qsj-answer-input" placeholder="Tape le nom ici" autocomplete="off">
+        </div>
+        <button class="primary" id="btn-qsj-submit-answer" style="margin-top:4px;">Valider</button>
+      </div>
+      <div class="confirm-box hidden-screen" id="qsj-confirm-box">
+        <div class="typed">Tu as tapé : « <span id="qsj-typed-text"></span> »</div>
+        <div class="confirm-actions">
+          <button class="secondary" id="btn-qsj-edit-answer">Modifier</button>
+          <button class="primary" id="btn-qsj-confirm-answer">Confirmer</button>
+        </div>
+      </div>
+    </div>
+
     <div class="hidden-screen" id="next-card-zone">
       <button class="primary" id="btn-next-card">Suivant</button>
     </div>
@@ -598,6 +631,69 @@
         console.error("Impossible de charger transfert-cards.json", err);
         CARDS_READY = false;
       });
+  }
+
+  // ---------- Content: cartes Qui suis-je (TEST) ----------
+  // Cartes créées par Claude à la demande de David pour tester le mécanisme du jeu,
+  // AVANT que les vraies cartes sourcées ne soient fournies (voir DECISIONS.md du 2026-09-27
+  // "Claude n'enrichit pas le contenu"). Ce ne sont pas des cartes vérifiées au sens du
+  // pipeline habituel : elles ne doivent jamais être confondues avec du contenu réel prêt
+  // pour une vraie soirée. Ordre fixe des indices : club, titre gagné, poste, coéquipier,
+  // nationalité (voir GAME_DESIGN.md).
+  var QSJ_TEST_CARDS = [
+    {
+      id: "qsj-test-1",
+      answer: "Zinedine Zidane",
+      variants: ["Zidane", "Zizou"],
+      clues: [
+        "A joué à la Juventus",
+        "A gagné la Coupe du monde 1998",
+        "Poste : milieu offensif",
+        "A joué aux côtés de Ronaldo (le Brésilien) au Real Madrid",
+        "Nationalité : France"
+      ]
+    },
+    {
+      id: "qsj-test-2",
+      answer: "Ronaldinho",
+      variants: ["Ronaldinho Gaucho", "Ronaldinho Gaúcho"],
+      clues: [
+        "A joué au FC Barcelone",
+        "A gagné la Ligue des champions 2006",
+        "Poste : ailier / milieu offensif",
+        "A joué aux côtés de Lionel Messi",
+        "Nationalité : Brésil"
+      ]
+    },
+    {
+      id: "qsj-test-3",
+      answer: "Thierry Henry",
+      variants: ["Henry"],
+      clues: [
+        "A joué à Arsenal",
+        "A gagné la Coupe du monde 1998",
+        "Poste : attaquant",
+        "A joué aux côtés de Patrick Vieira",
+        "Nationalité : France"
+      ]
+    },
+    {
+      id: "qsj-test-4",
+      answer: "Andrés Iniesta",
+      variants: ["Iniesta"],
+      clues: [
+        "A joué au FC Barcelone",
+        "A gagné la Coupe du monde 2010",
+        "Poste : milieu de terrain",
+        "A joué aux côtés de Xavi",
+        "Nationalité : Espagne"
+      ]
+    }
+  ];
+
+  function drawQsjCard() {
+    var idx = Math.floor(Math.random() * QSJ_TEST_CARDS.length);
+    return QSJ_TEST_CARDS[idx];
   }
 
   var POINTS_BY_INDEX = [5, 4, 3, 2, 1];
@@ -832,11 +928,15 @@
   el("mg-vraifaux").addEventListener("change", function (e) {
     syncMinigamesSelected();
   });
+  el("mg-quisuisje").addEventListener("change", function (e) {
+    syncMinigamesSelected();
+  });
   function syncMinigamesSelected() {
     var list = [];
     if (el("mg-transfert").checked) list.push("transfert");
     if (el("mg-plusoumoins").checked) list.push("plusoumoins");
     if (el("mg-vraifaux").checked) list.push("vraifaux");
+    if (el("mg-quisuisje").checked) list.push("quisuisje");
     state.minigamesSelected = list;
   }
 
@@ -895,6 +995,8 @@
       beginPomTurn();
     } else if (state.currentRoundMinigame === "vraifaux") {
       beginVfTurn();
+    } else if (state.currentRoundMinigame === "quisuisje") {
+      beginQsjTurn();
     } else {
       beginTransfertTurn();
     }
@@ -904,6 +1006,7 @@
     var isTransfert = name === "transfert";
     var isPom = name === "plusoumoins";
     var isVf = name === "vraifaux";
+    var isQsj = name === "quisuisje";
 
     el("stage-transfert").classList.toggle("hidden-screen", !isTransfert);
     el("answer-zone").classList.toggle("hidden-screen", !isTransfert);
@@ -912,6 +1015,8 @@
     el("pom-answer-zone").classList.toggle("hidden-screen", !isPom);
 
     el("stage-vf").classList.toggle("hidden-screen", !isVf);
+
+    el("stage-qsj").classList.toggle("hidden-screen", !isQsj);
 
     if (!isTransfert) {
       el("feedback-zone").innerHTML = "";
@@ -928,6 +1033,10 @@
       hide("vf-pending-zone");
       hide("vf-tackle-team-picker");
       hide("vf-answer-zone");
+    }
+    if (!isQsj) {
+      el("qsj-feedback-zone").innerHTML = "";
+      hide("qsj-answer-zone");
     }
   }
 
@@ -1322,6 +1431,114 @@
     show("vf-answer-zone");
   });
 
+  // ---------- Qui suis-je ? (cartes de test — voir QSJ_TEST_CARDS et DECISIONS.md) ----------
+  function beginQsjTurn() {
+    setActiveMinigameUI("quisuisje");
+    state.cardEnded = false;
+    state.revealedCount = 1;
+    state.currentCard = drawQsjCard();
+    state.typedAnswer = "";
+
+    beginTurnCommon("Qui suis-je ? (cartes test)");
+    el("qsj-feedback-zone").innerHTML = "";
+    resetQsjAnswerZone();
+    show("qsj-answer-zone");
+    renderQsjClues();
+    startTackleWindow(); // même buzzer que Transfert : délai, sifflet, réponse unique de l'adversaire
+  }
+
+  function renderQsjClues() {
+    var card = state.currentCard;
+    var list = el("qsj-clue-list");
+    list.innerHTML = "";
+
+    for (var i = 0; i < card.clues.length; i++) {
+      var clueDiv = document.createElement("div");
+      if (i < state.revealedCount) {
+        clueDiv.className = "clue";
+        clueDiv.textContent = card.clues[i];
+      } else {
+        clueDiv.className = "clue hidden";
+        clueDiv.textContent = "?";
+      }
+      list.appendChild(clueDiv);
+    }
+
+    var pointsForCurrent = POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
+    el("qsj-points").textContent = "Cet indice vaut " + pointsForCurrent + " point" + (pointsForCurrent > 1 ? "s" : "");
+  }
+
+  function resetQsjAnswerZone() {
+    hide("qsj-type-box");
+    hide("qsj-confirm-box");
+    el("qsj-answer-input").value = "";
+    document.querySelector("#qsj-answer-zone .answer-btns").style.display = "flex";
+  }
+
+  el("btn-qsj-answer").addEventListener("click", function () {
+    document.querySelector("#qsj-answer-zone .answer-btns").style.display = "none";
+    show("qsj-type-box");
+    el("qsj-answer-input").focus();
+  });
+
+  el("btn-qsj-submit-answer").addEventListener("click", function () {
+    var val = el("qsj-answer-input").value.trim();
+    if (!val) return;
+    state.typedAnswer = val;
+    el("qsj-typed-text").textContent = val;
+    hide("qsj-type-box");
+    show("qsj-confirm-box");
+  });
+
+  el("btn-qsj-edit-answer").addEventListener("click", function () {
+    hide("qsj-confirm-box");
+    show("qsj-type-box");
+    el("qsj-answer-input").focus();
+  });
+
+  el("btn-qsj-confirm-answer").addEventListener("click", function () {
+    hide("qsj-confirm-box");
+    document.querySelector("#qsj-answer-zone .answer-btns").style.display = "flex";
+    checkQsjAnswer(state.typedAnswer);
+  });
+
+  el("btn-qsj-pass").addEventListener("click", function () {
+    advanceQsjClue();
+  });
+
+  function showQsjFeedback(kind, text) {
+    el("qsj-feedback-zone").innerHTML = '<div class="feedback ' + kind + '">' + text + "</div>";
+  }
+
+  function checkQsjAnswer(typed) {
+    var card = state.currentCard;
+    var normTyped = normalize(typed);
+    var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
+    var isCorrect = validAnswers.indexOf(normTyped) !== -1;
+
+    if (isCorrect) {
+      var pointsEarned = POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
+      awardPoints(pointsEarned);
+      showQsjFeedback("good", "Bonne réponse ! +" + pointsEarned + " points — c'était bien " + card.answer + ".");
+    } else {
+      awardPoints(0);
+      showQsjFeedback("bad", "Mauvaise réponse. C'était " + card.answer + ". 0 point pour cette carte.");
+    }
+    endCard();
+  }
+
+  function advanceQsjClue() {
+    var card = state.currentCard;
+    if (state.revealedCount >= card.clues.length) {
+      awardPoints(0);
+      showQsjFeedback("bad", "Fin des indices. C'était " + card.answer + ".");
+      endCard();
+      return;
+    }
+    state.revealedCount += 1;
+    renderQsjClues();
+  }
+
   function renderClueList() {
     var card = state.currentCard;
     var list = el("clue-list");
@@ -1458,6 +1675,7 @@
     hide("vf-pending-zone");
     hide("vf-decision-zone");
     hide("vf-tackle-team-picker");
+    hide("qsj-answer-zone");
 
     var isLastTeamOfRound = state.currentTeamIndex >= state.teams.length - 1;
     var isLastRound = state.roundsPlayed >= state.roundsTotal - 1;

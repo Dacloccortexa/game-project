@@ -2,6 +2,13 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] Qui suis-je ? implémenté avec 4 fiches de test écrites par Claude
+- Décision de David : construire le mini-jeu tout de suite en utilisant des fiches de test que Claude écrit lui-même (4 joueurs différents), plutôt que d'attendre le vrai contenu sourcé.
+- Contenu : 4 cartes embarquées directement dans `index.html` (`QSJ_TEST_CARDS`), sur des joueurs réels et très documentés (Zidane, Ronaldinho, Henry, Iniesta) pour limiter le risque d'erreur factuelle même en test, mais **non vérifiées** au sens du pipeline habituel (pas de sources ni de statut « vérifié » par carte). Clairement commentées dans le code comme données de test à ne jamais confondre avec du contenu réel, conformément à la décision du 2026-09-27 « Claude n'enrichit pas le contenu ».
+- Implémentation : reprend telle quelle la fenêtre de Tackle déjà construite pour Transfert (même minuteur, même sifflet, même UI de sélection d'équipe et de réponse) puisque le mécanisme est identique. Testé automatiquement : bonne réponse, mauvaise réponse, passe jusqu'au dernier indice, et Tackle raté après le sifflet — les quatre cas se comportent comme prévu.
+- Case décochée par défaut dans l'écran de configuration (contrairement aux autres mini-jeux, cochés par défaut), pour éviter qu'une vraie soirée test tombe sans le vouloir sur seulement 4 cartes fictives à faible variété.
+- Non tranché : les vraies cartes sourcées de Qui suis-je restent à écrire par David/ChatGPT ; une fois reçues, elles remplaceront `QSJ_TEST_CARDS` selon le même pipeline que les autres mini-jeux.
+
 ## [2026-09-27] Qui suis-je ? : cinq indices fixes, une équipe active et le buzzer de Transfert
 - Décision de David : une carte vise un seul joueur mystère et est jouée par **une seule équipe active**. Chaque équipe joue sa propre carte dans la manche.
 - Les cinq indices sont révélés un par un dans l'ordre **un club (5 points), un titre gagné (4), le poste (3), un coéquipier (2), la nationalité (1)**. Chaque indice contient une seule information courte.
