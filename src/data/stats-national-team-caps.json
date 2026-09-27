@@ -1,0 +1,313 @@
+{
+  "category_id": "national_team_caps",
+  "category_label": "Sélections en équipe nationale",
+  "unit": "sélections",
+  "scope": "Matchs en équipe nationale senior masculine reconnus par la FIFA, toutes compétitions confondues.",
+  "snapshot_date": "2026-09-26",
+  "source": "Wikipedia — classement des meilleurs joueurs",
+  "source_leaderboard_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+  "selection_note": "Les 50 premières entrées du classement Wikipédia arrêté au 26 septembre 2026, selon les totaux FIFA du tableau ; les joueurs encore actifs devront être réactualisés.",
+  "verification_note": "Chiffres relevés dans le tableau de la source le 27 septembre 2026 ; contrôle de cohérence des 50 noms, valeurs et doublons. Les écarts sont à ajuster en playtest.",
+  "players": [
+    {
+      "name": "Cristiano Ronaldo",
+      "value": 234,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Lionel Messi",
+      "value": 207,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Luka Modrić",
+      "value": 202,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Bader Al-Mutawa",
+      "value": 202,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Soh Chin Ann",
+      "value": 195,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ahmed Kano",
+      "value": 193,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Hassan Al-Haydos",
+      "value": 189,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ahmed Hassan",
+      "value": 184,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Andrés Guardado",
+      "value": 180,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Sergio Ramos",
+      "value": 180,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Claudio Suárez",
+      "value": 178,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Hossam Hassan",
+      "value": 177,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gianluigi Buffon",
+      "value": 176,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Maynor Figueroa",
+      "value": 175,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Mohamed Al-Deayea",
+      "value": 173,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Amer Shafi",
+      "value": 171,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Iván Hurtado",
+      "value": 168,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Robert Lewandowski",
+      "value": 168,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Alexis Sánchez",
+      "value": 168,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Iker Casillas",
+      "value": 167,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Vitālijs Astafjevs",
+      "value": 166,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Cobi Jones",
+      "value": 164,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Sayed Mohammed Jaffer",
+      "value": 163,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Mohammed Al-Khilaiwi",
+      "value": 163,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Shukor Salleh",
+      "value": 163,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Diego Godín",
+      "value": 161,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Mohamed Husain",
+      "value": 161,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Salman Isa",
+      "value": 161,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gary Medel",
+      "value": 161,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Adnan Al-Talyani",
+      "value": 161,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Celso Borges",
+      "value": 160,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Essam El-Hadary",
+      "value": 159,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Konstantin Vassiljev",
+      "value": 159,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ivan Perišić",
+      "value": 158,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Sunil Chhetri",
+      "value": 157,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Jan Vertonghen",
+      "value": 157,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Sami Al-Jaber",
+      "value": 156,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Martin Reim",
+      "value": 156,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Landon Donovan",
+      "value": 155,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Hariss Harun",
+      "value": 155,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Aníbal Godoy",
+      "value": 153,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Guillermo Ochoa",
+      "value": 153,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Fawzi Bashir",
+      "value": 152,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Yasuhito Endō",
+      "value": 152,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Granit Xhaka",
+      "value": 152,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Edin Džeko",
+      "value": 151,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Christian Eriksen",
+      "value": 151,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Michael Bradley",
+      "value": 150,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Claudio Bravo",
+      "value": 150,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Lothar Matthäus",
+      "value": 150,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_men%27s_footballers_with_100_or_more_international_caps",
+      "verified_at": "2026-09-27"
+    }
+  ]
+}
