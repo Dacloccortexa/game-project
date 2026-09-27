@@ -2,12 +2,17 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] Le Match reprend les réponses et passes de Qui suis-je
+- David confirme : après chaque événement, l'équipe active peut répondre une seule fois ou passer. Bonne réponse : elle gagne les points de l'événement et la carte s'arrête. Mauvaise réponse : −1 point au score général, puis événement suivant. Passe : événement suivant sans pénalité.
+- Après une mauvaise réponse ou une passe au cinquième événement, la carte s'arrête et révèle les deux équipes. Les pénalités de mauvaises réponses se cumulent.
+- Cette précision règle les trois questions laissées ouvertes dans la décision précédente ; elle ne change pas le Tackle de Le Match.
+
 ## [2026-09-27] Le Match et les deux formes de Tackle
 - David valide **Le Match** : la compétition est affichée au départ, sans édition ; cinq événements vérifiés sont révélés dans l'ordre chronologique du match, pour 5, 4, 3, 2 puis 1 point. Une équipe active doit retrouver les deux équipes du match, acceptées dans n'importe quel ordre. La chronologie prime sur une difficulté artificiellement croissante.
 - Sur Le Match, le Tackle reprend le **vol de réponse** de Transfert/Qui suis-je : 12 secondes de jeu exclusif pour l'équipe active **à chaque événement**, puis sifflet. La première équipe adverse à annoncer Tackle propose elle-même les deux équipes : +5 si elle trouve, −5 sinon. Sa tentative termine la carte dans les deux cas. Il n'y a pas de contestation binaire après une réponse de l'équipe active.
 - Sur **Plus ou Moins** et **Vrai ou Faux**, le Tackle reste une **contestation** après la réponse verrouillée de l'équipe active, avant révélation. Les adversaires disposent de **5 secondes** ; la première annonce compte. Ils ne donnent pas d'autre réponse : +5 si l'équipe active se trompe, −5 si elle a raison. Un seul Tackle est possible par comparaison ou affirmation. Le Tackle ne porte ni sur ENCAISSER ni sur CONTINUER. Un Tackle raté ne change pas la suite normale de la carte active.
 - Avec une seule équipe, il n'y a pas de Tackle. Le délai de 5 secondes et celui de 12 secondes pourront être éprouvés en playtest.
-- Restent à arbitrer pour Le Match : effet d'une mauvaise réponse active, passe et fin sans réponse après le cinquième événement. L'implémentation du Tackle sur Plus ou Moins et la conformité de la fenêtre de 5 secondes sur Vrai ou Faux restent à vérifier dans le code.
+- L'implémentation du Tackle sur Plus ou Moins et la conformité de la fenêtre de 5 secondes sur Vrai ou Faux restent à vérifier dans le code. Les réponses erronées, passes et fins de carte de Le Match ont été tranchées par David dans la décision suivante.
 
 ## [2026-09-27] Qui suis-je ? : les 4 fiches de test sont remplacées par les 100 vraies cartes
 - David a fourni 100 cartes sourcées (`src/data/quisuisje-cards.json`, revue lisible dans `docs/QUI_SUIS_JE_100_FICHES.md`) et a demandé de retirer les fiches de test.
