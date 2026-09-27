@@ -7,17 +7,19 @@
 - ✅ Lot de 112 cartes dans `src/data/transfert-cards.json`, dont **100 vérifiées** (chargées en jeu) et **12 encore à vérifier** (exclues du jeu tant qu'elles ne le sont pas).
 - ⏳ Une vraie partie test à consigner ensuite dans `PLAYTESTS.md`.
 - ⏳ Avant chaque vraie soirée test, revalider manuellement les cartes jouables dont un club porte « –présent ». Corriger et sourcer tout départ confirmé ; si la situation reste incertaine, remettre la carte « à vérifier » pour l'exclure du jeu.
-- ⏳ Plus ou Moins : définir pour chacune des quatre catégories le périmètre exact du chiffre, une source de référence et une date d'arrêté ; préparer **50 entrées joueur + valeur + source + date de vérification par catégorie** (200 entrées statistiques au total).
-- ⏳ À partir de cette base, composer et tester des chaînes de six joueurs : cinq comparaisons au maximum, aucune égalité entre voisins, écarts intéressants et directions PLUS/MOINS variées. Intégrer le mini-jeu après Transfert.
+- ⏳ Plus ou Moins : définir pour chacune des quatre catégories le périmètre exact du chiffre, une source de référence et une date d'arrêté ; préparer **50 entrées joueur + valeur + source + date de vérification par catégorie** (200 entrées statistiques au total). Une catégorie réelle (buts en Premier League, 50 joueurs) est déjà intégrée et jouable ; les trois autres restent à faire.
+- ⏳ À partir de cette base, composer et tester des chaînes de six joueurs : cinq comparaisons au maximum, aucune égalité entre voisins, écarts intéressants et directions PLUS/MOINS variées.
+- ⏳ Vrai ou Faux (remplace Le Faux) : attendre le jeu de données 1000 vrai/1000 faux préparé par David, puis l'intégrer selon le schéma `verification_status`/`sources`/`verified_date`. Construire l'écran de jeu (5 affirmations séquentielles, cagnotte 1→5, ENCAISSER/CONTINUER) et la fenêtre de Tackle déclenchée par la réponse de l'équipe active (voir DECISIONS.md du 2026-09-27).
 
 ## Arbitrages de game design à faire avant le déroulé complet
 
 - Définir la procédure de correction et de signalement lorsqu'une réponse valable est refusée malgré les variantes vérifiées.
 - Fixer les critères de sélection et de difficulté des cartes Transfert, y compris le traitement des carrières de plus de cinq passages.
 - Définir les règles des mini-jeux qui suivront Plus ou Moins, chacun avec ses réponses valables, son déroulé et son score, avant leur intégration.
-- Tackle : préciser ce qu'il advient de la carte interrompue (l'équipe active reprend où elle en était, ou la carte s'arrête définitivement).
+- ✅ Tackle sur Transfert : tranché (délai + sifflet, la carte s'arrête toujours après une tentative de Tackle). Voir DECISIONS.md du 2026-09-26.
+- ✅ Tackle sur le futur Vrai ou Faux : tranché (déclenché par la réponse de l'équipe active, avant révélation ; le tour actif continue normalement si le Tackle échoue). Voir DECISIONS.md du 2026-09-27.
 - Tackle : décider si l'équipe qui tient le téléphone (et voit donc déjà les indices révélés sur Transfert) a le droit de tackler, vu l'avantage d'information que ça lui donnerait.
-- Tackle : définir précisément son fonctionnement sur Plus ou Moins, où il n'y a pas de « réponse finale » unique à proposer en cours de chaîne.
+- Tackle : définir précisément son fonctionnement sur Plus ou Moins, où le résultat PLUS/MOINS est aujourd'hui révélé instantanément sans fenêtre de pause — restructurer le déroulé pour permettre une fenêtre de Tackle avant révélation, sur le même principe que Vrai ou Faux.
 
 ## Zones où Claude peut décider librement
 

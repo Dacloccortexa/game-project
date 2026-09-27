@@ -60,6 +60,24 @@ Le premier contenu couvre quatre catégories : **buts en Premier League**, **but
 
 Les chaînes sont construites à partir de cette base avec des valeurs voisines sans être égales, quelques surprises et un ordre qui évite les comparaisons évidentes ou une suite prévisible de PLUS ou de MOINS. Leur difficulté sera ajustée en partie test. Plus ou Moins sera intégré après Transfert, dans le cadre commun de configuration des équipes, des manches et du score.
 
+## Mécanique transversale : le Tackle
+
+Le jeu s'appelle **TACKLE**. Le Tackle est une règle commune à la plateforme : pendant le tour d'une équipe, une équipe adverse peut interrompre pour tenter de gagner ou perdre des points, sans attendre son propre tour. Chaque mini-jeu définit précisément comment le Tackle s'y applique ; ce n'est pas un comportement générique automatique.
+
+**Sur Transfert (implémenté) :** l'équipe active joue seule pendant 12 secondes. Passé ce délai, un signal sonore (coup de sifflet) ouvre la fenêtre de Tackle pour les autres équipes (toutes sauf l'équipe active). La première équipe à appuyer sur Tackle propose une réponse unique : bonne réponse, elle gagne 5 points et l'équipe active perd le contrôle de la carte ; mauvaise réponse, elle perd 5 points. Dans tous les cas, une tentative de Tackle termine définitivement la carte en cours (elle ne reprend pas pour l'équipe active). La durée de 12 secondes est un point de départ, ajustable en playtest.
+
+**Sur Vrai ou Faux (prévu, non implémenté) :** le déclencheur est différent — pas de minuteur, mais la réponse de l'équipe active. Voir la section dédiée ci-dessous.
+
+**Sur Plus ou Moins :** non défini (voir TODO.md).
+
+## Troisième mini-jeu prévu : Vrai ou Faux
+
+Remplace l'ancien concept « Le Faux ». Une carte présente jusqu'à **5 affirmations football**, une par une. L'équipe active répond **VRAI** ou **FAUX** à chaque affirmation, avec la même mécanique de cagnotte que Plus ou Moins : chaque bonne réponse fait progresser le gain potentiel (1, 2, 3, 4, puis 5 points) et l'équipe choisit ensuite **ENCAISSER** ou **CONTINUER** ; une mauvaise réponse avant encaissement fait perdre toute la cagnotte de la carte ; la cinquième bonne réponse encaisse automatiquement 5 points.
+
+**Tackle sur ce jeu :** une fois que l'équipe active a donné sa réponse à une affirmation, mais **avant que le jeu ne révèle si elle a raison**, une autre équipe peut tenter un Tackle en pariant que l'équipe active se trompe (une seule tentative par affirmation). Tackle correct : le tackleur gagne 5 points et l'équipe active perd immédiatement toute sa cagnotte en cours pour cette carte. Tackle incorrect : le tackleur perd 5 points, et le tour de l'équipe active continue normalement — son choix ENCAISSER/CONTINUER n'est pas affecté par un Tackle raté.
+
+Le contenu (affirmations vraies et fausses) proviendra d'un jeu de données préparé séparément, suivant le même principe de vérification que les autres mini-jeux (aucune affirmation générée ou jugée par une IA pendant la partie). Format et volume exacts non encore reçus. Ce mini-jeu n'est pas encore implémenté dans `index.html`.
+
 ## Contenus et difficulté
 
 Les cartes sont préparées et leurs faits vérifiés par un agent avant d'être intégrées. La vérification des faits se fait en amont, pas par une génération ou un jugement d'IA pendant la partie. La difficulté réelle des cartes sera ajustée à partir des parties jouées et documentées dans `PLAYTESTS.md`.
