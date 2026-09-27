@@ -2,11 +2,12 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
-## [2026-09-27] Qui suis-je ? : cinq indices fixes, une équipe active
-- Décision de David : une carte vise un seul joueur mystère et est jouée par **une seule équipe active**. Chaque équipe joue sa propre carte dans la manche ; les autres équipes interviennent uniquement pour le Tackle, sans buzzer ni proposer le nom du joueur.
+## [2026-09-27] Qui suis-je ? : cinq indices fixes, une équipe active et le buzzer de Transfert
+- Décision de David : une carte vise un seul joueur mystère et est jouée par **une seule équipe active**. Chaque équipe joue sa propre carte dans la manche.
 - Les cinq indices sont révélés un par un dans l'ordre **un club (5 points), un titre gagné (4), le poste (3), un coéquipier (2), la nationalité (1)**. Chaque indice contient une seule information courte.
-- L'équipe active répond ou passe à chaque indice. Une réponse correcte rapporte les points de l'indice et termine la carte ; une mauvaise réponse termine la carte sans point de réponse. Après une réponse verrouillée, une équipe adverse peut tackler avant révélation : réponse fausse, +5 pour le tackleur ; réponse juste, −5 pour lui.
-- Cette formulation corrige la lecture précédente où toutes les équipes auraient buzzé sur la même carte. Il reste à fixer la durée de la fenêtre de Tackle avant implémentation.
+- L'équipe active répond ou passe à chaque indice. Bonne réponse : points de l'indice et fin de carte. Mauvaise réponse : fin de carte sans point de réponse. Une passe révèle l'indice suivant.
+- Le **buzzer de Tackle fonctionne comme sur Transfert** : 12 secondes de jeu exclusif pour l'équipe active, puis coup de sifflet ; la première équipe adverse qui appuie propose sa propre réponse. Bonne réponse : +5 pour elle ; mauvaise réponse : −5. Toute tentative de Tackle termine la carte. Il ne s'agit pas d'une contestation après la réponse de l'équipe active.
+- Cette formulation corrige les lectures précédentes où toutes les équipes auraient buzzé simultanément ou où le Tackle aurait attendu la réponse de l'équipe active.
 
 ## [2026-09-27] Étendre Plus ou Moins aux trois grands championnats voisins
 - Décision de David : ajouter les buts en Liga, Serie A et Ligue 1 à Plus ou Moins, avec 50 joueurs par catégorie comme pour les quatre lots existants.
