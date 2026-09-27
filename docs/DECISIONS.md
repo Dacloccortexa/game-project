@@ -2,6 +2,12 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] Tackle binaire : −5 points possibles et révélation différée sur Plus ou Moins
+- Décision de David : sur Vrai ou Faux et Plus ou Moins, l'équipe active verrouille d'abord sa réponse. Une autre équipe peut alors tackler immédiatement, avant la révélation, sans attendre le délai ou le sifflet propre à Transfert. Un seul Tackle est retenu par affirmation ; il conteste la réponse active sans fournir d'autre réponse.
+- Score : si la réponse active est fausse, le tackleur reçoit **+5** ; si elle est juste, il reçoit **−5**. Le score général peut devenir **négatif**, y compris lorsque le tackleur part de zéro. La cagnotte de l'équipe active suit sa règle normale.
+- État de l'implémentation : Vrai ou Faux applique déjà −5 sans plancher à zéro. Plus ou Moins doit encore intercaler une étape « réponse verrouillée → Tackle ou révélation » avant d'afficher la valeur. Cette décision précise et remplace les mentions antérieures selon lesquelles le Tackle sur Plus ou Moins restait à définir.
+- Le mode de partie s'appelle **Tackle** ; sa configuration reste celle déjà en place.
+
 ## [2026-09-27] Claude n'enrichit pas le contenu : les données arrivent déjà prêtes
 - Décision : David précise que Claude ne doit pas produire ou compléter lui-même le contenu football (statistiques, affirmations, fiches joueurs) — ce travail est fait en amont par David/ChatGPT, et les fichiers de données arrivent déjà constitués. Le rôle de Claude sur le contenu se limite à l'intégration technique (conversion, schéma, chargement en jeu) et à un contrôle de cohérence avant mise en jeu, pas à la génération ou à l'enrichissement des faits eux-mêmes.
 - Raison : garder une séparation nette avec la règle déjà en place (aucune génération ou jugement d'IA sur les faits footballistiques) et éviter toute ambiguïté sur qui produit le contenu.
