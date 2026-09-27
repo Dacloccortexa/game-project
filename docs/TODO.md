@@ -15,6 +15,7 @@
 - ✅ Qui suis-je ? : mini-jeu implémenté dans `index.html` avec le buzzer de Transfert (12 secondes, sifflet, première équipe adverse à répondre, +5/−5, fin de carte).
 - ✅ Qui suis-je ? : **100 fiches sourcées** intégrées (`src/data/quisuisje-cards.json`, chargées via `loadQsjCards()`), remplaçant les 4 fiches de test. Case cochée par défaut comme les autres mini-jeux. Vérifié : chargement, réponse fausse (−1, carte continue), rendu de 15 cartes tirées au hasard.
 - ⏳ Qui suis-je ? : faire une relecture éditoriale et un playtest de la difficulté réelle des indices avant une vraie soirée test (statut du lot : « fiches sourcées, difficulté à éprouver en partie »).
+- ⏳ Le Match : préparer des matchs à cinq événements sourcés dans l'ordre chronologique, puis intégrer le jeu avec compétition affichée sans édition, réponse des deux équipes et Tackle par vol de réponse après 12 secondes à chaque événement.
 
 ## Arbitrages de game design à faire avant le déroulé complet
 
@@ -23,9 +24,11 @@
 - Définir les règles des mini-jeux qui suivront Plus ou Moins, chacun avec ses réponses valables, son déroulé et son score, avant leur intégration.
 - Qui suis-je ? : éprouver en playtest le délai de 12 secondes repris de Transfert et la difficulté réelle des cinq indices.
 - ✅ Tackle sur Transfert : tranché (délai + sifflet, la carte s'arrête toujours après une tentative de Tackle). Voir DECISIONS.md du 2026-09-26.
-- ✅ Tackle sur le futur Vrai ou Faux : tranché (déclenché par la réponse de l'équipe active, avant révélation ; le tour actif continue normalement si le Tackle échoue). Voir DECISIONS.md du 2026-09-27.
+- ✅ Tackle sur Vrai ou Faux : règle tranchée (contestation dans les 5 secondes après réponse verrouillée, avant révélation ; le tour actif continue normalement si le Tackle échoue). Voir DECISIONS.md du 2026-09-27.
+- ⏳ Vrai ou Faux : vérifier et adapter si nécessaire l'interface pour respecter la fenêtre de 5 secondes désormais validée.
 - Tackle : décider si l'équipe qui tient le téléphone (et voit donc déjà les indices révélés sur Transfert) a le droit de tackler, vu l'avantage d'information que ça lui donnerait.
-- ⏳ Tackle sur Plus ou Moins : implémenter la réponse verrouillée suivie d'une fenêtre « Tackle ou révélation », avant d'afficher la valeur. Le premier adversaire à tackler reçoit +5 si la réponse active est fausse, sinon −5 ; le score général peut passer sous zéro. Voir GAME_DESIGN.md et la décision du 2026-09-27.
+- ⏳ Tackle sur Plus ou Moins : implémenter la réponse verrouillée suivie d'une fenêtre de 5 secondes « Tackle ou révélation », avant d'afficher la valeur. Le premier adversaire à tackler reçoit +5 si la réponse active est fausse, sinon −5 ; le score général peut passer sous zéro. Voir GAME_DESIGN.md et la décision du 2026-09-27.
+- Le Match : décider de l'effet d'une mauvaise réponse de l'équipe active, de la passe et de la fin après le cinquième événement sans bonne réponse.
 
 ## Zones où Claude peut décider librement
 
