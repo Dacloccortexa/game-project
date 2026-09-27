@@ -1162,6 +1162,48 @@
     el("vf-feedback-zone").innerHTML += '<div class="feedback ' + kind + '">' + text + "</div>";
   }
 
+  // Donne la vraie information quand l'affirmation était fausse, pour que la révélation
+  // apprenne quelque chose plutôt que de simplement dire "FAUX".
+  function formatVfCorrection(statement) {
+    var vs = statement.valeur_source;
+    var joueurs = statement.joueurs;
+    switch (statement.categorie) {
+      case "annee_naissance":
+        return joueurs[0] + " est en réalité né en " + vs + ".";
+      case "debut_professionnel":
+        return "La carrière professionnelle de " + joueurs[0] + " a en réalité commencé en " + vs + ".";
+      case "taille":
+        return joueurs[0] + " mesure en réalité " + vs + " cm.";
+      case "pied_fort":
+        return "Le pied fort de " + joueurs[0] + " est en réalité le " + vs + ".";
+      case "poste":
+        return joueurs[0] + " est en réalité répertorié comme " + vs + ".";
+      case "ville_naissance":
+        return joueurs[0] + " est en réalité né à " + vs + ".";
+      case "comparaison_age": {
+        var a = joueurs[0], b = joueurs[1];
+        var ya = vs[a], yb = vs[b];
+        var younger = ya > yb ? a : b;
+        var older = ya > yb ? b : a;
+        return "En réalité, " + younger + " est plus jeune que " + older + ".";
+      }
+      case "comparaison_taille": {
+        var a2 = joueurs[0], b2 = joueurs[1];
+        var ha = vs[a2], hb = vs[b2];
+        var taller = ha > hb ? a2 : b2;
+        var shorter = ha > hb ? b2 : a2;
+        return "En réalité, " + taller + " est plus grand que " + shorter + ".";
+      }
+      case "ordre_clubs": {
+        var clubs = Object.keys(vs);
+        clubs.sort(function (c1, c2) { return vs[c1][0] - vs[c2][0]; });
+        return "En réalité, " + joueurs[0] + " a joué pour " + clubs[0] + " avant " + clubs[1] + ".";
+      }
+      default:
+        return "";
+    }
+  }
+
   el("btn-vf-vrai").addEventListener("click", function () { vfAnswer(true); });
   el("btn-vf-faux").addEventListener("click", function () { vfAnswer(false); });
 
@@ -1214,6 +1256,10 @@
     var statement = state.vfChain[state.vfIndex];
     var isActiveCorrect = (state.vfPendingAnswer === statement.est_vraie);
     var verdictText = "C'était " + (statement.est_vraie ? "VRAI" : "FAUX") + ".";
+    if (!statement.est_vraie) {
+      var correction = formatVfCorrection(statement);
+      if (correction) verdictText += " " + correction;
+    }
 
     if (tackleInfo) {
       var tacklerTeam = state.teams[tackleInfo.tacklerIdx];
