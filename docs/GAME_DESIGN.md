@@ -80,7 +80,7 @@ Le contenu provient d'un jeu de 2 000 affirmations (1 000 vraies, 1 000 fausses)
 
 ## Quatrième mini-jeu prévu : Qui suis-je ?
 
-Une carte porte sur **un seul joueur mystère** et appartient à **une seule équipe active**. Comme dans les autres mini-jeux, chaque équipe joue sa propre carte pendant la manche. Les autres équipes ne peuvent pas proposer le nom du joueur ; elles participent uniquement par le Tackle après une réponse de l'équipe active.
+Une carte porte sur **un seul joueur mystère** et appartient à **une seule équipe active**. Comme dans les autres mini-jeux, chaque équipe joue sa propre carte pendant la manche. Les autres équipes ne répondent qu'en tentant le **Tackle**, selon le même déclenchement que sur Transfert.
 
 Les cinq indices sont révélés un par un, toujours dans cet ordre fixe. Chaque indice apporte **une seule information courte** :
 
@@ -90,11 +90,11 @@ Les cinq indices sont révélés un par un, toujours dans cet ordre fixe. Chaque
 4. **Un coéquipier avec qui il a joué** — **2 points**.
 5. **Sa nationalité** — **1 point**.
 
-À chaque indice, l'équipe active peut **donner une seule réponse** ou **passer**. Passer révèle l'indice suivant sans pénalité. Une réponse est verrouillée avant révélation ; une courte fenêtre permet alors à une seule équipe adverse de tenter un **Tackle**, la première à le faire étant retenue. Tackler signifie seulement « la réponse active est fausse » : le tackleur ne propose pas d'autre joueur. Aucune autre équipe ne peut répondre à la place de l'équipe active.
+À chaque indice, l'équipe active peut donner **une seule réponse** ou **passer**. Passer révèle l'indice suivant sans pénalité. Une bonne réponse rapporte les points de l'indice et termine la carte ; une mauvaise réponse termine la carte sans point de réponse ni autre pénalité. La réponse de l'équipe active est vérifiée immédiatement.
 
-Si la réponse est correcte, l'équipe active gagne les points de l'indice et la carte se termine. Un Tackle lancé contre cette bonne réponse coûte **5 points** au tackleur. Si la réponse est fausse, la carte se termine sans point de réponse pour l'équipe active ; un Tackle lancé contre elle rapporte **5 points** au tackleur. Une mauvaise réponse n'entraîne pas d'autre pénalité. Le score général du tackleur peut devenir négatif.
+**Buzzer de Tackle, comme sur Transfert :** l'équipe active joue seule pendant les **12 premières secondes de la carte**. Un coup de sifflet ouvre ensuite le bouton Tackle aux équipes adverses. La première équipe adverse à appuyer donne **sa propre réponse unique** au joueur mystère. Si elle trouve, elle gagne **5 points** ; si elle se trompe, elle perd **5 points**, même si son score général devient négatif. Dans les deux cas, la carte se termine et l'équipe active ne reprend pas. Le Tackle est possible après le sifflet tant que la carte est en cours, sans attendre une réponse de l'équipe active. Avec une seule équipe, il n'y a pas de Tackle. La durée de 12 secondes est le point de départ déjà utilisé sur Transfert, ajustable en playtest.
 
-Après une passe au cinquième indice, le joueur est révélé et la carte vaut **0 point**. Avec une seule équipe, il n'y a pas de Tackle.
+Après une passe au cinquième indice, le joueur est révélé et la carte vaut **0 point**.
 
 Les cinq indices d'une carte sont préparés, sourcés et relus **dans cet ordre** avant mise en jeu. La nature fixe des indices ne garantit pas à elle seule une difficulté croissante : il faut vérifier que chaque nouvelle information rend effectivement le joueur plus identifiable dans le contexte des indices déjà révélés.
 
