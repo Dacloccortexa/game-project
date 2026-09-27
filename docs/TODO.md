@@ -28,7 +28,7 @@
 - ⏳ Vrai ou Faux : vérifier et adapter si nécessaire l'interface pour respecter la fenêtre de 5 secondes désormais validée.
 - Tackle : décider si l'équipe qui tient le téléphone (et voit donc déjà les indices révélés sur Transfert) a le droit de tackler, vu l'avantage d'information que ça lui donnerait.
 - ⏳ Tackle sur Plus ou Moins : implémenter la réponse verrouillée suivie d'une fenêtre de 5 secondes « Tackle ou révélation », avant d'afficher la valeur. Le premier adversaire à tackler reçoit +5 si la réponse active est fausse, sinon −5 ; le score général peut passer sous zéro. Voir GAME_DESIGN.md et la décision du 2026-09-27.
-- Le Match : décider de l'effet d'une mauvaise réponse de l'équipe active, de la passe et de la fin après le cinquième événement sans bonne réponse.
+- ✅ Le Match : mauvaise réponse active = −1 puis événement suivant ; passe = événement suivant sans pénalité ; après le cinquième événement sans bonne réponse, fin de carte et révélation du match. Décidé comme sur Qui suis-je.
 
 ## Zones où Claude peut décider librement
 
