@@ -2,6 +2,11 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] Correctif : mauvaise réponse sur Qui suis-je = −1 point, la carte continue
+- Correction de David : une mauvaise réponse de l'équipe active ne termine pas la carte. Elle retire 1 point du score général et révèle l'indice suivant, exactement comme sur Transfert. La carte ne se termine que sur une bonne réponse, ou après une mauvaise réponse/une passe au dernier indice.
+- Cette règle remplace celle notée juste avant (« mauvaise réponse termine la carte sans point de réponse ni autre pénalité »), qui était une mauvaise lecture de la mécanique voulue.
+- Impact technique : `checkQsjAnswer()` applique désormais `awardPoints(-1)` puis appelle `advanceQsjClue(true)` au lieu de terminer la carte, en miroir exact du comportement de Transfert.
+
 ## [2026-09-27] Qui suis-je ? implémenté avec 4 fiches de test écrites par Claude
 - Décision de David : construire le mini-jeu tout de suite en utilisant des fiches de test que Claude écrit lui-même (4 joueurs différents), plutôt que d'attendre le vrai contenu sourcé.
 - Contenu : 4 cartes embarquées directement dans `index.html` (`QSJ_TEST_CARDS`), sur des joueurs réels et très documentés (Zidane, Ronaldinho, Henry, Iniesta) pour limiter le risque d'erreur factuelle même en test, mais **non vérifiées** au sens du pipeline habituel (pas de sources ni de statut « vérifié » par carte). Clairement commentées dans le code comme données de test à ne jamais confondre avec du contenu réel, conformément à la décision du 2026-09-27 « Claude n'enrichit pas le contenu ».

@@ -1503,7 +1503,7 @@
   });
 
   el("btn-qsj-pass").addEventListener("click", function () {
-    advanceQsjClue();
+    advanceQsjClue(false);
   });
 
   function showQsjFeedback(kind, text) {
@@ -1520,23 +1520,30 @@
       var pointsEarned = POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
       awardPoints(pointsEarned);
       showQsjFeedback("good", "Bonne réponse ! +" + pointsEarned + " points — c'était bien " + card.answer + ".");
+      endCard();
     } else {
-      awardPoints(0);
-      showQsjFeedback("bad", "Mauvaise réponse. C'était " + card.answer + ". 0 point pour cette carte.");
+      awardPoints(-1);
+      showQsjFeedback("bad", "Mauvaise réponse. −1 point.");
+      advanceQsjClue(true);
     }
-    endCard();
   }
 
-  function advanceQsjClue() {
+  function advanceQsjClue(fromWrongAnswer) {
     var card = state.currentCard;
     if (state.revealedCount >= card.clues.length) {
-      awardPoints(0);
-      showQsjFeedback("bad", "Fin des indices. C'était " + card.answer + ".");
+      if (!fromWrongAnswer) {
+        showQsjFeedback("bad", "Fin des indices. C'était " + card.answer + ".");
+      } else {
+        el("qsj-feedback-zone").innerHTML += '<div class="feedback bad">C\'était ' + card.answer + '.</div>';
+      }
       endCard();
       return;
     }
     state.revealedCount += 1;
     renderQsjClues();
+    if (!fromWrongAnswer) {
+      el("qsj-feedback-zone").innerHTML = "";
+    }
   }
 
   function renderClueList() {

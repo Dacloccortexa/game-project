@@ -90,11 +90,9 @@ Les cinq indices sont révélés un par un, toujours dans cet ordre fixe. Chaque
 4. **Un coéquipier avec qui il a joué** — **2 points**.
 5. **Sa nationalité** — **1 point**.
 
-À chaque indice, l'équipe active peut donner **une seule réponse** ou **passer**. Passer révèle l'indice suivant sans pénalité. Une bonne réponse rapporte les points de l'indice et termine la carte ; une mauvaise réponse termine la carte sans point de réponse ni autre pénalité. La réponse de l'équipe active est vérifiée immédiatement.
+À chaque indice, l'équipe active peut donner **une seule réponse** ou **passer**. Passer révèle l'indice suivant sans pénalité. Une bonne réponse rapporte les points de l'indice et termine la carte. Une mauvaise réponse retire **1 point** du score général et révèle l'indice suivant — la carte continue, comme sur Transfert. La réponse de l'équipe active est vérifiée immédiatement. Après une mauvaise réponse ou une passe au dernier indice, la carte se termine et révèle le joueur ; les pénalités se cumulent, le résultat net d'une carte peut être négatif.
 
 **Buzzer de Tackle, comme sur Transfert :** l'équipe active joue seule pendant les **12 premières secondes de la carte**. Un coup de sifflet ouvre ensuite le bouton Tackle aux équipes adverses. La première équipe adverse à appuyer donne **sa propre réponse unique** au joueur mystère. Si elle trouve, elle gagne **5 points** ; si elle se trompe, elle perd **5 points**, même si son score général devient négatif. Dans les deux cas, la carte se termine et l'équipe active ne reprend pas. Le Tackle est possible après le sifflet tant que la carte est en cours, sans attendre une réponse de l'équipe active. Avec une seule équipe, il n'y a pas de Tackle. La durée de 12 secondes est le point de départ déjà utilisé sur Transfert, ajustable en playtest.
-
-Après une passe au cinquième indice, le joueur est révélé et la carte vaut **0 point**.
 
 Les cinq indices d'une carte sont préparés, sourcés et relus **dans cet ordre** avant mise en jeu. La nature fixe des indices ne garantit pas à elle seule une difficulté croissante : il faut vérifier que chaque nouvelle information rend effectivement le joueur plus identifiable dans le contexte des indices déjà révélés.
 
