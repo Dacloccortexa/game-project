@@ -426,6 +426,10 @@
         <input type="checkbox" id="mg-quisuisje" checked>
         <label for="mg-quisuisje" style="margin:0; font-size:15px; color:var(--chalk);">Qui suis-je ?</label>
       </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="mg-lematch">
+        <label for="mg-lematch" style="margin:0; font-size:15px; color:var(--chalk);">Le Match (cartes de test)</label>
+      </div>
     </div>
 
     <button class="primary" id="btn-start">Lancer la partie</button>
@@ -587,6 +591,40 @@
       </div>
     </div>
 
+    <!-- Le Match (cartes de test — voir DECISIONS.md et TODO.md) -->
+    <div class="card-stage hidden-screen" id="stage-lm">
+      <div class="clue-points" id="lm-competition"></div>
+      <div class="clue-list" id="lm-event-list"></div>
+      <div class="clue-points" id="lm-points"></div>
+    </div>
+
+    <div id="lm-feedback-zone" class="hidden-screen"></div>
+
+    <div id="lm-answer-zone" class="hidden-screen">
+      <div class="answer-btns">
+        <button class="btn-pass" id="btn-lm-pass">Passer</button>
+        <button class="btn-answer" id="btn-lm-answer">Répondre</button>
+      </div>
+      <div class="confirm-box hidden-screen" id="lm-type-box">
+        <div class="field">
+          <label>Équipe 1</label>
+          <input type="text" id="lm-answer-input-1" placeholder="Nom de l'équipe" autocomplete="off">
+        </div>
+        <div class="field">
+          <label>Équipe 2</label>
+          <input type="text" id="lm-answer-input-2" placeholder="Nom de l'équipe" autocomplete="off">
+        </div>
+        <button class="primary" id="btn-lm-submit-answer" style="margin-top:4px;">Valider</button>
+      </div>
+      <div class="confirm-box hidden-screen" id="lm-confirm-box">
+        <div class="typed">Tu as tapé : « <span id="lm-typed-text"></span> »</div>
+        <div class="confirm-actions">
+          <button class="secondary" id="btn-lm-edit-answer">Modifier</button>
+          <button class="primary" id="btn-lm-confirm-answer">Confirmer</button>
+        </div>
+      </div>
+    </div>
+
     <div class="hidden-screen" id="next-card-zone">
       <button class="primary" id="btn-next-card">Suivant</button>
     </div>
@@ -607,8 +645,12 @@
       <div class="confirm-box">
         <div class="typed" id="tackle-team-label"></div>
         <div class="field">
-          <label>Réponse du tackle</label>
+          <label id="tackle-answer-label-1">Réponse du tackle</label>
           <input type="text" id="tackle-answer-input" placeholder="Nom du joueur" autocomplete="off">
+        </div>
+        <div class="field hidden-screen" id="tackle-answer-field-2">
+          <label>Deuxième équipe</label>
+          <input type="text" id="tackle-answer-input-2" placeholder="Nom de l'équipe" autocomplete="off">
         </div>
         <button class="primary" id="btn-tackle-submit" style="margin-top:4px;">Valider le tackle</button>
       </div>
@@ -681,6 +723,37 @@
   function drawQsjCard() {
     var idx = Math.floor(Math.random() * QSJ_CARDS.length);
     return QSJ_CARDS[idx];
+  }
+
+  // ---------- Content: cartes Le Match ----------
+  // ATTENTION : cartes de test rédigées par Claude (faits très largement documentés),
+  // en attendant les cartes réelles sourcées de David/ChatGPT. Voir DECISIONS.md et TODO.md.
+  var LM_CARDS = [];
+  var LM_READY = false;
+
+  function loadLmCards() {
+    return fetch("src/data/lematch-cards.json", { cache: "no-store" })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        LM_CARDS = (data.cards || []).map(function (c) {
+          return {
+            id: c.id,
+            competition: c.competition,
+            teams: c.teams,
+            events: c.events.map(function (ev) { return ev.text; })
+          };
+        });
+        LM_READY = LM_CARDS.length > 0;
+      })
+      .catch(function (err) {
+        console.error("Impossible de charger lematch-cards.json", err);
+        LM_READY = false;
+      });
+  }
+
+  function drawLmCard() {
+    var idx = Math.floor(Math.random() * LM_CARDS.length);
+    return LM_CARDS[idx];
   }
 
   var POINTS_BY_INDEX = [5, 4, 3, 2, 1];
@@ -958,12 +1031,16 @@
   el("mg-quisuisje").addEventListener("change", function (e) {
     syncMinigamesSelected();
   });
+  el("mg-lematch").addEventListener("change", function (e) {
+    syncMinigamesSelected();
+  });
   function syncMinigamesSelected() {
     var list = [];
     if (el("mg-transfert").checked) list.push("transfert");
     if (el("mg-plusoumoins").checked) list.push("plusoumoins");
     if (el("mg-vraifaux").checked) list.push("vraifaux");
     if (el("mg-quisuisje").checked) list.push("quisuisje");
+    if (el("mg-lematch").checked) list.push("lematch");
     state.minigamesSelected = list;
   }
 
@@ -993,6 +1070,11 @@
       el("setup-error").classList.remove("hidden-screen");
       return;
     }
+    if (state.minigamesSelected.indexOf("lematch") !== -1 && !LM_READY) {
+      el("setup-error").textContent = "Les cartes Le Match ne sont pas encore chargées. Réessaie dans un instant.";
+      el("setup-error").classList.remove("hidden-screen");
+      return;
+    }
     el("setup-error").classList.add("hidden-screen");
     startGame();
   });
@@ -1001,6 +1083,7 @@
   loadPomRealCategories();
   loadVraiFauxStatements();
   loadQsjCards();
+  loadLmCards();
 
   // ---------- GAME ENGINE ----------
   function startGame() {
@@ -1030,6 +1113,8 @@
       beginVfTurn();
     } else if (state.currentRoundMinigame === "quisuisje") {
       beginQsjTurn();
+    } else if (state.currentRoundMinigame === "lematch") {
+      beginLmTurn();
     } else {
       beginTransfertTurn();
     }
@@ -1040,6 +1125,7 @@
     var isPom = name === "plusoumoins";
     var isVf = name === "vraifaux";
     var isQsj = name === "quisuisje";
+    var isLm = name === "lematch";
 
     el("stage-transfert").classList.toggle("hidden-screen", !isTransfert);
     el("answer-zone").classList.toggle("hidden-screen", !isTransfert);
@@ -1050,6 +1136,8 @@
     el("stage-vf").classList.toggle("hidden-screen", !isVf);
 
     el("stage-qsj").classList.toggle("hidden-screen", !isQsj);
+
+    el("stage-lm").classList.toggle("hidden-screen", !isLm);
 
     if (!isTransfert) {
       el("feedback-zone").innerHTML = "";
@@ -1075,6 +1163,11 @@
     if (!isQsj) {
       el("qsj-feedback-zone").innerHTML = "";
       hide("qsj-answer-zone");
+    }
+    if (!isLm) {
+      el("lm-feedback-zone").innerHTML = "";
+      el("lm-feedback-zone").classList.add("hidden-screen");
+      hide("lm-answer-zone");
     }
   }
 
@@ -1158,6 +1251,7 @@
 
   el("btn-tackle").addEventListener("click", function () {
     hide("btn-tackle");
+    var isLmTackle = state.currentRoundMinigame === "lematch";
     var buttonsDiv = el("tackle-team-buttons");
     buttonsDiv.innerHTML = "";
     state.teams.forEach(function (team, idx) {
@@ -1170,6 +1264,16 @@
         hide("tackle-team-picker");
         el("tackle-team-label").textContent = team.name + " tackle !";
         el("tackle-answer-input").value = "";
+        el("tackle-answer-input-2").value = "";
+        if (isLmTackle) {
+          el("tackle-answer-label-1").textContent = "Équipe 1";
+          el("tackle-answer-input").placeholder = "Nom de l'équipe";
+          show("tackle-answer-field-2");
+        } else {
+          el("tackle-answer-label-1").textContent = "Réponse du tackle";
+          el("tackle-answer-input").placeholder = "Nom du joueur";
+          hide("tackle-answer-field-2");
+        }
         show("tackle-answer-zone");
         el("tackle-answer-input").focus();
       });
@@ -1186,10 +1290,30 @@
   el("btn-tackle-submit").addEventListener("click", function () {
     var typed = el("tackle-answer-input").value.trim();
     if (!typed) return;
+    var tacklingTeam = state.teams[state.tackleTeamIndex];
+
+    if (state.currentRoundMinigame === "lematch") {
+      var typed2 = el("tackle-answer-input-2").value.trim();
+      if (!typed2) return;
+      var lmCard = state.currentLmCard;
+      var isLmCorrect = matchesBothTeams(typed, typed2, lmCard.teams[0], lmCard.teams[1]);
+
+      hide("tackle-answer-zone");
+
+      if (isLmCorrect) {
+        awardPointsToTeam(state.tackleTeamIndex, 5);
+        showLmFeedback("good", "TACKLE réussi par " + tacklingTeam.name + " ! +5 points. La carte s'arrête là — c'était " + lmCard.teams[0] + " – " + lmCard.teams[1] + ".");
+      } else {
+        awardPointsToTeam(state.tackleTeamIndex, -5);
+        showLmFeedback("bad", "TACKLE raté par " + tacklingTeam.name + ". −5 points. La carte s'arrête là — c'était " + lmCard.teams[0] + " – " + lmCard.teams[1] + ".");
+      }
+      endCard();
+      return;
+    }
+
     var card = state.currentCard;
     var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
     var isCorrect = matchesAnyAnswer(typed, validAnswers);
-    var tacklingTeam = state.teams[state.tackleTeamIndex];
 
     hide("tackle-answer-zone");
 
@@ -1698,6 +1822,137 @@
     }
   }
 
+  // ---------- Le Match (cartes de test — voir DECISIONS.md et TODO.md) ----------
+  function beginLmTurn() {
+    setActiveMinigameUI("lematch");
+    state.cardEnded = false;
+    state.lmRevealedCount = 1;
+    state.currentLmCard = drawLmCard();
+    state.lmTypedTeam1 = "";
+    state.lmTypedTeam2 = "";
+
+    beginTurnCommon("Le Match");
+    el("lm-feedback-zone").innerHTML = "";
+    el("lm-feedback-zone").classList.add("hidden-screen");
+    resetLmAnswerZone();
+    show("lm-answer-zone");
+    renderLmEvents();
+    startTackleWindow(); // vol de réponse comme Transfert/Qui suis-je, mais réenclenché à chaque événement
+  }
+
+  function renderLmEvents() {
+    var card = state.currentLmCard;
+    el("lm-competition").textContent = card.competition;
+    var list = el("lm-event-list");
+    list.innerHTML = "";
+
+    for (var i = 0; i < card.events.length; i++) {
+      var evDiv = document.createElement("div");
+      if (i < state.lmRevealedCount) {
+        evDiv.className = "clue";
+        evDiv.textContent = card.events[i];
+      } else {
+        evDiv.className = "clue hidden";
+        evDiv.textContent = "?";
+      }
+      list.appendChild(evDiv);
+    }
+
+    var pointsForCurrent = POINTS_BY_INDEX[Math.min(state.lmRevealedCount - 1, POINTS_BY_INDEX.length - 1)];
+    el("lm-points").textContent = "Cet événement vaut " + pointsForCurrent + " point" + (pointsForCurrent > 1 ? "s" : "");
+  }
+
+  function resetLmAnswerZone() {
+    hide("lm-type-box");
+    hide("lm-confirm-box");
+    el("lm-answer-input-1").value = "";
+    el("lm-answer-input-2").value = "";
+    document.querySelector("#lm-answer-zone .answer-btns").style.display = "flex";
+  }
+
+  el("btn-lm-answer").addEventListener("click", function () {
+    document.querySelector("#lm-answer-zone .answer-btns").style.display = "none";
+    show("lm-type-box");
+    el("lm-answer-input-1").focus();
+  });
+
+  el("btn-lm-submit-answer").addEventListener("click", function () {
+    var v1 = el("lm-answer-input-1").value.trim();
+    var v2 = el("lm-answer-input-2").value.trim();
+    if (!v1 || !v2) return;
+    state.lmTypedTeam1 = v1;
+    state.lmTypedTeam2 = v2;
+    el("lm-typed-text").textContent = v1 + " / " + v2;
+    hide("lm-type-box");
+    show("lm-confirm-box");
+  });
+
+  el("btn-lm-edit-answer").addEventListener("click", function () {
+    hide("lm-confirm-box");
+    show("lm-type-box");
+    el("lm-answer-input-1").focus();
+  });
+
+  el("btn-lm-confirm-answer").addEventListener("click", function () {
+    hide("lm-confirm-box");
+    document.querySelector("#lm-answer-zone .answer-btns").style.display = "flex";
+    checkLmAnswer(state.lmTypedTeam1, state.lmTypedTeam2);
+  });
+
+  el("btn-lm-pass").addEventListener("click", function () {
+    advanceLmEvent(false);
+  });
+
+  function showLmFeedback(kind, text) {
+    el("lm-feedback-zone").classList.remove("hidden-screen");
+    el("lm-feedback-zone").innerHTML = '<div class="feedback ' + kind + '">' + text + "</div>";
+  }
+
+  // Vérifie que les deux équipes citées correspondent aux deux équipes de la carte,
+  // dans n'importe quel ordre (les deux paires possibles sont testées).
+  function matchesBothTeams(typed1, typed2, realTeam1, realTeam2) {
+    var t1 = normalize(typed1), t2 = normalize(typed2);
+    var pairA = matchesAnyAnswer(typed1, [normalize(realTeam1)]) && matchesAnyAnswer(typed2, [normalize(realTeam2)]);
+    var pairB = matchesAnyAnswer(typed1, [normalize(realTeam2)]) && matchesAnyAnswer(typed2, [normalize(realTeam1)]);
+    return pairA || pairB;
+  }
+
+  function checkLmAnswer(typed1, typed2) {
+    var card = state.currentLmCard;
+    var isCorrect = matchesBothTeams(typed1, typed2, card.teams[0], card.teams[1]);
+
+    if (isCorrect) {
+      var pointsEarned = POINTS_BY_INDEX[Math.min(state.lmRevealedCount - 1, POINTS_BY_INDEX.length - 1)];
+      awardPoints(pointsEarned);
+      showLmFeedback("good", "Bonne réponse ! +" + pointsEarned + " points — c'était bien " + card.teams[0] + " – " + card.teams[1] + ".");
+      endCard();
+    } else {
+      awardPoints(-1);
+      showLmFeedback("bad", "Mauvaise réponse. −1 point.");
+      advanceLmEvent(true);
+    }
+  }
+
+  function advanceLmEvent(fromWrongAnswer) {
+    var card = state.currentLmCard;
+    if (state.lmRevealedCount >= card.events.length) {
+      if (!fromWrongAnswer) {
+        showLmFeedback("bad", "Fin des événements. C'était " + card.teams[0] + " – " + card.teams[1] + ".");
+      } else {
+        el("lm-feedback-zone").innerHTML += '<div class="feedback bad">C\'était ' + card.teams[0] + " – " + card.teams[1] + '.</div>';
+      }
+      endCard();
+      return;
+    }
+    state.lmRevealedCount += 1;
+    renderLmEvents();
+    if (!fromWrongAnswer) {
+      el("lm-feedback-zone").innerHTML = "";
+      el("lm-feedback-zone").classList.add("hidden-screen");
+    }
+    startTackleWindow(); // nouvel événement = nouvelle fenêtre de 12 secondes avant le sifflet
+  }
+
   function renderClueList() {
     var card = state.currentCard;
     var list = el("clue-list");
@@ -1837,6 +2092,7 @@
     hide("vf-decision-zone");
     hide("vf-tackle-team-picker");
     hide("qsj-answer-zone");
+    hide("lm-answer-zone");
 
     var isLastTeamOfRound = state.currentTeamIndex >= state.teams.length - 1;
     var isLastRound = state.roundsPlayed >= state.roundsTotal - 1;

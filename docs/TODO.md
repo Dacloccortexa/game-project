@@ -15,7 +15,7 @@
 - ✅ Qui suis-je ? : mini-jeu implémenté dans `index.html` avec le buzzer de Transfert (12 secondes, sifflet, première équipe adverse à répondre, +5/−5, fin de carte).
 - ✅ Qui suis-je ? : **100 fiches sourcées** intégrées (`src/data/quisuisje-cards.json`, chargées via `loadQsjCards()`), remplaçant les 4 fiches de test. Case cochée par défaut comme les autres mini-jeux. Vérifié : chargement, réponse fausse (−1, carte continue), rendu de 15 cartes tirées au hasard.
 - ⏳ Qui suis-je ? : faire une relecture éditoriale et un playtest de la difficulté réelle des indices avant une vraie soirée test (statut du lot : « fiches sourcées, difficulté à éprouver en partie »).
-- ⏳ Le Match : préparer des matchs à cinq événements sourcés dans l'ordre chronologique, puis intégrer le jeu avec compétition affichée sans édition, réponse des deux équipes et Tackle par vol de réponse après 12 secondes à chaque événement.
+- ✅ Le Match : mini-jeu implémenté dans `index.html` (compétition affichée sans édition, cinq événements chronologiques à 5/4/3/2/1 points, réponse des deux équipes acceptée dans n'importe quel ordre, mauvaise réponse −1 + continue, passe sans pénalité, Tackle par vol de réponse relancé à chaque événement). Contenu actuel : **3 cartes de test** rédigées par Claude (`src/data/lematch-cards.json`), case décochée par défaut ; à remplacer par des cartes réelles sourcées de David/ChatGPT avant toute vraie soirée test.
 
 ## Arbitrages de game design à faire avant le déroulé complet
 

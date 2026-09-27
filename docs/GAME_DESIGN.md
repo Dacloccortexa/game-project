@@ -96,13 +96,15 @@ Les cinq indices sont révélés un par un, toujours dans cet ordre fixe. Chaque
 
 Les cinq indices d'une carte sont préparés, sourcés et relus **dans cet ordre** avant mise en jeu. La nature fixe des indices ne garantit pas à elle seule une difficulté croissante : il faut vérifier que chaque nouvelle information rend effectivement le joueur plus identifiable dans le contexte des indices déjà révélés.
 
-## Cinquième mini-jeu prévu : Le Match
+## Cinquième mini-jeu : Le Match (implémenté avec des cartes de test)
 
 Une carte vise un match de football. **La compétition seule** est affichée dès le départ, sans année ni édition. Cinq événements vérifiés de ce match apparaissent ensuite **strictement dans l'ordre chronologique du match**, sans être réordonnés selon leur difficulté. Leurs valeurs sont successivement **5, 4, 3, 2 et 1 point**. Une seule équipe active joue la carte ; elle cherche à nommer **les deux équipes du match**, acceptées dans n'importe quel ordre, après chaque événement. Les autres équipes ne participent que par le Tackle.
 
 **Tackle sur Le Match :** à chaque nouvel événement, l'équipe active dispose de **12 secondes** avant un coup de sifflet. Après le sifflet, la première équipe adverse qui annonce Tackle donne **sa propre réponse** avec les deux équipes du match. Bonne réponse : **+5 points** ; mauvaise réponse : **−5 points**, même si le score devient négatif. Toute tentative de Tackle termine la carte. L'équipe active peut répondre avant un Tackle ; si sa réponse est correcte, elle reçoit les points de l'événement et la carte s'arrête. Il n'y a pas de contestation binaire de sa réponse après coup.
 
 Comme sur Qui suis-je, après chaque événement l'équipe active peut donner **une seule réponse** ou **passer**. Une mauvaise réponse retire **1 point** de son score général puis révèle l'événement suivant ; une passe révèle l'événement suivant sans pénalité. Après une mauvaise réponse ou une passe au cinquième événement, la carte se termine et les deux équipes du match sont révélées. Les pénalités de mauvaises réponses se cumulent. Les matchs sélectionnés doivent comporter cinq événements suffisamment distincts et sourcés ; leur identification réelle sera testée en partie.
+
+**Statut :** mini-jeu implémenté dans `index.html`, avec **3 cartes de test rédigées par Claude** (`src/data/lematch-cards.json`), à partir de faits très largement documentés (finales 1998, 2005, 2022), en attendant les cartes réelles sourcées de David/ChatGPT — même logique que les 4 fiches de test initiales de Qui suis-je. La case correspondante n'est **pas cochée par défaut** dans la configuration, pour ne pas l'introduire par erreur dans une vraie soirée test tant que le contenu reste du test.
 
 ## Contenus et difficulté
 
@@ -114,4 +116,4 @@ Les cartes sont préparées et leurs faits vérifiés par un agent avant d'être
 
 ## Périmètre du premier prototype
 
-Le premier prototype comprend la configuration des équipes et de la partie, le score et le classement, ainsi que **Transfert, Plus ou Moins et Vrai ou Faux**, avec le Tackle transversal. Les autres mini-jeux seront définis, testés et intégrés un par un. Le jeu à plusieurs téléphones n'entre pas dans ce premier périmètre.
+Le premier prototype comprend la configuration des équipes et de la partie, le score et le classement, ainsi que **Transfert, Plus ou Moins, Vrai ou Faux et Qui suis-je**, avec le Tackle transversal. **Le Match** est également implémenté, pour l'instant avec des cartes de test (voir ci-dessus). Le jeu à plusieurs téléphones n'entre pas dans ce premier périmètre.

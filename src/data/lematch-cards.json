@@ -1,0 +1,50 @@
+{
+  "game_id": "lematch",
+  "version": "test-1",
+  "status": "cartes de test rédigées par Claude à partir de faits très largement documentés, en attendant les cartes réelles sourcées de David/ChatGPT (voir DECISIONS.md et TODO.md)",
+  "rules": {
+    "event_order": "chronologique (dans l'ordre du match, pas par difficulté)",
+    "points": [5, 4, 3, 2, 1]
+  },
+  "cards": [
+    {
+      "id": "lm-test-1",
+      "competition": "Coupe du monde de la FIFA",
+      "teams": ["France", "Brésil"],
+      "events": [
+        { "points": 5, "text": "Ce match se joue au Stade de France, devant environ 80 000 spectateurs, le 12 juillet 1998." },
+        { "points": 4, "text": "Un même joueur ouvre le score puis double la mise, deux buts de la tête sur corner, à la 27e et à la 45e minute." },
+        { "points": 3, "text": "Un défenseur est expulsé (carton rouge direct) à la 68e minute." },
+        { "points": 2, "text": "En fin de match (90e+3), un remplaçant marque le troisième but sur un ballon repoussé." },
+        { "points": 1, "text": "Score final : 3-0." }
+      ],
+      "notes": "Carte de test : finale de la Coupe du monde 1998, faits largement documentés (doublé de Zinedine Zidane, expulsion de Marcel Desailly, but d'Emmanuel Petit)."
+    },
+    {
+      "id": "lm-test-2",
+      "competition": "Ligue des champions de l'UEFA",
+      "teams": ["Liverpool", "AC Milan"],
+      "events": [
+        { "points": 5, "text": "Une équipe mène 3-0 à la mi-temps, avec des buts inscrits à la 1re, à la 39e et à la 44e minute." },
+        { "points": 4, "text": "En seconde période, l'équipe menée marque trois buts en six minutes (54e, 56e, 60e) pour revenir à 3-3." },
+        { "points": 3, "text": "Le gardien de l'équipe qui menait 3-0 réalise un double arrêt décisif en prolongation." },
+        { "points": 2, "text": "Aucun but n'est marqué en prolongation : la séance de tirs au but doit départager les deux équipes." },
+        { "points": 1, "text": "Score final : 3-3 après prolongation (l'équipe revenue de 0-3 l'emporte aux tirs au but)." }
+      ],
+      "notes": "Carte de test : finale de Ligue des champions 2005 (« Miracle d'Istanbul »), faits largement documentés."
+    },
+    {
+      "id": "lm-test-3",
+      "competition": "Coupe du monde de la FIFA",
+      "teams": ["Argentine", "France"],
+      "events": [
+        { "points": 5, "text": "Une équipe mène 2-0 à la mi-temps, sur un penalty puis un but conclu après une action collective." },
+        { "points": 4, "text": "Le capitaine de l'équipe menée inscrit deux buts en moins de deux minutes en fin de match pour revenir à 2-2 et forcer la prolongation." },
+        { "points": 3, "text": "Un joueur inscrit un triplé, le premier réalisé en finale de Coupe du monde depuis 1966, avec un but en prolongation pour faire 3-2." },
+        { "points": 2, "text": "Score de 3-3 à la fin de la prolongation : la séance de tirs au but doit départager les deux équipes." },
+        { "points": 1, "text": "Score final aux tirs au but : 4-2." }
+      ],
+      "notes": "Carte de test : finale de la Coupe du monde 2022, faits largement documentés (triplé de Kylian Mbappé, victoire de l'Argentine aux tirs au but)."
+    }
+  ]
+}
