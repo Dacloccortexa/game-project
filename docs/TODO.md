@@ -20,7 +20,7 @@
 - ✅ Tackle sur Transfert : tranché (délai + sifflet, la carte s'arrête toujours après une tentative de Tackle). Voir DECISIONS.md du 2026-09-26.
 - ✅ Tackle sur le futur Vrai ou Faux : tranché (déclenché par la réponse de l'équipe active, avant révélation ; le tour actif continue normalement si le Tackle échoue). Voir DECISIONS.md du 2026-09-27.
 - Tackle : décider si l'équipe qui tient le téléphone (et voit donc déjà les indices révélés sur Transfert) a le droit de tackler, vu l'avantage d'information que ça lui donnerait.
-- Tackle : définir précisément son fonctionnement sur Plus ou Moins, où le résultat PLUS/MOINS est aujourd'hui révélé instantanément sans fenêtre de pause — restructurer le déroulé pour permettre une fenêtre de Tackle avant révélation, sur le même principe que Vrai ou Faux.
+- ⏳ Tackle sur Plus ou Moins : implémenter la réponse verrouillée suivie d'une fenêtre « Tackle ou révélation », avant d'afficher la valeur. Le premier adversaire à tackler reçoit +5 si la réponse active est fausse, sinon −5 ; le score général peut passer sous zéro. Voir GAME_DESIGN.md et la décision du 2026-09-27.
 
 ## Zones où Claude peut décider librement
 
