@@ -12,10 +12,9 @@
 - ⏳ À partir de cette base, composer et tester des chaînes de six joueurs : cinq comparaisons au maximum, aucune égalité entre voisins, écarts intéressants et directions PLUS/MOINS variées.
 - ✅ Vrai ou Faux (remplace Le Faux) : jeu de données de 2 000 affirmations intégré (`src/data/vraifaux-statements.json`, toutes vérifiées) et mini-jeu implémenté dans `index.html` (5 affirmations, cagnotte 1→5, ENCAISSER/CONTINUER, Tackle déclenché par la réponse de l'équipe active). Voir DECISIONS.md du 2026-09-27.
 - ⏳ Relecture éditoriale du jeu de données Vrai ou Faux avant une vraie soirée test (recommandée par sa propre note de contrôle, pas encore faite — seul un contrôle automatique de cohérence a été effectué).
-- ✅ Qui suis-je ? : mini-jeu implémenté dans `index.html` avec le buzzer de Transfert (12 secondes, sifflet, première équipe adverse à répondre, +5/−5, fin de carte). Case décochée par défaut dans la configuration (contenu de test uniquement).
-- ✅ Qui suis-je ? : **100 fiches sourcées** préparées dans `src/data/quisuisje-cards.json`, avec une version lisible dans `docs/QUI_SUIS_JE_100_FICHES.md`. Chaque fiche suit l'ordre club → titre gagné → poste → coéquipier → nationalité, pour 5 → 1 points. Les fiches sont construites à partir des profils Wikipédia et des carrières Transfert du dépôt ; les sources figurent dans les données.
-- ⏳ Qui suis-je ? : remplacer les **4 fiches de test** de `QSJ_TEST_CARDS` dans `index.html` par les 100 nouvelles fiches et vérifier les variantes de réponse dans le jeu.
-- ⏳ Qui suis-je ? : faire une relecture éditoriale et un playtest de la difficulté réelle des indices avant une vraie soirée test.
+- ✅ Qui suis-je ? : mini-jeu implémenté dans `index.html` avec le buzzer de Transfert (12 secondes, sifflet, première équipe adverse à répondre, +5/−5, fin de carte).
+- ✅ Qui suis-je ? : **100 fiches sourcées** intégrées (`src/data/quisuisje-cards.json`, chargées via `loadQsjCards()`), remplaçant les 4 fiches de test. Case cochée par défaut comme les autres mini-jeux. Vérifié : chargement, réponse fausse (−1, carte continue), rendu de 15 cartes tirées au hasard.
+- ⏳ Qui suis-je ? : faire une relecture éditoriale et un playtest de la difficulté réelle des indices avant une vraie soirée test (statut du lot : « fiches sourcées, difficulté à éprouver en partie »).
 
 ## Arbitrages de game design à faire avant le déroulé complet
 

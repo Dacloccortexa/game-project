@@ -423,8 +423,8 @@
         <label for="mg-vraifaux" style="margin:0; font-size:15px; color:var(--chalk);">Vrai ou Faux</label>
       </div>
       <div class="checkbox-row">
-        <input type="checkbox" id="mg-quisuisje">
-        <label for="mg-quisuisje" style="margin:0; font-size:15px; color:var(--chalk);">Qui suis-je ? (cartes test)</label>
+        <input type="checkbox" id="mg-quisuisje" checked>
+        <label for="mg-quisuisje" style="margin:0; font-size:15px; color:var(--chalk);">Qui suis-je ?</label>
       </div>
     </div>
 
@@ -633,67 +633,36 @@
       });
   }
 
-  // ---------- Content: cartes Qui suis-je (TEST) ----------
-  // Cartes créées par Claude à la demande de David pour tester le mécanisme du jeu,
-  // AVANT que les vraies cartes sourcées ne soient fournies (voir DECISIONS.md du 2026-09-27
-  // "Claude n'enrichit pas le contenu"). Ce ne sont pas des cartes vérifiées au sens du
-  // pipeline habituel : elles ne doivent jamais être confondues avec du contenu réel prêt
-  // pour une vraie soirée. Ordre fixe des indices : club, titre gagné, poste, coéquipier,
-  // nationalité (voir GAME_DESIGN.md).
-  var QSJ_TEST_CARDS = [
-    {
-      id: "qsj-test-1",
-      answer: "Zinedine Zidane",
-      variants: ["Zidane", "Zizou"],
-      clues: [
-        "A joué à la Juventus",
-        "A gagné la Coupe du monde 1998",
-        "Poste : milieu offensif",
-        "A joué aux côtés de Ronaldo (le Brésilien) au Real Madrid",
-        "Nationalité : France"
-      ]
-    },
-    {
-      id: "qsj-test-2",
-      answer: "Ronaldinho",
-      variants: ["Ronaldinho Gaucho", "Ronaldinho Gaúcho"],
-      clues: [
-        "A joué au FC Barcelone",
-        "A gagné la Ligue des champions 2006",
-        "Poste : ailier / milieu offensif",
-        "A joué aux côtés de Lionel Messi",
-        "Nationalité : Brésil"
-      ]
-    },
-    {
-      id: "qsj-test-3",
-      answer: "Thierry Henry",
-      variants: ["Henry"],
-      clues: [
-        "A joué à Arsenal",
-        "A gagné la Coupe du monde 1998",
-        "Poste : attaquant",
-        "A joué aux côtés de Patrick Vieira",
-        "Nationalité : France"
-      ]
-    },
-    {
-      id: "qsj-test-4",
-      answer: "Andrés Iniesta",
-      variants: ["Iniesta"],
-      clues: [
-        "A joué au FC Barcelone",
-        "A gagné la Coupe du monde 2010",
-        "Poste : milieu de terrain",
-        "A joué aux côtés de Xavi",
-        "Nationalité : Espagne"
-      ]
-    }
-  ];
+  // ---------- Content: cartes Qui suis-je ----------
+  // Cartes sourcées (profils Wikipédia + carrières Transfert vérifiées), chargées depuis
+  // src/data/quisuisje-cards.json. Ordre fixe des indices : club, titre gagné, poste,
+  // coéquipier, nationalité (voir GAME_DESIGN.md).
+  var QSJ_CARDS = [];
+  var QSJ_READY = false;
+
+  function loadQsjCards() {
+    return fetch("src/data/quisuisje-cards.json", { cache: "no-store" })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        QSJ_CARDS = (data.cards || []).map(function (c) {
+          return {
+            id: c.id,
+            answer: c.answer,
+            variants: c.variants,
+            clues: c.clues.map(function (cl) { return cl.text; })
+          };
+        });
+        QSJ_READY = QSJ_CARDS.length > 0;
+      })
+      .catch(function (err) {
+        console.error("Impossible de charger quisuisje-cards.json", err);
+        QSJ_READY = false;
+      });
+  }
 
   function drawQsjCard() {
-    var idx = Math.floor(Math.random() * QSJ_TEST_CARDS.length);
-    return QSJ_TEST_CARDS[idx];
+    var idx = Math.floor(Math.random() * QSJ_CARDS.length);
+    return QSJ_CARDS[idx];
   }
 
   var POINTS_BY_INDEX = [5, 4, 3, 2, 1];
@@ -844,7 +813,7 @@
     teamCount: 3,
     teamNames: ["Équipe A", "Équipe B", "Équipe C", "Équipe D"],
     roundsTotal: 10,
-    minigamesSelected: ["transfert", "plusoumoins", "vraifaux"],
+    minigamesSelected: ["transfert", "plusoumoins", "vraifaux", "quisuisje"],
     teams: [],       // {name, score}
     roundsPlayed: 0,
     currentTeamIndex: 0,
@@ -1001,6 +970,11 @@
       el("setup-error").classList.remove("hidden-screen");
       return;
     }
+    if (state.minigamesSelected.indexOf("quisuisje") !== -1 && !QSJ_READY) {
+      el("setup-error").textContent = "Les cartes Qui suis-je ne sont pas encore chargées. Réessaie dans un instant.";
+      el("setup-error").classList.remove("hidden-screen");
+      return;
+    }
     el("setup-error").classList.add("hidden-screen");
     startGame();
   });
@@ -1008,6 +982,7 @@
   loadCards();
   loadPomRealCategories();
   loadVraiFauxStatements();
+  loadQsjCards();
 
   // ---------- GAME ENGINE ----------
   function startGame() {
@@ -1471,7 +1446,7 @@
     show("vf-answer-zone");
   });
 
-  // ---------- Qui suis-je ? (cartes de test — voir QSJ_TEST_CARDS et DECISIONS.md) ----------
+  // ---------- Qui suis-je ? (100 cartes sourcées — voir src/data/quisuisje-cards.json) ----------
   function beginQsjTurn() {
     setActiveMinigameUI("quisuisje");
     state.cardEnded = false;

@@ -2,6 +2,12 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] Qui suis-je ? : les 4 fiches de test sont remplacées par les 100 vraies cartes
+- David a fourni 100 cartes sourcées (`src/data/quisuisje-cards.json`, revue lisible dans `docs/QUI_SUIS_JE_100_FICHES.md`) et a demandé de retirer les fiches de test.
+- Implémentation : `QSJ_TEST_CARDS` (embarqué dans le code) est remplacé par `loadQsjCards()`, qui charge le fichier comme les autres contenus (`cache: "no-store"`, un seul `fetch`), avec un flag `QSJ_READY` bloquant le lancement de partie tant que le chargement n'est pas terminé, à l'identique de Transfert/Plus ou Moins/Vrai ou Faux. La case « Qui suis-je ? » est maintenant cochée par défaut comme les autres mini-jeux, puisque le contenu n'est plus du placeholder.
+- Le lot n'a pas de statut de vérification par carte ; son statut global (« fiches sourcées, difficulté à éprouver en partie ») sert de feu vert pour le charger tel quel, en attendant la relecture éditoriale et le playtest de difficulté encore ouverts dans TODO.md.
+- Vérifié après intégration : chargement sans erreur de setup, une mauvaise réponse retire bien 1 point et la carte continue, et 15 cartes tirées au hasard s'affichent correctement.
+
 ## [2026-09-27] On prend large sur les fautes de frappe (Transfert, Qui suis-je, Tackle)
 - Contexte : « Ronaldino » (sans le h) tapé sur Qui suis-je a été refusé, alors que « Ronaldinho » était la bonne réponse — la comparaison n'ignorait que les majuscules/accents, pas les fautes de frappe. David a demandé qu'on prenne large.
 - Décision : une réponse tapée est acceptée si elle est assez proche d'une réponse valide au sens de la distance de Levenshtein (nombre de lettres à ajouter/retirer/changer), avec une tolérance croissante selon la longueur : 1 lettre pour un mot de 7 caractères ou moins, 2 jusqu'à 14, 3 au-delà. En dessous de 4 caractères, aucune tolérance (trop risqué). S'applique partout où une réponse est comparée à `answer`/`variants` : Transfert, Qui suis-je et le Tackle sur ces deux jeux.
