@@ -2,6 +2,11 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] Claude n'enrichit pas le contenu : les données arrivent déjà prêtes
+- Décision : David précise que Claude ne doit pas produire ou compléter lui-même le contenu football (statistiques, affirmations, fiches joueurs) — ce travail est fait en amont par David/ChatGPT, et les fichiers de données arrivent déjà constitués. Le rôle de Claude sur le contenu se limite à l'intégration technique (conversion, schéma, chargement en jeu) et à un contrôle de cohérence avant mise en jeu, pas à la génération ou à l'enrichissement des faits eux-mêmes.
+- Raison : garder une séparation nette avec la règle déjà en place (aucune génération ou jugement d'IA sur les faits footballistiques) et éviter toute ambiguïté sur qui produit le contenu.
+- Impact : sans changement sur le pipeline technique déjà en place (vérification automatique de cohérence + chargement des seules entrées « vérifié ») ; à appliquer aux prochains lots de données reçus.
+
 ## [2026-09-27] Correctif : l'écran se bloquait sur une affirmation fausse en Vrai ou Faux
 - Bug signalé par David : après avoir répondu VRAI ou FAUX, l'écran restait parfois bloqué sans bouton ni suite possible.
 - Cause : lors de la conversion du jeu de données fourni par David vers `src/data/vraifaux-statements.json`, les champs `valeur_source` et `valeur_affirmee` (nécessaires à `formatVfCorrection` pour donner la vraie information quand l'affirmation est fausse, voir décision précédente) avaient été omis par erreur. Dès qu'une affirmation fausse était révélée, le code plantait silencieusement au milieu de la révélation, après avoir masqué les boutons de réponse mais avant d'afficher la suite — d'où l'écran vide.
