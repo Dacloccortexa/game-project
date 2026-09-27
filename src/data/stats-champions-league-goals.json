@@ -1,0 +1,313 @@
+{
+  "category_id": "champions_league_goals",
+  "category_label": "Buts en Ligue des champions",
+  "unit": "buts",
+  "scope": "Total en Coupe des clubs champions européens / Ligue des champions depuis 1955, phase principale uniquement ; tours de qualification exclus.",
+  "snapshot_date": "2026-09-10",
+  "source": "Wikipedia — classement des meilleurs joueurs",
+  "source_leaderboard_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+  "selection_note": "Les 50 premières entrées du classement Wikipédia arrêté au 10 septembre 2026 ; les joueurs encore actifs devront être réactualisés avant usage prolongé.",
+  "verification_note": "Chiffres relevés dans le tableau de la source le 27 septembre 2026 ; contrôle de cohérence des 50 noms, valeurs et doublons. Les écarts sont à ajuster en playtest.",
+  "players": [
+    {
+      "name": "Cristiano Ronaldo",
+      "value": 140,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Lionel Messi",
+      "value": 129,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Robert Lewandowski",
+      "value": 109,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Karim Benzema",
+      "value": 90,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Kylian Mbappé",
+      "value": 71,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Raúl",
+      "value": 71,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Erling Haaland",
+      "value": 59,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Thomas Müller",
+      "value": 57,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ruud van Nistelrooy",
+      "value": 56,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Harry Kane",
+      "value": 55,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Mohamed Salah",
+      "value": 50,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Thierry Henry",
+      "value": 50,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Alfredo Di Stéfano",
+      "value": 49,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Andriy Shevchenko",
+      "value": 48,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Zlatan Ibrahimović",
+      "value": 48,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Eusébio",
+      "value": 46,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Filippo Inzaghi",
+      "value": 46,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Didier Drogba",
+      "value": 44,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Antoine Griezmann",
+      "value": 44,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Neymar",
+      "value": 43,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Alessandro Del Piero",
+      "value": 42,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Sergio Agüero",
+      "value": 41,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ferenc Puskás",
+      "value": 36,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Edinson Cavani",
+      "value": 35,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gerd Müller",
+      "value": 34,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Vinícius Júnior",
+      "value": 34,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Fernando Morientes",
+      "value": 33,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Arjen Robben",
+      "value": 31,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Samuel Eto'o",
+      "value": 30,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ousmane Dembélé",
+      "value": 30,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Wayne Rooney",
+      "value": 30,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Kaká",
+      "value": 30,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Paco Gento",
+      "value": 30,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "David Trezeguet",
+      "value": 29,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Roy Makaay",
+      "value": 29,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Patrick Kluivert",
+      "value": 29,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Edin Džeko",
+      "value": 29,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Álvaro Morata",
+      "value": 29,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Jean-Pierre Papin",
+      "value": 28,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ryan Giggs",
+      "value": 28,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gabriel Jesus",
+      "value": 27,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Sadio Mané",
+      "value": 27,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Rivaldo",
+      "value": 27,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Luis Suárez",
+      "value": 27,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Raheem Sterling",
+      "value": 27,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Mario Gómez",
+      "value": 26,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Rodrygo",
+      "value": 26,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Julián Alvarez",
+      "value": 25,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Mário Jardel",
+      "value": 25,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Robin van Persie",
+      "value": 25,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_top_scorers",
+      "verified_at": "2026-09-27"
+    }
+  ]
+}
