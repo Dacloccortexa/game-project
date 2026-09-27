@@ -25,9 +25,9 @@
 - Qui suis-je ? : éprouver en playtest le délai de 12 secondes repris de Transfert et la difficulté réelle des cinq indices.
 - ✅ Tackle sur Transfert : tranché (délai + sifflet, la carte s'arrête toujours après une tentative de Tackle). Voir DECISIONS.md du 2026-09-26.
 - ✅ Tackle sur Vrai ou Faux : règle tranchée (contestation dans les 5 secondes après réponse verrouillée, avant révélation ; le tour actif continue normalement si le Tackle échoue). Voir DECISIONS.md du 2026-09-27.
-- ⏳ Vrai ou Faux : vérifier et adapter si nécessaire l'interface pour respecter la fenêtre de 5 secondes désormais validée.
+- ✅ Vrai ou Faux : l'interface respecte désormais la fenêtre de 5 secondes (révélation automatique si personne ne tackle avant). Implémenté dans `index.html` (`startContestWindow`).
 - Tackle : décider si l'équipe qui tient le téléphone (et voit donc déjà les indices révélés sur Transfert) a le droit de tackler, vu l'avantage d'information que ça lui donnerait.
-- ⏳ Tackle sur Plus ou Moins : implémenter la réponse verrouillée suivie d'une fenêtre de 5 secondes « Tackle ou révélation », avant d'afficher la valeur. Le premier adversaire à tackler reçoit +5 si la réponse active est fausse, sinon −5 ; le score général peut passer sous zéro. Voir GAME_DESIGN.md et la décision du 2026-09-27.
+- ✅ Tackle sur Plus ou Moins : implémenté (réponse verrouillée, fenêtre de 5 secondes « Tackle ou révélation », +5/−5, score pouvant passer sous zéro, tour actif inchangé si le Tackle échoue). Voir GAME_DESIGN.md et la décision du 2026-09-27.
 - ✅ Le Match : mauvaise réponse active = −1 puis événement suivant ; passe = événement suivant sans pénalité ; après le cinquième événement sans bonne réponse, fin de carte et révélation du match. Décidé comme sur Qui suis-je.
 
 ## Zones où Claude peut décider librement

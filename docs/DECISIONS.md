@@ -2,6 +2,14 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] Tackle sur Plus ou Moins implémenté, fenêtre de 5 secondes sur Vrai ou Faux corrigée
+- Implémenté dans `index.html` conformément à la décision « Le Match et les deux formes de Tackle » : sur Plus ou Moins, `pomGuess()` verrouille désormais la direction choisie (PLUS/MOINS) sans révéler immédiatement le résultat ; une fenêtre de 5 secondes s'ouvre (`startContestWindow`, sans délai préalable ni sifflet), pendant laquelle une équipe adverse peut annoncer TACKLE. Si personne ne tackle, la fenêtre s'écoule et `resolvePomGuess(null)` révèle normalement.
+- Un Tackle réussi (l'équipe active s'était trompée) : le tackleur reçoit +5, la carte de l'équipe active s'arrête avec 0 point. Un Tackle raté (l'équipe active avait raison) : le tackleur reçoit −5 (le score général peut passer sous zéro) et le tour de l'équipe active continue normalement (chaîne suivante ou ENCAISSER/CONTINUER selon le cas), exactement comme sur Vrai ou Faux.
+- Nouvelle UI ajoutée : `#pom-pending-zone` (bouton TACKLE + bouton Révéler), `#pom-tackle-team-picker`. Avec une seule équipe, la fenêtre est court-circuitée et la réponse se révèle directement (pas de Tackle possible en solo).
+- Un helper partagé `startContestWindow(onTimeout)` / `clearContestTimer()` (délai `CONTEST_DELAY_SECONDS = 5`) a été ajouté à côté du helper existant `startTackleWindow()` (12 secondes, vol de réponse) : il est distinct et sert maintenant Plus ou Moins **et** Vrai ou Faux.
+- Corrigé au passage : Vrai ou Faux affichait la fenêtre de contestation sans minuteur réel (bouton « Révéler » manuel uniquement, pas de limite de temps). `vfAnswer()` appelle maintenant `startContestWindow()` pour révéler automatiquement au bout de 5 secondes si personne ne tackle, conformément à la règle déjà validée.
+- Vérifié par des scripts Playwright automatisés : révélation automatique après 5 s sans Tackle (Plus ou Moins et Vrai ou Faux), Tackle réussi (adversaire +5, carte active à 0), Tackle raté (adversaire −5, score négatif possible, tour actif qui continue et affiche normalement la décision ENCAISSER/CONTINUER).
+
 ## [2026-09-27] Le Match reprend les réponses et passes de Qui suis-je
 - David confirme : après chaque événement, l'équipe active peut répondre une seule fois ou passer. Bonne réponse : elle gagne les points de l'événement et la carte s'arrête. Mauvaise réponse : −1 point au score général, puis événement suivant. Passe : événement suivant sans pénalité.
 - Après une mauvaise réponse ou une passe au cinquième événement, la carte s'arrête et révèle les deux équipes. Les pénalités de mauvaises réponses se cumulent.

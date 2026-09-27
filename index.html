@@ -497,6 +497,24 @@
       </div>
     </div>
 
+    <div class="hidden-screen" id="pom-pending-zone">
+      <div class="confirm-box">
+        <div class="typed" id="pom-pending-label"></div>
+        <div class="confirm-actions">
+          <button class="secondary" id="btn-tackle-pom" style="border-color: var(--red); color: var(--red);">🚨 TACKLE</button>
+          <button class="primary" id="btn-pom-reveal">Révéler</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden-screen" id="pom-tackle-team-picker">
+      <div class="confirm-box">
+        <div class="typed">Quelle équipe tackle ?</div>
+        <div class="choice-group" id="pom-tackle-team-buttons"></div>
+        <button class="text-btn" id="btn-pom-tackle-cancel">Annuler</button>
+      </div>
+    </div>
+
     <!-- Vrai ou Faux -->
     <div class="card-stage hidden-screen" id="stage-vf">
       <div class="clue-points" id="vf-progress"></div>
@@ -1040,6 +1058,10 @@
       el("pom-feedback-zone").classList.add("hidden-screen");
       el("pom-feedback-zone").innerHTML = "";
       hide("pom-decision-zone");
+      hide("pom-pending-zone");
+      hide("pom-tackle-team-picker");
+      hide("pom-answer-zone");
+      clearContestTimer();
     }
     if (!isVf) {
       el("vf-feedback-zone").classList.add("hidden-screen");
@@ -1048,6 +1070,7 @@
       hide("vf-pending-zone");
       hide("vf-tackle-team-picker");
       hide("vf-answer-zone");
+      clearContestTimer();
     }
     if (!isQsj) {
       el("qsj-feedback-zone").innerHTML = "";
@@ -1112,6 +1135,27 @@
     }, TACKLE_DELAY_SECONDS * 1000);
   }
 
+  // ---------- Tackle "contestation" (Plus ou Moins, Vrai ou Faux) ----------
+  // Fenêtre de 5 secondes, sans délai préalable ni sifflet : la première équipe adverse
+  // à annoncer Tackle conteste la réponse déjà verrouillée de l'équipe active.
+  var CONTEST_DELAY_SECONDS = 5;
+
+  function clearContestTimer() {
+    if (state.contestTimerId) {
+      clearTimeout(state.contestTimerId);
+      state.contestTimerId = null;
+    }
+  }
+
+  function startContestWindow(onTimeout) {
+    clearContestTimer();
+    if (state.teams.length < 2) return; // personne pour tackler en solo
+    state.contestTimerId = setTimeout(function () {
+      if (state.cardEnded) return;
+      onTimeout();
+    }, CONTEST_DELAY_SECONDS * 1000);
+  }
+
   el("btn-tackle").addEventListener("click", function () {
     hide("btn-tackle");
     var buttonsDiv = el("tackle-team-buttons");
@@ -1163,16 +1207,20 @@
   function beginPomTurn() {
     setActiveMinigameUI("plusoumoins");
     clearTackleTimer();
-    hideTackleUI(); // Tackle pas encore défini pour Plus ou Moins
+    hideTackleUI(); // le Tackle "vol de réponse" de Transfert ne s'applique pas ici
+    clearContestTimer();
     state.cardEnded = false;
     state.pomChain = drawPomChain();
     state.pomIndex = 0;        // index du joueur de référence actuel dans la chaîne
     state.pomPotential = 0;    // points potentiels accumulés
+    state.pomPendingDirection = null;
 
     beginTurnCommon("Plus ou Moins");
     el("pom-feedback-zone").innerHTML = "";
     el("pom-feedback-zone").classList.add("hidden-screen");
     hide("pom-decision-zone");
+    hide("pom-pending-zone");
+    hide("pom-tackle-team-picker");
     show("pom-answer-zone");
     renderPomChain(false);
   }
@@ -1205,41 +1253,120 @@
     }
   }
 
+  // La réponse est verrouillée (pas encore révélée) puis une fenêtre de contestation
+  // de 5 secondes s'ouvre pour les autres équipes, sans délai préalable ni sifflet.
   function pomGuess(direction) {
-    var chain = state.pomChain.chain;
-    var refValue = chain[state.pomIndex].value;
-    var nextValue = chain[state.pomIndex + 1].value;
-    var actualDirection = nextValue > refValue ? "plus" : "moins";
-    var correct = direction === actualDirection;
+    state.pomPendingDirection = direction;
+    hide("pom-answer-zone");
 
-    state.pomIndex += 1;
-    renderPomChain();
-
-    if (correct) {
-      state.pomPotential += 1;
-      var isFifth = state.pomIndex >= chain.length - 1;
-      if (isFifth) {
-        awardPoints(state.pomPotential);
-        el("pom-feedback-zone").classList.remove("hidden-screen");
-        el("pom-feedback-zone").innerHTML = '<div class="feedback good">5/5 ! +' + state.pomPotential + ' points encaissés automatiquement.</div>';
-        endCard();
-      } else {
-        el("pom-feedback-zone").classList.remove("hidden-screen");
-        el("pom-feedback-zone").innerHTML = '<div class="feedback good">Bonne réponse !</div>';
-        hide("pom-answer-zone");
-        el("pom-potential-points").textContent = state.pomPotential + " point" + (state.pomPotential > 1 ? "s" : "") + " en jeu";
-        show("pom-decision-zone");
-      }
-    } else {
-      el("pom-feedback-zone").classList.remove("hidden-screen");
-      el("pom-feedback-zone").innerHTML = '<div class="feedback bad">Mauvaise réponse. 0 point pour cette carte.</div>';
-      awardPoints(0);
-      endCard();
+    if (state.teams.length < 2) {
+      // Personne pour tackler en solo : on révèle directement.
+      resolvePomGuess(null);
+      return;
     }
+
+    el("pom-pending-label").textContent = state.teams[state.currentTeamIndex].name +
+      " a verrouillé sa réponse (" + (direction === "plus" ? "+ Plus" : "− Moins") +
+      "). Une autre équipe peut TACKLE avant la révélation.";
+    show("pom-pending-zone");
+    startContestWindow(function () {
+      hide("pom-pending-zone");
+      resolvePomGuess(null);
+    });
   }
 
   el("pom-btn-plus").addEventListener("click", function () { pomGuess("plus"); });
   el("pom-btn-moins").addEventListener("click", function () { pomGuess("moins"); });
+
+  el("btn-pom-reveal").addEventListener("click", function () {
+    clearContestTimer();
+    hide("pom-pending-zone");
+    resolvePomGuess(null);
+  });
+
+  el("btn-tackle-pom").addEventListener("click", function () {
+    clearContestTimer();
+    hide("pom-pending-zone");
+    var buttonsDiv = el("pom-tackle-team-buttons");
+    buttonsDiv.innerHTML = "";
+    state.teams.forEach(function (team, idx) {
+      if (idx === state.currentTeamIndex) return; // l'équipe active ne tackle pas son propre tour
+      var btn = document.createElement("button");
+      btn.className = "choice-btn";
+      btn.textContent = team.name;
+      btn.addEventListener("click", function () {
+        hide("pom-tackle-team-picker");
+        resolvePomGuess({ tacklerIdx: idx });
+      });
+      buttonsDiv.appendChild(btn);
+    });
+    show("pom-tackle-team-picker");
+  });
+
+  el("btn-pom-tackle-cancel").addEventListener("click", function () {
+    hide("pom-tackle-team-picker");
+    show("pom-pending-zone");
+    startContestWindow(function () {
+      hide("pom-pending-zone");
+      resolvePomGuess(null);
+    });
+  });
+
+  // tackleInfo = null (révélation normale) ou { tacklerIdx } (une équipe a tacklé avant la révélation)
+  function resolvePomGuess(tackleInfo) {
+    var chain = state.pomChain.chain;
+    var refValue = chain[state.pomIndex].value;
+    var nextValue = chain[state.pomIndex + 1].value;
+    var actualDirection = nextValue > refValue ? "plus" : "moins";
+    var isActiveCorrect = state.pomPendingDirection === actualDirection;
+
+    state.pomIndex += 1;
+    renderPomChain();
+
+    el("pom-feedback-zone").innerHTML = "";
+    el("pom-feedback-zone").classList.add("hidden-screen");
+
+    if (tackleInfo) {
+      var tacklerTeam = state.teams[tackleInfo.tacklerIdx];
+      if (isActiveCorrect) {
+        // L'équipe active avait raison : le tackle échoue, son tour continue normalement.
+        awardPointsToTeam(tackleInfo.tacklerIdx, -5);
+        el("pom-feedback-zone").classList.remove("hidden-screen");
+        el("pom-feedback-zone").innerHTML = '<div class="feedback bad">TACKLE raté par ' + tacklerTeam.name + '. −5 points.</div>';
+      } else {
+        // L'équipe active avait tort : le tackle réussit, elle perd toute sa cagnotte en cours.
+        awardPointsToTeam(tackleInfo.tacklerIdx, 5);
+        el("pom-feedback-zone").classList.remove("hidden-screen");
+        el("pom-feedback-zone").innerHTML = '<div class="feedback good">TACKLE réussi par ' + tacklerTeam.name + ' ! +5 points.</div>';
+        el("pom-feedback-zone").innerHTML += '<div class="feedback bad">Mauvaise réponse de ' + state.teams[state.currentTeamIndex].name + '. 0 point pour cette carte.</div>';
+        awardPoints(0);
+        endCard();
+        return;
+      }
+    }
+
+    if (!isActiveCorrect) {
+      el("pom-feedback-zone").classList.remove("hidden-screen");
+      el("pom-feedback-zone").innerHTML += '<div class="feedback bad">Mauvaise réponse. 0 point pour cette carte.</div>';
+      awardPoints(0);
+      endCard();
+      return;
+    }
+
+    state.pomPotential += 1;
+    var isFifth = state.pomIndex >= chain.length - 1;
+    if (isFifth) {
+      awardPoints(state.pomPotential);
+      el("pom-feedback-zone").classList.remove("hidden-screen");
+      el("pom-feedback-zone").innerHTML += '<div class="feedback good">5/5 ! +' + state.pomPotential + ' points encaissés automatiquement.</div>';
+      endCard();
+    } else {
+      el("pom-feedback-zone").classList.remove("hidden-screen");
+      el("pom-feedback-zone").innerHTML += '<div class="feedback good">Bonne réponse !</div>';
+      el("pom-potential-points").textContent = state.pomPotential + " point" + (state.pomPotential > 1 ? "s" : "") + " en jeu";
+      show("pom-decision-zone");
+    }
+  }
 
   el("pom-btn-encaisser").addEventListener("click", function () {
     awardPoints(state.pomPotential);
@@ -1260,6 +1387,7 @@
     setActiveMinigameUI("vraifaux");
     clearTackleTimer();
     hideTackleUI(); // le Tackle de Transfert (minuteur/sifflet) ne s'applique pas ici
+    clearContestTimer();
     state.cardEnded = false;
     state.vfChain = drawVraiFauxChain();
     state.vfIndex = 0;
@@ -1351,14 +1479,20 @@
       " a répondu " + (isVraiChoice ? "VRAI" : "FAUX") +
       ". Une autre équipe peut TACKLE avant la révélation.";
     show("vf-pending-zone");
+    startContestWindow(function () {
+      hide("vf-pending-zone");
+      resolveVfStatement(null);
+    });
   }
 
   el("btn-vf-reveal").addEventListener("click", function () {
+    clearContestTimer();
     hide("vf-pending-zone");
     resolveVfStatement(null);
   });
 
   el("btn-tackle-vf").addEventListener("click", function () {
+    clearContestTimer();
     hide("vf-pending-zone");
     var buttonsDiv = el("vf-tackle-team-buttons");
     buttonsDiv.innerHTML = "";
@@ -1379,6 +1513,10 @@
   el("btn-vf-tackle-cancel").addEventListener("click", function () {
     hide("vf-tackle-team-picker");
     show("vf-pending-zone");
+    startContestWindow(function () {
+      hide("vf-pending-zone");
+      resolveVfStatement(null);
+    });
   });
 
   // tackleInfo = null (révélation normale) ou { tacklerIdx } (une équipe a tacklé avant la révélation)
@@ -1688,9 +1826,12 @@
     state.cardEnded = true;
     clearTackleTimer();
     hideTackleUI();
+    clearContestTimer();
     hide("answer-zone");
     hide("pom-answer-zone");
     hide("pom-decision-zone");
+    hide("pom-pending-zone");
+    hide("pom-tackle-team-picker");
     hide("vf-answer-zone");
     hide("vf-pending-zone");
     hide("vf-decision-zone");
