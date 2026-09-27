@@ -1,0 +1,313 @@
+{
+  "category_id": "ligue_1_goals",
+  "category_label": "Buts en Ligue 1",
+  "unit": "buts",
+  "scope": "Total des buts marqués dans le championnat masculin de première division française depuis 1932-1933, tous clubs confondus.",
+  "snapshot_date": "2026-08-30",
+  "source": "Wikipedia — classement historique des buteurs",
+  "source_leaderboard_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+  "selection_note": "50 premières entrées du classement Wikipédia arrêté aux matchs du 30 août 2026.",
+  "verification_note": "Chiffres relevés dans le tableau de la source le 27 septembre 2026 ; contrôle de cohérence des noms, valeurs et doublons. Les joueurs encore actifs devront être réactualisés avant une vraie partie test.",
+  "players": [
+    {
+      "name": "Delio Onnis",
+      "value": 299,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Bernard Lacombe",
+      "value": 255,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Hervé Revelli",
+      "value": 216,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Roger Courtois",
+      "value": 210,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Thadée Cisowski",
+      "value": 206,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Roger Piantoni",
+      "value": 203,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Kylian Mbappé",
+      "value": 191,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Joseph Ujlaki",
+      "value": 190,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Fleury Di Nallo",
+      "value": 187,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Carlos Bianchi",
+      "value": 179,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gunnar Andersson",
+      "value": 179,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Hassan Akesbi",
+      "value": 173,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Jean Baratte",
+      "value": 169,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Just Fontaine",
+      "value": 164,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Alain Giresse",
+      "value": 163,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Alexandre Lacazette",
+      "value": 161,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Wissam Ben Yedder",
+      "value": 161,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "André Guy",
+      "value": 159,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Désiré Koranyi",
+      "value": 157,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Jean-Pierre Papin",
+      "value": 156,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Jacky Vergnes",
+      "value": 153,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Josip Skoblar",
+      "value": 151,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Lucien Cossou",
+      "value": 149,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Dominique Rocheteau",
+      "value": 145,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Rachid Mekhloufi",
+      "value": 143,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Pauleta",
+      "value": 141,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Yvon Douis",
+      "value": 140,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Michel Platini",
+      "value": 139,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Stéphane Bruey",
+      "value": 139,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Edinson Cavani",
+      "value": 138,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Sonny Anderson",
+      "value": 138,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Salif Keïta",
+      "value": 135,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Hector De Bourgoing",
+      "value": 133,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Jacques Foix",
+      "value": 132,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Yannick Stopyra",
+      "value": 132,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Henri Hiltl",
+      "value": 131,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Bernard Zénier",
+      "value": 130,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "François M'Pelé",
+      "value": 129,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gérard Soler",
+      "value": 129,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Alberto Muro",
+      "value": 128,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Jean Grumellon",
+      "value": 126,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Lilian Laslandes",
+      "value": 126,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Joseph Yegba Maya",
+      "value": 124,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Bafétimbi Gomis",
+      "value": 122,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Henri Baillot",
+      "value": 121,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ernest Schultz",
+      "value": 121,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "René Gardien",
+      "value": 121,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "André Simonyi",
+      "value": 120,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "François Félix",
+      "value": 120,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Serge Chiesa",
+      "value": 120,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_Ligue_1_top_scorers",
+      "verified_at": "2026-09-27"
+    }
+  ]
+}
