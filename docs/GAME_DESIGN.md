@@ -80,19 +80,21 @@ Le contenu provient d'un jeu de 2 000 affirmations (1 000 vraies, 1 000 fausses)
 
 ## Quatrième mini-jeu prévu : Qui suis-je ?
 
-Une question porte sur **un seul joueur mystère**. Ses cinq indices sont révélés un par un, dans cet ordre fixe. Chaque indice apporte **une seule information courte** :
+Une carte porte sur **un seul joueur mystère** et appartient à **une seule équipe active**. Comme dans les autres mini-jeux, chaque équipe joue sa propre carte pendant la manche. Les autres équipes ne peuvent pas proposer le nom du joueur ; elles participent uniquement par le Tackle après une réponse de l'équipe active.
 
-1. **Un club où il a joué** — réponse à cet indice : **5 points**.
+Les cinq indices sont révélés un par un, toujours dans cet ordre fixe. Chaque indice apporte **une seule information courte** :
+
+1. **Un club où le joueur a joué** — bonne réponse : **5 points**.
 2. **Une coupe ou un championnat qu'il a gagné** — **4 points**.
 3. **Son poste** — **3 points**.
 4. **Un coéquipier avec qui il a joué** — **2 points**.
 5. **Sa nationalité** — **1 point**.
 
-Toutes les équipes encore en jeu pour cette question peuvent buzzer à chaque indice. Sans buzzer, l'indice suivant apparaît. **La première équipe à buzzer donne une réponse unique.** L'application verrouille cette réponse et ouvre une courte fenêtre de Tackle **avant** de révéler le joueur. Une seule équipe adverse peut tackler cette réponse : la première à le faire est retenue. Tackle signifie seulement « cette réponse est fausse » ; le tackleur ne propose pas d'autre joueur.
+À chaque indice, l'équipe active peut **donner une seule réponse** ou **passer**. Passer révèle l'indice suivant sans pénalité. Une réponse est verrouillée avant révélation ; une courte fenêtre permet alors à une seule équipe adverse de tenter un **Tackle**, la première à le faire étant retenue. Tackler signifie seulement « la réponse active est fausse » : le tackleur ne propose pas d'autre joueur. Aucune autre équipe ne peut répondre à la place de l'équipe active.
 
-Si la réponse est correcte, l'équipe qui a buzzé gagne les points de l'indice et la question se termine. Si une autre équipe a tacklé, elle perd **5 points**. Si la réponse est fausse, l'équipe qui a buzzé est éliminée **pour cette question** ; si elle a été tacklée, le tackleur gagne **5 points**. Les autres équipes encore en jeu passent à l'indice suivant. Une équipe éliminée ne peut plus buzzer ni tackler sur cette question. Le score général peut devenir négatif. Une mauvaise réponse ne retire pas d'autres points à l'équipe qui a buzzé.
+Si la réponse est correcte, l'équipe active gagne les points de l'indice et la carte se termine. Un Tackle lancé contre cette bonne réponse coûte **5 points** au tackleur. Si la réponse est fausse, la carte se termine sans point de réponse pour l'équipe active ; un Tackle lancé contre elle rapporte **5 points** au tackleur. Une mauvaise réponse n'entraîne pas d'autre pénalité. Le score général du tackleur peut devenir négatif.
 
-Si personne ne trouve après le cinquième indice, ou si toutes les équipes sont éliminées avant, le joueur est révélé. Aucun point de réponse n'est attribué ; les éventuels points de Tackle restent acquis. Avec une seule équipe, il n'y a pas de Tackle.
+Après une passe au cinquième indice, le joueur est révélé et la carte vaut **0 point**. Avec une seule équipe, il n'y a pas de Tackle.
 
 Les cinq indices d'une carte sont préparés, sourcés et relus **dans cet ordre** avant mise en jeu. La nature fixe des indices ne garantit pas à elle seule une difficulté croissante : il faut vérifier que chaque nouvelle information rend effectivement le joueur plus identifiable dans le contexte des indices déjà révélés.
 
