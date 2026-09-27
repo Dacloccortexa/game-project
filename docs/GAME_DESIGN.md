@@ -70,13 +70,13 @@ Le jeu s'appelle **TACKLE**. Le Tackle est une règle commune à la plateforme :
 
 **Sur Plus ou Moins :** non défini (voir TODO.md).
 
-## Troisième mini-jeu prévu : Vrai ou Faux
+## Troisième mini-jeu : Vrai ou Faux
 
 Remplace l'ancien concept « Le Faux ». Une carte présente jusqu'à **5 affirmations football**, une par une. L'équipe active répond **VRAI** ou **FAUX** à chaque affirmation, avec la même mécanique de cagnotte que Plus ou Moins : chaque bonne réponse fait progresser le gain potentiel (1, 2, 3, 4, puis 5 points) et l'équipe choisit ensuite **ENCAISSER** ou **CONTINUER** ; une mauvaise réponse avant encaissement fait perdre toute la cagnotte de la carte ; la cinquième bonne réponse encaisse automatiquement 5 points.
 
-**Tackle sur ce jeu :** une fois que l'équipe active a donné sa réponse à une affirmation, mais **avant que le jeu ne révèle si elle a raison**, une autre équipe peut tenter un Tackle en pariant que l'équipe active se trompe (une seule tentative par affirmation). Tackle correct : le tackleur gagne 5 points et l'équipe active perd immédiatement toute sa cagnotte en cours pour cette carte. Tackle incorrect : le tackleur perd 5 points, et le tour de l'équipe active continue normalement — son choix ENCAISSER/CONTINUER n'est pas affecté par un Tackle raté.
+**Tackle sur ce jeu :** une fois que l'équipe active a donné sa réponse à une affirmation, mais **avant que le jeu ne révèle si elle a raison**, une autre équipe peut tenter un Tackle en pariant que l'équipe active se trompe (une seule tentative par affirmation). Tackle correct : le tackleur gagne 5 points et l'équipe active perd immédiatement toute sa cagnotte en cours pour cette carte. Tackle incorrect : le tackleur perd 5 points, et le tour de l'équipe active continue normalement — son choix ENCAISSER/CONTINUER n'est pas affecté par un Tackle raté. Avec une seule équipe, personne ne peut tackler : la réponse est révélée immédiatement.
 
-Le contenu (affirmations vraies et fausses) proviendra d'un jeu de données préparé séparément, suivant le même principe de vérification que les autres mini-jeux (aucune affirmation générée ou jugée par une IA pendant la partie). Format et volume exacts non encore reçus. Ce mini-jeu n'est pas encore implémenté dans `index.html`.
+Le contenu provient d'un jeu de 2 000 affirmations (1 000 vraies, 1 000 fausses) préparé par David, dérivées de données déjà vérifiées (années de naissance, tailles, pied fort, poste, ordre des clubs, ville de naissance, débuts professionnels) avec sources par affirmation. Chaque fait dispose d'une version vraie et d'une version fausse regroupées par un identifiant commun, pour ne jamais réunir deux énoncés sur le même fait dans une même carte. Implémenté dans `index.html` (`src/data/vraifaux-statements.json`).
 
 ## Contenus et difficulté
 
@@ -88,4 +88,4 @@ Les cartes sont préparées et leurs faits vérifiés par un agent avant d'être
 
 ## Périmètre du premier prototype
 
-Le premier prototype comprend la configuration des équipes et de la partie, le score et le classement, ainsi que **Transfert uniquement**. Les autres mini-jeux seront définis, testés et intégrés un par un. Le jeu à plusieurs téléphones n'entre pas dans ce premier périmètre.
+Le premier prototype comprend la configuration des équipes et de la partie, le score et le classement, ainsi que **Transfert, Plus ou Moins et Vrai ou Faux**, avec le Tackle transversal. Les autres mini-jeux seront définis, testés et intégrés un par un. Le jeu à plusieurs téléphones n'entre pas dans ce premier périmètre.

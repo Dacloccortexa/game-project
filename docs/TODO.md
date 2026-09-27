@@ -9,7 +9,8 @@
 - ⏳ Avant chaque vraie soirée test, revalider manuellement les cartes jouables dont un club porte « –présent ». Corriger et sourcer tout départ confirmé ; si la situation reste incertaine, remettre la carte « à vérifier » pour l'exclure du jeu.
 - ⏳ Plus ou Moins : définir pour chacune des quatre catégories le périmètre exact du chiffre, une source de référence et une date d'arrêté ; préparer **50 entrées joueur + valeur + source + date de vérification par catégorie** (200 entrées statistiques au total). Une catégorie réelle (buts en Premier League, 50 joueurs) est déjà intégrée et jouable ; les trois autres restent à faire.
 - ⏳ À partir de cette base, composer et tester des chaînes de six joueurs : cinq comparaisons au maximum, aucune égalité entre voisins, écarts intéressants et directions PLUS/MOINS variées.
-- ⏳ Vrai ou Faux (remplace Le Faux) : attendre le jeu de données 1000 vrai/1000 faux préparé par David, puis l'intégrer selon le schéma `verification_status`/`sources`/`verified_date`. Construire l'écran de jeu (5 affirmations séquentielles, cagnotte 1→5, ENCAISSER/CONTINUER) et la fenêtre de Tackle déclenchée par la réponse de l'équipe active (voir DECISIONS.md du 2026-09-27).
+- ✅ Vrai ou Faux (remplace Le Faux) : jeu de données de 2 000 affirmations intégré (`src/data/vraifaux-statements.json`, toutes vérifiées) et mini-jeu implémenté dans `index.html` (5 affirmations, cagnotte 1→5, ENCAISSER/CONTINUER, Tackle déclenché par la réponse de l'équipe active). Voir DECISIONS.md du 2026-09-27.
+- ⏳ Relecture éditoriale du jeu de données Vrai ou Faux avant une vraie soirée test (recommandée par sa propre note de contrôle, pas encore faite — seul un contrôle automatique de cohérence a été effectué).
 
 ## Arbitrages de game design à faire avant le déroulé complet
 

@@ -418,6 +418,10 @@
         <input type="checkbox" id="mg-plusoumoins" checked>
         <label for="mg-plusoumoins" style="margin:0; font-size:15px; color:var(--chalk);">Plus ou Moins</label>
       </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="mg-vraifaux" checked>
+        <label for="mg-vraifaux" style="margin:0; font-size:15px; color:var(--chalk);">Vrai ou Faux</label>
+      </div>
     </div>
 
     <button class="primary" id="btn-start">Lancer la partie</button>
@@ -485,6 +489,49 @@
         <div class="confirm-actions">
           <button class="secondary" id="pom-btn-encaisser">Encaisser</button>
           <button class="primary" id="pom-btn-continuer">Continuer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vrai ou Faux -->
+    <div class="card-stage hidden-screen" id="stage-vf">
+      <div class="clue-points" id="vf-progress"></div>
+      <div class="typed" id="vf-statement-text" style="font-size:19px; line-height:1.35;"></div>
+    </div>
+
+    <div id="vf-feedback-zone" class="hidden-screen"></div>
+
+    <div id="vf-answer-zone" class="hidden-screen">
+      <div class="answer-btns">
+        <button class="btn-pass" id="btn-vf-faux">FAUX</button>
+        <button class="btn-answer" id="btn-vf-vrai">VRAI</button>
+      </div>
+    </div>
+
+    <div class="hidden-screen" id="vf-pending-zone">
+      <div class="confirm-box">
+        <div class="typed" id="vf-pending-label"></div>
+        <div class="confirm-actions">
+          <button class="secondary" id="btn-tackle-vf" style="border-color: var(--red); color: var(--red);">🚨 TACKLE</button>
+          <button class="primary" id="btn-vf-reveal">Révéler</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden-screen" id="vf-tackle-team-picker">
+      <div class="confirm-box">
+        <div class="typed">Quelle équipe tackle ?</div>
+        <div class="choice-group" id="vf-tackle-team-buttons"></div>
+        <button class="text-btn" id="btn-vf-tackle-cancel">Annuler</button>
+      </div>
+    </div>
+
+    <div class="hidden-screen" id="vf-decision-zone">
+      <div class="confirm-box">
+        <div class="typed" id="vf-potential-points"></div>
+        <div class="confirm-actions">
+          <button class="secondary" id="vf-btn-encaisser">Encaisser</button>
+          <button class="primary" id="vf-btn-continuer">Continuer</button>
         </div>
       </div>
     </div>
@@ -654,12 +701,48 @@
     return POM_TEST_CHAINS[idx];
   }
 
+  // ---------- Content: affirmations Vrai ou Faux ----------
+  // Seules les affirmations au statut "vérifié" dans vraifaux-statements.json sont chargées en jeu.
+  var VF_POOL = [];
+  var VF_READY = false;
+
+  function loadVraiFauxStatements() {
+    return fetch("src/data/vraifaux-statements.json")
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        VF_POOL = data.statements.filter(function (s) { return s.verification_status === "vérifié"; });
+        VF_READY = VF_POOL.length > 0;
+      })
+      .catch(function (err) {
+        console.error("Impossible de charger vraifaux-statements.json", err);
+        VF_READY = false;
+      });
+  }
+
+  // Tire 5 affirmations sans jamais réunir deux énoncés sur le même fait (groupe_exclusif).
+  function drawVraiFauxChain() {
+    var pool = VF_POOL.slice();
+    for (var i = pool.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
+    }
+    var chosen = [];
+    var usedGroups = {};
+    for (var k = 0; k < pool.length && chosen.length < 5; k++) {
+      var s = pool[k];
+      if (usedGroups[s.groupe_exclusif]) continue;
+      usedGroups[s.groupe_exclusif] = true;
+      chosen.push(s);
+    }
+    return chosen;
+  }
+
   // ---------- State ----------
   var state = {
     teamCount: 3,
     teamNames: ["Équipe A", "Équipe B", "Équipe C", "Équipe D"],
     roundsTotal: 10,
-    minigamesSelected: ["transfert", "plusoumoins"],
+    minigamesSelected: ["transfert", "plusoumoins", "vraifaux"],
     teams: [],       // {name, score}
     roundsPlayed: 0,
     currentTeamIndex: 0,
@@ -740,10 +823,14 @@
   el("mg-plusoumoins").addEventListener("change", function (e) {
     syncMinigamesSelected();
   });
+  el("mg-vraifaux").addEventListener("change", function (e) {
+    syncMinigamesSelected();
+  });
   function syncMinigamesSelected() {
     var list = [];
     if (el("mg-transfert").checked) list.push("transfert");
     if (el("mg-plusoumoins").checked) list.push("plusoumoins");
+    if (el("mg-vraifaux").checked) list.push("vraifaux");
     state.minigamesSelected = list;
   }
 
@@ -763,12 +850,18 @@
       el("setup-error").classList.remove("hidden-screen");
       return;
     }
+    if (state.minigamesSelected.indexOf("vraifaux") !== -1 && !VF_READY) {
+      el("setup-error").textContent = "Les affirmations Vrai ou Faux ne sont pas encore chargées. Réessaie dans un instant.";
+      el("setup-error").classList.remove("hidden-screen");
+      return;
+    }
     el("setup-error").classList.add("hidden-screen");
     startGame();
   });
 
   loadCards();
   loadPomRealCategories();
+  loadVraiFauxStatements();
 
   // ---------- GAME ENGINE ----------
   function startGame() {
@@ -794,6 +887,8 @@
 
     if (state.currentRoundMinigame === "plusoumoins") {
       beginPomTurn();
+    } else if (state.currentRoundMinigame === "vraifaux") {
+      beginVfTurn();
     } else {
       beginTransfertTurn();
     }
@@ -801,15 +896,32 @@
 
   function setActiveMinigameUI(name) {
     var isTransfert = name === "transfert";
+    var isPom = name === "plusoumoins";
+    var isVf = name === "vraifaux";
+
     el("stage-transfert").classList.toggle("hidden-screen", !isTransfert);
     el("answer-zone").classList.toggle("hidden-screen", !isTransfert);
-    el("stage-pom").classList.toggle("hidden-screen", isTransfert);
-    el("pom-answer-zone").classList.toggle("hidden-screen", isTransfert);
-    if (isTransfert) {
-      el("pom-feedback-zone").classList.add("hidden-screen");
-      hide("pom-decision-zone");
-    } else {
+
+    el("stage-pom").classList.toggle("hidden-screen", !isPom);
+    el("pom-answer-zone").classList.toggle("hidden-screen", !isPom);
+
+    el("stage-vf").classList.toggle("hidden-screen", !isVf);
+
+    if (!isTransfert) {
       el("feedback-zone").innerHTML = "";
+    }
+    if (!isPom) {
+      el("pom-feedback-zone").classList.add("hidden-screen");
+      el("pom-feedback-zone").innerHTML = "";
+      hide("pom-decision-zone");
+    }
+    if (!isVf) {
+      el("vf-feedback-zone").classList.add("hidden-screen");
+      el("vf-feedback-zone").innerHTML = "";
+      hide("vf-decision-zone");
+      hide("vf-pending-zone");
+      hide("vf-tackle-team-picker");
+      hide("vf-answer-zone");
     }
   }
 
@@ -1013,6 +1125,146 @@
     el("pom-feedback-zone").classList.add("hidden-screen");
   });
 
+  // ---------- Vrai ou Faux ----------
+  function beginVfTurn() {
+    setActiveMinigameUI("vraifaux");
+    clearTackleTimer();
+    hideTackleUI(); // le Tackle de Transfert (minuteur/sifflet) ne s'applique pas ici
+    state.cardEnded = false;
+    state.vfChain = drawVraiFauxChain();
+    state.vfIndex = 0;
+    state.vfPotential = 0;
+    state.vfPendingAnswer = null;
+
+    beginTurnCommon("Vrai ou Faux");
+    el("vf-feedback-zone").innerHTML = "";
+    el("vf-feedback-zone").classList.add("hidden-screen");
+    hide("vf-decision-zone");
+    hide("vf-pending-zone");
+    hide("vf-tackle-team-picker");
+    show("vf-answer-zone");
+    renderVfStatement();
+  }
+
+  function renderVfStatement() {
+    var statement = state.vfChain[state.vfIndex];
+    el("vf-progress").textContent = "Affirmation " + (state.vfIndex + 1) + "/" + state.vfChain.length;
+    el("vf-statement-text").textContent = statement.affirmation;
+  }
+
+  function showVfFeedback(kind, text) {
+    el("vf-feedback-zone").classList.remove("hidden-screen");
+    el("vf-feedback-zone").innerHTML = '<div class="feedback ' + kind + '">' + text + "</div>";
+  }
+
+  function appendVfFeedback(kind, text) {
+    el("vf-feedback-zone").classList.remove("hidden-screen");
+    el("vf-feedback-zone").innerHTML += '<div class="feedback ' + kind + '">' + text + "</div>";
+  }
+
+  el("btn-vf-vrai").addEventListener("click", function () { vfAnswer(true); });
+  el("btn-vf-faux").addEventListener("click", function () { vfAnswer(false); });
+
+  function vfAnswer(isVraiChoice) {
+    state.vfPendingAnswer = isVraiChoice;
+    hide("vf-answer-zone");
+
+    if (state.teams.length < 2) {
+      // Personne pour tackler en solo : on révèle directement.
+      resolveVfStatement(null);
+      return;
+    }
+
+    el("vf-pending-label").textContent = state.teams[state.currentTeamIndex].name +
+      " a répondu " + (isVraiChoice ? "VRAI" : "FAUX") +
+      ". Une autre équipe peut TACKLE avant la révélation.";
+    show("vf-pending-zone");
+  }
+
+  el("btn-vf-reveal").addEventListener("click", function () {
+    hide("vf-pending-zone");
+    resolveVfStatement(null);
+  });
+
+  el("btn-tackle-vf").addEventListener("click", function () {
+    hide("vf-pending-zone");
+    var buttonsDiv = el("vf-tackle-team-buttons");
+    buttonsDiv.innerHTML = "";
+    state.teams.forEach(function (team, idx) {
+      if (idx === state.currentTeamIndex) return; // l'équipe active ne tackle pas son propre tour
+      var btn = document.createElement("button");
+      btn.className = "choice-btn";
+      btn.textContent = team.name;
+      btn.addEventListener("click", function () {
+        hide("vf-tackle-team-picker");
+        resolveVfStatement({ tacklerIdx: idx });
+      });
+      buttonsDiv.appendChild(btn);
+    });
+    show("vf-tackle-team-picker");
+  });
+
+  el("btn-vf-tackle-cancel").addEventListener("click", function () {
+    hide("vf-tackle-team-picker");
+    show("vf-pending-zone");
+  });
+
+  // tackleInfo = null (révélation normale) ou { tacklerIdx } (une équipe a tacklé avant la révélation)
+  function resolveVfStatement(tackleInfo) {
+    var statement = state.vfChain[state.vfIndex];
+    var isActiveCorrect = (state.vfPendingAnswer === statement.est_vraie);
+    var verdictText = "C'était " + (statement.est_vraie ? "VRAI" : "FAUX") + ".";
+
+    if (tackleInfo) {
+      var tacklerTeam = state.teams[tackleInfo.tacklerIdx];
+      if (isActiveCorrect) {
+        // L'équipe active avait raison : le tackle échoue, son tour continue normalement.
+        awardPointsToTeam(tackleInfo.tacklerIdx, -5);
+        showVfFeedback("bad", "TACKLE raté par " + tacklerTeam.name + ". −5 points.");
+      } else {
+        // L'équipe active avait tort : le tackle réussit, elle perd toute sa cagnotte en cours.
+        awardPointsToTeam(tackleInfo.tacklerIdx, 5);
+        showVfFeedback("good", "TACKLE réussi par " + tacklerTeam.name + " ! +5 points.");
+      }
+    }
+
+    if (!isActiveCorrect) {
+      appendVfFeedback("bad", "Mauvaise réponse de " + state.teams[state.currentTeamIndex].name + ". " + verdictText + " 0 point pour cette carte.");
+      awardPoints(0);
+      endCard();
+      return;
+    }
+
+    appendVfFeedback("good", "Bonne réponse. " + verdictText);
+    state.vfPotential += 1;
+    var isLast = state.vfIndex >= state.vfChain.length - 1;
+    if (isLast) {
+      awardPoints(state.vfPotential);
+      appendVfFeedback("good", state.vfPotential + "/" + state.vfChain.length + " ! +" + state.vfPotential + " points encaissés automatiquement.");
+      endCard();
+    } else {
+      el("vf-potential-points").textContent = state.vfPotential + " point" + (state.vfPotential > 1 ? "s" : "") + " en jeu";
+      show("vf-decision-zone");
+    }
+  }
+
+  el("vf-btn-encaisser").addEventListener("click", function () {
+    awardPoints(state.vfPotential);
+    hide("vf-decision-zone");
+    appendVfFeedback("good", "Encaissé : +" + state.vfPotential + " points.");
+    endCard();
+  });
+
+  el("vf-btn-continuer").addEventListener("click", function () {
+    hide("vf-decision-zone");
+    el("vf-feedback-zone").innerHTML = "";
+    el("vf-feedback-zone").classList.add("hidden-screen");
+    state.vfIndex += 1;
+    state.vfPendingAnswer = null;
+    renderVfStatement();
+    show("vf-answer-zone");
+  });
+
   function renderClueList() {
     var card = state.currentCard;
     var list = el("clue-list");
@@ -1145,6 +1397,10 @@
     hide("answer-zone");
     hide("pom-answer-zone");
     hide("pom-decision-zone");
+    hide("vf-answer-zone");
+    hide("vf-pending-zone");
+    hide("vf-decision-zone");
+    hide("vf-tackle-team-picker");
 
     var isLastTeamOfRound = state.currentTeamIndex >= state.teams.length - 1;
     var isLastRound = state.roundsPlayed >= state.roundsTotal - 1;
