@@ -2,6 +2,12 @@
 
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
+## [2026-09-27] Correctif : l'écran se bloquait sur une affirmation fausse en Vrai ou Faux
+- Bug signalé par David : après avoir répondu VRAI ou FAUX, l'écran restait parfois bloqué sans bouton ni suite possible.
+- Cause : lors de la conversion du jeu de données fourni par David vers `src/data/vraifaux-statements.json`, les champs `valeur_source` et `valeur_affirmee` (nécessaires à `formatVfCorrection` pour donner la vraie information quand l'affirmation est fausse, voir décision précédente) avaient été omis par erreur. Dès qu'une affirmation fausse était révélée, le code plantait silencieusement au milieu de la révélation, après avoir masqué les boutons de réponse mais avant d'afficher la suite — d'où l'écran vide.
+- Correctif : régénération de `vraifaux-statements.json` avec ces deux champs restaurés (vérifié sans erreur sur les 1000 affirmations fausses). Le code de révélation est aussi rendu défensif : un échec de `formatVfCorrection` est maintenant intercepté et n'empêche plus la suite du tour.
+- Impact : purement technique, aucune règle de jeu modifiée. Reproduit et vérifié résolu via un test automatisé (16/16 tours sans blocage, y compris sur des affirmations fausses).
+
 ## [2026-09-27] Intégration du jeu de données Vrai ou Faux (2 000 affirmations) et implémentation du mini-jeu
 - Décision : le jeu de 2 000 affirmations fourni par David (1 000 vraies, 1 000 fausses, dérivées de données déjà vérifiées : années de naissance, tailles, pied fort, poste, ordre des clubs, ville de naissance, débuts professionnels) est intégré tel quel dans `src/data/vraifaux-statements.json`, marqué « vérifié » pour les 2 000 entrées.
 - Vérification effectuée avant intégration : un contrôle automatique de cohérence interne a comparé, pour chacune des 2 000 affirmations, la valeur affirmée à la valeur source fournie (égalité, comparaison d'âge, de taille, ou ordre chronologique de deux passages en club) — **0 incohérence détectée**. Un échantillage manuel sur quelques affirmations connues (année de naissance de Steven Gerrard, ordre de carrière de David Silva, etc.) confirme leur exactitude. Aucune vérification indépendante affirmation par affirmation n'a été faite au-delà de ce contrôle et de cet échantillage, conformément au principe de curation pragmatique déjà appliqué au lot Transfert sourcé par Wikipédia.

@@ -1257,8 +1257,13 @@
     var isActiveCorrect = (state.vfPendingAnswer === statement.est_vraie);
     var verdictText = "C'était " + (statement.est_vraie ? "VRAI" : "FAUX") + ".";
     if (!statement.est_vraie) {
-      var correction = formatVfCorrection(statement);
-      if (correction) verdictText += " " + correction;
+      // Ne doit jamais bloquer la révélation même si une donnée est incomplète.
+      try {
+        var correction = formatVfCorrection(statement);
+        if (correction) verdictText += " " + correction;
+      } catch (e) {
+        console.error("formatVfCorrection a échoué pour " + statement.id, e);
+      }
     }
 
     if (tackleInfo) {
