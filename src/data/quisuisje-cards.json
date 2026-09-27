@@ -1,0 +1,6119 @@
+{
+  "game_id": "qui_suis_je",
+  "version": 1,
+  "prepared_at": "2026-09-27",
+  "status": "fiches sourcées, difficulté à éprouver en partie",
+  "source_snapshot": "Wikipédia, révisions relevées le 24 septembre 2026; carrières Transfert vérifiées dans le dépôt",
+  "rules": {
+    "clue_order": [
+      "club",
+      "trophy",
+      "position",
+      "teammate",
+      "nationality"
+    ],
+    "points": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  "cards": [
+    {
+      "id": "qs001",
+      "answer": "Cristiano Ronaldo",
+      "variants": [
+        "ronaldo",
+        "cr7",
+        "cristiano"
+      ],
+      "transfert_card_id": "t002",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "* Premier League: 2006–07, 2007–08, 2008–09"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Cristiano_Ronaldo",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Karim Benzema.",
+          "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
+          "fact": {
+            "name": "Karim Benzema",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis portugais.",
+          "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        }
+      ],
+      "source_revision": 1376549251,
+      "source_revision_fr": 239787195,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs002",
+      "answer": "Lionel Messi",
+      "variants": [
+        "messi",
+        "lionel messi"
+      ],
+      "transfert_card_id": "t003",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à FC Barcelone.",
+          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
+          "fact": {
+            "club": "FC Barcelone"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "* La Liga: 2004–05, 2005–06, 2008–09, 2009–10, 2010–11, 2012–13, 2014–15, 2015–16, 2017–18, 2018–19"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant polyvalent.",
+          "source": "https://fr.wikipedia.org/wiki/Lionel_Messi",
+          "fact": {
+            "position": "attaquant polyvalent"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Kylian Mbappé.",
+          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
+          "fact": {
+            "name": "Kylian Mbappé",
+            "shared_club": "PSG"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis argentin.",
+          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        }
+      ],
+      "source_revision": 1376378148,
+      "source_revision_fr": 239792362,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs003",
+      "answer": "Kylian Mbappé",
+      "variants": [
+        "mbappe",
+        "mbappé",
+        "kylian mbappe"
+      ],
+      "transfert_card_id": "t004",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue 1.",
+          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
+          "fact": {
+            "trophy": "Ligue 1",
+            "evidence": "* Ligue 1: 2016–17"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Lionel Messi.",
+          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
+          "fact": {
+            "name": "Lionel Messi",
+            "shared_club": "PSG"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376714674,
+      "source_revision_fr": 239816197,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs004",
+      "answer": "Karim Benzema",
+      "variants": [
+        "benzema",
+        "karim benzema"
+      ],
+      "transfert_card_id": "t008",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue 1.",
+          "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
+          "fact": {
+            "trophy": "Ligue 1",
+            "evidence": "* Ligue 1: 2004–05, 2005–06, 2006–07, 2007–08"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Karim_Benzema",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Cristiano Ronaldo.",
+          "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+          "fact": {
+            "name": "Cristiano Ronaldo",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376733389,
+      "source_revision_fr": 239325401,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs005",
+      "answer": "Luis Suárez",
+      "variants": [
+        "suarez",
+        "suárez",
+        "luis suarez"
+      ],
+      "transfert_card_id": "t009",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à FC Barcelone.",
+          "source": "https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28Uruguayan_footballer%29",
+          "fact": {
+            "club": "FC Barcelone"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28Uruguayan_footballer%29",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2014–15, 2015–16, 2017–18, 2018–19"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28football%2C_1987%29",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Neymar.",
+          "source": "https://en.wikipedia.org/wiki/Neymar",
+          "fact": {
+            "name": "Neymar",
+            "shared_club": "FC Barcelone"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis uruguayen.",
+          "source": "https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28Uruguayan_footballer%29",
+          "fact": {
+            "national_team": "Uruguay"
+          }
+        }
+      ],
+      "source_revision": 1376882581,
+      "source_revision_fr": 239695534,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs006",
+      "answer": "Robert Lewandowski",
+      "variants": [
+        "lewandowski",
+        "robert lewandowski"
+      ],
+      "transfert_card_id": "t010",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à FC Barcelone.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
+          "fact": {
+            "club": "FC Barcelone"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Bundesliga.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
+          "fact": {
+            "trophy": "Bundesliga",
+            "evidence": "* Bundesliga: 2010–11, 2011–12"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/Robert_Lewandowski",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Arjen Robben.",
+          "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
+          "fact": {
+            "name": "Arjen Robben",
+            "shared_club": "Bayern Munich"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis polonais.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
+          "fact": {
+            "national_team": "Poland"
+          }
+        }
+      ],
+      "source_revision": 1376718251,
+      "source_revision_fr": 239834798,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs007",
+      "answer": "Mohamed Salah",
+      "variants": [
+        "salah",
+        "mohamed salah",
+        "mo salah"
+      ],
+      "transfert_card_id": "t012",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2019–20, 2024–25"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis ailier droit.",
+          "source": "https://fr.wikipedia.org/wiki/Mohamed_Salah",
+          "fact": {
+            "position": "ailier droit"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Cesc Fàbregas.",
+          "source": "https://en.wikipedia.org/wiki/Cesc_F%C3%A0bregas",
+          "fact": {
+            "name": "Cesc Fàbregas",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis égyptien.",
+          "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
+          "fact": {
+            "national_team": "Egypt"
+          }
+        }
+      ],
+      "source_revision": 1376980216,
+      "source_revision_fr": 239816513,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs008",
+      "answer": "Neymar",
+      "variants": [
+        "neymar",
+        "neymar jr"
+      ],
+      "transfert_card_id": "t014",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à FC Barcelone.",
+          "source": "https://en.wikipedia.org/wiki/Neymar",
+          "fact": {
+            "club": "FC Barcelone"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Copa Libertadores.",
+          "source": "https://en.wikipedia.org/wiki/Neymar",
+          "fact": {
+            "trophy": "Copa Libertadores",
+            "evidence": "* Copa Libertadores: 2011"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Neymar",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Luis Suárez.",
+          "source": "https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28Uruguayan_footballer%29",
+          "fact": {
+            "name": "Luis Suárez",
+            "shared_club": "FC Barcelone"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis brésilien.",
+          "source": "https://en.wikipedia.org/wiki/Neymar",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        }
+      ],
+      "source_revision": 1376808478,
+      "source_revision_fr": 239609180,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs009",
+      "answer": "Luka Modrić",
+      "variants": [
+        "modric",
+        "modrić",
+        "luka modric"
+      ],
+      "transfert_card_id": "t017",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2016–17, 2019–20,"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu de terrain.",
+          "source": "https://fr.wikipedia.org/wiki/Luka_Modri%C4%87",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Sergio Ramos.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
+          "fact": {
+            "name": "Sergio Ramos",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis croate.",
+          "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
+          "fact": {
+            "national_team": "Croatia"
+          }
+        }
+      ],
+      "source_revision": 1376895805,
+      "source_revision_fr": 239838385,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs010",
+      "answer": "Sergio Ramos",
+      "variants": [
+        "ramos",
+        "sergio ramos"
+      ],
+      "transfert_card_id": "t018",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2006–07, 2007–08, 2011–12, 2016–17, 2019–20"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/Sergio_Ramos",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Luka Modrić.",
+          "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
+          "fact": {
+            "name": "Luka Modrić",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376160174,
+      "source_revision_fr": 239442607,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs011",
+      "answer": "Paul Pogba",
+      "variants": [
+        "pogba",
+        "paul pogba"
+      ],
+      "transfert_card_id": "t020",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester United.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
+          "fact": {
+            "club": "Manchester United"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Serie A.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
+          "fact": {
+            "trophy": "Serie A",
+            "evidence": "*Serie A: 2012–13, 2013–14, 2014–15, 2015–16"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu de terrain.",
+          "source": "https://fr.wikipedia.org/wiki/Paul_Pogba",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Carlos Tevez.",
+          "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
+          "fact": {
+            "name": "Carlos Tevez",
+            "shared_club": "Juventus"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376591157,
+      "source_revision_fr": 239040473,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs012",
+      "answer": "Kevin De Bruyne",
+      "variants": [
+        "de bruyne",
+        "kevin de bruyne",
+        "kdb"
+      ],
+      "transfert_card_id": "t022",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe d'Allemagne.",
+          "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
+          "fact": {
+            "trophy": "DFB-Pokal",
+            "evidence": "*DFB-Pokal: 2014–15"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Kevin_De_Bruyne",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Ashley Cole.",
+          "source": "https://en.wikipedia.org/wiki/Ashley_Cole",
+          "fact": {
+            "name": "Ashley Cole",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis belge.",
+          "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
+          "fact": {
+            "national_team": "Belgium"
+          }
+        }
+      ],
+      "source_revision": 1376833596,
+      "source_revision_fr": 239814124,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs013",
+      "answer": "Mario Balotelli",
+      "variants": [
+        "balotelli",
+        "mario balotelli",
+        "super mario"
+      ],
+      "transfert_card_id": "t025",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Liverpool.",
+          "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
+          "fact": {
+            "club": "Liverpool"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Serie A.",
+          "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
+          "fact": {
+            "trophy": "Serie A",
+            "evidence": "*Serie A: 2007–08, 2008–09, 2009–10"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/Mario_Balotelli",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec David Silva.",
+          "source": "https://en.wikipedia.org/wiki/David_Silva",
+          "fact": {
+            "name": "David Silva",
+            "shared_club": "Manchester City"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis italien.",
+          "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
+          "fact": {
+            "national_team": "Italy"
+          }
+        }
+      ],
+      "source_revision": 1376286663,
+      "source_revision_fr": 239786621,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs014",
+      "answer": "Alan Shearer",
+      "variants": [
+        "alan shearer",
+        "shearer"
+      ],
+      "transfert_card_id": "t026",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Southampton.",
+          "source": "https://en.wikipedia.org/wiki/Alan_Shearer",
+          "fact": {
+            "club": "Southampton"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Alan_Shearer",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 1994–95"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Alan_Shearer",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Michael Owen.",
+          "source": "https://en.wikipedia.org/wiki/Michael_Owen",
+          "fact": {
+            "name": "Michael Owen",
+            "shared_club": "Newcastle United"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Alan_Shearer",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1369817175,
+      "source_revision_fr": 239279682,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs015",
+      "answer": "Arjen Robben",
+      "variants": [
+        "arjen robben",
+        "robben"
+      ],
+      "transfert_card_id": "t027",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "* Premier League: 2004–05, 2005–06"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis ailier droit.",
+          "source": "https://fr.wikipedia.org/wiki/Arjen_Robben",
+          "fact": {
+            "position": "ailier droit"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Robert Lewandowski.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
+          "fact": {
+            "name": "Robert Lewandowski",
+            "shared_club": "Bayern Munich"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis néerlandais.",
+          "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
+          "fact": {
+            "national_team": "Netherlands"
+          }
+        }
+      ],
+      "source_revision": 1376298671,
+      "source_revision_fr": 239592450,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs016",
+      "answer": "Asamoah Gyan",
+      "variants": [
+        "asamoah gyan",
+        "gyan"
+      ],
+      "transfert_card_id": "t028",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Liberty Professionals.",
+          "source": "https://en.wikipedia.org/wiki/Asamoah_Gyan",
+          "fact": {
+            "club": "Liberty Professionals"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné le championnat des Émirats arabes unis.",
+          "source": "https://en.wikipedia.org/wiki/Asamoah_Gyan",
+          "fact": {
+            "trophy": "UAE Pro League",
+            "evidence": "* UAE Pro League: 2011–12, 2012–13, 2014–15"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Asamoah_Gyan",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Jordan Henderson.",
+          "source": "https://en.wikipedia.org/wiki/2010%E2%80%9311_Sunderland_A.F.C._season",
+          "fact": {
+            "name": "Jordan Henderson",
+            "shared_club": "Sunderland"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis ghanéen.",
+          "source": "https://en.wikipedia.org/wiki/Asamoah_Gyan",
+          "fact": {
+            "national_team": "Ghana"
+          }
+        }
+      ],
+      "source_revision": 1376952176,
+      "source_revision_fr": 239280552,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs017",
+      "answer": "Ashley Cole",
+      "variants": [
+        "ashley cole",
+        "cole"
+      ],
+      "transfert_card_id": "t029",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Ashley_Cole",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Ashley_Cole",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2001–02, 2003–04"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis arrière gauche.",
+          "source": "https://fr.wikipedia.org/wiki/Ashley_Cole",
+          "fact": {
+            "position": "arrière gauche"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Kevin De Bruyne.",
+          "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
+          "fact": {
+            "name": "Kevin De Bruyne",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Ashley_Cole",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1376298411,
+      "source_revision_fr": 239676335,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs018",
+      "answer": "Bacary Sagna",
+      "variants": [
+        "bacary sagna",
+        "sagna"
+      ],
+      "transfert_card_id": "t030",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester City.",
+          "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
+          "fact": {
+            "club": "Manchester City"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe de France.",
+          "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
+          "fact": {
+            "trophy": "Coupe de France",
+            "evidence": "* Coupe de France: 2004–05"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur.",
+          "source": "https://fr.wikipedia.org/wiki/Bacary_Sagna",
+          "fact": {
+            "position": "défenseur"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Kevin De Bruyne.",
+          "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
+          "fact": {
+            "name": "Kevin De Bruyne",
+            "shared_club": "Manchester City"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1373877689,
+      "source_revision_fr": 239547233,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs019",
+      "answer": "Blaise Matuidi",
+      "variants": [
+        "blaise matuidi",
+        "matuidi"
+      ],
+      "transfert_card_id": "t031",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Juventus.",
+          "source": "https://en.wikipedia.org/wiki/Blaise_Matuidi",
+          "fact": {
+            "club": "Juventus"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue 1.",
+          "source": "https://en.wikipedia.org/wiki/Blaise_Matuidi",
+          "fact": {
+            "trophy": "Ligue 1",
+            "evidence": "*Ligue 1: 2012–13, 2013–14, 2014–15, 2015–16"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu de terrain.",
+          "source": "https://fr.wikipedia.org/wiki/Blaise_Matuidi",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Cristiano Ronaldo.",
+          "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+          "fact": {
+            "name": "Cristiano Ronaldo",
+            "shared_club": "Juventus"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Blaise_Matuidi",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1365483150,
+      "source_revision_fr": 239690314,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs020",
+      "answer": "Carles Puyol",
+      "variants": [
+        "carles puyol",
+        "puyol"
+      ],
+      "transfert_card_id": "t032",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2004–05,"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/Carles_Puyol",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Lionel Messi.",
+          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
+          "fact": {
+            "name": "Lionel Messi",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1375495925,
+      "source_revision_fr": 239188188,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs021",
+      "answer": "Carlos Tevez",
+      "variants": [
+        "carlos tevez",
+        "tevez"
+      ],
+      "transfert_card_id": "t033",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Juventus.",
+          "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
+          "fact": {
+            "club": "Juventus"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Copa Libertadores.",
+          "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
+          "fact": {
+            "trophy": "Copa Libertadores",
+            "evidence": "*Copa Libertadores: 2003; runner-up: 2004"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Carlos_T%C3%A9vez",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Paul Pogba.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
+          "fact": {
+            "name": "Paul Pogba",
+            "shared_club": "Juventus"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis argentin.",
+          "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        }
+      ],
+      "source_revision": 1373862941,
+      "source_revision_fr": 239548224,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs022",
+      "answer": "Cesc Fàbregas",
+      "variants": [
+        "cesc fàbregas",
+        "fàbregas"
+      ],
+      "transfert_card_id": "t034",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Cesc_F%C3%A0bregas",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la FA Cup.",
+          "source": "https://en.wikipedia.org/wiki/Cesc_F%C3%A0bregas",
+          "fact": {
+            "trophy": "FA Cup",
+            "evidence": "*FA Cup: 2004–05"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu relayeur.",
+          "source": "https://fr.wikipedia.org/wiki/Cesc_F%C3%A0bregas",
+          "fact": {
+            "position": "milieu relayeur"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Mohamed Salah.",
+          "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
+          "fact": {
+            "name": "Mohamed Salah",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Cesc_F%C3%A0bregas",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376298796,
+      "source_revision_fr": 239751471,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs023",
+      "answer": "Christian Karembeu",
+      "variants": [
+        "christian karembeu",
+        "karembeu"
+      ],
+      "transfert_card_id": "t035",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue des champions.",
+          "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
+          "fact": {
+            "trophy": "UEFA Champions League",
+            "evidence": "*UEFA Champions League: 1997–98, 1999–2000"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu de terrain.",
+          "source": "https://fr.wikipedia.org/wiki/Christian_Karembeu",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Claude Makélélé.",
+          "source": "https://en.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9",
+          "fact": {
+            "name": "Claude Makélélé",
+            "shared_club": "Nantes"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1372810306,
+      "source_revision_fr": 238856699,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs024",
+      "answer": "Claude Makélélé",
+      "variants": [
+        "claude makélélé",
+        "makélélé"
+      ],
+      "transfert_card_id": "t036",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2000–01, 2002–03"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu défensif.",
+          "source": "https://fr.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9",
+          "fact": {
+            "position": "milieu défensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Christian Karembeu.",
+          "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
+          "fact": {
+            "name": "Christian Karembeu",
+            "shared_club": "Nantes"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1374635662,
+      "source_revision_fr": 239592423,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs025",
+      "answer": "Dani Alves",
+      "variants": [
+        "dani alves",
+        "alves"
+      ],
+      "transfert_card_id": "t037",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Dani_Alves",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe du Roi.",
+          "source": "https://en.wikipedia.org/wiki/Dani_Alves",
+          "fact": {
+            "trophy": "Copa del Rey",
+            "evidence": "* Copa del Rey: 2006–07"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis arrière droit.",
+          "source": "https://fr.wikipedia.org/wiki/Dani_Alves",
+          "fact": {
+            "position": "arrière droit"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Kylian Mbappé.",
+          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
+          "fact": {
+            "name": "Kylian Mbappé",
+            "shared_club": "Paris Saint-Germain"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis brésilien.",
+          "source": "https://en.wikipedia.org/wiki/Dani_Alves",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        }
+      ],
+      "source_revision": 1376520818,
+      "source_revision_fr": 239179432,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs026",
+      "answer": "David Silva",
+      "variants": [
+        "david silva",
+        "silva"
+      ],
+      "transfert_card_id": "t038",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester City.",
+          "source": "https://en.wikipedia.org/wiki/David_Silva",
+          "fact": {
+            "club": "Manchester City"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe du Roi.",
+          "source": "https://en.wikipedia.org/wiki/David_Silva",
+          "fact": {
+            "trophy": "Copa del Rey",
+            "evidence": "*Copa del Rey: 2007–08"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/David_Silva",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Mario Balotelli.",
+          "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
+          "fact": {
+            "name": "Mario Balotelli",
+            "shared_club": "Manchester City"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/David_Silva",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376298917,
+      "source_revision_fr": 239697280,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs027",
+      "answer": "David Trezeguet",
+      "variants": [
+        "david trezeguet",
+        "trezeguet"
+      ],
+      "transfert_card_id": "t039",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Juventus.",
+          "source": "https://en.wikipedia.org/wiki/David_Trezeguet",
+          "fact": {
+            "club": "Juventus"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Serie A.",
+          "source": "https://en.wikipedia.org/wiki/David_Trezeguet",
+          "fact": {
+            "trophy": "Serie A",
+            "evidence": "*Serie A: 2001–02, 2002–03"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/David_Trezeguet",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Patrick Vieira.",
+          "source": "https://en.wikipedia.org/wiki/Patrick_Vieira",
+          "fact": {
+            "name": "Patrick Vieira",
+            "shared_club": "Juventus"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/David_Trezeguet",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376298363,
+      "source_revision_fr": 239191272,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs028",
+      "answer": "David Villa",
+      "variants": [
+        "david villa",
+        "villa"
+      ],
+      "transfert_card_id": "t040",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/David_Villa",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe du Roi.",
+          "source": "https://en.wikipedia.org/wiki/David_Villa",
+          "fact": {
+            "trophy": "Copa del Rey",
+            "evidence": "*Copa del Rey: 2003–04"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis ailier gauche.",
+          "source": "https://fr.wikipedia.org/wiki/David_Villa",
+          "fact": {
+            "position": "ailier gauche"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Carles Puyol.",
+          "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
+          "fact": {
+            "name": "Carles Puyol",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/David_Villa",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1373375301,
+      "source_revision_fr": 239394062,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs029",
+      "answer": "Deco",
+      "variants": [
+        "deco"
+      ],
+      "transfert_card_id": "t041",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Deco",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue des champions.",
+          "source": "https://en.wikipedia.org/wiki/Deco",
+          "fact": {
+            "trophy": "UEFA Champions League",
+            "evidence": "*UEFA Champions League: 2003–04"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Deco",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Lionel Messi.",
+          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
+          "fact": {
+            "name": "Lionel Messi",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis portugais.",
+          "source": "https://en.wikipedia.org/wiki/Deco",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        }
+      ],
+      "source_revision": 1372452483,
+      "source_revision_fr": 238687637,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs030",
+      "answer": "Didier Deschamps",
+      "variants": [
+        "didier deschamps",
+        "deschamps"
+      ],
+      "transfert_card_id": "t042",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Didier_Deschamps",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue 1.",
+          "source": "https://en.wikipedia.org/wiki/Didier_Deschamps",
+          "fact": {
+            "trophy": "Ligue 1",
+            "evidence": "*Ligue 1: 1989–90, 1991–92"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu défensif.",
+          "source": "https://fr.wikipedia.org/wiki/Didier_Deschamps",
+          "fact": {
+            "position": "milieu défensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec John Terry.",
+          "source": "https://en.wikipedia.org/wiki/John_Terry",
+          "fact": {
+            "name": "John Terry",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Didier_Deschamps",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376852826,
+      "source_revision_fr": 239809557,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs031",
+      "answer": "Didier Drogba",
+      "variants": [
+        "didier drogba",
+        "drogba"
+      ],
+      "transfert_card_id": "t043",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Didier_Drogba",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Didier_Drogba",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2004–05, 2005–06, 2009–10, 2014–15"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/Didier_Drogba",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Arjen Robben.",
+          "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
+          "fact": {
+            "name": "Arjen Robben",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis ivoirien.",
+          "source": "https://en.wikipedia.org/wiki/Didier_Drogba",
+          "fact": {
+            "national_team": "Ivory Coast"
+          }
+        }
+      ],
+      "source_revision": 1372988062,
+      "source_revision_fr": 239809628,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs032",
+      "answer": "Diego Costa",
+      "variants": [
+        "diego costa",
+        "costa"
+      ],
+      "transfert_card_id": "t044",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Diego_Costa",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Diego_Costa",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "* La Liga: 2013–14,"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant (avant-centre).",
+          "source": "https://fr.wikipedia.org/wiki/Diego_Costa",
+          "fact": {
+            "position": "attaquant (avant-centre)"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Mohamed Salah.",
+          "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
+          "fact": {
+            "name": "Mohamed Salah",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Diego_Costa",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376285561,
+      "source_revision_fr": 239679760,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs033",
+      "answer": "Djibril Cissé",
+      "variants": [
+        "djibril cissé",
+        "cissé"
+      ],
+      "transfert_card_id": "t045",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Liverpool.",
+          "source": "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
+          "fact": {
+            "club": "Liverpool"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe de France.",
+          "source": "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
+          "fact": {
+            "trophy": "Coupe de France",
+            "evidence": "*Coupe de France: 2002–03"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant axial.",
+          "source": "https://fr.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
+          "fact": {
+            "position": "attaquant axial"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Fernando Morientes.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Morientes",
+          "fact": {
+            "name": "Fernando Morientes",
+            "shared_club": "Liverpool"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376298574,
+      "source_revision_fr": 239592548,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs034",
+      "answer": "Emmanuel Adebayor",
+      "variants": [
+        "emmanuel adebayor",
+        "adebayor"
+      ],
+      "transfert_card_id": "t046",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester City.",
+          "source": "https://en.wikipedia.org/wiki/Emmanuel_Adebayor",
+          "fact": {
+            "club": "Manchester City"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe du Roi.",
+          "source": "https://en.wikipedia.org/wiki/Emmanuel_Adebayor",
+          "fact": {
+            "trophy": "Copa del Rey",
+            "evidence": "*Copa del Rey: 2010–11"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/Emmanuel_Adebayor",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Bacary Sagna.",
+          "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
+          "fact": {
+            "name": "Bacary Sagna",
+            "shared_club": "Arsenal"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis togolais.",
+          "source": "https://en.wikipedia.org/wiki/Emmanuel_Adebayor",
+          "fact": {
+            "national_team": "Togo"
+          }
+        }
+      ],
+      "source_revision": 1362613671,
+      "source_revision_fr": 239535431,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs035",
+      "answer": "Fernando Llorente",
+      "variants": [
+        "fernando llorente",
+        "llorente"
+      ],
+      "transfert_card_id": "t047",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Juventus.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Llorente",
+          "fact": {
+            "club": "Juventus"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Serie A.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Llorente",
+          "fact": {
+            "trophy": "Serie A",
+            "evidence": "*Serie A: 2013–14, 2014–15, 2015–16"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/Fernando_Llorente",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Paul Pogba.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
+          "fact": {
+            "name": "Paul Pogba",
+            "shared_club": "Juventus"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Llorente",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376387657,
+      "source_revision_fr": 235910149,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs036",
+      "answer": "Fernando Morientes",
+      "variants": [
+        "fernando morientes",
+        "morientes"
+      ],
+      "transfert_card_id": "t048",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Morientes",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Morientes",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2000–01, 2002–03"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Fernando_Morientes",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Djibril Cissé.",
+          "source": "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
+          "fact": {
+            "name": "Djibril Cissé",
+            "shared_club": "Liverpool"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Morientes",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376686896,
+      "source_revision_fr": 239592582,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs037",
+      "answer": "Fernando Torres",
+      "variants": [
+        "fernando torres",
+        "torres"
+      ],
+      "transfert_card_id": "t049",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue Europa.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
+          "fact": {
+            "trophy": "UEFA Europa League",
+            "evidence": "*UEFA Europa League: 2017–18"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/Fernando_Torres",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Ashley Cole.",
+          "source": "https://en.wikipedia.org/wiki/Ashley_Cole",
+          "fact": {
+            "name": "Ashley Cole",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376284660,
+      "source_revision_fr": 239733011,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs038",
+      "answer": "Franck Ribéry",
+      "variants": [
+        "franck ribéry",
+        "ribéry"
+      ],
+      "transfert_card_id": "t050",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Marseille.",
+          "source": "https://en.wikipedia.org/wiki/Franck_Rib%C3%A9ry",
+          "fact": {
+            "club": "Marseille"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Bundesliga.",
+          "source": "https://en.wikipedia.org/wiki/Franck_Rib%C3%A9ry",
+          "fact": {
+            "trophy": "Bundesliga",
+            "evidence": "* Bundesliga: 2007–08, 2009–10, 2012–13, 2013–14, 2014–15, 2015–16, 2016–17, 2017–18, 2018–19"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis ailier.",
+          "source": "https://fr.wikipedia.org/wiki/Franck_Rib%C3%A9ry",
+          "fact": {
+            "position": "ailier"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Robert Lewandowski.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
+          "fact": {
+            "name": "Robert Lewandowski",
+            "shared_club": "Bayern Munich"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Franck_Rib%C3%A9ry",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376869599,
+      "source_revision_fr": 239520025,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs039",
+      "answer": "Frank Lampard",
+      "variants": [
+        "frank lampard",
+        "lampard"
+      ],
+      "transfert_card_id": "t051",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Frank_Lampard",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Frank_Lampard",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2004–05, 2005–06, 2009–10"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu de terrain.",
+          "source": "https://fr.wikipedia.org/wiki/Frank_Lampard",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Deco.",
+          "source": "https://en.wikipedia.org/wiki/Deco",
+          "fact": {
+            "name": "Deco",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Frank_Lampard",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1375758129,
+      "source_revision_fr": 239809733,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs040",
+      "answer": "Gary Lineker",
+      "variants": [
+        "gary lineker",
+        "lineker"
+      ],
+      "transfert_card_id": "t052",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Gary_Lineker",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe du Roi.",
+          "source": "https://en.wikipedia.org/wiki/Gary_Lineker",
+          "fact": {
+            "trophy": "Copa del Rey",
+            "evidence": "* Copa del Rey: 1987–88"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Gary_Lineker",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Paul Gascoigne.",
+          "source": "https://en.wikipedia.org/wiki/1990%E2%80%9391_Tottenham_Hotspur_F.C._season",
+          "fact": {
+            "name": "Paul Gascoigne",
+            "shared_club": "Tottenham Hotspur"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Gary_Lineker",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1372118011,
+      "source_revision_fr": 239620587,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs041",
+      "answer": "Gary Neville",
+      "variants": [
+        "gary neville",
+        "neville"
+      ],
+      "transfert_card_id": "t053",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester United.",
+          "source": "https://en.wikipedia.org/wiki/Gary_Neville",
+          "fact": {
+            "club": "Manchester United"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Gary_Neville",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 1995–96, 1996–97, 1998–99, 1999–2000, 2000–01, 2002–03, 2006–07, 2008–09"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur.",
+          "source": "https://fr.wikipedia.org/wiki/Gary_Neville",
+          "fact": {
+            "position": "défenseur"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Cristiano Ronaldo.",
+          "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+          "fact": {
+            "name": "Cristiano Ronaldo",
+            "shared_club": "Manchester United"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Gary_Neville",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1371735451,
+      "source_revision_fr": 239592689,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs042",
+      "answer": "Gerard Piqué",
+      "variants": [
+        "gerard piqué",
+        "piqué"
+      ],
+      "transfert_card_id": "t054",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Gerard_Piqu%C3%A9",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Gerard_Piqu%C3%A9",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2007–08"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/Gerard_Piqu%C3%A9",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Luis Suárez.",
+          "source": "https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28Uruguayan_footballer%29",
+          "fact": {
+            "name": "Luis Suárez",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Gerard_Piqu%C3%A9",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376299153,
+      "source_revision_fr": 239178797,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs043",
+      "answer": "Gonzalo Higuaín",
+      "variants": [
+        "gonzalo higuaín",
+        "higuaín"
+      ],
+      "transfert_card_id": "t055",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2006–07, 2007–08, 2011–12"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Karim Benzema.",
+          "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
+          "fact": {
+            "name": "Karim Benzema",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis argentin.",
+          "source": "https://en.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        }
+      ],
+      "source_revision": 1376285871,
+      "source_revision_fr": 239280862,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs044",
+      "answer": "Hatem Ben Arfa",
+      "variants": [
+        "hatem ben arfa",
+        "arfa"
+      ],
+      "transfert_card_id": "t056",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Marseille.",
+          "source": "https://en.wikipedia.org/wiki/Hatem_Ben_Arfa",
+          "fact": {
+            "club": "Marseille"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue 1.",
+          "source": "https://en.wikipedia.org/wiki/Hatem_Ben_Arfa",
+          "fact": {
+            "trophy": "Ligue 1",
+            "evidence": "* Ligue 1: 2004–05, 2005–06, 2006–07, 2007–08"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Hatem_Ben_Arfa",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Blaise Matuidi.",
+          "source": "https://en.wikipedia.org/wiki/Blaise_Matuidi",
+          "fact": {
+            "name": "Blaise Matuidi",
+            "shared_club": "Paris Saint-Germain"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Hatem_Ben_Arfa",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1361661783,
+      "source_revision_fr": 239203203,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs045",
+      "answer": "Hernán Crespo",
+      "variants": [
+        "hernán crespo",
+        "crespo"
+      ],
+      "transfert_card_id": "t057",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Hern%C3%A1n_Crespo",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné le championnat d’Argentine.",
+          "source": "https://en.wikipedia.org/wiki/Hern%C3%A1n_Crespo",
+          "fact": {
+            "trophy": "Argentine Primera División",
+            "evidence": "*Argentine Primera División: 1993 (Apertura), 1994 (Apertura)"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Hern%C3%A1n_Crespo",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Didier Drogba.",
+          "source": "https://en.wikipedia.org/wiki/Didier_Drogba",
+          "fact": {
+            "name": "Didier Drogba",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis argentin.",
+          "source": "https://en.wikipedia.org/wiki/Hern%C3%A1n_Crespo",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        }
+      ],
+      "source_revision": 1376806391,
+      "source_revision_fr": 239338896,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs046",
+      "answer": "Iker Casillas",
+      "variants": [
+        "iker casillas",
+        "casillas"
+      ],
+      "transfert_card_id": "t058",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Iker_Casillas",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Iker_Casillas",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2000–01, 2002–03, 2006–07, 2007–08, 2011–12"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis gardien de but.",
+          "source": "https://fr.wikipedia.org/wiki/Iker_Casillas",
+          "fact": {
+            "position": "gardien de but"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Luka Modrić.",
+          "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
+          "fact": {
+            "name": "Luka Modrić",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Iker_Casillas",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376298399,
+      "source_revision_fr": 239785147,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs047",
+      "answer": "Javier Mascherano",
+      "variants": [
+        "javier mascherano",
+        "mascherano"
+      ],
+      "transfert_card_id": "t059",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Javier_Mascherano",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné le championnat d’Argentine.",
+          "source": "https://en.wikipedia.org/wiki/Javier_Mascherano",
+          "fact": {
+            "trophy": "Argentine Primera División",
+            "evidence": "* Argentine Primera División: 2003–04 Clausura"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/Javier_Mascherano",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Neymar.",
+          "source": "https://en.wikipedia.org/wiki/Neymar",
+          "fact": {
+            "name": "Neymar",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis argentin.",
+          "source": "https://en.wikipedia.org/wiki/Javier_Mascherano",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        }
+      ],
+      "source_revision": 1376624234,
+      "source_revision_fr": 239179326,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs048",
+      "answer": "Javier Saviola",
+      "variants": [
+        "javier saviola",
+        "saviola"
+      ],
+      "transfert_card_id": "t060",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Javier_Saviola",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné le championnat d’Argentine.",
+          "source": "https://en.wikipedia.org/wiki/Javier_Saviola",
+          "fact": {
+            "trophy": "Argentine Primera División",
+            "evidence": "*Argentine Primera División: 1999 Apertura, 2000 Clausura"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/Javier_Saviola",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Sergio Ramos.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
+          "fact": {
+            "name": "Sergio Ramos",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis argentin.",
+          "source": "https://en.wikipedia.org/wiki/Javier_Saviola",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        }
+      ],
+      "source_revision": 1376298678,
+      "source_revision_fr": 239297992,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs049",
+      "answer": "Joaquín",
+      "variants": [
+        "joaquín"
+      ],
+      "transfert_card_id": "t061",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Valencia.",
+          "source": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_%28footballer%2C_born_1981%29",
+          "fact": {
+            "club": "Valencia"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe du Roi.",
+          "source": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_%28footballer%2C_born_1981%29",
+          "fact": {
+            "trophy": "Copa del Rey",
+            "evidence": "*Copa del Rey: 2004–05,"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis ailier droit.",
+          "source": "https://fr.wikipedia.org/wiki/Joaqu%C3%ADn_%28football%2C_1981%29",
+          "fact": {
+            "position": "ailier droit"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec David Villa.",
+          "source": "https://en.wikipedia.org/wiki/David_Villa",
+          "fact": {
+            "name": "David Villa",
+            "shared_club": "Valencia"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_%28footballer%2C_born_1981%29",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1369896376,
+      "source_revision_fr": 239279929,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs050",
+      "answer": "John Terry",
+      "variants": [
+        "john terry",
+        "terry"
+      ],
+      "transfert_card_id": "t062",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/John_Terry",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/John_Terry",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2004–05, 2005–06, 2009–10, 2014–15, 2016–17"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/John_Terry_%28football%29",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Didier Deschamps.",
+          "source": "https://en.wikipedia.org/wiki/Didier_Deschamps",
+          "fact": {
+            "name": "Didier Deschamps",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/John_Terry",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1364479295,
+      "source_revision_fr": 239547686,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs051",
+      "answer": "José Bosingwa",
+      "variants": [
+        "josé bosingwa",
+        "bosingwa"
+      ],
+      "transfert_card_id": "t063",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Jos%C3%A9_Bosingwa",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Primeira Liga.",
+          "source": "https://en.wikipedia.org/wiki/Jos%C3%A9_Bosingwa",
+          "fact": {
+            "trophy": "Primeira Liga",
+            "evidence": "*Primeira Liga: 2003–04, 2005–06, 2006–07, 2007–08"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur latéral droit.",
+          "source": "https://fr.wikipedia.org/wiki/Jos%C3%A9_Bosingwa",
+          "fact": {
+            "position": "défenseur latéral droit"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Fernando Torres.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
+          "fact": {
+            "name": "Fernando Torres",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis portugais.",
+          "source": "https://en.wikipedia.org/wiki/Jos%C3%A9_Bosingwa",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        }
+      ],
+      "source_revision": 1355099989,
+      "source_revision_fr": 239547664,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs052",
+      "answer": "João Moutinho",
+      "variants": [
+        "joão moutinho",
+        "moutinho"
+      ],
+      "transfert_card_id": "t064",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Monaco.",
+          "source": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Moutinho",
+          "fact": {
+            "club": "Monaco"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Primeira Liga.",
+          "source": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Moutinho",
+          "fact": {
+            "trophy": "Primeira Liga",
+            "evidence": "*Primeira Liga: 2010–11, 2011–12, 2012–13"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu de terrain.",
+          "source": "https://fr.wikipedia.org/wiki/Jo%C3%A3o_Moutinho",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Kylian Mbappé.",
+          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
+          "fact": {
+            "name": "Kylian Mbappé",
+            "shared_club": "Monaco"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis portugais.",
+          "source": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Moutinho",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        }
+      ],
+      "source_revision": 1375895997,
+      "source_revision_fr": 239811863,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs053",
+      "answer": "Juan Román Riquelme",
+      "variants": [
+        "juan román riquelme",
+        "riquelme"
+      ],
+      "transfert_card_id": "t065",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Copa Libertadores.",
+          "source": "https://en.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme",
+          "fact": {
+            "trophy": "Copa Libertadores",
+            "evidence": "*Copa Libertadores: 2000, 2001, 2007"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Diego Forlán.",
+          "source": "https://en.wikipedia.org/wiki/Diego_Forl%C3%A1n",
+          "fact": {
+            "name": "Diego Forlán",
+            "shared_club": "Villarreal"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis argentin.",
+          "source": "https://en.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        }
+      ],
+      "source_revision": 1376298335,
+      "source_revision_fr": 238297428,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs054",
+      "answer": "Juan Sebastián Verón",
+      "variants": [
+        "juan sebastián verón",
+        "verón"
+      ],
+      "transfert_card_id": "t066",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Ver%C3%B3n",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Copa Libertadores.",
+          "source": "https://en.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Ver%C3%B3n",
+          "fact": {
+            "trophy": "Copa Libertadores",
+            "evidence": "*Copa Libertadores: 2009"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu axial.",
+          "source": "https://fr.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Ver%C3%B3n",
+          "fact": {
+            "position": "milieu axial"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Rio Ferdinand.",
+          "source": "https://en.wikipedia.org/wiki/Rio_Ferdinand",
+          "fact": {
+            "name": "Rio Ferdinand",
+            "shared_club": "Manchester United"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis argentin.",
+          "source": "https://en.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Ver%C3%B3n",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        }
+      ],
+      "source_revision": 1373168210,
+      "source_revision_fr": 238688330,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs055",
+      "answer": "Juanfran",
+      "variants": [
+        "juanfran"
+      ],
+      "transfert_card_id": "t067",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Juanfran_%28footballer%2C_born_1985%29",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe du Roi.",
+          "source": "https://en.wikipedia.org/wiki/Juanfran_%28footballer%2C_born_1985%29",
+          "fact": {
+            "trophy": "Copa del Rey",
+            "evidence": "*Copa del Rey: 2005–06"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur.",
+          "source": "https://fr.wikipedia.org/wiki/Juanfran_%28football%2C_1985%29",
+          "fact": {
+            "position": "défenseur"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Fernando Torres.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
+          "fact": {
+            "name": "Fernando Torres",
+            "shared_club": "Atlético Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Juanfran_%28footballer%2C_born_1985%29",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376298851,
+      "source_revision_fr": 239179648,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs056",
+      "answer": "Juninho Pernambucano",
+      "variants": [
+        "juninho pernambucano",
+        "pernambucano"
+      ],
+      "transfert_card_id": "t068",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Lyon.",
+          "source": "https://en.wikipedia.org/wiki/Juninho_Pernambucano",
+          "fact": {
+            "club": "Lyon"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Copa Libertadores.",
+          "source": "https://en.wikipedia.org/wiki/Juninho_Pernambucano",
+          "fact": {
+            "trophy": "Copa Libertadores",
+            "evidence": "*Copa Libertadores: 1998"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Juninho",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Karim Benzema.",
+          "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
+          "fact": {
+            "name": "Karim Benzema",
+            "shared_club": "Lyon"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis brésilien.",
+          "source": "https://en.wikipedia.org/wiki/Juninho_Pernambucano",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        }
+      ],
+      "source_revision": 1372318752,
+      "source_revision_fr": 239073524,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs057",
+      "answer": "Kaká",
+      "variants": [
+        "kaká"
+      ],
+      "transfert_card_id": "t069",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Kak%C3%A1",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Serie A.",
+          "source": "https://en.wikipedia.org/wiki/Kak%C3%A1",
+          "fact": {
+            "trophy": "Serie A",
+            "evidence": "*Serie A: 2003–04"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Kak%C3%A1",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Luka Modrić.",
+          "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
+          "fact": {
+            "name": "Luka Modrić",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis brésilien.",
+          "source": "https://en.wikipedia.org/wiki/Kak%C3%A1",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        }
+      ],
+      "source_revision": 1376298627,
+      "source_revision_fr": 239281765,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs058",
+      "answer": "Laurent Koscielny",
+      "variants": [
+        "laurent koscielny",
+        "koscielny"
+      ],
+      "transfert_card_id": "t070",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Arsenal.",
+          "source": "https://en.wikipedia.org/wiki/Laurent_Koscielny",
+          "fact": {
+            "club": "Arsenal"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la FA Cup.",
+          "source": "https://en.wikipedia.org/wiki/Laurent_Koscielny",
+          "fact": {
+            "trophy": "FA Cup",
+            "evidence": "*FA Cup: 2013–14,"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/Laurent_Koscielny",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Bacary Sagna.",
+          "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
+          "fact": {
+            "name": "Bacary Sagna",
+            "shared_club": "Arsenal"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Laurent_Koscielny",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376763354,
+      "source_revision_fr": 239809579,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs059",
+      "answer": "Luís Figo",
+      "variants": [
+        "luís figo",
+        "figo"
+      ],
+      "transfert_card_id": "t071",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Lu%C3%ADs_Figo",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Lu%C3%ADs_Figo",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "* La Liga: 1997–98, 1998–99"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Lu%C3%ADs_Figo",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Carles Puyol.",
+          "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
+          "fact": {
+            "name": "Carles Puyol",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis portugais.",
+          "source": "https://en.wikipedia.org/wiki/Lu%C3%ADs_Figo",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        }
+      ],
+      "source_revision": 1376298099,
+      "source_revision_fr": 239394246,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs060",
+      "answer": "Marcel Desailly",
+      "variants": [
+        "marcel desailly",
+        "desailly"
+      ],
+      "transfert_card_id": "t072",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Marcel_Desailly",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue des champions.",
+          "source": "https://en.wikipedia.org/wiki/Marcel_Desailly",
+          "fact": {
+            "trophy": "UEFA Champions League",
+            "evidence": "*UEFA Champions League: 1992–93"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/Marcel_Desailly",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Christian Karembeu.",
+          "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
+          "fact": {
+            "name": "Christian Karembeu",
+            "shared_club": "Nantes"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Marcel_Desailly",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1373600446,
+      "source_revision_fr": 239796006,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs061",
+      "answer": "Marcelo",
+      "variants": [
+        "marcelo"
+      ],
+      "transfert_card_id": "t073",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Marcelo_%28footballer%2C_born_1988%29",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Copa Libertadores.",
+          "source": "https://en.wikipedia.org/wiki/Marcelo_%28footballer%2C_born_1988%29",
+          "fact": {
+            "trophy": "Copa Libertadores",
+            "evidence": "*Copa Libertadores: 2023"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis latéral gauche.",
+          "source": "https://fr.wikipedia.org/wiki/Marcelo_%28football%2C_1988%29",
+          "fact": {
+            "position": "latéral gauche"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Sergio Ramos.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
+          "fact": {
+            "name": "Sergio Ramos",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis brésilien.",
+          "source": "https://en.wikipedia.org/wiki/Marcelo_%28footballer%2C_born_1988%29",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        }
+      ],
+      "source_revision": 1376551514,
+      "source_revision_fr": 239179954,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs062",
+      "answer": "Michael Essien",
+      "variants": [
+        "michael essien",
+        "essien"
+      ],
+      "transfert_card_id": "t074",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Michael_Essien",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue 1.",
+          "source": "https://en.wikipedia.org/wiki/Michael_Essien",
+          "fact": {
+            "trophy": "Ligue 1",
+            "evidence": "*Ligue 1: 2003–04, 2004–05"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu de terrain.",
+          "source": "https://fr.wikipedia.org/wiki/Michael_Essien",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Claude Makélélé.",
+          "source": "https://en.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9",
+          "fact": {
+            "name": "Claude Makélélé",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis ghanéen.",
+          "source": "https://en.wikipedia.org/wiki/Michael_Essien",
+          "fact": {
+            "national_team": "Ghana"
+          }
+        }
+      ],
+      "source_revision": 1376298602,
+      "source_revision_fr": 239547892,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs063",
+      "answer": "Michael Owen",
+      "variants": [
+        "michael owen",
+        "owen"
+      ],
+      "transfert_card_id": "t075",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Michael_Owen",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la FA Cup.",
+          "source": "https://en.wikipedia.org/wiki/Michael_Owen",
+          "fact": {
+            "trophy": "FA Cup",
+            "evidence": "* FA Cup: 2000–01"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Michael_Owen_%28football%29",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Alan Shearer.",
+          "source": "https://en.wikipedia.org/wiki/Alan_Shearer",
+          "fact": {
+            "name": "Alan Shearer",
+            "shared_club": "Newcastle United"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Michael_Owen",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1376298317,
+      "source_revision_fr": 239838925,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs064",
+      "answer": "Michel Platini",
+      "variants": [
+        "michel platini",
+        "platini"
+      ],
+      "transfert_card_id": "t076",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Juventus.",
+          "source": "https://en.wikipedia.org/wiki/Michel_Platini",
+          "fact": {
+            "club": "Juventus"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe de France.",
+          "source": "https://en.wikipedia.org/wiki/Michel_Platini",
+          "fact": {
+            "trophy": "Coupe de France",
+            "evidence": "*Coupe de France: 1977–78"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu de terrain.",
+          "source": "https://fr.wikipedia.org/wiki/Michel_Platini",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Zbigniew Boniek.",
+          "source": "https://en.wikipedia.org/wiki/Michel_Platini",
+          "fact": {
+            "name": "Zbigniew Boniek",
+            "shared_club": "Juventus"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Michel_Platini",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376822119,
+      "source_revision_fr": 239172916,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs065",
+      "answer": "John Obi Mikel",
+      "variants": [
+        "john obi mikel",
+        "mikel"
+      ],
+      "transfert_card_id": "t077",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Mikel_John_Obi",
+          "fact": {
+            "club": "Chelsea"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Mikel_John_Obi",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2009–10, 2014–15"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu défensif.",
+          "source": "https://fr.wikipedia.org/wiki/John_Obi_Mikel",
+          "fact": {
+            "position": "milieu défensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Mohamed Salah.",
+          "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
+          "fact": {
+            "name": "Mohamed Salah",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis nigérian.",
+          "source": "https://en.wikipedia.org/wiki/Mikel_John_Obi",
+          "fact": {
+            "national_team": "Nigeria"
+          }
+        }
+      ],
+      "source_revision": 1376298888,
+      "source_revision_fr": 239547725,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs066",
+      "answer": "Nani",
+      "variants": [
+        "nani"
+      ],
+      "transfert_card_id": "t078",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester United.",
+          "source": "https://en.wikipedia.org/wiki/Nani_%28footballer%29",
+          "fact": {
+            "club": "Manchester United"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Nani_%28footballer%29",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "* Premier League: 2007–08, 2008–09, 2010–11, 2012–13"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis ailier.",
+          "source": "https://fr.wikipedia.org/wiki/Nani",
+          "fact": {
+            "position": "ailier"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Paul Pogba.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
+          "fact": {
+            "name": "Paul Pogba",
+            "shared_club": "Manchester United"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis portugais.",
+          "source": "https://en.wikipedia.org/wiki/Nani_%28footballer%29",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        }
+      ],
+      "source_revision": 1369525236,
+      "source_revision_fr": 237402448,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs067",
+      "answer": "Nicolas Anelka",
+      "variants": [
+        "nicolas anelka",
+        "anelka"
+      ],
+      "transfert_card_id": "t079",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Nicolas_Anelka",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Nicolas_Anelka",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 1997–98"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Nicolas_Anelka",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Frank Lampard.",
+          "source": "https://en.wikipedia.org/wiki/Frank_Lampard",
+          "fact": {
+            "name": "Frank Lampard",
+            "shared_club": "Chelsea"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Nicolas_Anelka",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376298230,
+      "source_revision_fr": 239792505,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs068",
+      "answer": "Patrice Evra",
+      "variants": [
+        "patrice evra",
+        "evra"
+      ],
+      "transfert_card_id": "t080",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester United.",
+          "source": "https://en.wikipedia.org/wiki/Patrice_Evra",
+          "fact": {
+            "club": "Manchester United"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Patrice_Evra",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2006–07, 2007–08, 2008–09, 2010–11, 2012–13"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis arrière gauche.",
+          "source": "https://fr.wikipedia.org/wiki/Patrice_%C3%89vra",
+          "fact": {
+            "position": "arrière gauche"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Dani Alves.",
+          "source": "https://en.wikipedia.org/wiki/Dani_Alves",
+          "fact": {
+            "name": "Dani Alves",
+            "shared_club": "Juventus"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Patrice_Evra",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376286892,
+      "source_revision_fr": 239132118,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs069",
+      "answer": "Patrick Vieira",
+      "variants": [
+        "patrick vieira",
+        "vieira"
+      ],
+      "transfert_card_id": "t081",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Juventus.",
+          "source": "https://en.wikipedia.org/wiki/Patrick_Vieira",
+          "fact": {
+            "club": "Juventus"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Serie A.",
+          "source": "https://en.wikipedia.org/wiki/Patrick_Vieira",
+          "fact": {
+            "trophy": "Serie A",
+            "evidence": "*Serie A: 1995–96"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu défensif.",
+          "source": "https://fr.wikipedia.org/wiki/Patrick_Vieira",
+          "fact": {
+            "position": "milieu défensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec David Trezeguet.",
+          "source": "https://en.wikipedia.org/wiki/David_Trezeguet",
+          "fact": {
+            "name": "David Trezeguet",
+            "shared_club": "Juventus"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Patrick_Vieira",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376687946,
+      "source_revision_fr": 239768919,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs070",
+      "answer": "Paul Scholes",
+      "variants": [
+        "paul scholes",
+        "scholes"
+      ],
+      "transfert_card_id": "t082",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester United.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Scholes",
+          "fact": {
+            "club": "Manchester United"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Scholes",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 1995–96, 1996–97, 1998–99, 1999–2000, 2000–01, 2002–03, 2006–07, 2007–08, 2008–09, 2010–11, 2012–13"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu de terrain.",
+          "source": "https://fr.wikipedia.org/wiki/Paul_Scholes",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Cristiano Ronaldo.",
+          "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+          "fact": {
+            "name": "Cristiano Ronaldo",
+            "shared_club": "Manchester United"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Scholes",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1375992419,
+      "source_revision_fr": 239592763,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs071",
+      "answer": "Pedro",
+      "variants": [
+        "pedro"
+      ],
+      "transfert_card_id": "t083",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Pedro_%28footballer%2C_born_1987%29",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Pedro_%28footballer%2C_born_1987%29",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2008–09,"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis ailier.",
+          "source": "https://fr.wikipedia.org/wiki/Pedro_%28football%29",
+          "fact": {
+            "position": "ailier"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Luis Suárez.",
+          "source": "https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28Uruguayan_footballer%29",
+          "fact": {
+            "name": "Luis Suárez",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Pedro_%28footballer%2C_born_1987%29",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1375677464,
+      "source_revision_fr": 239560294,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs072",
+      "answer": "Pepe",
+      "variants": [
+        "pepe"
+      ],
+      "transfert_card_id": "t084",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Pepe_%28footballer%2C_born_February_1983%29",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Primeira Liga.",
+          "source": "https://en.wikipedia.org/wiki/Pepe_%28footballer%2C_born_February_1983%29",
+          "fact": {
+            "trophy": "Primeira Liga",
+            "evidence": "*Primeira Liga: 2005–06, 2006–07, 2019–20, 2021–22"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/Pepe_%28football%29",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Arjen Robben.",
+          "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
+          "fact": {
+            "name": "Arjen Robben",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis portugais.",
+          "source": "https://en.wikipedia.org/wiki/Pepe_%28footballer%2C_born_February_1983%29",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        }
+      ],
+      "source_revision": 1373446678,
+      "source_revision_fr": 239802074,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs073",
+      "answer": "Pepe Reina",
+      "variants": [
+        "pepe reina",
+        "reina"
+      ],
+      "transfert_card_id": "t085",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Pepe_Reina",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la FA Cup.",
+          "source": "https://en.wikipedia.org/wiki/Pepe_Reina",
+          "fact": {
+            "trophy": "FA Cup",
+            "evidence": "*FA Cup: 2005–06;"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis gardien de but.",
+          "source": "https://fr.wikipedia.org/wiki/Pepe_Reina",
+          "fact": {
+            "position": "gardien de but"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Robert Lewandowski.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
+          "fact": {
+            "name": "Robert Lewandowski",
+            "shared_club": "Bayern Munich"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Pepe_Reina",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376286911,
+      "source_revision_fr": 239592466,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs074",
+      "answer": "Peter Crouch",
+      "variants": [
+        "peter crouch",
+        "crouch"
+      ],
+      "transfert_card_id": "t086",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Liverpool.",
+          "source": "https://en.wikipedia.org/wiki/Peter_Crouch",
+          "fact": {
+            "club": "Liverpool"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la FA Cup.",
+          "source": "https://en.wikipedia.org/wiki/Peter_Crouch",
+          "fact": {
+            "trophy": "FA Cup",
+            "evidence": "*FA Cup: 2005–06"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Peter_Crouch",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Djibril Cissé.",
+          "source": "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
+          "fact": {
+            "name": "Djibril Cissé",
+            "shared_club": "Liverpool"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Peter_Crouch",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1376384009,
+      "source_revision_fr": 239838891,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs075",
+      "answer": "Raphaël Varane",
+      "variants": [
+        "raphaël varane",
+        "varane"
+      ],
+      "transfert_card_id": "t087",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Rapha%C3%ABl_Varane",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Rapha%C3%ABl_Varane",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2011–12,"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/Rapha%C3%ABl_Varane",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Karim Benzema.",
+          "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
+          "fact": {
+            "name": "Karim Benzema",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Rapha%C3%ABl_Varane",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1376543853,
+      "source_revision_fr": 239542761,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs076",
+      "answer": "Raúl",
+      "variants": [
+        "raúl"
+      ],
+      "transfert_card_id": "t088",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Ra%C3%BAl_Gonz%C3%A1lez",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Ra%C3%BAl_Gonz%C3%A1lez",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 1994–95, 1996–97, 2000–01, 2002–03, 2006–07, 2007–08"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Ra%C3%BAl_%28football%29",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Gonzalo Higuaín.",
+          "source": "https://en.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn",
+          "fact": {
+            "name": "Gonzalo Higuaín",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Ra%C3%BAl_Gonz%C3%A1lez",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1375640963,
+      "source_revision_fr": 239394150,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs077",
+      "answer": "Ricardo Carvalho",
+      "variants": [
+        "ricardo carvalho",
+        "carvalho"
+      ],
+      "transfert_card_id": "t089",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Ricardo_Carvalho",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue des champions.",
+          "source": "https://en.wikipedia.org/wiki/Ricardo_Carvalho",
+          "fact": {
+            "trophy": "UEFA Champions League",
+            "evidence": "*UEFA Champions League: 2003–04"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/Ricardo_Carvalho",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Kylian Mbappé.",
+          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
+          "fact": {
+            "name": "Kylian Mbappé",
+            "shared_club": "Monaco"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis portugais.",
+          "source": "https://en.wikipedia.org/wiki/Ricardo_Carvalho",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        }
+      ],
+      "source_revision": 1367071151,
+      "source_revision_fr": 239179948,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs078",
+      "answer": "Ricardo Quaresma",
+      "variants": [
+        "ricardo quaresma",
+        "quaresma"
+      ],
+      "transfert_card_id": "t090",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Ricardo_Quaresma",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Primeira Liga.",
+          "source": "https://en.wikipedia.org/wiki/Ricardo_Quaresma",
+          "fact": {
+            "trophy": "Primeira Liga",
+            "evidence": "*Primeira Liga: 2001–02"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis ailier droit.",
+          "source": "https://fr.wikipedia.org/wiki/Ricardo_Quaresma",
+          "fact": {
+            "position": "ailier droit"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Carles Puyol.",
+          "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
+          "fact": {
+            "name": "Carles Puyol",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis portugais.",
+          "source": "https://en.wikipedia.org/wiki/Ricardo_Quaresma",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        }
+      ],
+      "source_revision": 1374039116,
+      "source_revision_fr": 239553129,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs079",
+      "answer": "Rio Ferdinand",
+      "variants": [
+        "rio ferdinand",
+        "ferdinand"
+      ],
+      "transfert_card_id": "t091",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester United.",
+          "source": "https://en.wikipedia.org/wiki/Rio_Ferdinand",
+          "fact": {
+            "club": "Manchester United"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Rio_Ferdinand",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2002–03, 2006–07, 2007–08, 2008–09, 2010–11, 2012–13"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/Rio_Ferdinand",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Gary Neville.",
+          "source": "https://en.wikipedia.org/wiki/Gary_Neville",
+          "fact": {
+            "name": "Gary Neville",
+            "shared_club": "Manchester United"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Rio_Ferdinand",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1373844265,
+      "source_revision_fr": 239274069,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs080",
+      "answer": "Rivaldo",
+      "variants": [
+        "rivaldo"
+      ],
+      "transfert_card_id": "t092",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Rivaldo",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Rivaldo",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "* La Liga: 1997–98, 1998–99"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Rivaldo",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Javier Saviola.",
+          "source": "https://en.wikipedia.org/wiki/Javier_Saviola",
+          "fact": {
+            "name": "Javier Saviola",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis brésilien.",
+          "source": "https://en.wikipedia.org/wiki/Rivaldo",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        }
+      ],
+      "source_revision": 1374387306,
+      "source_revision_fr": 239394228,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs081",
+      "answer": "Riyad Mahrez",
+      "variants": [
+        "riyad mahrez",
+        "mahrez"
+      ],
+      "transfert_card_id": "t093",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester City.",
+          "source": "https://en.wikipedia.org/wiki/Riyad_Mahrez",
+          "fact": {
+            "club": "Manchester City"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Riyad_Mahrez",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2015–16"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis ailier droit.",
+          "source": "https://fr.wikipedia.org/wiki/Riyad_Mahrez",
+          "fact": {
+            "position": "ailier droit"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Kevin De Bruyne.",
+          "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
+          "fact": {
+            "name": "Kevin De Bruyne",
+            "shared_club": "Manchester City"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis algérien.",
+          "source": "https://en.wikipedia.org/wiki/Riyad_Mahrez",
+          "fact": {
+            "national_team": "Algeria"
+          }
+        }
+      ],
+      "source_revision": 1376662141,
+      "source_revision_fr": 239734755,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs082",
+      "answer": "Robbie Fowler",
+      "variants": [
+        "robbie fowler",
+        "fowler"
+      ],
+      "transfert_card_id": "t094",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Liverpool.",
+          "source": "https://en.wikipedia.org/wiki/Robbie_Fowler",
+          "fact": {
+            "club": "Liverpool"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la FA Cup.",
+          "source": "https://en.wikipedia.org/wiki/Robbie_Fowler",
+          "fact": {
+            "trophy": "FA Cup",
+            "evidence": "*FA Cup: 2000–01;"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/Robbie_Fowler",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Michael Owen.",
+          "source": "https://en.wikipedia.org/wiki/Michael_Owen",
+          "fact": {
+            "name": "Michael Owen",
+            "shared_club": "Liverpool"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Robbie_Fowler",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1376875203,
+      "source_revision_fr": 239593239,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs083",
+      "answer": "Robert Pires",
+      "variants": [
+        "robert pires",
+        "pires"
+      ],
+      "transfert_card_id": "t095",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Marseille.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Pires",
+          "fact": {
+            "club": "Marseille"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Pires",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2001–02, 2003–04"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif ailier.",
+          "source": "https://fr.wikipedia.org/wiki/Robert_Pir%C3%A8s",
+          "fact": {
+            "position": "milieu offensif ailier"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Cesc Fàbregas.",
+          "source": "https://en.wikipedia.org/wiki/Cesc_F%C3%A0bregas",
+          "fact": {
+            "name": "Cesc Fàbregas",
+            "shared_club": "Arsenal"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Pires",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1367102434,
+      "source_revision_fr": 239788255,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs084",
+      "answer": "Roberto Carlos",
+      "variants": [
+        "roberto carlos",
+        "carlos"
+      ],
+      "transfert_card_id": "t096",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Roberto_Carlos",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Roberto_Carlos",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "* La Liga: 1996–97, 2000–01, 2002–03, 2006–07"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis arrière gauche.",
+          "source": "https://fr.wikipedia.org/wiki/Roberto_Carlos_%28football%29",
+          "fact": {
+            "position": "arrière gauche"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Iker Casillas.",
+          "source": "https://en.wikipedia.org/wiki/Iker_Casillas",
+          "fact": {
+            "name": "Iker Casillas",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis brésilien.",
+          "source": "https://en.wikipedia.org/wiki/Roberto_Carlos",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        }
+      ],
+      "source_revision": 1376298119,
+      "source_revision_fr": 239658989,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs085",
+      "answer": "Ronaldinho",
+      "variants": [
+        "ronaldinho"
+      ],
+      "transfert_card_id": "t097",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Ronaldinho",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Ronaldinho",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2004–05, 2005–06"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis ailier gauche.",
+          "source": "https://fr.wikipedia.org/wiki/Ronaldinho",
+          "fact": {
+            "position": "ailier gauche"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Lionel Messi.",
+          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
+          "fact": {
+            "name": "Lionel Messi",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis brésilien.",
+          "source": "https://en.wikipedia.org/wiki/Ronaldinho",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        }
+      ],
+      "source_revision": 1376298501,
+      "source_revision_fr": 239583404,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs086",
+      "answer": "Ronaldo Nazário",
+      "variants": [
+        "ronaldo"
+      ],
+      "transfert_card_id": "t098",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Ronaldo_%28Brazilian_footballer%29",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Coupe du Roi.",
+          "source": "https://en.wikipedia.org/wiki/Ronaldo_%28Brazilian_footballer%29",
+          "fact": {
+            "trophy": "Copa del Rey",
+            "evidence": "*Copa del Rey: 1996–97"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis avant-centre.",
+          "source": "https://fr.wikipedia.org/wiki/Ronaldo",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Sergio Ramos.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
+          "fact": {
+            "name": "Sergio Ramos",
+            "shared_club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis brésilien.",
+          "source": "https://en.wikipedia.org/wiki/Ronaldo_%28Brazilian_footballer%29",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        }
+      ],
+      "source_revision": 1374207665,
+      "source_revision_fr": 239640398,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs087",
+      "answer": "Sadio Mané",
+      "variants": [
+        "sadio mané",
+        "mané"
+      ],
+      "transfert_card_id": "t099",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Liverpool.",
+          "source": "https://en.wikipedia.org/wiki/Sadio_Man%C3%A9",
+          "fact": {
+            "club": "Liverpool"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Sadio_Man%C3%A9",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2019–20"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant polyvalent.",
+          "source": "https://fr.wikipedia.org/wiki/Sadio_Man%C3%A9",
+          "fact": {
+            "position": "attaquant polyvalent"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Mohamed Salah.",
+          "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
+          "fact": {
+            "name": "Mohamed Salah",
+            "shared_club": "Liverpool"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis sénégalais.",
+          "source": "https://en.wikipedia.org/wiki/Sadio_Man%C3%A9",
+          "fact": {
+            "national_team": "Senegal"
+          }
+        }
+      ],
+      "source_revision": 1376630489,
+      "source_revision_fr": 239614913,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs088",
+      "answer": "Samir Nasri",
+      "variants": [
+        "samir nasri",
+        "nasri"
+      ],
+      "transfert_card_id": "t100",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester City.",
+          "source": "https://en.wikipedia.org/wiki/Samir_Nasri",
+          "fact": {
+            "club": "Manchester City"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Samir_Nasri",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2011–12, 2013–14"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Samir_Nasri",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Mario Balotelli.",
+          "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
+          "fact": {
+            "name": "Mario Balotelli",
+            "shared_club": "Manchester City"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis français.",
+          "source": "https://en.wikipedia.org/wiki/Samir_Nasri",
+          "fact": {
+            "national_team": "France"
+          }
+        }
+      ],
+      "source_revision": 1360749790,
+      "source_revision_fr": 238568308,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs089",
+      "answer": "Samuel Eto'o",
+      "variants": [
+        "samuel eto'o",
+        "eto'o"
+      ],
+      "transfert_card_id": "t101",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Samuel_Eto%27o",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue des champions.",
+          "source": "https://en.wikipedia.org/wiki/Samuel_Eto%27o",
+          "fact": {
+            "trophy": "UEFA Champions League",
+            "evidence": "*UEFA Champions League: 1999–2000"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Samuel_Eto%27o",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Dani Alves.",
+          "source": "https://en.wikipedia.org/wiki/Dani_Alves",
+          "fact": {
+            "name": "Dani Alves",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis camerounais.",
+          "source": "https://en.wikipedia.org/wiki/Samuel_Eto%27o",
+          "fact": {
+            "national_team": "Cameroon"
+          }
+        }
+      ],
+      "source_revision": 1375586880,
+      "source_revision_fr": 239658295,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs090",
+      "answer": "Santi Cazorla",
+      "variants": [
+        "santi cazorla",
+        "cazorla"
+      ],
+      "transfert_card_id": "t102",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Arsenal.",
+          "source": "https://en.wikipedia.org/wiki/Santi_Cazorla",
+          "fact": {
+            "club": "Arsenal"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la FA Cup.",
+          "source": "https://en.wikipedia.org/wiki/Santi_Cazorla",
+          "fact": {
+            "trophy": "FA Cup",
+            "evidence": "*FA Cup: 2013–14, 2014–15"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Santi_Cazorla",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Bacary Sagna.",
+          "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
+          "fact": {
+            "name": "Bacary Sagna",
+            "shared_club": "Arsenal"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Santi_Cazorla",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1375686782,
+      "source_revision_fr": 239809568,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs091",
+      "answer": "Sergio Agüero",
+      "variants": [
+        "sergio agüero",
+        "agüero"
+      ],
+      "transfert_card_id": "t103",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ag%C3%BCero",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Ligue Europa.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ag%C3%BCero",
+          "fact": {
+            "trophy": "UEFA Europa League",
+            "evidence": "* UEFA Europa League: 2009–10"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Sergio_Ag%C3%BCero",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Diego Costa.",
+          "source": "https://en.wikipedia.org/wiki/Diego_Costa",
+          "fact": {
+            "name": "Diego Costa",
+            "shared_club": "Atlético Madrid"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis argentin.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ag%C3%BCero",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        }
+      ],
+      "source_revision": 1376298969,
+      "source_revision_fr": 239544976,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs092",
+      "answer": "Sergio Busquets",
+      "variants": [
+        "sergio busquets",
+        "busquets"
+      ],
+      "transfert_card_id": "t104",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Busquets",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Busquets",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2008–09, 2009–10, 2010–11, 2012–13, 2014–15, 2015–16, 2017–18, 2018–19, 2022–23"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu défensif.",
+          "source": "https://fr.wikipedia.org/wiki/Sergio_Busquets",
+          "fact": {
+            "position": "milieu défensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Neymar.",
+          "source": "https://en.wikipedia.org/wiki/Neymar",
+          "fact": {
+            "name": "Neymar",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Busquets",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376338346,
+      "source_revision_fr": 239178818,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs093",
+      "answer": "Steven Gerrard",
+      "variants": [
+        "steven gerrard",
+        "gerrard"
+      ],
+      "transfert_card_id": "t105",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Liverpool.",
+          "source": "https://en.wikipedia.org/wiki/Steven_Gerrard",
+          "fact": {
+            "club": "Liverpool"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la FA Cup.",
+          "source": "https://en.wikipedia.org/wiki/Steven_Gerrard",
+          "fact": {
+            "trophy": "FA Cup",
+            "evidence": "*FA Cup: 2000–01,"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu de terrain.",
+          "source": "https://fr.wikipedia.org/wiki/Steven_Gerrard",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Mario Balotelli.",
+          "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
+          "fact": {
+            "name": "Mario Balotelli",
+            "shared_club": "Liverpool"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Steven_Gerrard",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1376287191,
+      "source_revision_fr": 239592496,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs094",
+      "answer": "Teddy Sheringham",
+      "variants": [
+        "teddy sheringham",
+        "sheringham"
+      ],
+      "transfert_card_id": "t106",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester United.",
+          "source": "https://en.wikipedia.org/wiki/Teddy_Sheringham",
+          "fact": {
+            "club": "Manchester United"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Teddy_Sheringham",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 1998–99, 1999–2000, 2000–01"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Teddy_Sheringham",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Gary Neville.",
+          "source": "https://en.wikipedia.org/wiki/Gary_Neville",
+          "fact": {
+            "name": "Gary Neville",
+            "shared_club": "Manchester United"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Teddy_Sheringham",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1361183981,
+      "source_revision_fr": 239612086,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs095",
+      "answer": "Virgil van Dijk",
+      "variants": [
+        "virgil van dijk",
+        "dijk"
+      ],
+      "transfert_card_id": "t107",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Liverpool.",
+          "source": "https://en.wikipedia.org/wiki/Virgil_van_Dijk",
+          "fact": {
+            "club": "Liverpool"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Virgil_van_Dijk",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2019–20, 2024–25"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis défenseur central.",
+          "source": "https://fr.wikipedia.org/wiki/Virgil_van_Dijk",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Mohamed Salah.",
+          "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
+          "fact": {
+            "name": "Mohamed Salah",
+            "shared_club": "Liverpool"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis néerlandais.",
+          "source": "https://en.wikipedia.org/wiki/Virgil_van_Dijk",
+          "fact": {
+            "national_team": "Netherlands"
+          }
+        }
+      ],
+      "source_revision": 1376548238,
+      "source_revision_fr": 239830148,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs096",
+      "answer": "Wayne Rooney",
+      "variants": [
+        "wayne rooney",
+        "rooney"
+      ],
+      "transfert_card_id": "t108",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Manchester United.",
+          "source": "https://en.wikipedia.org/wiki/Wayne_Rooney",
+          "fact": {
+            "club": "Manchester United"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Wayne_Rooney",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2006–07, 2007–08, 2008–09, 2010–11, 2012–13"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis attaquant.",
+          "source": "https://fr.wikipedia.org/wiki/Wayne_Rooney",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Gerard Piqué.",
+          "source": "https://en.wikipedia.org/wiki/Gerard_Piqu%C3%A9",
+          "fact": {
+            "name": "Gerard Piqué",
+            "shared_club": "Manchester United"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis anglais.",
+          "source": "https://en.wikipedia.org/wiki/Wayne_Rooney",
+          "fact": {
+            "national_team": "England"
+          }
+        }
+      ],
+      "source_revision": 1376570353,
+      "source_revision_fr": 239804843,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs097",
+      "answer": "Xabi Alonso",
+      "variants": [
+        "xabi alonso",
+        "alonso"
+      ],
+      "transfert_card_id": "t109",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/Xabi_Alonso",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la FA Cup.",
+          "source": "https://en.wikipedia.org/wiki/Xabi_Alonso",
+          "fact": {
+            "trophy": "FA Cup",
+            "evidence": "* FA Cup: 2005–06"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu défensif.",
+          "source": "https://fr.wikipedia.org/wiki/Xabi_Alonso",
+          "fact": {
+            "position": "milieu défensif"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Franck Ribéry.",
+          "source": "https://en.wikipedia.org/wiki/Franck_Rib%C3%A9ry",
+          "fact": {
+            "name": "Franck Ribéry",
+            "shared_club": "Bayern Munich"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Xabi_Alonso",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1375605883,
+      "source_revision_fr": 239592526,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs098",
+      "answer": "Xavi",
+      "variants": [
+        "xavi"
+      ],
+      "transfert_card_id": "t110",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Xavi_%28footballer%2C_born_1980%29",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Xavi_%28footballer%2C_born_1980%29",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 1998–99, 2004–05, 2005–06, 2008–09, 2009–10, 2010–11, 2012–13, 2014–15"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu central.",
+          "source": "https://fr.wikipedia.org/wiki/Xavi",
+          "fact": {
+            "position": "milieu central"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec David Villa.",
+          "source": "https://en.wikipedia.org/wiki/David_Villa",
+          "fact": {
+            "name": "David Villa",
+            "shared_club": "Barcelona"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis espagnol.",
+          "source": "https://en.wikipedia.org/wiki/Xavi_%28footballer%2C_born_1980%29",
+          "fact": {
+            "national_team": "Spain"
+          }
+        }
+      ],
+      "source_revision": 1376544278,
+      "source_revision_fr": 239801370,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs099",
+      "answer": "Yaya Touré",
+      "variants": [
+        "yaya touré",
+        "touré"
+      ],
+      "transfert_card_id": "t111",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Barcelona.",
+          "source": "https://en.wikipedia.org/wiki/Yaya_Tour%C3%A9",
+          "fact": {
+            "club": "Barcelona"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Liga.",
+          "source": "https://en.wikipedia.org/wiki/Yaya_Tour%C3%A9",
+          "fact": {
+            "trophy": "La Liga",
+            "evidence": "*La Liga: 2008–09,"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu de terrain.",
+          "source": "https://fr.wikipedia.org/wiki/Yaya_Tour%C3%A9",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Carlos Tevez.",
+          "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
+          "fact": {
+            "name": "Carlos Tevez",
+            "shared_club": "Manchester City"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis ivoirien.",
+          "source": "https://en.wikipedia.org/wiki/Yaya_Tour%C3%A9",
+          "fact": {
+            "national_team": "Ivory Coast"
+          }
+        }
+      ],
+      "source_revision": 1375767280,
+      "source_revision_fr": 239809718,
+      "editorial_difficulty": "à tester en partie"
+    },
+    {
+      "id": "qs100",
+      "answer": "Ángel Di María",
+      "variants": [
+        "ángel di maría",
+        "maría"
+      ],
+      "transfert_card_id": "t112",
+      "clues": [
+        {
+          "kind": "club",
+          "points": 5,
+          "text": "J'ai joué à Real Madrid.",
+          "source": "https://en.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa",
+          "fact": {
+            "club": "Real Madrid"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 4,
+          "text": "J'ai gagné la Primeira Liga.",
+          "source": "https://en.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa",
+          "fact": {
+            "trophy": "Primeira Liga",
+            "evidence": "* Primeira Liga: 2009–10"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis ailier polyvalent.",
+          "source": "https://fr.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa",
+          "fact": {
+            "position": "ailier polyvalent"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 2,
+          "text": "J'ai joué avec Blaise Matuidi.",
+          "source": "https://en.wikipedia.org/wiki/Blaise_Matuidi",
+          "fact": {
+            "name": "Blaise Matuidi",
+            "shared_club": "Paris Saint-Germain"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 1,
+          "text": "Je suis argentin.",
+          "source": "https://en.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        }
+      ],
+      "source_revision": 1376963324,
+      "source_revision_fr": 239532157,
+      "editorial_difficulty": "à tester en partie"
+    }
+  ]
+}
