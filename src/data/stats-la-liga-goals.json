@@ -1,0 +1,313 @@
+{
+  "category_id": "la_liga_goals",
+  "category_label": "Buts en Liga",
+  "unit": "buts",
+  "scope": "Total des buts marqués dans le championnat masculin de première division espagnole (La Liga) depuis 1929, tous clubs confondus.",
+  "snapshot_date": "2026-09-20",
+  "source": "Wikipedia — classement historique des buteurs",
+  "source_leaderboard_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+  "selection_note": "50 premières entrées du classement Wikipédia arrêté au 20 septembre 2026.",
+  "verification_note": "Chiffres relevés dans le tableau de la source le 27 septembre 2026 ; contrôle de cohérence des noms, valeurs et doublons. Les joueurs encore actifs devront être réactualisés avant une vraie partie test.",
+  "players": [
+    {
+      "name": "Lionel Messi",
+      "value": 474,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Cristiano Ronaldo",
+      "value": 311,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Telmo Zarra",
+      "value": 251,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Karim Benzema",
+      "value": 238,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Hugo Sánchez",
+      "value": 234,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Raúl",
+      "value": 228,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Alfredo Di Stéfano",
+      "value": 227,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "César",
+      "value": 221,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Quini",
+      "value": 219,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Pahiño",
+      "value": 212,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Antoine Griezmann",
+      "value": 205,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Mundo",
+      "value": 195,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "David Villa",
+      "value": 186,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Santillana",
+      "value": 186,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Guillermo Gorostiza",
+      "value": 183,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Juan Arza",
+      "value": 182,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Luis Suárez",
+      "value": 179,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Iago Aspas",
+      "value": 171,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Samuel Eto'o",
+      "value": 162,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Luis Aragonés",
+      "value": 160,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Aritz Aduriz",
+      "value": 158,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ferenc Puskás",
+      "value": 156,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Julio Salinas",
+      "value": 152,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Adrián Escudero",
+      "value": 150,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Dani",
+      "value": 147,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Raúl Tamudo",
+      "value": 146,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Silvestre Igoa",
+      "value": 140,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Manuel Badenes",
+      "value": 139,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Juan Araujo",
+      "value": 139,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "José Mari Bakero",
+      "value": 139,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "László Kubala",
+      "value": 138,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "José Luis Panizo",
+      "value": 136,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Jesús María Satrústegui",
+      "value": 133,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gerard Moreno",
+      "value": 133,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ismael Urzaiz",
+      "value": 133,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Joaquín Murillo",
+      "value": 131,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Fernando Ansola",
+      "value": 130,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Lyuboslav Penev",
+      "value": 129,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Roberto Soldado",
+      "value": 129,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Paco Gento",
+      "value": 129,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Diego Forlán",
+      "value": 128,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Eneko Arieta",
+      "value": 128,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Álvaro Negredo",
+      "value": 128,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Paco Campos",
+      "value": 127,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Mario Kempes",
+      "value": 126,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Epi Fernández",
+      "value": 125,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Fernando Morientes",
+      "value": 124,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Emilio Butragueño",
+      "value": 123,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Pirri",
+      "value": 123,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Herrerita",
+      "value": 119,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_La_Liga_top_scorers",
+      "verified_at": "2026-09-27"
+    }
+  ]
+}
