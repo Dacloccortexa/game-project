@@ -1,0 +1,313 @@
+{
+  "category_id": "world_cup_goals",
+  "category_label": "Buts en Coupe du monde",
+  "unit": "buts",
+  "scope": "Total des buts marqués en phase finale de la Coupe du monde masculine de la FIFA, 1930 à 2026 ; tirs au but exclus.",
+  "snapshot_date": "2026-07-19",
+  "source": "Wikipedia — classement des meilleurs joueurs",
+  "source_leaderboard_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+  "selection_note": "Les 50 premières entrées du classement Wikipédia arrêté au 19 juillet 2026 ; Ronaldo est affiché Ronaldo Nazário pour lever l'ambiguïté.",
+  "verification_note": "Chiffres relevés dans le tableau de la source le 27 septembre 2026 ; contrôle de cohérence des 50 noms, valeurs et doublons. Les écarts sont à ajuster en playtest.",
+  "players": [
+    {
+      "name": "Kylian Mbappé",
+      "value": 22,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Lionel Messi",
+      "value": 21,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Miroslav Klose",
+      "value": 16,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ronaldo Nazário",
+      "value": 15,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gerd Müller",
+      "value": 14,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Harry Kane",
+      "value": 14,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Just Fontaine",
+      "value": 13,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Pelé",
+      "value": 12,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Sándor Kocsis",
+      "value": 11,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Jürgen Klinsmann",
+      "value": 11,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Cristiano Ronaldo",
+      "value": 11,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Helmut Rahn",
+      "value": 10,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gary Lineker",
+      "value": 10,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Gabriel Batistuta",
+      "value": 10,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Teófilo Cubillas",
+      "value": 10,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Thomas Müller",
+      "value": 10,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Grzegorz Lato",
+      "value": 10,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ademir",
+      "value": 9,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Eusébio",
+      "value": 9,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Christian Vieri",
+      "value": 9,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Vavá",
+      "value": 9,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "David Villa",
+      "value": 9,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Paolo Rossi",
+      "value": 9,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Neymar",
+      "value": 9,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Jairzinho",
+      "value": 9,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Roberto Baggio",
+      "value": 9,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Karl-Heinz Rummenigge",
+      "value": 9,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Uwe Seeler",
+      "value": 9,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Guillermo Stábile",
+      "value": 8,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Leônidas",
+      "value": 8,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Óscar Míguez",
+      "value": 8,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Jude Bellingham",
+      "value": 8,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Rivaldo",
+      "value": 8,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Rudi Völler",
+      "value": 8,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Romelu Lukaku",
+      "value": 8,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Diego Maradona",
+      "value": 8,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Erling Haaland",
+      "value": 7,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Oldřich Nejedlý",
+      "value": 7,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Lajos Tichy",
+      "value": 7,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Careca",
+      "value": 7,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Johnny Rep",
+      "value": 7,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Andrzej Szarmach",
+      "value": 7,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Hans Schäfer",
+      "value": 7,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Luis Suárez",
+      "value": 7,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Ivan Perišić",
+      "value": 7,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Josef Hügi",
+      "value": 6,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Oleg Salenko",
+      "value": 6,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "György Sárosi",
+      "value": 6,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Max Morlock",
+      "value": 6,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    },
+    {
+      "name": "Erich Probst",
+      "value": 6,
+      "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
+      "verified_at": "2026-09-27"
+    }
+  ]
+}
