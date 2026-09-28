@@ -50,4 +50,6 @@ Les images et illustrations prêtes à utiliser sont décrites dans le [pack d'a
 
 Ambiance nocturne de stade, projecteurs, vert profond, touches ivoire et or, pelouse en bas d'écran, logo TACKLE doré. Garder des textes contrastés et des zones tactiles larges sur téléphone. L'apparence des défis doit se retrouver ensuite sur leurs écrans de jeu, tout en conservant une structure commune.
 
+Sur les écrans de jeu, **ne pas afficher qui tient le téléphone**. Ce rôle est libre : l'équipe active, un adversaire ou un maître du jeu peut le prendre. Afficher seulement l'équipe active et, si elle intervient, l'équipe qui tente le Tackle.
+
 Ces maquettes préparent l'interface ; elles ne changent ni le contenu des cartes, ni les scores, ni les règles de Tackle. Avant d'intégrer, vérifier sur un vrai téléphone les formats courts et longs, l'ouverture/retour de la sous-page, les valeurs par défaut et le lancement avec 1 à 4 équipes.

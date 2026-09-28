@@ -1,5 +1,13 @@
 # DECISIONS.md
 
+## [2026-09-28] Le téléphone peut être tenu librement pendant la partie
+
+- David supprime la rotation obligatoire du porteur de téléphone. La réponse attendue étant cachée jusqu'à sa vérification, l'équipe active, une autre personne ou un maître du jeu peut manipuler l'appareil selon ce qui est naturel pour le groupe.
+- Les écrans de jeu affichent l'équipe active et, lors d'un Tackle, l'équipe qui tente sa réponse ; ils n'affichent pas « téléphone tenu par… ». La personne qui saisit une réponse de l'équipe active lui montre le texte avant validation.
+- Après le premier Tackle annoncé, la personne qui tient le téléphone choisit l'équipe qui l'a annoncé en premier, puis saisit sa réponse. Le porteur du téléphone n'obtient aucun droit de Tackle supplémentaire. Une seule équipe adverse répond par fenêtre.
+- La passe conserve le comportement actuel : elle mène directement à l'indice suivant et fait perdre un palier potentiel. La fréquence réelle des Tackle sera observée en partie test avant de changer ce point.
+- Les maquettes de Transfert ont été corrigées ; l'interface jouable doit suivre cette règle lors de son intégration.
+
 ## [2026-09-28] Noms d'équipe par défaut tirés des animaux
 - Décision : les équipes s'appellent par défaut Les Lions, Les Renards, Les Taureaux et Les Aigles, selon leur animal ; le bouton crayon efface le nom pour en saisir un nouveau (demandé par David).
 - Raison : des noms incarnés dès l'ouverture, cohérents avec les emblèmes.
