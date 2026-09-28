@@ -1881,11 +1881,21 @@
   var PENCIL_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg>';
 
   // Un logo ou une couleur ne peut appartenir qu'à une seule équipe.
+  // Priorité à l'ordre des équipes : une équipe n'est bloquée que par celles qui la précèdent.
+  // Si elle choisit un logo ou une couleur tenu par une équipe suivante, les deux échangent.
   function takenBy(key, value, exceptIdx) {
     for (var i = 0; i < state.teamCount; i++) {
       if (i !== exceptIdx && state.teamSettings[i][key] === value) return i;
     }
     return -1;
+  }
+  function blockedBy(key, value, idx) {
+    var owner = takenBy(key, value, idx);
+    return owner !== -1 && owner < idx ? owner : -1;
+  }
+  function syncDefaultName(i) {
+    var t = state.teamSettings[i];
+    if (t.name !== "" && isDefaultTeamName(t.name)) t.name = animalTeamName(t.logo);
   }
   function ensureUniqueTeamSettings() {
     [["logo", TEAM_LOGOS], ["color", TEAM_COLORS]].forEach(function (pair) {
@@ -1907,7 +1917,7 @@
     el("team-cards").querySelectorAll("input[type=radio]").forEach(function (input) {
       var idx = parseInt(input.getAttribute("data-team"), 10);
       var key = input.getAttribute("data-key");
-      var owner = takenBy(key, input.value, idx);
+      var owner = blockedBy(key, input.value, idx);
       var label = input.parentNode;
       input.disabled = owner !== -1;
       label.classList.toggle("taken", owner !== -1);
@@ -2025,7 +2035,19 @@
       decorate(opt, wrapLabel);
       if (input.checked) wrapLabel.classList.add("selected");
       input.addEventListener("change", function () {
+        var previous = state.teamSettings[idx][key];
+        var holder = takenBy(key, opt.id, idx);
         state.teamSettings[idx][key] = opt.id;
+        if (holder !== -1) {
+          // Échange avec l'équipe suivante qui tenait ce choix, puis on redessine les fiches.
+          state.teamSettings[holder][key] = previous;
+          syncDefaultName(idx);
+          syncDefaultName(holder);
+          renderTeamCards();
+          var again = document.querySelector('input[name="' + key + "-" + idx + '"][value="' + opt.id + '"]');
+          if (again) again.focus({ preventScroll: true });
+          return;
+        }
         labels.forEach(function (l) { l.classList.toggle("selected", l === wrapLabel); });
         if (key === "logo") {
           // Un nom par défaut suit l'animal ; un nom tapé par les joueurs ne change pas.
