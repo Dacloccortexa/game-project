@@ -1031,21 +1031,8 @@
     border: 2px solid rgba(0,0,0,.25);
     cursor: pointer;
   }
-  /* Déjà pris par une autre équipe : grisé et barré (pas seulement la couleur). */
+  /* Déjà pris par une équipe précédente : grisé et non sélectionnable. */
   .logo-opt.taken, .swatch.taken { opacity: .28; cursor: not-allowed; }
-  .logo-opt.taken::after, .swatch.taken::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 6%;
-    bottom: 6%;
-    width: 2.5px;
-    margin-left: -1.25px;
-    border-radius: 2px;
-    background: #f8f6ed;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.5);
-    transform: rotate(45deg);
-  }
   .swatch.selected {
     box-shadow: 0 0 0 3px #06140e, 0 0 0 6px var(--gold-ring), 0 0 16px rgba(242,191,84,.5);
   }

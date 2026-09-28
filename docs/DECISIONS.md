@@ -9,7 +9,7 @@
 - Décision : lorsqu'une équipe a pris un logo ou une couleur, les autres équipes ne peuvent plus le choisir (demandé par David).
 - Raison : chaque équipe doit rester identifiable d'un coup d'œil dans le score et le classement.
 - Précision de David (même jour) : les premières équipes doivent pouvoir choisir n'importe quel logo ; les valeurs par défaut des équipes suivantes ne doivent pas les bloquer.
-- Impact technique : une équipe n'est bloquée (choix grisé, barré, désactivé) que par les équipes qui la précèdent. Si elle choisit un logo ou une couleur tenu par une équipe suivante, les deux échangent ; un nom par défaut suit l'animal reçu. Une équipe ajoutée reçoit un logo et une couleur libres.
+- Impact technique : une équipe n'est bloquée (choix grisé et désactivé) que par les équipes qui la précèdent. Si elle choisit un logo ou une couleur tenu par une équipe suivante, les deux échangent ; un nom par défaut suit l'animal reçu. Une équipe ajoutée reçoit un logo et une couleur libres.
 
 ## [2026-09-28] Suppression de la fenêtre de contestation de 5 secondes : Tackle commun uniquement
 
