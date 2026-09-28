@@ -1249,6 +1249,21 @@
       : state.currentRoundMinigame === "lematch" ? "lm-answer-zone" : "answer-zone";
   }
 
+  function currentTackleStake() {
+    if (isBinaryGame()) return 3;
+    var step = state.currentRoundMinigame === "lematch" ? state.lmRevealedCount : state.revealedCount;
+    return POINTS_BY_INDEX[Math.min(Math.max(step - 1, 0), POINTS_BY_INDEX.length - 1)];
+  }
+
+  function tackleButtonText(seconds) {
+    return "🚨 TACKLE ±" + currentTackleStake() + " · " + seconds + " s";
+  }
+
+  function tackleDeltaText(correct) {
+    var stake = currentTackleStake();
+    return (stake === 0 ? "" : correct ? "+" : "−") + stake + " point" + (stake > 1 ? "s" : "");
+  }
+
   function startTackleWindow() {
     clearTackleTimer();
     hideTackleUI();
@@ -1256,7 +1271,7 @@
     state.tackleDeadline = Date.now() + TACKLE_LOCK_SECONDS * 1000;
     var button = el("btn-tackle");
     button.disabled = true;
-    button.textContent = "🚨 TACKLE · " + TACKLE_LOCK_SECONDS + " s";
+    button.textContent = tackleButtonText(TACKLE_LOCK_SECONDS);
     show("btn-tackle");
     state.tackleTimerId = setInterval(tickTackleWindow, 250);
   }
@@ -1267,7 +1282,7 @@
     var button = el("btn-tackle");
     if (state.tacklePhase === "locked") {
       if (remaining > 0) {
-        button.textContent = "🚨 TACKLE · " + remaining + " s";
+        button.textContent = tackleButtonText(remaining);
         return;
       }
       state.tacklePhase = "open";
@@ -1277,7 +1292,7 @@
       remaining = TACKLE_OPEN_SECONDS;
     }
     if (remaining > 0) {
-      button.textContent = "🚨 TACKLE · " + remaining + " s";
+      button.textContent = tackleButtonText(remaining);
       return;
     }
     clearTackleTimer();
@@ -1329,7 +1344,7 @@
     function tick() {
       if (state.cardEnded) { clearContestTimer(); return; }
       var remaining = Math.max(0, Math.ceil((state.contestDeadline - Date.now()) / 1000));
-      button.textContent = "🚨 TACKLE · " + remaining + " s";
+      button.textContent = tackleButtonText(remaining);
       if (remaining === 0) {
         clearContestTimer();
         hideTackleUI();
@@ -1423,10 +1438,10 @@
       : choice === state.vfChain[state.vfIndex].est_vraie;
     var points = game === "plusoumoins" ? state.pomPotential : state.vfPotential;
     var team = state.teams[state.tackleTeamIndex];
-    awardPointsToTeam(state.tackleTeamIndex, correct ? 5 : -5);
+    awardPointsToTeam(state.tackleTeamIndex, correct ? currentTackleStake() : -currentTackleStake());
     if (!correct) awardPoints(points);
     var message = "TACKLE " + (correct ? "réussi" : "raté") + " par " + team.name + ". " +
-      (correct ? "+5 points ; l'équipe active perd sa cagnotte." : "−5 points ; l'équipe active encaisse " + points + " point" + (points > 1 ? "s" : "") + ".");
+      (correct ? tackleDeltaText(true) + " ; l'équipe active perd sa cagnotte." : tackleDeltaText(false) + " ; l'équipe active encaisse " + points + " point" + (points > 1 ? "s" : "") + ".");
     hide("tackle-answer-zone");
     if (game === "plusoumoins") {
       var current = state.pomChain.chain[state.pomIndex], next = state.pomChain.chain[state.pomIndex + 1];
@@ -1453,6 +1468,7 @@
     var typed = el("tackle-answer-input").value.trim();
     if (!typed) return;
     var tacklingTeam = state.teams[state.tackleTeamIndex];
+    var stake = currentTackleStake();
 
     if (state.currentRoundMinigame === "lematch") {
       var typed2 = el("tackle-answer-input-2").value.trim();
@@ -1463,11 +1479,11 @@
       hide("tackle-answer-zone");
 
       if (isLmCorrect) {
-        awardPointsToTeam(state.tackleTeamIndex, 5);
-        showLmFeedback("good", "TACKLE réussi par " + tacklingTeam.name + " ! +5 points. La carte s'arrête là — c'était " + lmCard.teams[0] + " – " + lmCard.teams[1] + ".");
+        awardPointsToTeam(state.tackleTeamIndex, stake);
+        showLmFeedback("good", "TACKLE réussi par " + tacklingTeam.name + " ! " + tackleDeltaText(true) + ". La carte s'arrête là — c'était " + lmCard.teams[0] + " – " + lmCard.teams[1] + ".");
       } else {
-        awardPointsToTeam(state.tackleTeamIndex, -5);
-        showLmFeedback("bad", "TACKLE raté par " + tacklingTeam.name + ". −5 points. La carte s'arrête là — c'était " + lmCard.teams[0] + " – " + lmCard.teams[1] + ".");
+        awardPointsToTeam(state.tackleTeamIndex, -stake);
+        showLmFeedback("bad", "TACKLE raté par " + tacklingTeam.name + ". " + tackleDeltaText(false) + ". La carte s'arrête là — c'était " + lmCard.teams[0] + " – " + lmCard.teams[1] + ".");
       }
       endCard();
       return;
@@ -1480,11 +1496,11 @@
     hide("tackle-answer-zone");
 
     if (isCorrect) {
-      awardPointsToTeam(state.tackleTeamIndex, 5);
-      showFeedback("good", "TACKLE réussi par " + tacklingTeam.name + " ! +5 points. La carte s'arrête là — c'était " + card.answer + ".");
+      awardPointsToTeam(state.tackleTeamIndex, stake);
+      showFeedback("good", "TACKLE réussi par " + tacklingTeam.name + " ! " + tackleDeltaText(true) + ". La carte s'arrête là — c'était " + card.answer + ".");
     } else {
-      awardPointsToTeam(state.tackleTeamIndex, -5);
-      showFeedback("bad", "TACKLE raté par " + tacklingTeam.name + ". −5 points. La carte s'arrête là — c'était " + card.answer + ".");
+      awardPointsToTeam(state.tackleTeamIndex, -stake);
+      showFeedback("bad", "TACKLE raté par " + tacklingTeam.name + ". " + tackleDeltaText(false) + ". La carte s'arrête là — c'était " + card.answer + ".");
     }
     endCard();
   });
@@ -1619,14 +1635,14 @@
       var tacklerTeam = state.teams[tackleInfo.tacklerIdx];
       if (isActiveCorrect) {
         // L'équipe active avait raison : le tackle échoue, son tour continue normalement.
-        awardPointsToTeam(tackleInfo.tacklerIdx, -5);
+        awardPointsToTeam(tackleInfo.tacklerIdx, -currentTackleStake());
         el("pom-feedback-zone").classList.remove("hidden-screen");
-        el("pom-feedback-zone").innerHTML = '<div class="feedback bad">TACKLE raté par ' + tacklerTeam.name + '. −5 points.</div>';
+        el("pom-feedback-zone").innerHTML = '<div class="feedback bad">TACKLE raté par ' + tacklerTeam.name + '. ' + tackleDeltaText(false) + '.</div>';
       } else {
         // L'équipe active avait tort : le tackle réussit, elle perd toute sa cagnotte en cours.
-        awardPointsToTeam(tackleInfo.tacklerIdx, 5);
+        awardPointsToTeam(tackleInfo.tacklerIdx, currentTackleStake());
         el("pom-feedback-zone").classList.remove("hidden-screen");
-        el("pom-feedback-zone").innerHTML = '<div class="feedback good">TACKLE réussi par ' + tacklerTeam.name + ' ! +5 points.</div>';
+        el("pom-feedback-zone").innerHTML = '<div class="feedback good">TACKLE réussi par ' + tacklerTeam.name + ' ! ' + tackleDeltaText(true) + '.</div>';
         el("pom-feedback-zone").innerHTML += '<div class="feedback bad">Mauvaise réponse de ' + state.teams[state.currentTeamIndex].name + '. 0 point pour cette carte.</div>';
         awardPoints(0);
         endCard();
@@ -1831,12 +1847,12 @@
       var tacklerTeam = state.teams[tackleInfo.tacklerIdx];
       if (isActiveCorrect) {
         // L'équipe active avait raison : le tackle échoue, son tour continue normalement.
-        awardPointsToTeam(tackleInfo.tacklerIdx, -5);
-        showVfFeedback("bad", "TACKLE raté par " + tacklerTeam.name + ". −5 points.");
+        awardPointsToTeam(tackleInfo.tacklerIdx, -currentTackleStake());
+        showVfFeedback("bad", "TACKLE raté par " + tacklerTeam.name + ". " + tackleDeltaText(false) + ".");
       } else {
         // L'équipe active avait tort : le tackle réussit, elle perd toute sa cagnotte en cours.
-        awardPointsToTeam(tackleInfo.tacklerIdx, 5);
-        showVfFeedback("good", "TACKLE réussi par " + tacklerTeam.name + " ! +5 points.");
+        awardPointsToTeam(tackleInfo.tacklerIdx, currentTackleStake());
+        showVfFeedback("good", "TACKLE réussi par " + tacklerTeam.name + " ! " + tackleDeltaText(true) + ".");
       }
     }
 
