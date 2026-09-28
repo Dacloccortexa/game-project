@@ -1,12 +1,12 @@
 {
   "game_id": "lematch",
-  "version": "candidates-1",
+  "version": "lu-1",
   "prepared_at": "2026-09-28",
   "scope": {
     "world_cup": "Finales et demi-finales officielles 1954–2026 (1950 sans finale ni demi-finale ; 1974 et 1978 sans demi-finales)",
     "european_cup": "50 finales de 1977 à 2026, dont 16 Coupes des clubs champions avant 1993"
   },
-  "status": "fiches sourcées à relire avant une vraie soirée test",
+  "status": "lot marqué comme lu, à éprouver en partie",
   "attribution": {
     "world_cup": "openfootball/worldcup.json, CC0 1.0; https://github.com/openfootball/worldcup.json",
     "european_cup": "Wikipédia + liens de feuilles de match UEFA quand présents"
@@ -72,7 +72,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1954-semifinal-2",
@@ -134,7 +134,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1954-final-3",
@@ -196,7 +196,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1958-semifinal-1",
@@ -258,7 +258,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1958-semifinal-2",
@@ -320,7 +320,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1958-final-3",
@@ -382,7 +382,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1962-semifinal-1",
@@ -444,7 +444,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1962-semifinal-2",
@@ -506,7 +506,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1962-final-3",
@@ -568,7 +568,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1966-semifinal-1",
@@ -630,7 +630,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1966-semifinal-2",
@@ -692,7 +692,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1966-final-3",
@@ -754,7 +754,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1970-semifinal-1",
@@ -816,7 +816,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1970-semifinal-2",
@@ -878,7 +878,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1970-final-3",
@@ -940,7 +940,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1974-final-1",
@@ -1002,7 +1002,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1974/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1978-final-1",
@@ -1064,7 +1064,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1978/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1982-semifinal-1",
@@ -1126,7 +1126,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1982-semifinal-2",
@@ -1188,7 +1188,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1982-final-3",
@@ -1250,7 +1250,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1986-semifinal-1",
@@ -1312,7 +1312,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1986-semifinal-2",
@@ -1374,7 +1374,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1986-final-3",
@@ -1436,7 +1436,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1990-semifinal-1",
@@ -1498,7 +1498,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1990-semifinal-2",
@@ -1560,7 +1560,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1990-final-3",
@@ -1622,7 +1622,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1994-semifinal-1",
@@ -1684,7 +1684,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1994-semifinal-2",
@@ -1746,7 +1746,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1994-final-3",
@@ -1808,7 +1808,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1998-semifinal-1",
@@ -1870,7 +1870,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1998-semifinal-2",
@@ -1932,7 +1932,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-1998-final-3",
@@ -1994,7 +1994,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2002-semifinal-1",
@@ -2056,7 +2056,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2002-semifinal-2",
@@ -2118,7 +2118,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2002-final-3",
@@ -2180,7 +2180,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2006-semifinal-1",
@@ -2242,7 +2242,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2006-semifinal-2",
@@ -2304,7 +2304,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2006-final-3",
@@ -2366,7 +2366,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2010-semifinal-1",
@@ -2428,7 +2428,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2010-semifinal-2",
@@ -2490,7 +2490,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2010-final-3",
@@ -2552,7 +2552,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2014-semifinal-1",
@@ -2614,7 +2614,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2014-semifinal-2",
@@ -2676,7 +2676,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2014-final-3",
@@ -2738,7 +2738,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2018-semifinal-1",
@@ -2800,7 +2800,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2018-semifinal-2",
@@ -2862,7 +2862,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2018-final-3",
@@ -2924,7 +2924,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2022-semifinal-1",
@@ -2986,7 +2986,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2022-semifinal-2",
@@ -3048,7 +3048,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2022-final-3",
@@ -3110,7 +3110,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2026-semifinal-1",
@@ -3172,7 +3172,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2026-semifinal-2",
@@ -3234,7 +3234,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-wc-2026-final-3",
@@ -3296,7 +3296,7 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1977-final",
@@ -3359,7 +3359,7 @@
           "source": "https://en.wikipedia.org/wiki/1977_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1978-final",
@@ -3422,7 +3422,7 @@
           "source": "https://en.wikipedia.org/wiki/1978_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1979-final",
@@ -3485,7 +3485,7 @@
           "source": "https://en.wikipedia.org/wiki/1979_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1980-final",
@@ -3548,7 +3548,7 @@
           "source": "https://en.wikipedia.org/wiki/1980_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1981-final",
@@ -3611,7 +3611,7 @@
           "source": "https://en.wikipedia.org/wiki/1981_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1982-final",
@@ -3674,7 +3674,7 @@
           "source": "https://en.wikipedia.org/wiki/1982_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1983-final",
@@ -3737,7 +3737,7 @@
           "source": "https://en.wikipedia.org/wiki/1983_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1984-final",
@@ -3800,7 +3800,7 @@
           "source": "https://en.wikipedia.org/wiki/1984_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1985-final",
@@ -3863,7 +3863,7 @@
           "source": "https://en.wikipedia.org/wiki/1985_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1986-final",
@@ -3926,7 +3926,7 @@
           "source": "https://en.wikipedia.org/wiki/1986_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1987-final",
@@ -3989,7 +3989,7 @@
           "source": "https://en.wikipedia.org/wiki/1987_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1988-final",
@@ -4052,7 +4052,7 @@
           "source": "https://en.wikipedia.org/wiki/1988_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1989-final",
@@ -4115,7 +4115,7 @@
           "source": "https://en.wikipedia.org/wiki/1989_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1990-final",
@@ -4178,7 +4178,7 @@
           "source": "https://en.wikipedia.org/wiki/1990_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1991-final",
@@ -4241,7 +4241,7 @@
           "source": "https://en.wikipedia.org/wiki/1991_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1992-final",
@@ -4304,7 +4304,7 @@
           "source": "https://en.wikipedia.org/wiki/1992_European_Cup_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1993-final",
@@ -4367,7 +4367,7 @@
           "source": "https://en.wikipedia.org/wiki/1993_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1994-final",
@@ -4430,7 +4430,7 @@
           "source": "https://en.wikipedia.org/wiki/1994_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1995-final",
@@ -4493,7 +4493,7 @@
           "source": "https://en.wikipedia.org/wiki/1995_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1996-final",
@@ -4556,7 +4556,7 @@
           "source": "https://en.wikipedia.org/wiki/1996_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1997-final",
@@ -4619,7 +4619,7 @@
           "source": "https://en.wikipedia.org/wiki/1997_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1998-final",
@@ -4682,7 +4682,7 @@
           "source": "https://en.wikipedia.org/wiki/1998_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-1999-final",
@@ -4745,7 +4745,7 @@
           "source": "https://en.wikipedia.org/wiki/1999_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2000-final",
@@ -4808,7 +4808,7 @@
           "source": "https://en.wikipedia.org/wiki/2000_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2001-final",
@@ -4871,7 +4871,7 @@
           "source": "https://en.wikipedia.org/wiki/2001_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2002-final",
@@ -4934,7 +4934,7 @@
           "source": "https://en.wikipedia.org/wiki/2002_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2003-final",
@@ -4997,7 +4997,7 @@
           "source": "https://en.wikipedia.org/wiki/2003_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2004-final",
@@ -5060,7 +5060,7 @@
           "source": "https://en.wikipedia.org/wiki/2004_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2005-final",
@@ -5123,7 +5123,7 @@
           "source": "https://en.wikipedia.org/wiki/2005_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2006-final",
@@ -5186,7 +5186,7 @@
           "source": "https://en.wikipedia.org/wiki/2006_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2007-final",
@@ -5249,7 +5249,7 @@
           "source": "https://en.wikipedia.org/wiki/2007_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2008-final",
@@ -5312,7 +5312,7 @@
           "source": "https://en.wikipedia.org/wiki/2008_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2009-final",
@@ -5375,7 +5375,7 @@
           "source": "https://en.wikipedia.org/wiki/2009_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2010-final",
@@ -5438,7 +5438,7 @@
           "source": "https://en.wikipedia.org/wiki/2010_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2011-final",
@@ -5501,7 +5501,7 @@
           "source": "https://en.wikipedia.org/wiki/2011_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2012-final",
@@ -5564,7 +5564,7 @@
           "source": "https://en.wikipedia.org/wiki/2012_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2013-final",
@@ -5627,7 +5627,7 @@
           "source": "https://en.wikipedia.org/wiki/2013_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2014-final",
@@ -5690,7 +5690,7 @@
           "source": "https://en.wikipedia.org/wiki/2014_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2015-final",
@@ -5753,7 +5753,7 @@
           "source": "https://en.wikipedia.org/wiki/2015_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2016-final",
@@ -5816,7 +5816,7 @@
           "source": "https://en.wikipedia.org/wiki/2016_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2017-final",
@@ -5879,7 +5879,7 @@
           "source": "https://en.wikipedia.org/wiki/2017_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2018-final",
@@ -5942,7 +5942,7 @@
           "source": "https://en.wikipedia.org/wiki/2018_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2019-final",
@@ -6005,7 +6005,7 @@
           "source": "https://en.wikipedia.org/wiki/2019_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2020-final",
@@ -6068,7 +6068,7 @@
           "source": "https://en.wikipedia.org/wiki/2020_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2021-final",
@@ -6131,7 +6131,7 @@
           "source": "https://en.wikipedia.org/wiki/2021_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2022-final",
@@ -6194,7 +6194,7 @@
           "source": "https://en.wikipedia.org/wiki/2022_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2023-final",
@@ -6257,7 +6257,7 @@
           "source": "https://en.wikipedia.org/wiki/2023_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2024-final",
@@ -6320,7 +6320,7 @@
           "source": "https://en.wikipedia.org/wiki/2024_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2025-final",
@@ -6383,7 +6383,7 @@
           "source": "https://en.wikipedia.org/wiki/2025_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     },
     {
       "id": "lm-ucl-2026-final",
@@ -6446,7 +6446,9 @@
           "source": "https://en.wikipedia.org/wiki/2026_UEFA_Champions_League_final"
         }
       ],
-      "status": "à relire"
+      "status": "lu"
     }
-  ]
+  ],
+  "read_status_recorded_at": "2026-09-28",
+  "read_status_note": "Statut de lecture demandé par David ; les erreurs découvertes en partie seront à signaler et corriger."
 }
