@@ -428,7 +428,7 @@
       </div>
       <div class="checkbox-row">
         <input type="checkbox" id="mg-lematch">
-        <label for="mg-lematch" style="margin:0; font-size:15px; color:var(--chalk);">Le Match (cartes de test)</label>
+        <label for="mg-lematch" style="margin:0; font-size:15px; color:var(--chalk);">Le Match (103 fiches à tester)</label>
       </div>
     </div>
 
@@ -591,7 +591,7 @@
       </div>
     </div>
 
-    <!-- Le Match (cartes de test — voir DECISIONS.md et TODO.md) -->
+    <!-- Le Match (103 fiches sourcées — voir docs/LE_MATCH_CARDS_REVIEW.md) -->
     <div class="card-stage hidden-screen" id="stage-lm">
       <div class="clue-points" id="lm-competition"></div>
       <div class="clue-list" id="lm-event-list"></div>
@@ -726,8 +726,8 @@
   }
 
   // ---------- Content: cartes Le Match ----------
-  // ATTENTION : cartes de test rédigées par Claude (faits très largement documentés),
-  // en attendant les cartes réelles sourcées de David/ChatGPT. Voir DECISIONS.md et TODO.md.
+  // 103 fiches sourcées, à relire et tester avant une vraie soirée de jeu.
+  // Voir docs/LE_MATCH_CARDS_REVIEW.md et docs/TODO.md.
   var LM_CARDS = [];
   var LM_READY = false;
 
@@ -1822,7 +1822,7 @@
     }
   }
 
-  // ---------- Le Match (cartes de test — voir DECISIONS.md et TODO.md) ----------
+  // ---------- Le Match (103 fiches sourcées — voir docs/LE_MATCH_CARDS_REVIEW.md) ----------
   function beginLmTurn() {
     setActiveMinigameUI("lematch");
     state.cardEnded = false;
