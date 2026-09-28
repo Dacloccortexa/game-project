@@ -1001,9 +1001,12 @@
     opacity: .82;
     transition: filter .15s ease, opacity .15s ease;
   }
+  /* Le cercle de l'animal choisi prend la couleur de l'équipe (--team posé sur la fiche). */
   .logo-opt.selected {
-    border: 3px solid var(--gold-ring);
+    border: 3px solid var(--team, var(--gold-ring));
     box-shadow: 0 0 0 3px rgba(242,199,90,.22), 0 0 20px rgba(242,191,84,.45);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--team, #f2c75a) 25%, transparent),
+                0 0 20px color-mix(in srgb, var(--team, #f2c75a) 50%, transparent);
   }
   .logo-opt.selected img { filter: none; opacity: 1; }
   .logo-opt:focus-within, .swatch:focus-within { outline: 3px solid var(--gold); outline-offset: 3px; }
@@ -1907,6 +1910,7 @@
     var setting = state.teamSettings[idx];
     var card = document.createElement("div");
     card.className = "team-card";
+    card.style.setProperty("--team", findById(TEAM_COLORS, setting.color).hex);
     card.setAttribute("role", "group");
     card.setAttribute("aria-labelledby", "team-title-" + idx);
 
@@ -1992,7 +1996,8 @@
         labels.forEach(function (l) { l.classList.toggle("selected", l === wrapLabel); });
         refreshTakenOptions();
         if (key === "color") {
-          // Les quatre animaux de la fiche prennent la nouvelle couleur.
+          // Les quatre animaux et le cercle de l'animal choisi prennent la nouvelle couleur.
+          fs.parentNode.style.setProperty("--team", opt.hex);
           fs.parentNode.querySelectorAll("img[data-logo]").forEach(function (img) {
             img.src = logoSrc(img.getAttribute("data-logo"), opt.id);
           });
