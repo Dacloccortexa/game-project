@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" fill="none" role="img" aria-label="Tableau de score et chronologie pour le défi Le Match">
+  <defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF2AE"/><stop offset="1" stop-color="#D59B35"/></linearGradient></defs>
+  <path d="M48 31h25v25c0 17-12 28-25 32-13-4-25-15-25-32V31h25Zm-25 6H12c0 18 7 27 20 27m41-27h11c0 18-7 27-20 27M48 88v12m-15 5h30" stroke="url(#gold)" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="127" y="12" width="236" height="71" rx="7" fill="#0D1A1B" stroke="#B9954A" stroke-width="3"/>
+  <text x="154" y="60" font-family="Arial,sans-serif" font-size="40" font-weight="bold" fill="#FFD66E">1</text><text x="196" y="59" font-family="Arial,sans-serif" font-size="28" fill="#E2B45C">–</text><text x="236" y="60" font-family="Arial,sans-serif" font-size="40" font-weight="bold" fill="#FFD66E">1</text><text x="293" y="53" font-family="Arial,sans-serif" font-size="26" fill="#E5AC4D">68′</text>
+  <path d="M133 106h237" stroke="#E4CB88" stroke-width="3"/>
+  <circle cx="153" cy="106" r="7" fill="#F8F0D1"/><circle cx="212" cy="106" r="7" fill="#E6B94B"/><circle cx="283" cy="106" r="7" fill="#EF6C46"/><circle cx="353" cy="106" r="7" fill="#F8F0D1"/>
+</svg>

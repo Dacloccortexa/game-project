@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" fill="none" role="img" aria-label="Graphique et flèches pour le défi Plus ou Moins">
+  <defs><linearGradient id="cyan" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#0F668B"/><stop offset="1" stop-color="#59EAFF"/></linearGradient><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF2B0"/><stop offset="1" stop-color="#E2A432"/></linearGradient></defs>
+  <path d="M52 94V28m-15 16 15-16 15 16M96 28v66m-15-16 15 16 15-16" stroke="url(#gold)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M146 97h230" stroke="#9DE8D6" opacity=".5" stroke-width="2"/>
+  <rect x="161" y="78" width="25" height="19" rx="3" fill="#0E6989"/><rect x="197" y="67" width="25" height="30" rx="3" fill="#128CB2"/><rect x="233" y="55" width="25" height="42" rx="3" fill="#16A7CE"/><rect x="269" y="40" width="25" height="57" rx="3" fill="#31CEEA"/><rect x="305" y="24" width="25" height="73" rx="3" fill="url(#cyan)"/>
+  <path d="m150 67 21-18 21 18h-12v10h-18V67Zm189-13 21 18 21-18h-12V44h-18v10Z" fill="#4FE182" opacity=".85"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" fill="none" role="img" aria-label="Trajet entre clubs pour le défi Transfert">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF5CA"/><stop offset=".55" stop-color="#F4C45D"/><stop offset="1" stop-color="#B88726"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <path d="M58 81C103 35 141 96 200 56S297 35 350 66" stroke="#E8D79A" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 11" opacity=".85"/>
+  <circle cx="58" cy="81" r="19" fill="#D4B054" opacity=".22" filter="url(#glow)"/><circle cx="58" cy="81" r="13" fill="#F7E9BD"/><path d="M58 72l7 5-3 8h-8l-3-8 7-5Zm-7 5-5-1m19 1 5-1m-16 9-2 5m10-5 2 5" stroke="#123D2D" stroke-width="1.8"/>
+  <path d="M350 43c-13 0-23 10-23 23 0 18 23 39 23 39s23-21 23-39c0-13-10-23-23-23Z" fill="url(#gold)"/><circle cx="350" cy="66" r="8" fill="#0B2E23"/>
+  <path d="M188 23c22-15 47-13 65 2m-12-13 14 14-19 5" stroke="url(#gold)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

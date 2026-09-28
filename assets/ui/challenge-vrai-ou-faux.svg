@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" fill="none" role="img" aria-label="Vrai et faux pour le défi Vrai ou Faux">
+  <defs><linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#B8FF61"/><stop offset="1" stop-color="#17BD65"/></linearGradient><linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFAD6C"/><stop offset="1" stop-color="#F33B36"/></linearGradient><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFEB9A"/><stop offset="1" stop-color="#BF8F2C"/></linearGradient></defs>
+  <path d="M200 9 156 111" stroke="url(#gold)" stroke-width="3" opacity=".8"/>
+  <path d="m58 61 29 28 63-67" stroke="url(#green)" stroke-width="20" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="m264 25 88 72m0-72-88 72" stroke="url(#red)" stroke-width="19" stroke-linecap="square"/>
+  <path d="m214 30 11-20m-17 75 10 18" stroke="#EEC66B" stroke-width="3" opacity=".7"/>
+</svg>

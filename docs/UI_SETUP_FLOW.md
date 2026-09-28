@@ -12,6 +12,10 @@ Statut : **maquettes validées pour intégration**. Ce document décrit le parco
 
 Les deux téléphones de chaque planche montrent des écrans différents ou deux positions de défilement ; il ne faut pas afficher deux téléphones dans l'application. Les images fixent la direction graphique. Le fonctionnement ci-dessous fait foi si un détail décoratif de l'image prête à confusion.
 
+## Images séparées pour l'intégration
+
+Les images et illustrations prêtes à utiliser sont décrites dans le [pack d'assets TACKLE](../assets/ui/ASSETS.md). Le dépôt contient le logo doré, les quatre animaux, le stade, la pelouse et les cinq illustrations de défis en fichiers indépendants.
+
 ## Parcours
 
 `Créer une partie → (Choisir les défis → Valider) → Continuer → Personnaliser les équipes → Coup d'envoi → Partie`
