@@ -21,6 +21,11 @@ function element(id) {
       focus() {},
       click() { assert(this.listeners.click, `No click listener: ${id}`); this.listeners.click(); },
     };
+    let html = '';
+    Object.defineProperty(node, 'innerHTML', {
+      get() { return html; },
+      set(value) { html = value; if (value === '') this.children = []; },
+    });
     elements.set(id, node);
   }
   return elements.get(id);
@@ -42,7 +47,7 @@ function advance(ms) {
 }
 
 let script = fs.readFileSync('index.html', 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
-script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer};})();');
+script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, clearContestTimer, currentTackleStake};})();');
 const context = {
   document: { getElementById: element, createElement: tag => element(`created-${tag}-${Math.random()}`), querySelector: element },
   fetch: () => Promise.resolve({ json: () => Promise.resolve({ cards: [], players: [], statements: [] }) }),
@@ -53,7 +58,7 @@ const context = {
 };
 vm.createContext(context);
 vm.runInContext(script, context);
-const { state, startTackleWindow, pomGuess, vfAnswer } = context.testApi;
+const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake } = context.testApi;
 
 function reset(game) {
   timers.clear();
@@ -67,37 +72,56 @@ reset('transfert');
 state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
 state.revealedCount = 1;
 startTackleWindow();
+assert.equal(currentTackleStake(), 5);
 assert.equal(element('btn-tackle').disabled, true);
 assert.equal(element('btn-tackle').classList.contains('hidden-screen'), false);
 advance(30000);
 assert.equal(element('btn-tackle').disabled, false);
 advance(15000);
 assert.equal(state.revealedCount, 2);
+assert.equal(currentTackleStake(), 4);
 assert.equal(element('btn-tackle').disabled, true);
 
 reset('quisuisje');
 state.currentCard = {answer:'Joueur', variants:[], clues:['Club','Titre']};
 state.revealedCount = 1;
 startTackleWindow();
+assert.equal(currentTackleStake(), 5);
 advance(30000);
 advance(15000);
 assert.equal(state.revealedCount, 2);
+assert.equal(currentTackleStake(), 4);
 assert.equal(element('btn-tackle').disabled, true);
 
 reset('lematch');
 state.currentLmCard = {competition:'Coupe du monde', teams:['A','B'], events:['But','Mi-temps']};
 state.lmRevealedCount = 1;
 startTackleWindow();
+assert.equal(currentTackleStake(), 5);
 advance(30000);
 advance(15000);
 assert.equal(state.lmRevealedCount, 2);
+assert.equal(currentTackleStake(), 4);
 assert.equal(element('btn-tackle').disabled, true);
+
+reset('transfert');
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
+state.revealedCount = 2;
+startTackleWindow();
+advance(30000);
+element('btn-tackle').click();
+element('tackle-team-buttons').children.at(-1).click();
+element('tackle-answer-input').value = 'Joueur';
+element('btn-tackle-submit').click();
+assert.equal(state.teams[1].score, 4);
+assert.equal(state.cardEnded, true);
 
 reset('plusoumoins');
 state.pomChain = {category:'Test',chain:[{name:'A',value:1},{name:'B',value:2},{name:'C',value:3}]};
 state.pomIndex = 0;
 state.pomPotential = 2;
 startTackleWindow();
+assert.equal(currentTackleStake(), 3);
 advance(30000);
 element('btn-tackle').click();
 assert.equal(element('tackle-team-buttons').children.length, 1);
@@ -127,59 +151,37 @@ advance(15000);
 assert.equal(state.teams[0].score, 2);
 assert.equal(state.cardEnded, true);
 
-// Depuis la décision du 2026-09-28 (« Tackle commun uniquement »), il n'y a plus de
-// fenêtre de contestation séparée de 5 secondes : répondre tôt ne change rien au
-// rythme du bouton Tackle commun (30 secondes grisées puis 15 ouvertes).
-
 reset('plusoumoins');
-state.pomChain = {category:'Test',chain:[{name:'A',value:1},{name:'B',value:2},{name:'C',value:3}]};
 state.pomIndex = 0;
 state.pomPotential = 0;
 startTackleWindow();
-pomGuess('plus'); // bonne réponse, verrouillée tout de suite
-assert.equal(element('btn-tackle').disabled, true); // toujours dans les 30 secondes, pas de fenêtre à part
-advance(30000);
-assert.equal(element('btn-tackle').disabled, false); // le bouton s'ouvre au même rythme que d'habitude
-advance(15000); // personne ne tackle : la réponse déjà verrouillée se révèle normalement
+pomGuess('plus');
+assert.equal(element('btn-tackle').disabled, false);
+advance(5000);
 assert.equal(state.pomPotential, 1);
 assert.equal(state.cardEnded, false);
 
-reset('plusoumoins');
-state.pomChain = {category:'Test',chain:[{name:'A',value:1},{name:'B',value:2},{name:'C',value:3}]};
-state.pomIndex = 0;
-state.pomPotential = 2;
-startTackleWindow();
-pomGuess('moins'); // mauvaise réponse déjà verrouillée avant le sifflet
-advance(30000);
-element('btn-tackle').click();
-element('tackle-team-buttons').children[0].click();
-element('tackle-binary-choice-1').click(); // l'adversaire tackle avec la bonne réponse (plus)
-assert.equal(state.teams[0].score, 0);
-assert.equal(state.teams[1].score, 3);
-assert.equal(state.cardEnded, true);
-
 reset('vraifaux');
 state.vfChain = [{affirmation:'Un fait',est_vraie:false},{affirmation:'Autre fait',est_vraie:true}];
 state.vfIndex = 0;
-state.vfPotential = 2;
+state.vfPotential = 3;
 startTackleWindow();
-vfAnswer(true); // mauvaise réponse déjà verrouillée (l'affirmation est fausse)
-assert.equal(element('btn-tackle').disabled, true);
 advance(30000);
 element('btn-tackle').click();
 element('tackle-team-buttons').children.at(-1).click();
-element('tackle-binary-choice-2').click(); // l'adversaire tackle avec FAUX (la bonne réponse)
+element('tackle-binary-choice-2').click();
+assert.equal(state.teams[0].score, 0);
 assert.equal(state.teams[1].score, 3);
-assert.equal(state.cardEnded, true);
 
 reset('vraifaux');
-state.vfChain = [{affirmation:'Un fait',est_vraie:false},{affirmation:'Autre fait',est_vraie:true}];
 state.vfIndex = 0;
 state.vfPotential = 2;
 startTackleWindow();
-vfAnswer(false); // bonne réponse déjà verrouillée
-advance(30000);
-advance(15000); // personne ne tackle : révélation normale
+vfAnswer(false);
+assert.equal(element('btn-tackle').disabled, false);
+element('btn-tackle').click();
+element('tackle-team-buttons').children.at(-1).click();
+assert.equal(state.teams[1].score, -3);
 assert.equal(state.vfPotential, 3);
 assert.equal(state.cardEnded, false);
 
