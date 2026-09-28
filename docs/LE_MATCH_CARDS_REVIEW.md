@@ -1,11 +1,11 @@
 # Le Match — finales et demi-finales
 
-103 fiches sourcées à relire avant une vraie soirée test. La compétition seule est affichée dans le jeu ; années et équipes sont réservées à la vérification.
+103 fiches sourcées marquées comme lues le 28 septembre 2026. Leur difficulté et les erreurs éventuelles restent à éprouver en partie. La compétition seule est affichée dans le jeu ; années et équipes sont réservées à la vérification.
 Les cinq événements sont des extraits du match, dans l’ordre chronologique. Les scores peuvent sauter lorsqu’un but intermédiaire ne figure pas parmi les cinq événements sélectionnés.
 La Coupe du monde 1950 avait un groupe final, sans finale ni demi-finales officielles. Les éditions 1974 et 1978 avaient une finale mais pas de demi-finales officielles. Les finales européennes de 1977–1992 relèvent de la Coupe des clubs champions.
 
 ## 1954 — Semi-final — West Germany / Austria
-Compétition affichée : **Coupe du monde**. Score final : 6-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 6-1. Statut : lu.
 
 - **5 pts** — But à la 31e minute. Le score passe à 1-0.
 - **4 pts** — But à la 47e minute. Le score passe à 2-0.
@@ -16,7 +16,7 @@ Compétition affichée : **Coupe du monde**. Score final : 6-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json)
 
 ## 1954 — Semi-final — Hungary / Uruguay
-Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : lu.
 
 - **5 pts** — But à la 12e minute. Le score passe à 1-0.
 - **4 pts** — But à la 47e minute. Le score passe à 2-0.
@@ -27,7 +27,7 @@ Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json)
 
 ## 1954 — Final — West Germany / Hungary
-Compétition affichée : **Coupe du monde**. Score final : 3-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 3-2. Statut : lu.
 
 - **5 pts** — But à la 6e minute. Le score passe à 0-1.
 - **4 pts** — But à la 8e minute. Le score passe à 0-2.
@@ -38,7 +38,7 @@ Compétition affichée : **Coupe du monde**. Score final : 3-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json)
 
 ## 1958 — Semi-final — Brazil / France
-Compétition affichée : **Coupe du monde**. Score final : 5-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 5-2. Statut : lu.
 
 - **5 pts** — But à la 2e minute. Le score passe à 1-0.
 - **4 pts** — But à la 39e minute. Le score passe à 2-1.
@@ -49,7 +49,7 @@ Compétition affichée : **Coupe du monde**. Score final : 5-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json)
 
 ## 1958 — Semi-final — Sweden / West Germany
-Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : lu.
 
 - **5 pts** — But à la 24e minute. Le score passe à 0-1.
 - **4 pts** — But à la 32e minute. Le score passe à 1-1.
@@ -60,7 +60,7 @@ Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json)
 
 ## 1958 — Final — Brazil / Sweden
-Compétition affichée : **Coupe du monde**. Score final : 5-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 5-2. Statut : lu.
 
 - **5 pts** — But à la 4e minute. Le score passe à 0-1.
 - **4 pts** — But à la 32e minute. Le score passe à 2-1.
@@ -71,7 +71,7 @@ Compétition affichée : **Coupe du monde**. Score final : 5-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json)
 
 ## 1962 — Semi-final — Czechoslovakia / Yugoslavia
-Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — But à la 48e minute. Le score passe à 1-0.
@@ -82,7 +82,7 @@ Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json)
 
 ## 1962 — Semi-final — Brazil / Chile
-Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : lu.
 
 - **5 pts** — But à la 9e minute. Le score passe à 1-0.
 - **4 pts** — But à la 32e minute. Le score passe à 2-0.
@@ -93,7 +93,7 @@ Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json)
 
 ## 1962 — Final — Brazil / Czechoslovakia
-Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : lu.
 
 - **5 pts** — But à la 15e minute. Le score passe à 0-1.
 - **4 pts** — But à la 17e minute. Le score passe à 1-1.
@@ -104,7 +104,7 @@ Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json)
 
 ## 1966 — Semi-final — West Germany / Soviet Union
-Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : lu.
 
 - **5 pts** — Avertissement à la 20e minute.
 - **4 pts** — But à la 43e minute. Le score passe à 1-0.
@@ -115,7 +115,7 @@ Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json)
 
 ## 1966 — Semi-final — England / Portugal
-Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : lu.
 
 - **5 pts** — But à la 30e minute. Le score passe à 1-0.
 - **4 pts** — À la mi-temps, le score est de 1-0.
@@ -126,7 +126,7 @@ Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json)
 
 ## 1966 — Final — England / West Germany
-Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : lu.
 
 - **5 pts** — But à la 12e minute. Le score passe à 0-1.
 - **4 pts** — But à la 78e minute. Le score passe à 2-1.
@@ -137,7 +137,7 @@ Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json)
 
 ## 1970 — Semi-final — Brazil / Uruguay
-Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : lu.
 
 - **5 pts** — Carton jaune à la 5e minute.
 - **4 pts** — But à la 19e minute. Le score passe à 0-1.
@@ -148,7 +148,7 @@ Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json)
 
 ## 1970 — Semi-final — Italy / West Germany
-Compétition affichée : **Coupe du monde**. Score final : 4-3. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 4-3. Statut : lu.
 
 - **5 pts** — But à la 8e minute. Le score passe à 1-0.
 - **4 pts** — But à la 90e minute. Le score passe à 1-1.
@@ -159,7 +159,7 @@ Compétition affichée : **Coupe du monde**. Score final : 4-3. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json)
 
 ## 1970 — Final — Brazil / Italy
-Compétition affichée : **Coupe du monde**. Score final : 4-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 4-1. Statut : lu.
 
 - **5 pts** — But à la 18e minute. Le score passe à 1-0.
 - **4 pts** — But à la 37e minute. Le score passe à 1-1.
@@ -170,7 +170,7 @@ Compétition affichée : **Coupe du monde**. Score final : 4-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json)
 
 ## 1974 — Final — Netherlands / West Germany
-Compétition affichée : **Coupe du monde**. Score final : 1-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-2. Statut : lu.
 
 - **5 pts** — Penalty transformé à la 2e minute. Le score passe à 1-0.
 - **4 pts** — Penalty transformé à la 25e minute. Le score passe à 1-1.
@@ -181,7 +181,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1974/worldcup-full.json)
 
 ## 1978 — Final — Argentina / Netherlands
-Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : lu.
 
 - **5 pts** — But à la 38e minute. Le score passe à 1-0.
 - **4 pts** — But à la 82e minute. Le score passe à 1-1.
@@ -192,7 +192,7 @@ Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1978/worldcup-full.json)
 
 ## 1982 — Semi-final — Poland / Italy
-Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : lu.
 
 - **5 pts** — But à la 22e minute. Le score passe à 0-1.
 - **4 pts** — Remplacement à la 28e minute.
@@ -203,7 +203,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json)
 
 ## 1982 — Semi-final — West Germany / France
-Compétition affichée : **Coupe du monde**. Score final : 3-3. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 3-3. Statut : lu.
 
 - **5 pts** — But à la 17e minute. Le score passe à 1-0.
 - **4 pts** — Penalty transformé à la 26e minute. Le score passe à 1-1.
@@ -214,7 +214,7 @@ Compétition affichée : **Coupe du monde**. Score final : 3-3. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json)
 
 ## 1982 — Final — Italy / West Germany
-Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : lu.
 
 - **5 pts** — Carton jaune à la 31e minute.
 - **4 pts** — But à la 57e minute. Le score passe à 1-0.
@@ -225,7 +225,7 @@ Compétition affichée : **Coupe du monde**. Score final : 3-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json)
 
 ## 1986 — Semi-final — France / West Germany
-Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : lu.
 
 - **5 pts** — But à la 9e minute. Le score passe à 0-1.
 - **4 pts** — À la mi-temps, le score est de 0-1.
@@ -236,7 +236,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json)
 
 ## 1986 — Semi-final — Argentina / Belgium
-Compétition affichée : **Coupe du monde**. Score final : 2-0. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 2-0. Statut : lu.
 
 - **5 pts** — Carton jaune à la 27e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -247,7 +247,7 @@ Compétition affichée : **Coupe du monde**. Score final : 2-0. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json)
 
 ## 1986 — Final — Argentina / West Germany
-Compétition affichée : **Coupe du monde**. Score final : 3-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 3-2. Statut : lu.
 
 - **5 pts** — But à la 23e minute. Le score passe à 1-0.
 - **4 pts** — But à la 56e minute. Le score passe à 2-0.
@@ -258,7 +258,7 @@ Compétition affichée : **Coupe du monde**. Score final : 3-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json)
 
 ## 1990 — Semi-final — Italy / Argentina
-Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : lu.
 
 - **5 pts** — But à la 17e minute. Le score passe à 1-0.
 - **4 pts** — À la mi-temps, le score est de 1-0.
@@ -269,7 +269,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json)
 
 ## 1990 — Semi-final — West Germany / England
-Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — But à la 60e minute. Le score passe à 1-0.
@@ -280,7 +280,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json)
 
 ## 1990 — Final — West Germany / Argentina
-Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — Carton jaune à la 5e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -291,7 +291,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json)
 
 ## 1994 — Semi-final — Bulgaria / Italy
-Compétition affichée : **Coupe du monde**. Score final : 1-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-2. Statut : lu.
 
 - **5 pts** — But à la 21e minute. Le score passe à 0-1.
 - **4 pts** — But à la 25e minute. Le score passe à 0-2.
@@ -302,7 +302,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json)
 
 ## 1994 — Semi-final — Sweden / Brazil
-Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — Carton jaune à la 3e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -313,7 +313,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json)
 
 ## 1994 — Final — Brazil / Italy
-Compétition affichée : **Coupe du monde**. Score final : 0-0. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-0. Statut : lu.
 
 - **5 pts** — Carton jaune à la 4e minute.
 - **4 pts** — Remplacement à la 21e minute.
@@ -324,7 +324,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-0. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json)
 
 ## 1998 — Semi-final — Brazil / Netherlands
-Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : lu.
 
 - **5 pts** — Carton jaune à la 31e minute.
 - **4 pts** — But à la 46e minute. Le score passe à 1-0.
@@ -335,7 +335,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json)
 
 ## 1998 — Semi-final — France / Croatia
-Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : lu.
 
 - **5 pts** — But à la 46e minute. Le score passe à 0-1.
 - **4 pts** — But à la 47e minute. Le score passe à 1-1.
@@ -346,7 +346,7 @@ Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json)
 
 ## 1998 — Final — Brazil / France
-Compétition affichée : **Coupe du monde**. Score final : 0-3. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-3. Statut : lu.
 
 - **5 pts** — But à la 27e minute. Le score passe à 0-1.
 - **4 pts** — But à la 45e minute (+1). Le score passe à 0-2.
@@ -357,7 +357,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-3. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json)
 
 ## 2002 — Semi-final — Germany / South Korea
-Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — Remplacement à la 56e minute.
@@ -368,7 +368,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json)
 
 ## 2002 — Semi-final — Brazil / Turkey
-Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — But à la 49e minute. Le score passe à 1-0.
@@ -379,7 +379,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json)
 
 ## 2002 — Final — Germany / Brazil
-Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : lu.
 
 - **5 pts** — Carton jaune à la 9e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -390,7 +390,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json)
 
 ## 2006 — Semi-final — Germany / Italy
-Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — Carton jaune à la 56e minute.
@@ -401,7 +401,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json)
 
 ## 2006 — Semi-final — Portugal / France
-Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — Penalty transformé à la 33e minute. Le score passe à 0-1.
 - **4 pts** — À la mi-temps, le score est de 0-1.
@@ -412,7 +412,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json)
 
 ## 2006 — Final — Italy / France
-Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : lu.
 
 - **5 pts** — Penalty transformé à la 7e minute. Le score passe à 0-1.
 - **4 pts** — But à la 19e minute. Le score passe à 1-1.
@@ -423,7 +423,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json)
 
 ## 2010 — Semi-final — Uruguay / Netherlands
-Compétition affichée : **Coupe du monde**. Score final : 2-3. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 2-3. Statut : lu.
 
 - **5 pts** — But à la 17e minute. Le score passe à 0-1.
 - **4 pts** — But à la 40e minute. Le score passe à 1-1.
@@ -434,7 +434,7 @@ Compétition affichée : **Coupe du monde**. Score final : 2-3. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json)
 
 ## 2010 — Semi-final — Germany / Spain
-Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — Remplacement à la 61e minute.
@@ -445,7 +445,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json)
 
 ## 2010 — Final — Netherlands / Spain
-Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — Carton jaune à la 14e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -456,7 +456,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json)
 
 ## 2014 — Semi-final — Brazil / Germany
-Compétition affichée : **Coupe du monde**. Score final : 1-7. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-7. Statut : lu.
 
 - **5 pts** — But à la 10e minute. Le score passe à 0-1.
 - **4 pts** — But à la 28e minute. Le score passe à 0-5.
@@ -467,7 +467,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-7. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json)
 
 ## 2014 — Semi-final — Netherlands / Argentina
-Compétition affichée : **Coupe du monde**. Score final : 0-0. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-0. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — Remplacement à la 61e minute.
@@ -478,7 +478,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-0. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json)
 
 ## 2014 — Final — Germany / Argentina
-Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — Remplacement à la 30e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -489,7 +489,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json)
 
 ## 2018 — Semi-final — France / Belgium
-Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — But à la 51e minute. Le score passe à 1-0.
@@ -500,7 +500,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json)
 
 ## 2018 — Semi-final — Croatia / England
-Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : lu.
 
 - **5 pts** — But à la 5e minute. Le score passe à 0-1.
 - **4 pts** — À la mi-temps, le score est de 0-1.
@@ -511,7 +511,7 @@ Compétition affichée : **Coupe du monde**. Score final : 2-1. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json)
 
 ## 2018 — Final — France / Croatia
-Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : lu.
 
 - **5 pts** — But à la 18e minute. Le score passe à 1-0.
 - **4 pts** — But à la 28e minute. Le score passe à 1-1.
@@ -522,7 +522,7 @@ Compétition affichée : **Coupe du monde**. Score final : 4-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json)
 
 ## 2022 — Semi-final — Argentina / Croatia
-Compétition affichée : **Coupe du monde**. Score final : 3-0. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 3-0. Statut : lu.
 
 - **5 pts** — Penalty transformé à la 34e minute. Le score passe à 1-0.
 - **4 pts** — But à la 39e minute. Le score passe à 2-0.
@@ -533,7 +533,7 @@ Compétition affichée : **Coupe du monde**. Score final : 3-0. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json)
 
 ## 2022 — Semi-final — France / Morocco
-Compétition affichée : **Coupe du monde**. Score final : 2-0. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 2-0. Statut : lu.
 
 - **5 pts** — But à la 5e minute. Le score passe à 1-0.
 - **4 pts** — Carton jaune à la 27e minute.
@@ -544,7 +544,7 @@ Compétition affichée : **Coupe du monde**. Score final : 2-0. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json)
 
 ## 2022 — Final — Argentina / France
-Compétition affichée : **Coupe du monde**. Score final : 3-3. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 3-3. Statut : lu.
 
 - **5 pts** — Penalty transformé à la 23e minute. Le score passe à 1-0.
 - **4 pts** — But à la 36e minute. Le score passe à 2-0.
@@ -555,7 +555,7 @@ Compétition affichée : **Coupe du monde**. Score final : 3-3. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json)
 
 ## 2026 — Semi-final — France / Spain
-Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : lu.
 
 - **5 pts** — Penalty transformé à la 22e minute. Le score passe à 0-1.
 - **4 pts** — À la mi-temps, le score est de 0-1.
@@ -566,7 +566,7 @@ Compétition affichée : **Coupe du monde**. Score final : 0-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json)
 
 ## 2026 — Semi-final — England / Argentina
-Compétition affichée : **Coupe du monde**. Score final : 1-2. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-2. Statut : lu.
 
 - **5 pts** — Carton jaune à la 37e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -577,7 +577,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-2. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json)
 
 ## 2026 — Final — Spain / Argentina
-Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — Carton jaune à la 52e minute.
@@ -588,7 +588,7 @@ Compétition affichée : **Coupe du monde**. Score final : 1-0. Statut : à reli
 Sources : [lien](https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json)
 
 ## 1977 — Final — Borussia Mönchengladbach / Liverpool
-Compétition affichée : **Coupe des clubs champions**. Score final : 1-3. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 1-3. Statut : lu.
 
 - **5 pts** — But à la 28e minute. Le score passe à 0-1.
 - **4 pts** — À la mi-temps, le score est de 0-1.
@@ -599,7 +599,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 1-3. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1977_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1976/matches/round=1003/match=63393/index.html)
 
 ## 1978 — Final — Club Brugge / Liverpool
-Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — Carton jaune à la 29e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -610,7 +610,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1978_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1977/matches/round=1008/match=63452/index.html)
 
 ## 1979 — Final — Malmö FF / Nottingham Forest
-Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — Remplacement à la 34e minute.
 - **4 pts** — But à la 45e minute (+1). Le score passe à 0-1.
@@ -621,7 +621,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1979_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1978/matches/round=1014/match=63579/index.html)
 
 ## 1980 — Final — Nottingham Forest / Hamburger SV
-Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — But à la 20e minute. Le score passe à 1-0.
 - **4 pts** — À la mi-temps, le score est de 1-0.
@@ -632,7 +632,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1980_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1979/matches/round=1020/match=63642/index.html)
 
 ## 1981 — Final — Real Madrid / Liverpool
-Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — Carton jaune à la 29e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -643,7 +643,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1981_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1980/matches/round=1026/match=63741/index.html)
 
 ## 1982 — Final — Bayern Munich / Aston Villa
-Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — Remplacement à la 9e minute.
 - **4 pts** — Carton jaune à la 38e minute.
@@ -654,7 +654,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1982_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1981/matches/round=1032/match=63804/index.html)
 
 ## 1983 — Final — Hamburger SV / Juventus
-Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — But à la 9e minute. Le score passe à 1-0.
 - **4 pts** — Carton jaune à la 35e minute.
@@ -665,7 +665,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1983_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1982/matches/round=1038/match=63867/index.html)
 
 ## 1984 — Final — Liverpool / Roma
-Compétition affichée : **Coupe des clubs champions**. Score final : 1-1. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 1-1. Statut : lu.
 
 - **5 pts** — But à la 13e minute. Le score passe à 1-0.
 - **4 pts** — Carton jaune à la 32e minute.
@@ -676,7 +676,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 1-1. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1984_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1983/matches/round=5/match=986/index.html)
 
 ## 1985 — Final — Liverpool / Juventus
-Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — Remplacement à la 4e minute.
 - **4 pts** — Carton jaune à la 38e minute.
@@ -687,7 +687,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 0-1. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1985_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1984/matches/round=1043/match=63928/index.html)
 
 ## 1986 — Final — Barcelona / Steaua București
-Compétition affichée : **Coupe des clubs champions**. Score final : 0-0. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 0-0. Statut : lu.
 
 - **5 pts** — Carton jaune à la 21e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -698,7 +698,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 0-0. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1986_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1985/matches/round=1048/match=63987/index.html)
 
 ## 1987 — Final — Bayern Munich / Porto
-Compétition affichée : **Coupe des clubs champions**. Score final : 1-2. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 1-2. Statut : lu.
 
 - **5 pts** — But à la 25e minute. Le score passe à 1-0.
 - **4 pts** — À la mi-temps, le score est de 1-0.
@@ -709,7 +709,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 1-2. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1987_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1986/matches/round=20/match=4145/index.html)
 
 ## 1988 — Final — PSV Eindhoven / Benfica
-Compétition affichée : **Coupe des clubs champions**. Score final : 0-0. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 0-0. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — Remplacement à la 56e minute.
@@ -720,7 +720,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 0-0. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1988_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1987/matches/round=25/match=4086/index.html)
 
 ## 1989 — Final — Steaua București / Milan
-Compétition affichée : **Coupe des clubs champions**. Score final : 0-4. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 0-4. Statut : lu.
 
 - **5 pts** — But à la 18e minute. Le score passe à 0-1.
 - **4 pts** — But à la 28e minute. Le score passe à 0-2.
@@ -731,7 +731,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 0-4. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1989_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/match/924--fcsb-vs-milan/)
 
 ## 1990 — Final — Milan / Benfica
-Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — Carton jaune à la 40e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -742,7 +742,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1990_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2754--milan-vs-benfica/)
 
 ## 1991 — Final — Red Star Belgrade / Marseille
-Compétition affichée : **Coupe des clubs champions**. Score final : 0-0. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 0-0. Statut : lu.
 
 - **5 pts** — Carton jaune à la 26e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -753,7 +753,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 0-0. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1991_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/season=1990/matches/round=40/match=4373/index.html)
 
 ## 1992 — Final — Barcelona / Sampdoria
-Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — Carton jaune à la 66e minute.
@@ -764,7 +764,7 @@ Compétition affichée : **Coupe des clubs champions**. Score final : 1-0. Statu
 Sources : [lien](https://en.wikipedia.org/wiki/1992_European_Cup_final) · [lien](https://www.uefa.com/uefachampionsleague/match/5863/)
 
 ## 1993 — Final — Marseille / Milan
-Compétition affichée : **Ligue des champions**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — Carton jaune à la 31e minute.
 - **4 pts** — But à la 44e minute. Le score passe à 1-0.
@@ -775,7 +775,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-0. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/1993_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/50054/)
 
 ## 1994 — Final — Milan / Barcelona
-Compétition affichée : **Ligue des champions**. Score final : 4-0. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 4-0. Statut : lu.
 
 - **5 pts** — But à la 22e minute. Le score passe à 1-0.
 - **4 pts** — But à la 45e minute (+2). Le score passe à 2-0.
@@ -786,7 +786,7 @@ Compétition affichée : **Ligue des champions**. Score final : 4-0. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/1994_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/51078/)
 
 ## 1995 — Final — Ajax / Milan
-Compétition affichée : **Ligue des champions**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — Carton jaune à la 33e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -797,7 +797,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-0. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/1995_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/51668/)
 
 ## 1996 — Final — Ajax / Juventus
-Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : lu.
 
 - **5 pts** — But à la 12e minute. Le score passe à 0-1.
 - **4 pts** — But à la 41e minute. Le score passe à 1-1.
@@ -808,7 +808,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/1996_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/52534/)
 
 ## 1997 — Final — Borussia Dortmund / Juventus
-Compétition affichée : **Ligue des champions**. Score final : 3-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 3-1. Statut : lu.
 
 - **5 pts** — But à la 29e minute. Le score passe à 1-0.
 - **4 pts** — But à la 34e minute. Le score passe à 2-0.
@@ -819,7 +819,7 @@ Compétition affichée : **Ligue des champions**. Score final : 3-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/1997_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/53915/)
 
 ## 1998 — Final — Juventus / Real Madrid
-Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — Carton jaune à la 23e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -830,7 +830,7 @@ Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/1998_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/54859/)
 
 ## 1999 — Final — Manchester United / Bayern Munich
-Compétition affichée : **Ligue des champions**. Score final : 2-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 2-1. Statut : lu.
 
 - **5 pts** — But à la 6e minute. Le score passe à 0-1.
 - **4 pts** — À la mi-temps, le score est de 0-1.
@@ -841,7 +841,7 @@ Compétition affichée : **Ligue des champions**. Score final : 2-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/1999_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/56379/)
 
 ## 2000 — Final — Real Madrid / Valencia
-Compétition affichée : **Ligue des champions**. Score final : 3-0. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 3-0. Statut : lu.
 
 - **5 pts** — But à la 39e minute. Le score passe à 1-0.
 - **4 pts** — À la mi-temps, le score est de 1-0.
@@ -852,7 +852,7 @@ Compétition affichée : **Ligue des champions**. Score final : 3-0. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2000_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/64833/)
 
 ## 2001 — Final — Bayern Munich / Valencia
-Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : lu.
 
 - **5 pts** — Penalty transformé à la 3e minute. Le score passe à 0-1.
 - **4 pts** — Carton jaune à la 26e minute.
@@ -863,7 +863,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2001_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/67752/)
 
 ## 2002 — Final — Bayer Leverkusen / Real Madrid
-Compétition affichée : **Ligue des champions**. Score final : 1-2. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-2. Statut : lu.
 
 - **5 pts** — But à la 8e minute. Le score passe à 0-1.
 - **4 pts** — But à la 14e minute. Le score passe à 1-1.
@@ -874,7 +874,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-2. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2002_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/69489/)
 
 ## 2003 — Final — Juventus / Milan
-Compétition affichée : **Ligue des champions**. Score final : 0-0. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 0-0. Statut : lu.
 
 - **5 pts** — Carton jaune à la 18e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -885,7 +885,7 @@ Compétition affichée : **Ligue des champions**. Score final : 0-0. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2003_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/71176/)
 
 ## 2004 — Final — Monaco / Porto
-Compétition affichée : **Ligue des champions**. Score final : 0-3. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 0-3. Statut : lu.
 
 - **5 pts** — Carton jaune à la 29e minute.
 - **4 pts** — But à la 39e minute. Le score passe à 0-1.
@@ -896,7 +896,7 @@ Compétition affichée : **Ligue des champions**. Score final : 0-3. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2004_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/75433/)
 
 ## 2005 — Final — Milan / Liverpool
-Compétition affichée : **Ligue des champions**. Score final : 3-3. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 3-3. Statut : lu.
 
 - **5 pts** — But à la 1re minute. Le score passe à 1-0.
 - **4 pts** — But à la 39e minute. Le score passe à 2-0.
@@ -907,7 +907,7 @@ Compétition affichée : **Ligue des champions**. Score final : 3-3. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2005_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/80813/)
 
 ## 2006 — Final — Barcelona / Arsenal
-Compétition affichée : **Ligue des champions**. Score final : 2-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 2-1. Statut : lu.
 
 - **5 pts** — Expulsion à la 18e minute.
 - **4 pts** — But à la 37e minute. Le score passe à 0-1.
@@ -918,7 +918,7 @@ Compétition affichée : **Ligue des champions**. Score final : 2-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2006_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/84101/)
 
 ## 2007 — Final — Milan / Liverpool
-Compétition affichée : **Ligue des champions**. Score final : 2-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 2-1. Statut : lu.
 
 - **5 pts** — But à la 45e minute. Le score passe à 1-0.
 - **4 pts** — À la mi-temps, le score est de 1-0.
@@ -929,7 +929,7 @@ Compétition affichée : **Ligue des champions**. Score final : 2-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2007_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/300099/)
 
 ## 2008 — Final — Manchester United / Chelsea
-Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : lu.
 
 - **5 pts** — But à la 26e minute. Le score passe à 1-0.
 - **4 pts** — But à la 45e minute. Le score passe à 1-1.
@@ -940,7 +940,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2008_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/301604/)
 
 ## 2009 — Final — Barcelona / Manchester United
-Compétition affichée : **Ligue des champions**. Score final : 2-0. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 2-0. Statut : lu.
 
 - **5 pts** — But à la 10e minute. Le score passe à 1-0.
 - **4 pts** — À la mi-temps, le score est de 1-0.
@@ -951,7 +951,7 @@ Compétition affichée : **Ligue des champions**. Score final : 2-0. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2009_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/302813/)
 
 ## 2010 — Final — Bayern Munich / Inter Milan
-Compétition affichée : **Ligue des champions**. Score final : 0-2. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 0-2. Statut : lu.
 
 - **5 pts** — Carton jaune à la 26e minute.
 - **4 pts** — But à la 35e minute. Le score passe à 0-1.
@@ -962,7 +962,7 @@ Compétition affichée : **Ligue des champions**. Score final : 0-2. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2010_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2000488/)
 
 ## 2011 — Final — Barcelona / Manchester United
-Compétition affichée : **Ligue des champions**. Score final : 3-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 3-1. Statut : lu.
 
 - **5 pts** — But à la 27e minute. Le score passe à 1-0.
 - **4 pts** — But à la 34e minute. Le score passe à 1-1.
@@ -973,7 +973,7 @@ Compétition affichée : **Ligue des champions**. Score final : 3-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2011_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2003352/)
 
 ## 2012 — Final — Bayern Munich / Chelsea
-Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : lu.
 
 - **5 pts** — Carton jaune à la 2e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -984,7 +984,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2012_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2007693/)
 
 ## 2013 — Final — Borussia Dortmund / Bayern Munich
-Compétition affichée : **Ligue des champions**. Score final : 1-2. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-2. Statut : lu.
 
 - **5 pts** — Carton jaune à la 29e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -995,7 +995,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-2. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2013_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2009612/)
 
 ## 2014 — Final — Real Madrid / Atlético Madrid
-Compétition affichée : **Ligue des champions**. Score final : 4-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 4-1. Statut : lu.
 
 - **5 pts** — But à la 36e minute. Le score passe à 0-1.
 - **4 pts** — But à la 90e minute (+3). Le score passe à 1-1.
@@ -1006,7 +1006,7 @@ Compétition affichée : **Ligue des champions**. Score final : 4-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2014_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2011883/)
 
 ## 2015 — Final — Juventus / Barcelona
-Compétition affichée : **Ligue des champions**. Score final : 1-3. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-3. Statut : lu.
 
 - **5 pts** — But à la 4e minute. Le score passe à 0-1.
 - **4 pts** — Carton jaune à la 41e minute.
@@ -1017,7 +1017,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-3. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2015_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2015227/)
 
 ## 2016 — Final — Real Madrid / Atlético Madrid
-Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : lu.
 
 - **5 pts** — But à la 15e minute. Le score passe à 1-0.
 - **4 pts** — Carton jaune à la 47e minute.
@@ -1028,7 +1028,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2016_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2015789/)
 
 ## 2017 — Final — Juventus / Real Madrid
-Compétition affichée : **Ligue des champions**. Score final : 1-4. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-4. Statut : lu.
 
 - **5 pts** — But à la 20e minute. Le score passe à 0-1.
 - **4 pts** — But à la 27e minute. Le score passe à 1-1.
@@ -1039,7 +1039,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-4. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2017_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2019641/)
 
 ## 2018 — Final — Real Madrid / Liverpool
-Compétition affichée : **Ligue des champions**. Score final : 3-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 3-1. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — But à la 51e minute. Le score passe à 1-0.
@@ -1050,7 +1050,7 @@ Compétition affichée : **Ligue des champions**. Score final : 3-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2018_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2021711/)
 
 ## 2019 — Final — Tottenham Hotspur / Liverpool
-Compétition affichée : **Ligue des champions**. Score final : 0-2. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 0-2. Statut : lu.
 
 - **5 pts** — Penalty transformé à la 2e minute. Le score passe à 0-1.
 - **4 pts** — À la mi-temps, le score est de 0-1.
@@ -1061,7 +1061,7 @@ Compétition affichée : **Ligue des champions**. Score final : 0-2. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2019_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2025486/)
 
 ## 2020 — Final — Paris Saint-Germain / Bayern Munich
-Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — Remplacement à la 25e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -1072,7 +1072,7 @@ Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2020_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2030150/)
 
 ## 2021 — Final — Manchester City / Chelsea
-Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — But à la 42e minute. Le score passe à 0-1.
 - **4 pts** — À la mi-temps, le score est de 0-1.
@@ -1083,7 +1083,7 @@ Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2021_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2029498/)
 
 ## 2022 — Final — Liverpool / Real Madrid
-Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — But à la 59e minute. Le score passe à 0-1.
@@ -1094,7 +1094,7 @@ Compétition affichée : **Ligue des champions**. Score final : 0-1. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2022_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2034586/)
 
 ## 2023 — Final — Manchester City / Inter Milan
-Compétition affichée : **Ligue des champions**. Score final : 1-0. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-0. Statut : lu.
 
 - **5 pts** — À la mi-temps, le score est de 0-0.
 - **4 pts** — Remplacement à la 57e minute.
@@ -1105,7 +1105,7 @@ Compétition affichée : **Ligue des champions**. Score final : 1-0. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2023_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2037765/)
 
 ## 2024 — Final — Borussia Dortmund / Real Madrid
-Compétition affichée : **Ligue des champions**. Score final : 0-2. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 0-2. Statut : lu.
 
 - **5 pts** — Carton jaune à la 35e minute.
 - **4 pts** — À la mi-temps, le score est de 0-0.
@@ -1116,7 +1116,7 @@ Compétition affichée : **Ligue des champions**. Score final : 0-2. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2024_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2039970/)
 
 ## 2025 — Final — Paris Saint-Germain / Inter Milan
-Compétition affichée : **Ligue des champions**. Score final : 5-0. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 5-0. Statut : lu.
 
 - **5 pts** — But à la 12e minute. Le score passe à 1-0.
 - **4 pts** — But à la 20e minute. Le score passe à 2-0.
@@ -1127,7 +1127,7 @@ Compétition affichée : **Ligue des champions**. Score final : 5-0. Statut : à
 Sources : [lien](https://en.wikipedia.org/wiki/2025_UEFA_Champions_League_final) · [lien](https://www.uefa.com/uefachampionsleague/match/2044466/)
 
 ## 2026 — Final — Paris Saint-Germain / Arsenal
-Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : à relire.
+Compétition affichée : **Ligue des champions**. Score final : 1-1. Statut : lu.
 
 - **5 pts** — But à la 6e minute. Le score passe à 0-1.
 - **4 pts** — À la mi-temps, le score est de 0-1.
