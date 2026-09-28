@@ -104,7 +104,7 @@ assert.equal(element('tackle-team-buttons').children.length, 1);
 element('tackle-team-buttons').children[0].click();
 element('tackle-binary-choice-1').click();
 assert.equal(state.teams[0].score, 0);
-assert.equal(state.teams[1].score, 5);
+assert.equal(state.teams[1].score, 3);
 assert.equal(state.cardEnded, true);
 
 reset('plusoumoins');
@@ -116,7 +116,7 @@ element('btn-tackle').click();
 element('tackle-team-buttons').children[0].click();
 element('tackle-binary-choice-2').click();
 assert.equal(state.teams[0].score, 2);
-assert.equal(state.teams[1].score, -5);
+assert.equal(state.teams[1].score, -3);
 
 reset('plusoumoins');
 state.pomIndex = 0;
@@ -147,7 +147,7 @@ element('btn-tackle').click();
 element('tackle-team-buttons').children.at(-1).click();
 element('tackle-binary-choice-2').click();
 assert.equal(state.teams[0].score, 0);
-assert.equal(state.teams[1].score, 5);
+assert.equal(state.teams[1].score, 3);
 
 reset('vraifaux');
 state.vfIndex = 0;
@@ -157,7 +157,7 @@ vfAnswer(false);
 assert.equal(element('btn-tackle').disabled, false);
 element('btn-tackle').click();
 element('tackle-team-buttons').children.at(-1).click();
-assert.equal(state.teams[1].score, -5);
+assert.equal(state.teams[1].score, -3);
 assert.equal(state.vfPotential, 3);
 assert.equal(state.cardEnded, false);
 
