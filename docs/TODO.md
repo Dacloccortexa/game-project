@@ -3,7 +3,8 @@
 ## À prototyper
 
 - ✅ Un parcours sur un seul téléphone : créer 1 à 4 équipes, choisir 5/10/20 manches, sélectionner les mini-jeux, jouer, puis voir le classement. Implémenté dans `index.html`.
-- ⏳ Intégrer le nouveau parcours de préparation validé dans [UI_SETUP_FLOW.md](UI_SETUP_FLOW.md) : 5/10/15/20 manches, sous-page « Défis » et personnalisation des noms, logos et couleurs avant le coup d'envoi. Les deux planches sont dans `docs/ui/`.
+- ✅ Parcours de préparation de [UI_SETUP_FLOW.md](UI_SETUP_FLOW.md) intégré dans `index.html` : « Créer une partie » (1–4 équipes, 5/10/15/20 manches), sous-page « Choisir les défis » (encadré doré, au moins un défi), « Personnaliser les équipes » (nom, logo, couleur préattribués), puis « Coup d'envoi ». Logos et couleurs repris dans le score et le classement ; « Revanche » revient à « Créer une partie » avec les réglages conservés. Vérifié en navigateur à 390 × 844 et 320 × 568.
+- ⏳ Vérifier ce parcours sur un vrai téléphone (iPhone et Android) avant la prochaine soirée test.
 - ✅ Transfert : révélation chronologique, tentative ou passe, pénalité de −1, points dégressifs, carte à club unique, porteur de téléphone désigné, confirmation de la réponse saisie. Implémenté dans `index.html`.
 - ✅ Lot de 112 cartes dans `src/data/transfert-cards.json`, dont **100 vérifiées** (chargées en jeu) et **12 encore à vérifier** (exclues du jeu tant qu'elles ne le sont pas).
 - ⏳ Une vraie partie test à consigner ensuite dans `PLAYTESTS.md`.

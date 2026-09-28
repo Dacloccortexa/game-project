@@ -1,6 +1,6 @@
 # Préparer une partie — trois écrans TACKLE
 
-Statut : **maquettes validées pour intégration**. Ce document décrit le parcours voulu pour l'interface mobile. Le site actuel peut encore afficher l'ancien formulaire ; les règles des cinq défis restent décrites dans [GAME_DESIGN.md](GAME_DESIGN.md).
+Statut : **intégré dans `index.html`** (2026-09-28), à vérifier sur un vrai téléphone. Ce document décrit le parcours voulu pour l'interface mobile ; les règles des cinq défis restent décrites dans [GAME_DESIGN.md](GAME_DESIGN.md).
 
 ## Planches
 

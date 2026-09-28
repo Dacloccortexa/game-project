@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>TACKLE — Le jeu de foot entre amis</title>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/oswald-latin-600-normal.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/ui/web/stadium-night.webp">
+<link rel="preload" as="image" href="assets/ui/web/tackle-logo-brush.webp">
 <style>
   :root {
     --pitch: #0F3D2E;
@@ -624,71 +627,557 @@
     html { scroll-behavior: auto; }
   }
 
+  /* ---------- Parcours de préparation (docs/UI_SETUP_FLOW.md, assets/ui/ASSETS.md) ---------- */
+  /* Oswald (SIL OFL, assets/fonts/OFL-Oswald.txt) hébergée avec le site : aucune dépendance externe. */
+  @font-face { font-family: "Oswald"; font-weight: 500; font-display: swap; src: url("assets/fonts/oswald-latin-500-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Oswald"; font-weight: 600; font-display: swap; src: url("assets/fonts/oswald-latin-600-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Oswald"; font-weight: 700; font-display: swap; src: url("assets/fonts/oswald-latin-700-normal.woff2") format("woff2"); }
+  :root {
+    --font-cond: "Oswald", "Arial Narrow", Impact, sans-serif;
+    --ivory: #f4efe0;
+    --gold-hi: #ffe39a;
+    --gold-ring: #f2c75a;
+  }
+  .sr-only {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0);
+    white-space: nowrap; border: 0;
+  }
+  .app { position: relative; z-index: 1; }
+  .setup-bg, .setup-turf { display: none; }
+  body.setup-flow { background: #04130e; }
+  body.setup-flow .setup-bg {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(3,17,12,.30) 0%, rgba(3,17,12,.62) 30%, rgba(3,17,12,.74) 62%, rgba(3,17,12,.50) 100%),
+      url("assets/ui/web/stadium-night.webp") center top / cover no-repeat,
+      #04130e;
+  }
+  body.setup-flow .setup-turf {
+    display: block;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    height: 24vh;
+    z-index: 0;
+    pointer-events: none;
+    background: url("assets/ui/web/turf-foreground.webp") center bottom / cover no-repeat;
+    opacity: .85;
+  }
+
+  .setup-screen {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100svh - 80px);
+  }
+  .setup-screen.hidden-screen { display: none; }
+  .setup-top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 92px;
+  }
+  h1.setup-logo {
+    margin: 0;
+    line-height: 0;
+    transform: none;
+    text-shadow: none;
+  }
+  h1.setup-logo::after { content: none; }
+  .setup-logo img {
+    width: min(62vw, 240px);
+    height: auto;
+    aspect-ratio: 2 / 1;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,.55));
+  }
+  .back-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1.5px solid rgba(248,246,237,.6);
+    background: rgba(3,17,12,.6);
+    color: var(--chalk);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  h2.setup-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 12px 0 22px;
+    font-family: var(--font-cond);
+    font-weight: 700;
+    font-size: clamp(18px, 5.6vw, 25px);
+    letter-spacing: .02em;
+    line-height: 1.1;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--chalk);
+    text-shadow: 0 2px 10px rgba(0,0,0,.7);
+  }
+  h2.setup-title::before, h2.setup-title::after {
+    content: "";
+    flex: 1;
+    min-width: 12px;
+    height: 2px;
+    background: rgba(248,246,237,.8);
+  }
+  h2.setup-title:focus { outline: none; }
+  .setup-label {
+    margin: 0 0 14px;
+    font-family: var(--font-cond);
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--chalk);
+    text-shadow: 0 2px 8px rgba(0,0,0,.7);
+  }
+  .round-choices {
+    display: flex;
+    justify-content: center;
+    gap: clamp(9px, 3.4vw, 16px);
+  }
+  .round-choice {
+    width: clamp(56px, 17vw, 70px);
+    height: clamp(56px, 17vw, 70px);
+    padding: 0;
+    border-radius: 50%;
+    border: 1.5px solid rgba(248,246,237,.62);
+    background: rgba(3,17,12,.62);
+    color: var(--chalk);
+    font-family: var(--font-cond);
+    font-weight: 600;
+    font-size: clamp(23px, 7vw, 28px);
+    cursor: pointer;
+    transition: transform .12s ease;
+  }
+  .round-choice[aria-pressed="true"] {
+    border: 2px solid var(--gold-hi);
+    background: radial-gradient(circle at 50% 30%, #ffe7a3, #eab44a 55%, #b9811f);
+    color: #241603;
+    box-shadow: 0 0 0 3px rgba(242,199,90,.25), 0 0 22px rgba(242,191,84,.45);
+  }
+  .round-choice:active { transform: scale(.95); }
+  .setup-divider {
+    height: 1px;
+    margin: 24px 4px;
+    background: linear-gradient(90deg, transparent, rgba(248,246,237,.35), transparent);
+  }
+  .challenges-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-height: 74px;
+    padding: 0 16px;
+    border-radius: 18px;
+    border: 1.5px solid rgba(242,199,90,.7);
+    background: rgba(3,17,12,.72);
+    color: var(--chalk);
+    text-align: left;
+    cursor: pointer;
+  }
+  .challenges-link .link-icon {
+    display: flex;
+    padding-right: 14px;
+    border-right: 1px solid rgba(248,246,237,.35);
+    color: var(--gold);
+  }
+  .challenges-link .link-title {
+    flex: 1;
+    font-family: var(--font-cond);
+    font-weight: 600;
+    font-size: 21px;
+  }
+  .challenges-link .link-value { font-size: 15px; color: var(--chalk-dim); }
+  .setup-footer {
+    position: sticky;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    z-index: 2;
+  }
+  .setup-cta {
+    display: block;
+    width: 100%;
+    min-height: 64px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #ffe08e, #f0bd4f 45%, #c98e2a);
+    color: #231603;
+    font-family: var(--font-cond);
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 0 #8c5a17, 0 14px 28px rgba(0,0,0,.45);
+    cursor: pointer;
+  }
+  .setup-cta:active { transform: translateY(3px); box-shadow: 0 2px 0 #8c5a17, 0 6px 14px rgba(0,0,0,.4); }
+  .cta-spacer { flex: 1; min-height: 28px; }
+  .setup-error {
+    margin: 0 0 12px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: #3a0d0a;
+    border: 1px solid rgba(255,140,130,.5);
+    color: #ffd2cd;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .setup-error:empty { display: none; }
+
+  /* Petits écrans (iPhone SE…) : resserrer pour garder « Défis » visible au-dessus du bouton. */
+  @media (max-height: 700px) {
+    .setup-top { min-height: 70px; }
+    .setup-logo img { width: min(50vw, 190px); }
+    h2.setup-title { margin: 6px 0 14px; }
+    .setup-label { margin-bottom: 10px; font-size: 19px; }
+    .round-choice { width: 52px; height: 52px; font-size: 22px; }
+    .setup-divider { margin: 14px 4px; }
+    .challenges-link { min-height: 62px; }
+    .challenge-card { min-height: 70px; }
+    .challenge-list { gap: 10px; }
+    .cta-spacer { min-height: 18px; }
+    .setup-cta { min-height: 56px; font-size: 22px; }
+  }
+
+  /* Choisir les défis */
+  .challenge-list { display: flex; flex-direction: column; gap: 12px; }
+  .challenge-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 82px;
+    padding: 0 12px 0 10px;
+    border-radius: 16px;
+    border: 1.5px solid rgba(248,246,237,.2);
+    background: linear-gradient(90deg, rgba(3,17,12,.95) 35%, rgba(10,40,29,.86));
+    color: var(--chalk);
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .challenge-card[aria-pressed="true"] {
+    border: 2px solid var(--gold-ring);
+    box-shadow: 0 0 0 1px rgba(255,226,140,.3), 0 0 18px rgba(242,191,84,.38), inset 0 0 16px rgba(242,191,84,.12);
+  }
+  .challenge-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 50px;
+    height: 46px;
+    border-right: 1px solid rgba(248,246,237,.3);
+  }
+  .challenge-name {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    padding-left: 14px;
+    font-family: var(--font-cond);
+    font-weight: 600;
+    font-size: clamp(18px, 5.4vw, 21px);
+    line-height: 1.1;
+    text-shadow: 0 1px 6px rgba(0,0,0,.9);
+  }
+  .challenge-art {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 230px;
+    height: 66px;
+    margin-left: auto;
+    padding-left: 8px;
+    object-fit: contain;
+    object-position: right center;
+    pointer-events: none;
+    transition: opacity .15s ease, filter .15s ease;
+  }
+  .challenge-card[aria-pressed="false"] .challenge-art { opacity: .38; filter: grayscale(.85); }
+  .challenge-card[aria-pressed="false"] .challenge-name,
+  .challenge-card[aria-pressed="false"] .challenge-icon { color: rgba(248,246,237,.72); }
+  .challenges-hint {
+    margin: 14px 2px 0;
+    font-size: 14px;
+    color: var(--chalk-dim);
+    text-align: center;
+    text-shadow: 0 1px 6px rgba(0,0,0,.8);
+  }
+
+  /* Personnaliser les équipes */
+  .team-card {
+    margin-bottom: 16px;
+    padding: 6px 16px 20px;
+    border-radius: 18px;
+    border: 1px solid rgba(248,246,237,.28);
+    background: rgba(3,17,12,.84);
+    box-shadow: 0 14px 30px rgba(0,0,0,.3);
+  }
+  .team-card h3.setup-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 12px 0 14px;
+    font-family: var(--font-cond);
+    font-weight: 700;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: var(--chalk);
+  }
+  .team-card h3.setup-title::before, .team-card h3.setup-title::after {
+    content: ""; flex: 1; height: 1.5px; background: rgba(248,246,237,.55);
+  }
+  .team-name-field { position: relative; }
+  .team-card input[type="text"] {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 48px 0 16px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background: var(--ivory);
+    color: #16241c;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .team-card input[type="text"]::placeholder { color: #6d7068; }
+  .team-card input[type="text"]:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .team-name-field svg {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #16241c;
+    pointer-events: none;
+  }
+  .team-fieldset { border: 0; margin: 16px 0 0; padding: 0; min-width: 0; }
+  .team-fieldset legend {
+    padding: 0;
+    margin-bottom: 10px;
+    font-family: var(--font-cond);
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: var(--chalk);
+  }
+  .logo-options {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(8px, 2.6vw, 14px);
+  }
+  .logo-opt {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1.5px solid rgba(248,246,237,.45);
+    background: radial-gradient(circle at 50% 40%, #1c3b2e, #06140e 75%);
+    cursor: pointer;
+  }
+  .logo-opt img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    filter: grayscale(1) brightness(1.05);
+    opacity: .82;
+    transition: filter .15s ease, opacity .15s ease;
+  }
+  .logo-opt.selected {
+    border: 3px solid var(--gold-ring);
+    box-shadow: 0 0 0 3px rgba(242,199,90,.22), 0 0 20px rgba(242,191,84,.45);
+  }
+  .logo-opt.selected img { filter: none; opacity: 1; }
+  .logo-opt:focus-within, .swatch:focus-within { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .logo-opt input, .swatch input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+  .color-options { display: flex; justify-content: space-between; gap: 6px; }
+  .swatch {
+    position: relative;
+    width: clamp(40px, 11.5vw, 50px);
+    height: clamp(40px, 11.5vw, 50px);
+    border-radius: 50%;
+    background: var(--swatch);
+    border: 2px solid rgba(0,0,0,.25);
+    cursor: pointer;
+  }
+  .swatch.selected {
+    box-shadow: 0 0 0 3px #06140e, 0 0 0 6px var(--gold-ring), 0 0 16px rgba(242,191,84,.5);
+  }
+
+  /* Équipes pendant la partie et au classement */
+  .team-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2.5px solid var(--team, var(--gold));
+    background: #06140e;
+    overflow: hidden;
+  }
+  .team-badge img { width: 82%; height: 82%; object-fit: contain; }
+  .score-chip { position: relative; overflow: hidden; }
+  .score-chip::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 4px;
+    background: var(--team, transparent);
+  }
+  .score-chip .chip-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 0;
+  }
+  .score-chip .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .podium-row .team-badge { width: 44px; height: 44px; border-width: 3px; }
+  .podium-row .p-name { overflow-wrap: anywhere; }
+
 </style>
 </head>
-<body>
+<body class="setup-flow">
+<div class="setup-bg" aria-hidden="true"></div>
+<div class="setup-turf" aria-hidden="true"></div>
 <div class="app" id="app">
 
-  <!-- SCREEN: SETUP -->
-  <section id="screen-setup">
-    <h1>TACKLE</h1>
-    <p class="subtitle">Cinq mini-jeux de foot, sur un seul téléphone.</p>
+  <!-- SCREENS: PRÉPARATION (voir docs/UI_SETUP_FLOW.md) -->
+  <!-- 1. Créer une partie -->
+  <section id="screen-setup" class="setup-screen" aria-labelledby="setup-title">
+    <div class="setup-top">
+      <h1 class="setup-logo"><img src="assets/ui/web/tackle-logo-brush.webp" width="240" height="120" alt="TACKLE"></h1>
+    </div>
+    <h2 class="setup-title" id="setup-title" tabindex="-1">Créer une partie</h2>
 
-    <div class="card">
-      <h2>Équipes</h2>
-      <div class="field">
-        <label>Combien d'équipes ?</label>
-        <div class="choice-group" id="team-count-group">
-          <button class="choice-btn" data-value="1">1</button>
-          <button class="choice-btn" data-value="2">2</button>
-          <button class="choice-btn active" data-value="3">3</button>
-          <button class="choice-btn" data-value="4">4</button>
-        </div>
-      </div>
-      <div class="field">
-        <label>Noms des équipes</label>
-        <div id="team-names-list"></div>
-      </div>
+    <p class="setup-label" id="team-count-label">Équipes</p>
+    <div class="round-choices" id="team-count-group" role="group" aria-labelledby="team-count-label">
+      <button type="button" class="round-choice" data-value="1" aria-pressed="false">1</button>
+      <button type="button" class="round-choice" data-value="2" aria-pressed="false">2</button>
+      <button type="button" class="round-choice" data-value="3" aria-pressed="true">3</button>
+      <button type="button" class="round-choice" data-value="4" aria-pressed="false">4</button>
     </div>
 
-    <div class="card">
-      <h2>Manches</h2>
-      <div class="field">
-        <label>Combien de manches ? (une manche = chaque équipe joue une carte)</label>
-        <div class="choice-group" id="rounds-group">
-          <button class="choice-btn" data-value="5">5</button>
-          <button class="choice-btn active" data-value="10">10</button>
-          <button class="choice-btn" data-value="20">20</button>
-        </div>
-      </div>
+    <div class="setup-divider"></div>
+
+    <p class="setup-label" id="rounds-label">Manches</p>
+    <div class="round-choices" id="rounds-group" role="group" aria-labelledby="rounds-label">
+      <button type="button" class="round-choice" data-value="5" aria-pressed="false">5</button>
+      <button type="button" class="round-choice" data-value="10" aria-pressed="true">10</button>
+      <button type="button" class="round-choice" data-value="15" aria-pressed="false">15</button>
+      <button type="button" class="round-choice" data-value="20" aria-pressed="false">20</button>
     </div>
 
-    <div class="card">
-      <h2>Mini-jeux</h2>
-      <div class="checkbox-row">
-        <input type="checkbox" id="mg-transfert" checked>
-        <label for="mg-transfert" style="margin:0; font-size:15px; color:var(--chalk);">Transfert</label>
-      </div>
-      <div class="checkbox-row">
-        <input type="checkbox" id="mg-plusoumoins" checked>
-        <label for="mg-plusoumoins" style="margin:0; font-size:15px; color:var(--chalk);">Plus ou Moins</label>
-      </div>
-      <div class="checkbox-row">
-        <input type="checkbox" id="mg-vraifaux" checked>
-        <label for="mg-vraifaux" style="margin:0; font-size:15px; color:var(--chalk);">Vrai ou Faux</label>
-      </div>
-      <div class="checkbox-row">
-        <input type="checkbox" id="mg-quisuisje" checked>
-        <label for="mg-quisuisje" style="margin:0; font-size:15px; color:var(--chalk);">Qui suis-je ?</label>
-      </div>
-      <div class="checkbox-row">
-        <input type="checkbox" id="mg-lematch" checked>
-        <label for="mg-lematch" style="margin:0; font-size:15px; color:var(--chalk);">Le Match</label>
-      </div>
-    </div>
+    <div class="setup-divider"></div>
 
-    <button class="primary" id="btn-start">Lancer la partie</button>
-    <p class="error-msg hidden-screen" id="setup-error"></p>
+    <button type="button" class="challenges-link" id="btn-open-challenges">
+      <span class="link-icon" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10a5 5 0 0 1 4.9 6l-.7 3.4a2.3 2.3 0 0 1-4 1l-2.2-2.4H9l-2.2 2.4a2.3 2.3 0 0 1-4-1L2.1 13A5 5 0 0 1 7 7z"/><path d="M7 10v4M5 12h4"/><circle cx="16" cy="11" r=".6" fill="currentColor"/><circle cx="18" cy="13" r=".6" fill="currentColor"/></svg>
+      </span>
+      <span class="link-title">Défis</span>
+      <span class="link-value" id="challenges-count">5 sélectionnés</span>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+    <div class="cta-spacer"></div>
+    <div class="setup-footer">
+      <button type="button" class="setup-cta" id="btn-continue">Continuer</button>
+    </div>
+  </section>
+
+  <!-- Sous-page : choisir les défis -->
+  <section id="screen-challenges" class="setup-screen hidden-screen" aria-labelledby="challenges-title">
+    <div class="setup-top">
+      <button type="button" class="back-btn" id="btn-challenges-back" aria-label="Retour à Créer une partie">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <div class="setup-logo"><img src="assets/ui/web/tackle-logo-brush.webp" width="240" height="120" alt="TACKLE"></div>
+    </div>
+    <h2 class="setup-title" id="challenges-title" tabindex="-1">Choisir les défis</h2>
+
+    <div class="challenge-list" id="challenge-list">
+      <button type="button" class="challenge-card" data-game="transfert" aria-pressed="true">
+        <span class="challenge-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M12 7.2l4.1 3-1.6 4.8h-5l-1.6-4.8z" fill="currentColor"/><path d="M12 7.2V2.6M16.1 10.2l4.4-1.4M14.5 15l2.7 3.8M9.5 15l-2.7 3.8M7.9 10.2L3.5 8.8"/></svg>
+        </span>
+        <span class="challenge-name">Transfert</span>
+        <img class="challenge-art" src="assets/ui/challenge-transfert.svg" alt="" width="420" height="120">
+      </button>
+      <button type="button" class="challenge-card" data-game="plusoumoins" aria-pressed="true">
+        <span class="challenge-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v13M4 7l4-4 4 4"/><path d="M16 21V8M12 17l4 4 4-4"/></svg>
+        </span>
+        <span class="challenge-name">Plus ou Moins</span>
+        <img class="challenge-art" src="assets/ui/challenge-plus-ou-moins.svg" alt="" width="420" height="120">
+      </button>
+      <button type="button" class="challenge-card" data-game="vraifaux" aria-pressed="true">
+        <span class="challenge-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8.5a4 4 0 1 1 5.6 3.7c-1 .5-1.6 1.4-1.6 2.5v.8"/><circle cx="12" cy="19.5" r=".9" fill="currentColor"/></svg>
+        </span>
+        <span class="challenge-name">Vrai ou Faux</span>
+        <img class="challenge-art" src="assets/ui/challenge-vrai-ou-faux.svg" alt="" width="420" height="120">
+      </button>
+      <button type="button" class="challenge-card" data-game="quisuisje" aria-pressed="true">
+        <span class="challenge-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M6 20v-1.5A4.5 4.5 0 0 1 10.5 14h3a4.5 4.5 0 0 1 4.5 4.5V20"/><circle cx="5" cy="9.5" r="2.2"/><path d="M1.5 18v-.8A3.2 3.2 0 0 1 4.7 14H6"/><circle cx="19" cy="9.5" r="2.2"/><path d="M22.5 18v-.8a3.2 3.2 0 0 0-3.2-3.2H18"/></svg>
+        </span>
+        <span class="challenge-name">Qui suis-je ?</span>
+        <img class="challenge-art" src="assets/ui/challenge-qui-suis-je.svg" alt="" width="420" height="120">
+      </button>
+      <button type="button" class="challenge-card" data-game="lematch" aria-pressed="true">
+        <span class="challenge-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 3h10v6a5 5 0 0 1-10 0z"/><path d="M17 5h3v1.5A3.5 3.5 0 0 1 16.8 10M7 5H4v1.5A3.5 3.5 0 0 0 7.2 10"/></svg>
+        </span>
+        <span class="challenge-name">Le Match</span>
+        <img class="challenge-art" src="assets/ui/challenge-le-match.svg" alt="" width="420" height="120">
+      </button>
+    </div>
+    <p class="challenges-hint">Touchez un défi pour le retirer ou l'ajouter.</p>
+
+    <div class="cta-spacer"></div>
+    <div class="setup-footer">
+      <p class="setup-error" id="challenges-error" role="alert"></p>
+      <button type="button" class="setup-cta" id="btn-validate-challenges">Valider</button>
+    </div>
+  </section>
+
+  <!-- 2. Personnaliser les équipes -->
+  <section id="screen-teams" class="setup-screen hidden-screen" aria-labelledby="teams-title">
+    <div class="setup-top">
+      <button type="button" class="back-btn" id="btn-teams-back" aria-label="Retour à Créer une partie">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <div class="setup-logo"><img src="assets/ui/web/tackle-logo-brush.webp" width="240" height="120" alt="TACKLE"></div>
+    </div>
+    <h2 class="setup-title" id="teams-title" tabindex="-1">Personnaliser les équipes</h2>
+
+    <div id="team-cards"></div>
+
+    <div class="cta-spacer"></div>
+    <div class="setup-footer">
+      <p class="setup-error" id="setup-error" role="alert"></p>
+      <button type="button" class="setup-cta" id="btn-start">Coup d'envoi</button>
+    </div>
   </section>
 
   <!-- SCREEN: PLAY -->
@@ -1163,10 +1652,16 @@
   // ---------- State ----------
   var state = {
     teamCount: 3,
-    teamNames: ["Équipe A", "Équipe B", "Équipe C", "Équipe D"],
+    teamSettings: [0, 1, 2, 3].map(function (i) {
+      return {
+        name: "Équipe " + (i + 1),
+        logo: ["lion", "fox", "bull", "eagle"][i],
+        color: ["gold", "coral", "blue", "violet"][i]
+      };
+    }),
     roundsTotal: 10,
     minigamesSelected: ["transfert", "plusoumoins", "vraifaux", "quisuisje", "lematch"],
-    teams: [],       // {name, score}
+    teams: [],       // {name, score, logo, color}
     roundsPlayed: 0,
     currentTeamIndex: 0,
     currentCard: null,
@@ -1234,111 +1729,257 @@
   function show(id) { el(id).classList.remove("hidden-screen"); }
   function hide(id) { el(id).classList.add("hidden-screen"); }
 
-  // ---------- SETUP SCREEN ----------
-  function renderTeamNameInputs() {
-    var list = el("team-names-list");
-    list.innerHTML = "";
-    for (var i = 0; i < state.teamCount; i++) {
-      var row = document.createElement("div");
-      row.className = "team-row";
-      var dot = document.createElement("div");
-      dot.className = "team-dot";
-      var input = document.createElement("input");
-      input.type = "text";
-      input.value = state.teamNames[i];
-      input.setAttribute("data-team-idx", i);
-      input.addEventListener("input", function (e) {
-        var idx = parseInt(e.target.getAttribute("data-team-idx"), 10);
-        state.teamNames[idx] = e.target.value || ("Équipe " + (idx + 1));
-      });
-      row.appendChild(dot);
-      row.appendChild(input);
-      list.appendChild(row);
+  // ---------- PRÉPARATION : 3 écrans (docs/UI_SETUP_FLOW.md) ----------
+  var TEAM_LOGOS = [
+    { id: "lion", label: "Lion", src: "assets/ui/web/team-lion.webp" },
+    { id: "fox", label: "Renard", src: "assets/ui/web/team-fox.webp" },
+    { id: "bull", label: "Taureau", src: "assets/ui/web/team-bull.webp" },
+    { id: "eagle", label: "Aigle", src: "assets/ui/web/team-eagle.webp" }
+  ];
+  var TEAM_COLORS = [
+    { id: "gold", label: "Or", hex: "#E9B53C" },
+    { id: "coral", label: "Corail", hex: "#EF5B5B" },
+    { id: "blue", label: "Bleu", hex: "#3E95E6" },
+    { id: "violet", label: "Violet", hex: "#8B5CF0" },
+    { id: "mint", label: "Menthe", hex: "#5ED3A6" },
+    { id: "ivory", label: "Ivoire", hex: "#F1EBDC" }
+  ];
+  var MINIGAME_ORDER = ["transfert", "plusoumoins", "vraifaux", "quisuisje", "lematch"];
+
+  function defaultTeamSetting(idx) {
+    return {
+      name: "Équipe " + (idx + 1),
+      logo: TEAM_LOGOS[idx % TEAM_LOGOS.length].id,
+      color: TEAM_COLORS[idx % TEAM_COLORS.length].id
+    };
+  }
+  function findById(list, id) {
+    for (var i = 0; i < list.length; i++) { if (list[i].id === id) return list[i]; }
+    return list[0];
+  }
+  function teamDisplayName(idx) {
+    var name = (state.teamSettings[idx].name || "").trim();
+    return name || ("Équipe " + (idx + 1));
+  }
+
+  var SETUP_SCREENS = ["screen-setup", "screen-challenges", "screen-teams"];
+  function showSetupScreen(id, moveFocus) {
+    SETUP_SCREENS.concat(["screen-play", "screen-final"]).forEach(hide);
+    document.body.classList.add("setup-flow");
+    show(id);
+    window.scrollTo(0, 0);
+    if (moveFocus) {
+      var title = el(id).querySelector("h2.setup-title");
+      if (title) title.focus({ preventScroll: true });
     }
   }
 
-  function setupChoiceGroup(groupId, onSelect) {
-    var group = el(groupId);
-    var btns = group.querySelectorAll(".choice-btn");
+  function setupPressedGroup(groupId, onSelect) {
+    var btns = el(groupId).querySelectorAll("button[data-value]");
     btns.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        btns.forEach(function (b) { b.classList.remove("active"); });
-        btn.classList.add("active");
+        btns.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
         onSelect(parseInt(btn.getAttribute("data-value"), 10));
       });
     });
   }
 
-  setupChoiceGroup("team-count-group", function (val) {
+  setupPressedGroup("team-count-group", function (val) {
+    // Les équipes qui restent gardent leurs réglages ; celles qui disparaissent
+    // repartiront de leurs valeurs par défaut si on les rajoute.
+    for (var i = val; i < state.teamSettings.length; i++) {
+      state.teamSettings[i] = defaultTeamSetting(i);
+    }
     state.teamCount = val;
-    renderTeamNameInputs();
   });
-
-  setupChoiceGroup("rounds-group", function (val) {
+  setupPressedGroup("rounds-group", function (val) {
     state.roundsTotal = val;
   });
 
-  renderTeamNameInputs();
-
-  el("mg-transfert").addEventListener("change", function (e) {
-    syncMinigamesSelected();
-  });
-  el("mg-plusoumoins").addEventListener("change", function (e) {
-    syncMinigamesSelected();
-  });
-  el("mg-vraifaux").addEventListener("change", function (e) {
-    syncMinigamesSelected();
-  });
-  el("mg-quisuisje").addEventListener("change", function (e) {
-    syncMinigamesSelected();
-  });
-  el("mg-lematch").addEventListener("change", function (e) {
-    syncMinigamesSelected();
-  });
-  function syncMinigamesSelected() {
+  // --- Défis ---
+  function renderChallengesCount() {
+    var n = state.minigamesSelected.length;
+    el("challenges-count").textContent = n + (n > 1 ? " sélectionnés" : " sélectionné");
+  }
+  function challengeCards() { return el("challenge-list").querySelectorAll(".challenge-card"); }
+  function readChallengeSelection() {
     var list = [];
-    if (el("mg-transfert").checked) list.push("transfert");
-    if (el("mg-plusoumoins").checked) list.push("plusoumoins");
-    if (el("mg-vraifaux").checked) list.push("vraifaux");
-    if (el("mg-quisuisje").checked) list.push("quisuisje");
-    if (el("mg-lematch").checked) list.push("lematch");
-    state.minigamesSelected = list;
+    challengeCards().forEach(function (card) {
+      if (card.getAttribute("aria-pressed") === "true") list.push(card.getAttribute("data-game"));
+    });
+    return list;
+  }
+  challengeCards().forEach(function (card) {
+    card.addEventListener("click", function () {
+      var on = card.getAttribute("aria-pressed") === "true";
+      card.setAttribute("aria-pressed", on ? "false" : "true");
+      if (readChallengeSelection().length > 0) el("challenges-error").textContent = "";
+    });
+  });
+  function openChallenges() {
+    challengeCards().forEach(function (card) {
+      var on = state.minigamesSelected.indexOf(card.getAttribute("data-game")) !== -1;
+      card.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    el("challenges-error").textContent = "";
+    showSetupScreen("screen-challenges", true);
+  }
+  function closeChallenges() {
+    var list = readChallengeSelection();
+    if (list.length === 0) {
+      el("challenges-error").textContent = "Garde au moins un défi : la partie tire chaque manche parmi les défis sélectionnés.";
+      return;
+    }
+    state.minigamesSelected = MINIGAME_ORDER.filter(function (g) { return list.indexOf(g) !== -1; });
+    renderChallengesCount();
+    showSetupScreen("screen-setup", true);
+  }
+  el("btn-open-challenges").addEventListener("click", openChallenges);
+  el("btn-validate-challenges").addEventListener("click", closeChallenges);
+  el("btn-challenges-back").addEventListener("click", closeChallenges);
+
+  // --- Équipes ---
+  var PENCIL_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg>';
+
+  function renderTeamCards() {
+    var wrap = el("team-cards");
+    wrap.innerHTML = "";
+    for (var i = 0; i < state.teamCount; i++) {
+      wrap.appendChild(buildTeamCard(i));
+    }
+  }
+
+  function buildTeamCard(idx) {
+    var setting = state.teamSettings[idx];
+    var card = document.createElement("div");
+    card.className = "team-card";
+    card.setAttribute("role", "group");
+    card.setAttribute("aria-labelledby", "team-title-" + idx);
+
+    var title = document.createElement("h3");
+    title.className = "setup-title";
+    title.id = "team-title-" + idx;
+    title.textContent = "Équipe " + (idx + 1);
+    card.appendChild(title);
+
+    var field = document.createElement("div");
+    field.className = "team-name-field";
+    var label = document.createElement("label");
+    label.className = "sr-only";
+    label.setAttribute("for", "team-name-" + idx);
+    label.textContent = "Nom de l'équipe " + (idx + 1);
+    var input = document.createElement("input");
+    input.type = "text";
+    input.id = "team-name-" + idx;
+    input.maxLength = 24;
+    input.autocomplete = "off";
+    input.value = setting.name;
+    input.placeholder = "Équipe " + (idx + 1);
+    input.addEventListener("input", function () { state.teamSettings[idx].name = input.value; });
+    field.appendChild(label);
+    field.appendChild(input);
+    field.insertAdjacentHTML("beforeend", PENCIL_SVG);
+    card.appendChild(field);
+
+    card.appendChild(buildRadioFieldset(idx, "Logo", "logo", TEAM_LOGOS, function (opt, wrapLabel) {
+      wrapLabel.className = "logo-opt";
+      var img = document.createElement("img");
+      img.src = opt.src;
+      img.alt = "";
+      img.width = 64;
+      img.height = 64;
+      var txt = document.createElement("span");
+      txt.className = "sr-only";
+      txt.textContent = opt.label;
+      wrapLabel.appendChild(img);
+      wrapLabel.appendChild(txt);
+    }, "logo-options"));
+
+    card.appendChild(buildRadioFieldset(idx, "Couleur", "color", TEAM_COLORS, function (opt, wrapLabel) {
+      wrapLabel.className = "swatch";
+      wrapLabel.style.setProperty("--swatch", opt.hex);
+      var txt = document.createElement("span");
+      txt.className = "sr-only";
+      txt.textContent = opt.label;
+      wrapLabel.appendChild(txt);
+    }, "color-options"));
+
+    return card;
+  }
+
+  function buildRadioFieldset(idx, legendText, key, options, decorate, listClass) {
+    var fs = document.createElement("fieldset");
+    fs.className = "team-fieldset";
+    var legend = document.createElement("legend");
+    legend.textContent = legendText;
+    fs.appendChild(legend);
+    var list = document.createElement("div");
+    list.className = listClass;
+    var labels = [];
+    options.forEach(function (opt) {
+      var wrapLabel = document.createElement("label");
+      var input = document.createElement("input");
+      input.type = "radio";
+      input.name = key + "-" + idx;
+      input.value = opt.id;
+      input.checked = state.teamSettings[idx][key] === opt.id;
+      wrapLabel.appendChild(input);
+      decorate(opt, wrapLabel);
+      if (input.checked) wrapLabel.classList.add("selected");
+      input.addEventListener("change", function () {
+        state.teamSettings[idx][key] = opt.id;
+        labels.forEach(function (l) { l.classList.toggle("selected", l === wrapLabel); });
+      });
+      labels.push(wrapLabel);
+      list.appendChild(wrapLabel);
+    });
+    fs.appendChild(list);
+    return fs;
+  }
+
+  el("btn-continue").addEventListener("click", function () {
+    renderTeamCards();
+    el("setup-error").textContent = "";
+    showSetupScreen("screen-teams", true);
+  });
+  el("btn-teams-back").addEventListener("click", function () {
+    showSetupScreen("screen-setup", true);
+  });
+
+  function setupError(msg) {
+    el("setup-error").textContent = msg;
   }
 
   el("btn-start").addEventListener("click", function () {
     if (state.minigamesSelected.length === 0) {
-      el("setup-error").textContent = "Sélectionne au moins un mini-jeu pour lancer la partie.";
-      el("setup-error").classList.remove("hidden-screen");
+      setupError("Sélectionne au moins un défi pour lancer la partie.");
       return;
     }
     if (state.minigamesSelected.indexOf("transfert") !== -1 && !CARDS_READY) {
-      el("setup-error").textContent = "Les cartes ne sont pas encore chargées (ou le fichier est introuvable). Réessaie dans un instant.";
-      el("setup-error").classList.remove("hidden-screen");
+      setupError("Les cartes ne sont pas encore chargées (ou le fichier est introuvable). Réessaie dans un instant.");
       return;
     }
     if (state.minigamesSelected.indexOf("plusoumoins") !== -1 && !POM_READY) {
-      el("setup-error").textContent = "Les catégories Plus ou Moins ne sont pas encore chargées. Réessaie dans un instant.";
-      el("setup-error").classList.remove("hidden-screen");
+      setupError("Les catégories Plus ou Moins ne sont pas encore chargées. Réessaie dans un instant.");
       return;
     }
     if (state.minigamesSelected.indexOf("vraifaux") !== -1 && !VF_READY) {
-      el("setup-error").textContent = "Les affirmations Vrai ou Faux ne sont pas encore chargées. Réessaie dans un instant.";
-      el("setup-error").classList.remove("hidden-screen");
+      setupError("Les affirmations Vrai ou Faux ne sont pas encore chargées. Réessaie dans un instant.");
       return;
     }
     if (state.minigamesSelected.indexOf("quisuisje") !== -1 && !QSJ_READY) {
-      el("setup-error").textContent = "Les cartes Qui suis-je ne sont pas encore chargées. Réessaie dans un instant.";
-      el("setup-error").classList.remove("hidden-screen");
+      setupError("Les cartes Qui suis-je ne sont pas encore chargées. Réessaie dans un instant.");
       return;
     }
     if (state.minigamesSelected.indexOf("lematch") !== -1 && !LM_READY) {
-      el("setup-error").textContent = "Les cartes Le Match ne sont pas encore chargées. Réessaie dans un instant.";
-      el("setup-error").classList.remove("hidden-screen");
+      setupError("Les cartes Le Match ne sont pas encore chargées. Réessaie dans un instant.");
       return;
     }
-    el("setup-error").classList.add("hidden-screen");
+    setupError("");
     startGame();
   });
+
+  renderChallengesCount();
 
   loadCards();
   loadPomRealCategories();
@@ -1350,13 +1991,21 @@
   function startGame() {
     state.teams = [];
     for (var i = 0; i < state.teamCount; i++) {
-      state.teams.push({ name: state.teamNames[i] || ("Équipe " + (i + 1)), score: 0 });
+      var setting = state.teamSettings[i];
+      state.teams.push({
+        name: teamDisplayName(i),
+        score: 0,
+        logo: findById(TEAM_LOGOS, setting.logo),
+        color: findById(TEAM_COLORS, setting.color)
+      });
     }
     state.roundsPlayed = 0;
     state.currentTeamIndex = 0;
 
-    hide("screen-setup");
+    SETUP_SCREENS.forEach(hide);
+    document.body.classList.remove("setup-flow");
     show("screen-play");
+    window.scrollTo(0, 0);
 
     beginTurn();
   }
@@ -2402,19 +3051,41 @@
     show("next-card-zone");
   }
 
+  // Équipes créées sans logo ni couleur (anciens états, tests) : valeurs par défaut.
+  function teamColorHex(team) { return (team.color && team.color.hex) || TEAM_COLORS[0].hex; }
+  function teamLogoSrc(team) { return (team.logo && team.logo.src) || TEAM_LOGOS[0].src; }
+
+  function teamBadge(team) {
+    var badge = document.createElement("span");
+    badge.className = "team-badge";
+    badge.style.setProperty("--team", teamColorHex(team));
+    var img = document.createElement("img");
+    img.src = teamLogoSrc(team);
+    img.alt = "";
+    img.width = 40;
+    img.height = 40;
+    badge.appendChild(img);
+    return badge;
+  }
+
   function renderScoreboard() {
     var board = el("scoreboard");
     board.innerHTML = "";
     state.teams.forEach(function (team, idx) {
       var chip = document.createElement("div");
       chip.className = "score-chip" + (idx === state.currentTeamIndex ? " active" : "");
+      chip.style.setProperty("--team", teamColorHex(team));
+      var head = document.createElement("div");
+      head.className = "chip-head";
+      head.appendChild(teamBadge(team));
       var name = document.createElement("div");
       name.className = "name";
       name.textContent = team.name;
+      head.appendChild(name);
       var score = document.createElement("div");
       score.className = "score";
       score.textContent = team.score;
-      chip.appendChild(name);
+      chip.appendChild(head);
       chip.appendChild(score);
       board.appendChild(chip);
     });
@@ -2460,6 +3131,7 @@
       score.className = "p-score";
       score.textContent = team.score;
       row.appendChild(medal);
+      row.appendChild(teamBadge(team));
       row.appendChild(name);
       row.appendChild(score);
       podium.appendChild(row);
@@ -2467,8 +3139,8 @@
   }
 
   el("btn-rematch").addEventListener("click", function () {
-    hide("screen-final");
-    show("screen-setup");
+    // Revanche : retour à « Créer une partie », réglages et équipes conservés.
+    showSetupScreen("screen-setup", true);
   });
 
 })();

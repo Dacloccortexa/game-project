@@ -11,7 +11,7 @@ function element(id) {
   if (!elements.has(id)) {
     const classes = new Set();
     const node = {
-      id, style: {}, children: [], listeners: {}, value: '', textContent: '', innerHTML: '', disabled: false,
+      id, style: { setProperty(name, value) { this[name] = value; } }, children: [], listeners: {}, value: '', textContent: '', innerHTML: '', disabled: false,
       classList: { add: x => classes.add(x), remove: x => classes.delete(x), contains: x => classes.has(x) },
       addEventListener(name, fn) { this.listeners[name] = fn; },
       appendChild(child) { this.children.push(child); },

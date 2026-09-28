@@ -14,6 +14,12 @@ Ces fichiers sont séparés des planches et prêts à être utilisés dans les t
 | `challenge-qui-suis-je.svg` | Silhouette de joueur sous des projecteurs. |
 | `challenge-le-match.svg` | Trophée, score et chronologie. |
 
+## Versions web
+
+Le site charge des copies allégées dans `assets/ui/web/` (WebP redimensionnés : environ 350 Ko au total contre 9 Mo pour les PNG). Les PNG d'origine restent la source : après une modification, régénérer la copie WebP correspondante. Les SVG de défis sont utilisés tels quels.
+
+La police des titres de préparation, Oswald (licence SIL OFL), est hébergée dans `assets/fonts/`.
+
 ## Intégration
 
 - Les images de défis sont des SVG transparents de format `420 × 120`. Les placer dans la partie droite des cartes, en préservant le nom du défi à gauche. Ce sont des illustrations, pas des éléments interactifs.
