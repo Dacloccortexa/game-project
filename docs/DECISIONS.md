@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-09-28] Noms d'équipe par défaut tirés des animaux
+- Décision : les équipes s'appellent par défaut Les Lions, Les Renards, Les Taureaux et Les Aigles, selon leur animal ; le bouton crayon efface le nom pour en saisir un nouveau (demandé par David).
+- Raison : des noms incarnés dès l'ouverture, cohérents avec les emblèmes.
+- Impact technique : tant qu'une équipe garde un nom par défaut, il suit l'animal choisi ; un nom saisi n'est jamais écrasé. Un nom laissé vide prend celui de l'animal au coup d'envoi.
+
 ## [2026-09-28] Logo et couleur uniques par équipe
 - Décision : lorsqu'une équipe a pris un logo ou une couleur, les autres équipes ne peuvent plus le choisir (demandé par David).
 - Raison : chaque équipe doit rester identifiable d'un coup d'œil dans le score et le classement.

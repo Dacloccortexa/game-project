@@ -39,7 +39,7 @@ Les images et illustrations prêtes à utiliser sont décrites dans le [pack d'a
 ### 2. Personnaliser les équipes
 
 - Une seule page qui défile, avec une fiche par équipe. Le nombre de fiches suit le nombre choisi à l'écran 1.
-- Chaque fiche contient un nom modifiable, prérempli **Équipe 1**, **Équipe 2**, etc. ; un logo à choisir parmi **quatre propositions** (lion, renard, taureau, aigle) ; et une couleur.
+- Chaque fiche contient un nom modifiable, prérempli avec le nom de son animal : **Les Lions**, **Les Renards**, **Les Taureaux**, **Les Aigles** (décision de David, 2026-09-28). Tant que le nom n'a pas été modifié, il suit l'animal choisi. Le bouton crayon efface le nom pour en taper un nouveau ; un nom laissé vide redevient celui de l'animal au lancement ; un logo à choisir parmi **quatre propositions** (lion, renard, taureau, aigle) ; et une couleur.
 - La planche montre six couleurs : or, corail, bleu, violet, menthe et ivoire. Préattribuer un logo et une couleur distincts à chaque équipe, pour pouvoir lancer sans saisie obligatoire. Les choix sont modifiables.
 - **Un logo et une couleur ne peuvent appartenir qu'à une seule équipe** (décision de David, 2026-09-28). Sur les autres fiches, un choix déjà pris est grisé et barré, et n'est plus sélectionnable. Une équipe ajoutée reçoit son logo et sa couleur par défaut s'ils sont libres, sinon les premiers libres.
 - Les logos d'équipes sont des créations propres à TACKLE : **ne pas utiliser de logos de clubs**.

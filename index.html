@@ -959,14 +959,24 @@
   }
   .team-card input[type="text"]::placeholder { color: #6d7068; }
   .team-card input[type="text"]:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
-  .team-name-field svg {
+  .team-name-clear {
     position: absolute;
-    right: 16px;
+    right: 4px;
     top: 50%;
     transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
     color: #16241c;
-    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
+  .team-name-clear:active { background: rgba(22,36,28,.1); }
   .team-fieldset { border: 0; margin: 16px 0 0; padding: 0; min-width: 0; }
   .team-fieldset legend {
     padding: 0;
@@ -1672,7 +1682,7 @@
     teamCount: 3,
     teamSettings: [0, 1, 2, 3].map(function (i) {
       return {
-        name: "Équipe " + (i + 1),
+        name: ["Les Lions", "Les Renards", "Les Taureaux", "Les Aigles"][i],
         logo: ["lion", "fox", "bull", "eagle"][i],
         color: ["gold", "coral", "blue", "violet"][i]
       };
@@ -1749,11 +1759,18 @@
 
   // ---------- PRÉPARATION : 3 écrans (docs/UI_SETUP_FLOW.md) ----------
   var TEAM_LOGOS = [
-    { id: "lion", label: "Lion" },
-    { id: "fox", label: "Renard" },
-    { id: "bull", label: "Taureau" },
-    { id: "eagle", label: "Aigle" }
+    { id: "lion", label: "Lion", teamName: "Les Lions" },
+    { id: "fox", label: "Renard", teamName: "Les Renards" },
+    { id: "bull", label: "Taureau", teamName: "Les Taureaux" },
+    { id: "eagle", label: "Aigle", teamName: "Les Aigles" }
   ];
+  // Nom par défaut = nom de l'animal. Tant que l'équipe garde un nom par défaut
+  // (ou un nom vide), il suit l'animal choisi.
+  function animalTeamName(logoId) { return findById(TEAM_LOGOS, logoId).teamName; }
+  function isDefaultTeamName(name) {
+    var n = (name || "").trim();
+    return n === "" || TEAM_LOGOS.some(function (o) { return o.teamName === n; });
+  }
   // Emblème teinté dans la couleur de l'équipe (généré par tools/tint_team_logos.py).
   function logoSrc(logoId, colorId) {
     return "assets/ui/web/team-" + logoId + "-" + colorId + ".webp";
@@ -1770,7 +1787,7 @@
 
   function defaultTeamSetting(idx) {
     return {
-      name: "Équipe " + (idx + 1),
+      name: TEAM_LOGOS[idx % TEAM_LOGOS.length].teamName,
       logo: TEAM_LOGOS[idx % TEAM_LOGOS.length].id,
       color: TEAM_COLORS[idx % TEAM_COLORS.length].id
     };
@@ -1781,7 +1798,7 @@
   }
   function teamDisplayName(idx) {
     var name = (state.teamSettings[idx].name || "").trim();
-    return name || ("Équipe " + (idx + 1));
+    return name || animalTeamName(state.teamSettings[idx].logo);
   }
 
   var SETUP_SCREENS = ["screen-setup", "screen-challenges", "screen-teams"];
@@ -1881,6 +1898,10 @@
         state.teamSettings[i][key] = free.indexOf(preferred) !== -1 ? preferred : free[0];
       }
     });
+    for (var i = 0; i < state.teamCount; i++) {
+      var t = state.teamSettings[i];
+      if (isDefaultTeamName(t.name) && t.name !== "") t.name = animalTeamName(t.logo);
+    }
   }
   function refreshTakenOptions() {
     el("team-cards").querySelectorAll("input[type=radio]").forEach(function (input) {
@@ -1932,14 +1953,26 @@
     input.maxLength = 24;
     input.autocomplete = "off";
     input.value = setting.name;
-    input.placeholder = "Équipe " + (idx + 1);
+    input.placeholder = animalTeamName(setting.logo);
     input.addEventListener("input", function () {
       state.teamSettings[idx].name = input.value;
       refreshTakenOptions();
     });
+    // Le crayon efface le nom pour en taper un nouveau directement.
+    var clearBtn = document.createElement("button");
+    clearBtn.type = "button";
+    clearBtn.className = "team-name-clear";
+    clearBtn.setAttribute("aria-label", "Effacer le nom de l'équipe " + (idx + 1) + " pour le modifier");
+    clearBtn.innerHTML = PENCIL_SVG;
+    clearBtn.addEventListener("click", function () {
+      input.value = "";
+      state.teamSettings[idx].name = "";
+      refreshTakenOptions();
+      input.focus();
+    });
     field.appendChild(label);
     field.appendChild(input);
-    field.insertAdjacentHTML("beforeend", PENCIL_SVG);
+    field.appendChild(clearBtn);
     card.appendChild(field);
 
     card.appendChild(buildRadioFieldset(idx, "Logo", "logo", TEAM_LOGOS, function (opt, wrapLabel) {
@@ -1994,6 +2027,15 @@
       input.addEventListener("change", function () {
         state.teamSettings[idx][key] = opt.id;
         labels.forEach(function (l) { l.classList.toggle("selected", l === wrapLabel); });
+        if (key === "logo") {
+          // Un nom par défaut suit l'animal ; un nom tapé par les joueurs ne change pas.
+          var nameInput = el("team-name-" + idx);
+          if (isDefaultTeamName(state.teamSettings[idx].name) && state.teamSettings[idx].name !== "") {
+            state.teamSettings[idx].name = opt.teamName;
+            nameInput.value = opt.teamName;
+          }
+          nameInput.placeholder = opt.teamName;
+        }
         refreshTakenOptions();
         if (key === "color") {
           // Les quatre animaux et le cercle de l'animal choisi prennent la nouvelle couleur.
