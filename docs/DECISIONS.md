@@ -1,5 +1,12 @@
 # DECISIONS.md
 
+## [2026-09-28] Bouton Tackle commun et fenêtre de 30 + 15 secondes
+
+- David décide qu'un même bouton Tackle reste visible pendant toutes les questions : grisé pendant 30 secondes de priorité à l'équipe active, puis actif pendant 15 secondes après le sifflet. La première équipe adverse qui appuie est la seule à tenter une réponse. L'équipe active peut encore répondre pendant cette fenêtre.
+- Le délai repart à chaque indice de Transfert et Qui suis-je, à chaque événement de Le Match, et à chaque comparaison ou affirmation de Plus ou Moins et Vrai ou Faux. Sans réponse après 45 secondes, Transfert/Qui suis-je/Le Match passent à l'indice ou à l'événement suivant puis révèlent après le dernier.
+- Sur Plus ou Moins et Vrai ou Faux, une réponse active donnée avant l'expiration déclenche tout de suite la contestation habituelle de 5 secondes, sans attendre les 30 secondes. Sans réponse active à 30 secondes, le premier tackleur peut donner sa propre réponse binaire pendant 15 secondes : +5 si elle est juste et la cagnotte active est perdue ; −5 si elle est fausse et la cagnotte active est encaissée. La carte se termine. Sans réponse à 45 secondes, la carte se termine et la cagnotte active est encaissée.
+- Cette décision remplace les délais de 12 secondes et l'absence de limite après le sifflet des décisions précédentes. Le Tackle à +5/−5 et les pénalités des réponses actives restent ceux des mini-jeux.
+
 Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indique ce qui a été décidé et pourquoi.
 
 ## [2026-09-27] Le Match implémenté avec 3 cartes de test
