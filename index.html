@@ -177,6 +177,21 @@
     cursor: pointer;
     margin-top: 10px;
   }
+  button.secondary:disabled {
+    border-color: rgba(245,243,236,0.2) !important;
+    color: rgba(245,243,236,0.45) !important;
+    cursor: not-allowed;
+  }
+  #btn-tackle {
+    position: fixed;
+    left: 50%;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    width: min(440px, calc(100% - 40px));
+    background: var(--pitch-line);
+    z-index: 20;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+  }
 
   button.text-btn {
     background: none;
@@ -369,6 +384,7 @@
   }
 
   .hidden-screen { display: none; }
+  #screen-play { padding-bottom: 72px; }
 </style>
 </head>
 <body>
@@ -505,8 +521,8 @@
       <div class="confirm-box">
         <div class="typed" id="pom-pending-label"></div>
         <div class="confirm-actions">
-          <button class="secondary" id="btn-tackle-pom" style="border-color: var(--red); color: var(--red);">🚨 TACKLE</button>
-          <button class="primary" id="btn-pom-reveal">Révéler</button>
+          <button class="secondary hidden-screen" id="btn-tackle-pom">🚨 TACKLE</button>
+          <button class="primary hidden-screen" id="btn-pom-reveal">Révéler</button>
         </div>
       </div>
     </div>
@@ -538,8 +554,8 @@
       <div class="confirm-box">
         <div class="typed" id="vf-pending-label"></div>
         <div class="confirm-actions">
-          <button class="secondary" id="btn-tackle-vf" style="border-color: var(--red); color: var(--red);">🚨 TACKLE</button>
-          <button class="primary" id="btn-vf-reveal">Révéler</button>
+          <button class="secondary hidden-screen" id="btn-tackle-vf">🚨 TACKLE</button>
+          <button class="primary hidden-screen" id="btn-vf-reveal">Révéler</button>
         </div>
       </div>
     </div>
@@ -562,7 +578,7 @@
       </div>
     </div>
 
-    <!-- Qui suis-je ? (cartes de test, voir DECISIONS.md) -->
+    <!-- Qui suis-je ? (100 fiches sourcées) -->
     <div class="card-stage hidden-screen" id="stage-qsj">
       <div class="clue-points" id="qsj-points">Cet indice vaut 5 points</div>
       <div class="clue-list" id="qsj-clue-list"></div>
@@ -631,7 +647,7 @@
 
     <div class="scoreboard" id="scoreboard"></div>
 
-    <button class="secondary hidden-screen" id="btn-tackle" style="border-color: var(--red); color: var(--red); margin-top: 16px;">🚨 TACKLE</button>
+    <button class="secondary hidden-screen" id="btn-tackle" style="border-color: var(--red); color: var(--red); margin-top: 16px;" disabled>🚨 TACKLE · 30 s</button>
 
     <div class="hidden-screen" id="tackle-team-picker">
       <div class="confirm-box">
@@ -644,7 +660,7 @@
     <div class="hidden-screen" id="tackle-answer-zone">
       <div class="confirm-box">
         <div class="typed" id="tackle-team-label"></div>
-        <div class="field">
+        <div class="field" id="tackle-answer-field-1">
           <label id="tackle-answer-label-1">Réponse du tackle</label>
           <input type="text" id="tackle-answer-input" placeholder="Nom du joueur" autocomplete="off">
         </div>
@@ -653,6 +669,10 @@
           <input type="text" id="tackle-answer-input-2" placeholder="Nom de l'équipe" autocomplete="off">
         </div>
         <button class="primary" id="btn-tackle-submit" style="margin-top:4px;">Valider le tackle</button>
+        <div class="choice-group hidden-screen" id="tackle-binary-choices">
+          <button class="choice-btn" id="tackle-binary-choice-1"></button>
+          <button class="choice-btn" id="tackle-binary-choice-2"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -757,7 +777,8 @@
   }
 
   var POINTS_BY_INDEX = [5, 4, 3, 2, 1];
-  var TACKLE_DELAY_SECONDS = 12; // avant le coup de sifflet — valeur par défaut, à ajuster en playtest
+  var TACKLE_LOCK_SECONDS = 30;
+  var TACKLE_OPEN_SECONDS = 15;
 
   function playWhistle() {
     try {
@@ -1203,10 +1224,10 @@
     startTackleWindow();
   }
 
-  // ---------- Tackle (Transfert uniquement pour l'instant) ----------
+  // ---------- Bouton Tackle commun : 30 secondes réservées, puis 15 secondes ouvertes ----------
   function clearTackleTimer() {
     if (state.tackleTimerId) {
-      clearTimeout(state.tackleTimerId);
+      clearInterval(state.tackleTimerId);
       state.tackleTimerId = null;
     }
   }
@@ -1217,39 +1238,118 @@
     hide("tackle-answer-zone");
   }
 
+  function isBinaryGame() {
+    return state.currentRoundMinigame === "plusoumoins" || state.currentRoundMinigame === "vraifaux";
+  }
+
+  function activeAnswerZone() {
+    return state.currentRoundMinigame === "plusoumoins" ? "pom-answer-zone"
+      : state.currentRoundMinigame === "vraifaux" ? "vf-answer-zone"
+      : state.currentRoundMinigame === "quisuisje" ? "qsj-answer-zone"
+      : state.currentRoundMinigame === "lematch" ? "lm-answer-zone" : "answer-zone";
+  }
+
   function startTackleWindow() {
     clearTackleTimer();
     hideTackleUI();
-    if (state.teams.length < 2) return; // personne pour tackler en solo
-    state.tackleTimerId = setTimeout(function () {
-      if (state.cardEnded) return;
+    state.tacklePhase = "locked";
+    state.tackleDeadline = Date.now() + TACKLE_LOCK_SECONDS * 1000;
+    var button = el("btn-tackle");
+    button.disabled = true;
+    button.textContent = "🚨 TACKLE · " + TACKLE_LOCK_SECONDS + " s";
+    show("btn-tackle");
+    state.tackleTimerId = setInterval(tickTackleWindow, 250);
+  }
+
+  function tickTackleWindow() {
+    if (state.cardEnded) { clearTackleTimer(); return; }
+    var remaining = Math.max(0, Math.ceil((state.tackleDeadline - Date.now()) / 1000));
+    var button = el("btn-tackle");
+    if (state.tacklePhase === "locked") {
+      if (remaining > 0) {
+        button.textContent = "🚨 TACKLE · " + remaining + " s";
+        return;
+      }
+      state.tacklePhase = "open";
+      state.tackleDeadline = Date.now() + TACKLE_OPEN_SECONDS * 1000;
+      button.disabled = state.teams.length < 2;
       playWhistle();
-      show("btn-tackle");
-    }, TACKLE_DELAY_SECONDS * 1000);
+      remaining = TACKLE_OPEN_SECONDS;
+    }
+    if (remaining > 0) {
+      button.textContent = "🚨 TACKLE · " + remaining + " s";
+      return;
+    }
+    clearTackleTimer();
+    hideTackleUI();
+    if (isBinaryGame()) {
+      var points = state.currentRoundMinigame === "plusoumoins" ? state.pomPotential : state.vfPotential;
+      awardPoints(points);
+      if (state.currentRoundMinigame === "plusoumoins") {
+        var current = state.pomChain.chain[state.pomIndex];
+        var next = state.pomChain.chain[state.pomIndex + 1];
+        state.pomIndex += 1;
+        renderPomChain();
+        el("pom-feedback-zone").classList.remove("hidden-screen");
+        el("pom-feedback-zone").textContent = "Temps écoulé. " + next.name + " : " + next.value +
+          " (" + (next.value > current.value ? "PLUS" : "MOINS") + "). +" + points + " point" +
+          (points > 1 ? "s" : "") + " encaissé" + (points > 1 ? "s" : "") + ".";
+      } else {
+        var statement = state.vfChain[state.vfIndex];
+        showVfFeedback("good", "Temps écoulé. C'était " + (statement.est_vraie ? "VRAI" : "FAUX") +
+          ". +" + points + " point" + (points > 1 ? "s" : "") + " encaissé" + (points > 1 ? "s" : "") + ".");
+      }
+      endCard();
+    } else if (state.currentRoundMinigame === "lematch") advanceLmEvent(false);
+    else if (state.currentRoundMinigame === "quisuisje") advanceQsjClue(false);
+    else advanceClue(false);
   }
 
   // ---------- Tackle "contestation" (Plus ou Moins, Vrai ou Faux) ----------
-  // Fenêtre de 5 secondes, sans délai préalable ni sifflet : la première équipe adverse
-  // à annoncer Tackle conteste la réponse déjà verrouillée de l'équipe active.
+  // Si l'équipe active répond avant la fin des 45 secondes, le même bouton
+  // permet de contester sa réponse pendant 5 secondes avant la révélation.
   var CONTEST_DELAY_SECONDS = 5;
 
   function clearContestTimer() {
     if (state.contestTimerId) {
-      clearTimeout(state.contestTimerId);
+      clearInterval(state.contestTimerId);
       state.contestTimerId = null;
     }
   }
 
-  function startContestWindow(onTimeout) {
+  function startContestWindow(onTimeout, durationMs) {
     clearContestTimer();
     if (state.teams.length < 2) return; // personne pour tackler en solo
-    state.contestTimerId = setTimeout(function () {
-      if (state.cardEnded) return;
-      onTimeout();
-    }, CONTEST_DELAY_SECONDS * 1000);
+    state.tacklePhase = "contest";
+    state.contestTimeout = onTimeout;
+    state.contestDeadline = Date.now() + (durationMs === undefined ? CONTEST_DELAY_SECONDS * 1000 : durationMs);
+    var button = el("btn-tackle");
+    button.disabled = false;
+    show("btn-tackle");
+    function tick() {
+      if (state.cardEnded) { clearContestTimer(); return; }
+      var remaining = Math.max(0, Math.ceil((state.contestDeadline - Date.now()) / 1000));
+      button.textContent = "🚨 TACKLE · " + remaining + " s";
+      if (remaining === 0) {
+        clearContestTimer();
+        hideTackleUI();
+        onTimeout();
+      }
+    }
+    tick();
+    if (!state.cardEnded && state.contestDeadline > Date.now()) state.contestTimerId = setInterval(tick, 250);
   }
 
   el("btn-tackle").addEventListener("click", function () {
+    if (el("btn-tackle").disabled || (state.tacklePhase !== "open" && state.tacklePhase !== "contest")) return;
+    if (state.tacklePhase === "contest") {
+      state.contestRemainingMs = Math.max(0, state.contestDeadline - Date.now());
+      clearContestTimer();
+    } else {
+      state.tackleRemainingMs = Math.max(0, state.tackleDeadline - Date.now());
+      clearTackleTimer();
+      hide(activeAnswerZone());
+    }
     hide("btn-tackle");
     var isLmTackle = state.currentRoundMinigame === "lematch";
     var buttonsDiv = el("tackle-team-buttons");
@@ -1262,20 +1362,41 @@
       btn.addEventListener("click", function () {
         state.tackleTeamIndex = idx;
         hide("tackle-team-picker");
+        if (state.tacklePhase === "contest") {
+          hide(state.currentRoundMinigame === "plusoumoins" ? "pom-pending-zone" : "vf-pending-zone");
+          hideTackleUI();
+          if (state.currentRoundMinigame === "plusoumoins") resolvePomGuess({ tacklerIdx: idx });
+          else resolveVfStatement({ tacklerIdx: idx });
+          return;
+        }
         el("tackle-team-label").textContent = team.name + " tackle !";
         el("tackle-answer-input").value = "";
         el("tackle-answer-input-2").value = "";
-        if (isLmTackle) {
+        if (isBinaryGame()) {
+          hide("tackle-answer-field-1");
+          hide("tackle-answer-field-2");
+          hide("btn-tackle-submit");
+          var first = el("tackle-binary-choice-1"), second = el("tackle-binary-choice-2");
+          first.textContent = state.currentRoundMinigame === "plusoumoins" ? "+ Plus" : "VRAI";
+          second.textContent = state.currentRoundMinigame === "plusoumoins" ? "− Moins" : "FAUX";
+          show("tackle-binary-choices");
+        } else if (isLmTackle) {
+          show("tackle-answer-field-1");
+          show("btn-tackle-submit");
+          hide("tackle-binary-choices");
           el("tackle-answer-label-1").textContent = "Équipe 1";
           el("tackle-answer-input").placeholder = "Nom de l'équipe";
           show("tackle-answer-field-2");
         } else {
+          show("tackle-answer-field-1");
+          show("btn-tackle-submit");
+          hide("tackle-binary-choices");
           el("tackle-answer-label-1").textContent = "Réponse du tackle";
           el("tackle-answer-input").placeholder = "Nom du joueur";
           hide("tackle-answer-field-2");
         }
         show("tackle-answer-zone");
-        el("tackle-answer-input").focus();
+        if (!isBinaryGame()) el("tackle-answer-input").focus();
       });
       buttonsDiv.appendChild(btn);
     });
@@ -1284,7 +1405,48 @@
 
   el("btn-tackle-cancel").addEventListener("click", function () {
     hide("tackle-team-picker");
-    show("btn-tackle");
+    if (state.tacklePhase === "contest") {
+      startContestWindow(state.contestTimeout, state.contestRemainingMs);
+    } else {
+      show(activeAnswerZone());
+      state.tackleDeadline = Date.now() + state.tackleRemainingMs;
+      state.tackleTimerId = setInterval(tickTackleWindow, 250);
+      tickTackleWindow();
+      show("btn-tackle");
+    }
+  });
+
+  function resolveOpenBinaryTackle(choice) {
+    var game = state.currentRoundMinigame;
+    var correct = game === "plusoumoins"
+      ? choice === (state.pomChain.chain[state.pomIndex + 1].value > state.pomChain.chain[state.pomIndex].value ? "plus" : "moins")
+      : choice === state.vfChain[state.vfIndex].est_vraie;
+    var points = game === "plusoumoins" ? state.pomPotential : state.vfPotential;
+    var team = state.teams[state.tackleTeamIndex];
+    awardPointsToTeam(state.tackleTeamIndex, correct ? 5 : -5);
+    if (!correct) awardPoints(points);
+    var message = "TACKLE " + (correct ? "réussi" : "raté") + " par " + team.name + ". " +
+      (correct ? "+5 points ; l'équipe active perd sa cagnotte." : "−5 points ; l'équipe active encaisse " + points + " point" + (points > 1 ? "s" : "") + ".");
+    hide("tackle-answer-zone");
+    if (game === "plusoumoins") {
+      var current = state.pomChain.chain[state.pomIndex], next = state.pomChain.chain[state.pomIndex + 1];
+      state.pomIndex += 1;
+      renderPomChain();
+      message += " " + next.name + " : " + next.value + " (" + (next.value > current.value ? "PLUS" : "MOINS") + ").";
+      el("pom-feedback-zone").classList.remove("hidden-screen");
+      el("pom-feedback-zone").textContent = message;
+    } else {
+      message += " C'était " + (state.vfChain[state.vfIndex].est_vraie ? "VRAI" : "FAUX") + ".";
+      showVfFeedback(correct ? "good" : "bad", message);
+    }
+    endCard();
+  }
+
+  el("tackle-binary-choice-1").addEventListener("click", function () {
+    resolveOpenBinaryTackle(state.currentRoundMinigame === "plusoumoins" ? "plus" : true);
+  });
+  el("tackle-binary-choice-2").addEventListener("click", function () {
+    resolveOpenBinaryTackle(state.currentRoundMinigame === "plusoumoins" ? "moins" : false);
   });
 
   el("btn-tackle-submit").addEventListener("click", function () {
@@ -1331,7 +1493,7 @@
   function beginPomTurn() {
     setActiveMinigameUI("plusoumoins");
     clearTackleTimer();
-    hideTackleUI(); // le Tackle "vol de réponse" de Transfert ne s'applique pas ici
+    hideTackleUI();
     clearContestTimer();
     state.cardEnded = false;
     state.pomChain = drawPomChain();
@@ -1347,6 +1509,7 @@
     hide("pom-tackle-team-picker");
     show("pom-answer-zone");
     renderPomChain(false);
+    startTackleWindow();
   }
 
   function renderPomChain(revealNext) {
@@ -1380,6 +1543,8 @@
   // La réponse est verrouillée (pas encore révélée) puis une fenêtre de contestation
   // de 5 secondes s'ouvre pour les autres équipes, sans délai préalable ni sifflet.
   function pomGuess(direction) {
+    clearTackleTimer();
+    hideTackleUI();
     state.pomPendingDirection = direction;
     hide("pom-answer-zone");
 
@@ -1504,13 +1669,14 @@
     show("pom-answer-zone");
     el("pom-feedback-zone").innerHTML = "";
     el("pom-feedback-zone").classList.add("hidden-screen");
+    startTackleWindow();
   });
 
   // ---------- Vrai ou Faux ----------
   function beginVfTurn() {
     setActiveMinigameUI("vraifaux");
     clearTackleTimer();
-    hideTackleUI(); // le Tackle de Transfert (minuteur/sifflet) ne s'applique pas ici
+    hideTackleUI();
     clearContestTimer();
     state.cardEnded = false;
     state.vfChain = drawVraiFauxChain();
@@ -1526,6 +1692,7 @@
     hide("vf-tackle-team-picker");
     show("vf-answer-zone");
     renderVfStatement();
+    startTackleWindow();
   }
 
   function renderVfStatement() {
@@ -1590,6 +1757,8 @@
   el("btn-vf-faux").addEventListener("click", function () { vfAnswer(false); });
 
   function vfAnswer(isVraiChoice) {
+    clearTackleTimer();
+    hideTackleUI();
     state.vfPendingAnswer = isVraiChoice;
     hide("vf-answer-zone");
 
@@ -1706,6 +1875,7 @@
     state.vfPendingAnswer = null;
     renderVfStatement();
     show("vf-answer-zone");
+    startTackleWindow();
   });
 
   // ---------- Qui suis-je ? (100 cartes sourcées — voir src/data/quisuisje-cards.json) ----------
@@ -1721,7 +1891,7 @@
     resetQsjAnswerZone();
     show("qsj-answer-zone");
     renderQsjClues();
-    startTackleWindow(); // même buzzer que Transfert : délai, sifflet, réponse unique de l'adversaire
+    startTackleWindow(); // même bouton Tackle : 30 secondes réservées, puis 15 secondes ouvertes
   }
 
   function renderQsjClues() {
@@ -1753,6 +1923,8 @@
   }
 
   el("btn-qsj-answer").addEventListener("click", function () {
+    clearTackleTimer();
+    hideTackleUI();
     document.querySelector("#qsj-answer-zone .answer-btns").style.display = "none";
     show("qsj-type-box");
     el("qsj-answer-input").focus();
@@ -1820,6 +1992,7 @@
     if (!fromWrongAnswer) {
       el("qsj-feedback-zone").innerHTML = "";
     }
+    startTackleWindow();
   }
 
   // ---------- Le Match (103 fiches sourcées — voir docs/LE_MATCH_CARDS_REVIEW.md) ----------
@@ -1837,7 +2010,7 @@
     resetLmAnswerZone();
     show("lm-answer-zone");
     renderLmEvents();
-    startTackleWindow(); // vol de réponse comme Transfert/Qui suis-je, mais réenclenché à chaque événement
+    startTackleWindow(); // le délai repart à chaque événement
   }
 
   function renderLmEvents() {
@@ -1871,6 +2044,8 @@
   }
 
   el("btn-lm-answer").addEventListener("click", function () {
+    clearTackleTimer();
+    hideTackleUI();
     document.querySelector("#lm-answer-zone .answer-btns").style.display = "none";
     show("lm-type-box");
     el("lm-answer-input-1").focus();
@@ -1950,7 +2125,7 @@
       el("lm-feedback-zone").innerHTML = "";
       el("lm-feedback-zone").classList.add("hidden-screen");
     }
-    startTackleWindow(); // nouvel événement = nouvelle fenêtre de 12 secondes avant le sifflet
+    startTackleWindow(); // nouvel événement = nouveau délai de 30 secondes, puis 15 secondes ouvertes
   }
 
   function renderClueList() {
@@ -1992,6 +2167,8 @@
   }
 
   el("btn-answer").addEventListener("click", function () {
+    clearTackleTimer();
+    hideTackleUI();
     document.querySelector(".answer-btns").style.display = "none";
     show("type-box");
     el("answer-input").focus();
@@ -2062,6 +2239,7 @@
     if (!fromWrongAnswer) {
       el("feedback-zone").innerHTML = "";
     }
+    startTackleWindow();
   }
 
   function showFeedback(kind, text) {
