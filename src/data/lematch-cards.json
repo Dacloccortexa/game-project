@@ -20,8 +20,8 @@
       "round": "Semi-final",
       "date": "1954-06-30",
       "teams": [
-        "West Germany",
-        "Austria"
+        "Allemagne de l’Ouest",
+        "Autriche"
       ],
       "score": [
         6,
@@ -72,7 +72,17 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ],
+        [
+          "Austria"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1954-semifinal-2",
@@ -82,7 +92,7 @@
       "round": "Semi-final",
       "date": "1954-06-30",
       "teams": [
-        "Hungary",
+        "Hongrie",
         "Uruguay"
       ],
       "score": [
@@ -134,7 +144,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Hungary"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-wc-1954-final-3",
@@ -144,8 +160,8 @@
       "round": "Final",
       "date": "1954-07-04",
       "teams": [
-        "West Germany",
-        "Hungary"
+        "Allemagne de l’Ouest",
+        "Hongrie"
       ],
       "score": [
         3,
@@ -196,7 +212,17 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ],
+        [
+          "Hungary"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1958-semifinal-1",
@@ -206,7 +232,7 @@
       "round": "Semi-final",
       "date": "1958-06-24",
       "teams": [
-        "Brazil",
+        "Brésil",
         "France"
       ],
       "score": [
@@ -258,7 +284,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Brazil"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-wc-1958-semifinal-2",
@@ -268,8 +300,8 @@
       "round": "Semi-final",
       "date": "1958-06-24",
       "teams": [
-        "Sweden",
-        "West Germany"
+        "Suède",
+        "Allemagne de l’Ouest"
       ],
       "score": [
         3,
@@ -320,7 +352,17 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Sweden"
+        ],
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1958-final-3",
@@ -330,8 +372,8 @@
       "round": "Final",
       "date": "1958-06-29",
       "teams": [
-        "Brazil",
-        "Sweden"
+        "Brésil",
+        "Suède"
       ],
       "score": [
         5,
@@ -382,7 +424,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Brazil"
+        ],
+        [
+          "Sweden"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1962-semifinal-1",
@@ -392,8 +442,8 @@
       "round": "Semi-final",
       "date": "1962-06-13",
       "teams": [
-        "Czechoslovakia",
-        "Yugoslavia"
+        "Tchécoslovaquie",
+        "Yougoslavie"
       ],
       "score": [
         3,
@@ -444,7 +494,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Czechoslovakia"
+        ],
+        [
+          "Yugoslavia"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1962-semifinal-2",
@@ -454,8 +512,8 @@
       "round": "Semi-final",
       "date": "1962-06-13",
       "teams": [
-        "Brazil",
-        "Chile"
+        "Brésil",
+        "Chili"
       ],
       "score": [
         4,
@@ -506,7 +564,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Brazil"
+        ],
+        [
+          "Chile"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1962-final-3",
@@ -516,8 +582,8 @@
       "round": "Final",
       "date": "1962-06-17",
       "teams": [
-        "Brazil",
-        "Czechoslovakia"
+        "Brésil",
+        "Tchécoslovaquie"
       ],
       "score": [
         3,
@@ -568,7 +634,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Brazil"
+        ],
+        [
+          "Czechoslovakia"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1966-semifinal-1",
@@ -578,8 +652,8 @@
       "round": "Semi-final",
       "date": "1966-07-25",
       "teams": [
-        "West Germany",
-        "Soviet Union"
+        "Allemagne de l’Ouest",
+        "URSS"
       ],
       "score": [
         2,
@@ -630,7 +704,18 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ],
+        [
+          "Soviet Union",
+          "Union soviétique"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1966-semifinal-2",
@@ -640,7 +725,7 @@
       "round": "Semi-final",
       "date": "1966-07-26",
       "teams": [
-        "England",
+        "Angleterre",
         "Portugal"
       ],
       "score": [
@@ -692,7 +777,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "England"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-wc-1966-final-3",
@@ -702,8 +793,8 @@
       "round": "Final",
       "date": "1966-07-30",
       "teams": [
-        "England",
-        "West Germany"
+        "Angleterre",
+        "Allemagne de l’Ouest"
       ],
       "score": [
         4,
@@ -754,7 +845,17 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "England"
+        ],
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1970-semifinal-1",
@@ -764,7 +865,7 @@
       "round": "Semi-final",
       "date": "1970-06-17",
       "teams": [
-        "Brazil",
+        "Brésil",
         "Uruguay"
       ],
       "score": [
@@ -816,7 +917,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Brazil"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-wc-1970-semifinal-2",
@@ -826,8 +933,8 @@
       "round": "Semi-final",
       "date": "1970-06-17",
       "teams": [
-        "Italy",
-        "West Germany"
+        "Italie",
+        "Allemagne de l’Ouest"
       ],
       "score": [
         4,
@@ -878,7 +985,17 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Italy"
+        ],
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1970-final-3",
@@ -888,8 +1005,8 @@
       "round": "Final",
       "date": "1970-06-21",
       "teams": [
-        "Brazil",
-        "Italy"
+        "Brésil",
+        "Italie"
       ],
       "score": [
         4,
@@ -940,7 +1057,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Brazil"
+        ],
+        [
+          "Italy"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1974-final-1",
@@ -950,8 +1075,8 @@
       "round": "Final",
       "date": "1974-07-07",
       "teams": [
-        "Netherlands",
-        "West Germany"
+        "Pays-Bas",
+        "Allemagne de l’Ouest"
       ],
       "score": [
         1,
@@ -1002,7 +1127,18 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1974/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Netherlands",
+          "Hollande"
+        ],
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1978-final-1",
@@ -1012,8 +1148,8 @@
       "round": "Final",
       "date": "1978-06-25",
       "teams": [
-        "Argentina",
-        "Netherlands"
+        "Argentine",
+        "Pays-Bas"
       ],
       "score": [
         3,
@@ -1064,7 +1200,16 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1978/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Argentina"
+        ],
+        [
+          "Netherlands",
+          "Hollande"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1982-semifinal-1",
@@ -1074,8 +1219,8 @@
       "round": "Semi-final",
       "date": "1982-07-08",
       "teams": [
-        "Poland",
-        "Italy"
+        "Pologne",
+        "Italie"
       ],
       "score": [
         0,
@@ -1126,7 +1271,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Poland"
+        ],
+        [
+          "Italy"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1982-semifinal-2",
@@ -1136,7 +1289,7 @@
       "round": "Semi-final",
       "date": "1982-07-08",
       "teams": [
-        "West Germany",
+        "Allemagne de l’Ouest",
         "France"
       ],
       "score": [
@@ -1188,7 +1341,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-wc-1982-final-3",
@@ -1198,8 +1359,8 @@
       "round": "Final",
       "date": "1982-07-11",
       "teams": [
-        "Italy",
-        "West Germany"
+        "Italie",
+        "Allemagne de l’Ouest"
       ],
       "score": [
         3,
@@ -1250,7 +1411,17 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Italy"
+        ],
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1986-semifinal-1",
@@ -1261,7 +1432,7 @@
       "date": "1986-06-25",
       "teams": [
         "France",
-        "West Germany"
+        "Allemagne de l’Ouest"
       ],
       "score": [
         0,
@@ -1312,7 +1483,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1986-semifinal-2",
@@ -1322,8 +1501,8 @@
       "round": "Semi-final",
       "date": "1986-06-25",
       "teams": [
-        "Argentina",
-        "Belgium"
+        "Argentine",
+        "Belgique"
       ],
       "score": [
         2,
@@ -1374,7 +1553,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Argentina"
+        ],
+        [
+          "Belgium"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1986-final-3",
@@ -1384,8 +1571,8 @@
       "round": "Final",
       "date": "1986-06-29",
       "teams": [
-        "Argentina",
-        "West Germany"
+        "Argentine",
+        "Allemagne de l’Ouest"
       ],
       "score": [
         3,
@@ -1436,7 +1623,17 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Argentina"
+        ],
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1990-semifinal-1",
@@ -1446,8 +1643,8 @@
       "round": "Semi-final",
       "date": "1990-07-03",
       "teams": [
-        "Italy",
-        "Argentina"
+        "Italie",
+        "Argentine"
       ],
       "score": [
         1,
@@ -1498,7 +1695,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Italy"
+        ],
+        [
+          "Argentina"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1990-semifinal-2",
@@ -1508,8 +1713,8 @@
       "round": "Semi-final",
       "date": "1990-07-04",
       "teams": [
-        "West Germany",
-        "England"
+        "Allemagne de l’Ouest",
+        "Angleterre"
       ],
       "score": [
         1,
@@ -1560,7 +1765,17 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ],
+        [
+          "England"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1990-final-3",
@@ -1570,8 +1785,8 @@
       "round": "Final",
       "date": "1990-07-08",
       "teams": [
-        "West Germany",
-        "Argentina"
+        "Allemagne de l’Ouest",
+        "Argentine"
       ],
       "score": [
         1,
@@ -1622,7 +1837,17 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "West Germany",
+          "RFA",
+          "Allemagne de l'Ouest"
+        ],
+        [
+          "Argentina"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1994-semifinal-1",
@@ -1632,8 +1857,8 @@
       "round": "Semi-final",
       "date": "1994-07-13",
       "teams": [
-        "Bulgaria",
-        "Italy"
+        "Bulgarie",
+        "Italie"
       ],
       "score": [
         1,
@@ -1684,7 +1909,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Bulgaria"
+        ],
+        [
+          "Italy"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1994-semifinal-2",
@@ -1694,8 +1927,8 @@
       "round": "Semi-final",
       "date": "1994-07-13",
       "teams": [
-        "Sweden",
-        "Brazil"
+        "Suède",
+        "Brésil"
       ],
       "score": [
         0,
@@ -1746,7 +1979,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Sweden"
+        ],
+        [
+          "Brazil"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1994-final-3",
@@ -1756,8 +1997,8 @@
       "round": "Final",
       "date": "1994-07-17",
       "teams": [
-        "Brazil",
-        "Italy"
+        "Brésil",
+        "Italie"
       ],
       "score": [
         0,
@@ -1808,7 +2049,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Brazil"
+        ],
+        [
+          "Italy"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1998-semifinal-1",
@@ -1818,8 +2067,8 @@
       "round": "Semi-final",
       "date": "1998-07-07",
       "teams": [
-        "Brazil",
-        "Netherlands"
+        "Brésil",
+        "Pays-Bas"
       ],
       "score": [
         1,
@@ -1870,7 +2119,16 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Brazil"
+        ],
+        [
+          "Netherlands",
+          "Hollande"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1998-semifinal-2",
@@ -1881,7 +2139,7 @@
       "date": "1998-07-08",
       "teams": [
         "France",
-        "Croatia"
+        "Croatie"
       ],
       "score": [
         2,
@@ -1932,7 +2190,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Croatia"
+        ]
+      ]
     },
     {
       "id": "lm-wc-1998-final-3",
@@ -1942,7 +2206,7 @@
       "round": "Final",
       "date": "1998-07-12",
       "teams": [
-        "Brazil",
+        "Brésil",
         "France"
       ],
       "score": [
@@ -1994,7 +2258,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Brazil"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-wc-2002-semifinal-1",
@@ -2004,8 +2274,8 @@
       "round": "Semi-final",
       "date": "2002-06-25",
       "teams": [
-        "Germany",
-        "South Korea"
+        "Allemagne",
+        "Corée du Sud"
       ],
       "score": [
         1,
@@ -2056,7 +2326,16 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Germany",
+          "RFA"
+        ],
+        [
+          "South Korea"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2002-semifinal-2",
@@ -2066,8 +2345,8 @@
       "round": "Semi-final",
       "date": "2002-06-26",
       "teams": [
-        "Brazil",
-        "Turkey"
+        "Brésil",
+        "Turquie"
       ],
       "score": [
         1,
@@ -2118,7 +2397,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Brazil"
+        ],
+        [
+          "Turkey"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2002-final-3",
@@ -2128,8 +2415,8 @@
       "round": "Final",
       "date": "2002-06-30",
       "teams": [
-        "Germany",
-        "Brazil"
+        "Allemagne",
+        "Brésil"
       ],
       "score": [
         0,
@@ -2180,7 +2467,16 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Germany",
+          "RFA"
+        ],
+        [
+          "Brazil"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2006-semifinal-1",
@@ -2190,8 +2486,8 @@
       "round": "Semi-final",
       "date": "2006-07-04",
       "teams": [
-        "Germany",
-        "Italy"
+        "Allemagne",
+        "Italie"
       ],
       "score": [
         0,
@@ -2242,7 +2538,16 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Germany",
+          "RFA"
+        ],
+        [
+          "Italy"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2006-semifinal-2",
@@ -2304,7 +2609,11 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-wc-2006-final-3",
@@ -2314,7 +2623,7 @@
       "round": "Final",
       "date": "2006-07-09",
       "teams": [
-        "Italy",
+        "Italie",
         "France"
       ],
       "score": [
@@ -2366,7 +2675,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Italy"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-wc-2010-semifinal-1",
@@ -2377,7 +2692,7 @@
       "date": "2010-07-06",
       "teams": [
         "Uruguay",
-        "Netherlands"
+        "Pays-Bas"
       ],
       "score": [
         2,
@@ -2428,7 +2743,14 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Netherlands",
+          "Hollande"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2010-semifinal-2",
@@ -2438,8 +2760,8 @@
       "round": "Semi-final",
       "date": "2010-07-07",
       "teams": [
-        "Germany",
-        "Spain"
+        "Allemagne",
+        "Espagne"
       ],
       "score": [
         0,
@@ -2490,7 +2812,16 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Germany",
+          "RFA"
+        ],
+        [
+          "Spain"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2010-final-3",
@@ -2500,8 +2831,8 @@
       "round": "Final",
       "date": "2010-07-11",
       "teams": [
-        "Netherlands",
-        "Spain"
+        "Pays-Bas",
+        "Espagne"
       ],
       "score": [
         0,
@@ -2552,7 +2883,16 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Netherlands",
+          "Hollande"
+        ],
+        [
+          "Spain"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2014-semifinal-1",
@@ -2562,8 +2902,8 @@
       "round": "Semi-final",
       "date": "2014-07-08",
       "teams": [
-        "Brazil",
-        "Germany"
+        "Brésil",
+        "Allemagne"
       ],
       "score": [
         1,
@@ -2614,7 +2954,16 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Brazil"
+        ],
+        [
+          "Germany",
+          "RFA"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2014-semifinal-2",
@@ -2624,8 +2973,8 @@
       "round": "Semi-final",
       "date": "2014-07-09",
       "teams": [
-        "Netherlands",
-        "Argentina"
+        "Pays-Bas",
+        "Argentine"
       ],
       "score": [
         0,
@@ -2676,7 +3025,16 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Netherlands",
+          "Hollande"
+        ],
+        [
+          "Argentina"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2014-final-3",
@@ -2686,8 +3044,8 @@
       "round": "Final",
       "date": "2014-07-13",
       "teams": [
-        "Germany",
-        "Argentina"
+        "Allemagne",
+        "Argentine"
       ],
       "score": [
         1,
@@ -2738,7 +3096,16 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Germany",
+          "RFA"
+        ],
+        [
+          "Argentina"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2018-semifinal-1",
@@ -2749,7 +3116,7 @@
       "date": "2018-07-10",
       "teams": [
         "France",
-        "Belgium"
+        "Belgique"
       ],
       "score": [
         1,
@@ -2800,7 +3167,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Belgium"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2018-semifinal-2",
@@ -2810,8 +3183,8 @@
       "round": "Semi-final",
       "date": "2018-07-11",
       "teams": [
-        "Croatia",
-        "England"
+        "Croatie",
+        "Angleterre"
       ],
       "score": [
         2,
@@ -2862,7 +3235,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Croatia"
+        ],
+        [
+          "England"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2018-final-3",
@@ -2873,7 +3254,7 @@
       "date": "2018-07-15",
       "teams": [
         "France",
-        "Croatia"
+        "Croatie"
       ],
       "score": [
         4,
@@ -2924,7 +3305,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Croatia"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2022-semifinal-1",
@@ -2934,8 +3321,8 @@
       "round": "Semi-final",
       "date": "2022-12-13",
       "teams": [
-        "Argentina",
-        "Croatia"
+        "Argentine",
+        "Croatie"
       ],
       "score": [
         3,
@@ -2986,7 +3373,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Argentina"
+        ],
+        [
+          "Croatia"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2022-semifinal-2",
@@ -2997,7 +3392,7 @@
       "date": "2022-12-14",
       "teams": [
         "France",
-        "Morocco"
+        "Maroc"
       ],
       "score": [
         2,
@@ -3048,7 +3443,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Morocco"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2022-final-3",
@@ -3058,7 +3459,7 @@
       "round": "Final",
       "date": "2022-12-18",
       "teams": [
-        "Argentina",
+        "Argentine",
         "France"
       ],
       "score": [
@@ -3110,7 +3511,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Argentina"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-wc-2026-semifinal-1",
@@ -3121,7 +3528,7 @@
       "date": "2026-07-14",
       "teams": [
         "France",
-        "Spain"
+        "Espagne"
       ],
       "score": [
         0,
@@ -3172,7 +3579,13 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Spain"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2026-semifinal-2",
@@ -3182,8 +3595,8 @@
       "round": "Semi-final",
       "date": "2026-07-15",
       "teams": [
-        "England",
-        "Argentina"
+        "Angleterre",
+        "Argentine"
       ],
       "score": [
         1,
@@ -3234,7 +3647,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "England"
+        ],
+        [
+          "Argentina"
+        ]
+      ]
     },
     {
       "id": "lm-wc-2026-final-3",
@@ -3244,8 +3665,8 @@
       "round": "Final",
       "date": "2026-07-19",
       "teams": [
-        "Spain",
-        "Argentina"
+        "Espagne",
+        "Argentine"
       ],
       "score": [
         1,
@@ -3296,7 +3717,15 @@
           "source": "https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Spain"
+        ],
+        [
+          "Argentina"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1977-final",
@@ -3359,7 +3788,11 @@
           "source": "https://en.wikipedia.org/wiki/1977_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-1978-final",
@@ -3369,7 +3802,7 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Club Brugge",
+        "Club Bruges",
         "Liverpool"
       ],
       "score": [
@@ -3422,7 +3855,13 @@
           "source": "https://en.wikipedia.org/wiki/1978_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Club Brugge"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-ucl-1979-final",
@@ -3485,7 +3924,11 @@
           "source": "https://en.wikipedia.org/wiki/1979_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-1980-final",
@@ -3496,7 +3939,7 @@
       "date": null,
       "teams": [
         "Nottingham Forest",
-        "Hamburger SV"
+        "Hambourg SV"
       ],
       "score": [
         1,
@@ -3548,7 +3991,14 @@
           "source": "https://en.wikipedia.org/wiki/1980_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Hamburger SV",
+          "Hambourg"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1981-final",
@@ -3611,7 +4061,11 @@
           "source": "https://en.wikipedia.org/wiki/1981_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-1982-final",
@@ -3674,7 +4128,11 @@
           "source": "https://en.wikipedia.org/wiki/1982_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-1983-final",
@@ -3684,7 +4142,7 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Hamburger SV",
+        "Hambourg SV",
         "Juventus"
       ],
       "score": [
@@ -3737,7 +4195,14 @@
           "source": "https://en.wikipedia.org/wiki/1983_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Hamburger SV",
+          "Hambourg"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-ucl-1984-final",
@@ -3748,7 +4213,7 @@
       "date": null,
       "teams": [
         "Liverpool",
-        "Roma"
+        "AS Rome"
       ],
       "score": [
         1,
@@ -3800,7 +4265,14 @@
           "source": "https://en.wikipedia.org/wiki/1984_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Roma",
+          "Rome"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1985-final",
@@ -3863,7 +4335,11 @@
           "source": "https://en.wikipedia.org/wiki/1985_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-1986-final",
@@ -3873,8 +4349,8 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Barcelona",
-        "Steaua București"
+        "FC Barcelone",
+        "Steaua Bucarest"
       ],
       "score": [
         0,
@@ -3926,7 +4402,17 @@
           "source": "https://en.wikipedia.org/wiki/1986_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Barcelona",
+          "Barcelone",
+          "Barça"
+        ],
+        [
+          "Steaua București"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1987-final",
@@ -3937,7 +4423,7 @@
       "date": null,
       "teams": [
         "Bayern Munich",
-        "Porto"
+        "FC Porto"
       ],
       "score": [
         1,
@@ -3989,7 +4475,13 @@
           "source": "https://en.wikipedia.org/wiki/1987_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Porto"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1988-final",
@@ -4000,7 +4492,7 @@
       "date": null,
       "teams": [
         "PSV Eindhoven",
-        "Benfica"
+        "Benfica Lisbonne"
       ],
       "score": [
         0,
@@ -4052,7 +4544,13 @@
           "source": "https://en.wikipedia.org/wiki/1988_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Benfica"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1989-final",
@@ -4062,8 +4560,8 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Steaua București",
-        "Milan"
+        "Steaua Bucarest",
+        "AC Milan"
       ],
       "score": [
         0,
@@ -4115,7 +4613,15 @@
           "source": "https://en.wikipedia.org/wiki/1989_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Steaua București"
+        ],
+        [
+          "Milan"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1990-final",
@@ -4125,8 +4631,8 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Milan",
-        "Benfica"
+        "AC Milan",
+        "Benfica Lisbonne"
       ],
       "score": [
         1,
@@ -4178,7 +4684,15 @@
           "source": "https://en.wikipedia.org/wiki/1990_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Milan"
+        ],
+        [
+          "Benfica"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1991-final",
@@ -4188,8 +4702,8 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Red Star Belgrade",
-        "Marseille"
+        "Étoile rouge de Belgrade",
+        "Olympique de Marseille"
       ],
       "score": [
         0,
@@ -4241,7 +4755,17 @@
           "source": "https://en.wikipedia.org/wiki/1991_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Red Star Belgrade",
+          "Étoile rouge"
+        ],
+        [
+          "Marseille",
+          "OM"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1992-final",
@@ -4251,8 +4775,8 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Barcelona",
-        "Sampdoria"
+        "FC Barcelone",
+        "Sampdoria Gênes"
       ],
       "score": [
         1,
@@ -4304,7 +4828,17 @@
           "source": "https://en.wikipedia.org/wiki/1992_European_Cup_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Barcelona",
+          "Barcelone",
+          "Barça"
+        ],
+        [
+          "Sampdoria"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1993-final",
@@ -4314,8 +4848,8 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Marseille",
-        "Milan"
+        "Olympique de Marseille",
+        "AC Milan"
       ],
       "score": [
         1,
@@ -4367,7 +4901,16 @@
           "source": "https://en.wikipedia.org/wiki/1993_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Marseille",
+          "OM"
+        ],
+        [
+          "Milan"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1994-final",
@@ -4377,8 +4920,8 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Milan",
-        "Barcelona"
+        "AC Milan",
+        "FC Barcelone"
       ],
       "score": [
         4,
@@ -4430,7 +4973,17 @@
           "source": "https://en.wikipedia.org/wiki/1994_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Milan"
+        ],
+        [
+          "Barcelona",
+          "Barcelone",
+          "Barça"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1995-final",
@@ -4440,8 +4993,8 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Ajax",
-        "Milan"
+        "Ajax Amsterdam",
+        "AC Milan"
       ],
       "score": [
         1,
@@ -4493,7 +5046,15 @@
           "source": "https://en.wikipedia.org/wiki/1995_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Ajax"
+        ],
+        [
+          "Milan"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-1996-final",
@@ -4503,7 +5064,7 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Ajax",
+        "Ajax Amsterdam",
         "Juventus"
       ],
       "score": [
@@ -4556,7 +5117,13 @@
           "source": "https://en.wikipedia.org/wiki/1996_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Ajax"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-ucl-1997-final",
@@ -4619,7 +5186,11 @@
           "source": "https://en.wikipedia.org/wiki/1997_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-1998-final",
@@ -4682,7 +5253,11 @@
           "source": "https://en.wikipedia.org/wiki/1998_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-1999-final",
@@ -4745,7 +5320,11 @@
           "source": "https://en.wikipedia.org/wiki/1999_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2000-final",
@@ -4756,7 +5335,7 @@
       "date": null,
       "teams": [
         "Real Madrid",
-        "Valencia"
+        "Valence CF"
       ],
       "score": [
         3,
@@ -4808,7 +5387,14 @@
           "source": "https://en.wikipedia.org/wiki/2000_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Valencia",
+          "Valence"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-2001-final",
@@ -4819,7 +5405,7 @@
       "date": null,
       "teams": [
         "Bayern Munich",
-        "Valencia"
+        "Valence CF"
       ],
       "score": [
         1,
@@ -4871,7 +5457,14 @@
           "source": "https://en.wikipedia.org/wiki/2001_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Valencia",
+          "Valence"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-2002-final",
@@ -4934,7 +5527,11 @@
           "source": "https://en.wikipedia.org/wiki/2002_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2003-final",
@@ -4945,7 +5542,7 @@
       "date": null,
       "teams": [
         "Juventus",
-        "Milan"
+        "AC Milan"
       ],
       "score": [
         0,
@@ -4997,7 +5594,13 @@
           "source": "https://en.wikipedia.org/wiki/2003_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Milan"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-2004-final",
@@ -5007,8 +5610,8 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Monaco",
-        "Porto"
+        "AS Monaco",
+        "FC Porto"
       ],
       "score": [
         0,
@@ -5060,7 +5663,15 @@
           "source": "https://en.wikipedia.org/wiki/2004_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Monaco"
+        ],
+        [
+          "Porto"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-2005-final",
@@ -5070,7 +5681,7 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Milan",
+        "AC Milan",
         "Liverpool"
       ],
       "score": [
@@ -5123,7 +5734,13 @@
           "source": "https://en.wikipedia.org/wiki/2005_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Milan"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2006-final",
@@ -5133,7 +5750,7 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Barcelona",
+        "FC Barcelone",
         "Arsenal"
       ],
       "score": [
@@ -5186,7 +5803,15 @@
           "source": "https://en.wikipedia.org/wiki/2006_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Barcelona",
+          "Barcelone",
+          "Barça"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2007-final",
@@ -5196,7 +5821,7 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Milan",
+        "AC Milan",
         "Liverpool"
       ],
       "score": [
@@ -5249,7 +5874,13 @@
           "source": "https://en.wikipedia.org/wiki/2007_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Milan"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2008-final",
@@ -5312,7 +5943,11 @@
           "source": "https://en.wikipedia.org/wiki/2008_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2009-final",
@@ -5322,7 +5957,7 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Barcelona",
+        "FC Barcelone",
         "Manchester United"
       ],
       "score": [
@@ -5375,7 +6010,15 @@
           "source": "https://en.wikipedia.org/wiki/2009_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Barcelona",
+          "Barcelone",
+          "Barça"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2010-final",
@@ -5438,7 +6081,11 @@
           "source": "https://en.wikipedia.org/wiki/2010_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2011-final",
@@ -5448,7 +6095,7 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Barcelona",
+        "FC Barcelone",
         "Manchester United"
       ],
       "score": [
@@ -5501,7 +6148,15 @@
           "source": "https://en.wikipedia.org/wiki/2011_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Barcelona",
+          "Barcelone",
+          "Barça"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2012-final",
@@ -5564,7 +6219,11 @@
           "source": "https://en.wikipedia.org/wiki/2012_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2013-final",
@@ -5627,7 +6286,11 @@
           "source": "https://en.wikipedia.org/wiki/2013_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2014-final",
@@ -5690,7 +6353,11 @@
           "source": "https://en.wikipedia.org/wiki/2014_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2015-final",
@@ -5701,7 +6368,7 @@
       "date": null,
       "teams": [
         "Juventus",
-        "Barcelona"
+        "FC Barcelone"
       ],
       "score": [
         1,
@@ -5753,7 +6420,15 @@
           "source": "https://en.wikipedia.org/wiki/2015_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        [
+          "Barcelona",
+          "Barcelone",
+          "Barça"
+        ]
+      ]
     },
     {
       "id": "lm-ucl-2016-final",
@@ -5816,7 +6491,11 @@
           "source": "https://en.wikipedia.org/wiki/2016_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2017-final",
@@ -5879,7 +6558,11 @@
           "source": "https://en.wikipedia.org/wiki/2017_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2018-final",
@@ -5942,7 +6625,11 @@
           "source": "https://en.wikipedia.org/wiki/2018_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2019-final",
@@ -5952,7 +6639,7 @@
       "round": "Final",
       "date": null,
       "teams": [
-        "Tottenham Hotspur",
+        "Tottenham",
         "Liverpool"
       ],
       "score": [
@@ -6005,7 +6692,14 @@
           "source": "https://en.wikipedia.org/wiki/2019_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [
+          "Tottenham Hotspur",
+          "Spurs"
+        ],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2020-final",
@@ -6068,7 +6762,11 @@
           "source": "https://en.wikipedia.org/wiki/2020_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2021-final",
@@ -6131,7 +6829,11 @@
           "source": "https://en.wikipedia.org/wiki/2021_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2022-final",
@@ -6194,7 +6896,11 @@
           "source": "https://en.wikipedia.org/wiki/2022_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2023-final",
@@ -6257,7 +6963,11 @@
           "source": "https://en.wikipedia.org/wiki/2023_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2024-final",
@@ -6320,7 +7030,11 @@
           "source": "https://en.wikipedia.org/wiki/2024_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2025-final",
@@ -6383,7 +7097,11 @@
           "source": "https://en.wikipedia.org/wiki/2025_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     },
     {
       "id": "lm-ucl-2026-final",
@@ -6446,7 +7164,11 @@
           "source": "https://en.wikipedia.org/wiki/2026_UEFA_Champions_League_final"
         }
       ],
-      "status": "lu"
+      "status": "lu",
+      "team_aliases": [
+        [],
+        []
+      ]
     }
   ],
   "read_status_recorded_at": "2026-09-28",
