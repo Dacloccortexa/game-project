@@ -1170,7 +1170,6 @@
       hide("pom-pending-zone");
       hide("pom-tackle-team-picker");
       hide("pom-answer-zone");
-      clearContestTimer();
     }
     if (!isVf) {
       el("vf-feedback-zone").classList.add("hidden-screen");
@@ -1179,7 +1178,6 @@
       hide("vf-pending-zone");
       hide("vf-tackle-team-picker");
       hide("vf-answer-zone");
-      clearContestTimer();
     }
     if (!isQsj) {
       el("qsj-feedback-zone").innerHTML = "";
@@ -1298,6 +1296,18 @@
     clearTackleTimer();
     hideTackleUI();
     if (isBinaryGame()) {
+      var activeAnswered = state.currentRoundMinigame === "plusoumoins"
+        ? (state.pomPendingDirection !== null && state.pomPendingDirection !== undefined)
+        : (state.vfPendingAnswer !== null && state.vfPendingAnswer !== undefined);
+      if (activeAnswered) {
+        // L'équipe active avait déjà verrouillé sa réponse : personne n'a tacklé pendant
+        // les 45 secondes, la réponse se révèle donc normalement (juste ou fausse).
+        hide("pom-pending-zone");
+        hide("vf-pending-zone");
+        if (state.currentRoundMinigame === "plusoumoins") resolvePomGuess(null);
+        else resolveVfStatement(null);
+        return;
+      }
       var points = state.currentRoundMinigame === "plusoumoins" ? state.pomPotential : state.vfPotential;
       awardPoints(points);
       if (state.currentRoundMinigame === "plusoumoins") {
@@ -1306,12 +1316,12 @@
         state.pomIndex += 1;
         renderPomChain();
         el("pom-feedback-zone").classList.remove("hidden-screen");
-        el("pom-feedback-zone").textContent = "Temps écoulé. " + next.name + " : " + next.value +
+        el("pom-feedback-zone").textContent = "Temps écoulé, personne n'a répondu. " + next.name + " : " + next.value +
           " (" + (next.value > current.value ? "PLUS" : "MOINS") + "). +" + points + " point" +
           (points > 1 ? "s" : "") + " encaissé" + (points > 1 ? "s" : "") + ".";
       } else {
         var statement = state.vfChain[state.vfIndex];
-        showVfFeedback("good", "Temps écoulé. C'était " + (statement.est_vraie ? "VRAI" : "FAUX") +
+        showVfFeedback("good", "Temps écoulé, personne n'a répondu. C'était " + (statement.est_vraie ? "VRAI" : "FAUX") +
           ". +" + points + " point" + (points > 1 ? "s" : "") + " encaissé" + (points > 1 ? "s" : "") + ".");
       }
       endCard();
@@ -1320,51 +1330,13 @@
     else advanceClue(false);
   }
 
-  // ---------- Tackle "contestation" (Plus ou Moins, Vrai ou Faux) ----------
-  // Si l'équipe active répond avant la fin des 45 secondes, le même bouton
-  // permet de contester sa réponse pendant 5 secondes avant la révélation.
-  var CONTEST_DELAY_SECONDS = 5;
-
-  function clearContestTimer() {
-    if (state.contestTimerId) {
-      clearInterval(state.contestTimerId);
-      state.contestTimerId = null;
-    }
-  }
-
-  function startContestWindow(onTimeout, durationMs) {
-    clearContestTimer();
-    if (state.teams.length < 2) return; // personne pour tackler en solo
-    state.tacklePhase = "contest";
-    state.contestTimeout = onTimeout;
-    state.contestDeadline = Date.now() + (durationMs === undefined ? CONTEST_DELAY_SECONDS * 1000 : durationMs);
-    var button = el("btn-tackle");
-    button.disabled = false;
-    show("btn-tackle");
-    function tick() {
-      if (state.cardEnded) { clearContestTimer(); return; }
-      var remaining = Math.max(0, Math.ceil((state.contestDeadline - Date.now()) / 1000));
-      button.textContent = tackleButtonText(remaining);
-      if (remaining === 0) {
-        clearContestTimer();
-        hideTackleUI();
-        onTimeout();
-      }
-    }
-    tick();
-    if (!state.cardEnded && state.contestDeadline > Date.now()) state.contestTimerId = setInterval(tick, 250);
-  }
-
   el("btn-tackle").addEventListener("click", function () {
-    if (el("btn-tackle").disabled || (state.tacklePhase !== "open" && state.tacklePhase !== "contest")) return;
-    if (state.tacklePhase === "contest") {
-      state.contestRemainingMs = Math.max(0, state.contestDeadline - Date.now());
-      clearContestTimer();
-    } else {
-      state.tackleRemainingMs = Math.max(0, state.tackleDeadline - Date.now());
-      clearTackleTimer();
-      hide(activeAnswerZone());
-    }
+    if (el("btn-tackle").disabled || state.tacklePhase !== "open") return;
+    state.tackleRemainingMs = Math.max(0, state.tackleDeadline - Date.now());
+    clearTackleTimer();
+    hide(activeAnswerZone());
+    hide("pom-pending-zone");
+    hide("vf-pending-zone");
     hide("btn-tackle");
     var isLmTackle = state.currentRoundMinigame === "lematch";
     var buttonsDiv = el("tackle-team-buttons");
@@ -1377,13 +1349,6 @@
       btn.addEventListener("click", function () {
         state.tackleTeamIndex = idx;
         hide("tackle-team-picker");
-        if (state.tacklePhase === "contest") {
-          hide(state.currentRoundMinigame === "plusoumoins" ? "pom-pending-zone" : "vf-pending-zone");
-          hideTackleUI();
-          if (state.currentRoundMinigame === "plusoumoins") resolvePomGuess({ tacklerIdx: idx });
-          else resolveVfStatement({ tacklerIdx: idx });
-          return;
-        }
         el("tackle-team-label").textContent = team.name + " tackle !";
         el("tackle-answer-input").value = "";
         el("tackle-answer-input-2").value = "";
@@ -1420,15 +1385,17 @@
 
   el("btn-tackle-cancel").addEventListener("click", function () {
     hide("tackle-team-picker");
-    if (state.tacklePhase === "contest") {
-      startContestWindow(state.contestTimeout, state.contestRemainingMs);
+    if (state.currentRoundMinigame === "plusoumoins" && state.pomPendingDirection !== null && state.pomPendingDirection !== undefined) {
+      show("pom-pending-zone");
+    } else if (state.currentRoundMinigame === "vraifaux" && state.vfPendingAnswer !== null && state.vfPendingAnswer !== undefined) {
+      show("vf-pending-zone");
     } else {
       show(activeAnswerZone());
-      state.tackleDeadline = Date.now() + state.tackleRemainingMs;
-      state.tackleTimerId = setInterval(tickTackleWindow, 250);
-      tickTackleWindow();
-      show("btn-tackle");
     }
+    state.tackleDeadline = Date.now() + state.tackleRemainingMs;
+    state.tackleTimerId = setInterval(tickTackleWindow, 250);
+    tickTackleWindow();
+    show("btn-tackle");
   });
 
   function resolveOpenBinaryTackle(choice) {
@@ -1510,7 +1477,6 @@
     setActiveMinigameUI("plusoumoins");
     clearTackleTimer();
     hideTackleUI();
-    clearContestTimer();
     state.cardEnded = false;
     state.pomChain = drawPomChain();
     state.pomIndex = 0;        // index du joueur de référence actuel dans la chaîne
@@ -1556,69 +1522,35 @@
     }
   }
 
-  // La réponse est verrouillée (pas encore révélée) puis une fenêtre de contestation
-  // de 5 secondes s'ouvre pour les autres équipes, sans délai préalable ni sifflet.
+  // La réponse est verrouillée (pas encore révélée). Aucune fenêtre de contestation
+  // séparée : le Tackle commun (30 secondes grisées puis 15 ouvertes) continue de
+  // courir depuis le début de la comparaison, que l'équipe active ait déjà répondu
+  // ou non — voir DECISIONS.md du 2026-09-28 (« Tackle commun uniquement »).
   function pomGuess(direction) {
-    clearTackleTimer();
-    hideTackleUI();
     state.pomPendingDirection = direction;
     hide("pom-answer-zone");
 
     if (state.teams.length < 2) {
       // Personne pour tackler en solo : on révèle directement.
+      clearTackleTimer();
+      hideTackleUI();
       resolvePomGuess(null);
       return;
     }
 
     el("pom-pending-label").textContent = state.teams[state.currentTeamIndex].name +
       " a verrouillé sa réponse (" + (direction === "plus" ? "+ Plus" : "− Moins") +
-      "). Une autre équipe peut TACKLE avant la révélation.";
+      "). Le Tackle peut encore arriver avant la révélation.";
     show("pom-pending-zone");
-    startContestWindow(function () {
-      hide("pom-pending-zone");
-      resolvePomGuess(null);
-    });
   }
 
   el("pom-btn-plus").addEventListener("click", function () { pomGuess("plus"); });
   el("pom-btn-moins").addEventListener("click", function () { pomGuess("moins"); });
 
-  el("btn-pom-reveal").addEventListener("click", function () {
-    clearContestTimer();
-    hide("pom-pending-zone");
-    resolvePomGuess(null);
-  });
-
-  el("btn-tackle-pom").addEventListener("click", function () {
-    clearContestTimer();
-    hide("pom-pending-zone");
-    var buttonsDiv = el("pom-tackle-team-buttons");
-    buttonsDiv.innerHTML = "";
-    state.teams.forEach(function (team, idx) {
-      if (idx === state.currentTeamIndex) return; // l'équipe active ne tackle pas son propre tour
-      var btn = document.createElement("button");
-      btn.className = "choice-btn";
-      btn.textContent = team.name;
-      btn.addEventListener("click", function () {
-        hide("pom-tackle-team-picker");
-        resolvePomGuess({ tacklerIdx: idx });
-      });
-      buttonsDiv.appendChild(btn);
-    });
-    show("pom-tackle-team-picker");
-  });
-
-  el("btn-pom-tackle-cancel").addEventListener("click", function () {
-    hide("pom-tackle-team-picker");
-    show("pom-pending-zone");
-    startContestWindow(function () {
-      hide("pom-pending-zone");
-      resolvePomGuess(null);
-    });
-  });
-
   // tackleInfo = null (révélation normale) ou { tacklerIdx } (une équipe a tacklé avant la révélation)
-  function resolvePomGuess(tackleInfo) {
+  // Révèle la réponse verrouillée de Plus ou Moins quand personne n'a tacklé pendant
+  // les 45 secondes du bouton Tackle commun (voir tickTackleWindow).
+  function resolvePomGuess() {
     var chain = state.pomChain.chain;
     var refValue = chain[state.pomIndex].value;
     var nextValue = chain[state.pomIndex + 1].value;
@@ -1630,25 +1562,6 @@
 
     el("pom-feedback-zone").innerHTML = "";
     el("pom-feedback-zone").classList.add("hidden-screen");
-
-    if (tackleInfo) {
-      var tacklerTeam = state.teams[tackleInfo.tacklerIdx];
-      if (isActiveCorrect) {
-        // L'équipe active avait raison : le tackle échoue, son tour continue normalement.
-        awardPointsToTeam(tackleInfo.tacklerIdx, -currentTackleStake());
-        el("pom-feedback-zone").classList.remove("hidden-screen");
-        el("pom-feedback-zone").innerHTML = '<div class="feedback bad">TACKLE raté par ' + tacklerTeam.name + '. ' + tackleDeltaText(false) + '.</div>';
-      } else {
-        // L'équipe active avait tort : le tackle réussit, elle perd toute sa cagnotte en cours.
-        awardPointsToTeam(tackleInfo.tacklerIdx, currentTackleStake());
-        el("pom-feedback-zone").classList.remove("hidden-screen");
-        el("pom-feedback-zone").innerHTML = '<div class="feedback good">TACKLE réussi par ' + tacklerTeam.name + ' ! ' + tackleDeltaText(true) + '.</div>';
-        el("pom-feedback-zone").innerHTML += '<div class="feedback bad">Mauvaise réponse de ' + state.teams[state.currentTeamIndex].name + '. 0 point pour cette carte.</div>';
-        awardPoints(0);
-        endCard();
-        return;
-      }
-    }
 
     if (!isActiveCorrect) {
       el("pom-feedback-zone").classList.remove("hidden-screen");
@@ -1693,7 +1606,6 @@
     setActiveMinigameUI("vraifaux");
     clearTackleTimer();
     hideTackleUI();
-    clearContestTimer();
     state.cardEnded = false;
     state.vfChain = drawVraiFauxChain();
     state.vfIndex = 0;
@@ -1773,63 +1685,26 @@
   el("btn-vf-faux").addEventListener("click", function () { vfAnswer(false); });
 
   function vfAnswer(isVraiChoice) {
-    clearTackleTimer();
-    hideTackleUI();
     state.vfPendingAnswer = isVraiChoice;
     hide("vf-answer-zone");
 
     if (state.teams.length < 2) {
       // Personne pour tackler en solo : on révèle directement.
+      clearTackleTimer();
+      hideTackleUI();
       resolveVfStatement(null);
       return;
     }
 
     el("vf-pending-label").textContent = state.teams[state.currentTeamIndex].name +
       " a répondu " + (isVraiChoice ? "VRAI" : "FAUX") +
-      ". Une autre équipe peut TACKLE avant la révélation.";
+      ". Le Tackle peut encore arriver avant la révélation.";
     show("vf-pending-zone");
-    startContestWindow(function () {
-      hide("vf-pending-zone");
-      resolveVfStatement(null);
-    });
   }
 
-  el("btn-vf-reveal").addEventListener("click", function () {
-    clearContestTimer();
-    hide("vf-pending-zone");
-    resolveVfStatement(null);
-  });
-
-  el("btn-tackle-vf").addEventListener("click", function () {
-    clearContestTimer();
-    hide("vf-pending-zone");
-    var buttonsDiv = el("vf-tackle-team-buttons");
-    buttonsDiv.innerHTML = "";
-    state.teams.forEach(function (team, idx) {
-      if (idx === state.currentTeamIndex) return; // l'équipe active ne tackle pas son propre tour
-      var btn = document.createElement("button");
-      btn.className = "choice-btn";
-      btn.textContent = team.name;
-      btn.addEventListener("click", function () {
-        hide("vf-tackle-team-picker");
-        resolveVfStatement({ tacklerIdx: idx });
-      });
-      buttonsDiv.appendChild(btn);
-    });
-    show("vf-tackle-team-picker");
-  });
-
-  el("btn-vf-tackle-cancel").addEventListener("click", function () {
-    hide("vf-tackle-team-picker");
-    show("vf-pending-zone");
-    startContestWindow(function () {
-      hide("vf-pending-zone");
-      resolveVfStatement(null);
-    });
-  });
-
-  // tackleInfo = null (révélation normale) ou { tacklerIdx } (une équipe a tacklé avant la révélation)
-  function resolveVfStatement(tackleInfo) {
+  // Révèle la réponse verrouillée de Vrai ou Faux quand personne n'a tacklé pendant
+  // les 45 secondes du bouton Tackle commun (voir tickTackleWindow).
+  function resolveVfStatement() {
     var statement = state.vfChain[state.vfIndex];
     var isActiveCorrect = (state.vfPendingAnswer === statement.est_vraie);
     var verdictText = "C'était " + (statement.est_vraie ? "VRAI" : "FAUX") + ".";
@@ -1840,19 +1715,6 @@
         if (correction) verdictText += " " + correction;
       } catch (e) {
         console.error("formatVfCorrection a échoué pour " + statement.id, e);
-      }
-    }
-
-    if (tackleInfo) {
-      var tacklerTeam = state.teams[tackleInfo.tacklerIdx];
-      if (isActiveCorrect) {
-        // L'équipe active avait raison : le tackle échoue, son tour continue normalement.
-        awardPointsToTeam(tackleInfo.tacklerIdx, -currentTackleStake());
-        showVfFeedback("bad", "TACKLE raté par " + tacklerTeam.name + ". " + tackleDeltaText(false) + ".");
-      } else {
-        // L'équipe active avait tort : le tackle réussit, elle perd toute sa cagnotte en cours.
-        awardPointsToTeam(tackleInfo.tacklerIdx, currentTackleStake());
-        showVfFeedback("good", "TACKLE réussi par " + tacklerTeam.name + " ! " + tackleDeltaText(true) + ".");
       }
     }
 
@@ -2275,7 +2137,6 @@
     state.cardEnded = true;
     clearTackleTimer();
     hideTackleUI();
-    clearContestTimer();
     hide("answer-zone");
     hide("pom-answer-zone");
     hide("pom-decision-zone");

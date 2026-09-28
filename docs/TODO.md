@@ -10,7 +10,7 @@
 - ✅ Plus ou Moins : sept catégories intégrées et jouables, **50 entrées joueur + valeur chacune** (350 entrées au total) : buts en Premier League, Ligue des champions, Coupe du monde, Liga, Serie A et Ligue 1, ainsi que sélections nationales. Les six nouveaux lots indiquent la source et la date de vérification pour chaque entrée.
 - ⏳ Plus ou Moins : revalider périodiquement les chiffres des joueurs encore actifs et relire les lots avant une soirée test ; les classements ont des dates d'arrêté différentes, indiquées dans chaque fichier.
 - ⏳ À partir de cette base, composer et tester des chaînes de six joueurs : cinq comparaisons au maximum, aucune égalité entre voisins, écarts intéressants et directions PLUS/MOINS variées.
-- ✅ Vrai ou Faux (remplace Le Faux) : jeu de données de 2 000 affirmations intégré (`src/data/vraifaux-statements.json`, toutes vérifiées) et mini-jeu implémenté dans `index.html` (5 affirmations, cagnotte 1→5, ENCAISSER/CONTINUER, Tackle commun 30 + 15 secondes, ou contestation de 5 secondes après une réponse active). Voir DECISIONS.md du 2026-09-28.
+- ✅ Vrai ou Faux (remplace Le Faux) : jeu de données de 2 000 affirmations intégré (`src/data/vraifaux-statements.json`, toutes vérifiées) et mini-jeu implémenté dans `index.html` (5 affirmations, cagnotte 1→5, ENCAISSER/CONTINUER, Tackle commun 30 + 15 secondes, sans fenêtre séparée même après une réponse active). Voir DECISIONS.md du 2026-09-28.
 - ⏳ Relecture éditoriale du jeu de données Vrai ou Faux avant une vraie soirée test (recommandée par sa propre note de contrôle, pas encore faite — seul un contrôle automatique de cohérence a été effectué).
 - ✅ Qui suis-je ? : mini-jeu implémenté dans `index.html` avec le bouton Tackle commun (30 secondes réservées puis 15 ouvertes à chaque indice, première équipe adverse à répondre, enjeu = palier de l'indice en cours (5/4/3/2/1), fin de carte).
 - ✅ Qui suis-je ? : **100 fiches sourcées** intégrées (`src/data/quisuisje-cards.json`, chargées via `loadQsjCards()`), remplaçant les 4 fiches de test. Case cochée par défaut comme les autres mini-jeux. Vérifié : chargement, réponse fausse (−1, carte continue), rendu de 15 cartes tirées au hasard.
@@ -28,10 +28,10 @@
 - Définir les règles des mini-jeux qui suivront Plus ou Moins, chacun avec ses réponses valables, son déroulé et son score, avant leur intégration.
 - Qui suis-je ? : éprouver en playtest le nouveau délai de 30 + 15 secondes à chaque indice et la difficulté réelle des cinq indices.
 - ✅ Tackle sur Transfert : 30 secondes réservées à l'équipe active puis 15 secondes de Tackle après le sifflet, à chaque indice ; la carte s'arrête après une tentative de Tackle. Voir DECISIONS.md du 2026-09-28.
-- ✅ Tackle sur Vrai ou Faux : bouton commun 30 + 15 secondes si l'équipe active tarde à répondre ; contestation de 5 secondes dès qu'elle verrouille sa réponse, avant révélation. Voir DECISIONS.md du 2026-09-28.
-- ✅ Vrai ou Faux : l'interface respecte désormais la fenêtre de 5 secondes (révélation automatique si personne ne tackle avant). Implémenté dans `index.html` (`startContestWindow`).
+- ✅ Tackle sur Vrai ou Faux : bouton commun 30 + 15 secondes, sans fenêtre séparée même si l'équipe active a déjà verrouillé sa réponse. Voir DECISIONS.md du 2026-09-28.
+- ✅ Vrai ou Faux : suit désormais le bouton Tackle commun (30 + 15 secondes), sans fenêtre séparée à part — voir la décision « Tackle commun uniquement » du 2026-09-28.
 - Tackle : décider si l'équipe qui tient le téléphone (et voit donc déjà les indices révélés sur Transfert) a le droit de tackler, vu l'avantage d'information que ça lui donnerait.
-- ✅ Tackle sur Plus ou Moins : bouton commun 30 + 15 secondes si l'équipe active tarde à répondre ; contestation de 5 secondes après réponse verrouillée ; +5/−5 et cagnotte selon GAME_DESIGN.md. Voir DECISIONS.md du 2026-09-28.
+- ✅ Tackle sur Plus ou Moins : bouton commun 30 + 15 secondes, sans fenêtre séparée même si l'équipe active a déjà verrouillé sa réponse ; forfait ±3 et cagnotte selon GAME_DESIGN.md. Voir DECISIONS.md du 2026-09-28.
 - ✅ Le Match : mauvaise réponse active = −1 puis événement suivant ; passe = événement suivant sans pénalité ; après le cinquième événement sans bonne réponse, fin de carte et révélation du match. Décidé comme sur Qui suis-je.
 
 ## Zones où Claude peut décider librement
@@ -48,4 +48,4 @@
 
 - Proposer un format de carte qui conserve clubs, années, prêts/retours, réponse attendue, variantes acceptées, sources et statut de vérification.
 - Proposer un tirage aléatoire des cartes pour chaque équipe, avec répétition possible, et un moyen d'évaluer les répétitions pendant les tests.
-- ✅ Bouton Tackle toujours visible pendant une question : grisé avant son ouverture, actif pendant les 15 secondes ouvertes ou les 5 secondes de contestation. Implémenté dans `index.html`.
+- ✅ Bouton Tackle toujours visible pendant une question : grisé pendant les 30 premières secondes, actif pendant les 15 secondes ouvertes qui suivent. Implémenté dans `index.html`.
