@@ -12,8 +12,8 @@ La première version se joue sur **un seul téléphone**. Une version où chaque
 
 Avant de commencer, les joueurs choisissent :
 1. **1 à 4 équipes** ;
-2. **5, 10 ou 20 manches** ;
-3. les mini-jeux à inclure.
+2. **5, 10, 15 ou 20 manches** ;
+3. les mini-jeux à inclure (présentés comme « défis » dans l'interface).
 
 Tous les mini-jeux disponibles sont sélectionnés par défaut. Les joueurs peuvent en retirer, mais doivent en garder au moins un. Si un seul jeu est sélectionné, la partie utilise uniquement ce jeu. Chaque carte est tirée au hasard lorsqu'une équipe doit jouer ; un même joueur, voire une même carte, peut revenir dans la même partie.
 

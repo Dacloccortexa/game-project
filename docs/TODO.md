@@ -3,6 +3,7 @@
 ## À prototyper
 
 - ✅ Un parcours sur un seul téléphone : créer 1 à 4 équipes, choisir 5/10/20 manches, sélectionner les mini-jeux, jouer, puis voir le classement. Implémenté dans `index.html`.
+- ⏳ Intégrer le nouveau parcours de préparation validé dans [UI_SETUP_FLOW.md](UI_SETUP_FLOW.md) : 5/10/15/20 manches, sous-page « Défis » et personnalisation des noms, logos et couleurs avant le coup d'envoi. Les deux planches sont dans `docs/ui/`.
 - ✅ Transfert : révélation chronologique, tentative ou passe, pénalité de −1, points dégressifs, carte à club unique, porteur de téléphone désigné, confirmation de la réponse saisie. Implémenté dans `index.html`.
 - ✅ Lot de 112 cartes dans `src/data/transfert-cards.json`, dont **100 vérifiées** (chargées en jeu) et **12 encore à vérifier** (exclues du jeu tant qu'elles ne le sont pas).
 - ⏳ Une vraie partie test à consigner ensuite dans `PLAYTESTS.md`.
