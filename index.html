@@ -427,8 +427,8 @@
         <label for="mg-quisuisje" style="margin:0; font-size:15px; color:var(--chalk);">Qui suis-je ?</label>
       </div>
       <div class="checkbox-row">
-        <input type="checkbox" id="mg-lematch">
-        <label for="mg-lematch" style="margin:0; font-size:15px; color:var(--chalk);">Le Match (103 fiches à tester)</label>
+        <input type="checkbox" id="mg-lematch" checked>
+        <label for="mg-lematch" style="margin:0; font-size:15px; color:var(--chalk);">Le Match</label>
       </div>
     </div>
 
@@ -726,7 +726,7 @@
   }
 
   // ---------- Content: cartes Le Match ----------
-  // 103 fiches sourcées, à relire et tester avant une vraie soirée de jeu.
+  // 103 fiches sourcées marquées comme lues ; difficulté à tester en partie.
   // Voir docs/LE_MATCH_CARDS_REVIEW.md et docs/TODO.md.
   var LM_CARDS = [];
   var LM_READY = false;
@@ -904,7 +904,7 @@
     teamCount: 3,
     teamNames: ["Équipe A", "Équipe B", "Équipe C", "Équipe D"],
     roundsTotal: 10,
-    minigamesSelected: ["transfert", "plusoumoins", "vraifaux", "quisuisje"],
+    minigamesSelected: ["transfert", "plusoumoins", "vraifaux", "quisuisje", "lematch"],
     teams: [],       // {name, score}
     roundsPlayed: 0,
     currentTeamIndex: 0,
