@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>TACKLE — Prototype</title>
+<title>TACKLE — Le jeu de foot entre amis</title>
 <style>
   :root {
     --pitch: #0F3D2E;
@@ -385,6 +385,245 @@
 
   .hidden-screen { display: none; }
   #screen-play { padding-bottom: 72px; }
+
+  /* Identité visuelle TACKLE : lisibilité sur un téléphone tenu à la main. */
+  :root {
+    --pitch: #071f19;
+    --pitch-line: #123c30;
+    --chalk: #f8f6ed;
+    --chalk-dim: #d1e0d5;
+    --gold: #f2bf54;
+    --gold-dim: #a87320;
+    --red: #d84943;
+    --ink: #10261e;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--pitch);
+    background-image:
+      radial-gradient(circle at 9% 4%, rgba(255,248,201,.7), transparent 3%),
+      radial-gradient(circle at 27% 2%, rgba(255,248,201,.45), transparent 2.5%),
+      radial-gradient(circle at 73% 2%, rgba(255,248,201,.45), transparent 2.5%),
+      radial-gradient(circle at 91% 4%, rgba(255,248,201,.7), transparent 3%),
+      radial-gradient(ellipse at 50% -17%, rgba(231,205,124,.16), transparent 42%),
+      radial-gradient(ellipse at 50% 110%, rgba(37,111,67,.58), transparent 58%),
+      linear-gradient(90deg, transparent calc(50% - 1px), rgba(255,255,255,.035) 50%, transparent calc(50% + 1px)),
+      repeating-linear-gradient(0deg, transparent 0 56px, rgba(245,243,236,.025) 56px 57px);
+  }
+
+  .app { padding: 32px 18px 48px; }
+  #screen-setup, #screen-play, #screen-final { width: 100%; }
+
+  h1, h2, .round-count, .active-team, .score, .p-score {
+    font-family: "Arial Black", Impact, system-ui, sans-serif;
+  }
+
+  h1 {
+    display: inline-block;
+    position: relative;
+    font-size: clamp(42px, 13vw, 62px);
+    line-height: .95;
+    letter-spacing: -3px;
+    margin: 3px 0 14px;
+    color: var(--gold);
+    font-style: italic;
+    transform: skewX(-5deg);
+    text-shadow: 0 3px 0 #8c5c1a, 0 10px 22px rgba(0,0,0,.35);
+  }
+  h1::after {
+    content: "";
+    position: absolute;
+    left: 1px;
+    bottom: -7px;
+    width: 68%;
+    height: 5px;
+    border-radius: 99px;
+    background: var(--gold);
+    transform: skewX(-16deg);
+  }
+  .subtitle {
+    max-width: 330px;
+    margin: 1px 0 30px;
+    line-height: 1.45;
+    color: var(--chalk-dim);
+    font-size: 15px;
+  }
+  h2 {
+    font-size: 16px;
+    letter-spacing: .08em;
+    margin-bottom: 19px;
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    padding: 21px 19px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(214,244,220,.16);
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(30,83,60,.97), rgba(9,49,37,.98));
+    box-shadow: 0 14px 32px rgba(0,0,0,.22);
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: var(--gold);
+    opacity: .88;
+  }
+  label { color: var(--chalk-dim); line-height: 1.35; }
+  .field { margin-bottom: 20px; }
+  .field:last-child { margin-bottom: 0; }
+
+  input[type="text"] {
+    min-height: 50px;
+    border-radius: 11px;
+    background: rgba(4,31,23,.7);
+    border-color: rgba(245,243,236,.24);
+    font-weight: 600;
+  }
+  input[type="text"]::placeholder { color: rgba(245,243,236,.49); }
+  input[type="text"]:focus-visible, button:focus-visible, input[type="checkbox"]:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+  }
+  .team-dot {
+    width: 12px;
+    height: 12px;
+    box-shadow: 0 0 0 4px rgba(242,191,84,.13);
+  }
+  .choice-group { gap: 9px; }
+  .choice-btn {
+    min-height: 48px;
+    border-radius: 11px;
+    background: rgba(5,32,24,.55);
+    border-color: rgba(245,243,236,.22);
+  }
+  .choice-btn.active {
+    box-shadow: inset 0 -3px 0 rgba(80,47,4,.17), 0 4px 14px rgba(242,191,84,.16);
+  }
+  .checkbox-row { min-height: 52px; }
+  .checkbox-row label { cursor: pointer; flex: 1; }
+  .checkbox-row input { width: 21px; height: 21px; flex-shrink: 0; }
+
+  button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  button.primary, .btn-answer {
+    min-height: 54px;
+    background: linear-gradient(180deg, #ffd879, var(--gold));
+    box-shadow: 0 5px 0 #9c671e, 0 11px 20px rgba(0,0,0,.2);
+  }
+  button.primary:active:not(:disabled), .btn-answer:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #9c671e, 0 5px 12px rgba(0,0,0,.2);
+  }
+  button.secondary, .btn-pass { min-height: 52px; }
+  button.primary:disabled { box-shadow: none; background: #6b6250; }
+  .error-msg { color: #ffaaa6; line-height: 1.4; }
+
+  .round-banner {
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 10px;
+    padding: 10px 12px;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 12px;
+    background: rgba(7,31,25,.65);
+  }
+  .round-banner .round-count { font-size: 15px; }
+  .round-banner .minigame-name {
+    color: var(--chalk);
+    font-weight: 700;
+    text-align: right;
+  }
+  .turn-info { padding: 17px 0 7px; }
+  .turn-info .active-team { font-size: clamp(23px, 7vw, 31px); line-height: 1.08; }
+  .turn-info .holder-note { line-height: 1.4; margin-top: 7px; }
+
+  .card-stage {
+    position: relative;
+    min-height: 190px;
+    padding: 22px 18px;
+    margin: 17px 0 16px;
+    background: linear-gradient(165deg, #fffdf3, #e9f0e7);
+    border: 2px solid rgba(255,255,255,.75);
+    border-radius: 19px;
+    box-shadow: 0 10px 0 rgba(3,21,16,.28), 0 22px 34px rgba(0,0,0,.18);
+  }
+  .clue-list { gap: 9px; }
+  .clue {
+    min-height: 49px;
+    gap: 10px;
+    border-radius: 11px;
+    background: rgba(15,61,46,.075);
+    border: 1px solid rgba(15,61,46,.07);
+    line-height: 1.3;
+  }
+  .clue.hidden { opacity: .38; border-style: dashed; }
+  .clue-points { color: #926219; font-size: 13px; }
+  .feedback { border-radius: 11px; padding: 13px 12px; line-height: 1.35; }
+  .feedback.good { color: #ffdc84; }
+  .feedback.bad { color: #ffb2ae; }
+
+  .confirm-box {
+    border: 1px solid rgba(245,243,236,.17);
+    background: linear-gradient(145deg, #20533d, #113829);
+    box-shadow: 0 14px 25px rgba(0,0,0,.14);
+  }
+  .confirm-box .typed { line-height: 1.35; }
+
+  .scoreboard { margin-top: 24px; }
+  .score-chip {
+    min-width: 95px;
+    border: 1px solid rgba(245,243,236,.14);
+    border-radius: 12px;
+    background: rgba(24,72,51,.92);
+  }
+  .score-chip.active {
+    border: 2px solid var(--gold);
+    background: #275a41;
+    box-shadow: 0 0 0 3px rgba(242,191,84,.1);
+  }
+  .score-chip .score { font-size: 25px; }
+  .podium-row {
+    border: 1px solid rgba(245,243,236,.14);
+    background: linear-gradient(145deg, #24583f, #123b2c);
+  }
+  .podium-row.first { background: linear-gradient(145deg, #345e3e, #1a4430); }
+
+  #screen-play { padding-bottom: 96px; }
+  #btn-tackle {
+    bottom: max(16px, env(safe-area-inset-bottom));
+    min-height: 56px;
+    border: 2px solid rgba(255,255,255,.38);
+    border-radius: 15px;
+    background: linear-gradient(180deg, #ea554d, #b9302f);
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: .04em;
+    box-shadow: 0 8px 0 rgba(82,16,16,.75), 0 15px 30px rgba(0,0,0,.32);
+  }
+  #btn-tackle:disabled {
+    background: #315444;
+    border-color: rgba(255,255,255,.15) !important;
+    color: rgba(255,255,255,.58) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,.24);
+  }
+
+  @media (max-width: 370px) {
+    .app { padding-left: 13px; padding-right: 13px; }
+    .card { padding: 18px 15px; }
+    .card-stage { padding: 18px 14px; }
+    .confirm-actions { gap: 7px; }
+    .confirm-actions button { padding-left: 7px; padding-right: 7px; font-size: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+
 </style>
 </head>
 <body>
@@ -393,7 +632,7 @@
   <!-- SCREEN: SETUP -->
   <section id="screen-setup">
     <h1>TACKLE</h1>
-    <p class="subtitle">Prototype — Transfert</p>
+    <p class="subtitle">Cinq mini-jeux de foot, sur un seul téléphone.</p>
 
     <div class="card">
       <h2>Équipes</h2>
