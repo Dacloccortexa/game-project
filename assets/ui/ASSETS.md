@@ -18,6 +18,8 @@ Ces fichiers sont séparés des planches et prêts à être utilisés dans les t
 
 Le site charge des copies allégées dans `assets/ui/web/` (WebP redimensionnés : environ 350 Ko au total contre 9 Mo pour les PNG). Les PNG d'origine restent la source : après une modification, régénérer la copie WebP correspondante. Les SVG de défis sont utilisés tels quels.
 
+Les animaux existent en six versions, une par couleur d'équipe (`team-<animal>-<couleur>.webp`) : les reflets dorés prennent la couleur de l'équipe, les ombres une version foncée de cette couleur, le crème ne change pas ; la version « gold » garde le dessin d'origine. Après une modification d'un PNG d'animal, relancer `python3 tools/tint_team_logos.py`.
+
 La police des titres de préparation, Oswald (licence SIL OFL), est hébergée dans `assets/fonts/`.
 
 ## Intégration

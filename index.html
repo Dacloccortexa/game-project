@@ -1731,11 +1731,15 @@
 
   // ---------- PRÉPARATION : 3 écrans (docs/UI_SETUP_FLOW.md) ----------
   var TEAM_LOGOS = [
-    { id: "lion", label: "Lion", src: "assets/ui/web/team-lion.webp" },
-    { id: "fox", label: "Renard", src: "assets/ui/web/team-fox.webp" },
-    { id: "bull", label: "Taureau", src: "assets/ui/web/team-bull.webp" },
-    { id: "eagle", label: "Aigle", src: "assets/ui/web/team-eagle.webp" }
+    { id: "lion", label: "Lion" },
+    { id: "fox", label: "Renard" },
+    { id: "bull", label: "Taureau" },
+    { id: "eagle", label: "Aigle" }
   ];
+  // Emblème teinté dans la couleur de l'équipe (généré par tools/tint_team_logos.py).
+  function logoSrc(logoId, colorId) {
+    return "assets/ui/web/team-" + logoId + "-" + colorId + ".webp";
+  }
   var TEAM_COLORS = [
     { id: "gold", label: "Or", hex: "#E9B53C" },
     { id: "coral", label: "Corail", hex: "#EF5B5B" },
@@ -1884,7 +1888,8 @@
     card.appendChild(buildRadioFieldset(idx, "Logo", "logo", TEAM_LOGOS, function (opt, wrapLabel) {
       wrapLabel.className = "logo-opt";
       var img = document.createElement("img");
-      img.src = opt.src;
+      img.src = logoSrc(opt.id, setting.color);
+      img.setAttribute("data-logo", opt.id);
       img.alt = "";
       img.width = 64;
       img.height = 64;
@@ -1929,6 +1934,12 @@
       input.addEventListener("change", function () {
         state.teamSettings[idx][key] = opt.id;
         labels.forEach(function (l) { l.classList.toggle("selected", l === wrapLabel); });
+        if (key === "color") {
+          // Les quatre animaux de la fiche prennent la nouvelle couleur.
+          fs.parentNode.querySelectorAll("img[data-logo]").forEach(function (img) {
+            img.src = logoSrc(img.getAttribute("data-logo"), opt.id);
+          });
+        }
       });
       labels.push(wrapLabel);
       list.appendChild(wrapLabel);
@@ -3053,7 +3064,9 @@
 
   // Équipes créées sans logo ni couleur (anciens états, tests) : valeurs par défaut.
   function teamColorHex(team) { return (team.color && team.color.hex) || TEAM_COLORS[0].hex; }
-  function teamLogoSrc(team) { return (team.logo && team.logo.src) || TEAM_LOGOS[0].src; }
+  function teamLogoSrc(team) {
+    return logoSrc((team.logo && team.logo.id) || TEAM_LOGOS[0].id, (team.color && team.color.id) || TEAM_COLORS[0].id);
+  }
 
   function teamBadge(team) {
     var badge = document.createElement("span");
