@@ -760,6 +760,7 @@
             id: c.id,
             competition: c.competition,
             teams: c.teams,
+            team_aliases: c.team_aliases || [[], []],
             events: c.events.map(function (ev) { return ev.text; })
           };
         });
@@ -1441,7 +1442,7 @@
       var typed2 = el("tackle-answer-input-2").value.trim();
       if (!typed2) return;
       var lmCard = state.currentLmCard;
-      var isLmCorrect = matchesBothTeams(typed, typed2, lmCard.teams[0], lmCard.teams[1]);
+      var isLmCorrect = matchesBothTeams(typed, typed2, lmCard);
 
       hide("tackle-answer-zone");
 
@@ -1963,16 +1964,18 @@
 
   // Vérifie que les deux équipes citées correspondent aux deux équipes de la carte,
   // dans n'importe quel ordre (les deux paires possibles sont testées).
-  function matchesBothTeams(typed1, typed2, realTeam1, realTeam2) {
-    var t1 = normalize(typed1), t2 = normalize(typed2);
-    var pairA = matchesAnyAnswer(typed1, [normalize(realTeam1)]) && matchesAnyAnswer(typed2, [normalize(realTeam2)]);
-    var pairB = matchesAnyAnswer(typed1, [normalize(realTeam2)]) && matchesAnyAnswer(typed2, [normalize(realTeam1)]);
+  function matchesBothTeams(typed1, typed2, card) {
+    var aliases = card.team_aliases || [[], []];
+    var team1 = [card.teams[0]].concat(aliases[0] || []).map(normalize);
+    var team2 = [card.teams[1]].concat(aliases[1] || []).map(normalize);
+    var pairA = matchesAnyAnswer(typed1, team1) && matchesAnyAnswer(typed2, team2);
+    var pairB = matchesAnyAnswer(typed1, team2) && matchesAnyAnswer(typed2, team1);
     return pairA || pairB;
   }
 
   function checkLmAnswer(typed1, typed2) {
     var card = state.currentLmCard;
-    var isCorrect = matchesBothTeams(typed1, typed2, card.teams[0], card.teams[1]);
+    var isCorrect = matchesBothTeams(typed1, typed2, card);
 
     if (isCorrect) {
       var pointsEarned = POINTS_BY_INDEX[Math.min(state.lmRevealedCount - 1, POINTS_BY_INDEX.length - 1)];
