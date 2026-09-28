@@ -40,7 +40,8 @@ Les images et illustrations prêtes à utiliser sont décrites dans le [pack d'a
 
 - Une seule page qui défile, avec une fiche par équipe. Le nombre de fiches suit le nombre choisi à l'écran 1.
 - Chaque fiche contient un nom modifiable, prérempli **Équipe 1**, **Équipe 2**, etc. ; un logo à choisir parmi **quatre propositions** (lion, renard, taureau, aigle) ; et une couleur.
-- La planche montre six couleurs : or, corail, bleu, violet, menthe et ivoire. Préattribuer des couleurs distinctes et un logo à chaque équipe, pour pouvoir lancer sans saisie obligatoire. Les choix sont modifiables.
+- La planche montre six couleurs : or, corail, bleu, violet, menthe et ivoire. Préattribuer un logo et une couleur distincts à chaque équipe, pour pouvoir lancer sans saisie obligatoire. Les choix sont modifiables.
+- **Un logo et une couleur ne peuvent appartenir qu'à une seule équipe** (décision de David, 2026-09-28). Sur les autres fiches, un choix déjà pris est grisé et barré, et n'est plus sélectionnable. Une équipe ajoutée reçoit son logo et sa couleur par défaut s'ils sont libres, sinon les premiers libres.
 - Les logos d'équipes sont des créations propres à TACKLE : **ne pas utiliser de logos de clubs**.
 - **Coup d'envoi** lance la partie avec les équipes configurées. Les noms, logos et couleurs doivent rester cohérents dans le score et le classement.
 - Si l'on revient à l'écran 1 et change le nombre d'équipes, conserver les réglages des équipes qui restent ; initialiser les nouvelles fiches avec leurs valeurs par défaut.

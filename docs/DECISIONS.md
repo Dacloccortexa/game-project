@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-09-28] Logo et couleur uniques par équipe
+- Décision : lorsqu'une équipe a pris un logo ou une couleur, les autres équipes ne peuvent plus le choisir (demandé par David).
+- Raison : chaque équipe doit rester identifiable d'un coup d'œil dans le score et le classement.
+- Impact technique : sur « Personnaliser les équipes », les choix déjà pris sont grisés, barrés et désactivés ; une équipe ajoutée reçoit un logo et une couleur libres. Avec 4 équipes, les 4 logos sont tous pris : pour changer d'animal, une équipe doit d'abord en libérer un.
+
 ## [2026-09-28] Suppression de la fenêtre de contestation de 5 secondes : Tackle commun uniquement
 
 - David signale que « les 5 secondes de contestation disparaissent » et précise, en clarifiant : il veut supprimer la fenêtre spéciale qui s'ouvrait immédiatement quand l'équipe active verrouillait sa réponse sur Plus ou Moins/Vrai ou Faux, et faire que ces deux jeux suivent exactement le même rythme que Transfert/Qui suis-je/Le Match : 30 secondes grisées puis 15 secondes ouvertes après le sifflet, **même si l'équipe active a déjà répondu**. Confirmé par David.

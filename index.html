@@ -1018,6 +1018,21 @@
     border: 2px solid rgba(0,0,0,.25);
     cursor: pointer;
   }
+  /* Déjà pris par une autre équipe : grisé et barré (pas seulement la couleur). */
+  .logo-opt.taken, .swatch.taken { opacity: .28; cursor: not-allowed; }
+  .logo-opt.taken::after, .swatch.taken::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 6%;
+    bottom: 6%;
+    width: 2.5px;
+    margin-left: -1.25px;
+    border-radius: 2px;
+    background: #f8f6ed;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.5);
+    transform: rotate(45deg);
+  }
   .swatch.selected {
     box-shadow: 0 0 0 3px #06140e, 0 0 0 6px var(--gold-ring), 0 0 16px rgba(242,191,84,.5);
   }
@@ -1845,12 +1860,47 @@
   // --- Équipes ---
   var PENCIL_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg>';
 
+  // Un logo ou une couleur ne peut appartenir qu'à une seule équipe.
+  function takenBy(key, value, exceptIdx) {
+    for (var i = 0; i < state.teamCount; i++) {
+      if (i !== exceptIdx && state.teamSettings[i][key] === value) return i;
+    }
+    return -1;
+  }
+  function ensureUniqueTeamSettings() {
+    [["logo", TEAM_LOGOS], ["color", TEAM_COLORS]].forEach(function (pair) {
+      var key = pair[0], options = pair[1];
+      for (var i = 0; i < state.teamCount; i++) {
+        var used = state.teamSettings.slice(0, i).map(function (t) { return t[key]; });
+        if (used.indexOf(state.teamSettings[i][key]) === -1) continue;
+        var preferred = defaultTeamSetting(i)[key];
+        var free = options.map(function (o) { return o.id; }).filter(function (id) { return used.indexOf(id) === -1; });
+        state.teamSettings[i][key] = free.indexOf(preferred) !== -1 ? preferred : free[0];
+      }
+    });
+  }
+  function refreshTakenOptions() {
+    el("team-cards").querySelectorAll("input[type=radio]").forEach(function (input) {
+      var idx = parseInt(input.getAttribute("data-team"), 10);
+      var key = input.getAttribute("data-key");
+      var owner = takenBy(key, input.value, idx);
+      var label = input.parentNode;
+      input.disabled = owner !== -1;
+      label.classList.toggle("taken", owner !== -1);
+      label.querySelector(".sr-only").textContent = input.getAttribute("data-label") +
+        (owner !== -1 ? " (déjà pris par " + teamDisplayName(owner) + ")" : "");
+      label.title = owner !== -1 ? "Déjà pris par " + teamDisplayName(owner) : "";
+    });
+  }
+
   function renderTeamCards() {
+    ensureUniqueTeamSettings();
     var wrap = el("team-cards");
     wrap.innerHTML = "";
     for (var i = 0; i < state.teamCount; i++) {
       wrap.appendChild(buildTeamCard(i));
     }
+    refreshTakenOptions();
   }
 
   function buildTeamCard(idx) {
@@ -1879,7 +1929,10 @@
     input.autocomplete = "off";
     input.value = setting.name;
     input.placeholder = "Équipe " + (idx + 1);
-    input.addEventListener("input", function () { state.teamSettings[idx].name = input.value; });
+    input.addEventListener("input", function () {
+      state.teamSettings[idx].name = input.value;
+      refreshTakenOptions();
+    });
     field.appendChild(label);
     field.appendChild(input);
     field.insertAdjacentHTML("beforeend", PENCIL_SVG);
@@ -1928,12 +1981,16 @@
       input.name = key + "-" + idx;
       input.value = opt.id;
       input.checked = state.teamSettings[idx][key] === opt.id;
+      input.setAttribute("data-team", idx);
+      input.setAttribute("data-key", key);
+      input.setAttribute("data-label", opt.label);
       wrapLabel.appendChild(input);
       decorate(opt, wrapLabel);
       if (input.checked) wrapLabel.classList.add("selected");
       input.addEventListener("change", function () {
         state.teamSettings[idx][key] = opt.id;
         labels.forEach(function (l) { l.classList.toggle("selected", l === wrapLabel); });
+        refreshTakenOptions();
         if (key === "color") {
           // Les quatre animaux de la fiche prennent la nouvelle couleur.
           fs.parentNode.querySelectorAll("img[data-logo]").forEach(function (img) {
