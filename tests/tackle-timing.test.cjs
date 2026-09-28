@@ -47,7 +47,7 @@ function advance(ms) {
 }
 
 let script = fs.readFileSync('index.html', 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
-script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, clearContestTimer, currentTackleStake};})();');
+script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake};})();');
 const context = {
   document: { getElementById: element, createElement: tag => element(`created-${tag}-${Math.random()}`), querySelector: element },
   fetch: () => Promise.resolve({ json: () => Promise.resolve({ cards: [], players: [], statements: [] }) }),
@@ -156,8 +156,10 @@ state.pomIndex = 0;
 state.pomPotential = 0;
 startTackleWindow();
 pomGuess('plus');
+assert.equal(element('btn-tackle').disabled, true);
+advance(30000);
 assert.equal(element('btn-tackle').disabled, false);
-advance(5000);
+advance(15000);
 assert.equal(state.pomPotential, 1);
 assert.equal(state.cardEnded, false);
 
@@ -178,10 +180,23 @@ state.vfIndex = 0;
 state.vfPotential = 2;
 startTackleWindow();
 vfAnswer(false);
+assert.equal(element('btn-tackle').disabled, true);
+advance(30000);
 assert.equal(element('btn-tackle').disabled, false);
 element('btn-tackle').click();
 element('tackle-team-buttons').children.at(-1).click();
-assert.equal(state.teams[1].score, -3);
+element('tackle-binary-choice-2').click();
+assert.equal(state.teams[1].score, 3);
+assert.equal(state.teams[0].score, 0);
+assert.equal(state.cardEnded, true);
+
+reset('vraifaux');
+state.vfIndex = 0;
+state.vfPotential = 2;
+startTackleWindow();
+vfAnswer(false);
+advance(30000);
+advance(15000);
 assert.equal(state.vfPotential, 3);
 assert.equal(state.cardEnded, false);
 
