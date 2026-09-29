@@ -1527,8 +1527,8 @@
      Elles expriment le duel, sans représenter les joueurs nommés. */
   .pom-sil { position: absolute; width: auto; max-width: none; pointer-events: none;
     -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 96%); mask-image: linear-gradient(180deg, #000 62%, transparent 96%); }
-  .pom-sil-ref { height: 46%; left: -27%; top: 84px; }
-  .pom-sil-next { height: 46%; right: -27%; bottom: 0; }
+  .pom-sil-ref { height: 46%; left: -14%; top: 84px; }
+  .pom-sil-next { height: 46%; right: -14%; bottom: 0; }
   .pom-glow-next { width: 240px; height: 170px; right: -4%; bottom: 20px; background: radial-gradient(circle, rgba(255,110,80,.5), transparent 70%); }
 
   .pom-head { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 10px 12px 0; text-align: center; }
@@ -1547,8 +1547,8 @@
   .pom-player { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 0; max-width: 78%; }
   /* Le trait lumineux sépare la zone bleue (en haut) de la zone corail (en bas). Chaque nom est dans
      sa zone, du côté opposé à sa silhouette : bleu à droite, corail à gauche. */
-  .pom-player.ref { align-self: flex-end; align-items: flex-end; text-align: right; margin-right: 2%; max-width: 64%; }
-  .pom-player.next { align-self: flex-start; align-items: flex-start; text-align: left; margin-left: 2%; max-width: 64%; }
+  .pom-player.ref { align-self: flex-end; align-items: flex-end; text-align: right; margin-right: 15%; max-width: 64%; }
+  .pom-player.next { align-self: flex-start; align-items: flex-start; text-align: left; margin-left: 15%; max-width: 64%; }
   .pom-first { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #dfe9f5; }
   .pom-last { font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 30px; line-height: 1; text-transform: uppercase; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,.7); overflow-wrap: anywhere; }
   .pom-value {
@@ -2616,7 +2616,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2318";
+  var APP_VERSION = "2026.09.29-2320";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {

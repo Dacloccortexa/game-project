@@ -21,8 +21,8 @@
 - Les silhouettes fournies (`assets/ui/pom-player-blue.png`, `pom-player-coral.png`) remplacent l'absence de joueur : bleue en haut à gauche, corail en bas à droite, comme sur la planche 16, avec un fondu en bas pour se fondre dans la carte.
 - Les noms et valeurs passent du côté opposé à leur silhouette : joueur de référence à droite dans la zone bleue, joueur suivant à gauche dans la zone corail (devant les barres).
 - Ajustement demandé par David (21 h 56) : « VS » remonté (au-dessus du trait lumineux), silhouette bleue décalée vers la gauche et corail vers la droite (débord de 14 % hors de la carte au lieu de 7 %).
-- Nouvel ajustement (23 h 12) : « VS » redescendu d'un cran, sur le trait lumineux ; silhouettes encore écartées (débord de 20 %).
-- Ajustement (23 h 18) : silhouettes encore écartées (débord de 27 %) ; on n'en voit plus que le profil, au bord de la carte.
+- Nouvel ajustement (23 h 12) : « VS » redescendu d'un cran, sur le trait lumineux.
+- Correction (23 h 19) : les demandes de 23 h 12 et 23 h 18 visaient les **noms**, pas les silhouettes. Silhouettes remises à 14 % de débord ; nom bleu (référence) décalé vers la gauche et nom rouge (suivant) vers la droite, c'est-à-dire vers le centre de la carte (marge de 15 % au lieu de 2 %).
 - Retrait (23 h 16) : les petits graphiques en barres décoratifs (bleu en haut à droite, corail en bas à gauche) sont supprimés, ils n'apportaient rien. Il reste les silhouettes, les noms, les valeurs, le « VS » et le trait lumineux.
 - Aucune règle ni élément commun modifié. Vérifié à 390 × 844 et 320 × 568, avant réponse et avec le verdict « Bonne réponse ».
 
