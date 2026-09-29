@@ -37,4 +37,8 @@ Ces assets donnent une direction graphique exploitable. Les écrans réels doive
 
 - `tackle-logo-red.png` : version rouge transparente du lettrage, pour le signal animé à 30 secondes.
 - `kickoff-whistle.wav` : double sifflet bref au départ de chaque chrono de 30 secondes.
-- `tackle-whistle.wav` : sifflet unique plus marqué au même instant que le signal visuel d'ouverture du Tackle. Voir [`docs/UI_TACKLE_OPEN_ANIMATION.md`](../../docs/UI_TACKLE_OPEN_ANIMATION.md).
+- `tackle-whistle.wav` : véritable coup de sifflet métallique, plus long et marqué, au même instant que le signal visuel d'ouverture du Tackle. Voir [`docs/UI_TACKLE_OPEN_ANIMATION.md`](../../docs/UI_TACKLE_OPEN_ANIMATION.md).
+
+- `kickoff-whistle-real-candidate.wav` : essai avec un véritable sifflet court pour le départ du chrono. À écouter et retravailler : le choix actuel `kickoff-whistle.wav` reste en place pour l'instant.
+
+Les extraits réels sont issus de deux enregistrements CC0 : [strongbot, « metal whistle.wav »](https://freesound.org/people/strongbot/sounds/568995/) pour `tackle-whistle.wav`, et [Rosa-Orenes256, « Referee whistle sound.wav »](https://freesound.org/people/Rosa-Orenes256/sounds/538422/) pour l'essai de coup d'envoi. Les extraits ont été raccourcis, ramenés en mono et normalisés.

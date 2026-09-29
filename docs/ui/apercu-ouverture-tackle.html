@@ -18,28 +18,41 @@
 <body>
   <main>
     <h1>Les deux signaux du chrono</h1>
-    <p>Un double sifflet ouvre les 30 secondes de l'équipe active. Un sifflet plus marqué ouvre les 15 secondes de Tackle.</p>
+    <p>Écouter le départ actuel, l'essai réel de départ encore à revoir et le sifflet réel retenu pour l'ouverture du Tackle.</p>
     <img id="screen" src="03-transfert-indice-3.png" alt="Écran de jeu au départ du chrono" width="430" height="932">
     <button id="kickoff" type="button">1 · Départ du chrono</button>
+    <button id="kickoff-candidate" type="button">Essai réel du départ (à revoir)</button>
     <button id="tackle" class="danger" type="button">2 · Tackle autorisé</button>
     <audio id="kickoff-sound" preload="auto" src="../../assets/ui/kickoff-whistle.wav"></audio>
+    <audio id="kickoff-candidate-sound" preload="auto" src="../../assets/ui/kickoff-whistle-real-candidate.wav"></audio>
     <audio id="tackle-sound" preload="auto" src="../../assets/ui/tackle-whistle.wav"></audio>
   </main>
   <script>
     const screen = document.getElementById('screen');
     const kickoffSound = document.getElementById('kickoff-sound');
     const tackleSound = document.getElementById('tackle-sound');
+    const kickoffCandidateSound = document.getElementById('kickoff-candidate-sound');
     let finish;
     document.getElementById('kickoff').addEventListener('click', () => {
       clearTimeout(finish);
       tackleSound.pause();
+      kickoffCandidateSound.pause();
       screen.src = '03-transfert-indice-3.png';
       kickoffSound.currentTime = 0;
       kickoffSound.play().catch(() => {});
     });
+    document.getElementById('kickoff-candidate').addEventListener('click', () => {
+      clearTimeout(finish);
+      kickoffSound.pause();
+      tackleSound.pause();
+      screen.src = '03-transfert-indice-3.png';
+      kickoffCandidateSound.currentTime = 0;
+      kickoffCandidateSound.play().catch(() => {});
+    });
     document.getElementById('tackle').addEventListener('click', () => {
       clearTimeout(finish);
       kickoffSound.pause();
+      kickoffCandidateSound.pause();
       screen.src = `14-ouverture-tackle.gif?replay=${Date.now()}`;
       tackleSound.currentTime = 0;
       tackleSound.play().catch(() => {});
