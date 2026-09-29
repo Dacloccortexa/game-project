@@ -25,3 +25,5 @@ Les silhouettes servent à exprimer le duel ; elles ne représentent pas nécess
 - Une mauvaise réponse termine la carte avec 0 point gagné sur cette carte et efface la cagnotte potentielle. Les règles du Tackle et de l'expiration à 45 secondes suivent [GAME_DESIGN.md](GAME_DESIGN.md), y compris le forfait de ±3 points pour le tackleur.
 
 L'illustration est une référence de mise en page, pas une image à afficher telle quelle dans l'application. Adapter la composition aux petits téléphones et aux noms longs. Le traitement sonore du sifflet est décrit dans [UI_TACKLE_OPEN_ANIMATION.md](UI_TACKLE_OPEN_ANIMATION.md).
+
+La logique des révélations partagée avec Transfert est précisée dans [UI_REVEALS.md](UI_REVEALS.md).

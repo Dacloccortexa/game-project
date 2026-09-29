@@ -2,6 +2,20 @@
 
 Référence visuelle pour l'intégration du défi Transfert dans l'ambiance stade de TACKLE. Les règles complètes et à jour figurent dans [`GAME_DESIGN.md`](GAME_DESIGN.md). Statut : **intégré dans `index.html`** (2026-09-29), à vérifier sur un vrai téléphone. L'en-tête (Quitter, logo, manche, scores de toutes les équipes, titre du défi), la bande « Priorité aux … » et le bouton Tackle sont communs aux cinq défis ; les quatre autres défis gardent leur carte actuelle en attendant leurs maquettes. « Quitter » demande confirmation puis revient à « Créer une partie » ; le menu ≡ des maquettes n'est pas affiché tant qu'il n'a pas de contenu défini.
 
+## Nouvelle identité visuelle de Transfert — à intégrer
+
+Ces trois planches complètent le parcours déjà intégré. Elles remplacent **la direction visuelle** de l'ancienne carte à clubs et des anciens retours bonne/mauvaise réponse ; les maquettes de saisie, confirmation et Tackle ci-dessous restent des références fonctionnelles. Les règles et les scores ne changent pas.
+
+| État | Nouvelle planche |
+| --- | --- |
+| Indice 3 : parcours de clubs | [18-transfert-parcours.jpg](ui/18-transfert-parcours.jpg) |
+| Bonne réponse : joueur révélé | [19-transfert-bonne-reponse.jpg](ui/19-transfert-bonne-reponse.jpg) |
+| Mauvaise réponse : joueur caché | [20-transfert-mauvaise-reponse.jpg](ui/20-transfert-mauvaise-reponse.jpg) |
+
+L'identité Transfert repose sur **un itinéraire doré entre les clubs et leurs années**, dans une carte vert profond. Les arrêts précédents restent visibles et le nouvel arrêt s'allume. La carte géographique de la planche est décorative : ne pas prétendre localiser précisément les clubs ou tracer leurs déplacements réels. Si elle ne reste pas fiable et lisible sur petit écran, préférer un tracé abstrait entre arrêts. Aucun blason de club.
+
+Le bandeau des équipes, le logo, le chrono et le bouton Tackle conservent leur emplacement commun aux cinq défis. Les trois planches montrent le même indice et les mêmes scores avant résultat. La réussite vaut **+3** et affiche le joueur ; l'erreur vaut **−1**, ne révèle pas le joueur et enchaîne vers l'indice suivant. Les retours utilisent le même langage énergique que Plus ou Moins : grand signal vert et coche pour une réussite, grand signal rouge et croix pour une erreur. Voir [UI_REVEALS.md](UI_REVEALS.md) pour la logique commune des révélations.
+
 ## États à intégrer
 
 | État | Maquette |

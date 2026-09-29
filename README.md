@@ -13,3 +13,5 @@ L'écran animé entre deux manches et l'annonce de la prochaine équipe sont dé
 L'animation d'ouverture du Tackle et son sifflet sont dans [docs/UI_TACKLE_OPEN_ANIMATION.md](docs/UI_TACKLE_OPEN_ANIMATION.md).
 
 Les deux premières planches du défi Plus ou Moins et les consignes d'intégration sont dans [docs/UI_PLUS_MOINS_FLOW.md](docs/UI_PLUS_MOINS_FLOW.md).
+
+La nouvelle identité visuelle de Transfert est dans [docs/UI_TRANSFERT_FLOW.md](docs/UI_TRANSFERT_FLOW.md) ; les règles d'affichage des bonnes et mauvaises réponses entre défis sont dans [docs/UI_REVEALS.md](docs/UI_REVEALS.md).
