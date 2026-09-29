@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-09-29] Bouton Tackle clignotant et vibrations
+- Décision : pendant les 15 secondes ouvertes, le bouton Tackle clignote ; le téléphone vibre brièvement (deux fois) au départ de chaque chrono et plus longuement à l'ouverture du Tackle (demandé par David).
+- Raison : rendre les deux moments perceptibles sans regarder l'écran, en complément des deux sifflets.
+- Impact technique : vibrations via l'API web de vibration, disponible sur Android mais pas sur iPhone (Safari) ; le son et l'animation restent les repères communs. Aucun changement de règle ni de chrono.
+
 ## [2026-09-29] Deux sifflets distincts pour le chrono et le Tackle
 
 - David demande un signal au départ du chrono et un autre lorsque les adversaires peuvent tackler : un double sifflet bref, type coup d'envoi, marque chaque nouveau décompte de 30 secondes ; un sifflet unique plus appuyé, type faute, marque l'ouverture des 15 secondes de Tackle.

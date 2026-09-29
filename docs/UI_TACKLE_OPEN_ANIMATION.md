@@ -4,6 +4,8 @@ Référence pour le moment où le Tackle devient disponible, sur chaque défi.
 
 Statut : **intégré dans `index.html`** (2026-09-29), sur les cinq défis. Les sons sont préparés au « Coup d'envoi » (appui nécessaire sur mobile) ; le logo rouge est servi en WebP allégé (`assets/ui/web/tackle-logo-red.webp`). Avec une seule équipe, personne ne peut tackler : ni sifflet long ni animation à 30 secondes, seulement le changement de chrono.
 
+Ajouts demandés par David (2026-09-29) : le bouton Tackle **clignote pendant les 15 secondes** ouvertes ; le téléphone **vibre** au coup d'envoi (double vibration brève) et à l'ouverture du Tackle (vibration longue). La vibration fonctionne sur Android ; Safari sur iPhone ne la propose pas aux sites web.
+
 | Élément | Fichier |
 | --- | --- |
 | Aperçu animé sans son | [14-ouverture-tackle.gif](ui/14-ouverture-tackle.gif) |

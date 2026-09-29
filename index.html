@@ -1490,6 +1490,16 @@
   .turn-clock.open { border: 1.5px solid #e2483c; background: rgba(60,12,10,.82); }
   .turn-clock.open .turn-clock-label { color: #ff8a70; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
 
+  /* Bouton Tackle qui clignote pendant les 15 secondes ouvertes */
+  #btn-tackle.blink { animation: tackle-blink .9s ease-in-out infinite; }
+  @keyframes tackle-blink {
+    0%, 100% { background: linear-gradient(180deg, #ea554d, #b9302f); box-shadow: 0 6px 0 rgba(82,16,16,.75), 0 0 0 rgba(255,80,60,0); }
+    50% { background: linear-gradient(180deg, #ff8a72, #e0443a); box-shadow: 0 6px 0 rgba(82,16,16,.75), 0 0 26px rgba(255,90,70,.85); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #btn-tackle.blink { animation: tackle-blink 1.8s ease-in-out infinite; }
+  }
+
 </style>
 </head>
 <body class="setup-flow">
@@ -2066,6 +2076,13 @@
 
   if (document.addEventListener) {
     document.addEventListener("pointerdown", unlockAudio, { passive: true });
+  }
+
+  // Vibrations : courte double au coup d'envoi, longue quand le Tackle s'ouvre.
+  // Android les joue ; l'iPhone ne propose pas la vibration aux sites web (le son et l'écran suffisent).
+  var VIBRATIONS = { kickoff: [70, 60, 70], tackle: [350] };
+  function vibrate(key) {
+    try { if (navigator.vibrate) navigator.vibrate(VIBRATIONS[key]); } catch (e) { /* non disponible */ }
   }
 
   // ---------- Content: chaînes Plus ou Moins ----------
@@ -2870,6 +2887,8 @@
       : "Priorité " + teamAux(active ? active.name : "");
     el("turn-clock-time").textContent = "00:" + pad2(Math.max(0, seconds));
     el("turn-clock").classList.toggle("open", open);
+    // Le bouton clignote pendant toute la fenêtre de 15 secondes.
+    el("btn-tackle").classList.toggle("blink", open && !alone);
   }
 
   function isBinaryGame() {
@@ -2904,7 +2923,10 @@
     button.disabled = true;
     updateTackleUI(TACKLE_LOCK_SECONDS);
     showTackleUI();
-    if (!state.cardEnded) playSound("kickoff");
+    if (!state.cardEnded) {
+      playSound("kickoff");
+      vibrate("kickoff");
+    }
     state.tackleTimerId = setInterval(tickTackleWindow, 250);
   }
 
@@ -2922,6 +2944,7 @@
       button.disabled = state.teams.length < 2;
       if (state.teams.length > 1) {
         playSound("tackle");
+        vibrate("tackle");
         playTackleFlash();
       }
       remaining = TACKLE_OPEN_SECONDS;
