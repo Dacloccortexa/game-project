@@ -32,3 +32,8 @@ La police des titres de préparation, Oswald (licence SIL OFL), est hébergée d
 - Les chemins sont relatifs au site publié : `assets/ui/nom-du-fichier`. Ils peuvent être utilisés directement depuis `index.html` et GitHub Pages.
 
 Ces assets donnent une direction graphique exploitable. Les écrans réels doivent rester adaptatifs et accessibles ; une planche n'est pas une capture à afficher telle quelle.
+
+## Ouverture du Tackle
+
+- `tackle-logo-red.png` : version rouge transparente du lettrage, pour le signal animé à 30 secondes.
+- `tackle-whistle.wav` : sifflet court à jouer au même instant que le signal visuel. Voir [`docs/UI_TACKLE_OPEN_ANIMATION.md`](../../docs/UI_TACKLE_OPEN_ANIMATION.md).
