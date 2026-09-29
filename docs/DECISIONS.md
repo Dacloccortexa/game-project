@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-09-29] Personnaliser les équipes une par une
+- Décision : « Personnaliser les équipes » présente une seule fiche à la fois — Équipe 1, puis « Équipe suivante », etc. — et le dernier bouton devient « Coup d'envoi » (demandé par David).
+- Raison : plus clair qu'une longue page avec toutes les fiches.
+- Impact technique : repères d'avancement en haut de page ; la flèche de retour revient à l'équipe précédente puis à « Créer une partie ». Les règles de logo, couleur et nom par défaut ne changent pas.
+
 ## [2026-09-28] Le téléphone peut être tenu librement pendant la partie
 
 - David supprime la rotation obligatoire du porteur de téléphone. La réponse attendue étant cachée jusqu'à sa vérification, l'équipe active, une autre personne ou un maître du jeu peut manipuler l'appareil selon ce qui est naturel pour le groupe.

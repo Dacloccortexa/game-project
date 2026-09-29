@@ -1037,6 +1037,40 @@
     box-shadow: 0 0 0 3px #06140e, 0 0 0 6px var(--gold-ring), 0 0 16px rgba(242,191,84,.5);
   }
 
+  /* Personnalisation équipe par équipe : repères d'avancement */
+  .team-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: -8px 0 16px;
+  }
+  .team-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid rgba(248,246,237,.35);
+    background: rgba(3,17,12,.7);
+    color: rgba(248,246,237,.7);
+    font-family: var(--font-cond);
+    font-weight: 600;
+    font-size: 16px;
+    overflow: hidden;
+  }
+  .team-step img { width: 84%; height: 84%; object-fit: contain; }
+  .team-step.done { border-color: var(--team); }
+  .team-step.current {
+    width: 42px;
+    height: 42px;
+    border: 3px solid var(--gold-ring);
+    color: var(--chalk);
+    box-shadow: 0 0 14px rgba(242,191,84,.4);
+  }
+  .team-step-line { width: 14px; height: 2px; background: rgba(248,246,237,.3); }
+
   /* Équipes pendant la partie et au classement */
   .team-badge {
     display: inline-flex;
@@ -1186,6 +1220,7 @@
     </div>
     <h2 class="setup-title" id="teams-title" tabindex="-1">Personnaliser les équipes</h2>
 
+    <div class="team-steps" id="team-steps" role="img"></div>
     <div id="team-cards"></div>
 
     <div class="cta-spacer"></div>
@@ -1667,6 +1702,7 @@
   // ---------- State ----------
   var state = {
     teamCount: 3,
+    teamStep: 0,     // équipe affichée sur « Personnaliser les équipes »
     teamSettings: [0, 1, 2, 3].map(function (i) {
       return {
         name: ["Les Lions", "Les Renards", "Les Taureaux", "Les Aigles"][i],
@@ -1914,14 +1950,55 @@
     });
   }
 
+  // Une équipe à la fois : Équipe 1, puis « Équipe suivante »… jusqu'au coup d'envoi.
   function renderTeamCards() {
     ensureUniqueTeamSettings();
+    state.teamStep = Math.min(state.teamStep || 0, state.teamCount - 1);
     var wrap = el("team-cards");
     wrap.innerHTML = "";
-    for (var i = 0; i < state.teamCount; i++) {
-      wrap.appendChild(buildTeamCard(i));
-    }
+    wrap.appendChild(buildTeamCard(state.teamStep));
     refreshTakenOptions();
+    renderTeamSteps();
+    var last = state.teamStep === state.teamCount - 1;
+    el("btn-start").textContent = last ? "Coup d'envoi" : "Équipe suivante";
+    el("btn-teams-back").setAttribute("aria-label", state.teamStep === 0
+      ? "Retour à Créer une partie"
+      : "Retour à l'équipe " + state.teamStep);
+  }
+
+  function renderTeamSteps() {
+    var box = el("team-steps");
+    box.innerHTML = "";
+    box.setAttribute("aria-label", "Équipe " + (state.teamStep + 1) + " sur " + state.teamCount);
+    box.hidden = state.teamCount < 2;
+    for (var i = 0; i < state.teamCount; i++) {
+      if (i > 0) {
+        var line = document.createElement("span");
+        line.className = "team-step-line";
+        box.appendChild(line);
+      }
+      var dot = document.createElement("span");
+      var t = state.teamSettings[i];
+      dot.className = "team-step" + (i < state.teamStep ? " done" : i === state.teamStep ? " current" : "");
+      if (i < state.teamStep) {
+        // Équipe déjà personnalisée : son animal dans sa couleur.
+        dot.style.setProperty("--team", findById(TEAM_COLORS, t.color).hex);
+        var img = document.createElement("img");
+        img.src = logoSrc(t.logo, t.color);
+        img.alt = "";
+        dot.appendChild(img);
+      } else {
+        dot.textContent = i + 1;
+      }
+      box.appendChild(dot);
+    }
+  }
+
+  function goToTeamStep(step) {
+    state.teamStep = step;
+    el("setup-error").textContent = "";
+    renderTeamCards();
+    showSetupScreen("screen-teams", true);
   }
 
   function buildTeamCard(idx) {
@@ -2062,12 +2139,11 @@
   }
 
   el("btn-continue").addEventListener("click", function () {
-    renderTeamCards();
-    el("setup-error").textContent = "";
-    showSetupScreen("screen-teams", true);
+    goToTeamStep(0);
   });
   el("btn-teams-back").addEventListener("click", function () {
-    showSetupScreen("screen-setup", true);
+    if (state.teamStep > 0) goToTeamStep(state.teamStep - 1);
+    else showSetupScreen("screen-setup", true);
   });
 
   function setupError(msg) {
@@ -2075,6 +2151,10 @@
   }
 
   el("btn-start").addEventListener("click", function () {
+    if (state.teamStep < state.teamCount - 1) {
+      goToTeamStep(state.teamStep + 1);
+      return;
+    }
     if (state.minigamesSelected.length === 0) {
       setupError("Sélectionne au moins un défi pour lancer la partie.");
       return;
