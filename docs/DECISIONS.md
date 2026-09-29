@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-09-29] Chrono « Priorité » et boutons remontés sous la carte
+- Demande de David : mettre la bande « Priorité aux … » et tout ce qui suit plus haut.
+- Constat : entre la carte du défi et le chrono, le jeu gardait de la place vide même sans verdict (emplacement du verdict de 18 px, marge de 16 px sous les cartes claires, zone vide de Qui suis-je ?). Écart mesuré : 28 px sur Transfert et Plus ou Moins, 44 px sur Vrai ou Faux, Qui suis-je ? et Le Match.
+- Décision : l'emplacement du verdict ne prend de la place que lorsqu'un verdict est affiché ; plus de marge sous la carte ; la zone vide de Qui suis-je ? est masquée. Écart carte → chrono : 10 px sur les cinq défis (le même espacement qu'entre les autres blocs).
+- Gain : 18 px (Transfert, Plus ou Moins) à 34 px (Vrai ou Faux, Qui suis-je ?, Le Match). Le bouton Tackle reste en bas de l'écran. Les verdicts (pilule qui chevauche le bas de la carte) s'affichent comme avant ; vérifié sur Transfert et Plus ou Moins, à 390 × 844 et 320 × 568.
+
 ## [2026-09-29] Bandeau des scores : le logo suffit, plus de nom d'équipe
 - Demande de David : enlever le nom des équipes dans le bandeau des scores pendant la partie, le logo suffit.
 - Décision : chaque case affiche seulement **le logo, calé à gauche, et le score, calé à droite** (demande de David, 21 h 08 ; d'abord centrés). Le logo passe de 20 à 26 px et reste affiché sur tous les écrans et à 4 équipes (plus besoin de le masquer faute de place). Hauteur inchangée : 34 px.
