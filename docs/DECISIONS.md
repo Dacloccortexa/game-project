@@ -1,5 +1,12 @@
 # DECISIONS.md
 
+## [2026-09-29] Bandeau des scores : le logo suffit, plus de nom d'équipe
+- Demande de David : enlever le nom des équipes dans le bandeau des scores pendant la partie, le logo suffit.
+- Décision : chaque case affiche seulement **logo + score**, centrés. Le logo passe de 20 à 26 px et reste affiché sur tous les écrans et à 4 équipes (plus besoin de le masquer faute de place). Hauteur inchangée : 34 px.
+- Conséquence : plus aucun nom coupé avec « … », même à 4 équipes sur un 320 px. Le nom complet reste dans l'étiquette lue par les lecteurs d'écran (et en infobulle).
+- Le classement entre deux manches et le classement final gardent les noms.
+- Remplace la partie « logo · nom · score » de la décision « Bandeau des scores réduit de moitié » ci-dessous.
+
 ## [2026-09-29] Litige au Tackle : l'équipe active arbitre, sinon tirage au sort
 - Problème soulevé par David : le Tackle se joue à voix haute, donc des disputes « c'est moi qui l'ai dit en premier » sont inévitables.
 - Option écartée : un buzzer par équipe sur l'écran (le premier doigt gagne). Trop compliqué avec un seul téléphone qui passe de main en main.
