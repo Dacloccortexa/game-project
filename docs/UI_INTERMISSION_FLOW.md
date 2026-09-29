@@ -1,5 +1,7 @@
 # Entre deux manches — classement TACKLE
 
+Statut : **intégré dans `index.html`** (2026-09-29), à vérifier sur un vrai téléphone. En cas d'égalité, les équipes partagent le même rang (1, 1, 3…) et l'encadré doré, sans départage. L'équipe annoncée « à jouer en premier » suit l'ordre de jeu actuel : chaque manche commence par la première équipe.
+
 Maquette de l'écran affiché **après que toutes les équipes ont joué leur carte de la manche** et avant de lancer la suivante. Il ne s'affiche pas après chaque carte individuelle. Le classement montre le **total des points cumulés depuis le début de la partie**, pas seulement les points gagnés pendant cette manche.
 
 | Vue | Référence |
