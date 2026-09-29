@@ -1,0 +1,22 @@
+/* Habillage de la carte centrale. L'en-tête, les scores, le chrono, Tackle et le verdict restent communs. */
+.vf-card{--gold:#f1c66c;box-sizing:border-box;position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:430px;min-height:560px;padding:24px 22px 26px;color:#fff9eb;background:#0a100e url("var-stadium-panel.jpg") center/cover no-repeat;font-family:Arial,Helvetica,sans-serif;text-align:center}
+.vf-card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(#060a08a3 0%,#0b100bcf 38%,#0b100b56 72%,#061008bd 100%)}
+.vf-frame{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.vf-topline{display:flex;align-items:center;justify-content:center;gap:11px;color:var(--gold)}
+.vf-topline::before,.vf-topline::after{content:"";width:min(22%,85px);height:2px;background:var(--gold);opacity:.8}
+.vf-badge{display:inline-block;border:2px solid var(--gold);padding:4px 9px;font:900 16px Impact,"Arial Narrow",sans-serif;letter-spacing:.07em}
+.vf-title{margin:10px 0 3px;font:900 clamp(30px,9vw,46px) Impact,"Arial Narrow",sans-serif;line-height:1;letter-spacing:.02em;text-shadow:0 2px 12px #000}
+.vf-title em{color:var(--gold);font-style:normal}
+.vf-progress{margin:8px 0 17px;color:#e6e4db;font-size:13px;font-weight:900;letter-spacing:.16em}
+.vf-statement{box-sizing:border-box;display:grid;place-items:center;min-height:180px;margin:0 8px 15px;padding:20px 17px;border:1px solid #aba59488;border-radius:12px;background:#101716d9;box-shadow:inset 0 0 35px #ffffff0b,0 10px 30px #0007}
+.vf-statement p{margin:0;font-size:clamp(21px,6.1vw,30px);font-weight:800;line-height:1.25;text-wrap:balance;overflow-wrap:anywhere}
+.vf-bank{display:flex;align-items:center;justify-content:center;gap:10px;width:max-content;max-width:calc(100% - 16px);margin:0 auto 18px;padding:8px 12px;border:1px solid #b79653;border-radius:10px;background:#111711e8;color:var(--gold);font-weight:900;letter-spacing:.08em;box-shadow:0 0 10px #d2a84942}
+.vf-bank img{width:29px;height:29px;flex:none}
+.vf-bank strong{margin-left:5px;padding:4px 8px;border:1px solid #e9bc5f;border-radius:6px;background:#3a2b13;color:#ffe194;font-size:21px;white-space:nowrap}
+.vf-choices{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vf-choice{position:relative;min-width:0;min-height:132px;border:0;padding:66px 8px 18px;color:#fff;font:900 clamp(26px,8vw,39px) Impact,"Arial Narrow",sans-serif;letter-spacing:.03em;text-shadow:0 2px 7px #0008;cursor:pointer;background:center/100% 100% no-repeat}
+.vf-choice--true{background-image:url("choice-true.svg")}
+.vf-choice--false{background-image:url("choice-false.svg")}
+.vf-choice:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.vf-choice:disabled{filter:grayscale(.8);cursor:not-allowed}
+@media(max-width:360px){.vf-card{min-height:520px;padding:21px 15px 20px}.vf-statement{margin-inline:3px;min-height:160px}.vf-choices{gap:6px}.vf-choice{min-height:118px;padding-top:60px}}

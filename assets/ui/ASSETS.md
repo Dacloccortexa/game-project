@@ -55,3 +55,7 @@ Le [dossier `mercato/`](mercato/README.md) contient les éléments de la carte T
 - `pom-player-coral.png` : silhouette anonyme assortie, orientée vers la gauche, liseré corail `#FF7C5E`, PNG transparent 800 × 1000.
 
 Statut : **intégrées** (2026-09-29) dans la carte Plus ou Moins, via `web/pom-player-blue.webp` et `web/pom-player-coral.webp` (480 × 600, ~60 Ko chacune).
+
+## Vrai ou Faux : pack « verdict d'arbitre »
+
+Le [dossier `vrai-ou-faux/`](vrai-ou-faux/README.md) fournit le fond de stade, le cadre VAR, les deux fonds de réponse et l'icône de cagnotte séparément. La [planche](../../docs/ui/24-vrai-ou-faux-var-question.jpg) et l'[aperçu assemblé](vrai-ou-faux/preview.html) montrent leur usage dans la carte centrale.
