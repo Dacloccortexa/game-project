@@ -1500,6 +1500,13 @@
     #btn-tackle.blink { animation: tackle-blink 1.8s ease-in-out infinite; }
   }
 
+  /* Journal de partie */
+  .journal-box { display: flex; flex-direction: column; gap: 8px; margin-top: 18px; }
+  .journal-note { margin: 0; text-align: center; font-size: 13px; line-height: 1.45; color: var(--chalk-dim); }
+  .journal-note:empty { display: none; }
+  .journal-link-box { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 14px; }
+  .journal-link-box .text-btn { color: var(--chalk); font-size: 14px; min-height: 44px; }
+
 </style>
 </head>
 <body class="setup-flow">
@@ -1544,6 +1551,10 @@
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
     </button>
 
+    <div class="journal-link-box">
+      <button type="button" class="text-btn hidden-screen" id="btn-share-journals">Envoyer le journal des parties</button>
+      <p class="journal-note" id="journals-status" role="status" aria-live="polite"></p>
+    </div>
     <div class="cta-spacer"></div>
     <div class="setup-footer">
       <button type="button" class="setup-cta" id="btn-continue">Continuer</button>
@@ -1933,6 +1944,11 @@
     <p class="subtitle" id="final-subtitle"></p>
     <div class="podium" id="podium"></div>
     <button class="primary" id="btn-rematch">Revanche</button>
+    <div class="journal-box">
+      <button type="button" class="tr-btn-secondary" id="btn-share-journal">Envoyer le journal de la partie</button>
+      <p class="journal-note" id="journal-status" role="status" aria-live="polite"></p>
+      <p class="journal-note">Le journal (défis, réponses, Tackles, temps) reste sur ce téléphone. Il n'est envoyé que si vous appuyez sur ce bouton.</p>
+    </div>
   </section>
 
 </div>
@@ -2208,6 +2224,176 @@
     return chosen;
   }
 
+  // ---------- Journal de partie (pour les parties test) ----------
+  // Tout reste sur le téléphone ; rien n'est envoyé sans un appui sur « Envoyer le journal ».
+  // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
+  var JOURNAL_KEY = "tackle-journal-v1";
+  var JOURNAL_KEEP = 10;
+  var GAME_LABELS = { transfert: "Transfert", plusoumoins: "Plus ou Moins", vraifaux: "Vrai ou Faux", quisuisje: "Qui suis-je ?", lematch: "Le Match" };
+
+  function journalLoadAll() {
+    try { return JSON.parse(localStorage.getItem(JOURNAL_KEY) || "[]") || []; } catch (e) { return []; }
+  }
+  function journalSave() {
+    try {
+      var j = state.journal;
+      if (!j) return;
+      var all = journalLoadAll().filter(function (x) { return x.id !== j.id; });
+      all.push(j);
+      localStorage.setItem(JOURNAL_KEY, JSON.stringify(all.slice(-JOURNAL_KEEP)));
+    } catch (e) { /* stockage indisponible : le journal reste en mémoire */ }
+  }
+  function journalStartGame() {
+    try {
+      state.journal = {
+        id: Date.now(),
+        startedAt: Date.now(),
+        rounds: state.roundsTotal,
+        games: state.minigamesSelected.map(function (g) { return GAME_LABELS[g] || g; }),
+        teams: state.teams.map(function (t) { return t.name; }),
+        cards: [],
+        status: "en cours"
+      };
+      journalSave();
+    } catch (e) {}
+  }
+  function journalCardInfo() {
+    var g = state.currentRoundMinigame;
+    if (g === "transfert" || g === "quisuisje") {
+      var c = state.currentCard || {};
+      return (c.id ? c.id + " " : "") + (c.answer || "");
+    }
+    if (g === "lematch") {
+      var m = state.currentLmCard || {};
+      return (m.id ? m.id + " " : "") + (m.teams || []).join(" – ") + (m.competition ? " (" + m.competition + ")" : "");
+    }
+    if (g === "plusoumoins") return (state.pomChain && state.pomChain.category) || "";
+    if (g === "vraifaux") return (state.vfChain || []).length + " affirmations";
+    return "";
+  }
+  function journalStartCard() {
+    try {
+      if (!state.journal) return;
+      state.journal.cards.push({
+        round: state.roundsPlayed + 1,
+        team: state.teams[state.currentTeamIndex].name,
+        game: GAME_LABELS[state.currentRoundMinigame] || state.currentRoundMinigame,
+        card: journalCardInfo(),
+        startedAt: Date.now(),
+        steps: [],
+        points: {}
+      });
+      journalSave();
+    } catch (e) {}
+  }
+  function journalCurrentCard() {
+    var cards = state.journal && state.journal.cards;
+    return cards && cards.length ? cards[cards.length - 1] : null;
+  }
+  function journalStepLabel() {
+    var g = state.currentRoundMinigame;
+    if (g === "transfert" || g === "quisuisje") return "indice " + state.revealedCount;
+    if (g === "lematch") return "événement " + state.lmRevealedCount;
+    if (g === "plusoumoins") {
+      var ch = state.pomChain && state.pomChain.chain;
+      var i = state.pomIndex;
+      return "comparaison " + (i + 1) + (ch && ch[i + 1] ? " (" + ch[i].name + " → " + ch[i + 1].name + ")" : "");
+    }
+    if (g === "vraifaux") {
+      var st = state.vfChain && state.vfChain[state.vfIndex];
+      var txt = st ? st.affirmation : "";
+      return "affirmation " + (state.vfIndex + 1) + (txt ? " « " + (txt.length > 70 ? txt.slice(0, 67) + "…" : txt) + " »" : "");
+    }
+    return "étape";
+  }
+  // Consigne une action sur l'étape en cours (réponse, passe, Tackle, temps écoulé…).
+  function journalStep(text) {
+    try {
+      var card = journalCurrentCard();
+      if (!card) return;
+      var secs = state.stepStartedAt ? Math.round((Date.now() - state.stepStartedAt) / 1000) : null;
+      card.steps.push(journalStepLabel() + " : " + text + (secs !== null ? " (" + secs + " s)" : ""));
+      journalSave();
+    } catch (e) {}
+  }
+  function journalPoints(teamIdx, delta) {
+    try {
+      var card = journalCurrentCard();
+      if (!card || !delta) return;
+      var name = state.teams[teamIdx].name;
+      card.points[name] = (card.points[name] || 0) + delta;
+    } catch (e) {}
+  }
+  function journalEndCard() {
+    try {
+      var card = journalCurrentCard();
+      if (!card || card.durationS !== undefined) return;
+      card.durationS = Math.round((Date.now() - card.startedAt) / 1000);
+      journalSave();
+    } catch (e) {}
+  }
+  function journalFinish(status) {
+    try {
+      if (!state.journal) return;
+      state.journal.status = status;
+      state.journal.endedAt = Date.now();
+      state.journal.roundsPlayed = state.roundsPlayed;
+      state.journal.scores = state.teams.map(function (t) { return { name: t.name, score: t.score }; });
+      journalSave();
+    } catch (e) {}
+  }
+  function fmtSigned(n) { return (n > 0 ? "+" : n < 0 ? "−" : "") + Math.abs(n); }
+  function fmtDate(ms) {
+    var d = new Date(ms);
+    return pad2(d.getDate()) + "/" + pad2(d.getMonth() + 1) + "/" + d.getFullYear() + " " + pad2(d.getHours()) + ":" + pad2(d.getMinutes());
+  }
+  function journalToText(j) {
+    var lines = [];
+    var mins = j.endedAt ? Math.round((j.endedAt - j.startedAt) / 60000) : null;
+    lines.push("TACKLE · journal de partie");
+    lines.push(fmtDate(j.startedAt) + " · " + j.teams.length + " équipe" + (j.teams.length > 1 ? "s" : "") + " · " + j.rounds + " manches" +
+      " · " + (j.status === "terminée" ? "terminée" : j.status === "abandonnée" ? "abandonnée à la manche " + ((j.roundsPlayed || 0) + 1) : "en cours") +
+      (mins !== null ? " · " + mins + " min" : ""));
+    lines.push("Défis : " + j.games.join(", "));
+    if (j.scores) {
+      lines.push("Scores : " + j.scores.slice().sort(function (a, b) { return b.score - a.score; })
+        .map(function (t) { return t.name + " " + fmtSigned(t.score).replace(/^\+/, ""); }).join(" · "));
+    } else {
+      lines.push("Équipes : " + j.teams.join(", "));
+    }
+    j.cards.forEach(function (c) {
+      lines.push("");
+      lines.push("M" + c.round + " · " + c.game + " · " + c.team + (c.card ? " — " + c.card : ""));
+      c.steps.forEach(function (st) { lines.push("  " + st); });
+      var pts = Object.keys(c.points).map(function (n) { return n + " " + fmtSigned(c.points[n]); });
+      lines.push("  → " + (pts.length ? pts.join(" · ") : "0 point") + (c.durationS !== undefined ? " · carte " + c.durationS + " s" : " · carte non terminée"));
+    });
+    return lines.join("\n");
+  }
+  // Partage via le menu du téléphone (WhatsApp, Messages, e-mail…) ; sinon copie.
+  function shareJournalText(text, statusEl) {
+    function say(msg) { if (statusEl) statusEl.textContent = msg; }
+    function copyFallback() {
+      try {
+        navigator.clipboard.writeText(text).then(function () {
+          say("Journal copié : collez-le dans un message pour David.");
+        }, function () { say("Impossible de partager ou de copier le journal sur cet appareil."); });
+      } catch (e) { say("Impossible de partager ou de copier le journal sur cet appareil."); }
+    }
+    try {
+      if (navigator.share) {
+        navigator.share({ title: "TACKLE · journal de partie", text: text }).then(function () {
+          say("Journal envoyé. Merci !");
+        }, function (err) {
+          if (err && err.name === "AbortError") { say(""); return; }
+          copyFallback();
+        });
+        return;
+      }
+    } catch (e) {}
+    copyFallback();
+  }
+
   // ---------- State ----------
   var state = {
     teamCount: 3,
@@ -2338,6 +2524,7 @@
     SETUP_SCREENS.concat(["screen-play", "screen-intermission", "screen-final"]).forEach(hide);
     document.body.classList.add("setup-flow");
     show(id);
+    if (id === "screen-setup") refreshJournalLink();
     window.scrollTo(0, 0);
     if (moveFocus) {
       var title = el(id).querySelector("h2.setup-title");
@@ -2715,6 +2902,7 @@
     }
     state.roundsPlayed = 0;
     state.currentTeamIndex = 0;
+    journalStartGame();
 
     SETUP_SCREENS.forEach(hide);
     show("screen-play");
@@ -2798,6 +2986,7 @@
   function pad2(n) { return (n < 10 ? "0" : "") + n; }
 
   function beginTurnCommon(minigameLabel) {
+    journalStartCard();
     el("round-count").textContent = "Manche " + pad2(state.roundsPlayed + 1) + " / " + pad2(state.roundsTotal);
     el("minigame-name").textContent = minigameLabel;
     el("minigame-subtitle").textContent = MINIGAME_SUBTITLES[minigameLabel] || "";
@@ -2918,6 +3107,7 @@
     clearTackleTimer();
     hideTackleUI();
     state.tacklePhase = "locked";
+    state.stepStartedAt = Date.now();
     state.tackleDeadline = Date.now() + TACKLE_LOCK_SECONDS * 1000;
     var button = el("btn-tackle");
     button.disabled = true;
@@ -2955,6 +3145,7 @@
     }
     clearTackleTimer();
     hideTackleUI();
+    journalStep(isBinaryGame() ? "temps écoulé, cagnotte encaissée" : "temps écoulé, personne n'a répondu");
     if (isBinaryGame()) {
       // Personne n'a répondu ni tacklé : la cagnotte déjà accumulée est encaissée.
       var points = state.currentRoundMinigame === "plusoumoins" ? state.pomPotential : state.vfPotential;
@@ -3050,6 +3241,7 @@
   });
 
   el("btn-tackle-cancel").addEventListener("click", function () {
+    journalStep("Tackle annulé");
     hide("tackle-team-picker");
     if (state.currentRoundMinigame === "plusoumoins" && state.pomPendingDirection !== null && state.pomPendingDirection !== undefined) {
       show("pom-pending-zone");
@@ -3071,6 +3263,7 @@
       : choice === state.vfChain[state.vfIndex].est_vraie;
     var points = game === "plusoumoins" ? state.pomPotential : state.vfPotential;
     var team = state.teams[state.tackleTeamIndex];
+    journalStep("Tackle " + teamDes(team.name) + " (" + (game === "plusoumoins" ? (choice === "plus" ? "PLUS" : "MOINS") : (choice ? "VRAI" : "FAUX")) + ") " + (correct ? "juste" : "faux"));
     awardPointsToTeam(state.tackleTeamIndex, correct ? currentTackleStake() : -currentTackleStake());
     if (!correct) awardPoints(points);
     var message = "TACKLE " + (correct ? "réussi" : "raté") + " par " + team.name + ". " +
@@ -3108,6 +3301,7 @@
       if (!typed2) return;
       var lmCard = state.currentLmCard;
       var isLmCorrect = matchesBothTeams(typed, typed2, lmCard);
+      journalStep("Tackle " + teamDes(tacklingTeam.name) + " « " + typed + " / " + typed2 + " » " + (isLmCorrect ? "juste" : "faux"));
 
       hide("tackle-answer-zone");
 
@@ -3125,6 +3319,7 @@
     var card = state.currentCard;
     var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
     var isCorrect = matchesAnyAnswer(typed, validAnswers);
+    journalStep("Tackle " + teamDes(tacklingTeam.name) + " « " + typed + " » " + (isCorrect ? "juste" : "faux"));
 
     hide("tackle-answer-zone");
 
@@ -3231,6 +3426,7 @@
     var nextValue = chain[state.pomIndex + 1].value;
     var actualDirection = nextValue > refValue ? "plus" : "moins";
     var isActiveCorrect = state.pomPendingDirection === actualDirection;
+    journalStep((state.pomPendingDirection === "plus" ? "PLUS" : "MOINS") + " " + (isActiveCorrect ? "juste" : "faux"));
     state.pomPendingDirection = null;
 
     state.pomIndex += 1;
@@ -3263,6 +3459,7 @@
   }
 
   el("pom-btn-encaisser").addEventListener("click", function () {
+    journalStep("encaisse " + state.pomPotential);
     awardPoints(state.pomPotential);
     hide("pom-decision-zone");
     el("pom-feedback-zone").innerHTML += '<div class="feedback good">Encaissé : +' + state.pomPotential + ' points.</div>';
@@ -3374,6 +3571,7 @@
   function resolveVfStatement() {
     var statement = state.vfChain[state.vfIndex];
     var isActiveCorrect = (state.vfPendingAnswer === statement.est_vraie);
+    journalStep((state.vfPendingAnswer ? "VRAI" : "FAUX") + " " + (isActiveCorrect ? "juste" : "faux"));
     state.vfPendingAnswer = null;
     var verdictText = "C'était " + (statement.est_vraie ? "VRAI" : "FAUX") + ".";
     if (!statement.est_vraie) {
@@ -3407,6 +3605,7 @@
   }
 
   el("vf-btn-encaisser").addEventListener("click", function () {
+    journalStep("encaisse " + state.vfPotential);
     awardPoints(state.vfPotential);
     hide("vf-decision-zone");
     appendVfFeedback("good", "Encaissé : +" + state.vfPotential + " points.");
@@ -3498,6 +3697,7 @@
   });
 
   el("btn-qsj-pass").addEventListener("click", function () {
+    journalStep("passe");
     advanceQsjClue(false);
   });
 
@@ -3509,6 +3709,7 @@
     var card = state.currentCard;
     var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
     var isCorrect = matchesAnyAnswer(typed, validAnswers);
+    journalStep("réponse « " + typed + " » " + (isCorrect ? "juste" : "fausse"));
 
     if (isCorrect) {
       var pointsEarned = POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
@@ -3621,6 +3822,7 @@
   });
 
   el("btn-lm-pass").addEventListener("click", function () {
+    journalStep("passe");
     advanceLmEvent(false);
   });
 
@@ -3643,6 +3845,7 @@
   function checkLmAnswer(typed1, typed2) {
     var card = state.currentLmCard;
     var isCorrect = matchesBothTeams(typed1, typed2, card);
+    journalStep("réponse « " + typed1 + " / " + typed2 + " » " + (isCorrect ? "juste" : "fausse"));
 
     if (isCorrect) {
       var pointsEarned = POINTS_BY_INDEX[Math.min(state.lmRevealedCount - 1, POINTS_BY_INDEX.length - 1)];
@@ -3799,6 +4002,7 @@
   });
 
   el("btn-pass").addEventListener("click", function () {
+    journalStep("passe");
     advanceClue(false);
   });
 
@@ -3807,6 +4011,7 @@
     var team = state.teams[state.currentTeamIndex];
     var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
     var isCorrect = matchesAnyAnswer(typed, validAnswers);
+    journalStep("réponse « " + typed + " » " + (isCorrect ? "juste" : "fausse"));
     var before = team.score;
 
     if (isCorrect) {
@@ -3892,12 +4097,14 @@
   }
 
   function awardPointsToTeam(teamIdx, delta) {
+    journalPoints(teamIdx, delta);
     state.teams[teamIdx].score += delta;
     renderScoreboard();
   }
 
   function endCard() {
     state.cardEnded = true;
+    journalEndCard();
     clearTackleTimer();
     hideTackleUI();
     hide("answer-zone");
@@ -4000,6 +4207,7 @@
     clearIntermissionTimers();
     hide("screen-intermission");
     state.cardEnded = true;
+    journalFinish("abandonnée");
     showSetupScreen("screen-setup", true);
   });
 
@@ -4142,6 +4350,8 @@
   function endGame() {
     hide("screen-play");
     show("screen-final");
+    journalFinish("terminée");
+    el("journal-status").textContent = "";
 
     var sorted = state.teams.slice().sort(function (a, b) { return b.score - a.score; });
     var medals = ["🥇", "🥈", "🥉"];
@@ -4169,6 +4379,25 @@
       podium.appendChild(row);
     });
   }
+
+  el("btn-share-journal").addEventListener("click", function () {
+    if (!state.journal) return;
+    shareJournalText(journalToText(state.journal), el("journal-status"));
+  });
+
+  // Sur « Créer une partie » : envoyer les dernières parties gardées sur le téléphone
+  // (utile après une partie abandonnée).
+  function refreshJournalLink() {
+    var n = journalLoadAll().length;
+    el("btn-share-journals").textContent = "Envoyer le journal des parties (" + n + ")";
+    el("btn-share-journals").classList.toggle("hidden-screen", n === 0);
+  }
+  el("btn-share-journals").addEventListener("click", function () {
+    var all = journalLoadAll().slice(-5);
+    if (!all.length) return;
+    shareJournalText(all.map(journalToText).join("\n\n————————————\n\n"), el("journals-status"));
+  });
+  refreshJournalLink();
 
   el("btn-rematch").addEventListener("click", function () {
     // Revanche : retour à « Créer une partie », réglages et équipes conservés.
