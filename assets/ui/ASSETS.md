@@ -48,3 +48,8 @@ Les extraits réels sont issus de deux enregistrements CC0 : [strongbot, « meta
 ## Pack Transfert « mercato »
 
 Le [dossier `mercato/`](mercato/README.md) contient les éléments de la carte Transfert en fichiers séparés et un [aperçu des états](mercato/preview.html). Il fournit le fond, la silhouette anonyme, les fiches, les liaisons et les révélations sans figer les noms ni les scores dans les images.
+
+## Plus ou Moins : silhouettes du duel
+
+- `pom-player-blue.png` : silhouette anonyme, tête et buste orientés vers la droite, liseré bleu cyan `#46C8FF`, PNG transparent 800 × 1000.
+- `pom-player-coral.png` : silhouette anonyme assortie, orientée vers la gauche, liseré corail `#FF7C5E`, PNG transparent 800 × 1000.
