@@ -9,6 +9,7 @@ Référence visuelle pour l'intégration du défi Transfert dans l'ambiance stad
 | Premier indice | [01-transfert-indice-1.png](ui/01-transfert-indice-1.png) |
 | Deuxième indice | [02-transfert-indice-2.png](ui/02-transfert-indice-2.png) |
 | Troisième indice | [03-transfert-indice-3.png](ui/03-transfert-indice-3.png) |
+| Quatre équipes : tous les scores visibles | [10-transfert-4-equipes.png](ui/10-transfert-4-equipes.png) |
 | Tackle : identifier l'équipe | [04-transfert-tackle-choix-equipe.png](ui/04-transfert-tackle-choix-equipe.png) |
 | Tackle : saisir sa réponse | [05-transfert-tackle-reponse.png](ui/05-transfert-tackle-reponse.png) |
 | Réponse active : saisir | [06-transfert-reponse-saisie.png](ui/06-transfert-reponse-saisie.png) |
@@ -18,6 +19,7 @@ Référence visuelle pour l'intégration du défi Transfert dans l'ambiance stad
 
 ## Comportement
 
+- Le haut de l'écran montre **les scores de toutes les équipes**, pas seulement de l'équipe active. Son encadré est doré. Avec trois équipes, les scores tiennent sur une ligne ; avec quatre, ils sont disposés sur deux lignes. Les scores négatifs restent visibles. Les noms longs doivent être abrégés sans cacher les points. Les scores se mettent à jour dès le résultat, y compris après un Tackle.
 - **Aucune mention du porteur du téléphone**. N'importe qui peut le manipuler, y compris l'équipe active ou un maître du jeu. L'écran indique seulement l'équipe active et, lors d'un Tackle, l'équipe adverse désignée.
 - Les indices déjà révélés restent tous visibles, dans l'ordre de la carrière. Chaque ligne conserve la même hauteur ; seul le dernier indice a un encadré doré. Il faut maintenir cette lisibilité jusqu'au cinquième indice sans déplacer les lignes précédentes.
 - L'équipe active peut répondre ou passer. Passer affiche directement l'indice suivant, sans pénalité, avec un palier de points plus faible. Nous conservons ce comportement pour le prochain test réel.
