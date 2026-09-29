@@ -211,4 +211,8 @@ vfAnswer(true);
 assert.equal(state.cardEnded, true);
 assert.equal(state.teams[0].score, 0);
 
+// La version du jeu et version.json doivent correspondre (tools/bump-version.sh).
+const pageVersion = fs.readFileSync('index.html', 'utf8').match(/var APP_VERSION = "([^"]+)"/)[1];
+assert.equal(JSON.parse(fs.readFileSync('version.json', 'utf8')).version, pageVersion);
+
 console.log('Tackle timing and scoring scenarios passed');

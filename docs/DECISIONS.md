@@ -241,3 +241,8 @@ Journal des arbitrages, dans l'ordre chronologique inverse. Chaque entrée indiq
 - Décision : préparer plusieurs cartes, puis faire vérifier leurs faits par un agent avant intégration. La validation factuelle ne dépend pas d'une IA pendant la partie.
 - Raison : une carrière ou une date erronée ferait perdre confiance dans le jeu.
 - Impact technique : les cartes doivent pouvoir conserver leurs sources et leur statut de vérification.
+
+## [2026-09-29] Proposer la mise à jour aux joueurs qui ont gardé le jeu en signet
+- Décision : le jeu connaît son numéro de version (`APP_VERSION` dans `index.html`) et le compare à `version.json` sur le serveur au lancement et à chaque retour dans l'appli. Si le serveur a plus récent, un bandeau « Nouvelle version de TACKLE disponible · Mettre à jour » s'affiche en haut de « Créer une partie », jamais pendant une partie.
+- Raison : les testeurs lancent le jeu depuis l'écran d'accueil du téléphone, qui peut garder une ancienne page.
+- Impact technique : lancer `tools/bump-version.sh` avant chaque envoi sur main (le test vérifie que les deux numéros correspondent). « Mettre à jour » recharge la page avec `?v=<version>` pour contourner le cache.

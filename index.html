@@ -1689,6 +1689,26 @@
   }
   @media (prefers-reduced-motion: reduce) { .mercato-club.is-current.new { animation: none; } }
 
+
+  /* ---------- Bandeau « nouvelle version » ---------- */
+  .update-banner {
+    position: relative; z-index: 5; margin: 0 0 6px;
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 10px 10px 16px; border-radius: 16px;
+    background: rgba(4,19,14,.96); border: 1.5px solid var(--gold);
+    box-shadow: 0 8px 28px rgba(0,0,0,.55);
+    color: var(--chalk); font-size: 14px; font-weight: 700; line-height: 1.3;
+    animation: update-in .35s ease-out 1;
+  }
+  .update-text { flex: 1; min-width: 0; }
+  .update-btn {
+    flex: none; border: 0; border-radius: 12px; padding: 10px 14px;
+    background: linear-gradient(180deg, #f3cf72, var(--gold)); color: #1d1406;
+    font-family: var(--font-cond); font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: .03em;
+    cursor: pointer;
+  }
+  @keyframes update-in { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .update-banner { animation: none; } }
 </style>
 </head>
 <body class="setup-flow">
@@ -1699,6 +1719,11 @@
   <!-- SCREENS: PRÉPARATION (voir docs/UI_SETUP_FLOW.md) -->
   <!-- 1. Créer une partie -->
   <section id="screen-setup" class="setup-screen" aria-labelledby="setup-title">
+    <!-- Mise à jour : proposée seulement ici, jamais pendant une partie. -->
+    <div class="update-banner hidden-screen" id="update-banner" role="status">
+      <span class="update-text">Nouvelle version de TACKLE disponible</span>
+      <button type="button" class="update-btn" id="btn-update">Mettre à jour</button>
+    </div>
     <div class="setup-top">
       <h1 class="setup-logo"><img src="assets/ui/web/tackle-logo-brush.webp" width="240" height="120" alt="TACKLE"></h1>
     </div>
@@ -2425,6 +2450,42 @@
   // ---------- Journal de partie (pour les parties test) ----------
   // Tout reste sur le téléphone ; rien n'est envoyé sans un appui sur « Envoyer le journal ».
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
+  // ---------- Version et mise à jour ----------
+  // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
+  var APP_VERSION = "2026.09.29-2020";
+  var updateVersion = null;     // version plus récente trouvée sur le serveur
+  var lastUpdateCheck = 0;
+  function showUpdateBannerIfIdle() {
+    try {
+      var setup = document.getElementById("screen-setup");
+      var idle = setup && !setup.classList.contains("hidden-screen");
+      document.getElementById("update-banner").classList.toggle("hidden-screen", !(updateVersion && idle));
+    } catch (e) {}
+  }
+  function checkForUpdate() {
+    try {
+      if (typeof fetch !== "function" || Date.now() - lastUpdateCheck < 60000) { showUpdateBannerIfIdle(); return; }
+      lastUpdateCheck = Date.now();
+      fetch("version.json?t=" + Date.now(), { cache: "no-store" }).then(function (r) {
+        return r.ok ? r.json() : null;
+      }).then(function (data) {
+        var v = data && data.version;
+        if (v && v !== APP_VERSION) updateVersion = v;
+        showUpdateBannerIfIdle();
+      }).catch(function () { /* hors ligne : on réessaiera plus tard */ });
+    } catch (e) {}
+  }
+  try {
+    document.getElementById("btn-update").addEventListener("click", function () {
+      // L'adresse change à chaque version : le téléphone ne peut pas resservir l'ancienne page.
+      location.replace(location.pathname + "?v=" + encodeURIComponent(updateVersion || Date.now()));
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible") checkForUpdate();
+    });
+    setTimeout(checkForUpdate, 1500);
+  } catch (e) {}
+
   var JOURNAL_KEY = "tackle-journal-v1";
   var JOURNAL_KEEP = 20;
   var GAME_LABELS = { transfert: "Transfert", plusoumoins: "Plus ou Moins", vraifaux: "Vrai ou Faux", quisuisje: "Qui suis-je ?", lematch: "Le Match" };
@@ -2723,7 +2784,8 @@
     SETUP_SCREENS.concat(["screen-play", "screen-intermission", "screen-final"]).forEach(hide);
     document.body.classList.add("setup-flow");
     show(id);
-    if (id === "screen-setup") refreshJournalLink();
+    if (id === "screen-setup") { refreshJournalLink(); checkForUpdate(); }
+    else showUpdateBannerIfIdle();
     window.scrollTo(0, 0);
     if (moveFocus) {
       var title = el(id).querySelector("h2.setup-title");
