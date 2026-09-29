@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 180" role="img" aria-label="Fond de révélation négative sans texte">
+  <defs><linearGradient id="panel"><stop stop-color="#461414"/><stop offset=".55" stop-color="#251010"/><stop offset="1" stop-color="#491311"/></linearGradient><filter id="glow" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="8"/></filter></defs>
+  <path d="M90 20H733l47 70-47 70H90Z" fill="#ff2329" opacity=".5" filter="url(#glow)"/>
+  <path d="M90 20H733l47 70-47 70H90Z" fill="url(#panel)" stroke="#ff4c43" stroke-width="7"/>
+  <circle cx="90" cy="90" r="77" fill="#4a1111" stroke="#ff6257" stroke-width="9"/>
+  <path d="m57 57 66 66m0-66-66 66" fill="none" stroke="#fff1e9" stroke-width="15" stroke-linecap="round"/>
+</svg>

@@ -44,3 +44,7 @@ Ces assets donnent une direction graphique exploitable. Les écrans réels doive
 - `kickoff-whistle-real-candidate.wav` : essai avec un véritable sifflet court pour le départ du chrono. À écouter et retravailler : le choix actuel `kickoff-whistle.wav` reste en place pour l'instant.
 
 Les extraits réels sont issus de deux enregistrements CC0 : [strongbot, « metal whistle.wav »](https://freesound.org/people/strongbot/sounds/568995/) pour `tackle-whistle.wav`, et [Rosa-Orenes256, « Referee whistle sound.wav »](https://freesound.org/people/Rosa-Orenes256/sounds/538422/) pour l'essai de coup d'envoi. Les extraits ont été raccourcis, ramenés en mono et normalisés.
+
+## Pack Transfert « mercato »
+
+Le [dossier `mercato/`](mercato/README.md) contient les éléments de la carte Transfert en fichiers séparés et un [aperçu des états](mercato/preview.html). Il fournit le fond, la silhouette anonyme, les fiches, les liaisons et les révélations sans figer les noms ni les scores dans les images.

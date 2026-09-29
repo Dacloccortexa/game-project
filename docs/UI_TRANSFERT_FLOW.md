@@ -20,6 +20,10 @@ La première proposition de carte géographique et de parcours doré (planches 1
 
 Les anciennes maquettes ci-dessous restent utiles pour la **saisie**, la **confirmation** et le **choix de l'équipe tackleur**. Les nouvelles planches ci-dessus font foi pour le style de la carte et des révélations. La logique des points reste celle de [GAME_DESIGN.md](GAME_DESIGN.md).
 
+## Pack d'éléments séparés pour l'intégration
+
+Les maquettes 21 à 23 sont accompagnées du [pack `assets/ui/mercato/`](../assets/ui/mercato/README.md) : fond, silhouette anonyme, bandeau, fiches de clubs, liaisons et supports graphiques de révélation fournis séparément. [L'aperçu autonome](../assets/ui/mercato/preview.html) illustre les trois états et [`mercato.css`](../assets/ui/mercato/mercato.css) donne une base de composition adaptative. Reprendre le fond, le bandeau, la silhouette et les fiches dans la carte centrale ; les noms, années, points, réponses, scores et commandes restent produits par l'application. La silhouette ne représente aucun joueur identifiable et reste la même après une bonne réponse : le nom apparaît seulement en texte. Les panneaux de verdict communs aux défis restent en place ; les SVG de réussite et d'erreur ne sont que des supports graphiques pour l'aperçu ou une adaptation ultérieure.
+
 ## États à intégrer
 
 | État | Maquette |

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" role="img" aria-label="Bandeau mercato sans texte">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b0e10"/><stop offset=".5" stop-color="#24100b"/><stop offset="1" stop-color="#080d0d"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ff7a08"/><stop offset=".55" stop-color="#ffca54"/><stop offset="1" stop-color="#ff5a00"/></linearGradient>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <pattern id="scan" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 8H8" stroke="#ff8a1d" stroke-opacity=".08"/></pattern>
+  </defs>
+  <path d="M23 63 784 18 843 50 940 44 912 175 169 207 103 178 19 183Z" fill="url(#edge)" opacity=".65" filter="url(#glow)"/>
+  <path d="M23 63 784 18 843 50 940 44 912 175 169 207 103 178 19 183Z" fill="url(#body)" stroke="url(#edge)" stroke-width="7"/>
+  <path d="M28 68 781 26M168 199 910 168" stroke="#ffd164" stroke-width="3" opacity=".8"/>
+  <path d="M23 63 784 18 843 50 940 44 912 175 169 207 103 178 19 183Z" fill="url(#scan)"/>
+  <g fill="none" stroke="url(#edge)" stroke-width="13" stroke-linejoin="round">
+    <path d="m831 79 43 36-43 36"/><path d="m869 78 43 37-43 37"/>
+  </g>
+  <path d="M43 174 65 72" stroke="#ff9d32" stroke-width="4" opacity=".55"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 128" role="img" aria-label="Fiche du club actuellement révélé sans texte">
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#2d1a0f"/><stop offset="1" stop-color="#0d1111"/></linearGradient>
+    <linearGradient id="stub" x1="0" x2="1"><stop stop-color="#ffcb52"/><stop offset="1" stop-color="#ff7a09"/></linearGradient>
+    <filter id="glow" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><path d="M0 0V7" stroke="#ff9a22" stroke-opacity=".08" stroke-width="2"/></pattern>
+  </defs>
+  <path d="M18 4H702V48a16 16 0 0 0 0 32v44H18V80a16 16 0 0 0 0-32Z" fill="none" stroke="#ff8a13" stroke-width="12" opacity=".6" filter="url(#glow)"/>
+  <path d="M18 4H702V48a16 16 0 0 0 0 32v44H18V80a16 16 0 0 0 0-32Z" fill="url(#paper)" stroke="#ff9a16" stroke-width="5"/>
+  <path d="M18 4H128V124H18V80a16 16 0 0 0 0-32Z" fill="url(#stub)"/>
+  <path d="M128 7V121" stroke="#fbc55c" stroke-width="3" stroke-dasharray="6 7"/>
+  <path d="M132 6H698V122H132Z" fill="url(#hatch)"/>
+  <g fill="none" stroke="#f1aa51" stroke-width="4" stroke-linejoin="round" opacity=".65"><path d="m645 30-16 9-8-7-13 8v44h53V40l-13-8-8 7-15-9"/><path d="M629 39q14 11 19 0"/></g>
+</svg>

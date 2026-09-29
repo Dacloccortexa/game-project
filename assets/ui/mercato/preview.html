@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TACKLE — composants Transfert mercato</title>
+  <link rel="stylesheet" href="mercato.css">
+  <style>
+    body{margin:0;background:#071b15;color:#fff5df;font-family:Arial,sans-serif}
+    main{max-width:420px;margin:auto;padding:15px}
+    h1{font:900 24px Impact,Arial,sans-serif;letter-spacing:.04em;text-align:center}
+    .tabs{display:flex;gap:6px;margin:12px 0}.tabs button{flex:1;min-height:42px;background:#132c23;color:#fff;border:1px solid #9b8151;border-radius:8px;font-weight:700}.tabs button[aria-selected=true]{background:#f4b54a;color:#17211a}
+    .example{font-size:12px;line-height:1.4;color:#bdd0c3}
+  </style>
+</head>
+<body>
+<main>
+  <h1>TRANSFERT · éléments séparés</h1>
+  <div class="tabs" role="tablist" aria-label="États de la carte">
+    <button type="button" aria-selected="true" data-state="question">Question</button>
+    <button type="button" aria-selected="false" data-state="correct">Réussite</button>
+    <button type="button" aria-selected="false" data-state="wrong">Erreur</button>
+  </div>
+  <section class="mercato-card" aria-label="Exemple de carte Transfert">
+    <div class="mercato-heading"><span>TRANSFERT</span></div>
+    <p class="mercato-subtitle">Extrait de carrière · devine le joueur</p>
+    <div class="mercato-meta"><span>INDICE 3 / 5</span><span class="mercato-points" id="points">3 PTS</span></div>
+    <div class="mercato-body">
+      <div class="mercato-player-wrap"><img class="mercato-player" src="mystery-player.webp" alt="Joueur mystère anonyme"></div>
+      <ol class="mercato-clubs" aria-label="Clubs révélés">
+        <li class="mercato-club"><span class="mercato-club-number">1</span><span class="mercato-club-label"><span class="mercato-club-name">AJAX</span><span class="mercato-club-years">2001–2004</span></span></li>
+        <li class="mercato-club"><span class="mercato-club-number">2</span><span class="mercato-club-label"><span class="mercato-club-name">JUVENTUS</span><span class="mercato-club-years">2004–2006</span></span></li>
+        <li class="mercato-club is-current"><span class="mercato-club-number">3</span><span class="mercato-club-label"><span class="mercato-club-name">INTER MILAN</span><span class="mercato-club-years">2006–2009</span></span></li>
+      </ol>
+    </div>
+    <div class="mercato-result" id="result" hidden><div class="mercato-result-banner" id="result-banner"></div><p class="mercato-result-detail" id="result-detail"></p><p class="mercato-result-note" id="result-note"></p></div>
+  </section>
+  <p class="example">Aperçu des éléments graphiques uniquement. L'application conserve son en-tête, ses scores, son chrono et ses boutons. Les noms, années et points sont des exemples.</p>
+</main>
+<script>
+  const result=document.getElementById('result'),banner=document.getElementById('result-banner'),detail=document.getElementById('result-detail'),note=document.getElementById('result-note'),points=document.getElementById('points');
+  document.querySelectorAll('[data-state]').forEach(button=>button.addEventListener('click',()=>{
+    document.querySelectorAll('[data-state]').forEach(b=>b.setAttribute('aria-selected',String(b===button)));
+    const state=button.dataset.state;
+    result.hidden=state==='question'; result.classList.toggle('is-wrong',state==='wrong');
+    banner.textContent=state==='correct'?'BONNE RÉPONSE':'MAUVAISE RÉPONSE';
+    detail.textContent=state==='correct'?'ZLATAN IBRAHIMOVIĆ · +3 PTS':'−1 PT';
+    note.textContent=state==='correct'?'Carte terminée':'Le joueur reste secret · indice suivant : 2 pts';
+    points.textContent=state==='correct'?'+3 PTS':state==='wrong'?'−1 PT':'3 PTS';
+  }));
+</script>
+</body>
+</html>
