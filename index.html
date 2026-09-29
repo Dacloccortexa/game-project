@@ -1518,7 +1518,7 @@
   }
   .pom-bg { position: absolute; inset: 0; pointer-events: none; }
   .pom-bg::after {
-    content: ""; position: absolute; left: -10%; right: -10%; top: 58%; height: 3px;
+    content: ""; position: absolute; left: -10%; right: -10%; top: 57%; height: 3px;
     background: linear-gradient(90deg, transparent, #7fd3ff, #fff, #ff8a6e, transparent);
     transform: rotate(-16deg); box-shadow: 0 0 14px rgba(255,255,255,.6);
   }
@@ -1528,12 +1528,9 @@
   .pom-bars-top i { background: linear-gradient(180deg, #7fe0ff, #1c7fd6); }
   .pom-bars-bottom { left: 12px; bottom: 16px; }
   .pom-bars-bottom i { background: linear-gradient(180deg, #ff9a7a, #b8322a); }
-  .pom-sil { position: absolute; width: 150px; height: auto; }
-  .pom-sil path { stroke-width: 3; }
-  .pom-sil-ref { left: -18px; top: 104px; fill: #081a36; }
-  .pom-sil-ref path { stroke: rgba(120,210,255,.75); }
-  .pom-sil-next { right: -16px; bottom: -6px; fill: #2a0c10; transform: scaleX(-1); }
-  .pom-sil-next path { stroke: rgba(255,140,110,.75); }
+  .pom-glow { position: absolute; border-radius: 50%; filter: blur(28px); }
+  .pom-glow-ref { width: 220px; height: 160px; left: 30%; top: 96px; background: radial-gradient(circle, rgba(70,190,255,.55), transparent 70%); }
+  .pom-glow-next { width: 220px; height: 160px; right: 30%; bottom: 30px; background: radial-gradient(circle, rgba(255,110,80,.5), transparent 70%); }
 
   .pom-head { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 12px 12px 0; text-align: center; }
   .pom-title { margin: 0; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 34px; line-height: 1; text-transform: uppercase; letter-spacing: .01em; }
@@ -1547,10 +1544,10 @@
   }
   .pom-step::before, .pom-step::after { content: ""; flex: 1; height: 1px; background: rgba(127,211,255,.5); }
 
-  .pom-duel { position: relative; display: grid; grid-template-rows: auto auto auto; padding: 8px 14px 18px; gap: 2px; }
-  .pom-player { display: flex; flex-direction: column; min-width: 0; }
-  .pom-player.ref { align-items: flex-end; text-align: right; padding-left: 30%; }
-  .pom-player.next { align-items: flex-start; text-align: left; padding-right: 30%; }
+  .pom-duel { position: relative; display: flex; flex-direction: column; padding: 10px 16px 76px; gap: 0; }
+  .pom-player { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 0; max-width: 78%; }
+  .pom-player.ref { align-self: flex-end; margin-right: 13%; }
+  .pom-player.next { align-self: flex-start; margin-left: 15%; }
   .pom-first { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #dfe9f5; }
   .pom-last { font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 30px; line-height: 1; text-transform: uppercase; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,.7); overflow-wrap: anywhere; }
   .pom-value {
@@ -1565,7 +1562,7 @@
   .next .pom-value.hidden-value { color: #2a0806; }
   .next .pom-value.revealed { animation: pom-reveal .45s ease-out 1; }
   @keyframes pom-reveal { from { transform: skewX(-10deg) scale(.6); opacity: 0; } to { transform: skewX(-10deg) scale(1); opacity: 1; } }
-  .pom-vs { justify-self: center; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 34px; color: #e8eef7; text-shadow: 0 0 12px rgba(255,255,255,.5); line-height: 1; margin: -4px 0; }
+  .pom-vs { align-self: center; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 38px; color: #f2f6fb; text-shadow: 0 0 14px rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.4); line-height: 1; margin: 2px 0 4px; }
 
   /* Bandeau de verdict façon maquette : pilule sombre à contour néon, grosse icône qui déborde,
      texte lumineux et traits de vitesse de chaque côté. */
@@ -1609,10 +1606,10 @@
   .pom-answers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .pom-btn {
     min-height: 72px; border-radius: 16px; border: 2px solid rgba(255,255,255,.35);
-    font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 30px; text-transform: uppercase; color: #fff;
-    display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer;
+    font-family: var(--font-cond); font-weight: 700; font-style: normal; font-size: 32px; letter-spacing: .02em; text-transform: uppercase; color: #fff;
+    display: flex; align-items: center; justify-content: center; gap: 12px; cursor: pointer;
   }
-  .pom-btn span { font-style: normal; font-size: 30px; }
+  .pom-arrow { width: 36px; height: 36px; fill: none; stroke: currentColor; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 2px 0 rgba(0,0,0,.25)); }
   .pom-btn-plus { background: linear-gradient(180deg, #3cb4ff, #1466d8); box-shadow: 0 5px 0 #0b3f8a, 0 0 18px rgba(60,180,255,.35); }
   .pom-btn-moins { background: linear-gradient(180deg, #ff7a62, #cf3326); box-shadow: 0 5px 0 #7c1a12, 0 0 18px rgba(255,110,90,.35); }
   .pom-btn:active { transform: translateY(3px); }
@@ -1635,7 +1632,7 @@
   @media (max-height: 700px) {
     .pom-card { min-height: 320px; }
     .pom-title { font-size: 28px; }
-    .pom-sil { width: 120px; }
+    .pom-duel { padding-bottom: 66px; }
   }
   .pom-risk { margin: 0; text-align: center; font-size: 13px; color: var(--chalk-dim); }
   @media (prefers-reduced-motion: reduce) {
@@ -1838,8 +1835,8 @@
       <div class="pom-bg" aria-hidden="true">
         <div class="pom-bars pom-bars-top"><i style="height:30%"></i><i style="height:48%"></i><i style="height:40%"></i><i style="height:62%"></i><i style="height:55%"></i><i style="height:78%"></i><i style="height:92%"></i></div>
         <div class="pom-bars pom-bars-bottom"><i style="height:44%"></i><i style="height:70%"></i><i style="height:52%"></i><i style="height:36%"></i><i style="height:58%"></i><i style="height:28%"></i></div>
-        <svg class="pom-sil pom-sil-ref" viewBox="0 0 200 220"><path d="M100 14c23 0 40 19 40 44 0 19-9 34-23 42v11c32 6 60 21 72 46 6 13 9 31 9 63H2c0-32 3-50 9-63 12-25 40-40 72-46v-11c-14-8-23-23-23-42 0-25 17-44 40-44z"/></svg>
-        <svg class="pom-sil pom-sil-next" viewBox="0 0 200 220"><path d="M100 14c23 0 40 19 40 44 0 19-9 34-23 42v11c32 6 60 21 72 46 6 13 9 31 9 63H2c0-32 3-50 9-63 12-25 40-40 72-46v-11c-14-8-23-23-23-42 0-25 17-44 40-44z"/></svg>
+        <span class="pom-glow pom-glow-ref"></span>
+        <span class="pom-glow pom-glow-next"></span>
       </div>
       <div class="pom-head">
         <h3 class="pom-title"><span class="pom-plus">Plus</span> <span class="pom-ou">ou</span> <span class="pom-moins">Moins</span></h3>
@@ -1854,8 +1851,8 @@
 
     <div id="pom-answer-zone" class="hidden-screen">
       <div class="pom-answers">
-        <button type="button" class="pom-btn pom-btn-plus" id="pom-btn-plus">Plus <span aria-hidden="true">↑</span></button>
-        <button type="button" class="pom-btn pom-btn-moins" id="pom-btn-moins">Moins <span aria-hidden="true">↓</span></button>
+        <button type="button" class="pom-btn pom-btn-plus" id="pom-btn-plus">Plus <svg class="pom-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5V4M5 10.5L12 3.5l7 7"/></svg></button>
+        <button type="button" class="pom-btn pom-btn-moins" id="pom-btn-moins">Moins <svg class="pom-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5V20M5 13.5l7 7 7-7"/></svg></button>
       </div>
     </div>
 
