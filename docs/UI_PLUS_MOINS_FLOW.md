@@ -1,6 +1,6 @@
 # Plus ou Moins — première comparaison et bonne réponse
 
-Statut : **intégré dans `index.html`** (2026-09-29), à vérifier sur un vrai téléphone. Les états non dessinés suivent la même composition : mauvaise réponse (bandeau rouge, valeur révélée, cagnotte perdue), Tackle réussi ou raté, temps écoulé et 5 sur 5. Les barres sont dessinées en code ; les silhouettes anonymes sont les images `assets/ui/pom-player-blue.png` (en haut à gauche) et `pom-player-coral.png` (en bas à droite), servies en WebP depuis `assets/ui/web/`. Les noms sont placés du côté opposé à leur silhouette, comme sur la planche 16.
+Statut : **intégré dans `index.html`** (2026-09-29), à vérifier sur un vrai téléphone. Les états non dessinés suivent la même composition : mauvaise réponse (bandeau rouge, valeur révélée, cagnotte perdue), Tackle réussi ou raté, temps écoulé et 5 sur 5. Les petits graphiques en barres ont été retirés à la demande de David (2026-09-29, « ça sert à rien ») ; les silhouettes anonymes sont les images `assets/ui/pom-player-blue.png` (en haut à gauche) et `pom-player-coral.png` (en bas à droite), servies en WebP depuis `assets/ui/web/`. Les noms sont placés du côté opposé à leur silhouette, comme sur la planche 16.
 
 Références visuelles pour le défi Plus ou Moins, dans l'ambiance stade de TACKLE. Les règles et les autres états restent définis par [GAME_DESIGN.md](GAME_DESIGN.md).
 

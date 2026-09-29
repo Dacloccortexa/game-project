@@ -1521,12 +1521,6 @@
     background: linear-gradient(90deg, transparent, #7fd3ff, #fff, #ff8a6e, transparent);
     transform: rotate(-16deg); box-shadow: 0 0 14px rgba(255,255,255,.6);
   }
-  .pom-bars { position: absolute; display: flex; align-items: flex-end; gap: 5px; height: 90px; opacity: .55; }
-  .pom-bars i { display: block; width: 11px; border-radius: 2px 2px 0 0; }
-  .pom-bars-top { right: 14px; top: 96px; }
-  .pom-bars-top i { background: linear-gradient(180deg, #7fe0ff, #1c7fd6); }
-  .pom-bars-bottom { left: 14px; bottom: 16px; opacity: .4; }
-  .pom-bars-bottom i { background: linear-gradient(180deg, #ff9a7a, #b8322a); }
   .pom-glow { position: absolute; border-radius: 50%; filter: blur(28px); }
   .pom-glow-ref { width: 240px; height: 170px; left: -4%; top: 90px; background: radial-gradient(circle, rgba(70,190,255,.55), transparent 70%); }
   /* Silhouettes anonymes (assets/ui/pom-player-*.png) : bleue en haut à gauche, corail en bas à droite.
@@ -2072,8 +2066,6 @@
     <!-- Plus ou Moins (docs/UI_PLUS_MOINS_FLOW.md) -->
     <div class="pom-card hidden-screen" id="stage-pom">
       <div class="pom-bg" aria-hidden="true">
-        <div class="pom-bars pom-bars-top"><i style="height:30%"></i><i style="height:48%"></i><i style="height:40%"></i><i style="height:62%"></i><i style="height:55%"></i><i style="height:78%"></i><i style="height:92%"></i></div>
-        <div class="pom-bars pom-bars-bottom"><i style="height:44%"></i><i style="height:70%"></i><i style="height:52%"></i><i style="height:36%"></i><i style="height:58%"></i><i style="height:28%"></i></div>
         <span class="pom-glow pom-glow-ref"></span>
         <span class="pom-glow pom-glow-next"></span>
         <img class="pom-sil pom-sil-ref" src="assets/ui/web/pom-player-blue.webp" width="480" height="600" alt="">
@@ -2624,7 +2616,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2313";
+  var APP_VERSION = "2026.09.29-2317";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
