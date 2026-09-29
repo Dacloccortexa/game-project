@@ -1,5 +1,9 @@
 # DECISIONS.md
 
+## [2026-09-29] Bouton « Litige : tirage au sort » encadré
+- Demande de David : le litige doit être un bouton encadré aussi gros que les boutons d'équipe, à la même place (sous les indications, au-dessus de « Annuler, personne n'a tacklé »).
+- Décision : bouton pleine largeur, 62 px de haut comme les équipes, cadre doré, texte doré. En mode litige, le même bouton affiche « Retour : l'arbitre choisit ». Aucun autre changement du panneau.
+
 ## [2026-09-29] Le Match (« tableau d'affichage ») : identité intégrée — les cinq défis ont leur carte
 - Pack fourni : `assets/ui/le-match/` (planche 26). Seule la carte centrale change ; tous les éléments communs restent tels quels (les écarts de la planche — scores « Équipe Alpha », points de manche, chrono rond — sont ignorés, comme pour les autres défis).
 - Carte : tableau de stade, plaque « Le Match », compétition seule (sans année), « ? vs ? » en texte, frise verticale de cinq événements à hauteur fixe (44 px) : minute à gauche (`90+2′` lisible), événements passés visibles, courant éclairé avec son palier (5 → 1 pt), suivants « Événement à venir » avec cadenas.

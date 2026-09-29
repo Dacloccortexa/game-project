@@ -1338,6 +1338,16 @@
   .tackle-team-btn.draw-win { border: 2px solid var(--gold-ring); background: rgba(242,191,84,.4); box-shadow: 0 0 22px rgba(242,191,84,.6); }
   .tackle-team-list.drawing .tackle-team-btn { pointer-events: none; }
   .tackle-draw-btn { min-height: 52px; font-size: 18px; }
+  /* Bouton Litige : encadré, même taille que les boutons d'équipe, sous les indications. */
+  .tackle-dispute-btn {
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; min-height: 62px; padding: 0 16px;
+    border-radius: 14px; border: 1.5px solid var(--gold-ring);
+    background: rgba(40,34,14,.55);
+    color: var(--gold); font-size: 19px; font-weight: 700; text-align: center;
+    cursor: pointer;
+  }
+  .tackle-dispute-btn:active { transform: translateY(1px); }
   .tackle-draw-btn:disabled { opacity: .45; }
   .tackle-who {
     display: flex; align-items: center; gap: 12px;
@@ -2241,7 +2251,7 @@
       <p class="tr-panel-note gold" id="tackle-picker-stakes">Une seule équipe répond</p>
       <p class="tr-panel-note" id="tackle-picker-note">Le chrono est arrêté pendant ce choix</p>
       <button type="button" class="tr-btn-secondary tackle-draw-btn hidden-screen" id="btn-tackle-draw">Tirer au sort</button>
-      <button type="button" class="text-btn hidden-screen" id="btn-tackle-dispute">Litige : tirage au sort</button>
+      <button type="button" class="tackle-dispute-btn hidden-screen" id="btn-tackle-dispute">Litige : tirage au sort</button>
       <button type="button" class="text-btn" id="btn-tackle-cancel">Annuler, personne n'a tacklé</button>
     </div>
 
@@ -2616,7 +2626,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2320";
+  var APP_VERSION = "2026.09.29-2343";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
