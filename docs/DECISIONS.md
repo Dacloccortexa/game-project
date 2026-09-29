@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-09-29] Deux sifflets distincts pour le chrono et le Tackle
+
+- David demande un signal au départ du chrono et un autre lorsque les adversaires peuvent tackler : un double sifflet bref, type coup d'envoi, marque chaque nouveau décompte de 30 secondes ; un sifflet unique plus appuyé, type faute, marque l'ouverture des 15 secondes de Tackle.
+- Les fichiers sont `assets/ui/kickoff-whistle.wav` et `assets/ui/tackle-whistle.wav`. L'animation rouge du Tackle et ce second son partent ensemble ; le bouton devient utilisable immédiatement, sans attendre la fin de l'effet.
+- Le chrono et les règles de score ne changent pas. Les sons sont des repères de jeu ; l'interface doit rester compréhensible si le téléphone est muet.
+
 ## [2026-09-29] Personnaliser les équipes une par une
 - Décision : « Personnaliser les équipes » présente une seule fiche à la fois — Équipe 1, puis « Équipe suivante », etc. — et le dernier bouton devient « Coup d'envoi » (demandé par David).
 - Raison : plus clair qu'une longue page avec toutes les fiches.

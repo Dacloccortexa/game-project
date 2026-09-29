@@ -36,4 +36,5 @@ Ces assets donnent une direction graphique exploitable. Les écrans réels doive
 ## Ouverture du Tackle
 
 - `tackle-logo-red.png` : version rouge transparente du lettrage, pour le signal animé à 30 secondes.
-- `tackle-whistle.wav` : sifflet court à jouer au même instant que le signal visuel. Voir [`docs/UI_TACKLE_OPEN_ANIMATION.md`](../../docs/UI_TACKLE_OPEN_ANIMATION.md).
+- `kickoff-whistle.wav` : double sifflet bref au départ de chaque chrono de 30 secondes.
+- `tackle-whistle.wav` : sifflet unique plus marqué au même instant que le signal visuel d'ouverture du Tackle. Voir [`docs/UI_TACKLE_OPEN_ANIMATION.md`](../../docs/UI_TACKLE_OPEN_ANIMATION.md).

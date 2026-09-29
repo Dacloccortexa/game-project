@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TACKLE — aperçu du sifflet</title>
+  <title>TACKLE — les deux coups de sifflet</title>
   <style>
     :root { color-scheme: dark; font-family: Arial, sans-serif; }
     body { margin: 0; min-height: 100vh; background: #041b13; color: #fff5df; display: grid; place-items: center; }
@@ -11,26 +11,38 @@
     h1 { margin: 0 0 10px; font-size: 22px; }
     p { margin: 0 0 16px; color: #c8dac9; font-size: 14px; line-height: 1.4; }
     img { display: block; width: min(100%, 430px); height: auto; margin: auto; border-radius: 30px; box-shadow: 0 10px 45px #000b; }
-    button { margin: 16px auto 0; width: min(100%, 430px); min-height: 56px; border: 0; border-radius: 14px; background: linear-gradient(#ffe394, #d99f3a); color: #10271b; font-size: 18px; font-weight: 900; cursor: pointer; }
+    button { margin: 12px auto 0; width: min(100%, 430px); min-height: 56px; border: 0; border-radius: 14px; background: linear-gradient(#ffe394, #d99f3a); color: #10271b; font-size: 18px; font-weight: 900; cursor: pointer; }
+    button.danger { background: linear-gradient(#f27567, #b92720); color: #fff8ed; }
   </style>
 </head>
 <body>
   <main>
-    <h1>Ouverture du Tackle</h1>
-    <p>Appuie pour voir l'animation et entendre le sifflet au même moment.</p>
-    <img id="screen" src="15-tackle-ouvert.png" alt="Écran de jeu avec le bouton Tackle ouvert" width="430" height="932">
-    <button id="play" type="button">Voir avec le son</button>
-    <audio id="whistle" preload="auto" src="../../assets/ui/tackle-whistle.wav"></audio>
+    <h1>Les deux signaux du chrono</h1>
+    <p>Un double sifflet ouvre les 30 secondes de l'équipe active. Un sifflet plus marqué ouvre les 15 secondes de Tackle.</p>
+    <img id="screen" src="03-transfert-indice-3.png" alt="Écran de jeu au départ du chrono" width="430" height="932">
+    <button id="kickoff" type="button">1 · Départ du chrono</button>
+    <button id="tackle" class="danger" type="button">2 · Tackle autorisé</button>
+    <audio id="kickoff-sound" preload="auto" src="../../assets/ui/kickoff-whistle.wav"></audio>
+    <audio id="tackle-sound" preload="auto" src="../../assets/ui/tackle-whistle.wav"></audio>
   </main>
   <script>
     const screen = document.getElementById('screen');
-    const whistle = document.getElementById('whistle');
+    const kickoffSound = document.getElementById('kickoff-sound');
+    const tackleSound = document.getElementById('tackle-sound');
     let finish;
-    document.getElementById('play').addEventListener('click', () => {
+    document.getElementById('kickoff').addEventListener('click', () => {
       clearTimeout(finish);
+      tackleSound.pause();
+      screen.src = '03-transfert-indice-3.png';
+      kickoffSound.currentTime = 0;
+      kickoffSound.play().catch(() => {});
+    });
+    document.getElementById('tackle').addEventListener('click', () => {
+      clearTimeout(finish);
+      kickoffSound.pause();
       screen.src = `14-ouverture-tackle.gif?replay=${Date.now()}`;
-      whistle.currentTime = 0;
-      whistle.play().catch(() => {});
+      tackleSound.currentTime = 0;
+      tackleSound.play().catch(() => {});
       finish = setTimeout(() => { screen.src = '15-tackle-ouvert.png'; }, 2000);
     });
   </script>
