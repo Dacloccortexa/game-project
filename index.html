@@ -1506,6 +1506,120 @@
   .journal-link-box { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 14px; }
   .journal-link-box .text-btn { color: var(--chalk); font-size: 14px; min-height: 44px; }
 
+  /* ---------- Plus ou Moins (docs/UI_PLUS_MOINS_FLOW.md) : duel bleu/cyan contre corail ---------- */
+  #screen-play.no-title > .play-title, #screen-play.no-title > .play-subtitle { display: none; }
+  .pom-card {
+    position: relative; overflow: hidden;
+    border-radius: 20px;
+    border: 2px solid #3aa6ff;
+    background: linear-gradient(152deg, #0a2a5c 0%, #0c3a7a 42%, #3a1420 58%, #5a1a1c 100%);
+    box-shadow: 0 0 22px rgba(58,166,255,.28), 0 14px 30px rgba(0,0,0,.4);
+    min-height: 370px;
+  }
+  .pom-bg { position: absolute; inset: 0; pointer-events: none; }
+  .pom-bg::after {
+    content: ""; position: absolute; left: -10%; right: -10%; top: 58%; height: 3px;
+    background: linear-gradient(90deg, transparent, #7fd3ff, #fff, #ff8a6e, transparent);
+    transform: rotate(-16deg); box-shadow: 0 0 14px rgba(255,255,255,.6);
+  }
+  .pom-bars { position: absolute; display: flex; align-items: flex-end; gap: 5px; height: 90px; opacity: .55; }
+  .pom-bars i { display: block; width: 11px; border-radius: 2px 2px 0 0; }
+  .pom-bars-top { right: 14px; top: 96px; }
+  .pom-bars-top i { background: linear-gradient(180deg, #7fe0ff, #1c7fd6); }
+  .pom-bars-bottom { left: 12px; bottom: 16px; }
+  .pom-bars-bottom i { background: linear-gradient(180deg, #ff9a7a, #b8322a); }
+  .pom-sil { position: absolute; width: 150px; height: auto; }
+  .pom-sil path { stroke-width: 3; }
+  .pom-sil-ref { left: -18px; top: 104px; fill: #081a36; }
+  .pom-sil-ref path { stroke: rgba(120,210,255,.75); }
+  .pom-sil-next { right: -16px; bottom: -6px; fill: #2a0c10; transform: scaleX(-1); }
+  .pom-sil-next path { stroke: rgba(255,140,110,.75); }
+
+  .pom-head { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 12px 12px 0; text-align: center; }
+  .pom-title { margin: 0; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 34px; line-height: 1; text-transform: uppercase; letter-spacing: .01em; }
+  .pom-plus { color: #5fd2ff; text-shadow: 0 0 14px rgba(95,210,255,.55); }
+  .pom-ou { color: #fff; font-size: 26px; }
+  .pom-moins { color: #ff7a5c; text-shadow: 0 0 14px rgba(255,110,80,.55); }
+  .pom-category { font-weight: 700; font-size: 16px; color: #fff; }
+  .pom-step {
+    display: flex; align-items: center; gap: 10px; width: 100%;
+    font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #7fd3ff;
+  }
+  .pom-step::before, .pom-step::after { content: ""; flex: 1; height: 1px; background: rgba(127,211,255,.5); }
+
+  .pom-duel { position: relative; display: grid; grid-template-rows: auto auto auto; padding: 8px 14px 18px; gap: 2px; }
+  .pom-player { display: flex; flex-direction: column; min-width: 0; }
+  .pom-player.ref { align-items: flex-end; text-align: right; padding-left: 30%; }
+  .pom-player.next { align-items: flex-start; text-align: left; padding-right: 30%; }
+  .pom-first { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #dfe9f5; }
+  .pom-last { font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 30px; line-height: 1; text-transform: uppercase; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,.7); overflow-wrap: anywhere; }
+  .pom-value {
+    display: inline-flex; align-items: baseline; gap: 6px;
+    margin-top: 4px; padding: 3px 14px 4px;
+    font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 32px; line-height: 1.05;
+    transform: skewX(-10deg);
+  }
+  .pom-value small { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+  .ref .pom-value { background: linear-gradient(90deg, #1b8fe0, #46c8ff); color: #04203d; }
+  .next .pom-value { background: linear-gradient(90deg, #ff7c5e, #d8412f); color: #2a0806; }
+  .next .pom-value.hidden-value { color: #2a0806; }
+  .next .pom-value.revealed { animation: pom-reveal .45s ease-out 1; }
+  @keyframes pom-reveal { from { transform: skewX(-10deg) scale(.6); opacity: 0; } to { transform: skewX(-10deg) scale(1); opacity: 1; } }
+  .pom-vs { justify-self: center; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 34px; color: #e8eef7; text-shadow: 0 0 12px rgba(255,255,255,.5); line-height: 1; margin: -4px 0; }
+
+  .pom-verdict {
+    position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 10px; white-space: nowrap;
+    padding: 8px 18px 8px 8px; border-radius: 999px;
+    font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 20px; text-transform: uppercase;
+    color: #fff; animation: pom-pop .4s cubic-bezier(.2,.9,.3,1.3) 1;
+  }
+  .pom-verdict .v-icon { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; }
+  .pom-verdict.good { background: linear-gradient(90deg, #0f6e3a, #1e9c52); border: 2px solid #6ff09e; box-shadow: 0 0 22px rgba(80,230,140,.6); }
+  .pom-verdict.good .v-icon { background: #fff; color: #129a4c; }
+  .pom-verdict.bad { background: linear-gradient(90deg, #7a1616, #b3261e); border: 2px solid #ff8a80; box-shadow: 0 0 22px rgba(255,90,80,.55); }
+  .pom-verdict.bad .v-icon { background: #fff; color: #c62828; }
+  .pom-verdict.neutral { background: linear-gradient(90deg, #6b4a10, #a87320); border: 2px solid var(--gold-ring); }
+  .pom-verdict.neutral .v-icon { background: #fff; color: #8a5a10; }
+  @keyframes pom-pop { from { transform: translateX(-50%) scale(.6); opacity: 0; } to { transform: translateX(-50%) scale(1); opacity: 1; } }
+
+  .pom-note { padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(248,246,237,.2); background: rgba(3,17,12,.8); color: var(--chalk); text-align: center; font-size: 15px; line-height: 1.45; }
+  .pom-answers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .pom-btn {
+    min-height: 72px; border-radius: 16px; border: 2px solid rgba(255,255,255,.35);
+    font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 30px; text-transform: uppercase; color: #fff;
+    display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer;
+  }
+  .pom-btn span { font-style: normal; font-size: 30px; }
+  .pom-btn-plus { background: linear-gradient(180deg, #3cb4ff, #1466d8); box-shadow: 0 5px 0 #0b3f8a, 0 0 18px rgba(60,180,255,.35); }
+  .pom-btn-moins { background: linear-gradient(180deg, #ff7a62, #cf3326); box-shadow: 0 5px 0 #7c1a12, 0 0 18px rgba(255,110,90,.35); }
+  .pom-btn:active { transform: translateY(3px); }
+  #pom-decision-zone:not(.hidden-screen) { display: flex; flex-direction: column; gap: 10px; }
+  .pom-pot {
+    display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 14px;
+    border: 2px solid var(--gold-ring); background: rgba(3,17,12,.85);
+    font-family: var(--font-cond); font-weight: 700; font-size: 24px; text-transform: uppercase; color: var(--chalk);
+  }
+  .pom-pot b { color: var(--gold); margin-left: 8px; font-size: 28px; }
+  .pom-decide { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .pom-decide .tr-btn-primary, .pom-decide .tr-btn-secondary { min-height: 54px; font-size: 19px; white-space: nowrap; padding: 0 8px; }
+  .pom-decide .tr-btn-secondary { border-color: #5fd2ff; }
+  @media (max-width: 360px) {
+    #scoreboard .team-badge { display: none; }
+    .pom-last { font-size: 26px; }
+    .pom-value { font-size: 27px; }
+    .pom-btn { min-height: 62px; font-size: 26px; }
+  }
+  @media (max-height: 700px) {
+    .pom-card { min-height: 320px; }
+    .pom-title { font-size: 28px; }
+    .pom-sil { width: 120px; }
+  }
+  .pom-risk { margin: 0; text-align: center; font-size: 13px; color: var(--chalk-dim); }
+  @media (prefers-reduced-motion: reduce) {
+    .pom-verdict, .next .pom-value.revealed { animation: none; }
+  }
+
 </style>
 </head>
 <body class="setup-flow">
@@ -1697,29 +1811,39 @@
       </div>
     </div>
 
-    <!-- Plus ou Moins -->
-    <div class="card-stage hidden-screen" id="stage-pom">
-      <div class="clue-points" id="pom-category"></div>
-      <div class="clue-list" id="pom-chain-list"></div>
+    <!-- Plus ou Moins (docs/UI_PLUS_MOINS_FLOW.md) -->
+    <div class="pom-card hidden-screen" id="stage-pom">
+      <div class="pom-bg" aria-hidden="true">
+        <div class="pom-bars pom-bars-top"><i style="height:30%"></i><i style="height:48%"></i><i style="height:40%"></i><i style="height:62%"></i><i style="height:55%"></i><i style="height:78%"></i><i style="height:92%"></i></div>
+        <div class="pom-bars pom-bars-bottom"><i style="height:44%"></i><i style="height:70%"></i><i style="height:52%"></i><i style="height:36%"></i><i style="height:58%"></i><i style="height:28%"></i></div>
+        <svg class="pom-sil pom-sil-ref" viewBox="0 0 200 220"><path d="M100 14c23 0 40 19 40 44 0 19-9 34-23 42v11c32 6 60 21 72 46 6 13 9 31 9 63H2c0-32 3-50 9-63 12-25 40-40 72-46v-11c-14-8-23-23-23-42 0-25 17-44 40-44z"/></svg>
+        <svg class="pom-sil pom-sil-next" viewBox="0 0 200 220"><path d="M100 14c23 0 40 19 40 44 0 19-9 34-23 42v11c32 6 60 21 72 46 6 13 9 31 9 63H2c0-32 3-50 9-63 12-25 40-40 72-46v-11c-14-8-23-23-23-42 0-25 17-44 40-44z"/></svg>
+      </div>
+      <div class="pom-head">
+        <h3 class="pom-title"><span class="pom-plus">Plus</span> <span class="pom-ou">ou</span> <span class="pom-moins">Moins</span></h3>
+        <div class="pom-category" id="pom-category">Buts</div>
+        <div class="pom-step" id="pom-step">Comparaison 1 / 5</div>
+      </div>
+      <div class="pom-duel" id="pom-chain-list"></div>
+      <div class="pom-verdict hidden-screen" id="pom-verdict" role="status" aria-live="polite"></div>
     </div>
 
-    <div id="pom-feedback-zone" class="hidden-screen"></div>
+    <div id="pom-feedback-zone" class="pom-note hidden-screen"></div>
 
     <div id="pom-answer-zone" class="hidden-screen">
-      <div class="answer-btns">
-        <button class="btn-pass" id="pom-btn-moins">− Moins</button>
-        <button class="btn-answer" id="pom-btn-plus">+ Plus</button>
+      <div class="pom-answers">
+        <button type="button" class="pom-btn pom-btn-plus" id="pom-btn-plus">Plus <span aria-hidden="true">↑</span></button>
+        <button type="button" class="pom-btn pom-btn-moins" id="pom-btn-moins">Moins <span aria-hidden="true">↓</span></button>
       </div>
     </div>
 
     <div class="hidden-screen" id="pom-decision-zone">
-      <div class="confirm-box">
-        <div class="typed" id="pom-potential-points"></div>
-        <div class="confirm-actions">
-          <button class="secondary" id="pom-btn-encaisser">Encaisser</button>
-          <button class="primary" id="pom-btn-continuer">Continuer</button>
-        </div>
+      <div class="pom-pot" id="pom-potential-points">Cagnotte : 1 point</div>
+      <div class="pom-decide">
+        <button type="button" class="tr-btn-primary" id="pom-btn-encaisser">Encaisser</button>
+        <button type="button" class="tr-btn-secondary" id="pom-btn-continuer">Continuer</button>
       </div>
+      <p class="pom-risk">Une erreur fait perdre la cagnotte</p>
     </div>
 
     <div class="hidden-screen" id="pom-pending-zone">
@@ -2984,6 +3108,8 @@
     el("round-count").textContent = "Manche " + pad2(state.roundsPlayed + 1) + " / " + pad2(state.roundsTotal);
     el("minigame-name").textContent = minigameLabel;
     el("minigame-subtitle").textContent = MINIGAME_SUBTITLES[minigameLabel] || "";
+    // Plus ou Moins porte son propre titre dans la carte.
+    el("screen-play").classList.toggle("no-title", minigameLabel === "Plus ou Moins");
     hide("next-card-zone");
     renderScoreboard();
   }
@@ -3145,14 +3271,13 @@
       var points = state.currentRoundMinigame === "plusoumoins" ? state.pomPotential : state.vfPotential;
       awardPoints(points);
       if (state.currentRoundMinigame === "plusoumoins") {
-        var current = state.pomChain.chain[state.pomIndex];
-        var next = state.pomChain.chain[state.pomIndex + 1];
-        state.pomIndex += 1;
-        renderPomChain();
-        el("pom-feedback-zone").classList.remove("hidden-screen");
-        el("pom-feedback-zone").textContent = "Temps écoulé, personne n'a répondu. " + next.name + " : " + next.value +
-          " (" + (next.value > current.value ? "PLUS" : "MOINS") + "). +" + points + " point" +
-          (points > 1 ? "s" : "") + " encaissé" + (points > 1 ? "s" : "") + ".";
+        hide("pom-answer-zone");
+        state.pomRevealed = true;
+        renderPomChain(true);
+        showPomVerdict("neutral", "Temps écoulé", false);
+        showPomNote("Personne n'a répondu. " + (points > 0
+          ? "+" + points + " point" + (points > 1 ? "s" : "") + " encaissé" + (points > 1 ? "s" : "") + "."
+          : "Aucune cagnotte à encaisser."));
       } else {
         var statement = state.vfChain[state.vfIndex];
         showVfFeedback("good", "Temps écoulé, personne n'a répondu. C'était " + (statement.est_vraie ? "VRAI" : "FAUX") +
@@ -3264,12 +3389,13 @@
       (correct ? tackleDeltaText(true) + " ; l'équipe active perd sa cagnotte." : tackleDeltaText(false) + " ; l'équipe active encaisse " + points + " point" + (points > 1 ? "s" : "") + ".");
     hide("tackle-answer-zone");
     if (game === "plusoumoins") {
-      var current = state.pomChain.chain[state.pomIndex], next = state.pomChain.chain[state.pomIndex + 1];
-      state.pomIndex += 1;
-      renderPomChain();
-      message += " " + next.name + " : " + next.value + " (" + (next.value > current.value ? "PLUS" : "MOINS") + ").";
-      el("pom-feedback-zone").classList.remove("hidden-screen");
-      el("pom-feedback-zone").textContent = message;
+      hide("pom-answer-zone");
+      state.pomRevealed = true;
+      renderPomChain(true);
+      showPomVerdict(correct ? "good" : "bad", "Tackle " + (correct ? "réussi" : "raté"), false);
+      showPomNote(team.name + " " + tackleDeltaText(correct) + (correct
+        ? " ; " + teamVerb(state.teams[state.currentTeamIndex].name, "perdent", "perd") + " sa cagnotte."
+        : " ; " + teamVerb(state.teams[state.currentTeamIndex].name, "encaissent", "encaisse") + " " + points + " point" + (points > 1 ? "s" : "") + "."));
     } else {
       message += " C'était " + (state.vfChain[state.vfIndex].est_vraie ? "VRAI" : "FAUX") + ".";
       showVfFeedback(correct ? "good" : "bad", message);
@@ -3354,6 +3480,8 @@
     state.pomIndex = 0;        // index du joueur de référence actuel dans la chaîne
     state.pomPotential = 0;    // points potentiels accumulés
     state.pomPendingDirection = null;
+    state.pomRevealed = false;
+    hidePomVerdict();
 
     beginTurnCommon("Plus ou Moins");
     el("pom-feedback-zone").innerHTML = "";
@@ -3366,32 +3494,81 @@
     startTackleWindow();
   }
 
-  function renderPomChain(revealNext) {
+  function pomUnit(value) {
+    var cat = (state.pomChain && state.pomChain.category) || "";
+    var plural = Math.abs(value) > 1;
+    if (/^s[ée]lection/i.test(cat)) return plural ? "sélections" : "sélection";
+    return plural ? "buts" : "but";
+  }
+  function pomSplitName(name) {
+    var parts = String(name).trim().split(/\s+/);
+    if (parts.length < 2) return { first: "", last: parts[0] || "" };
+    return { first: parts.slice(0, -1).join(" "), last: parts[parts.length - 1] };
+  }
+  function pomPlayerEl(player, side, showValue, animate) {
+    var box = document.createElement("div");
+    box.className = "pom-player " + side;
+    var n = pomSplitName(player.name);
+    if (n.first) {
+      var first = document.createElement("span");
+      first.className = "pom-first";
+      first.textContent = n.first;
+      box.appendChild(first);
+    }
+    var last = document.createElement("span");
+    last.className = "pom-last";
+    last.textContent = n.last;
+    box.appendChild(last);
+    var val = document.createElement("span");
+    val.className = "pom-value" + (showValue ? (animate ? " revealed" : "") : " hidden-value");
+    val.innerHTML = (showValue ? player.value : "?") + " <small>" + (showValue ? pomUnit(player.value) : pomUnit(2)) + "</small>";
+    val.setAttribute("aria-label", showValue ? player.value + " " + pomUnit(player.value) : "valeur cachée");
+    box.appendChild(val);
+    return box;
+  }
+
+  // Duel : joueur de référence (valeur visible) contre le suivant (valeur cachée jusqu'à la réponse).
+  function renderPomChain(animateReveal) {
     var chain = state.pomChain.chain;
     el("pom-category").textContent = state.pomChain.category;
-    var list = el("pom-chain-list");
-    list.innerHTML = "";
-
-    for (var i = 0; i <= state.pomIndex; i++) {
-      var row = document.createElement("div");
-      row.className = "clue";
-      var nameSpan = document.createElement("span");
-      nameSpan.className = "club-name";
-      nameSpan.textContent = chain[i].name;
-      var valSpan = document.createElement("span");
-      valSpan.className = "years";
-      valSpan.textContent = chain[i].value;
-      row.appendChild(nameSpan);
-      row.appendChild(valSpan);
-      list.appendChild(row);
+    el("pom-step").textContent = "Comparaison " + (state.pomIndex + 1) + " / " + (chain.length - 1);
+    var duel = el("pom-chain-list");
+    duel.innerHTML = "";
+    duel.appendChild(pomPlayerEl(chain[state.pomIndex], "ref", true, false));
+    var vs = document.createElement("div");
+    vs.className = "pom-vs";
+    vs.textContent = "VS";
+    vs.setAttribute("aria-hidden", "true");
+    duel.appendChild(vs);
+    if (chain[state.pomIndex + 1]) {
+      duel.appendChild(pomPlayerEl(chain[state.pomIndex + 1], "next", !!state.pomRevealed, !!animateReveal));
     }
+  }
 
-    if (state.pomIndex + 1 < chain.length) {
-      var nextRow = document.createElement("div");
-      nextRow.className = "clue hidden";
-      nextRow.textContent = chain[state.pomIndex + 1].name + " — ?";
-      list.appendChild(nextRow);
+  // Bandeau « Bonne réponse », « Mauvaise réponse », « Tackle… » sur le duel.
+  function showPomVerdict(kind, text, autoHide) {
+    var v = el("pom-verdict");
+    var icon = kind === "good"
+      ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
+      : kind === "bad"
+        ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>'
+        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 2"/></svg>';
+    v.innerHTML = '<span class="v-icon" aria-hidden="true">' + icon + '</span><span class="v-text"></span>';
+    if (v.querySelector) v.querySelector(".v-text").textContent = text;
+    v.className = "pom-verdict " + kind;
+    if (state.pomVerdictTimer) { clearTimeout(state.pomVerdictTimer); state.pomVerdictTimer = null; }
+    if (autoHide) {
+      state.pomVerdictTimer = setTimeout(function () { hide("pom-verdict"); }, 1800);
     }
+  }
+  function hidePomVerdict() {
+    if (state.pomVerdictTimer) { clearTimeout(state.pomVerdictTimer); state.pomVerdictTimer = null; }
+    hide("pom-verdict");
+  }
+  function showPomNote(text) {
+    var z = el("pom-feedback-zone");
+    z.textContent = text;
+    z.classList.remove("hidden-screen");
   }
 
   // La réponse est verrouillée (pas encore révélée). Aucune fenêtre de contestation
@@ -3423,31 +3600,32 @@
     journalStep((state.pomPendingDirection === "plus" ? "PLUS" : "MOINS") + " " + (isActiveCorrect ? "juste" : "faux"));
     state.pomPendingDirection = null;
 
-    state.pomIndex += 1;
-    renderPomChain();
-
-    el("pom-feedback-zone").innerHTML = "";
+    // La valeur du joueur suivant apparaît ; l'index n'avance qu'avec « Continuer ».
+    state.pomRevealed = true;
+    renderPomChain(true);
     el("pom-feedback-zone").classList.add("hidden-screen");
 
     if (!isActiveCorrect) {
-      el("pom-feedback-zone").classList.remove("hidden-screen");
-      el("pom-feedback-zone").innerHTML += '<div class="feedback bad">Mauvaise réponse. 0 point pour cette carte.</div>';
       awardPoints(0);
+      showPomVerdict("bad", "Mauvaise réponse", false);
+      showPomNote("0 point sur cette carte : la cagnotte est perdue.");
+      state.pomPotential = 0;
       endCard();
       return;
     }
 
     state.pomPotential += 1;
-    var isFifth = state.pomIndex >= chain.length - 1;
-    if (isFifth) {
+    var isLast = state.pomIndex + 1 >= chain.length - 1;
+    if (isLast) {
       awardPoints(state.pomPotential);
-      el("pom-feedback-zone").classList.remove("hidden-screen");
-      el("pom-feedback-zone").innerHTML += '<div class="feedback good">5/5 ! +' + state.pomPotential + ' points encaissés automatiquement.</div>';
+      showPomVerdict("good", "5 sur 5 !", false);
+      showPomNote("+" + state.pomPotential + " points encaissés automatiquement.");
       endCard();
     } else {
-      el("pom-feedback-zone").classList.remove("hidden-screen");
-      el("pom-feedback-zone").innerHTML += '<div class="feedback good">Bonne réponse !</div>';
-      el("pom-potential-points").textContent = state.pomPotential + " point" + (state.pomPotential > 1 ? "s" : "") + " en jeu";
+      // Retour vert bref, puis la valeur révélée et la cagnotte restent visibles.
+      showPomVerdict("good", "Bonne réponse", true);
+      el("pom-potential-points").innerHTML = "Cagnotte : <b>" + state.pomPotential + " point" + (state.pomPotential > 1 ? "s" : "") + "</b>";
+      el("pom-btn-encaisser").textContent = "Encaisser " + state.pomPotential + " pt" + (state.pomPotential > 1 ? "s" : "");
       show("pom-decision-zone");
     }
   }
@@ -3456,11 +3634,17 @@
     journalStep("encaisse " + state.pomPotential);
     awardPoints(state.pomPotential);
     hide("pom-decision-zone");
-    el("pom-feedback-zone").innerHTML += '<div class="feedback good">Encaissé : +' + state.pomPotential + ' points.</div>';
+    hidePomVerdict();
+    showPomNote("Encaissé : +" + state.pomPotential + " point" + (state.pomPotential > 1 ? "s" : "") + ".");
     endCard();
   });
 
   el("pom-btn-continuer").addEventListener("click", function () {
+    // Le joueur révélé devient la nouvelle référence.
+    state.pomIndex += 1;
+    state.pomRevealed = false;
+    hidePomVerdict();
+    renderPomChain(false);
     hide("pom-decision-zone");
     show("pom-answer-zone");
     el("pom-feedback-zone").innerHTML = "";

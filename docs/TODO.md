@@ -9,7 +9,8 @@
 - ✅ Classement entre deux manches intégré d'après [UI_INTERMISSION_FLOW.md](UI_INTERMISSION_FLOW.md) : scores cumulés classés, apparition de la dernière à la première place puis lumière dorée (une fois, passable d'un appui), prochaine manche et première équipe, bouton « C'est parti ! ». Après la dernière manche, classement final direct.
 - ✅ Ouverture du Tackle intégrée d'après [UI_TACKLE_OPEN_ANIMATION.md](UI_TACKLE_OPEN_ANIMATION.md) : double sifflet bref à chaque départ de chrono, sifflet long et grand TACKLE rouge à 30 secondes (une fois, sans bloquer les appuis), bouton et chrono rouges pendant les 15 secondes.
 - ⏳ Écouter l'essai réel de sifflet de départ (`kickoff-whistle-real-candidate.wav`) et décider s'il remplace le signal actuel.
-- ⏳ Maquettes des écrans de jeu : premières planches de Plus ou Moins (comparaison et bonne réponse) dans [UI_PLUS_MOINS_FLOW.md](UI_PLUS_MOINS_FLOW.md), à valider et intégrer ; compléter ses autres états puis préparer Vrai ou Faux, Qui suis-je ? et Le Match.
+- ✅ Écran de jeu Plus ou Moins intégré d'après [UI_PLUS_MOINS_FLOW.md](UI_PLUS_MOINS_FLOW.md) : duel bleu/corail, valeur cachée puis révélée, grands boutons PLUS/MOINS, « Bonne réponse » bref puis cagnotte avec ENCAISSER / CONTINUER.
+- ⏳ Maquettes des écrans de jeu de Vrai ou Faux, Qui suis-je ? et Le Match, puis intégration.
 - ✅ Transfert : révélation chronologique, tentative ou passe, pénalité de −1, points dégressifs, carte à club unique, porteur de téléphone désigné, confirmation de la réponse saisie. Implémenté dans `index.html`.
 - ✅ Lot de 112 cartes dans `src/data/transfert-cards.json`, dont **100 vérifiées** (chargées en jeu) et **12 encore à vérifier** (exclues du jeu tant qu'elles ne le sont pas).
 - ⏳ Une vraie partie test à consigner ensuite dans `PLAYTESTS.md`.

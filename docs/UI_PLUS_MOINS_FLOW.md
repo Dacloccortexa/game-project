@@ -1,5 +1,7 @@
 # Plus ou Moins — première comparaison et bonne réponse
 
+Statut : **intégré dans `index.html`** (2026-09-29), à vérifier sur un vrai téléphone. Les états non dessinés suivent la même composition : mauvaise réponse (bandeau rouge, valeur révélée, cagnotte perdue), Tackle réussi ou raté, temps écoulé et 5 sur 5. Les silhouettes et barres sont dessinées en code, sans image de joueur.
+
 Références visuelles pour le défi Plus ou Moins, dans l'ambiance stade de TACKLE. Les règles et les autres états restent définis par [GAME_DESIGN.md](GAME_DESIGN.md).
 
 | État | Planche |
