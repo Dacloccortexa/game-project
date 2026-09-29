@@ -1,0 +1,9 @@
+# Le Match — identité « tableau d'affichage »
+
+La [planche de l'événement 3](ui/26-le-match-evenement-3.jpg) est la référence visuelle validée. Le [pack séparé](../assets/ui/le-match/README.md) fournit le tableau, la plaque de titre et les rangées ; son [aperçu assemblé](../assets/ui/le-match/preview.html) montre les cinq paliers.
+
+Le défi est présenté comme un tableau d'affichage de stade bleu nuit. Il affiche **la compétition seule** et `? VS ?`, sans année, édition, score, blason ou drapeau. Une frise verticale raconte ensuite le match : les événements passés restent visibles, l'événement courant est éclairé avec sa minute et sa valeur, les suivants restent cachés. Les cinq événements sont rangés **dans l'ordre chronologique du match**, jamais selon leur difficulté. Les points descendent de 5 à 1 au fil de cette chronologie.
+
+La maquette montre un exemple au troisième événement : 23′, 36′, puis 80′ pour 3 points. Ces faits ne sont qu'une composition visuelle ; l'application utilise les fiches vérifiées de `src/data/lematch-cards.json` et leur ordre réel. Les événements peuvent être des buts, penalties, cartons ou autres faits sourcés ; une icône doit correspondre au type de fait, sans dévoiler les équipes.
+
+L'en-tête, les scores de toutes les équipes, le chrono, le bouton Tackle, les commandes de réponse et le verdict gardent les composants **communs aux cinq défis**. La carte centrale change seule. Une bonne réponse de l'équipe active trouve les deux équipes et gagne le palier ; une mauvaise réponse retire 1 point, puis passe au prochain événement ; PASSER ne pénalise pas. Si le Tackle adverse réussit ou échoue, il vaut ± le palier en cours et termine la carte. Au bout des cinq événements sans réussite, révéler les deux équipes. Les règles complètes figurent dans [`GAME_DESIGN.md`](GAME_DESIGN.md).

@@ -1,0 +1,29 @@
+/* Habillage de la carte Le Match seulement. En-tête, scores, chrono, Tackle et verdict restent communs. */
+.lm-board{box-sizing:border-box;width:100%;max-width:430px;min-height:615px;margin:auto;padding:30px 28px 25px;background:#061326 url("scoreboard-background.jpg") center/100% 100% no-repeat;color:#f6f8fb;font-family:Arial,Helvetica,sans-serif;text-align:center}
+.lm-title{display:grid;place-items:center;min-height:72px;margin:0 11% 7px;background:url("title-plate.svg") center/100% 100% no-repeat;font:900 clamp(31px,9vw,46px) Impact,"Arial Black",sans-serif;line-height:1;letter-spacing:.035em;text-shadow:0 2px 7px #000}
+.lm-competition{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 5px;color:#e6eaf0;font:900 clamp(13px,3.7vw,18px) Impact,"Arial Narrow",sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.lm-competition::before,.lm-competition::after{content:"";width:14%;height:2px;background:#f3bd55}
+.lm-unknown{display:flex;justify-content:center;align-items:center;gap:20px;height:105px;margin:0 0 9px;color:#fff;font:900 80px Impact,"Arial Black",sans-serif;line-height:1;text-shadow:0 0 16px #6ebdff}
+.lm-unknown span{font-size:30px;color:#e8edf2;text-shadow:0 2px 6px #000}
+.lm-timeline{list-style:none;display:flex;flex-direction:column;gap:7px;margin:0 0 14px;padding:0}
+.lm-event{display:grid;grid-template-columns:40px 17px minmax(0,1fr);align-items:center;gap:4px;min-height:55px;text-align:left}
+.lm-minute{color:#ffca61;font:900 clamp(15px,4.3vw,21px) Impact,"Arial Narrow",sans-serif;text-align:right;white-space:nowrap}
+.lm-event--locked .lm-minute{color:#788797}
+.lm-node{position:relative;width:13px;height:13px;border:2px solid #f0bb5c;border-radius:50%;background:#071627;box-shadow:0 0 0 2px #071627}
+.lm-event:not(:last-child) .lm-node::after{content:"";position:absolute;top:15px;left:5px;width:3px;height:43px;background:#e7ba65}
+.lm-event--current .lm-node{background:#fff2b6;box-shadow:0 0 9px #ffdc78}
+.lm-event--locked .lm-node{border-color:#6b7b8d}
+.lm-event--locked .lm-node::after{background:#536375}
+.lm-row{box-sizing:border-box;display:flex;align-items:center;gap:7px;min-width:0;min-height:55px;padding:5px 10px;background:center/100% 100% no-repeat}
+.lm-event--past .lm-row{background-image:url("event-past.svg");color:#bdc9d3}
+.lm-event--current .lm-row{background-image:url("event-current.svg");color:#fff}
+.lm-event--locked .lm-row{background-image:url("event-locked.svg");color:#7e8d9d;padding-left:35px}
+.lm-event-icon{width:22px;height:22px;flex:none;opacity:.85}
+.lm-event-label{min-width:0;flex:1;font:900 clamp(12px,3.2vw,16px) Impact,"Arial Narrow",sans-serif;line-height:1.08;overflow-wrap:anywhere}
+.lm-points{flex:none;width:40px;text-align:center;color:#ffdf8a;font:900 13px Impact,"Arial Narrow",sans-serif;white-space:nowrap}
+.lm-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.lm-actions button{min-height:55px;border-radius:8px;color:#fff;font:900 clamp(16px,4.7vw,22px) Impact,"Arial Narrow",sans-serif;cursor:pointer}
+.lm-answer{border:2px solid #22ebaf;background:linear-gradient(135deg,#077c55,#04472f);box-shadow:0 0 10px #0de59b7c}
+.lm-pass{border:2px solid #e7c46c;background:linear-gradient(135deg,#292d2e,#151b20)}
+.lm-actions button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+@media(max-width:360px){.lm-board{min-height:590px;padding:27px 22px 21px}.lm-unknown{height:90px}.lm-event{min-height:52px;grid-template-columns:36px 15px minmax(0,1fr)}.lm-row{min-height:52px;padding-inline:7px}.lm-event-icon{width:18px;height:18px}.lm-points{width:37px;font-size:12px}}

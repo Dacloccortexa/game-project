@@ -63,3 +63,7 @@ Le [dossier `vrai-ou-faux/`](vrai-ou-faux/README.md) fournit le fond de stade, l
 ## Qui suis-je ? : pack « tableau tactique »
 
 Le [dossier `qui-suis-je/`](qui-suis-je/README.md) contient le tableau vide, les fiches d'indices séparées, la plaque mystère et un [aperçu des cinq paliers](qui-suis-je/preview.html). La [planche d'indice 3](../../docs/ui/25-qui-suis-je-indice-3.jpg) reste la référence visuelle.
+
+## Le Match : pack « tableau d'affichage »
+
+Le [dossier `le-match/`](le-match/README.md) contient le tableau de stade vide, la plaque de titre, les rangées de la chronologie et un [aperçu des cinq événements](le-match/preview.html). La [planche de l'événement 3](../../docs/ui/26-le-match-evenement-3.jpg) reste la référence visuelle.
