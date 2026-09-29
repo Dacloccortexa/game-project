@@ -1501,7 +1501,6 @@
   }
 
   /* Journal de partie */
-  .journal-box { display: flex; flex-direction: column; gap: 8px; margin-top: 18px; }
   .journal-note { margin: 0; text-align: center; font-size: 13px; line-height: 1.45; color: var(--chalk-dim); }
   .journal-note:empty { display: none; }
   .journal-link-box { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 14px; }
@@ -1944,11 +1943,6 @@
     <p class="subtitle" id="final-subtitle"></p>
     <div class="podium" id="podium"></div>
     <button class="primary" id="btn-rematch">Revanche</button>
-    <div class="journal-box">
-      <button type="button" class="tr-btn-secondary" id="btn-share-journal">Envoyer le journal de la partie</button>
-      <p class="journal-note" id="journal-status" role="status" aria-live="polite"></p>
-      <p class="journal-note">Le journal (défis, réponses, Tackles, temps) reste sur ce téléphone. Il n'est envoyé que si vous appuyez sur ce bouton.</p>
-    </div>
   </section>
 
 </div>
@@ -2228,7 +2222,7 @@
   // Tout reste sur le téléphone ; rien n'est envoyé sans un appui sur « Envoyer le journal ».
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   var JOURNAL_KEY = "tackle-journal-v1";
-  var JOURNAL_KEEP = 10;
+  var JOURNAL_KEEP = 20;
   var GAME_LABELS = { transfert: "Transfert", plusoumoins: "Plus ou Moins", vraifaux: "Vrai ou Faux", quisuisje: "Qui suis-je ?", lematch: "Le Match" };
 
   function journalLoadAll() {
@@ -4351,7 +4345,6 @@
     hide("screen-play");
     show("screen-final");
     journalFinish("terminée");
-    el("journal-status").textContent = "";
 
     var sorted = state.teams.slice().sort(function (a, b) { return b.score - a.score; });
     var medals = ["🥇", "🥈", "🥉"];
@@ -4380,11 +4373,6 @@
     });
   }
 
-  el("btn-share-journal").addEventListener("click", function () {
-    if (!state.journal) return;
-    shareJournalText(journalToText(state.journal), el("journal-status"));
-  });
-
   // Sur « Créer une partie » : envoyer les dernières parties gardées sur le téléphone
   // (utile après une partie abandonnée).
   function refreshJournalLink() {
@@ -4393,7 +4381,7 @@
     el("btn-share-journals").classList.toggle("hidden-screen", n === 0);
   }
   el("btn-share-journals").addEventListener("click", function () {
-    var all = journalLoadAll().slice(-5);
+    var all = journalLoadAll();
     if (!all.length) return;
     shareJournalText(all.map(journalToText).join("\n\n————————————\n\n"), el("journals-status"));
   });
