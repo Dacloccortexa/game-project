@@ -1615,6 +1615,69 @@
   #screen-play .card-stage { padding-bottom: 38px; }
   .pom-duel { padding-bottom: 40px !important; }
 
+  /* ---------- Transfert : identité « mercato » (assets/ui/mercato/) ---------- */
+  .mercato-card {
+    --mercato-orange: #ff8a12;
+    --mercato-cream: #fff4dc;
+    position: relative; isolation: isolate; overflow: hidden;
+    border: 2px solid var(--mercato-orange); border-radius: 20px;
+    background: #08100e url("assets/ui/web/mercato-background.webp") center / cover no-repeat;
+    color: var(--mercato-cream);
+    box-shadow: 0 0 0 1px rgba(255,173,74,.31), 0 0 24px rgba(255,100,0,.22);
+    padding: 8px 12px 34px;
+  }
+  .mercato-card::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(90deg, rgba(9,17,12,.14), rgba(8,14,15,.85) 63%), linear-gradient(0deg, rgba(5,11,9,.72), transparent 60%);
+  }
+  .mercato-heading {
+    display: grid; place-items: center;
+    min-height: 50px; margin: 0 -4px 0;
+    background: url("assets/ui/mercato/transfer-banner.svg") center / 100% 100% no-repeat;
+    transform: rotate(-2deg);
+  }
+  .mercato-heading span {
+    display: block; margin-right: 7%;
+    transform: skewX(-10deg);
+    font-family: var(--font-cond); font-weight: 700; font-style: italic;
+    font-size: clamp(28px, 8.8vw, 38px); letter-spacing: .03em; line-height: 1; text-transform: uppercase;
+    color: #fff9e8; text-shadow: 0 3px 0 #ae4a00, 0 0 12px #ff8526;
+  }
+  .mercato-subtitle { margin: 0 0 4px; text-align: center; font-size: 13px; color: #e4d8c6; }
+  .mercato-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0 2px 6px; color: #ff9e32; font-weight: 800; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+  .mercato-points { color: #10211a; background: #ffd36c; border-radius: 999px; padding: 4px 12px; letter-spacing: 0; white-space: nowrap; font-family: var(--font-cond); font-weight: 700; font-size: 17px; }
+  .mercato-body { display: grid; grid-template-columns: minmax(80px, .62fr) minmax(0, 1.38fr); gap: 4px; align-items: start; min-height: 196px; }
+  .mercato-player-wrap { position: relative; align-self: stretch; display: flex; align-items: flex-end; overflow: hidden; }
+  .mercato-player { display: block; width: 150%; max-width: none; height: auto; margin-left: -27%; max-height: 200px; object-fit: contain; object-position: bottom; filter: drop-shadow(0 0 18px rgba(255,138,18,.27)); }
+  /* Seuls les clubs déjà révélés sont affichés, du haut vers le bas : les précédents ne bougent pas. */
+  .mercato-clubs { list-style: none; display: flex; flex-direction: column; justify-content: flex-start; gap: 5px; margin: 0; padding: 2px 0 0 18px; min-width: 0; }
+  .mercato-club {
+    position: relative; min-height: 36px;
+    display: grid; grid-template-columns: 17% minmax(0, 1fr); align-items: center;
+    background: url("assets/ui/mercato/club-ticket.svg") center / 100% 100% no-repeat;
+    padding: 2px 22px 2px 0;
+  }
+  .mercato-club.is-current { background-image: url("assets/ui/mercato/club-ticket-active.svg"); }
+  .mercato-club:not(:last-child)::after {
+    content: ""; position: absolute; z-index: 2; width: 18px; height: 20px; left: -18px; bottom: -14px;
+    background: url("assets/ui/mercato/route-connector.svg") center / contain no-repeat;
+  }
+  .mercato-club-number { text-align: center; color: #101618; font-family: var(--font-cond); font-weight: 700; font-size: 18px; }
+  .mercato-club-label { min-width: 0; padding-left: 6px; }
+  .mercato-club-name { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 800; font-size: clamp(12px, 3.7vw, 15px); line-height: 1.15; text-transform: uppercase; color: #fff9ee; }
+  .mercato-club-years { display: block; font-size: 11px; line-height: 1.2; color: #e0ddd4; margin-top: 0; font-variant-numeric: tabular-nums; }
+  .mercato-club.is-current .mercato-club-years { color: #ffd06b; }
+  .mercato-club.is-current.new { animation: mercato-in .45s ease-out 1; }
+  @keyframes mercato-in { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
+  @media (max-width: 360px) {
+    .mercato-card { padding-inline: 8px; }
+    .mercato-body { grid-template-columns: 30% 70%; }
+    .mercato-player { width: 190%; margin-left: -52%; }
+    .mercato-club { padding-right: 14px; }
+    .mercato-club-years { font-size: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .mercato-club.is-current.new { animation: none; } }
+
 </style>
 </head>
 <body class="setup-flow">
@@ -1769,13 +1832,20 @@
     </div>
 
     <!-- Transfert -->
-    <div class="tr-card" id="stage-transfert">
-      <div class="tr-head">
-        <span class="tr-step" id="clue-step">Indice 1 / 5</span>
-        <span class="tr-pts" id="clue-points">5 pts</span>
+    <!-- Transfert : identité « mercato » (assets/ui/mercato/README.md) -->
+    <div class="mercato-card" id="stage-transfert">
+      <h3 class="mercato-heading"><span>Transfert</span></h3>
+      <p class="mercato-subtitle">Extrait de carrière · devine le joueur</p>
+      <div class="mercato-meta">
+        <span id="clue-step">Indice 1 / 5</span>
+        <span class="mercato-points" id="clue-points">5 pts</span>
       </div>
-      <div class="tr-kicker">Carrière révélée</div>
-      <ol class="tr-clues" id="clue-list"></ol>
+      <div class="mercato-body">
+        <div class="mercato-player-wrap" aria-hidden="true">
+          <img class="mercato-player" src="assets/ui/web/mystery-player.webp" width="370" height="418" alt="">
+        </div>
+        <ol class="mercato-clubs" id="clue-list" aria-label="Clubs révélés"></ol>
+      </div>
     </div>
 
     <div id="feedback-zone"></div>
@@ -3110,7 +3180,7 @@
     el("minigame-name").textContent = minigameLabel;
     el("minigame-subtitle").textContent = MINIGAME_SUBTITLES[minigameLabel] || "";
     // Plus ou Moins porte son propre titre dans la carte.
-    el("screen-play").classList.toggle("no-title", minigameLabel === "Plus ou Moins");
+    el("screen-play").classList.toggle("no-title", minigameLabel === "Plus ou Moins" || minigameLabel === "Transfert");
     hide("next-card-zone");
     renderScoreboard();
   }
@@ -4113,20 +4183,29 @@
     var list = el("clue-list");
     list.innerHTML = "";
     var total = card.career.length;
-    for (var i = 0; i < Math.min(state.revealedCount, total); i++) {
+    var shown = Math.min(state.revealedCount, total);
+    for (var i = 0; i < shown; i++) {
       var row = document.createElement("li");
-      row.className = "tr-clue" + (i === state.revealedCount - 1 ? " current" : "");
+      var isCurrent = i === shown - 1;
+      row.className = "mercato-club" + (isCurrent ? " is-current" + (shown > 1 ? " new" : "") : "");
+      var num = document.createElement("span");
+      num.className = "mercato-club-number";
+      num.textContent = i + 1;
+      var label = document.createElement("span");
+      label.className = "mercato-club-label";
       var club = document.createElement("span");
-      club.className = "tr-club";
-      club.textContent = (i + 1) + " " + card.career[i].club;
+      club.className = "mercato-club-name";
+      club.textContent = card.career[i].club;
       var years = document.createElement("span");
-      years.className = "tr-years";
+      years.className = "mercato-club-years";
       years.textContent = card.career[i].years;
-      row.appendChild(club);
-      row.appendChild(years);
+      label.appendChild(club);
+      label.appendChild(years);
+      row.appendChild(num);
+      row.appendChild(label);
       list.appendChild(row);
     }
-    el("clue-step").textContent = "Indice " + Math.min(state.revealedCount, total) + " / " + total;
+    el("clue-step").textContent = "Indice " + shown + " / " + total;
     el("clue-points").textContent = pointsLabel(transfertPoints());
   }
 

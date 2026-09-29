@@ -1,5 +1,7 @@
 # Transfert : pack graphique « mercato »
 
+Statut : **intégré dans `index.html`** (2026-09-29). Le jeu charge des copies allégées de la silhouette et du fond (`assets/ui/web/mystery-player.webp`, `assets/ui/web/mercato-background.webp`) ; les SVG sont utilisés tels quels. Les verdicts restent le bandeau commun aux cinq défis.
+
 Ces éléments séparés servent à intégrer l'identité visuelle de **Transfert**. Les [planches de référence](../../../docs/UI_TRANSFERT_FLOW.md) montrent la composition et les états attendus ; [`preview.html`](preview.html) montre comment assembler les pièces. L'aperçu est un exemple visuel, pas une carte à ajouter au jeu.
 
 | Fichier | Rôle |
