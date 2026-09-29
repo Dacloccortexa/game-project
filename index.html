@@ -1104,6 +1104,292 @@
   .podium-row .team-badge { width: 44px; height: 44px; border-width: 3px; }
   .podium-row .p-name { overflow-wrap: anywhere; }
 
+  /* ---------- Écrans de jeu : cadre commun + Transfert (docs/UI_TRANSFERT_FLOW.md) ---------- */
+  .hidden-screen { display: none !important; }
+  #screen-play:not(.hidden-screen) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 92px;
+  }
+  /* Ordre visuel : en-tête, carte du défi, chrono, retours, actions. */
+  #screen-play > * { order: 3; }
+  #screen-play > .play-top, #screen-play > .play-brand, #screen-play > #scoreboard,
+  #screen-play > .play-title, #screen-play > .play-subtitle { order: 0; }
+  #screen-play > [id^="stage-"] { order: 1; }
+  #screen-play > #turn-clock { order: 2; }
+  #screen-play > [id$="feedback-zone"] { order: 2; }
+  #screen-play > #next-card-zone { order: 4; }
+
+  .play-top { position: absolute; top: -22px; left: -8px; z-index: 2; }
+  .quit-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    min-height: 44px; padding: 0 8px;
+    border: none; background: none;
+    color: var(--chalk);
+    font-family: var(--font-cond); font-weight: 600; font-size: 15px;
+    letter-spacing: .06em; text-transform: uppercase;
+    cursor: pointer;
+  }
+  .play-brand { display: flex; flex-direction: column; align-items: center; margin-top: -14px; }
+  .play-brand img { width: min(40vw, 150px); height: auto; aspect-ratio: 2 / 1; filter: drop-shadow(0 6px 12px rgba(0,0,0,.55)); }
+  .play-round {
+    margin-top: -6px;
+    font-family: var(--font-cond); font-weight: 600; font-size: 14px;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--chalk);
+  }
+
+  #scoreboard.scoreboard {
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+    gap: 8px;
+    margin: 0;
+  }
+  #scoreboard .score-chip {
+    display: flex; flex-direction: column; justify-content: center; gap: 2px;
+    min-width: 0; min-height: 62px;
+    padding: 7px 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(248,246,237,.2);
+    background: rgba(3,17,12,.78);
+    text-align: left;
+    box-shadow: none;
+  }
+  #scoreboard .score-chip::before { content: none; }
+  #scoreboard .score-chip.active {
+    border: 2px solid var(--gold-ring);
+    background: rgba(23,56,38,.92);
+    box-shadow: 0 0 14px rgba(242,191,84,.25);
+  }
+  #scoreboard .chip-head { display: flex; align-items: center; justify-content: flex-start; gap: 6px; min-width: 0; }
+  #scoreboard .chip-names { display: flex; flex-direction: column; min-width: 0; }
+  #scoreboard .chip-kicker { white-space: nowrap; font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+  #scoreboard .name {
+    font-family: var(--font-cond); font-weight: 600; font-size: 14px; letter-spacing: .01em;
+    text-transform: uppercase; color: var(--chalk);
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  #scoreboard .score { font-family: var(--font-cond); font-weight: 700; font-size: 23px; line-height: 1; color: var(--chalk); padding-left: 2px; }
+  #scoreboard .score small { font-size: 11px; font-weight: 600; margin-left: 3px; color: var(--chalk-dim); }
+  #scoreboard .score.negative { color: #ff8a80; }
+  #scoreboard .team-badge { width: 24px; height: 24px; border-width: 2px; }
+  /* Quatre équipes : deux lignes compactes. */
+  #scoreboard.four .score-chip { flex-direction: row; align-items: center; min-height: 44px; padding: 6px 10px; }
+  #scoreboard.four .chip-head { flex: 1; }
+  #scoreboard.four .chip-kicker { display: none; }
+  #scoreboard.four .score { font-size: 20px; }
+  #scoreboard.four .score small { display: none; }
+
+  .play-title {
+    display: flex; align-items: center; gap: 14px;
+    margin: 4px 0 0;
+    font-family: var(--font-cond); font-weight: 700; font-style: normal;
+    font-size: 26px; letter-spacing: .04em; line-height: 1.05;
+    text-transform: uppercase; color: var(--chalk);
+    text-shadow: 0 2px 10px rgba(0,0,0,.7);
+  }
+  .play-title::before, .play-title::after { content: ""; flex: 1; height: 1.5px; background: rgba(248,246,237,.5); }
+  .play-subtitle { margin: -8px 0 0; text-align: center; font-size: 14px; color: var(--chalk-dim); }
+  .play-subtitle:empty { display: none; }
+
+  .turn-clock {
+    display: flex; align-items: center; gap: 12px;
+    min-height: 44px; padding: 0 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(248,246,237,.2);
+    background: rgba(3,17,12,.78);
+    color: var(--chalk);
+  }
+  .turn-clock-label { flex: 1; font-weight: 600; font-size: 16px; }
+  .turn-clock-time { font-family: var(--font-cond); font-weight: 700; font-size: 20px; color: var(--gold); font-variant-numeric: tabular-nums; }
+  .turn-clock.open { border-color: rgba(255,120,100,.7); }
+  .turn-clock.open .turn-clock-time { color: #ff8a70; }
+
+  /* Carte Transfert */
+  .tr-card {
+    position: relative;
+    padding: 12px 14px 14px;
+    border-radius: 20px;
+    border: 2px solid var(--gold-ring);
+    background: linear-gradient(160deg, rgba(20,64,42,.95), rgba(5,30,20,.95));
+    box-shadow: 0 0 20px rgba(242,191,84,.18), 0 14px 30px rgba(0,0,0,.35);
+    overflow: hidden;
+  }
+  .tr-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; border-bottom: 1px solid rgba(248,246,237,.18); }
+  .tr-step { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+  .tr-pts {
+    padding: 5px 13px; border-radius: 999px;
+    background: linear-gradient(180deg, #ffe08e, #eab44a); color: #231603;
+    font-family: var(--font-cond); font-weight: 700; font-size: 18px; text-transform: uppercase;
+  }
+  .tr-kicker { margin: 10px 0 6px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--chalk-dim); }
+  .tr-clues { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; min-height: calc(5 * 38px + 4 * 6px); }
+  .tr-clue {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    min-height: 38px; padding: 0 12px;
+    border-radius: 9px;
+    border: 1px solid rgba(248,246,237,.16);
+    background: rgba(3,17,12,.45);
+  }
+  .tr-clue.current { border: 2px solid var(--gold-ring); background: rgba(40,80,50,.55); }
+  .tr-club { font-weight: 700; font-size: 16px; text-transform: uppercase; color: var(--chalk); overflow-wrap: anywhere; }
+  .tr-years { flex-shrink: 0; font-size: 13px; font-weight: 600; color: var(--chalk-dim); font-variant-numeric: tabular-nums; }
+  .tr-clue.current .tr-years { color: var(--gold); }
+
+  /* Résultat par-dessus la carte : flash joué une fois, écart de points, score mis à jour. */
+  .tr-result {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+    padding: 20px; text-align: center;
+    border-radius: 18px;
+    background: rgba(5,32,22,.97);
+    border: 2px solid var(--gold-ring);
+    overflow: hidden;
+  }
+  .tr-result.bad { background: rgba(38,22,18,.97); border-color: #f07a6e; }
+  .tr-result::before {
+    content: ""; position: absolute; inset: -40% -60%;
+    background: repeating-linear-gradient(-28deg, transparent 0 46px, rgba(242,199,90,.55) 46px 64px);
+    transform: translateX(-110%);
+    animation: tr-flash .7s ease-out 1 forwards;
+    pointer-events: none;
+  }
+  .tr-result.bad::before { background: repeating-linear-gradient(-28deg, transparent 0 46px, rgba(240,110,95,.55) 46px 64px); }
+  @keyframes tr-flash { 0% { transform: translateX(-110%); opacity: 1; } 100% { transform: translateX(110%); opacity: 0; } }
+  .tr-result > * { position: relative; animation: tr-pop .35s ease-out .25s both; }
+  @keyframes tr-pop { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: none; } }
+  .tr-result-icon { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 50%; border: 3px solid #6fd08c; color: #6fd08c; }
+  .tr-result.bad .tr-result-icon { border-color: #f07a6e; color: #f07a6e; }
+  .tr-result-title { font-family: var(--font-cond); font-weight: 700; font-size: 26px; text-transform: uppercase; color: var(--chalk); }
+  .tr-result-delta { font-family: var(--font-cond); font-weight: 700; font-size: 34px; color: var(--gold); line-height: 1; }
+  .tr-result.bad .tr-result-delta { color: #ff8a80; }
+  .tr-result-line { font-size: 15px; color: var(--chalk); }
+  .tr-result-line.strong { font-weight: 700; font-size: 17px; }
+  .tr-result-line.dim { font-size: 13px; color: var(--chalk-dim); }
+  @media (prefers-reduced-motion: reduce) {
+    .tr-result::before { animation: none; display: none; }
+    .tr-result > * { animation: none; }
+  }
+
+  /* Boutons et panneaux (réponse, confirmation, Tackle) */
+  .tr-zone { display: flex; flex-direction: column; gap: 10px; }
+  .tr-actions { display: flex; flex-direction: column; gap: 8px; }
+  .tr-btn-primary, .tr-btn-secondary {
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; min-height: 54px; margin: 0; padding: 0 12px;
+    border-radius: 14px;
+    font-family: var(--font-cond); font-weight: 700; font-size: 22px;
+    letter-spacing: .04em; text-transform: uppercase;
+    cursor: pointer;
+  }
+  .tr-btn-primary {
+    border: none;
+    background: linear-gradient(180deg, #ffe08e, #f0bd4f 45%, #c98e2a);
+    color: #231603;
+    box-shadow: 0 4px 0 #8c5a17, 0 10px 20px rgba(0,0,0,.35);
+  }
+  .tr-btn-primary:active { transform: translateY(2px); box-shadow: 0 2px 0 #8c5a17; }
+  .tr-btn-secondary {
+    min-height: 48px; font-size: 19px;
+    border: 1.5px solid rgba(248,246,237,.35);
+    background: rgba(3,17,12,.8);
+    color: var(--chalk);
+  }
+  .tr-panel {
+    display: flex; flex-direction: column; gap: 10px;
+    padding: 16px;
+    border-radius: 18px;
+    border: 2px solid var(--gold-ring);
+    background: rgba(3,20,13,.94);
+  }
+  .tr-panel-title { margin: 0; text-align: center; font-family: var(--font-cond); font-weight: 700; font-size: 24px; text-transform: uppercase; color: var(--gold); }
+  .tr-panel-sub { margin: -6px 0 2px; text-align: center; font-size: 13px; color: var(--chalk-dim); }
+  .tr-label { margin: 0; font-weight: 700; font-size: 16px; color: var(--chalk); }
+  .tr-field { display: flex; flex-direction: column; gap: 6px; }
+  .tr-panel input.tr-input {
+    width: 100%; min-height: 52px; padding: 0 14px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(248,246,237,.4);
+    background: rgba(3,17,12,.8);
+    color: var(--chalk); font-size: 17px; font-weight: 500;
+  }
+  .tr-typed {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 70px; padding: 8px 14px;
+    border-radius: 14px; border: 2px solid var(--gold-ring);
+    background: rgba(20,60,40,.7);
+    font-size: 22px; font-weight: 700; color: var(--chalk); text-align: center; overflow-wrap: anywhere;
+  }
+  .tr-confirm-actions { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 8px; }
+  .tr-confirm-actions .tr-btn-primary, .tr-confirm-actions .tr-btn-secondary { min-height: 54px; font-size: 18px; }
+  #tackle-binary-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tr-panel-note { margin: 0; text-align: center; font-size: 13px; line-height: 1.45; color: var(--chalk-dim); }
+  .tr-panel-note.gold { font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: var(--gold); }
+  .tr-panel .text-btn { align-self: center; }
+
+  .tackle-team-list { display: flex; flex-direction: column; gap: 8px; }
+  .tackle-team-btn {
+    display: flex; align-items: center; gap: 14px;
+    min-height: 62px; padding: 0 16px 0 10px;
+    border-radius: 14px;
+    border: 1.5px solid rgba(248,246,237,.35);
+    background: rgba(20,55,38,.85);
+    color: var(--chalk); font-size: 19px; font-weight: 600; text-align: left;
+    cursor: pointer;
+  }
+  .tackle-team-btn .team-badge { width: 44px; height: 44px; }
+  .tackle-team-btn .tt-name { flex: 1; }
+  .tackle-who {
+    display: flex; align-items: center; gap: 12px;
+    margin: -16px -16px 4px; padding: 12px 16px;
+    border-bottom: 1px solid rgba(248,246,237,.15);
+    background: rgba(20,55,38,.85);
+    border-radius: 16px 16px 0 0;
+  }
+  .tackle-who .team-badge { width: 46px; height: 46px; }
+  .tackle-who-text { flex: 1; min-width: 0; }
+  .tackle-who-kicker { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); }
+  .tackle-who-name { font-size: 20px; font-weight: 700; color: var(--chalk); overflow-wrap: anywhere; }
+  .tackle-who-stake { font-weight: 700; color: var(--gold); white-space: nowrap; }
+
+  /* Bouton Tackle, toujours en bas de l'écran */
+  #btn-tackle {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+    min-height: 58px; padding: 5px 12px;
+    border-radius: 14px;
+    border: 2px solid rgba(255,255,255,.4);
+    background: linear-gradient(180deg, #ea554d, #b9302f);
+    color: #fff;
+    box-shadow: 0 6px 0 rgba(82,16,16,.75), 0 14px 28px rgba(0,0,0,.35);
+    text-transform: none; letter-spacing: 0;
+  }
+  #btn-tackle:disabled {
+    background: rgba(70,82,76,.94);
+    border-color: rgba(255,255,255,.18) !important;
+    color: rgba(248,246,237,.72) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,.3);
+  }
+  #btn-tackle .tk-main { font-family: var(--font-cond); font-weight: 700; font-size: 22px; letter-spacing: .06em; text-transform: uppercase; }
+  #btn-tackle .tk-sub { font-size: 12.5px; font-weight: 500; }
+
+  #next-card-zone .tr-btn-primary { margin-top: 2px; }
+  #feedback-zone:empty { display: none; }
+
+  .quit-dialog {
+    position: fixed; inset: 0; z-index: 50;
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    background: rgba(0,0,0,.6);
+  }
+  .quit-box {
+    width: min(360px, 100%);
+    display: flex; flex-direction: column; gap: 12px;
+    padding: 20px 16px 16px;
+    border-radius: 18px; border: 2px solid var(--gold-ring);
+    background: #06170f;
+  }
+
 </style>
 </head>
 <body class="setup-flow">
@@ -1232,41 +1518,62 @@
 
   <!-- SCREEN: PLAY -->
   <section id="screen-play" class="hidden-screen">
-    <div class="round-banner">
-      <span class="round-count" id="round-count">Manche 1/10</span>
-      <span class="minigame-name" id="minigame-name">Transfert</span>
+    <!-- Cadre commun à tous les défis (docs/UI_TRANSFERT_FLOW.md) -->
+    <div class="play-top">
+      <button type="button" class="quit-btn" id="btn-quit">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        Quitter
+      </button>
+    </div>
+    <div class="play-brand">
+      <img src="assets/ui/web/tackle-logo-brush.webp" width="190" height="95" alt="TACKLE">
+      <div class="play-round" id="round-count">Manche 01 / 10</div>
+    </div>
+    <div class="scoreboard" id="scoreboard" role="list" aria-label="Scores des équipes"></div>
+    <h2 class="play-title" id="minigame-name">Transfert</h2>
+    <p class="play-subtitle" id="minigame-subtitle"></p>
+
+    <div class="turn-clock hidden-screen" id="turn-clock">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <span class="turn-clock-label" id="turn-clock-label">Priorité</span>
+      <span class="turn-clock-time" id="turn-clock-time" aria-hidden="true">00:30</span>
     </div>
 
-    <div class="turn-info">
-      <div class="active-team" id="active-team-name">ÉQUIPE A</div>
-      <div class="holder-note" id="holder-note">Équipe B tient le téléphone</div>
-    </div>
-
-    <div class="card-stage" id="stage-transfert">
-      <div class="clue-points" id="clue-points">Cet indice vaut 5 points</div>
-      <div class="clue-list" id="clue-list"></div>
+    <!-- Transfert -->
+    <div class="tr-card" id="stage-transfert">
+      <div class="tr-head">
+        <span class="tr-step" id="clue-step">Indice 1 / 5</span>
+        <span class="tr-pts" id="clue-points">5 pts</span>
+      </div>
+      <div class="tr-kicker">Carrière révélée</div>
+      <ol class="tr-clues" id="clue-list"></ol>
+      <div class="tr-result hidden-screen" id="tr-result" role="status" aria-live="polite"></div>
     </div>
 
     <div id="feedback-zone"></div>
 
-    <div id="answer-zone">
-      <div class="answer-btns">
-        <button class="btn-pass" id="btn-pass">Passer</button>
-        <button class="btn-answer" id="btn-answer">Répondre</button>
+    <div id="answer-zone" class="tr-zone">
+      <div class="tr-actions" id="tr-actions">
+        <button type="button" class="tr-btn-primary" id="btn-answer">Répondre</button>
+        <button type="button" class="tr-btn-secondary" id="btn-pass">Passer l'indice</button>
       </div>
-      <div class="confirm-box hidden-screen" id="type-box">
-        <div class="field">
-          <label>Nom du joueur</label>
-          <input type="text" id="answer-input" placeholder="Tape le nom ici" autocomplete="off">
-        </div>
-        <button class="primary" id="btn-submit-answer" style="margin-top:4px;">Valider</button>
+      <div class="tr-panel hidden-screen" id="type-box">
+        <h3 class="tr-panel-title" id="type-title">Réponse</h3>
+        <p class="tr-panel-sub" id="type-sub"></p>
+        <label class="tr-label" for="answer-input">Quel est le joueur ?</label>
+        <input type="text" class="tr-input" id="answer-input" placeholder="Nom du joueur…" autocomplete="off" autocapitalize="words" enterkeyhint="done">
+        <button type="button" class="tr-btn-primary" id="btn-submit-answer">Faire confirmer</button>
+        <p class="tr-panel-note"><span id="type-stakes"></span><br>Le chrono est arrêté pendant la saisie</p>
       </div>
-      <div class="confirm-box hidden-screen" id="confirm-box">
-        <div class="typed">Tu as tapé : « <span id="typed-text"></span> »</div>
-        <div class="confirm-actions">
-          <button class="secondary" id="btn-edit-answer">Modifier</button>
-          <button class="primary" id="btn-confirm-answer">Confirmer</button>
+      <div class="tr-panel hidden-screen" id="confirm-box">
+        <h3 class="tr-panel-title" id="confirm-title">Confirmez ?</h3>
+        <p class="tr-panel-sub">Vérifiez le nom avant de l'envoyer</p>
+        <div class="tr-typed" id="typed-text"></div>
+        <div class="tr-confirm-actions">
+          <button type="button" class="tr-btn-secondary" id="btn-edit-answer">Modifier</button>
+          <button type="button" class="tr-btn-primary" id="btn-confirm-answer">Valider la réponse</button>
         </div>
+        <p class="tr-panel-note"><span id="confirm-stakes"></span><br>Le résultat apparaît seulement après validation</p>
       </div>
     </div>
 
@@ -1420,40 +1727,59 @@
     </div>
 
     <div class="hidden-screen" id="next-card-zone">
-      <button class="primary" id="btn-next-card">Suivant</button>
+      <button type="button" class="tr-btn-primary" id="btn-next-card">Suivant</button>
     </div>
 
-    <div class="scoreboard" id="scoreboard"></div>
+    <div class="tr-panel hidden-screen" id="tackle-team-picker">
+      <h3 class="tr-panel-title">Qui a tacklé ?</h3>
+      <p class="tr-panel-sub">Choisir la première équipe à l'avoir annoncé</p>
+      <div class="tackle-team-list" id="tackle-team-buttons"></div>
+      <p class="tr-panel-note gold" id="tackle-picker-stakes">Une seule équipe répond</p>
+      <p class="tr-panel-note">Le chrono est arrêté pendant ce choix</p>
+      <button type="button" class="text-btn" id="btn-tackle-cancel">Annuler, personne n'a tacklé</button>
+    </div>
 
-    <button class="secondary hidden-screen" id="btn-tackle" style="border-color: var(--red); color: var(--red); margin-top: 16px;" disabled>🚨 TACKLE · 30 s</button>
-
-    <div class="hidden-screen" id="tackle-team-picker">
-      <div class="confirm-box">
-        <div class="typed">Quelle équipe tackle ?</div>
-        <div class="choice-group" id="tackle-team-buttons"></div>
-        <button class="text-btn" id="btn-tackle-cancel">Annuler</button>
+    <div class="tr-panel hidden-screen" id="tackle-answer-zone">
+      <div class="tackle-who">
+        <span class="tackle-who-badge" id="tackle-team-badge"></span>
+        <div class="tackle-who-text">
+          <div class="tackle-who-kicker">Première équipe à tackler</div>
+          <div class="tackle-who-name" id="tackle-team-label"></div>
+        </div>
+        <span class="tackle-who-stake" id="tackle-stake"></span>
       </div>
+      <div class="tr-field" id="tackle-answer-field-1">
+        <label class="tr-label" id="tackle-answer-label-1" for="tackle-answer-input">Quel est le joueur ?</label>
+        <input type="text" class="tr-input" id="tackle-answer-input" placeholder="Nom du joueur…" autocomplete="off" autocapitalize="words" enterkeyhint="done">
+      </div>
+      <div class="tr-field hidden-screen" id="tackle-answer-field-2">
+        <label class="tr-label" for="tackle-answer-input-2">Deuxième équipe</label>
+        <input type="text" class="tr-input" id="tackle-answer-input-2" placeholder="Nom de l'équipe…" autocomplete="off">
+      </div>
+      <button type="button" class="tr-btn-primary" id="btn-tackle-submit">Valider la réponse</button>
+      <div class="tr-confirm-actions hidden-screen" id="tackle-binary-choices">
+        <button type="button" class="tr-btn-secondary" id="tackle-binary-choice-1"></button>
+        <button type="button" class="tr-btn-secondary" id="tackle-binary-choice-2"></button>
+      </div>
+      <p class="tr-panel-note"><span id="tackle-stakes-note"></span><br>Une seule tentative · la carte se termine ensuite</p>
     </div>
 
-    <div class="hidden-screen" id="tackle-answer-zone">
-      <div class="confirm-box">
-        <div class="typed" id="tackle-team-label"></div>
-        <div class="field" id="tackle-answer-field-1">
-          <label id="tackle-answer-label-1">Réponse du tackle</label>
-          <input type="text" id="tackle-answer-input" placeholder="Nom du joueur" autocomplete="off">
-        </div>
-        <div class="field hidden-screen" id="tackle-answer-field-2">
-          <label>Deuxième équipe</label>
-          <input type="text" id="tackle-answer-input-2" placeholder="Nom de l'équipe" autocomplete="off">
-        </div>
-        <button class="primary" id="btn-tackle-submit" style="margin-top:4px;">Valider le tackle</button>
-        <div class="choice-group hidden-screen" id="tackle-binary-choices">
-          <button class="choice-btn" id="tackle-binary-choice-1"></button>
-          <button class="choice-btn" id="tackle-binary-choice-2"></button>
-        </div>
-      </div>
-    </div>
+    <button type="button" class="hidden-screen" id="btn-tackle" disabled>
+      <span class="tk-main" id="tackle-main">Tackle</span>
+      <span class="tk-sub" id="tackle-sub">Disponible après le sifflet</span>
+    </button>
   </section>
+
+  <div class="quit-dialog hidden-screen" id="quit-dialog" role="dialog" aria-modal="true" aria-labelledby="quit-title">
+    <div class="quit-box">
+      <h3 class="tr-panel-title" id="quit-title">Quitter la partie ?</h3>
+      <p class="tr-panel-sub">Les scores de cette partie seront perdus.</p>
+      <div class="tr-confirm-actions">
+        <button type="button" class="tr-btn-secondary" id="btn-quit-cancel">Continuer</button>
+        <button type="button" class="tr-btn-primary" id="btn-quit-confirm">Quitter</button>
+      </div>
+    </div>
+  </div>
 
   <!-- SCREEN: FINAL -->
   <section id="screen-final" class="hidden-screen">
@@ -2207,7 +2533,6 @@
     state.currentTeamIndex = 0;
 
     SETUP_SCREENS.forEach(hide);
-    document.body.classList.remove("setup-flow");
     show("screen-play");
     window.scrollTo(0, 0);
 
@@ -2283,23 +2608,38 @@
     }
   }
 
+  // Le téléphone peut être tenu par n'importe qui : l'écran n'affiche que l'équipe active
+  // (et l'équipe qui tente un Tackle). Voir DECISIONS.md du 2026-09-28.
+  var MINIGAME_SUBTITLES = { "Transfert": "Extrait de carrière · devine le joueur" };
+  function pad2(n) { return (n < 10 ? "0" : "") + n; }
+
   function beginTurnCommon(minigameLabel) {
-    var activeTeam = state.teams[state.currentTeamIndex];
-    var holderIdx = state.teams.length > 1
-      ? (state.currentTeamIndex + 1) % state.teams.length
-      : state.currentTeamIndex;
-    var holderTeam = state.teams[holderIdx];
-
-    el("round-count").textContent = "Manche " + (state.roundsPlayed + 1) + "/" + state.roundsTotal;
+    el("round-count").textContent = "Manche " + pad2(state.roundsPlayed + 1) + " / " + pad2(state.roundsTotal);
     el("minigame-name").textContent = minigameLabel;
-    el("active-team-name").textContent = activeTeam.name;
-    el("holder-note").textContent = state.teams.length > 1
-      ? holderTeam.name + " tient le téléphone"
-      : "Vous tenez le téléphone";
-
+    el("minigame-subtitle").textContent = MINIGAME_SUBTITLES[minigameLabel] || "";
     hide("next-card-zone");
     renderScoreboard();
   }
+
+  // Accords avec le nom d'équipe : « Priorité aux Lions », « Réponse des Lions »,
+  // « Les Lions confirment ? » ; « à Équipe 3 », « de Équipe 3 » pour un nom libre.
+  function teamPlural(name) { return /^les\s/i.test(name); }
+  function teamAux(name) {
+    if (/^les\s/i.test(name)) return "aux " + name.slice(4);
+    if (/^le\s/i.test(name)) return "au " + name.slice(3);
+    return "à " + name;
+  }
+  function teamDes(name) {
+    if (/^les\s/i.test(name)) return "des " + name.slice(4);
+    if (/^le\s/i.test(name)) return "du " + name.slice(3);
+    return (/^[aeiouyàâéèêîôûh]/i.test(name) ? "d'" : "de ") + name;
+  }
+  function teamVerb(name, plural, singular) { return name + " " + (teamPlural(name) ? plural : singular); }
+  function signed(n) { return String(n).replace("-", "−"); }
+  function scoreChangeText(name, before, after) {
+    return name + " : " + signed(before) + " → " + signed(after) + " point" + (Math.abs(after) > 1 ? "s" : "");
+  }
+  function pointsLabel(n) { return Math.abs(n) + " pt" + (Math.abs(n) > 1 ? "s" : ""); }
 
   function beginTransfertTurn() {
     setActiveMinigameUI("transfert");
@@ -2310,6 +2650,7 @@
 
     beginTurnCommon("Transfert");
     el("feedback-zone").innerHTML = "";
+    hideTrResult();
     resetAnswerZone();
     renderClueList();
     startTackleWindow();
@@ -2325,8 +2666,32 @@
 
   function hideTackleUI() {
     hide("btn-tackle");
+    hide("turn-clock");
     hide("tackle-team-picker");
     hide("tackle-answer-zone");
+  }
+
+  function showTackleUI() {
+    show("btn-tackle");
+    show("turn-clock");
+  }
+
+  // Bouton Tackle sur deux lignes + bande « Priorité aux … » avec le temps restant de la phase.
+  function updateTackleUI(seconds) {
+    var open = state.tacklePhase === "open";
+    var alone = state.teams.length < 2;
+    var active = state.teams[state.currentTeamIndex];
+    el("tackle-main").textContent = open && !alone ? "Tackle ±" + currentTackleStake() : "Tackle";
+    el("tackle-sub").textContent = alone
+      ? "Il faut au moins deux équipes"
+      : open
+        ? "Ouvert · première équipe à l'annoncer"
+        : "Disponible après le sifflet · dans " + seconds + " s";
+    el("turn-clock-label").textContent = open
+      ? (alone ? "Temps restant" : "Tackle ouvert")
+      : "Priorité " + teamAux(active ? active.name : "");
+    el("turn-clock-time").textContent = "00:" + pad2(Math.max(0, seconds));
+    el("turn-clock").classList.toggle("open", open);
   }
 
   function isBinaryGame() {
@@ -2346,9 +2711,6 @@
     return POINTS_BY_INDEX[Math.min(Math.max(step - 1, 0), POINTS_BY_INDEX.length - 1)];
   }
 
-  function tackleButtonText(seconds) {
-    return "🚨 TACKLE ±" + currentTackleStake() + " · " + seconds + " s";
-  }
 
   function tackleDeltaText(correct) {
     var stake = currentTackleStake();
@@ -2362,8 +2724,8 @@
     state.tackleDeadline = Date.now() + TACKLE_LOCK_SECONDS * 1000;
     var button = el("btn-tackle");
     button.disabled = true;
-    button.textContent = tackleButtonText(TACKLE_LOCK_SECONDS);
-    show("btn-tackle");
+    updateTackleUI(TACKLE_LOCK_SECONDS);
+    showTackleUI();
     state.tackleTimerId = setInterval(tickTackleWindow, 250);
   }
 
@@ -2373,7 +2735,7 @@
     var button = el("btn-tackle");
     if (state.tacklePhase === "locked") {
       if (remaining > 0) {
-        button.textContent = tackleButtonText(remaining);
+        updateTackleUI(remaining);
         return;
       }
       state.tacklePhase = "open";
@@ -2383,7 +2745,7 @@
       remaining = TACKLE_OPEN_SECONDS;
     }
     if (remaining > 0) {
-      button.textContent = tackleButtonText(remaining);
+      updateTackleUI(remaining);
       return;
     }
     clearTackleTimer();
@@ -2431,18 +2793,35 @@
     hide("pom-pending-zone");
     hide("vf-pending-zone");
     hide("btn-tackle");
+    hide("turn-clock");
     var isLmTackle = state.currentRoundMinigame === "lematch";
+    var stake = currentTackleStake();
+    el("tackle-picker-stakes").textContent = "Une seule équipe répond · enjeu ±" + pointsLabel(stake);
     var buttonsDiv = el("tackle-team-buttons");
     buttonsDiv.innerHTML = "";
     state.teams.forEach(function (team, idx) {
       if (idx === state.currentTeamIndex) return; // l'équipe active ne tackle pas son propre tour
       var btn = document.createElement("button");
-      btn.className = "choice-btn";
-      btn.textContent = team.name;
+      btn.type = "button";
+      btn.className = "tackle-team-btn";
+      btn.appendChild(teamBadge(team));
+      var nameSpan = document.createElement("span");
+      nameSpan.className = "tt-name";
+      nameSpan.textContent = team.name;
+      btn.appendChild(nameSpan);
+      var chevron = document.createElement("span");
+      chevron.setAttribute("aria-hidden", "true");
+      chevron.textContent = "›";
+      btn.appendChild(chevron);
       btn.addEventListener("click", function () {
         state.tackleTeamIndex = idx;
         hide("tackle-team-picker");
-        el("tackle-team-label").textContent = team.name + " tackle !";
+        el("tackle-team-label").textContent = team.name;
+        var badgeBox = el("tackle-team-badge");
+        badgeBox.innerHTML = "";
+        badgeBox.appendChild(teamBadge(team));
+        el("tackle-stake").textContent = "±" + pointsLabel(stake);
+        el("tackle-stakes-note").textContent = "Bonne réponse +" + stake + " · mauvaise réponse −" + stake;
         el("tackle-answer-input").value = "";
         el("tackle-answer-input-2").value = "";
         if (isBinaryGame()) {
@@ -2464,8 +2843,8 @@
           show("tackle-answer-field-1");
           show("btn-tackle-submit");
           hide("tackle-binary-choices");
-          el("tackle-answer-label-1").textContent = "Réponse du tackle";
-          el("tackle-answer-input").placeholder = "Nom du joueur";
+          el("tackle-answer-label-1").textContent = "Quel est le joueur ?";
+          el("tackle-answer-input").placeholder = "Nom du joueur…";
           hide("tackle-answer-field-2");
         }
         show("tackle-answer-zone");
@@ -2488,7 +2867,7 @@
     state.tackleDeadline = Date.now() + state.tackleRemainingMs;
     state.tackleTimerId = setInterval(tickTackleWindow, 250);
     tickTackleWindow();
-    show("btn-tackle");
+    showTackleUI();
   });
 
   function resolveOpenBinaryTackle(choice) {
@@ -2554,6 +2933,23 @@
     var isCorrect = matchesAnyAnswer(typed, validAnswers);
 
     hide("tackle-answer-zone");
+
+    if (state.currentRoundMinigame === "transfert") {
+      var before = tacklingTeam.score;
+      awardPointsToTeam(state.tackleTeamIndex, isCorrect ? stake : -stake);
+      showTrResult({
+        good: isCorrect,
+        title: isCorrect ? "Tackle réussi" : "Tackle raté",
+        delta: (isCorrect ? "+" : "−") + pointsLabel(stake),
+        lines: [
+          { text: card.answer, cls: "strong" },
+          { text: scoreChangeText(tacklingTeam.name, before, tacklingTeam.score) },
+          { text: "Carte terminée", cls: "dim" }
+        ]
+      });
+      endCard();
+      return;
+    }
 
     if (isCorrect) {
       awardPointsToTeam(state.tackleTeamIndex, stake);
@@ -3101,59 +3497,115 @@
     startTackleWindow(); // nouvel événement = nouveau délai de 30 secondes, puis 15 secondes ouvertes
   }
 
+  // ---------- Transfert (docs/UI_TRANSFERT_FLOW.md) ----------
+  function transfertPoints() {
+    var card = state.currentCard;
+    return card.career.length === 1 ? 5 : POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
+  }
+
+  // Indices révélés dans l'ordre de la carrière ; la liste garde la hauteur de cinq lignes
+  // pour que les lignes déjà affichées ne bougent pas. Seul le dernier indice est encadré.
   function renderClueList() {
     var card = state.currentCard;
     var list = el("clue-list");
     list.innerHTML = "";
-
-    var maxClues = card.career.length;
-    for (var i = 0; i < maxClues; i++) {
-      var clueDiv = document.createElement("div");
-      if (i < state.revealedCount) {
-        clueDiv.className = "clue";
-        var nameSpan = document.createElement("span");
-        nameSpan.className = "club-name";
-        nameSpan.textContent = card.career[i].club;
-        var yearsSpan = document.createElement("span");
-        yearsSpan.className = "years";
-        yearsSpan.textContent = card.career[i].years;
-        clueDiv.appendChild(nameSpan);
-        clueDiv.appendChild(yearsSpan);
-      } else {
-        clueDiv.className = "clue hidden";
-        clueDiv.textContent = "?";
-      }
-      list.appendChild(clueDiv);
+    var total = card.career.length;
+    for (var i = 0; i < Math.min(state.revealedCount, total); i++) {
+      var row = document.createElement("li");
+      row.className = "tr-clue" + (i === state.revealedCount - 1 ? " current" : "");
+      var club = document.createElement("span");
+      club.className = "tr-club";
+      club.textContent = (i + 1) + " " + card.career[i].club;
+      var years = document.createElement("span");
+      years.className = "tr-years";
+      years.textContent = card.career[i].years;
+      row.appendChild(club);
+      row.appendChild(years);
+      list.appendChild(row);
     }
+    el("clue-step").textContent = "Indice " + Math.min(state.revealedCount, total) + " / " + total;
+    el("clue-points").textContent = pointsLabel(transfertPoints());
+  }
 
-    var pointsForCurrent = POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
-    el("clue-points").textContent = maxClues === 1
-      ? "Indice unique — vaut 5 points"
-      : "Cet indice vaut " + pointsForCurrent + " point" + (pointsForCurrent > 1 ? "s" : "");
+  function hideTrResult() {
+    if (state.trResultTimer) { clearTimeout(state.trResultTimer); state.trResultTimer = null; }
+    hide("tr-result");
+    el("tr-result").className = "tr-result hidden-screen";
+  }
+
+  // Écran de résultat par-dessus la carte : flash joué une fois, écart de points, score.
+  // Sans « then », il reste affiché (carte terminée) ; sinon il disparaît puis enchaîne.
+  function showTrResult(opts) {
+    hideTrResult();
+    var box = el("tr-result");
+    var icon = opts.good
+      ? '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
+      : '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+    var html = '<div class="tr-result-icon">' + icon + '</div>' +
+      '<div class="tr-result-title"></div>' +
+      (opts.delta ? '<div class="tr-result-delta"></div>' : "");
+    (opts.lines || []).forEach(function () { html += '<div class="tr-result-line"></div>'; });
+    box.innerHTML = html;
+    if (box.querySelector) {
+      box.querySelector(".tr-result-title").textContent = opts.title;
+      if (opts.delta) box.querySelector(".tr-result-delta").textContent = opts.delta;
+      var lineEls = box.querySelectorAll(".tr-result-line");
+      (opts.lines || []).forEach(function (line, i) {
+        lineEls[i].textContent = line.text;
+        if (line.cls) lineEls[i].classList.add(line.cls);
+      });
+    }
+    box.className = "tr-result " + (opts.good ? "good" : "bad");
+    if (opts.then) {
+      var cardAtStart = state.currentCard;
+      state.trResultTimer = setTimeout(function () {
+        state.trResultTimer = null;
+        if (state.currentCard !== cardAtStart || state.cardEnded) return;
+        hideTrResult();
+        opts.then();
+      }, opts.duration || 1900);
+    }
   }
 
   function resetAnswerZone() {
     hide("type-box");
     hide("confirm-box");
     el("answer-input").value = "";
-    document.querySelector(".answer-btns").style.display = "flex";
+    show("tr-actions");
+  }
+
+  function transfertStakesText() {
+    return "Bonne réponse +" + transfertPoints() + " · mauvaise réponse −1";
   }
 
   el("btn-answer").addEventListener("click", function () {
+    var name = state.teams[state.currentTeamIndex].name;
     clearTackleTimer();
     hideTackleUI();
-    document.querySelector(".answer-btns").style.display = "none";
+    hide("tr-actions");
+    el("type-title").textContent = "Réponse " + teamDes(name);
+    el("type-sub").textContent = "Saisir le nom annoncé par " + name.replace(/^Les /, "les ");
+    el("type-stakes").textContent = transfertStakesText();
     show("type-box");
     el("answer-input").focus();
   });
 
   el("btn-submit-answer").addEventListener("click", function () {
     var val = el("answer-input").value.trim();
-    if (!val) return;
+    if (!val) { el("answer-input").focus(); return; }
+    var name = state.teams[state.currentTeamIndex].name;
     state.typedAnswer = val;
     el("typed-text").textContent = val;
+    el("confirm-title").textContent = teamVerb(name, "confirment ?", "confirme ?");
+    el("confirm-stakes").textContent = transfertStakesText();
     hide("type-box");
     show("confirm-box");
+  });
+  el("answer-input").addEventListener("keydown", function (e) {
+    if (e.key === "Enter") el("btn-submit-answer").click();
+  });
+  el("tackle-answer-input").addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && el("tackle-answer-field-2").classList.contains("hidden-screen")) el("btn-tackle-submit").click();
   });
 
   el("btn-edit-answer").addEventListener("click", function () {
@@ -3164,7 +3616,6 @@
 
   el("btn-confirm-answer").addEventListener("click", function () {
     hide("confirm-box");
-    document.querySelector(".answer-btns").style.display = "flex";
     checkAnswer(state.typedAnswer);
   });
 
@@ -3174,22 +3625,58 @@
 
   function checkAnswer(typed) {
     var card = state.currentCard;
+    var team = state.teams[state.currentTeamIndex];
     var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
     var isCorrect = matchesAnyAnswer(typed, validAnswers);
+    var before = team.score;
 
     if (isCorrect) {
-      var maxClues = card.career.length;
-      var pointsEarned = maxClues === 1
-        ? 5
-        : POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
+      var pointsEarned = transfertPoints();
       awardPoints(pointsEarned);
-      showFeedback("good", "Bonne réponse ! +" + pointsEarned + " points — c'était bien " + card.answer + ".");
+      showTrResult({
+        good: true,
+        title: "Bonne réponse",
+        delta: "+" + pointsLabel(pointsEarned),
+        lines: [
+          { text: card.answer, cls: "strong" },
+          { text: scoreChangeText(team.name, before, team.score) },
+          { text: "Carte terminée", cls: "dim" }
+        ]
+      });
       endCard();
-    } else {
-      awardPoints(-1);
-      showFeedback("bad", "Mauvaise réponse. −1 point.");
-      advanceClue(true);
+      return;
     }
+
+    awardPoints(-1);
+    var last = state.revealedCount >= card.career.length;
+    if (last) {
+      // Plus d'indice : la carte se termine et le joueur est révélé.
+      showTrResult({
+        good: false,
+        title: "Mauvaise réponse",
+        delta: "−1 pt",
+        lines: [
+          { text: scoreChangeText(team.name, before, team.score) },
+          { text: "C'était " + card.answer, cls: "strong" },
+          { text: "Fin des indices · carte terminée", cls: "dim" }
+        ]
+      });
+      endCard();
+      return;
+    }
+    // Le joueur reste secret ; l'indice suivant arrive après l'animation.
+    var nextPoints = POINTS_BY_INDEX[Math.min(state.revealedCount, POINTS_BY_INDEX.length - 1)];
+    showTrResult({
+      good: false,
+      title: "Mauvaise réponse",
+      delta: "−1 pt",
+      lines: [
+        { text: scoreChangeText(team.name, before, team.score) },
+        { text: "Le joueur reste secret" },
+        { text: "Indice suivant · " + pointsLabel(nextPoints), cls: "dim" }
+      ],
+      then: function () { advanceClue(true); }
+    });
   }
 
   function advanceClue(fromWrongAnswer) {
@@ -3197,21 +3684,23 @@
     var maxClues = card.career.length;
 
     if (state.revealedCount >= maxClues) {
-      // dernier indice déjà révélé : passe ou erreur termine la carte
-      if (!fromWrongAnswer) {
-        showFeedback("bad", "Fin des indices. C'était " + card.answer + ".");
-      } else {
-        el("feedback-zone").innerHTML += '<div class="feedback bad">C\'était ' + card.answer + '.</div>';
-      }
+      // Dernier indice déjà révélé : passe ou fin du temps termine la carte.
+      hide("tr-actions");
+      showTrResult({
+        good: false,
+        title: "Fin des indices",
+        lines: [
+          { text: "C'était " + card.answer, cls: "strong" },
+          { text: "Carte terminée", cls: "dim" }
+        ]
+      });
       endCard();
       return;
     }
 
     state.revealedCount += 1;
     renderClueList();
-    if (!fromWrongAnswer) {
-      el("feedback-zone").innerHTML = "";
-    }
+    resetAnswerZone();
     startTackleWindow();
   }
 
@@ -3274,28 +3763,64 @@
     return badge;
   }
 
+  // Scores de toutes les équipes en haut de l'écran : une ligne jusqu'à 3 équipes,
+  // deux lignes à 4. L'équipe active a l'encadré doré (« Au tour de »).
+  function chipName(name) { return name.replace(/^les\s+/i, ""); }
+
   function renderScoreboard() {
     var board = el("scoreboard");
     board.innerHTML = "";
+    var n = state.teams.length;
+    board.classList.toggle("four", n >= 4);
+    if (board.style && board.style.setProperty) board.style.setProperty("--cols", n >= 4 ? 2 : Math.max(1, n));
     state.teams.forEach(function (team, idx) {
+      var isActive = idx === state.currentTeamIndex;
       var chip = document.createElement("div");
-      chip.className = "score-chip" + (idx === state.currentTeamIndex ? " active" : "");
-      chip.style.setProperty("--team", teamColorHex(team));
+      chip.className = "score-chip" + (isActive ? " active" : "");
+      chip.setAttribute("role", "listitem");
+      chip.setAttribute("aria-label", team.name + " : " + team.score + " point" + (Math.abs(team.score) > 1 ? "s" : "") + (isActive ? ", au tour de cette équipe" : ""));
       var head = document.createElement("div");
       head.className = "chip-head";
       head.appendChild(teamBadge(team));
-      var name = document.createElement("div");
+      var names = document.createElement("div");
+      names.className = "chip-names";
+      if (isActive && n > 1) {
+        var kicker = document.createElement("span");
+        kicker.className = "chip-kicker";
+        kicker.textContent = "Au tour de";
+        names.appendChild(kicker);
+      }
+      var name = document.createElement("span");
       name.className = "name";
-      name.textContent = team.name;
-      head.appendChild(name);
+      name.textContent = chipName(team.name);
+      names.appendChild(name);
+      head.appendChild(names);
       var score = document.createElement("div");
-      score.className = "score";
-      score.textContent = team.score;
+      score.className = "score" + (team.score < 0 ? " negative" : "");
+      score.innerHTML = String(team.score).replace("-", "−") + "<small>pts</small>";
       chip.appendChild(head);
       chip.appendChild(score);
       board.appendChild(chip);
     });
   }
+
+  // Quitter : confirmation, puis retour à « Créer une partie » (réglages conservés).
+  el("btn-quit").addEventListener("click", function () {
+    show("quit-dialog");
+    el("btn-quit-cancel").focus();
+  });
+  el("btn-quit-cancel").addEventListener("click", function () {
+    hide("quit-dialog");
+    el("btn-quit").focus();
+  });
+  el("btn-quit-confirm").addEventListener("click", function () {
+    hide("quit-dialog");
+    clearTackleTimer();
+    hideTackleUI();
+    hideTrResult();
+    state.cardEnded = true;
+    showSetupScreen("screen-setup", true);
+  });
 
   el("btn-next-card").addEventListener("click", function () {
     state.currentTeamIndex += 1;

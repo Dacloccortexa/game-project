@@ -1,6 +1,6 @@
 # Transfert — maquettes de l'écran de jeu
 
-Référence visuelle pour l'intégration du défi Transfert dans l'ambiance stade de TACKLE. Les règles complètes et à jour figurent dans [`GAME_DESIGN.md`](GAME_DESIGN.md). Ces vues sont des maquettes, pas des écrans déjà intégrés à l'application.
+Référence visuelle pour l'intégration du défi Transfert dans l'ambiance stade de TACKLE. Les règles complètes et à jour figurent dans [`GAME_DESIGN.md`](GAME_DESIGN.md). Statut : **intégré dans `index.html`** (2026-09-29), à vérifier sur un vrai téléphone. L'en-tête (Quitter, logo, manche, scores de toutes les équipes, titre du défi), la bande « Priorité aux … » et le bouton Tackle sont communs aux cinq défis ; les quatre autres défis gardent leur carte actuelle en attendant leurs maquettes. « Quitter » demande confirmation puis revient à « Créer une partie » ; le menu ≡ des maquettes n'est pas affiché tant qu'il n'a pas de contenu défini.
 
 ## États à intégrer
 

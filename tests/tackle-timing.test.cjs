@@ -12,7 +12,7 @@ function element(id) {
     const classes = new Set();
     const node = {
       id, style: { setProperty(name, value) { this[name] = value; } }, children: [], listeners: {}, value: '', textContent: '', innerHTML: '', disabled: false,
-      classList: { add: x => classes.add(x), remove: x => classes.delete(x), contains: x => classes.has(x) },
+      classList: { add: x => classes.add(x), remove: x => classes.delete(x), contains: x => classes.has(x), toggle: (x, on) => ((on === undefined ? !classes.has(x) : on) ? classes.add(x) : classes.delete(x)) },
       addEventListener(name, fn) { this.listeners[name] = fn; },
       appendChild(child) { this.children.push(child); },
       setAttribute(name, value) { this[name] = value; },
