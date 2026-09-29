@@ -7,3 +7,5 @@ Les maquettes validées des trois écrans avant le coup d'envoi et leurs règles
 Les règles des mini-jeux sont dans [docs/GAME_DESIGN.md](docs/GAME_DESIGN.md).
 
 Les maquettes du premier écran de jeu Transfert, y compris Tackle et les retours de réponse, sont dans [docs/UI_TRANSFERT_FLOW.md](docs/UI_TRANSFERT_FLOW.md).
+
+L'écran animé entre deux manches et l'annonce de la prochaine équipe sont décrits dans [docs/UI_INTERMISSION_FLOW.md](docs/UI_INTERMISSION_FLOW.md).
