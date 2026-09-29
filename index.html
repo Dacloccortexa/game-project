@@ -1532,7 +1532,7 @@
   .pom-glow-ref { width: 240px; height: 170px; left: -4%; top: 90px; background: radial-gradient(circle, rgba(70,190,255,.55), transparent 70%); }
   .pom-glow-next { width: 240px; height: 170px; right: -4%; bottom: 20px; background: radial-gradient(circle, rgba(255,110,80,.5), transparent 70%); }
 
-  .pom-head { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 12px 12px 0; text-align: center; }
+  .pom-head { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 10px 12px 0; text-align: center; }
   .pom-title { margin: 0; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 34px; line-height: 1; text-transform: uppercase; letter-spacing: .01em; }
   .pom-plus { color: #5fd2ff; text-shadow: 0 0 14px rgba(95,210,255,.55); }
   .pom-ou { color: #fff; font-size: 26px; }
@@ -1544,7 +1544,7 @@
   }
   .pom-step::before, .pom-step::after { content: ""; flex: 1; height: 1px; background: rgba(127,211,255,.5); }
 
-  .pom-duel { position: relative; display: flex; flex-direction: column; padding: 8px 16px 72px; gap: 0; }
+  .pom-duel { position: relative; display: flex; flex-direction: column; padding: 6px 16px 66px; gap: 0; }
   .pom-player { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 0; max-width: 78%; }
   /* Le trait lumineux sépare la zone bleue (en haut à gauche) de la zone corail (en bas à droite) :
      chaque joueur est placé entièrement dans sa zone. */
@@ -1564,12 +1564,12 @@
   .next .pom-value.hidden-value { color: #2a0806; }
   .next .pom-value.revealed { animation: pom-reveal .45s ease-out 1; }
   @keyframes pom-reveal { from { transform: skewX(-10deg) scale(.6); opacity: 0; } to { transform: skewX(-10deg) scale(1); opacity: 1; } }
-  .pom-vs { align-self: center; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 38px; color: #f2f6fb; text-shadow: 0 0 14px rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.4); line-height: 1; margin: 6px 0 10px; }
+  .pom-vs { align-self: center; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 38px; color: #f2f6fb; text-shadow: 0 0 14px rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.4); line-height: 1; margin: 20px 0 18px; }
 
   /* Bandeau de verdict façon maquette : pilule sombre à contour néon, grosse icône qui déborde,
      texte lumineux et traits de vitesse de chaque côté. */
   .pom-verdict {
-    position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%);
+    position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%);
     display: flex; align-items: center; gap: 12px; white-space: nowrap;
     min-height: 46px; padding: 0 22px 0 52px; border-radius: 12px;
     font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 22px; letter-spacing: .02em; text-transform: uppercase;
