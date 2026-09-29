@@ -1237,41 +1237,6 @@
   .tr-years { flex-shrink: 0; font-size: 13px; font-weight: 600; color: var(--chalk-dim); font-variant-numeric: tabular-nums; }
   .tr-clue.current .tr-years { color: var(--gold); }
 
-  /* Résultat par-dessus la carte : flash joué une fois, écart de points, score mis à jour. */
-  .tr-result {
-    position: absolute; inset: 0;
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
-    padding: 20px; text-align: center;
-    border-radius: 18px;
-    background: rgba(5,32,22,.97);
-    border: 2px solid var(--gold-ring);
-    overflow: hidden;
-  }
-  .tr-result.bad { background: rgba(38,22,18,.97); border-color: #f07a6e; }
-  .tr-result::before {
-    content: ""; position: absolute; inset: -40% -60%;
-    background: repeating-linear-gradient(-28deg, transparent 0 46px, rgba(242,199,90,.55) 46px 64px);
-    transform: translateX(-110%);
-    animation: tr-flash .7s ease-out 1 forwards;
-    pointer-events: none;
-  }
-  .tr-result.bad::before { background: repeating-linear-gradient(-28deg, transparent 0 46px, rgba(240,110,95,.55) 46px 64px); }
-  @keyframes tr-flash { 0% { transform: translateX(-110%); opacity: 1; } 100% { transform: translateX(110%); opacity: 0; } }
-  .tr-result > * { position: relative; animation: tr-pop .35s ease-out .25s both; }
-  @keyframes tr-pop { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: none; } }
-  .tr-result-icon { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 50%; border: 3px solid #6fd08c; color: #6fd08c; }
-  .tr-result.bad .tr-result-icon { border-color: #f07a6e; color: #f07a6e; }
-  .tr-result-title { font-family: var(--font-cond); font-weight: 700; font-size: 26px; text-transform: uppercase; color: var(--chalk); }
-  .tr-result-delta { font-family: var(--font-cond); font-weight: 700; font-size: 34px; color: var(--gold); line-height: 1; }
-  .tr-result.bad .tr-result-delta { color: #ff8a80; }
-  .tr-result-line { font-size: 15px; color: var(--chalk); }
-  .tr-result-line.strong { font-weight: 700; font-size: 17px; }
-  .tr-result-line.dim { font-size: 13px; color: var(--chalk-dim); }
-  @media (prefers-reduced-motion: reduce) {
-    .tr-result::before { animation: none; display: none; }
-    .tr-result > * { animation: none; }
-  }
-
   /* Boutons et panneaux (réponse, confirmation, Tackle) */
   .tr-zone { display: flex; flex-direction: column; gap: 10px; }
   .tr-actions { display: flex; flex-direction: column; gap: 8px; }
@@ -1568,8 +1533,8 @@
 
   /* Bandeau de verdict façon maquette : pilule sombre à contour néon, grosse icône qui déborde,
      texte lumineux et traits de vitesse de chaque côté. */
-  .pom-verdict {
-    position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%);
+  .verdict {
+    position: absolute; left: 50%; top: -30px; transform: translateX(-50%); z-index: 3;
     display: flex; align-items: center; gap: 12px; white-space: nowrap;
     min-height: 46px; padding: 0 22px 0 52px; border-radius: 12px;
     font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 22px; letter-spacing: .02em; text-transform: uppercase;
@@ -1580,15 +1545,15 @@
     color: #d9ffe6; text-shadow: 0 0 10px var(--v-glow);
     animation: pom-pop .45s cubic-bezier(.2,.9,.3,1.3) 1;
   }
-  .pom-verdict::before, .pom-verdict::after {
+  .verdict::before, .verdict::after {
     content: ""; position: absolute; top: 50%; height: 3px; width: 70px; border-radius: 2px;
     background: linear-gradient(90deg, transparent, var(--v));
     box-shadow: 0 0 10px var(--v-glow);
     transform: translateY(-50%);
   }
-  .pom-verdict::before { right: 100%; margin-right: 6px; }
-  .pom-verdict::after { left: 100%; margin-left: 6px; background: linear-gradient(270deg, transparent, var(--v)); }
-  .pom-verdict .v-icon {
+  .verdict::before { right: 100%; margin-right: 6px; }
+  .verdict::after { left: 100%; margin-left: 6px; background: linear-gradient(270deg, transparent, var(--v)); }
+  .verdict .v-icon {
     position: absolute; left: -14px; top: 50%; transform: translateY(-50%);
     display: flex; align-items: center; justify-content: center;
     width: 54px; height: 54px; border-radius: 50%;
@@ -1596,12 +1561,12 @@
     border: 3px solid #eafff0;
     box-shadow: 0 0 0 2px var(--v), 0 0 16px var(--v-glow);
   }
-  .pom-verdict .v-icon svg { width: 28px; height: 28px; }
-  .pom-verdict .v-icon { color: #ffffff; }
-  .pom-verdict.bad { --v: #ff6b5e; --v-dark: rgba(50,10,8,.94); --v-glow: rgba(255,100,85,.7); color: #ffe1dc; }
-  .pom-verdict.bad .v-icon { background: radial-gradient(circle at 40% 35%, #ff7a6c, #c52a1f); border-color: #fff0ee; }
-  .pom-verdict.neutral { --v: #f2c75a; --v-dark: rgba(45,32,6,.94); --v-glow: rgba(242,199,90,.65); color: #fff1cc; }
-  .pom-verdict.neutral .v-icon { background: radial-gradient(circle at 40% 35%, #f6cf6a, #a8741a); border-color: #fff6de; }
+  .verdict .v-icon svg { width: 28px; height: 28px; }
+  .verdict .v-icon { color: #ffffff; }
+  .verdict.bad { --v: #ff6b5e; --v-dark: rgba(50,10,8,.94); --v-glow: rgba(255,100,85,.7); color: #ffe1dc; }
+  .verdict.bad .v-icon { background: radial-gradient(circle at 40% 35%, #ff7a6c, #c52a1f); border-color: #fff0ee; }
+  .verdict.neutral { --v: #f2c75a; --v-dark: rgba(45,32,6,.94); --v-glow: rgba(242,199,90,.65); color: #fff1cc; }
+  .verdict.neutral .v-icon { background: radial-gradient(circle at 40% 35%, #f6cf6a, #a8741a); border-color: #fff6de; }
   @keyframes pom-pop { from { transform: translateX(-50%) scale(.6); opacity: 0; } to { transform: translateX(-50%) scale(1); opacity: 1; } }
 
   .pom-note { padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(248,246,237,.2); background: rgba(3,17,12,.8); color: var(--chalk); text-align: center; font-size: 15px; line-height: 1.45; }
@@ -1638,8 +1603,17 @@
   }
   .pom-risk { margin: 0; text-align: center; font-size: 13px; color: var(--chalk-dim); }
   @media (prefers-reduced-motion: reduce) {
-    .pom-verdict, .next .pom-value.revealed { animation: none; }
+    .verdict, .next .pom-value.revealed { animation: none; }
   }
+
+  /* Verdict commun : la pilule chevauche le bas de la carte du défi, le détail vient dessous. */
+  #screen-play > #verdict-slot { order: 1; position: relative; height: 18px; margin-top: -10px; }
+  #screen-play > #verdict-note { order: 2; }
+  .verdict-note { padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(248,246,237,.2); background: rgba(3,17,12,.82); color: var(--chalk); text-align: center; font-size: 15px; line-height: 1.45; display: flex; flex-direction: column; gap: 2px; }
+  .verdict-note .strong { font-size: 18px; font-weight: 700; }
+  .tr-card { padding-bottom: 34px; }
+  #screen-play .card-stage { padding-bottom: 38px; }
+  .pom-duel { padding-bottom: 40px !important; }
 
 </style>
 </head>
@@ -1802,7 +1776,6 @@
       </div>
       <div class="tr-kicker">Carrière révélée</div>
       <ol class="tr-clues" id="clue-list"></ol>
-      <div class="tr-result hidden-screen" id="tr-result" role="status" aria-live="polite"></div>
     </div>
 
     <div id="feedback-zone"></div>
@@ -1846,7 +1819,6 @@
         <div class="pom-step" id="pom-step">Comparaison 1 / 5</div>
       </div>
       <div class="pom-duel" id="pom-chain-list"></div>
-      <div class="pom-verdict hidden-screen" id="pom-verdict" role="status" aria-live="polite"></div>
     </div>
 
     <div id="pom-feedback-zone" class="pom-note hidden-screen"></div>
@@ -2028,6 +2000,12 @@
       </div>
       <p class="tr-panel-note"><span id="tackle-stakes-note"></span><br>Une seule tentative · la carte se termine ensuite</p>
     </div>
+
+    <!-- Bandeau de verdict commun aux cinq défis (DECISIONS.md, 2026-09-29) -->
+    <div class="verdict-slot" id="verdict-slot">
+      <div class="verdict hidden-screen" id="verdict" role="status" aria-live="polite"></div>
+    </div>
+    <div class="verdict-note hidden-screen" id="verdict-note"></div>
 
     <button type="button" class="hidden-screen" id="btn-tackle" disabled>
       <span class="tk-main" id="tackle-main">Tackle</span>
@@ -3125,6 +3103,8 @@
   function pad2(n) { return (n < 10 ? "0" : "") + n; }
 
   function beginTurnCommon(minigameLabel) {
+    state.cardSeq = (state.cardSeq || 0) + 1;
+    hideVerdict();
     journalStartCard();
     el("round-count").textContent = "Manche " + pad2(state.roundsPlayed + 1) + " / " + pad2(state.roundsTotal);
     el("minigame-name").textContent = minigameLabel;
@@ -3301,8 +3281,9 @@
           : "Aucune cagnotte à encaisser."));
       } else {
         var statement = state.vfChain[state.vfIndex];
-        showVfFeedback("good", "Temps écoulé, personne n'a répondu. C'était " + (statement.est_vraie ? "VRAI" : "FAUX") +
-          ". +" + points + " point" + (points > 1 ? "s" : "") + " encaissé" + (points > 1 ? "s" : "") + ".");
+        hide("vf-answer-zone");
+        showVerdict("neutral", "Temps écoulé", { note: [{ text: "C'était " + (statement.est_vraie ? "VRAI" : "FAUX"), strong: true },
+          "Personne n'a répondu. " + (points > 0 ? "+" + points + " point" + (points > 1 ? "s" : "") + " encaissé" + (points > 1 ? "s" : "") + "." : "Aucune cagnotte à encaisser.")] });
       }
       endCard();
     } else if (state.currentRoundMinigame === "lematch") advanceLmEvent(false);
@@ -3418,8 +3399,12 @@
         ? " ; " + teamVerb(state.teams[state.currentTeamIndex].name, "perdent", "perd") + " sa cagnotte."
         : " ; " + teamVerb(state.teams[state.currentTeamIndex].name, "encaissent", "encaisse") + " " + points + " point" + (points > 1 ? "s" : "") + "."));
     } else {
-      message += " C'était " + (state.vfChain[state.vfIndex].est_vraie ? "VRAI" : "FAUX") + ".";
-      showVfFeedback(correct ? "good" : "bad", message);
+      hide("vf-answer-zone");
+      showVerdict(correct ? "good" : "bad", "Tackle " + (correct ? "réussi" : "raté"), { note: [
+        { text: "C'était " + (state.vfChain[state.vfIndex].est_vraie ? "VRAI" : "FAUX"), strong: true },
+        team.name + " " + tackleDeltaText(correct) + (correct
+          ? " ; " + teamVerb(state.teams[state.currentTeamIndex].name, "perdent", "perd") + " sa cagnotte."
+          : " ; " + teamVerb(state.teams[state.currentTeamIndex].name, "encaissent", "encaisse") + " " + points + " point" + (points > 1 ? "s" : "") + ".")] });
     }
     endCard();
   }
@@ -3446,13 +3431,13 @@
 
       hide("tackle-answer-zone");
 
-      if (isLmCorrect) {
-        awardPointsToTeam(state.tackleTeamIndex, stake);
-        showLmFeedback("good", "TACKLE réussi par " + tacklingTeam.name + " ! " + tackleDeltaText(true) + ". La carte s'arrête là — c'était " + lmCard.teams[0] + " – " + lmCard.teams[1] + ".");
-      } else {
-        awardPointsToTeam(state.tackleTeamIndex, -stake);
-        showLmFeedback("bad", "TACKLE raté par " + tacklingTeam.name + ". " + tackleDeltaText(false) + ". La carte s'arrête là — c'était " + lmCard.teams[0] + " – " + lmCard.teams[1] + ".");
-      }
+      var lmBefore = tacklingTeam.score;
+      awardPointsToTeam(state.tackleTeamIndex, isLmCorrect ? stake : -stake);
+      hide("lm-answer-zone");
+      showVerdict(isLmCorrect ? "good" : "bad", "Tackle " + (isLmCorrect ? "réussi" : "raté"), { note: [
+        { text: lmCard.teams[0] + " – " + lmCard.teams[1], strong: true },
+        tackleDeltaText(isLmCorrect) + " · " + scoreChangeText(tacklingTeam.name, lmBefore, tacklingTeam.score),
+        "Carte terminée"] });
       endCard();
       return;
     }
@@ -3481,13 +3466,13 @@
       return;
     }
 
-    if (isCorrect) {
-      awardPointsToTeam(state.tackleTeamIndex, stake);
-      showFeedback("good", "TACKLE réussi par " + tacklingTeam.name + " ! " + tackleDeltaText(true) + ". La carte s'arrête là — c'était " + card.answer + ".");
-    } else {
-      awardPointsToTeam(state.tackleTeamIndex, -stake);
-      showFeedback("bad", "TACKLE raté par " + tacklingTeam.name + ". " + tackleDeltaText(false) + ". La carte s'arrête là — c'était " + card.answer + ".");
-    }
+    var tBefore = tacklingTeam.score;
+    awardPointsToTeam(state.tackleTeamIndex, isCorrect ? stake : -stake);
+    hide("qsj-answer-zone");
+    showVerdict(isCorrect ? "good" : "bad", "Tackle " + (isCorrect ? "réussi" : "raté"), { note: [
+      { text: card.answer, strong: true },
+      tackleDeltaText(isCorrect) + " · " + scoreChangeText(tacklingTeam.name, tBefore, tacklingTeam.score),
+      "Carte terminée"] });
     endCard();
   });
 
@@ -3513,6 +3498,59 @@
     show("pom-answer-zone");
     renderPomChain(false);
     startTackleWindow();
+  }
+
+  // ---------- Verdict commun (bonne / mauvaise réponse, Tackle, temps écoulé) ----------
+  // Un seul élément pour les cinq défis : le modifier le modifie partout.
+  var VERDICT_ICONS = {
+    good: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+    bad: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+    neutral: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 2"/></svg>'
+  };
+  function setVerdictNote(lines) {
+    var note = el("verdict-note");
+    if (!lines || !lines.length) { hide("verdict-note"); return; }
+    note.innerHTML = "";
+    (Array.isArray(lines) ? lines : [lines]).forEach(function (line) {
+      var d = document.createElement("div");
+      var obj = typeof line === "string" ? { text: line } : line;
+      d.textContent = obj.text;
+      if (obj.strong) d.className = "strong";
+      note.appendChild(d);
+    });
+    show("verdict-note");
+  }
+  // opts : note (texte ou lignes), autoHide (la pilule s'efface, la note reste),
+  // then (après ~1,9 s tout s'efface puis la suite est lancée, si la carte est toujours la même).
+  function showVerdict(kind, title, opts) {
+    opts = opts || {};
+    clearVerdictTimers();
+    var v = el("verdict");
+    v.innerHTML = '<span class="v-icon" aria-hidden="true">' + (VERDICT_ICONS[kind] || VERDICT_ICONS.neutral) + '</span><span class="v-text"></span>';
+    if (v.querySelector) v.querySelector(".v-text").textContent = title;
+    v.className = "verdict " + kind;
+    setVerdictNote(opts.note);
+    if (opts.autoHide) {
+      state.verdictHideTimer = setTimeout(function () { hide("verdict"); }, 1800);
+    }
+    if (opts.then) {
+      var seq = state.cardSeq;
+      state.verdictThenTimer = setTimeout(function () {
+        state.verdictThenTimer = null;
+        if (state.cardSeq !== seq || state.cardEnded) return;
+        hideVerdict();
+        opts.then();
+      }, opts.duration || 1900);
+    }
+  }
+  function clearVerdictTimers() {
+    if (state.verdictHideTimer) { clearTimeout(state.verdictHideTimer); state.verdictHideTimer = null; }
+    if (state.verdictThenTimer) { clearTimeout(state.verdictThenTimer); state.verdictThenTimer = null; }
+  }
+  function hideVerdict() {
+    clearVerdictTimers();
+    hide("verdict");
+    hide("verdict-note");
   }
 
   function pomUnit(value) {
@@ -3566,31 +3604,10 @@
     }
   }
 
-  // Bandeau « Bonne réponse », « Mauvaise réponse », « Tackle… » sur le duel.
-  function showPomVerdict(kind, text, autoHide) {
-    var v = el("pom-verdict");
-    var icon = kind === "good"
-      ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
-      : kind === "bad"
-        ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>'
-        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 2"/></svg>';
-    v.innerHTML = '<span class="v-icon" aria-hidden="true">' + icon + '</span><span class="v-text"></span>';
-    if (v.querySelector) v.querySelector(".v-text").textContent = text;
-    v.className = "pom-verdict " + kind;
-    if (state.pomVerdictTimer) { clearTimeout(state.pomVerdictTimer); state.pomVerdictTimer = null; }
-    if (autoHide) {
-      state.pomVerdictTimer = setTimeout(function () { hide("pom-verdict"); }, 1800);
-    }
-  }
-  function hidePomVerdict() {
-    if (state.pomVerdictTimer) { clearTimeout(state.pomVerdictTimer); state.pomVerdictTimer = null; }
-    hide("pom-verdict");
-  }
-  function showPomNote(text) {
-    var z = el("pom-feedback-zone");
-    z.textContent = text;
-    z.classList.remove("hidden-screen");
-  }
+  // Plus ou Moins utilise le verdict commun.
+  function showPomVerdict(kind, text, autoHide) { showVerdict(kind, text, { autoHide: autoHide }); }
+  function hidePomVerdict() { hideVerdict(); }
+  function showPomNote(text) { setVerdictNote(text); }
 
   // La réponse est verrouillée (pas encore révélée). Aucune fenêtre de contestation
   // séparée : le Tackle commun (30 secondes grisées puis 15 ouvertes) continue de
@@ -3701,15 +3718,9 @@
     el("vf-statement-text").textContent = statement.affirmation;
   }
 
-  function showVfFeedback(kind, text) {
-    el("vf-feedback-zone").classList.remove("hidden-screen");
-    el("vf-feedback-zone").innerHTML = '<div class="feedback ' + kind + '">' + text + "</div>";
-  }
+  function showVfFeedback(kind, text) { setVerdictNote(text); }
 
-  function appendVfFeedback(kind, text) {
-    el("vf-feedback-zone").classList.remove("hidden-screen");
-    el("vf-feedback-zone").innerHTML += '<div class="feedback ' + kind + '">' + text + "</div>";
-  }
+  function appendVfFeedback(kind, text) { setVerdictNote(text); }
 
   // Donne la vraie information quand l'affirmation était fausse, pour que la révélation
   // apprenne quelque chose plutôt que de simplement dire "FAUX".
@@ -3784,20 +3795,21 @@
     }
 
     if (!isActiveCorrect) {
-      appendVfFeedback("bad", "Mauvaise réponse de " + state.teams[state.currentTeamIndex].name + ". " + verdictText + " 0 point pour cette carte.");
       awardPoints(0);
+      showVerdict("bad", "Mauvaise réponse", { note: [{ text: verdictText, strong: true }, "0 point sur cette carte : la cagnotte est perdue."] });
+      state.vfPotential = 0;
       endCard();
       return;
     }
 
-    appendVfFeedback("good", "Bonne réponse. " + verdictText);
     state.vfPotential += 1;
     var isLast = state.vfIndex >= state.vfChain.length - 1;
     if (isLast) {
       awardPoints(state.vfPotential);
-      appendVfFeedback("good", state.vfPotential + "/" + state.vfChain.length + " ! +" + state.vfPotential + " points encaissés automatiquement.");
+      showVerdict("good", state.vfPotential + " sur " + state.vfChain.length + " !", { note: [{ text: verdictText, strong: true }, "+" + state.vfPotential + " points encaissés automatiquement."] });
       endCard();
     } else {
+      showVerdict("good", "Bonne réponse", { autoHide: true, note: [{ text: verdictText, strong: true }] });
       el("vf-potential-points").textContent = state.vfPotential + " point" + (state.vfPotential > 1 ? "s" : "") + " en jeu";
       show("vf-decision-zone");
     }
@@ -3807,11 +3819,13 @@
     journalStep("encaisse " + state.vfPotential);
     awardPoints(state.vfPotential);
     hide("vf-decision-zone");
-    appendVfFeedback("good", "Encaissé : +" + state.vfPotential + " points.");
+    hide("verdict");
+    setVerdictNote("Encaissé : +" + state.vfPotential + " point" + (state.vfPotential > 1 ? "s" : "") + ".");
     endCard();
   });
 
   el("vf-btn-continuer").addEventListener("click", function () {
+    hideVerdict();
     hide("vf-decision-zone");
     el("vf-feedback-zone").innerHTML = "";
     el("vf-feedback-zone").classList.add("hidden-screen");
@@ -3900,9 +3914,7 @@
     advanceQsjClue(false);
   });
 
-  function showQsjFeedback(kind, text) {
-    el("qsj-feedback-zone").innerHTML = '<div class="feedback ' + kind + '">' + text + "</div>";
-  }
+  function showQsjFeedback(kind, text) { setVerdictNote(text); }
 
   function checkQsjAnswer(typed) {
     var card = state.currentCard;
@@ -3910,26 +3922,32 @@
     var isCorrect = matchesAnyAnswer(typed, validAnswers);
     journalStep("réponse « " + typed + " » " + (isCorrect ? "juste" : "fausse"));
 
+    var qTeam = state.teams[state.currentTeamIndex];
+    var qBefore = qTeam.score;
     if (isCorrect) {
       var pointsEarned = POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
       awardPoints(pointsEarned);
-      showQsjFeedback("good", "Bonne réponse ! +" + pointsEarned + " points — c'était bien " + card.answer + ".");
+      showVerdict("good", "Bonne réponse", { note: [{ text: card.answer, strong: true }, "+" + pointsLabel(pointsEarned) + " · " + scoreChangeText(qTeam.name, qBefore, qTeam.score)] });
       endCard();
     } else {
       awardPoints(-1);
-      showQsjFeedback("bad", "Mauvaise réponse. −1 point.");
-      advanceQsjClue(true);
+      if (state.revealedCount >= card.clues.length) {
+        showVerdict("bad", "Mauvaise réponse", { note: ["−1 pt · " + scoreChangeText(qTeam.name, qBefore, qTeam.score), { text: "C'était " + card.answer, strong: true }] });
+        endCard();
+        return;
+      }
+      hide("qsj-answer-zone");
+      showVerdict("bad", "Mauvaise réponse", {
+        note: ["−1 pt · " + scoreChangeText(qTeam.name, qBefore, qTeam.score), "Le joueur reste secret · indice suivant"],
+        then: function () { show("qsj-answer-zone"); advanceQsjClue(true); }
+      });
     }
   }
 
   function advanceQsjClue(fromWrongAnswer) {
     var card = state.currentCard;
     if (state.revealedCount >= card.clues.length) {
-      if (!fromWrongAnswer) {
-        showQsjFeedback("bad", "Fin des indices. C'était " + card.answer + ".");
-      } else {
-        el("qsj-feedback-zone").innerHTML += '<div class="feedback bad">C\'était ' + card.answer + '.</div>';
-      }
+      showVerdict("neutral", "Fin des indices", { note: [{ text: "C'était " + card.answer, strong: true }] });
       endCard();
       return;
     }
@@ -4025,10 +4043,7 @@
     advanceLmEvent(false);
   });
 
-  function showLmFeedback(kind, text) {
-    el("lm-feedback-zone").classList.remove("hidden-screen");
-    el("lm-feedback-zone").innerHTML = '<div class="feedback ' + kind + '">' + text + "</div>";
-  }
+  function showLmFeedback(kind, text) { setVerdictNote(text); }
 
   // Vérifie que les deux équipes citées correspondent aux deux équipes de la carte,
   // dans n'importe quel ordre (les deux paires possibles sont testées).
@@ -4046,26 +4061,33 @@
     var isCorrect = matchesBothTeams(typed1, typed2, card);
     journalStep("réponse « " + typed1 + " / " + typed2 + " » " + (isCorrect ? "juste" : "fausse"));
 
+    var mTeam = state.teams[state.currentTeamIndex];
+    var mBefore = mTeam.score;
+    var matchName = card.teams[0] + " – " + card.teams[1];
     if (isCorrect) {
       var pointsEarned = POINTS_BY_INDEX[Math.min(state.lmRevealedCount - 1, POINTS_BY_INDEX.length - 1)];
       awardPoints(pointsEarned);
-      showLmFeedback("good", "Bonne réponse ! +" + pointsEarned + " points — c'était bien " + card.teams[0] + " – " + card.teams[1] + ".");
+      showVerdict("good", "Bonne réponse", { note: [{ text: matchName, strong: true }, "+" + pointsLabel(pointsEarned) + " · " + scoreChangeText(mTeam.name, mBefore, mTeam.score)] });
       endCard();
     } else {
       awardPoints(-1);
-      showLmFeedback("bad", "Mauvaise réponse. −1 point.");
-      advanceLmEvent(true);
+      if (state.lmRevealedCount >= card.events.length) {
+        showVerdict("bad", "Mauvaise réponse", { note: ["−1 pt · " + scoreChangeText(mTeam.name, mBefore, mTeam.score), { text: "C'était " + matchName, strong: true }] });
+        endCard();
+        return;
+      }
+      hide("lm-answer-zone");
+      showVerdict("bad", "Mauvaise réponse", {
+        note: ["−1 pt · " + scoreChangeText(mTeam.name, mBefore, mTeam.score), "Le match reste secret · événement suivant"],
+        then: function () { show("lm-answer-zone"); advanceLmEvent(true); }
+      });
     }
   }
 
   function advanceLmEvent(fromWrongAnswer) {
     var card = state.currentLmCard;
     if (state.lmRevealedCount >= card.events.length) {
-      if (!fromWrongAnswer) {
-        showLmFeedback("bad", "Fin des événements. C'était " + card.teams[0] + " – " + card.teams[1] + ".");
-      } else {
-        el("lm-feedback-zone").innerHTML += '<div class="feedback bad">C\'était ' + card.teams[0] + " – " + card.teams[1] + '.</div>';
-      }
+      showVerdict("neutral", "Fin des événements", { note: [{ text: "C'était " + card.teams[0] + " – " + card.teams[1], strong: true }] });
       endCard();
       return;
     }
@@ -4108,44 +4130,13 @@
     el("clue-points").textContent = pointsLabel(transfertPoints());
   }
 
-  function hideTrResult() {
-    if (state.trResultTimer) { clearTimeout(state.trResultTimer); state.trResultTimer = null; }
-    hide("tr-result");
-    el("tr-result").className = "tr-result hidden-screen";
-  }
-
-  // Écran de résultat par-dessus la carte : flash joué une fois, écart de points, score.
-  // Sans « then », il reste affiché (carte terminée) ; sinon il disparaît puis enchaîne.
+  // Transfert utilise le verdict commun : pilule + détail (points, joueur révélé ou non).
+  function hideTrResult() { hideVerdict(); }
   function showTrResult(opts) {
-    hideTrResult();
-    var box = el("tr-result");
-    var icon = opts.good
-      ? '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
-      : '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
-    var html = '<div class="tr-result-icon">' + icon + '</div>' +
-      '<div class="tr-result-title"></div>' +
-      (opts.delta ? '<div class="tr-result-delta"></div>' : "");
-    (opts.lines || []).forEach(function () { html += '<div class="tr-result-line"></div>'; });
-    box.innerHTML = html;
-    if (box.querySelector) {
-      box.querySelector(".tr-result-title").textContent = opts.title;
-      if (opts.delta) box.querySelector(".tr-result-delta").textContent = opts.delta;
-      var lineEls = box.querySelectorAll(".tr-result-line");
-      (opts.lines || []).forEach(function (line, i) {
-        lineEls[i].textContent = line.text;
-        if (line.cls) lineEls[i].classList.add(line.cls);
-      });
-    }
-    box.className = "tr-result " + (opts.good ? "good" : "bad");
-    if (opts.then) {
-      var cardAtStart = state.currentCard;
-      state.trResultTimer = setTimeout(function () {
-        state.trResultTimer = null;
-        if (state.currentCard !== cardAtStart || state.cardEnded) return;
-        hideTrResult();
-        opts.then();
-      }, opts.duration || 1900);
-    }
+    var lines = [];
+    if (opts.delta) lines.push({ text: opts.delta, strong: true });
+    (opts.lines || []).forEach(function (l) { lines.push({ text: l.text, strong: l.cls === "strong" }); });
+    showVerdict(opts.kind || (opts.good ? "good" : "bad"), opts.title, { note: lines, then: opts.then, duration: opts.duration });
   }
 
   function resetAnswerZone() {
@@ -4271,6 +4262,7 @@
       hide("tr-actions");
       showTrResult({
         good: false,
+        kind: "neutral",
         title: "Fin des indices",
         lines: [
           { text: "C'était " + card.answer, cls: "strong" },
@@ -4287,9 +4279,7 @@
     startTackleWindow();
   }
 
-  function showFeedback(kind, text) {
-    el("feedback-zone").innerHTML = '<div class="feedback ' + kind + '">' + text + "</div>";
-  }
+  function showFeedback(kind, text) { setVerdictNote(text); }
 
   function awardPoints(delta) {
     awardPointsToTeam(state.currentTeamIndex, delta);

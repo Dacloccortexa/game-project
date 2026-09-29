@@ -3,7 +3,8 @@
 ## [2026-09-29] Les éléments communs ne changent pas avec les nouvelles planches
 - Décision : à l'intégration d'une nouvelle maquette, garder tels qu'ils sont déjà intégrés les éléments communs à tous les écrans, même si la planche les dessine autrement (demandé par David). Seul le cœur propre au défi suit la planche.
 - Éléments communs concernés : bouton Quitter, logo et numéro de manche, bandeau des scores de toutes les équipes (emblèmes, « Au tour de »), bande « Priorité aux … » avec le chrono, bouton Tackle (grisé, rouge clignotant, animation d'ouverture), panneaux de saisie/confirmation et « Qui a tacklé ? », bandeaux de verdict, classement entre deux manches, classement final.
-- Exception : un élément commun ne change que si David le demande explicitement ou si une décision de ce fichier le modifie.
+- Les retours « Bonne réponse / Mauvaise réponse » (et Tackle réussi/raté, temps écoulé, fin des indices) sont **un seul élément commun** : même pilule néon posée sur le bas de la carte, même ligne de détail en dessous (points, réponse révélée ou non), pour les cinq défis.
+- Exception : un élément commun ne change que si David le demande explicitement ou si une décision de ce fichier le modifie. **Quand il change, il change pour tous les défis** : c'est le même élément dans le code (`showVerdict()` dans `index.html`).
 
 ## [2026-09-29] Plus de Tackle après la réponse de l'équipe active (Plus ou Moins, Vrai ou Faux)
 - Décision : sur Plus ou Moins et Vrai ou Faux, dès que l'équipe active répond, sa réponse est révélée immédiatement et le Tackle se ferme, comme sur Transfert, Qui suis-je et Le Match (demandé par David : « la mécanique est pareille partout »).

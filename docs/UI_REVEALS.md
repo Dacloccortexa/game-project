@@ -4,6 +4,8 @@ Cette note aligne la mise en scène des réponses entre les défis, tout en resp
 
 ## Langage visuel commun
 
+Intégré (2026-09-29) : un seul bandeau de verdict pour les cinq défis — pilule néon verte (coche), rouge (croix) ou dorée (temps écoulé, fin des indices) posée sur le bas de la carte, avec le détail dessous. Le modifier le modifie partout.
+
 - Une **bonne réponse** déclenche une coche et un bandeau vert lumineux « BONNE RÉPONSE » ; une **mauvaise réponse** déclenche une croix et un bandeau rouge lumineux « MAUVAISE RÉPONSE ». Le retour est bref, joué une seule fois, et son texte reste lisible si les animations sont réduites.
 - Garder le fond, le titre, la structure de score et l'identité propre au défi pendant ce retour. La réussite de Plus ou Moins peut être aussi punchy que la nouvelle réussite de Transfert ; il ne faut pas la remplacer par un panneau vert discret.
 - Afficher explicitement les points gagnés, perdus ou seulement **potentiels**. Le score total en haut change uniquement quand les règles attribuent réellement les points.
