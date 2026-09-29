@@ -2559,7 +2559,7 @@
     return lines.join("\n");
   }
   // Partage via le menu du téléphone (WhatsApp, Messages, e-mail…) ; sinon copie.
-  function shareJournalText(text, statusEl) {
+  function shareJournalText(text, statusEl, onSent) {
     function say(msg) { if (statusEl) statusEl.textContent = msg; }
     function copyFallback() {
       try {
@@ -2571,7 +2571,8 @@
     try {
       if (navigator.share) {
         navigator.share({ title: "TACKLE · journal de partie", text: text }).then(function () {
-          say("Journal envoyé. Merci !");
+          say("Journal envoyé et effacé du téléphone. Merci !");
+          if (onSent) onSent();
         }, function (err) {
           if (err && err.name === "AbortError") { say(""); return; }
           copyFallback();
@@ -4658,7 +4659,16 @@
   el("btn-share-journals").addEventListener("click", function () {
     var all = journalLoadAll();
     if (!all.length) return;
-    shareJournalText(all.map(journalToText).join("\n\n————————————\n\n"), el("journals-status"));
+    var sentIds = all.map(function (x) { return x.id; });
+    shareJournalText(all.map(journalToText).join("\n\n————————————\n\n"), el("journals-status"), function () {
+      // Une fois envoyé, on efface du téléphone les parties envoyées (pas les nouvelles).
+      try {
+        var left = journalLoadAll().filter(function (x) { return sentIds.indexOf(x.id) === -1; });
+        if (left.length) localStorage.setItem(JOURNAL_KEY, JSON.stringify(left));
+        else localStorage.removeItem(JOURNAL_KEY);
+      } catch (e) {}
+      refreshJournalLink();
+    });
   });
   refreshJournalLink();
 
