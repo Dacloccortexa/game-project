@@ -1526,11 +1526,11 @@
   .pom-bars i { display: block; width: 11px; border-radius: 2px 2px 0 0; }
   .pom-bars-top { right: 14px; top: 96px; }
   .pom-bars-top i { background: linear-gradient(180deg, #7fe0ff, #1c7fd6); }
-  .pom-bars-bottom { left: 12px; bottom: 16px; }
+  .pom-bars-bottom { left: 14px; bottom: 16px; opacity: .4; }
   .pom-bars-bottom i { background: linear-gradient(180deg, #ff9a7a, #b8322a); }
   .pom-glow { position: absolute; border-radius: 50%; filter: blur(28px); }
-  .pom-glow-ref { width: 220px; height: 160px; left: 30%; top: 96px; background: radial-gradient(circle, rgba(70,190,255,.55), transparent 70%); }
-  .pom-glow-next { width: 220px; height: 160px; right: 30%; bottom: 30px; background: radial-gradient(circle, rgba(255,110,80,.5), transparent 70%); }
+  .pom-glow-ref { width: 240px; height: 170px; left: -4%; top: 90px; background: radial-gradient(circle, rgba(70,190,255,.55), transparent 70%); }
+  .pom-glow-next { width: 240px; height: 170px; right: -4%; bottom: 20px; background: radial-gradient(circle, rgba(255,110,80,.5), transparent 70%); }
 
   .pom-head { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 12px 12px 0; text-align: center; }
   .pom-title { margin: 0; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 34px; line-height: 1; text-transform: uppercase; letter-spacing: .01em; }
@@ -1544,10 +1544,12 @@
   }
   .pom-step::before, .pom-step::after { content: ""; flex: 1; height: 1px; background: rgba(127,211,255,.5); }
 
-  .pom-duel { position: relative; display: flex; flex-direction: column; padding: 10px 16px 76px; gap: 0; }
+  .pom-duel { position: relative; display: flex; flex-direction: column; padding: 8px 16px 72px; gap: 0; }
   .pom-player { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 0; max-width: 78%; }
-  .pom-player.ref { align-self: flex-end; margin-right: 13%; }
-  .pom-player.next { align-self: flex-start; margin-left: 15%; }
+  /* Le trait lumineux sépare la zone bleue (en haut à gauche) de la zone corail (en bas à droite) :
+     chaque joueur est placé entièrement dans sa zone. */
+  .pom-player.ref { align-self: flex-start; align-items: flex-start; text-align: left; margin-left: 4%; }
+  .pom-player.next { align-self: flex-end; align-items: flex-end; text-align: right; margin-right: 4%; }
   .pom-first { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #dfe9f5; }
   .pom-last { font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 30px; line-height: 1; text-transform: uppercase; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,.7); overflow-wrap: anywhere; }
   .pom-value {
@@ -1562,7 +1564,7 @@
   .next .pom-value.hidden-value { color: #2a0806; }
   .next .pom-value.revealed { animation: pom-reveal .45s ease-out 1; }
   @keyframes pom-reveal { from { transform: skewX(-10deg) scale(.6); opacity: 0; } to { transform: skewX(-10deg) scale(1); opacity: 1; } }
-  .pom-vs { align-self: center; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 38px; color: #f2f6fb; text-shadow: 0 0 14px rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.4); line-height: 1; margin: 2px 0 4px; }
+  .pom-vs { align-self: center; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 38px; color: #f2f6fb; text-shadow: 0 0 14px rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.4); line-height: 1; margin: 6px 0 10px; }
 
   /* Bandeau de verdict façon maquette : pilule sombre à contour néon, grosse icône qui déborde,
      texte lumineux et traits de vitesse de chaque côté. */
