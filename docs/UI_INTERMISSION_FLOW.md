@@ -10,7 +10,7 @@ Maquette de l'écran affiché **après que toutes les équipes ont joué leur ca
 
 ## Fonctionnement
 
-- Montrer **toutes les équipes classées par score**, avec logo, nom et points. Les scores négatifs restent visibles. La première place reçoit l'encadré doré. En cas d'égalité, ne pas faire croire qu'une équipe a gagné le départage si la règle ne le prévoit pas.
+- Ne mettre aucun sous-titre sous « Classement » sur l’écran. Montrer **toutes les équipes classées par score**, avec logo, nom et points. Les scores négatifs restent visibles. La première place reçoit l'encadré doré. En cas d'égalité, ne pas faire croire qu'une équipe a gagné le départage si la règle ne le prévoit pas.
 - Faire apparaître le classement une seule fois, de la dernière place à la première, puis mettre la tête du classement en valeur par une brève lumière dorée. Le GIF est un aperçu qui boucle ; **dans l'application, l'animation joue une seule fois** et doit pouvoir être passée par un appui.
 - Sous le classement, annoncer le numéro de la prochaine manche et **l'équipe qui y jouera en premier**, d'après l'ordre de jeu réel. Le fait qu'elle joue en premier n'impose aucun porteur de téléphone.
 - Le bouton **« C'est parti ! »** lance la manche suivante. Ne pas avancer automatiquement pendant que les équipes regardent les scores. Il devient utilisable au plus tard à la fin de la courte animation.
