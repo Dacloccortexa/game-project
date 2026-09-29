@@ -2,7 +2,7 @@
 
 ## [2026-09-29] Bandeau des scores : le logo suffit, plus de nom d'équipe
 - Demande de David : enlever le nom des équipes dans le bandeau des scores pendant la partie, le logo suffit.
-- Décision : chaque case affiche seulement **logo + score**, centrés. Le logo passe de 20 à 26 px et reste affiché sur tous les écrans et à 4 équipes (plus besoin de le masquer faute de place). Hauteur inchangée : 34 px.
+- Décision : chaque case affiche seulement **le logo, calé à gauche, et le score, calé à droite** (demande de David, 21 h 08 ; d'abord centrés). Le logo passe de 20 à 26 px et reste affiché sur tous les écrans et à 4 équipes (plus besoin de le masquer faute de place). Hauteur inchangée : 34 px.
 - Conséquence : plus aucun nom coupé avec « … », même à 4 équipes sur un 320 px. Le nom complet reste dans l'étiquette lue par les lecteurs d'écran (et en infobulle).
 - Le classement entre deux manches et le classement final gardent les noms.
 - Remplace la partie « logo · nom · score » de la décision « Bandeau des scores réduit de moitié » ci-dessous.

@@ -1149,7 +1149,7 @@
     letter-spacing: .2em; text-transform: uppercase; color: var(--chalk);
   }
 
-  /* Bandeau des scores : une seule ligne fine, logo + score (pas de nom, pas de « pts »).
+  /* Bandeau des scores : une seule ligne fine, logo à gauche, score à droite (pas de nom, pas de « pts »).
      L'équipe qui joue est signalée par l'encadré doré ; le nom reste lu par les lecteurs d'écran. */
   #scoreboard.scoreboard {
     display: grid;
@@ -1158,9 +1158,9 @@
     margin: 0;
   }
   #scoreboard .score-chip {
-    display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 8px;
+    display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 8px;
     min-width: 0; min-height: 34px;
-    padding: 3px 8px;
+    padding: 3px 10px 3px 4px;
     border-radius: 10px;
     border: 1px solid rgba(248,246,237,.2);
     background: rgba(3,17,12,.78);
@@ -1169,7 +1169,7 @@
   #scoreboard .score-chip::before { content: none; }
   #scoreboard .score-chip.active {
     border: 2px solid var(--gold-ring);
-    padding: 2px 7px;
+    padding: 2px 9px 2px 3px;
     background: rgba(23,56,38,.92);
     box-shadow: 0 0 12px rgba(242,191,84,.25);
   }
@@ -2452,7 +2452,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2100";
+  var APP_VERSION = "2026.09.29-2109";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
