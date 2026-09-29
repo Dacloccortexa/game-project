@@ -1,5 +1,7 @@
 # Vrai ou Faux — identité « verdict d'arbitre »
 
+Statut : **intégré dans `index.html`** (2026-09-29), à vérifier sur un vrai téléphone. Carte : fond de stade, cadre VAR, badge « VAR », titre, « Affirmation n / 5 », affirmation, cagnotte potentielle (0 à 5 pts). Les boutons VRAI (vert, à gauche) et FAUX (corail, à droite) restent sous le chrono, comme les commandes des autres défis ; ils disparaissent pendant la course au Tackle. Fonds servis en WebP : `assets/ui/web/vf-stadium-panel.webp`.
+
 La [planche de question](ui/24-vrai-ou-faux-var-question.jpg) est la référence visuelle validée. Le [pack graphique séparé](../assets/ui/vrai-ou-faux/README.md) et son [aperçu assemblé](../assets/ui/vrai-ou-faux/preview.html) permettent d'intégrer le décor sans figer les affirmations ni les scores dans une image.
 
 ## Carte centrale

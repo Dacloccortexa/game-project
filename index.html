@@ -1658,6 +1658,85 @@
   #screen-play .card-stage { padding-bottom: 38px; }
   .pom-duel { padding-bottom: 40px !important; }
 
+  /* ---------- Vrai ou Faux : identité « verdict d'arbitre » (assets/ui/vrai-ou-faux/) ---------- */
+  .vf-card {
+    --vf-gold: #f1c66c;
+    position: relative; isolation: isolate; overflow: hidden;
+    border-radius: 18px;
+    background: #0a100e url("assets/ui/web/vf-stadium-panel.webp") center / cover no-repeat;
+    color: #fff9eb; text-align: center;
+    padding: 12px 16px 36px;
+    box-shadow: 0 14px 30px rgba(0,0,0,.45);
+  }
+  .vf-card::before { content: ""; position: absolute; inset: 0; z-index: -2; background: linear-gradient(rgba(6,10,8,.55) 0%, rgba(11,16,11,.7) 40%, rgba(11,16,11,.35) 75%, rgba(6,16,8,.7) 100%); }
+  .vf-frame { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none; opacity: .85; }
+  .vf-topline { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--vf-gold); }
+  .vf-topline::before, .vf-topline::after { content: ""; width: min(22%, 80px); height: 2px; background: var(--vf-gold); opacity: .8; }
+  .vf-badge { display: inline-block; border: 2px solid var(--vf-gold); padding: 2px 8px; font-family: var(--font-cond); font-weight: 700; font-size: 15px; letter-spacing: .08em; }
+  .vf-title { margin: 6px 0 0; font-family: var(--font-cond); font-weight: 700; font-size: clamp(32px, 9.5vw, 40px); line-height: 1; letter-spacing: .02em; text-transform: uppercase; text-shadow: 0 2px 12px #000; }
+  .vf-title em { color: var(--vf-gold); font-style: normal; font-size: .78em; }
+  .vf-progress { margin: 5px 0 10px; color: #e6e4db; font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+  .vf-statement {
+    display: grid; place-items: center; min-height: 118px; margin: 0 2px 10px; padding: 14px 14px;
+    border: 1px solid rgba(171,165,148,.55); border-radius: 12px;
+    background: rgba(16,23,22,.85); box-shadow: inset 0 0 35px rgba(255,255,255,.04), 0 10px 30px rgba(0,0,0,.45);
+  }
+  .vf-statement p { margin: 0; font-size: clamp(19px, 5.4vw, 24px); font-weight: 800; line-height: 1.28; text-wrap: balance; overflow-wrap: anywhere; }
+  .vf-bank {
+    display: flex; align-items: center; justify-content: center; gap: 9px;
+    width: max-content; max-width: 100%; margin: 0 auto; padding: 5px 6px 5px 10px;
+    border: 1px solid #b79653; border-radius: 10px; background: rgba(17,23,17,.92);
+    color: var(--vf-gold); font-weight: 800; font-size: 13px; letter-spacing: .1em; text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(210,168,73,.26);
+  }
+  .vf-bank img { width: 26px; height: 26px; flex: none; }
+  .vf-bank strong { padding: 3px 9px; border: 1px solid #e9bc5f; border-radius: 6px; background: #3a2b13; color: #ffe194; font-family: var(--font-cond); font-size: 20px; letter-spacing: .02em; white-space: nowrap; }
+  .vf-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .vf-choice {
+    position: relative; min-width: 0; min-height: 112px; border: 0; padding: 58px 8px 12px;
+    color: #fff; font-family: var(--font-cond); font-weight: 700; font-size: clamp(28px, 8.4vw, 36px); letter-spacing: .03em; text-transform: uppercase;
+    text-shadow: 0 2px 7px rgba(0,0,0,.5); cursor: pointer; background: center / 100% 100% no-repeat;
+  }
+  .vf-choice--true { background-image: url("assets/ui/vrai-ou-faux/choice-true.svg"); }
+  .vf-choice--false { background-image: url("assets/ui/vrai-ou-faux/choice-false.svg"); }
+  .vf-choice:active { transform: translateY(2px); }
+  .vf-choice:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  @media (max-width: 360px) { .vf-card { padding-inline: 10px; } .vf-statement { min-height: 100px; } .vf-choices { gap: 6px; } .vf-choice { min-height: 100px; padding-top: 52px; } }
+
+  /* ---------- Qui suis-je ? : identité « tableau tactique » (assets/ui/qui-suis-je/) ---------- */
+  .qsj-board {
+    position: relative; overflow: hidden;
+    border-radius: 12px;
+    background: #092116 url("assets/ui/web/qsj-tactics-board.webp") center / 100% 100% no-repeat;
+    color: #fdf5d8; text-align: center;
+    padding: 20px 8.5% 40px;
+    box-shadow: 0 14px 30px rgba(0,0,0,.45);
+  }
+  .qsj-title {
+    display: grid; place-items: center; min-height: 54px; margin: 0 -2% 6px;
+    background: url("assets/ui/qui-suis-je/title-ribbon.svg") center / 100% 100% no-repeat;
+    transform: rotate(-2deg);
+  }
+  .qsj-title span { color: #0a1310; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: clamp(28px, 8vw, 36px); line-height: 1; text-transform: uppercase; text-shadow: 0 1px #ffe8a0; }
+  .qsj-mystery { display: grid; place-items: center; width: min(58%, 220px); height: 84px; margin: 0 auto 8px; padding: 0 8px; background: url("assets/ui/qui-suis-je/mystery-plate.svg") center / 100% 100% no-repeat; }
+  .qsj-mystery-mark { color: #ffe3a0; font-family: var(--font-cond); font-weight: 700; font-size: 66px; line-height: 1; text-shadow: 0 0 20px #ffca59; }
+  .qsj-mystery-mark.revealed { font-size: clamp(18px, 5.4vw, 24px); line-height: 1.1; text-transform: uppercase; overflow-wrap: anywhere; animation: qsj-reveal .45s ease-out 1; }
+  @keyframes qsj-reveal { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: none; } }
+  .qsj-list { display: flex; flex-direction: column; gap: 5px; list-style: none; margin: 0; padding: 0; }
+  .qsj-clue {
+    display: flex; align-items: center; height: 42px; padding: 2px 7% 2px 8%; /* hauteur fixe : la liste ne bouge pas */
+    background: center / 100% 100% no-repeat; text-align: left;
+    font-family: var(--font-cond); font-weight: 700; font-size: clamp(14px, 4.2vw, 17px); line-height: 1.05; letter-spacing: .01em;
+  }
+  .qsj-clue--past { background-image: url("assets/ui/qui-suis-je/clue-past.svg"); color: #111b15; }
+  .qsj-clue--current { background-image: url("assets/ui/qui-suis-je/clue-current.svg"); color: #0d1811; padding-right: 3%; justify-content: space-between; gap: 6px; }
+  .qsj-clue--current.new { animation: mercato-in .45s ease-out 1; }
+  .qsj-clue--locked { background-image: url("assets/ui/qui-suis-je/clue-locked.svg"); color: #838b85; padding-left: 13%; font-size: clamp(12px, 3.6vw, 14px); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+  .qsj-clue-copy { min-width: 0; overflow-wrap: anywhere; }
+  .qsj-clue-points { flex: none; width: 17%; text-align: center; color: #ffe083; font-size: clamp(14px, 4.2vw, 18px); white-space: nowrap; }
+  @media (max-width: 360px) { .qsj-board { padding-inline: 7%; } .qsj-mystery { height: 72px; } .qsj-mystery-mark { font-size: 56px; } .qsj-clue { height: 40px; } }
+  @media (prefers-reduced-motion: reduce) { .qsj-clue--current.new, .qsj-mystery-mark.revealed { animation: none; } }
+
   /* ---------- Transfert : identité « mercato » (assets/ui/mercato/) ---------- */
   .mercato-card {
     --mercato-orange: #ff8a12;
@@ -2000,17 +2079,22 @@
     </div>
 
     <!-- Vrai ou Faux -->
-    <div class="card-stage hidden-screen" id="stage-vf">
-      <div class="clue-points" id="vf-progress"></div>
-      <div class="typed" id="vf-statement-text" style="font-size:19px; line-height:1.35;"></div>
+    <!-- Vrai ou Faux : identité « verdict d'arbitre » (assets/ui/vrai-ou-faux/, docs/UI_VRAI_FAUX_FLOW.md) -->
+    <div class="vf-card hidden-screen" id="stage-vf">
+      <img class="vf-frame" src="assets/ui/vrai-ou-faux/var-frame.svg" alt="" aria-hidden="true">
+      <div class="vf-topline" aria-hidden="true"><span class="vf-badge">VAR</span></div>
+      <h3 class="vf-title">Vrai <em>ou</em> Faux</h3>
+      <p class="vf-progress" id="vf-progress">Affirmation 1 / 5</p>
+      <div class="vf-statement"><p id="vf-statement-text"></p></div>
+      <div class="vf-bank"><img src="assets/ui/vrai-ou-faux/bank-coin.svg" width="26" height="26" alt=""><span>Cagnotte</span><strong id="vf-bank-points">0 pt</strong></div>
     </div>
 
     <div id="vf-feedback-zone" class="hidden-screen"></div>
 
     <div id="vf-answer-zone" class="hidden-screen">
-      <div class="answer-btns">
-        <button class="btn-pass" id="btn-vf-faux">FAUX</button>
-        <button class="btn-answer" id="btn-vf-vrai">VRAI</button>
+      <div class="vf-choices">
+        <button type="button" class="vf-choice vf-choice--true" id="btn-vf-vrai">Vrai</button>
+        <button type="button" class="vf-choice vf-choice--false" id="btn-vf-faux">Faux</button>
       </div>
     </div>
 
@@ -2043,9 +2127,11 @@
     </div>
 
     <!-- Qui suis-je ? (100 fiches sourcées) -->
-    <div class="card-stage hidden-screen" id="stage-qsj">
-      <div class="clue-points" id="qsj-points">Cet indice vaut 5 points</div>
-      <div class="clue-list" id="qsj-clue-list"></div>
+    <!-- Qui suis-je ? : identité « tableau tactique » (assets/ui/qui-suis-je/, docs/UI_QUI_SUIS_JE_FLOW.md) -->
+    <div class="qsj-board hidden-screen" id="stage-qsj">
+      <h3 class="qsj-title"><span>Qui suis-je ?</span></h3>
+      <div class="qsj-mystery"><span class="qsj-mystery-mark" id="qsj-mystery">?</span></div>
+      <ol class="qsj-list" id="qsj-clue-list" aria-label="Indices"></ol>
     </div>
 
     <div id="qsj-feedback-zone"></div>
@@ -2490,7 +2576,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2156";
+  var APP_VERSION = "2026.09.29-2216";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3292,7 +3378,7 @@
     el("minigame-name").textContent = minigameLabel;
     el("minigame-subtitle").textContent = MINIGAME_SUBTITLES[minigameLabel] || "";
     // Plus ou Moins porte son propre titre dans la carte.
-    el("screen-play").classList.toggle("no-title", minigameLabel === "Plus ou Moins" || minigameLabel === "Transfert");
+    el("screen-play").classList.toggle("no-title", minigameLabel === "Plus ou Moins" || minigameLabel === "Transfert" || minigameLabel === "Vrai ou Faux" || minigameLabel === "Qui suis-je ?");
     hide("next-card-zone");
     renderScoreboard();
   }
@@ -4017,8 +4103,15 @@
 
   function renderVfStatement() {
     var statement = state.vfChain[state.vfIndex];
-    el("vf-progress").textContent = "Affirmation " + (state.vfIndex + 1) + "/" + state.vfChain.length;
+    el("vf-progress").textContent = "Affirmation " + (state.vfIndex + 1) + " / " + state.vfChain.length;
     el("vf-statement-text").textContent = statement.affirmation;
+    renderVfBank();
+  }
+
+  // Cagnotte potentielle affichée dans la carte (distincte du score déjà acquis).
+  function renderVfBank() {
+    var n = state.vfPotential || 0;
+    el("vf-bank-points").textContent = n + " pt" + (n > 1 ? "s" : "");
   }
 
   function showVfFeedback(kind, text) { setVerdictNote(text); }
@@ -4101,11 +4194,13 @@
       awardPoints(0);
       showVerdict("bad", "Mauvaise réponse", { note: [{ text: verdictText, strong: true }, "0 point sur cette carte : la cagnotte est perdue."] });
       state.vfPotential = 0;
+      renderVfBank();
       endCard();
       return;
     }
 
     state.vfPotential += 1;
+    renderVfBank();
     var isLast = state.vfIndex >= state.vfChain.length - 1;
     if (isLast) {
       awardPoints(state.vfPotential);
@@ -4155,25 +4250,42 @@
     startTackleWindow(); // même bouton Tackle : 30 secondes réservées, puis 15 secondes ouvertes
   }
 
+  // Cinq fiches à hauteur fixe : passées (papier crème), courante (dorée + palier), futures verrouillées.
   function renderQsjClues() {
     var card = state.currentCard;
     var list = el("qsj-clue-list");
     list.innerHTML = "";
-
+    var mark = el("qsj-mystery");
+    if (!state.cardEnded) { mark.textContent = "?"; mark.classList.remove("revealed"); }
+    var current = state.revealedCount - 1;
     for (var i = 0; i < card.clues.length; i++) {
-      var clueDiv = document.createElement("div");
-      if (i < state.revealedCount) {
-        clueDiv.className = "clue";
-        clueDiv.textContent = card.clues[i];
+      var li = document.createElement("li");
+      var copy = document.createElement("span");
+      copy.className = "qsj-clue-copy";
+      if (i < state.revealedCount && card.clues[i] !== undefined) {
+        li.className = "qsj-clue " + (i === current ? "qsj-clue--current" + (i > 0 ? " new" : "") : "qsj-clue--past");
+        copy.textContent = (i + 1) + " · " + String(card.clues[i]).replace(/\.\s*$/, "");
+        li.appendChild(copy);
+        if (i === current) {
+          var pts = document.createElement("span");
+          pts.className = "qsj-clue-points";
+          pts.textContent = pointsLabel(POINTS_BY_INDEX[Math.min(i, POINTS_BY_INDEX.length - 1)]);
+          li.appendChild(pts);
+        }
       } else {
-        clueDiv.className = "clue hidden";
-        clueDiv.textContent = "?";
+        li.className = "qsj-clue qsj-clue--locked";
+        copy.textContent = (i + 1) + " · Indice à venir";
+        li.appendChild(copy);
       }
-      list.appendChild(clueDiv);
+      list.appendChild(li);
     }
-
-    var pointsForCurrent = POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
-    el("qsj-points").textContent = "Cet indice vaut " + pointsForCurrent + " point" + (pointsForCurrent > 1 ? "s" : "");
+  }
+  // Fin de carte : le nom réel s'affiche en texte sur la plaque, sans portrait.
+  function revealQsjName() {
+    var mark = el("qsj-mystery");
+    if (!state.currentCard) return;
+    mark.textContent = state.currentCard.answer;
+    mark.classList.add("revealed");
   }
 
   function resetQsjAnswerZone() {
@@ -4606,6 +4718,7 @@
   function endCard() {
     state.cardEnded = true;
     setRace(false);
+    if (state.currentRoundMinigame === "quisuisje") revealQsjName();
     journalEndCard();
     clearTackleTimer();
     hideTackleUI();

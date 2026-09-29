@@ -1,5 +1,13 @@
 # DECISIONS.md
 
+## [2026-09-29] Vrai ou Faux (« VAR ») et Qui suis-je ? (« tableau tactique ») : identités intégrées
+- Packs fournis : `assets/ui/vrai-ou-faux/` (planche 24) et `assets/ui/qui-suis-je/` (planche 25). Seule la carte centrale de chaque défi change ; en-tête, bandeau des scores, chrono « Priorité », bouton Tackle, panneaux Tackle, bandeau de verdict et classements restent les éléments communs.
+- Vrai ou Faux : cadre VAR sur fond de stade, badge « VAR » (ambiance seulement, pas de vidéo), titre « Vrai ou Faux » dans la carte (le titre commun au-dessus est masqué, comme Transfert et Plus ou Moins), « Affirmation n / 5 », affirmation en grand, **cagnotte potentielle** dans la carte (distincte des scores). Boutons VRAI (vert, coche) à gauche et FAUX (corail, croix) à droite, sous le chrono : ordre inversé par rapport à avant (FAUX était à gauche) pour suivre la planche. Les couleurs désignent le choix, jamais la bonne réponse.
+- Qui suis-je ? : tableau tactique, bandeau papier « Qui suis-je ? », plaque « ? », cinq fiches à **hauteur fixe** (42 px) pour que la liste ne bouge pas : passées en papier crème, courante dorée avec son palier (5 → 1 pt), futures verrouillées « Indice à venir » sans rien révéler. Les fiches reprennent les phrases vérifiées des données (« J'ai joué à Real Madrid »), sans le point final. En fin de carte, le **nom réel s'affiche en texte** sur la plaque (aucun portrait) ; il redevient « ? » à la carte suivante. RÉPONDRE / PASSER : commandes communes inchangées.
+- Mise en page : les deux cartes tiennent au-dessus du bouton Tackle sur 390 × 844 (Vrai ou Faux : boutons jusqu'à 672 px ; Qui suis-je ? : jusqu'à 722 px, Tackle à 767 px). Sur 320 × 568, la page défile comme les autres défis.
+- Images : fonds convertis en WebP (`web/vf-stadium-panel.webp` 49 Ko, `web/qsj-tactics-board.webp` 71 Ko) ; les SVG du pack sont utilisés tels quels.
+- Le Match garde pour l'instant son ancienne carte, en attendant son pack.
+
 ## [2026-09-29] Plus ou Moins : silhouettes anonymes du duel intégrées
 - Les silhouettes fournies (`assets/ui/pom-player-blue.png`, `pom-player-coral.png`) remplacent l'absence de joueur : bleue en haut à gauche, corail en bas à droite, comme sur la planche 16, avec un fondu en bas pour se fondre dans la carte.
 - Les noms et valeurs passent du côté opposé à leur silhouette : joueur de référence à droite dans la zone bleue, joueur suivant à gauche dans la zone corail (devant les barres).

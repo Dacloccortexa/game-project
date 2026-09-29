@@ -1,5 +1,7 @@
 # Qui suis-je ? — identité « tableau tactique »
 
+Statut : **intégré dans `index.html`** (2026-09-29), à vérifier sur un vrai téléphone. Carte : tableau tactique, bandeau « Qui suis-je ? », plaque « ? », cinq fiches à hauteur fixe (passées crème, courante dorée avec son palier, futures verrouillées « Indice à venir »). En fin de carte (bonne réponse, Tackle, fin des indices), le nom réel s'affiche en texte sur la plaque. Les fiches gardent les phrases vérifiées des données (« J'ai joué à … », sans point final). RÉPONDRE / PASSER restent les commandes communes sous le chrono. Fond servi en WebP : `assets/ui/web/qsj-tactics-board.webp`.
+
 La [planche d'indice 3](ui/25-qui-suis-je-indice-3.jpg) est la référence visuelle validée. Le [pack d'éléments séparés](../assets/ui/qui-suis-je/README.md) contient le tableau, les fiches et le bandeau ; son [aperçu assemblé](../assets/ui/qui-suis-je/preview.html) montre les cinq paliers.
 
 Le centre du défi évoque le tableau tactique et la fiche d'un recruteur : un joueur mystère représenté par **`?`**, puis cinq fiches. Les fiches passées restent visibles, la fiche courante est dorée avec sa valeur, les suivantes sont verrouillées sans révéler leur contenu. Aucun portrait, blason ou numéro de joueur n'est nécessaire.
