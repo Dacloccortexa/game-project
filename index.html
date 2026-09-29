@@ -2956,18 +2956,7 @@
     clearTackleTimer();
     hideTackleUI();
     if (isBinaryGame()) {
-      var activeAnswered = state.currentRoundMinigame === "plusoumoins"
-        ? (state.pomPendingDirection !== null && state.pomPendingDirection !== undefined)
-        : (state.vfPendingAnswer !== null && state.vfPendingAnswer !== undefined);
-      if (activeAnswered) {
-        // L'équipe active avait déjà verrouillé sa réponse : personne n'a tacklé pendant
-        // les 45 secondes, la réponse se révèle donc normalement (juste ou fausse).
-        hide("pom-pending-zone");
-        hide("vf-pending-zone");
-        if (state.currentRoundMinigame === "plusoumoins") resolvePomGuess(null);
-        else resolveVfStatement(null);
-        return;
-      }
+      // Personne n'a répondu ni tacklé : la cagnotte déjà accumulée est encaissée.
       var points = state.currentRoundMinigame === "plusoumoins" ? state.pomPotential : state.vfPotential;
       awardPoints(points);
       if (state.currentRoundMinigame === "plusoumoins") {
@@ -3220,22 +3209,14 @@
   // séparée : le Tackle commun (30 secondes grisées puis 15 ouvertes) continue de
   // courir depuis le début de la comparaison, que l'équipe active ait déjà répondu
   // ou non — voir DECISIONS.md du 2026-09-28 (« Tackle commun uniquement »).
+  // Comme sur les autres défis : dès que l'équipe active répond, le chrono s'arrête,
+  // le Tackle se ferme et la réponse est jugée tout de suite (DECISIONS.md, 2026-09-29).
   function pomGuess(direction) {
     state.pomPendingDirection = direction;
     hide("pom-answer-zone");
-
-    if (state.teams.length < 2) {
-      // Personne pour tackler en solo : on révèle directement.
-      clearTackleTimer();
-      hideTackleUI();
-      resolvePomGuess(null);
-      return;
-    }
-
-    el("pom-pending-label").textContent = state.teams[state.currentTeamIndex].name +
-      " a verrouillé sa réponse (" + (direction === "plus" ? "+ Plus" : "− Moins") +
-      "). Le Tackle peut encore arriver avant la révélation.";
-    show("pom-pending-zone");
+    clearTackleTimer();
+    hideTackleUI();
+    resolvePomGuess();
   }
 
   el("pom-btn-plus").addEventListener("click", function () { pomGuess("plus"); });
@@ -3250,6 +3231,7 @@
     var nextValue = chain[state.pomIndex + 1].value;
     var actualDirection = nextValue > refValue ? "plus" : "moins";
     var isActiveCorrect = state.pomPendingDirection === actualDirection;
+    state.pomPendingDirection = null;
 
     state.pomIndex += 1;
     renderPomChain();
@@ -3378,22 +3360,13 @@
   el("btn-vf-vrai").addEventListener("click", function () { vfAnswer(true); });
   el("btn-vf-faux").addEventListener("click", function () { vfAnswer(false); });
 
+  // Comme sur les autres défis : la réponse de l'équipe active ferme le Tackle et se révèle tout de suite.
   function vfAnswer(isVraiChoice) {
     state.vfPendingAnswer = isVraiChoice;
     hide("vf-answer-zone");
-
-    if (state.teams.length < 2) {
-      // Personne pour tackler en solo : on révèle directement.
-      clearTackleTimer();
-      hideTackleUI();
-      resolveVfStatement(null);
-      return;
-    }
-
-    el("vf-pending-label").textContent = state.teams[state.currentTeamIndex].name +
-      " a répondu " + (isVraiChoice ? "VRAI" : "FAUX") +
-      ". Le Tackle peut encore arriver avant la révélation.";
-    show("vf-pending-zone");
+    clearTackleTimer();
+    hideTackleUI();
+    resolveVfStatement();
   }
 
   // Révèle la réponse verrouillée de Vrai ou Faux quand personne n'a tacklé pendant
@@ -3401,6 +3374,7 @@
   function resolveVfStatement() {
     var statement = state.vfChain[state.vfIndex];
     var isActiveCorrect = (state.vfPendingAnswer === statement.est_vraie);
+    state.vfPendingAnswer = null;
     var verdictText = "C'était " + (statement.est_vraie ? "VRAI" : "FAUX") + ".";
     if (!statement.est_vraie) {
       // Ne doit jamais bloquer la révélation même si une donnée est incomplète.

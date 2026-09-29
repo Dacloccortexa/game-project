@@ -151,17 +151,30 @@ advance(15000);
 assert.equal(state.teams[0].score, 2);
 assert.equal(state.cardEnded, true);
 
+// Réponse de l'équipe active : jugée tout de suite, le Tackle se ferme (plus de Tackle après une réponse).
 reset('plusoumoins');
 state.pomIndex = 0;
 state.pomPotential = 0;
 startTackleWindow();
 pomGuess('plus');
-assert.equal(element('btn-tackle').disabled, true);
-advance(30000);
-assert.equal(element('btn-tackle').disabled, false);
-advance(15000);
 assert.equal(state.pomPotential, 1);
 assert.equal(state.cardEnded, false);
+assert.equal(element('btn-tackle').classList.contains('hidden-screen'), true);
+advance(45000);
+assert.equal(state.pomPotential, 1);
+assert.equal(state.teams[0].score, 0);
+assert.equal(state.cardEnded, false);
+
+// Même chose après le sifflet : l'équipe active répond pendant les 15 secondes ouvertes.
+reset('plusoumoins');
+state.pomIndex = 0;
+state.pomPotential = 0;
+startTackleWindow();
+advance(31000);
+pomGuess('moins');
+assert.equal(state.cardEnded, true);
+assert.equal(state.teams[0].score, 0);
+assert.equal(element('btn-tackle').classList.contains('hidden-screen'), true);
 
 reset('vraifaux');
 state.vfChain = [{affirmation:'Un fait',est_vraie:false},{affirmation:'Autre fait',est_vraie:true}];
@@ -175,29 +188,27 @@ element('tackle-binary-choice-2').click();
 assert.equal(state.teams[0].score, 0);
 assert.equal(state.teams[1].score, 3);
 
+// Vrai ou Faux : la réponse active est révélée tout de suite, aucun Tackle ensuite.
 reset('vraifaux');
 state.vfIndex = 0;
 state.vfPotential = 2;
 startTackleWindow();
 vfAnswer(false);
-assert.equal(element('btn-tackle').disabled, true);
-advance(30000);
-assert.equal(element('btn-tackle').disabled, false);
-element('btn-tackle').click();
-element('tackle-team-buttons').children.at(-1).click();
-element('tackle-binary-choice-2').click();
-assert.equal(state.teams[1].score, 3);
+assert.equal(state.vfPotential, 3);
+assert.equal(state.cardEnded, false);
+assert.equal(element('btn-tackle').classList.contains('hidden-screen'), true);
+advance(45000);
+assert.equal(state.vfPotential, 3);
 assert.equal(state.teams[0].score, 0);
-assert.equal(state.cardEnded, true);
+assert.equal(state.teams[1].score, 0);
 
 reset('vraifaux');
 state.vfIndex = 0;
 state.vfPotential = 2;
 startTackleWindow();
-vfAnswer(false);
-advance(30000);
-advance(15000);
-assert.equal(state.vfPotential, 3);
-assert.equal(state.cardEnded, false);
+advance(31000);
+vfAnswer(true);
+assert.equal(state.cardEnded, true);
+assert.equal(state.teams[0].score, 0);
 
 console.log('Tackle timing and scoring scenarios passed');

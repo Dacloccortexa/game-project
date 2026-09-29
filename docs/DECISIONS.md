@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-09-29] Plus de Tackle après la réponse de l'équipe active (Plus ou Moins, Vrai ou Faux)
+- Décision : sur Plus ou Moins et Vrai ou Faux, dès que l'équipe active répond, sa réponse est révélée immédiatement et le Tackle se ferme, comme sur Transfert, Qui suis-je et Le Match (demandé par David : « la mécanique est pareille partout »).
+- Remplace : la règle du 2026-09-28 où une réponse active verrouillée attendait la fin des 45 secondes et pouvait encore être tacklée.
+- Impact technique : `pomGuess()` et `vfAnswer()` arrêtent le chrono et révèlent tout de suite ; la zone « réponse verrouillée » n'est plus utilisée. Sans réponse ni Tackle au bout des 45 secondes, la cagnotte est encaissée (inchangé). Le test `tests/tackle-timing.test.cjs` suit la nouvelle règle.
+
 ## [2026-09-29] Bouton Tackle clignotant et vibrations
 - Décision : pendant les 15 secondes ouvertes, le bouton Tackle clignote ; le téléphone vibre brièvement (deux fois) au départ de chaque chrono et plus longuement à l'ouverture du Tackle (demandé par David).
 - Raison : rendre les deux moments perceptibles sans regarder l'écran, en complément des deux sifflets.
