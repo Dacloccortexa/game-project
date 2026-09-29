@@ -12,7 +12,7 @@
 - Fin de carte : les deux équipes remplacent « ? vs ? », en texte, sans blason ni drapeau ; « ? vs ? » revient à la carte suivante.
 - Le titre commun au-dessus de la carte est désormais masqué pour les cinq défis, puisque chacun porte son titre dans sa carte.
 - Mise en page : tient au-dessus du bouton Tackle sur 390 × 844 (boutons jusqu'à 724 px, Tackle à 767 px).
-- Ajustement demandé par David (23 h 47) : « ? vs ? » réduit (points d'interrogation 56 → 42 px, « vs » 22 → 19 px) ; la carte gagne 14 px de hauteur.
+- Ajustement demandé par David (23 h 47) : « ? vs ? » réduit en deux fois (points d'interrogation 56 → 42 → 30 px, « vs » 22 → 19 → 16 px) ; la carte gagne 26 px de hauteur.
 
 ## [2026-09-29] Vrai ou Faux (« VAR ») et Qui suis-je ? (« tableau tactique ») : identités intégrées
 - Packs fournis : `assets/ui/vrai-ou-faux/` (planche 24) et `assets/ui/qui-suis-je/` (planche 25). Seule la carte centrale de chaque défi change ; en-tête, bandeau des scores, chrono « Priorité », bouton Tackle, panneaux Tackle, bandeau de verdict et classements restent les éléments communs.
