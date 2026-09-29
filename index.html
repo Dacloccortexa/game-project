@@ -1567,20 +1567,42 @@
   @keyframes pom-reveal { from { transform: skewX(-10deg) scale(.6); opacity: 0; } to { transform: skewX(-10deg) scale(1); opacity: 1; } }
   .pom-vs { justify-self: center; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 34px; color: #e8eef7; text-shadow: 0 0 12px rgba(255,255,255,.5); line-height: 1; margin: -4px 0; }
 
+  /* Bandeau de verdict façon maquette : pilule sombre à contour néon, grosse icône qui déborde,
+     texte lumineux et traits de vitesse de chaque côté. */
   .pom-verdict {
-    position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
-    display: flex; align-items: center; gap: 10px; white-space: nowrap;
-    padding: 8px 18px 8px 8px; border-radius: 999px;
-    font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 20px; text-transform: uppercase;
-    color: #fff; animation: pom-pop .4s cubic-bezier(.2,.9,.3,1.3) 1;
+    position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 12px; white-space: nowrap;
+    min-height: 46px; padding: 0 22px 0 52px; border-radius: 12px;
+    font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 22px; letter-spacing: .02em; text-transform: uppercase;
+    --v: #5cf08f; --v-dark: rgba(6,40,20,.94); --v-glow: rgba(80,240,140,.75);
+    background: var(--v-dark);
+    border: 2px solid var(--v);
+    box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset, 0 0 16px var(--v-glow), 0 0 34px rgba(80,240,140,.35);
+    color: #d9ffe6; text-shadow: 0 0 10px var(--v-glow);
+    animation: pom-pop .45s cubic-bezier(.2,.9,.3,1.3) 1;
   }
-  .pom-verdict .v-icon { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; }
-  .pom-verdict.good { background: linear-gradient(90deg, #0f6e3a, #1e9c52); border: 2px solid #6ff09e; box-shadow: 0 0 22px rgba(80,230,140,.6); }
-  .pom-verdict.good .v-icon { background: #fff; color: #129a4c; }
-  .pom-verdict.bad { background: linear-gradient(90deg, #7a1616, #b3261e); border: 2px solid #ff8a80; box-shadow: 0 0 22px rgba(255,90,80,.55); }
-  .pom-verdict.bad .v-icon { background: #fff; color: #c62828; }
-  .pom-verdict.neutral { background: linear-gradient(90deg, #6b4a10, #a87320); border: 2px solid var(--gold-ring); }
-  .pom-verdict.neutral .v-icon { background: #fff; color: #8a5a10; }
+  .pom-verdict::before, .pom-verdict::after {
+    content: ""; position: absolute; top: 50%; height: 3px; width: 70px; border-radius: 2px;
+    background: linear-gradient(90deg, transparent, var(--v));
+    box-shadow: 0 0 10px var(--v-glow);
+    transform: translateY(-50%);
+  }
+  .pom-verdict::before { right: 100%; margin-right: 6px; }
+  .pom-verdict::after { left: 100%; margin-left: 6px; background: linear-gradient(270deg, transparent, var(--v)); }
+  .pom-verdict .v-icon {
+    position: absolute; left: -14px; top: 50%; transform: translateY(-50%);
+    display: flex; align-items: center; justify-content: center;
+    width: 54px; height: 54px; border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, #3fe07e, #0e8a3e);
+    border: 3px solid #eafff0;
+    box-shadow: 0 0 0 2px var(--v), 0 0 16px var(--v-glow);
+  }
+  .pom-verdict .v-icon svg { width: 28px; height: 28px; }
+  .pom-verdict .v-icon { color: #ffffff; }
+  .pom-verdict.bad { --v: #ff6b5e; --v-dark: rgba(50,10,8,.94); --v-glow: rgba(255,100,85,.7); color: #ffe1dc; }
+  .pom-verdict.bad .v-icon { background: radial-gradient(circle at 40% 35%, #ff7a6c, #c52a1f); border-color: #fff0ee; }
+  .pom-verdict.neutral { --v: #f2c75a; --v-dark: rgba(45,32,6,.94); --v-glow: rgba(242,199,90,.65); color: #fff1cc; }
+  .pom-verdict.neutral .v-icon { background: radial-gradient(circle at 40% 35%, #f6cf6a, #a8741a); border-color: #fff6de; }
   @keyframes pom-pop { from { transform: translateX(-50%) scale(.6); opacity: 0; } to { transform: translateX(-50%) scale(1); opacity: 1; } }
 
   .pom-note { padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(248,246,237,.2); background: rgba(3,17,12,.8); color: var(--chalk); text-align: center; font-size: 15px; line-height: 1.45; }
