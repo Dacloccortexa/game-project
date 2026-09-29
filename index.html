@@ -1149,17 +1149,19 @@
     letter-spacing: .2em; text-transform: uppercase; color: var(--chalk);
   }
 
+  /* Bandeau des scores : une seule ligne fine (logo · nom · score), sans « pts » ni « Au tour de ».
+     L'équipe qui joue est signalée par l'encadré doré. */
   #scoreboard.scoreboard {
     display: grid;
     grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
-    gap: 8px;
+    gap: 6px;
     margin: 0;
   }
   #scoreboard .score-chip {
-    display: flex; flex-direction: column; justify-content: center; gap: 2px;
-    min-width: 0; min-height: 62px;
-    padding: 7px 8px;
-    border-radius: 12px;
+    display: flex; flex-direction: row; align-items: center; gap: 4px;
+    min-width: 0; min-height: 34px;
+    padding: 3px 7px 3px 4px;
+    border-radius: 10px;
     border: 1px solid rgba(248,246,237,.2);
     background: rgba(3,17,12,.78);
     text-align: left;
@@ -1168,27 +1170,28 @@
   #scoreboard .score-chip::before { content: none; }
   #scoreboard .score-chip.active {
     border: 2px solid var(--gold-ring);
+    padding: 2px 6px 2px 3px;
     background: rgba(23,56,38,.92);
-    box-shadow: 0 0 14px rgba(242,191,84,.25);
+    box-shadow: 0 0 12px rgba(242,191,84,.25);
   }
-  #scoreboard .chip-head { display: flex; align-items: center; justify-content: flex-start; gap: 6px; min-width: 0; }
-  #scoreboard .chip-names { display: flex; flex-direction: column; min-width: 0; }
-  #scoreboard .chip-kicker { white-space: nowrap; font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+  #scoreboard .chip-head { flex: 1; display: flex; align-items: center; justify-content: flex-start; gap: 4px; min-width: 0; }
+  #scoreboard .chip-names { display: flex; min-width: 0; }
   #scoreboard .name {
-    font-family: var(--font-cond); font-weight: 600; font-size: 14px; letter-spacing: .01em;
+    font-family: var(--font-cond); font-weight: 600; font-size: 14px; letter-spacing: 0;
     text-transform: uppercase; color: var(--chalk);
     overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
-  #scoreboard .score { font-family: var(--font-cond); font-weight: 700; font-size: 23px; line-height: 1; color: var(--chalk); padding-left: 2px; }
-  #scoreboard .score small { font-size: 11px; font-weight: 600; margin-left: 3px; color: var(--chalk-dim); }
-  #scoreboard .score.negative { color: #ff8a80; }
-  #scoreboard .team-badge { width: 24px; height: 24px; border-width: 2px; }
-  /* Quatre équipes : deux lignes compactes. */
-  #scoreboard.four .score-chip { flex-direction: row; align-items: center; min-height: 44px; padding: 6px 10px; }
-  #scoreboard.four .chip-head { flex: 1; }
-  #scoreboard.four .chip-kicker { display: none; }
-  #scoreboard.four .score { font-size: 20px; }
-  #scoreboard.four .score small { display: none; }
+  #scoreboard .score { flex: none; font-family: var(--font-cond); font-weight: 700; font-size: 20px; line-height: 1; color: var(--chalk); }
+  #scoreboard .score-chip.active .score { color: var(--gold); }
+  #scoreboard .score.negative, #scoreboard .score-chip.active .score.negative { color: #ff8a80; }
+  #scoreboard .team-badge { flex: none; width: 20px; height: 20px; border-width: 2px; }
+  /* Quatre équipes : toujours une ligne, le logo s'efface si la place manque. */
+  #scoreboard.four { gap: 4px; }
+  #scoreboard.four .score-chip { padding-inline: 6px; }
+  #scoreboard.four .name { font-size: 12.5px; letter-spacing: -.01em; }
+  @media (max-width: 360px) { #scoreboard.four .score-chip { padding-inline: 4px; } #scoreboard.four .name { font-size: 12px; } #scoreboard.four .score { font-size: 16px; } }
+  #scoreboard.four .score { font-size: 18px; }
+  @media (max-width: 400px) { #scoreboard.four .team-badge { display: none; } }
 
   .play-title {
     display: flex; align-items: center; gap: 14px;
@@ -2452,7 +2455,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2020";
+  var APP_VERSION = "2026.09.29-2029";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -4491,8 +4494,8 @@
     return badge;
   }
 
-  // Scores de toutes les équipes en haut de l'écran : une ligne jusqu'à 3 équipes,
-  // deux lignes à 4. L'équipe active a l'encadré doré (« Au tour de »).
+  // Scores de toutes les équipes en haut de l'écran, sur une seule ligne fine (1 à 4 équipes).
+  // L'équipe active a l'encadré doré ; pas de « pts » ni de « Au tour de ».
   function chipName(name) { return name.replace(/^les\s+/i, ""); }
 
   function renderScoreboard() {
@@ -4500,7 +4503,7 @@
     board.innerHTML = "";
     var n = state.teams.length;
     board.classList.toggle("four", n >= 4);
-    if (board.style && board.style.setProperty) board.style.setProperty("--cols", n >= 4 ? 2 : Math.max(1, n));
+    if (board.style && board.style.setProperty) board.style.setProperty("--cols", Math.max(1, n));
     state.teams.forEach(function (team, idx) {
       var isActive = idx === state.currentTeamIndex;
       var chip = document.createElement("div");
@@ -4512,12 +4515,6 @@
       head.appendChild(teamBadge(team));
       var names = document.createElement("div");
       names.className = "chip-names";
-      if (isActive && n > 1) {
-        var kicker = document.createElement("span");
-        kicker.className = "chip-kicker";
-        kicker.textContent = "Au tour de";
-        names.appendChild(kicker);
-      }
       var name = document.createElement("span");
       name.className = "name";
       name.textContent = chipName(team.name);
@@ -4525,7 +4522,7 @@
       head.appendChild(names);
       var score = document.createElement("div");
       score.className = "score" + (team.score < 0 ? " negative" : "");
-      score.innerHTML = String(team.score).replace("-", "−") + "<small>pts</small>";
+      score.textContent = String(team.score).replace("-", "−");
       chip.appendChild(head);
       chip.appendChild(score);
       board.appendChild(chip);

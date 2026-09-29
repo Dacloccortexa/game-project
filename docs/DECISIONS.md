@@ -1,5 +1,14 @@
 # DECISIONS.md
 
+## [2026-09-29] Bandeau des scores réduit de moitié
+- Demande de David : le bandeau qui affiche les scores en permanence pendant une partie prenait trop de place. On commence par le diviser par deux en hauteur ; « pts » n'apporte rien.
+- Décision : chaque équipe tient sur **une seule ligne fine** : logo · nom · score. Hauteur du bandeau : 34 px au lieu de 73 px (3 équipes, iPhone 390 × 844) ; 34 px au lieu de 96 px à 4 équipes.
+- Retiré : le mot « pts » après le score et la mention « Au tour de » au-dessus du nom. L'équipe qui joue reste signalée par l'**encadré doré**, et son score passe en doré (un score négatif reste rouge). La bande « Priorité aux … » sous la carte nomme toujours l'équipe qui a la main. Les lecteurs d'écran annoncent toujours « au tour de cette équipe ».
+- 4 équipes : désormais **sur une seule ligne** aussi (avant : deux lignes). Sous 400 px de large, les logos sont masqués à 4 équipes pour laisser la place aux noms ; sous 360 px, les logos sont masqués quel que soit le nombre d'équipes (comme avant).
+- Limite connue : sur un très petit téléphone (320 px) à 4 équipes, les noms longs (« Renards », « Taureaux ») sont coupés avec « … ».
+- Hors périmètre : le classement entre deux manches et le classement final gardent leurs points.
+- Vérifié en navigateur à 390 × 844 et 320 × 568, avec 2, 3 et 4 équipes.
+
 ## [2026-09-29] Proposer la mise à jour aux joueurs qui ont gardé le jeu en signet
 - Décision : le jeu connaît son numéro de version (`APP_VERSION` dans `index.html`) et le compare à `version.json` sur le serveur au lancement et à chaque retour dans l'appli. Si le serveur a plus récent, un bandeau « Nouvelle version de TACKLE disponible · Mettre à jour » s'affiche en haut de « Créer une partie », jamais pendant une partie.
 - Raison : les testeurs lancent le jeu depuis l'écran d'accueil du téléphone, qui peut garder une ancienne page.
@@ -7,7 +16,7 @@
 
 ## [2026-09-29] Les éléments communs ne changent pas avec les nouvelles planches
 - Décision : à l'intégration d'une nouvelle maquette, garder tels qu'ils sont déjà intégrés les éléments communs à tous les écrans, même si la planche les dessine autrement (demandé par David). Seul le cœur propre au défi suit la planche.
-- Éléments communs concernés : bouton Quitter, logo et numéro de manche, bandeau des scores de toutes les équipes (emblèmes, « Au tour de »), bande « Priorité aux … » avec le chrono, bouton Tackle (grisé, rouge clignotant, animation d'ouverture), panneaux de saisie/confirmation et « Qui a tacklé ? », bandeaux de verdict, classement entre deux manches, classement final.
+- Éléments communs concernés : bouton Quitter, logo et numéro de manche, bandeau des scores de toutes les équipes (emblèmes, encadré doré de l'équipe qui joue — voir la décision « Bandeau des scores réduit de moitié »), bande « Priorité aux … » avec le chrono, bouton Tackle (grisé, rouge clignotant, animation d'ouverture), panneaux de saisie/confirmation et « Qui a tacklé ? », bandeaux de verdict, classement entre deux manches, classement final.
 - Les retours « Bonne réponse / Mauvaise réponse » (et Tackle réussi/raté, temps écoulé, fin des indices) sont **un seul élément commun** : même pilule néon posée sur le bas de la carte, même ligne de détail en dessous (points, réponse révélée ou non), pour les cinq défis.
 - Exception : un élément commun ne change que si David le demande explicitement ou si une décision de ce fichier le modifie. **Quand il change, il change pour tous les défis** : c'est le même élément dans le code (`showVerdict()` dans `index.html`).
 
