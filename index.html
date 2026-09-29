@@ -1533,8 +1533,8 @@
      Elles expriment le duel, sans représenter les joueurs nommés. */
   .pom-sil { position: absolute; width: auto; max-width: none; pointer-events: none;
     -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 96%); mask-image: linear-gradient(180deg, #000 62%, transparent 96%); }
-  .pom-sil-ref { height: 46%; left: -7%; top: 84px; }
-  .pom-sil-next { height: 46%; right: -7%; bottom: 0; }
+  .pom-sil-ref { height: 46%; left: -14%; top: 84px; }
+  .pom-sil-next { height: 46%; right: -14%; bottom: 0; }
   .pom-glow-next { width: 240px; height: 170px; right: -4%; bottom: 20px; background: radial-gradient(circle, rgba(255,110,80,.5), transparent 70%); }
 
   .pom-head { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 10px 12px 0; text-align: center; }
@@ -1569,7 +1569,7 @@
   .next .pom-value.hidden-value { color: #2a0806; }
   .next .pom-value.revealed { animation: pom-reveal .45s ease-out 1; }
   @keyframes pom-reveal { from { transform: skewX(-10deg) scale(.6); opacity: 0; } to { transform: skewX(-10deg) scale(1); opacity: 1; } }
-  .pom-vs { align-self: center; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 38px; color: #f2f6fb; text-shadow: 0 0 14px rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.4); line-height: 1; margin: 20px 0 18px; }
+  .pom-vs { align-self: center; font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 38px; color: #f2f6fb; text-shadow: 0 0 14px rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.4); line-height: 1; margin: 6px 0 32px; }
 
   /* Bandeau de verdict façon maquette : pilule sombre à contour néon, grosse icône qui déborde,
      texte lumineux et traits de vitesse de chaque côté. */
@@ -2490,7 +2490,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2150";
+  var APP_VERSION = "2026.09.29-2156";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
