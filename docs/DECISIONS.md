@@ -22,6 +22,7 @@
 - Les noms et valeurs passent du côté opposé à leur silhouette : joueur de référence à droite dans la zone bleue, joueur suivant à gauche dans la zone corail (devant les barres).
 - Ajustement demandé par David (21 h 56) : « VS » remonté (au-dessus du trait lumineux), silhouette bleue décalée vers la gauche et corail vers la droite (débord de 14 % hors de la carte au lieu de 7 %).
 - Nouvel ajustement (23 h 12) : « VS » redescendu d'un cran, sur le trait lumineux ; silhouettes encore écartées (débord de 20 %).
+- Ajustement (23 h 18) : silhouettes encore écartées (débord de 27 %) ; on n'en voit plus que le profil, au bord de la carte.
 - Retrait (23 h 16) : les petits graphiques en barres décoratifs (bleu en haut à droite, corail en bas à gauche) sont supprimés, ils n'apportaient rien. Il reste les silhouettes, les noms, les valeurs, le « VS » et le trait lumineux.
 - Aucune règle ni élément commun modifié. Vérifié à 390 × 844 et 320 × 568, avant réponse et avec le verdict « Bonne réponse ».
 
