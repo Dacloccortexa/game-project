@@ -7,6 +7,8 @@
 - ⏳ Vérifier ce parcours sur un vrai téléphone (iPhone et Android) avant la prochaine soirée test.
 - ✅ Écran de jeu Transfert intégré d'après [UI_TRANSFERT_FLOW.md](UI_TRANSFERT_FLOW.md) : scores de toutes les équipes en haut, carrière révélée à hauteur fixe, Répondre / Passer l'indice, saisie puis confirmation, « Qui a tacklé ? », écrans bonne/mauvaise réponse animés une fois. Plus aucune mention du porteur du téléphone. Cadre commun (en-tête, chrono, Tackle, Quitter) appliqué aux cinq défis.
 - ✅ Classement entre deux manches intégré d'après [UI_INTERMISSION_FLOW.md](UI_INTERMISSION_FLOW.md) : scores cumulés classés, apparition de la dernière à la première place puis lumière dorée (une fois, passable d'un appui), prochaine manche et première équipe, bouton « C'est parti ! ». Après la dernière manche, classement final direct.
+- ✅ Ouverture du Tackle intégrée d'après [UI_TACKLE_OPEN_ANIMATION.md](UI_TACKLE_OPEN_ANIMATION.md) : double sifflet bref à chaque départ de chrono, sifflet long et grand TACKLE rouge à 30 secondes (une fois, sans bloquer les appuis), bouton et chrono rouges pendant les 15 secondes.
+- ⏳ Écouter l'essai réel de sifflet de départ (`kickoff-whistle-real-candidate.wav`) et décider s'il remplace le signal actuel.
 - ⏳ Maquettes des écrans de jeu de Plus ou Moins, Vrai ou Faux, Qui suis-je ? et Le Match, puis intégration comme Transfert.
 - ✅ Transfert : révélation chronologique, tentative ou passe, pénalité de −1, points dégressifs, carte à club unique, porteur de téléphone désigné, confirmation de la réponse saisie. Implémenté dans `index.html`.
 - ✅ Lot de 112 cartes dans `src/data/transfert-cards.json`, dont **100 vérifiées** (chargées en jeu) et **12 encore à vérifier** (exclues du jeu tant qu'elles ne le sont pas).

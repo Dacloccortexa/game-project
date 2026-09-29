@@ -2,6 +2,8 @@
 
 Référence pour le moment où le Tackle devient disponible, sur chaque défi.
 
+Statut : **intégré dans `index.html`** (2026-09-29), sur les cinq défis. Les sons sont préparés au « Coup d'envoi » (appui nécessaire sur mobile) ; le logo rouge est servi en WebP allégé (`assets/ui/web/tackle-logo-red.webp`). Avec une seule équipe, personne ne peut tackler : ni sifflet long ni animation à 30 secondes, seulement le changement de chrono.
+
 | Élément | Fichier |
 | --- | --- |
 | Aperçu animé sans son | [14-ouverture-tackle.gif](ui/14-ouverture-tackle.gif) |
