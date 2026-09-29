@@ -1,0 +1,18 @@
+/* Carte centrale du défi uniquement. Le cadre, les scores, le chrono, Tackle et les verdicts restent communs. */
+.qsj-board{box-sizing:border-box;width:100%;max-width:430px;min-height:610px;margin:auto;padding:35px 34px 27px;background:#092116 url("tactics-board.jpg") center/100% 100% no-repeat;color:#fdf5d8;font-family:Arial,Helvetica,sans-serif;text-align:center}
+.qsj-title{display:grid;place-items:center;min-height:76px;margin:4px -7px 8px;background:url("title-ribbon.svg") center/100% 100% no-repeat;color:#0a1310;font:italic 900 clamp(29px,8.2vw,40px) Impact,"Arial Black",sans-serif;line-height:1;transform:rotate(-2deg);text-shadow:0 1px #ffe8a0}
+.qsj-mystery{display:grid;place-items:center;width:min(56%,220px);height:125px;margin:0 auto 12px;background:url("mystery-plate.svg") center/100% 100% no-repeat}
+.qsj-mystery-mark{color:#ffe3a0;font:900 100px Impact,"Arial Black",sans-serif;line-height:1;text-shadow:0 0 20px #ffca59}
+.qsj-list{display:flex;flex-direction:column;gap:7px;list-style:none;margin:0 0 14px;padding:0}
+.qsj-clue{box-sizing:border-box;display:flex;align-items:center;min-height:55px;padding:5px 9% 5px 10%;background:center/100% 100% no-repeat;text-align:left;font:900 clamp(14px,4.2vw,19px) Impact,"Arial Narrow",sans-serif;letter-spacing:.01em;line-height:1.05}
+.qsj-clue--past{background-image:url("clue-past.svg");color:#111b15}
+.qsj-clue--current{background-image:url("clue-current.svg");color:#0d1811;padding-right:4%;justify-content:space-between;gap:7px}
+.qsj-clue--locked{background-image:url("clue-locked.svg");color:#838b85;padding-left:14%;font-size:clamp(12px,3.6vw,16px)}
+.qsj-clue-copy{overflow-wrap:anywhere}
+.qsj-points{flex:none;width:17%;text-align:center;color:#ffe083;font:900 clamp(13px,4.2vw,19px) Impact,"Arial Narrow",sans-serif;white-space:nowrap}
+.qsj-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:2px 0 0}
+.qsj-actions button{min-height:58px;border-radius:8px;color:white;font:900 clamp(16px,4.7vw,22px) Impact,"Arial Narrow",sans-serif;letter-spacing:.01em;cursor:pointer}
+.qsj-answer{border:2px solid #20edab;background:linear-gradient(135deg,#08734e,#06432e);box-shadow:0 0 10px #0de59b7c}
+.qsj-pass{border:2px solid #e5c36f;background:linear-gradient(135deg,#292d2a,#171b19)}
+.qsj-actions button:focus-visible{outline:3px solid white;outline-offset:2px}
+@media(max-width:360px){.qsj-board{min-height:580px;padding:31px 24px 23px}.qsj-mystery{height:110px}.qsj-clue{min-height:52px}}

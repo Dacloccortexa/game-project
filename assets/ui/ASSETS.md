@@ -59,3 +59,7 @@ Statut : **intégrées** (2026-09-29) dans la carte Plus ou Moins, via `web/pom-
 ## Vrai ou Faux : pack « verdict d'arbitre »
 
 Le [dossier `vrai-ou-faux/`](vrai-ou-faux/README.md) fournit le fond de stade, le cadre VAR, les deux fonds de réponse et l'icône de cagnotte séparément. La [planche](../../docs/ui/24-vrai-ou-faux-var-question.jpg) et l'[aperçu assemblé](vrai-ou-faux/preview.html) montrent leur usage dans la carte centrale.
+
+## Qui suis-je ? : pack « tableau tactique »
+
+Le [dossier `qui-suis-je/`](qui-suis-je/README.md) contient le tableau vide, les fiches d'indices séparées, la plaque mystère et un [aperçu des cinq paliers](qui-suis-je/preview.html). La [planche d'indice 3](../../docs/ui/25-qui-suis-je-indice-3.jpg) reste la référence visuelle.

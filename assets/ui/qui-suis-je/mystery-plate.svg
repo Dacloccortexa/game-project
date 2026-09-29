@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 210" preserveAspectRatio="none" aria-hidden="true">
+  <defs><radialGradient id="lamp"><stop stop-color="#b98a39" stop-opacity=".42"/><stop offset=".7" stop-color="#342b16" stop-opacity=".12"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>
+  <rect x="7" y="7" width="406" height="196" rx="9" fill="#060c0bdb" stroke="#a58c55" stroke-width="3"/>
+  <rect x="16" y="17" width="388" height="179" rx="3" fill="url(#lamp)" stroke="#6d6848" stroke-opacity=".38"/>
+  <path d="M174 20h72" stroke="#ffd27b" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="21" cy="22" r="4" fill="#b69148"/><circle cx="399" cy="22" r="4" fill="#b69148"/>
+</svg>
