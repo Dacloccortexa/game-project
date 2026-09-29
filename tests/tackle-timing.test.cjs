@@ -124,8 +124,9 @@ startTackleWindow();
 assert.equal(currentTackleStake(), 3);
 advance(30000);
 element('btn-tackle').click();
-assert.equal(element('tackle-team-buttons').children.length, 1);
-element('tackle-team-buttons').children[0].click();
+// Après le sifflet, toutes les équipes sont dans la course : celle qui a la main d'abord, puis l'adversaire.
+assert.equal(element('tackle-team-buttons').children.length, 2);
+element('tackle-team-buttons').children[1].click();
 element('tackle-binary-choice-1').click();
 assert.equal(state.teams[0].score, 0);
 assert.equal(state.teams[1].score, 3);
@@ -137,7 +138,7 @@ state.pomPotential = 2;
 startTackleWindow();
 advance(30000);
 element('btn-tackle').click();
-element('tackle-team-buttons').children[0].click();
+element('tackle-team-buttons').children[1].click();
 element('tackle-binary-choice-2').click();
 assert.equal(state.teams[0].score, 2);
 assert.equal(state.teams[1].score, -3);
@@ -210,6 +211,38 @@ advance(31000);
 vfAnswer(true);
 assert.equal(state.cardEnded, true);
 assert.equal(state.teams[0].score, 0);
+
+// Course au Tackle : après le sifflet, « Répondre »/« Passer » disparaissent (classe race) ;
+// si l'équipe qui a la main gagne la course, elle répond normalement avec ses points habituels.
+reset('transfert');
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
+state.revealedCount = 2;
+startTackleWindow();
+assert.equal(element('screen-play').classList.contains('race'), false);
+advance(30000);
+assert.equal(element('screen-play').classList.contains('race'), true);
+element('btn-tackle').click();
+element('tackle-team-buttons').children[0].click();
+assert.equal(element('screen-play').classList.contains('race'), false);
+assert.equal(element('type-box').classList.contains('hidden-screen'), false);
+assert.equal(element('tackle-answer-zone').classList.contains('hidden-screen'), true);
+element('answer-input').value = 'Joueur';
+element('btn-submit-answer').click();
+element('btn-confirm-answer').click();
+assert.equal(state.teams[0].score, 4);
+assert.equal(state.teams[1].score, 0);
+
+reset('plusoumoins');
+state.pomChain = {category:'Test',chain:[{name:'A',value:1},{name:'B',value:2},{name:'C',value:3}]};
+state.pomIndex = 0;
+state.pomPotential = 0;
+startTackleWindow();
+advance(30000);
+element('btn-tackle').click();
+element('tackle-team-buttons').children[0].click();
+pomGuess('plus');
+assert.equal(state.pomPotential, 1);
+assert.equal(state.teams[1].score, 0);
 
 // La version du jeu et version.json doivent correspondre (tools/bump-version.sh).
 const pageVersion = fs.readFileSync('index.html', 'utf8').match(/var APP_VERSION = "([^"]+)"/)[1];

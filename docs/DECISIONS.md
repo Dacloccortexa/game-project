@@ -1,5 +1,19 @@
 # DECISIONS.md
 
+## [2026-09-29] Après le sifflet, course au Tackle pour toutes les équipes
+- Proposition de David : après les 30 secondes, il n'y a plus que le Tackle, et l'équipe prioritaire fait partie du choix des équipes qui ont tacklé.
+- Décision :
+  - Pendant les 30 s réservées : rien ne change (« Répondre », « Passer », PLUS/MOINS, VRAI/FAUX pour l'équipe qui a la main).
+  - Après le sifflet (15 s) : les boutons de l'équipe qui a la main disparaissent, **y compris « Passer »** (sinon elle pourrait couper la course) ; il ne reste que le bouton Tackle, pour tout le monde.
+  - « Qui a tacklé ? » liste **toutes** les équipes, celle qui a la main en tête avec la mention « À la main ».
+  - Si l'équipe qui a la main gagne la course : elle répond **normalement**, avec ses points et pénalités habituels (la saisie s'ouvre directement sur Transfert, Qui suis-je ? et Le Match ; PLUS/MOINS ou VRAI/FAUX réapparaissent sur les deux autres). Pas d'enjeu de Tackle pour elle.
+  - Si une équipe adverse gagne : enjeu du Tackle, comme avant.
+  - Personne ne tacle en 15 s : indice/événement suivant automatiquement (ou cagnotte encaissée et fin de carte sur Plus ou Moins / Vrai ou Faux), comme avant.
+  - « Passer » est gardé pendant les 30 s pour le rythme : sans lui, une carte de 5 indices où personne ne trouve durerait près de 4 minutes.
+- Arbitre : l'équipe qui a la main n'étant plus neutre, **c'est la personne qui tient le téléphone qui arbitre**. Le bouton « Litige : tirage au sort » est maintenant toujours proposé (au moins 2 équipes sont dans la course, même à 2 équipes). Remplace l'arbitrage par l'équipe active de la décision « Litige au Tackle » ci-dessous.
+- Partie à 1 équipe : inchangée (pas de course, « Répondre » reste disponible).
+- Tests : `tests/tackle-timing.test.cjs` couvre la course (boutons masqués, équipe qui a la main en tête, réponse normale si elle gagne). Vérifié en navigateur sur les cinq défis, plus annulation du Tackle et passage automatique à l'indice suivant.
+
 ## [2026-09-29] Tackle : « Qui a tacklé ? » et la réponse s'ouvrent par-dessus l'écran
 - Demande de David : quand on tackle, « Qui a tacklé ? » ne doit pas apparaître en bas de la page mais par-dessus.
 - Décision : le panneau « Qui a tacklé ? » s'ouvre au centre de l'écran, par-dessus le jeu, avec un voile sombre. Le panneau de réponse au Tackle (équipe, saisie ou VRAI/FAUX, PLUS/MOINS) s'ouvre aussi par-dessus, **en haut** de l'écran pour rester visible au-dessus du clavier du téléphone ; son voile est plus léger pour que la carte du défi reste lisible dessous.

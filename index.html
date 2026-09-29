@@ -1267,6 +1267,11 @@
     border: 2px solid var(--gold-ring);
     background: rgba(3,20,13,.94);
   }
+  /* Après le sifflet, c'est la course : plus de « Répondre » ni de « Passer », seulement le Tackle
+     (l'équipe qui a la main doit aussi le gagner). */
+  #screen-play.race #answer-zone, #screen-play.race #qsj-answer-zone, #screen-play.race #lm-answer-zone,
+  #screen-play.race #pom-answer-zone, #screen-play.race #vf-answer-zone { display: none !important; }
+  .tackle-team-btn .tt-tag { flex: none; padding: 3px 8px; border-radius: 999px; background: rgba(242,191,84,.18); color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
   /* Tackle : « Qui a tacklé ? » puis la réponse s'ouvrent par-dessus l'écran (pas en bas de page). */
   #screen-play > #tackle-team-picker, #screen-play > #tackle-answer-zone {
     position: fixed; z-index: 40;
@@ -2098,7 +2103,7 @@
 
     <div class="tr-panel hidden-screen" id="tackle-team-picker">
       <h3 class="tr-panel-title">Qui a tacklé ?</h3>
-      <p class="tr-panel-sub" id="tackle-picker-sub">L'équipe qui a la main arbitre : choisir la première équipe à l'avoir annoncé</p>
+      <p class="tr-panel-sub" id="tackle-picker-sub">Celui qui tient le téléphone arbitre : choisir la première équipe à avoir crié « Tackle »</p>
       <div class="tackle-team-list" id="tackle-team-buttons"></div>
       <p class="tr-panel-note gold" id="tackle-picker-stakes">Une seule équipe répond</p>
       <p class="tr-panel-note" id="tackle-picker-note">Le chrono est arrêté pendant ce choix</p>
@@ -2477,7 +2482,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2129";
+  var APP_VERSION = "2026.09.29-2139";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3368,7 +3373,11 @@
     el("turn-clock").classList.toggle("open", open);
     // Le bouton clignote pendant toute la fenêtre de 15 secondes.
     el("btn-tackle").classList.toggle("blink", open && !alone);
+    setRace(open && !alone);
   }
+
+  // Course au Tackle (15 s après le sifflet) : les boutons de l'équipe qui a la main disparaissent.
+  function setRace(on) { el("screen-play").classList.toggle("race", !!on); }
 
   function isBinaryGame() {
     return state.currentRoundMinigame === "plusoumoins" || state.currentRoundMinigame === "vraifaux";
@@ -3396,6 +3405,7 @@
   function startTackleWindow() {
     clearTackleTimer();
     hideTackleUI();
+    setRace(false);
     state.tacklePhase = "locked";
     state.stepStartedAt = Date.now();
     state.tackleDeadline = Date.now() + TACKLE_LOCK_SECONDS * 1000;
@@ -3470,11 +3480,14 @@
     hide("btn-tackle");
     hide("turn-clock");
     var stake = currentTackleStake();
-    el("tackle-picker-stakes").textContent = "Une seule équipe répond · enjeu ±" + pointsLabel(stake);
+    el("tackle-picker-stakes").textContent = "Une seule équipe répond · adversaire ±" + pointsLabel(stake);
     var buttonsDiv = el("tackle-team-buttons");
     buttonsDiv.innerHTML = "";
-    state.teams.forEach(function (team, idx) {
-      if (idx === state.currentTeamIndex) return; // l'équipe active ne tackle pas son propre tour
+    // Toutes les équipes sont dans la course, celle qui a la main en premier.
+    var order = [state.currentTeamIndex];
+    state.teams.forEach(function (t, i) { if (i !== state.currentTeamIndex) order.push(i); });
+    order.forEach(function (idx) {
+      var team = state.teams[idx];
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "tackle-team-btn";
@@ -3483,6 +3496,12 @@
       nameSpan.className = "tt-name";
       nameSpan.textContent = team.name;
       btn.appendChild(nameSpan);
+      if (idx === state.currentTeamIndex) {
+        var tag = document.createElement("span");
+        tag.className = "tt-tag";
+        tag.textContent = "A la main";
+        btn.appendChild(tag);
+      }
       var chevron = document.createElement("span");
       chevron.className = "tt-chevron";
       chevron.setAttribute("aria-hidden", "true");
@@ -3526,7 +3545,7 @@
     });
     el("tackle-picker-sub").textContent = on
       ? "Garder cochées les équipes qui disent avoir crié en premier"
-      : "L'équipe qui a la main arbitre : choisir la première équipe à l'avoir annoncé";
+      : "Celui qui tient le téléphone arbitre : choisir la première équipe à avoir crié « Tackle »";
     el("btn-tackle-draw").classList.toggle("hidden-screen", !on);
     el("btn-tackle-dispute").classList.toggle("hidden-screen", btns.length < 2);
     el("btn-tackle-dispute").textContent = on ? "Retour : l'arbitre choisit" : "Litige : tirage au sort";
@@ -3578,8 +3597,23 @@
     if (picked.length >= 2) runTackleDraw(picked);
   });
 
+  // L'équipe qui a la main gagne la course : elle répond normalement, avec ses points habituels.
+  function pickActiveTeamInRace() {
+    setTackleDispute(false);
+    hide("tackle-team-picker");
+    setRace(false);
+    journalStep("course au Tackle gagnée par l'équipe qui a la main");
+    var game = state.currentRoundMinigame;
+    show(activeAnswerZone());
+    if (game === "transfert") el("btn-answer").click();
+    else if (game === "quisuisje") el("btn-qsj-answer").click();
+    else if (game === "lematch") el("btn-lm-answer").click();
+    // Plus ou Moins / Vrai ou Faux : ses boutons PLUS/MOINS ou VRAI/FAUX réapparaissent.
+  }
+
   // Équipe retenue pour le Tackle (choisie par l'arbitre ou tirée au sort).
   function pickTackleTeam(idx) {
+    if (idx === state.currentTeamIndex) { pickActiveTeamInRace(); return; }
     var team = state.teams[idx];
     var isLmTackle = state.currentRoundMinigame === "lematch";
     var stake = currentTackleStake();
@@ -4563,6 +4597,7 @@
 
   function endCard() {
     state.cardEnded = true;
+    setRace(false);
     journalEndCard();
     clearTackleTimer();
     hideTackleUI();
