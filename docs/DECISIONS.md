@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-09-29] Tackle : « Qui a tacklé ? » et la réponse s'ouvrent par-dessus l'écran
+- Demande de David : quand on tackle, « Qui a tacklé ? » ne doit pas apparaître en bas de la page mais par-dessus.
+- Décision : le panneau « Qui a tacklé ? » s'ouvre au centre de l'écran, par-dessus le jeu, avec un voile sombre. Le panneau de réponse au Tackle (équipe, saisie ou VRAI/FAUX, PLUS/MOINS) s'ouvre aussi par-dessus, **en haut** de l'écran pour rester visible au-dessus du clavier du téléphone ; son voile est plus léger pour que la carte du défi reste lisible dessous.
+- Le voile bloque le reste de l'écran (y compris « Quitter ») tant que le Tackle n'est pas terminé ou annulé. Aucun changement de règle ni de score. Si le panneau dépasse la hauteur de l'écran, il défile à l'intérieur.
+- Vérifié en navigateur sur Transfert, Vrai ou Faux et Le Match, à 390 × 844 et 320 × 568, avec 4 équipes.
+
 ## [2026-09-29] Chrono « Priorité » et boutons remontés sous la carte
 - Demande de David : mettre la bande « Priorité aux … » et tout ce qui suit plus haut.
 - Constat : entre la carte du défi et le chrono, le jeu gardait de la place vide même sans verdict (emplacement du verdict de 18 px, marge de 16 px sous les cartes claires, zone vide de Qui suis-je ?). Écart mesuré : 28 px sur Transfert et Plus ou Moins, 44 px sur Vrai ou Faux, Qui suis-je ? et Le Match.

@@ -1267,6 +1267,27 @@
     border: 2px solid var(--gold-ring);
     background: rgba(3,20,13,.94);
   }
+  /* Tackle : « Qui a tacklé ? » puis la réponse s'ouvrent par-dessus l'écran (pas en bas de page). */
+  #screen-play > #tackle-team-picker, #screen-play > #tackle-answer-zone {
+    position: fixed; z-index: 40;
+    left: 12px; right: 12px; max-width: 456px; margin: 0 auto;
+    top: calc(14px + env(safe-area-inset-top, 0px));
+    max-height: calc(100dvh - 28px - env(safe-area-inset-top, 0px));
+    overflow-y: auto; overscroll-behavior: contain;
+    box-shadow: 0 18px 40px rgba(0,0,0,.6);
+    animation: tackle-sheet-in .22s ease-out 1;
+  }
+  /* Voile sombre qui bloque le reste de l'écran (Quitter compris) pendant le Tackle. */
+  #screen-play:has(> #tackle-team-picker:not(.hidden-screen))::after,
+  #screen-play:has(> #tackle-answer-zone:not(.hidden-screen))::after {
+    content: ""; position: fixed; inset: 0; z-index: 39; background: rgba(0,0,0,.66);
+  }
+  /* Pendant la réponse, la carte reste lisible sous le voile (indices, affirmation…). */
+  #screen-play:has(> #tackle-answer-zone:not(.hidden-screen))::after { background: rgba(0,0,0,.4); }
+  #screen-play > #tackle-team-picker { top: 50%; transform: translateY(-50%); animation-name: tackle-sheet-in-mid; }
+  @keyframes tackle-sheet-in { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: none; } }
+  @keyframes tackle-sheet-in-mid { from { opacity: 0; transform: translateY(calc(-50% - 12px)); } to { opacity: 1; transform: translateY(-50%); } }
+  @media (prefers-reduced-motion: reduce) { #screen-play > #tackle-team-picker, #screen-play > #tackle-answer-zone { animation: none; } }
   .tr-panel-title { margin: 0; text-align: center; font-family: var(--font-cond); font-weight: 700; font-size: 24px; text-transform: uppercase; color: var(--gold); }
   .tr-panel-sub { margin: -6px 0 2px; text-align: center; font-size: 13px; color: var(--chalk-dim); }
   .tr-label { margin: 0; font-weight: 700; font-size: 16px; color: var(--chalk); }
@@ -2456,7 +2477,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2114";
+  var APP_VERSION = "2026.09.29-2129";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
