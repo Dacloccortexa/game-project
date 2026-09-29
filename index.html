@@ -1529,6 +1529,12 @@
   .pom-bars-bottom i { background: linear-gradient(180deg, #ff9a7a, #b8322a); }
   .pom-glow { position: absolute; border-radius: 50%; filter: blur(28px); }
   .pom-glow-ref { width: 240px; height: 170px; left: -4%; top: 90px; background: radial-gradient(circle, rgba(70,190,255,.55), transparent 70%); }
+  /* Silhouettes anonymes (assets/ui/pom-player-*.png) : bleue en haut à gauche, corail en bas à droite.
+     Elles expriment le duel, sans représenter les joueurs nommés. */
+  .pom-sil { position: absolute; width: auto; max-width: none; pointer-events: none;
+    -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 96%); mask-image: linear-gradient(180deg, #000 62%, transparent 96%); }
+  .pom-sil-ref { height: 46%; left: -7%; top: 84px; }
+  .pom-sil-next { height: 46%; right: -7%; bottom: 0; }
   .pom-glow-next { width: 240px; height: 170px; right: -4%; bottom: 20px; background: radial-gradient(circle, rgba(255,110,80,.5), transparent 70%); }
 
   .pom-head { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 10px 12px 0; text-align: center; }
@@ -1545,10 +1551,10 @@
 
   .pom-duel { position: relative; display: flex; flex-direction: column; padding: 6px 16px 66px; gap: 0; }
   .pom-player { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 0; max-width: 78%; }
-  /* Le trait lumineux sépare la zone bleue (en haut à gauche) de la zone corail (en bas à droite) :
-     chaque joueur est placé entièrement dans sa zone. */
-  .pom-player.ref { align-self: flex-start; align-items: flex-start; text-align: left; margin-left: 4%; }
-  .pom-player.next { align-self: flex-end; align-items: flex-end; text-align: right; margin-right: 4%; }
+  /* Le trait lumineux sépare la zone bleue (en haut) de la zone corail (en bas). Chaque nom est dans
+     sa zone, du côté opposé à sa silhouette : bleu à droite, corail à gauche. */
+  .pom-player.ref { align-self: flex-end; align-items: flex-end; text-align: right; margin-right: 2%; max-width: 64%; }
+  .pom-player.next { align-self: flex-start; align-items: flex-start; text-align: left; margin-left: 2%; max-width: 64%; }
   .pom-first { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #dfe9f5; }
   .pom-last { font-family: var(--font-cond); font-weight: 700; font-style: italic; font-size: 30px; line-height: 1; text-transform: uppercase; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,.7); overflow-wrap: anywhere; }
   .pom-value {
@@ -1946,6 +1952,8 @@
         <div class="pom-bars pom-bars-bottom"><i style="height:44%"></i><i style="height:70%"></i><i style="height:52%"></i><i style="height:36%"></i><i style="height:58%"></i><i style="height:28%"></i></div>
         <span class="pom-glow pom-glow-ref"></span>
         <span class="pom-glow pom-glow-next"></span>
+        <img class="pom-sil pom-sil-ref" src="assets/ui/web/pom-player-blue.webp" width="480" height="600" alt="">
+        <img class="pom-sil pom-sil-next" src="assets/ui/web/pom-player-coral.webp" width="480" height="600" alt="">
       </div>
       <div class="pom-head">
         <h3 class="pom-title"><span class="pom-plus">Plus</span> <span class="pom-ou">ou</span> <span class="pom-moins">Moins</span></h3>
@@ -2482,7 +2490,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2139";
+  var APP_VERSION = "2026.09.29-2150";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {

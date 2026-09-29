@@ -53,3 +53,5 @@ Le [dossier `mercato/`](mercato/README.md) contient les éléments de la carte T
 
 - `pom-player-blue.png` : silhouette anonyme, tête et buste orientés vers la droite, liseré bleu cyan `#46C8FF`, PNG transparent 800 × 1000.
 - `pom-player-coral.png` : silhouette anonyme assortie, orientée vers la gauche, liseré corail `#FF7C5E`, PNG transparent 800 × 1000.
+
+Statut : **intégrées** (2026-09-29) dans la carte Plus ou Moins, via `web/pom-player-blue.webp` et `web/pom-player-coral.webp` (480 × 600, ~60 Ko chacune).

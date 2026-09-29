@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-09-29] Plus ou Moins : silhouettes anonymes du duel intégrées
+- Les silhouettes fournies (`assets/ui/pom-player-blue.png`, `pom-player-coral.png`) remplacent l'absence de joueur : bleue en haut à gauche, corail en bas à droite, comme sur la planche 16, avec un fondu en bas pour se fondre dans la carte.
+- Les noms et valeurs passent du côté opposé à leur silhouette : joueur de référence à droite dans la zone bleue, joueur suivant à gauche dans la zone corail (devant les barres).
+- Aucune règle ni élément commun modifié. Vérifié à 390 × 844 et 320 × 568, avant réponse et avec le verdict « Bonne réponse ».
+
 ## [2026-09-29] Après le sifflet, course au Tackle pour toutes les équipes
 - Proposition de David : après les 30 secondes, il n'y a plus que le Tackle, et l'équipe prioritaire fait partie du choix des équipes qui ont tacklé.
 - Décision :
