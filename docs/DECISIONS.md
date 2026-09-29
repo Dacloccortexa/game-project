@@ -1,5 +1,14 @@
 # DECISIONS.md
 
+## [2026-09-29] Le Match (« tableau d'affichage ») : identité intégrée — les cinq défis ont leur carte
+- Pack fourni : `assets/ui/le-match/` (planche 26). Seule la carte centrale change ; tous les éléments communs restent tels quels (les écarts de la planche — scores « Équipe Alpha », points de manche, chrono rond — sont ignorés, comme pour les autres défis).
+- Carte : tableau de stade, plaque « Le Match », compétition seule (sans année), « ? vs ? » en texte, frise verticale de cinq événements à hauteur fixe (44 px) : minute à gauche (`90+2′` lisible), événements passés visibles, courant éclairé avec son palier (5 → 1 pt), suivants « Événement à venir » avec cadenas.
+- Libellés : les phrases des données sont raccourcies **à l'affichage seulement** (la minute est déjà dans sa colonne) : « But par X à la 61e minute. Le score passe à 3-2. » → « But par X · 3-2 » ; mi-temps, fin du match, prolongation, tirs au but → « Mi-temps · 0-1 », etc. Les données ne changent pas.
+- Icônes selon le fait : ballon du pack pour les buts et penalties, petit carton jaune ou rouge pour les cartons, aucune icône pour les autres événements (conforme au README du pack).
+- Fin de carte : les deux équipes remplacent « ? vs ? », en texte, sans blason ni drapeau ; « ? vs ? » revient à la carte suivante.
+- Le titre commun au-dessus de la carte est désormais masqué pour les cinq défis, puisque chacun porte son titre dans sa carte.
+- Mise en page : tient au-dessus du bouton Tackle sur 390 × 844 (boutons jusqu'à 724 px, Tackle à 767 px).
+
 ## [2026-09-29] Vrai ou Faux (« VAR ») et Qui suis-je ? (« tableau tactique ») : identités intégrées
 - Packs fournis : `assets/ui/vrai-ou-faux/` (planche 24) et `assets/ui/qui-suis-je/` (planche 25). Seule la carte centrale de chaque défi change ; en-tête, bandeau des scores, chrono « Priorité », bouton Tackle, panneaux Tackle, bandeau de verdict et classements restent les éléments communs.
 - Vrai ou Faux : cadre VAR sur fond de stade, badge « VAR » (ambiance seulement, pas de vidéo), titre « Vrai ou Faux » dans la carte (le titre commun au-dessus est masqué, comme Transfert et Plus ou Moins), « Affirmation n / 5 », affirmation en grand, **cagnotte potentielle** dans la carte (distincte des scores). Boutons VRAI (vert, coche) à gauche et FAUX (corail, croix) à droite, sous le chrono : ordre inversé par rapport à avant (FAUX était à gauche) pour suivre la planche. Les couleurs désignent le choix, jamais la bonne réponse.

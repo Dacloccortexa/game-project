@@ -71,3 +71,5 @@ Statut : **intégré** (2026-09-29) dans la carte Qui suis-je ? (fond via `web/q
 ## Le Match : pack « tableau d'affichage »
 
 Le [dossier `le-match/`](le-match/README.md) contient le tableau de stade vide, la plaque de titre, les rangées de la chronologie et un [aperçu des cinq événements](le-match/preview.html). La [planche de l'événement 3](../../docs/ui/26-le-match-evenement-3.jpg) reste la référence visuelle.
+
+Statut : **intégré** (2026-09-29) dans la carte Le Match (fond via `web/lm-scoreboard-background.webp`).
