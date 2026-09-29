@@ -21,6 +21,7 @@
 - Les silhouettes fournies (`assets/ui/pom-player-blue.png`, `pom-player-coral.png`) remplacent l'absence de joueur : bleue en haut à gauche, corail en bas à droite, comme sur la planche 16, avec un fondu en bas pour se fondre dans la carte.
 - Les noms et valeurs passent du côté opposé à leur silhouette : joueur de référence à droite dans la zone bleue, joueur suivant à gauche dans la zone corail (devant les barres).
 - Ajustement demandé par David (21 h 56) : « VS » remonté (au-dessus du trait lumineux), silhouette bleue décalée vers la gauche et corail vers la droite (débord de 14 % hors de la carte au lieu de 7 %).
+- Nouvel ajustement (23 h 12) : « VS » redescendu d'un cran, sur le trait lumineux ; silhouettes encore écartées (débord de 20 %).
 - Aucune règle ni élément commun modifié. Vérifié à 390 × 844 et 320 × 568, avant réponse et avec le verdict « Bonne réponse ».
 
 ## [2026-09-29] Après le sifflet, course au Tackle pour toutes les équipes
