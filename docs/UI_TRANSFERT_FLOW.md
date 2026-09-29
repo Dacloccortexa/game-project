@@ -2,19 +2,23 @@
 
 Référence visuelle pour l'intégration du défi Transfert dans l'ambiance stade de TACKLE. Les règles complètes et à jour figurent dans [`GAME_DESIGN.md`](GAME_DESIGN.md). Statut : **intégré dans `index.html`** (2026-09-29), à vérifier sur un vrai téléphone. L'en-tête (Quitter, logo, manche, scores de toutes les équipes, titre du défi), la bande « Priorité aux … » et le bouton Tackle sont communs aux cinq défis ; les quatre autres défis gardent leur carte actuelle en attendant leurs maquettes. « Quitter » demande confirmation puis revient à « Créer une partie » ; le menu ≡ des maquettes n'est pas affiché tant qu'il n'a pas de contenu défini.
 
-## Nouvelle identité visuelle de Transfert — à intégrer
+## Identité de Transfert : le mercato — nouvelle référence à intégrer
 
-Ces trois planches complètent le parcours déjà intégré. Elles remplacent **la direction visuelle** de l'ancienne carte à clubs et des anciens retours bonne/mauvaise réponse ; les maquettes de saisie, confirmation et Tackle ci-dessous restent des références fonctionnelles. Les règles et les scores ne changent pas.
+La première proposition de carte géographique et de parcours doré (planches 18 à 20) est **remplacée** par les planches ci-dessous. Transfert doit avoir une identité aussi immédiate que le duel bleu/corail de Plus ou Moins : **bandeau de mercato orange, grands chevrons, maillot du joueur mystère et fiches de clubs reliées par des flèches**. Le cadre commun de TACKLE (stade, logo, manche, scores de toutes les équipes, chrono et bouton Tackle) ne change pas.
 
-| État | Nouvelle planche |
+| État | Nouvelle planche de référence |
 | --- | --- |
-| Indice 3 : parcours de clubs | [18-transfert-parcours.jpg](ui/18-transfert-parcours.jpg) |
-| Bonne réponse : joueur révélé | [19-transfert-bonne-reponse.jpg](ui/19-transfert-bonne-reponse.jpg) |
-| Mauvaise réponse : joueur caché | [20-transfert-mauvaise-reponse.jpg](ui/20-transfert-mauvaise-reponse.jpg) |
+| Indice 3 : joueur encore mystérieux | [21-transfert-mercato-question.jpg](ui/21-transfert-mercato-question.jpg) |
+| Bonne réponse : joueur révélé | [22-transfert-mercato-bonne-reponse.jpg](ui/22-transfert-mercato-bonne-reponse.jpg) |
+| Mauvaise réponse : joueur toujours caché | [23-transfert-mercato-mauvaise-reponse.jpg](ui/23-transfert-mercato-mauvaise-reponse.jpg) |
 
-L'identité Transfert repose sur **un itinéraire doré entre les clubs et leurs années**, dans une carte vert profond. Les arrêts précédents restent visibles et le nouvel arrêt s'allume. La carte géographique de la planche est décorative : ne pas prétendre localiser précisément les clubs ou tracer leurs déplacements réels. Si elle ne reste pas fiable et lisible sur petit écran, préférer un tracé abstrait entre arrêts. Aucun blason de club.
+- Les clubs déjà révélés restent visibles et le plus récent est mis en avant. Aucun blason de club. La silhouette et les maillots sont **génériques** ; ne pas produire un portrait réel de joueur pour chaque carte. La bonne réponse affiche le **nom vérifié en texte**, sur la même silhouette.
+- Ne pas afficher d'emplacements vides pour d'éventuels clubs futurs. Une carte à un seul club doit rester naturelle. La composition s'adapte de 1 à 5 clubs sans révéler à l'avance combien d'indices restent.
+- Les valeurs de l'exemple sont fictives pour les scores mais cohérentes avec l'exemple de carte : à l'indice 3, une bonne réponse révèle Zlatan Ibrahimović et ajoute 3 points (12 → 15) ; une mauvaise réponse retire 1 point (12 → 11), **ne dévoile pas le joueur**, puis lance l'indice suivant à 2 points.
+- Utiliser le vert punchy et la coche pour la réussite, le rouge et la croix pour l'erreur, comme dans [UI_REVEALS.md](UI_REVEALS.md) et Plus ou Moins. Le retour ne doit pas effacer l'univers mercato ; il apparaît dessus et ne joue qu'une fois.
+- Les planches sont des références de composition. Dans l'application, construire les textes, fiches et commandes en éléments adaptatifs, avec contraste et zones tactiles suffisants ; ne pas afficher l'image entière comme écran.
 
-Le bandeau des équipes, le logo, le chrono et le bouton Tackle conservent leur emplacement commun aux cinq défis. Les trois planches montrent le même indice et les mêmes scores avant résultat. La réussite vaut **+3** et affiche le joueur ; l'erreur vaut **−1**, ne révèle pas le joueur et enchaîne vers l'indice suivant. Les retours utilisent le même langage énergique que Plus ou Moins : grand signal vert et coche pour une réussite, grand signal rouge et croix pour une erreur. Voir [UI_REVEALS.md](UI_REVEALS.md) pour la logique commune des révélations.
+Les anciennes maquettes ci-dessous restent utiles pour la **saisie**, la **confirmation** et le **choix de l'équipe tackleur**. Les nouvelles planches ci-dessus font foi pour le style de la carte et des révélations. La logique des points reste celle de [GAME_DESIGN.md](GAME_DESIGN.md).
 
 ## États à intégrer
 
