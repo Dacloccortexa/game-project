@@ -1,6 +1,6 @@
 # Entre deux manches — classement TACKLE
 
-Maquette de l'écran affiché **après que toutes les équipes ont joué leur carte de la manche** et avant de lancer la suivante. Il ne s'affiche pas après chaque carte individuelle.
+Maquette de l'écran affiché **après que toutes les équipes ont joué leur carte de la manche** et avant de lancer la suivante. Il ne s'affiche pas après chaque carte individuelle. Le classement montre le **total des points cumulés depuis le début de la partie**, pas seulement les points gagnés pendant cette manche.
 
 | Vue | Référence |
 | --- | --- |
