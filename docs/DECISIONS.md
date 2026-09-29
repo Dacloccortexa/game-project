@@ -1,5 +1,12 @@
 # DECISIONS.md
 
+## [2026-09-29] Litige au Tackle : l'équipe active arbitre, sinon tirage au sort
+- Problème soulevé par David : le Tackle se joue à voix haute, donc des disputes « c'est moi qui l'ai dit en premier » sont inévitables.
+- Option écartée : un buzzer par équipe sur l'écran (le premier doigt gagne). Trop compliqué avec un seul téléphone qui passe de main en main.
+- Décision : l'équipe qui a la main arbitre et choisit l'équipe qui a tacklé en premier (écran « Qui a tacklé ? », sous-titre mis à jour). En cas de doute, bouton « Litige : tirage au sort » : toutes les équipes adverses sont cochées, l'arbitre décoche celles qui ne réclament pas, puis « Tirer au sort » lance une roulette d'environ 2 s et l'équipe tirée répond au Tackle.
+- Détails : bouton de litige affiché seulement s'il y a au moins 2 équipes adverses (3 équipes ou plus) ; « Retour : l'arbitre choisit » annule le litige ; « Annuler, personne n'a tacklé » annule aussi un tirage en cours ; le chrono reste arrêté ; le tirage est écrit dans le journal de partie.
+- Règle complète : GAME_DESIGN.md, « Qui a tacklé en premier ? ». Vérifié en navigateur avec 2, 3 et 4 équipes.
+
 ## [2026-09-29] Bandeau des scores réduit de moitié
 - Demande de David : le bandeau qui affiche les scores en permanence pendant une partie prenait trop de place. On commence par le diviser par deux en hauteur ; « pts » n'apporte rien.
 - Décision : chaque équipe tient sur **une seule ligne fine** : logo · nom · score. Hauteur du bandeau : 34 px au lieu de 73 px (3 équipes, iPhone 390 × 844) ; 34 px au lieu de 96 px à 4 équipes.

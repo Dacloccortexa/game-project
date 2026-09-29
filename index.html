@@ -1317,6 +1317,15 @@
   }
   .tackle-team-btn .team-badge { width: 44px; height: 44px; }
   .tackle-team-btn .tt-name { flex: 1; }
+  /* Litige : l'arbitre coche les équipes qui réclament, puis l'appli tire au sort. */
+  .tackle-team-btn .tt-check { width: 26px; height: 26px; border-radius: 50%; border: 2px solid rgba(248,246,237,.5); display: grid; place-items: center; font-size: 16px; line-height: 1; color: transparent; }
+  .tackle-team-btn[aria-pressed="true"] { border-color: var(--gold-ring); background: rgba(40,70,40,.9); }
+  .tackle-team-btn[aria-pressed="true"] .tt-check { border-color: var(--gold); background: var(--gold); color: #1d1406; }
+  .tackle-team-btn.draw-lit { border-color: var(--gold-ring); background: rgba(242,191,84,.28); box-shadow: 0 0 16px rgba(242,191,84,.45); }
+  .tackle-team-btn.draw-win { border: 2px solid var(--gold-ring); background: rgba(242,191,84,.4); box-shadow: 0 0 22px rgba(242,191,84,.6); }
+  .tackle-team-list.drawing .tackle-team-btn { pointer-events: none; }
+  .tackle-draw-btn { min-height: 52px; font-size: 18px; }
+  .tackle-draw-btn:disabled { opacity: .45; }
   .tackle-who {
     display: flex; align-items: center; gap: 12px;
     margin: -16px -16px 4px; padding: 12px 16px;
@@ -2078,10 +2087,12 @@
 
     <div class="tr-panel hidden-screen" id="tackle-team-picker">
       <h3 class="tr-panel-title">Qui a tacklé ?</h3>
-      <p class="tr-panel-sub">Choisir la première équipe à l'avoir annoncé</p>
+      <p class="tr-panel-sub" id="tackle-picker-sub">L'équipe qui a la main arbitre : choisir la première équipe à l'avoir annoncé</p>
       <div class="tackle-team-list" id="tackle-team-buttons"></div>
       <p class="tr-panel-note gold" id="tackle-picker-stakes">Une seule équipe répond</p>
-      <p class="tr-panel-note">Le chrono est arrêté pendant ce choix</p>
+      <p class="tr-panel-note" id="tackle-picker-note">Le chrono est arrêté pendant ce choix</p>
+      <button type="button" class="tr-btn-secondary tackle-draw-btn hidden-screen" id="btn-tackle-draw">Tirer au sort</button>
+      <button type="button" class="text-btn hidden-screen" id="btn-tackle-dispute">Litige : tirage au sort</button>
       <button type="button" class="text-btn" id="btn-tackle-cancel">Annuler, personne n'a tacklé</button>
     </div>
 
@@ -2455,7 +2466,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2029";
+  var APP_VERSION = "2026.09.29-2054";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3447,7 +3458,6 @@
     hide("vf-pending-zone");
     hide("btn-tackle");
     hide("turn-clock");
-    var isLmTackle = state.currentRoundMinigame === "lematch";
     var stake = currentTackleStake();
     el("tackle-picker-stakes").textContent = "Une seule équipe répond · enjeu ±" + pointsLabel(stake);
     var buttonsDiv = el("tackle-team-buttons");
@@ -3463,52 +3473,145 @@
       nameSpan.textContent = team.name;
       btn.appendChild(nameSpan);
       var chevron = document.createElement("span");
+      chevron.className = "tt-chevron";
       chevron.setAttribute("aria-hidden", "true");
       chevron.textContent = "›";
       btn.appendChild(chevron);
+      var check = document.createElement("span");
+      check.className = "tt-check hidden-screen";
+      check.setAttribute("aria-hidden", "true");
+      check.textContent = "✓";
+      btn.appendChild(check);
+      btn.setAttribute("data-team", String(idx));
       btn.addEventListener("click", function () {
-        state.tackleTeamIndex = idx;
-        hide("tackle-team-picker");
-        el("tackle-team-label").textContent = team.name;
-        var badgeBox = el("tackle-team-badge");
-        badgeBox.innerHTML = "";
-        badgeBox.appendChild(teamBadge(team));
-        el("tackle-stake").textContent = "±" + pointsLabel(stake);
-        el("tackle-stakes-note").textContent = "Bonne réponse +" + stake + " · mauvaise réponse −" + stake;
-        el("tackle-answer-input").value = "";
-        el("tackle-answer-input-2").value = "";
-        if (isBinaryGame()) {
-          hide("tackle-answer-field-1");
-          hide("tackle-answer-field-2");
-          hide("btn-tackle-submit");
-          var first = el("tackle-binary-choice-1"), second = el("tackle-binary-choice-2");
-          first.textContent = state.currentRoundMinigame === "plusoumoins" ? "+ Plus" : "VRAI";
-          second.textContent = state.currentRoundMinigame === "plusoumoins" ? "− Moins" : "FAUX";
-          show("tackle-binary-choices");
-        } else if (isLmTackle) {
-          show("tackle-answer-field-1");
-          show("btn-tackle-submit");
-          hide("tackle-binary-choices");
-          el("tackle-answer-label-1").textContent = "Équipe 1";
-          el("tackle-answer-input").placeholder = "Nom de l'équipe";
-          show("tackle-answer-field-2");
-        } else {
-          show("tackle-answer-field-1");
-          show("btn-tackle-submit");
-          hide("tackle-binary-choices");
-          el("tackle-answer-label-1").textContent = "Quel est le joueur ?";
-          el("tackle-answer-input").placeholder = "Nom du joueur…";
-          hide("tackle-answer-field-2");
+        if (state.tackleDispute) {
+          var on = btn.getAttribute("aria-pressed") !== "true";
+          btn.setAttribute("aria-pressed", on ? "true" : "false");
+          updateDisputeButton();
+          return;
         }
-        show("tackle-answer-zone");
-        if (!isBinaryGame()) el("tackle-answer-input").focus();
+        pickTackleTeam(idx);
       });
       buttonsDiv.appendChild(btn);
     });
+    setTackleDispute(false);
     show("tackle-team-picker");
   });
 
+  // ---------- Litige : l'arbitre ne sait pas qui a crié en premier ----------
+  function tackleOpponentButtons() { return Array.prototype.slice.call(el("tackle-team-buttons").querySelectorAll(".tackle-team-btn")); }
+  function setTackleDispute(on) {
+    state.tackleDispute = on;
+    state.tackleDrawSeq = (state.tackleDrawSeq || 0) + 1; // annule un tirage en cours
+    var btns = tackleOpponentButtons();
+    el("tackle-team-buttons").classList.remove("drawing");
+    btns.forEach(function (b) {
+      b.classList.remove("draw-lit", "draw-win");
+      // En litige, toutes les équipes adverses sont cochées d'office : l'arbitre décoche celles qui ne réclament pas.
+      if (on) b.setAttribute("aria-pressed", "true"); else b.removeAttribute("aria-pressed");
+      var check = b.querySelector(".tt-check"), chev = b.querySelector(".tt-chevron");
+      if (check) check.classList.toggle("hidden-screen", !on);
+      if (chev) chev.classList.toggle("hidden-screen", on);
+    });
+    el("tackle-picker-sub").textContent = on
+      ? "Garder cochées les équipes qui disent avoir crié en premier"
+      : "L'équipe qui a la main arbitre : choisir la première équipe à l'avoir annoncé";
+    el("btn-tackle-draw").classList.toggle("hidden-screen", !on);
+    el("btn-tackle-dispute").classList.toggle("hidden-screen", btns.length < 2);
+    el("btn-tackle-dispute").textContent = on ? "Retour : l'arbitre choisit" : "Litige : tirage au sort";
+    updateDisputeButton();
+  }
+  function updateDisputeButton() {
+    var n = tackleOpponentButtons().filter(function (b) { return b.getAttribute("aria-pressed") === "true"; }).length;
+    el("btn-tackle-draw").disabled = n < 2;
+    el("btn-tackle-draw").textContent = n < 2 ? "Cocher au moins 2 équipes" : "Tirer au sort entre " + n + " équipes";
+  }
+  function runTackleDraw(candidates) {
+    // candidates : [{ idx, btn }] ; petite animation de roulette puis l'équipe tirée joue le Tackle.
+    var seq = state.tackleDrawSeq;
+    var winner = candidates[Math.floor(Math.random() * candidates.length)];
+    var len = candidates.length, base = 10 + len * 2;
+    var steps = base + ((candidates.indexOf(winner) - base) % len + len) % len; // la roulette s'arrête sur l'équipe tirée
+    el("tackle-team-buttons").classList.add("drawing");
+    el("btn-tackle-draw").disabled = true;
+    el("btn-tackle-dispute").classList.add("hidden-screen");
+    var i = 0;
+    function tick() {
+      if (seq !== state.tackleDrawSeq || el("tackle-team-picker").classList.contains("hidden-screen")) return;
+      candidates.forEach(function (c) { c.btn.classList.remove("draw-lit"); });
+      if (i >= steps) {
+        winner.btn.classList.add("draw-win");
+        el("tackle-picker-sub").textContent = "Tirage au sort : " + state.teams[winner.idx].name;
+        journalStep("Litige au Tackle : tirage au sort pour " + state.teams[winner.idx].name);
+        setTimeout(function () {
+          if (seq !== state.tackleDrawSeq || el("tackle-team-picker").classList.contains("hidden-screen")) return;
+          state.tackleDispute = false;
+          pickTackleTeam(winner.idx);
+        }, 900);
+        return;
+      }
+      candidates[i % candidates.length].btn.classList.add("draw-lit");
+      i++;
+      setTimeout(tick, 70 + i * 12);
+    }
+    tick();
+  }
+  el("btn-tackle-dispute").addEventListener("click", function () {
+    setTackleDispute(!state.tackleDispute);
+  });
+  el("btn-tackle-draw").addEventListener("click", function () {
+    var picked = [];
+    tackleOpponentButtons().forEach(function (b) {
+      if (b.getAttribute("aria-pressed") === "true") picked.push({ idx: parseInt(b.getAttribute("data-team"), 10), btn: b });
+    });
+    if (picked.length >= 2) runTackleDraw(picked);
+  });
+
+  // Équipe retenue pour le Tackle (choisie par l'arbitre ou tirée au sort).
+  function pickTackleTeam(idx) {
+    var team = state.teams[idx];
+    var isLmTackle = state.currentRoundMinigame === "lematch";
+    var stake = currentTackleStake();
+    state.tackleTeamIndex = idx;
+    hide("tackle-team-picker");
+    el("tackle-team-label").textContent = team.name;
+    var badgeBox = el("tackle-team-badge");
+    badgeBox.innerHTML = "";
+    badgeBox.appendChild(teamBadge(team));
+    el("tackle-stake").textContent = "±" + pointsLabel(stake);
+    el("tackle-stakes-note").textContent = "Bonne réponse +" + stake + " · mauvaise réponse −" + stake;
+    el("tackle-answer-input").value = "";
+    el("tackle-answer-input-2").value = "";
+    if (isBinaryGame()) {
+      hide("tackle-answer-field-1");
+      hide("tackle-answer-field-2");
+      hide("btn-tackle-submit");
+      var first = el("tackle-binary-choice-1"), second = el("tackle-binary-choice-2");
+      first.textContent = state.currentRoundMinigame === "plusoumoins" ? "+ Plus" : "VRAI";
+      second.textContent = state.currentRoundMinigame === "plusoumoins" ? "− Moins" : "FAUX";
+      show("tackle-binary-choices");
+    } else if (isLmTackle) {
+      show("tackle-answer-field-1");
+      show("btn-tackle-submit");
+      hide("tackle-binary-choices");
+      el("tackle-answer-label-1").textContent = "Équipe 1";
+      el("tackle-answer-input").placeholder = "Nom de l'équipe";
+      show("tackle-answer-field-2");
+    } else {
+      show("tackle-answer-field-1");
+      show("btn-tackle-submit");
+      hide("tackle-binary-choices");
+      el("tackle-answer-label-1").textContent = "Quel est le joueur ?";
+      el("tackle-answer-input").placeholder = "Nom du joueur…";
+      hide("tackle-answer-field-2");
+    }
+    show("tackle-answer-zone");
+    if (!isBinaryGame()) el("tackle-answer-input").focus();
+  }
+
+
   el("btn-tackle-cancel").addEventListener("click", function () {
+    setTackleDispute(false);
     journalStep("Tackle annulé");
     hide("tackle-team-picker");
     if (state.currentRoundMinigame === "plusoumoins" && state.pomPendingDirection !== null && state.pomPendingDirection !== undefined) {
