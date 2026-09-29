@@ -1655,16 +1655,17 @@
   .mercato-subtitle { margin: 0 0 4px; text-align: center; font-size: 13px; color: #e4d8c6; }
   .mercato-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0 2px 6px; color: #ff9e32; font-weight: 800; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
   .mercato-points { color: #10211a; background: #ffd36c; border-radius: 999px; padding: 4px 12px; letter-spacing: 0; white-space: nowrap; font-family: var(--font-cond); font-weight: 700; font-size: 17px; }
-  .mercato-body { display: grid; grid-template-columns: minmax(80px, .62fr) minmax(0, 1.38fr); gap: 4px; align-items: start; min-height: 196px; }
-  .mercato-player-wrap { position: relative; align-self: stretch; display: flex; align-items: flex-end; overflow: hidden; }
-  .mercato-player { display: block; width: 150%; max-width: none; height: auto; margin-left: -27%; max-height: 200px; object-fit: contain; object-position: bottom; filter: drop-shadow(0 0 18px rgba(255,138,18,.27)); }
+  /* Joueur mystère en colonne étroite à gauche : les tickets prennent le maximum de largeur. */
+  .mercato-body { display: grid; grid-template-columns: 22% minmax(0, 1fr); gap: 0; align-items: start; min-height: 196px; }
+  .mercato-player-wrap { position: relative; align-self: stretch; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-left: -4px; }
+  .mercato-player { display: block; width: 175%; max-width: none; height: auto; flex: none; filter: drop-shadow(0 0 14px rgba(255,138,18,.3)); }
   /* Seuls les clubs déjà révélés sont affichés, du haut vers le bas : les précédents ne bougent pas. */
-  .mercato-clubs { list-style: none; display: flex; flex-direction: column; justify-content: flex-start; gap: 5px; margin: 0; padding: 2px 0 0 18px; min-width: 0; }
+  .mercato-clubs { list-style: none; display: flex; flex-direction: column; justify-content: flex-start; gap: 5px; margin: 0; padding: 2px 0 0 16px; min-width: 0; }
   .mercato-club {
     position: relative; min-height: 36px;
     display: grid; grid-template-columns: 2.5% 15.3% minmax(0, 1fr); align-items: center;
     background: url("assets/ui/mercato/club-ticket.svg") center / 100% 100% no-repeat;
-    padding: 2px 19% 2px 0; /* le texte s'arrête avant le petit maillot dessiné à droite */
+    padding: 2px 16.5% 2px 0; /* le texte s'arrête avant le petit maillot dessiné à droite */
   }
   .mercato-club.is-current { background-image: url("assets/ui/mercato/club-ticket-active.svg"); }
   .mercato-club:not(:last-child)::after {
@@ -1674,16 +1675,16 @@
   .mercato-club-number { grid-column: 2; text-align: center; color: #101618; font-family: var(--font-cond); font-weight: 700; font-size: 18px; }
   .mercato-club-label { grid-column: 3; min-width: 0; padding-left: 12px; }
   .mercato-club-name { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 800; font-size: clamp(12px, 3.7vw, 15px); line-height: 1.15; text-transform: uppercase; color: #fff9ee; }
+  .mercato-club-name.is-long { font-size: clamp(11px, 3.2vw, 13px); letter-spacing: -.01em; }
   .mercato-club-years { display: block; font-size: 11px; line-height: 1.2; color: #e0ddd4; margin-top: 0; font-variant-numeric: tabular-nums; }
   .mercato-club.is-current .mercato-club-years { color: #ffd06b; }
   .mercato-club.is-current.new { animation: mercato-in .45s ease-out 1; }
   @keyframes mercato-in { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
   @media (max-width: 360px) {
     .mercato-card { padding-inline: 8px; }
-    .mercato-body { grid-template-columns: 30% 70%; }
+    .mercato-body { grid-template-columns: 20% minmax(0, 1fr); }
     .mercato-club-label { padding-left: 9px; }
-    .mercato-player { width: 190%; margin-left: -52%; }
-    .mercato-club { padding-right: 19%; }
+    .mercato-club { padding-right: 16.5%; }
     .mercato-club-years { font-size: 10px; }
   }
   @media (prefers-reduced-motion: reduce) { .mercato-club.is-current.new { animation: none; } }
@@ -4205,7 +4206,7 @@
       var label = document.createElement("span");
       label.className = "mercato-club-label";
       var club = document.createElement("span");
-      club.className = "mercato-club-name";
+      club.className = "mercato-club-name" + (String(card.career[i].club).length > 15 ? " is-long" : "");
       club.textContent = card.career[i].club;
       var years = document.createElement("span");
       years.className = "mercato-club-years";

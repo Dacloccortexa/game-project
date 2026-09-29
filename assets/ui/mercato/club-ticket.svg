@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 128" role="img" aria-label="Fiche de club sans texte">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 128" preserveAspectRatio="none" role="img" aria-label="Fiche de club sans texte">
   <defs>
     <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#1b1e20"/><stop offset="1" stop-color="#0c1112"/></linearGradient>
     <linearGradient id="stub" x1="0" x2="1"><stop stop-color="#f3f0e5"/><stop offset="1" stop-color="#b7b9b6"/></linearGradient>
