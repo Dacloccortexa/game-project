@@ -47,7 +47,7 @@ function advance(ms) {
 }
 
 let script = fs.readFileSync('index.html', 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
-script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake};})();');
+script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame};})();');
 const context = {
   document: { getElementById: element, createElement: tag => element(`created-${tag}-${Math.random()}`), querySelector: element },
   fetch: () => Promise.resolve({ json: () => Promise.resolve({ cards: [], players: [], statements: [] }) }),
@@ -58,7 +58,7 @@ const context = {
 };
 vm.createContext(context);
 vm.runInContext(script, context);
-const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake } = context.testApi;
+const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake, pickNextMinigame } = context.testApi;
 
 function reset(game) {
   timers.clear();
@@ -317,6 +317,17 @@ element('tackle-team-buttons').children[1].click();
 advance(15500);
 assert.equal(state.teams[1].score, -3);
 assert.equal(state.cardEnded, true);
+
+// Manche suivante : jamais le même défi deux fois de suite (sauf s'il n'y en a qu'un).
+{
+  const all = ['transfert','plusoumoins','vraifaux','quisuisje','lematch'];
+  let prev = null;
+  for (let i = 0; i < 500; i++) { const next = pickNextMinigame(all, prev); assert.notEqual(next, prev); assert.ok(all.includes(next)); prev = next; }
+  const seen = new Set(); for (let i = 0; i < 500; i++) seen.add(pickNextMinigame(all, 'transfert'));
+  assert.equal(seen.size, 4);
+  assert.equal(pickNextMinigame(['vraifaux'], 'vraifaux'), 'vraifaux');
+  assert.notEqual(pickNextMinigame(['vraifaux','lematch'], 'vraifaux'), 'vraifaux');
+}
 
 // La version du jeu et version.json doivent correspondre (tools/bump-version.sh).
 const pageVersion = fs.readFileSync('index.html', 'utf8').match(/var APP_VERSION = "([^"]+)"/)[1];

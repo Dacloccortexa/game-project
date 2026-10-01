@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-10-01] Jamais deux manches de suite avec le même défi
+- Demande de David : le jeu suivant peut être n'importe lequel, mais pas le même que celui d'avant.
+- Décision : chaque manche tire un défi au hasard parmi ceux sélectionnés, **en excluant celui de la manche précédente** (toutes les équipes jouent toujours le même défi dans une manche). Avec un seul défi sélectionné, il est forcément répété. La première manche d'une partie (y compris une revanche) peut être n'importe quel défi.
+- Tests : tirage sur 500 manches sans répétition consécutive, les 4 autres défis possibles après un défi donné ; partie de 10 manches vérifiée en navigateur.
+
 ## [2026-10-01] Plus ou Moins : catégorie (championnat, coupe…) bien visible
 - Remarque de David en test : on ne voit pas assez sur quel championnat ou quelle coupe porte la comparaison.
 - Décision : la catégorie sous le titre devient une pastille encadrée dorée, en majuscules, plus grande (15 à 20 px selon l'écran au lieu de 16 px en blanc simple), toujours sur une ligne (« SÉLECTIONS EN ÉQUIPE NATIONALE » compris, vérifié à 390 et 320 px). Les unités sous les valeurs (« BUTS », « SÉLECTIONS ») restent inchangées.

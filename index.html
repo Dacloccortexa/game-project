@@ -2651,7 +2651,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.01-2236";
+  var APP_VERSION = "2026.10.01-2241";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3362,6 +3362,7 @@
     }
     state.roundsPlayed = 0;
     state.currentTeamIndex = 0;
+    state.currentRoundMinigame = null; // nouvelle partie : la première manche peut être n'importe quel défi
     journalStartGame();
 
     SETUP_SCREENS.forEach(hide);
@@ -3371,11 +3372,16 @@
     beginTurn();
   }
 
+  function pickNextMinigame(selected, previous) {
+    var pool = selected.length > 1 ? selected.filter(function (g) { return g !== previous; }) : selected;
+    return pool[Math.floor(Math.random() * pool.length)];
+  }
+
   function beginTurn() {
     // Une manche = un mini-jeu tiré au hasard parmi ceux sélectionnés, joué par toutes les équipes.
+    // Jamais deux manches de suite avec le même défi (s'il y en a au moins deux de sélectionnés).
     if (state.currentTeamIndex === 0) {
-      var idx = Math.floor(Math.random() * state.minigamesSelected.length);
-      state.currentRoundMinigame = state.minigamesSelected[idx];
+      state.currentRoundMinigame = pickNextMinigame(state.minigamesSelected, state.currentRoundMinigame);
     }
 
     if (state.currentRoundMinigame === "plusoumoins") {
