@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-10-01] Correctif : champ de réponse toujours vide à chaque nouvelle réponse
+- Bug relevé par David : après une mauvaise réponse, la carte continue ; au « Répondre » suivant, le nom tapé avant était encore dans le champ.
+- Reproduit en navigateur sur Qui suis-je ? et Le Match (les deux champs d'équipes). Sur Transfert le champ était déjà vidé dans le cas testé, mais le correctif s'applique aussi par sécurité.
+- Correctif : chaque appui sur « Répondre » (Transfert, Qui suis-je ?, Le Match, y compris quand l'équipe qui a la main gagne la course au Tackle) ouvre un champ vide. Le champ du Tackle était déjà vidé à chaque Tackle.
+
 ## [2026-10-01] Tackle raté : la carte continue pour l'équipe qui a la main (Transfert, Qui suis-je ?, Le Match)
 - Proposition de David : l'équipe prioritaire doit pouvoir encore gagner des points quand un adversaire rate son Tackle ; les équipes qui n'ont pas encore tacklé peuvent encore jouer.
 - Options discutées : (A) l'équipe prioritaire encaisse le palier en cours et la carte s'arrête ; (B) la carte continue pour elle. **Choix de David : B.**

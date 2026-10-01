@@ -2626,7 +2626,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.01-2011";
+  var APP_VERSION = "2026.10.01-2016";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -4386,6 +4386,7 @@
     clearTackleTimer();
     hideTackleUI();
     document.querySelector("#qsj-answer-zone .answer-btns").style.display = "none";
+    el("qsj-answer-input").value = ""; // toujours un champ vide à chaque nouvelle réponse
     show("qsj-type-box");
     el("qsj-answer-input").focus();
   });
@@ -4576,6 +4577,8 @@
     clearTackleTimer();
     hideTackleUI();
     document.querySelector("#lm-answer-zone .answer-btns").style.display = "none";
+    el("lm-answer-input-1").value = ""; // toujours des champs vides à chaque nouvelle réponse
+    el("lm-answer-input-2").value = "";
     show("lm-type-box");
     el("lm-answer-input-1").focus();
   });
@@ -4732,6 +4735,7 @@
     el("type-title").textContent = "Réponse " + teamDes(name);
     el("type-sub").textContent = "Saisir le nom annoncé par " + name.replace(/^Les /, "les ");
     el("type-stakes").textContent = transfertStakesText();
+    el("answer-input").value = ""; // toujours un champ vide à chaque nouvelle réponse
     show("type-box");
     el("answer-input").focus();
   });
