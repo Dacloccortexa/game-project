@@ -1555,7 +1555,14 @@
   .pom-plus { color: #5fd2ff; text-shadow: 0 0 14px rgba(95,210,255,.55); }
   .pom-ou { color: #fff; font-size: 26px; }
   .pom-moins { color: #ff7a5c; text-shadow: 0 0 14px rgba(255,110,80,.55); }
-  .pom-category { font-weight: 700; font-size: 16px; color: #fff; }
+  /* Catégorie (championnat, coupe…) bien visible : c'est elle qui dit sur quoi on compare. */
+  .pom-category {
+    margin: 4px 0 2px; padding: 4px 12px; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    border-radius: 999px; border: 1.5px solid rgba(255,224,138,.75);
+    background: rgba(4,12,28,.6); box-shadow: 0 0 12px rgba(255,210,110,.25);
+    font-family: var(--font-cond); font-weight: 700; font-size: clamp(15px, 4.6vw, 20px); line-height: 1.15;
+    letter-spacing: 0; text-transform: uppercase; color: #ffe08a; text-shadow: 0 1px 4px rgba(0,0,0,.6);
+  }
   .pom-step {
     display: flex; align-items: center; gap: 10px; width: 100%;
     font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #7fd3ff;
@@ -2644,7 +2651,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.01-2054";
+  var APP_VERSION = "2026.10.01-2236";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {

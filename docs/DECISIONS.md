@@ -1,5 +1,9 @@
 # DECISIONS.md
 
+## [2026-10-01] Plus ou Moins : catégorie (championnat, coupe…) bien visible
+- Remarque de David en test : on ne voit pas assez sur quel championnat ou quelle coupe porte la comparaison.
+- Décision : la catégorie sous le titre devient une pastille encadrée dorée, en majuscules, plus grande (15 à 20 px selon l'écran au lieu de 16 px en blanc simple), toujours sur une ligne (« SÉLECTIONS EN ÉQUIPE NATIONALE » compris, vérifié à 390 et 320 px). Les unités sous les valeurs (« BUTS », « SÉLECTIONS ») restent inchangées.
+
 ## [2026-10-01] Chrono de réponse : 15 secondes pour valider (20 s au départ, réduit à 15 s à la demande de David)
 - Problème relevé par David en test : des joueurs appuient sur « Répondre » pour gagner du temps de réflexion (le chrono principal s'arrête pendant la saisie).
 - Décision : dès qu'une équipe a la main pour répondre, elle a **15 s** pour valider, avec une barre et un compte à rebours (rouge sous 5 s) en haut du panneau :
