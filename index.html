@@ -2626,7 +2626,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.09.29-2351";
+  var APP_VERSION = "2026.10.01-2011";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3422,6 +3422,7 @@
 
   function beginTurnCommon(minigameLabel) {
     state.cardSeq = (state.cardSeq || 0) + 1;
+    state.tackledThisCard = []; // équipes adverses qui ont déjà tenté leur Tackle sur cette carte
     hideVerdict();
     journalStartCard();
     el("round-count").textContent = "Manche " + pad2(state.roundsPlayed + 1) + " / " + pad2(state.roundsTotal);
@@ -3629,8 +3630,10 @@
     var buttonsDiv = el("tackle-team-buttons");
     buttonsDiv.innerHTML = "";
     // Toutes les équipes sont dans la course, celle qui a la main en premier.
+    // Une équipe adverse qui a déjà raté son Tackle sur cette carte ne peut plus tacler.
+    var already = state.tackledThisCard || [];
     var order = [state.currentTeamIndex];
-    state.teams.forEach(function (t, i) { if (i !== state.currentTeamIndex) order.push(i); });
+    state.teams.forEach(function (t, i) { if (i !== state.currentTeamIndex && already.indexOf(i) === -1) order.push(i); });
     order.forEach(function (idx) {
       var team = state.teams[idx];
       var btn = document.createElement("button");
@@ -3759,6 +3762,7 @@
   // Équipe retenue pour le Tackle (choisie par l'arbitre ou tirée au sort).
   function pickTackleTeam(idx) {
     if (idx === state.currentTeamIndex) { pickActiveTeamInRace(); return; }
+    (state.tackledThisCard = state.tackledThisCard || []).push(idx);
     var team = state.teams[idx];
     var isLmTackle = state.currentRoundMinigame === "lematch";
     var stake = currentTackleStake();
@@ -3856,6 +3860,35 @@
     resolveOpenBinaryTackle(state.currentRoundMinigame === "plusoumoins" ? "moins" : false);
   });
 
+  // Transfert, Qui suis-je ?, Le Match : un Tackle adverse raté coûte ses points à l'équipe qui a tacklé,
+  // puis la carte continue pour l'équipe qui a la main (indice suivant, nouveau chrono).
+  // Sur le dernier indice, la carte se termine et la réponse est révélée.
+  function continueAfterFailedTackle(tacklingTeam, before, answerText) {
+    var game = state.currentRoundMinigame;
+    var count = game === "lematch" ? state.lmRevealedCount : state.revealedCount;
+    var total = game === "lematch" ? state.currentLmCard.events.length
+      : game === "transfert" ? state.currentCard.career.length : state.currentCard.clues.length;
+    var head = { text: tackleDeltaText(false) + " · " + scoreChangeText(tacklingTeam.name, before, tacklingTeam.score), strong: true };
+    if (count >= total) {
+      showVerdict("bad", "Tackle raté", { note: [head, { text: "C'était " + answerText, strong: true }, "Fin des indices · carte terminée"] });
+      endCard();
+      return;
+    }
+    var active = state.teams[state.currentTeamIndex];
+    var nextPoints = POINTS_BY_INDEX[Math.min(count, POINTS_BY_INDEX.length - 1)];
+    hide(activeAnswerZone());
+    showVerdict("bad", "Tackle raté", {
+      note: [head, (game === "lematch" ? "Les équipes restent secrètes" : "Le joueur reste secret"),
+        "La main revient " + teamAux(active.name) + " · " + (game === "lematch" ? "événement suivant" : "indice suivant") + " · " + pointsLabel(nextPoints)],
+      then: function () {
+        show(activeAnswerZone());
+        if (game === "lematch") { resetLmAnswerZone(); advanceLmEvent(true); }
+        else if (game === "quisuisje") { resetQsjAnswerZone(); advanceQsjClue(true); }
+        else advanceClue(true);
+      }
+    });
+  }
+
   el("btn-tackle-submit").addEventListener("click", function () {
     var typed = el("tackle-answer-input").value.trim();
     if (!typed) return;
@@ -3873,6 +3906,7 @@
 
       var lmBefore = tacklingTeam.score;
       awardPointsToTeam(state.tackleTeamIndex, isLmCorrect ? stake : -stake);
+      if (!isLmCorrect) { continueAfterFailedTackle(tacklingTeam, lmBefore, lmCard.teams[0] + " – " + lmCard.teams[1]); return; }
       hide("lm-answer-zone");
       showVerdict(isLmCorrect ? "good" : "bad", "Tackle " + (isLmCorrect ? "réussi" : "raté"), { note: [
         { text: lmCard.teams[0] + " – " + lmCard.teams[1], strong: true },
@@ -3892,6 +3926,7 @@
     if (state.currentRoundMinigame === "transfert") {
       var before = tacklingTeam.score;
       awardPointsToTeam(state.tackleTeamIndex, isCorrect ? stake : -stake);
+      if (!isCorrect) { continueAfterFailedTackle(tacklingTeam, before, card.answer); return; }
       showTrResult({
         good: isCorrect,
         title: isCorrect ? "Tackle réussi" : "Tackle raté",
@@ -3908,6 +3943,7 @@
 
     var tBefore = tacklingTeam.score;
     awardPointsToTeam(state.tackleTeamIndex, isCorrect ? stake : -stake);
+    if (!isCorrect) { continueAfterFailedTackle(tacklingTeam, tBefore, card.answer); return; }
     hide("qsj-answer-zone");
     showVerdict(isCorrect ? "good" : "bad", "Tackle " + (isCorrect ? "réussi" : "raté"), { note: [
       { text: card.answer, strong: true },

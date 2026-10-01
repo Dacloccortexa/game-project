@@ -1,5 +1,16 @@
 # DECISIONS.md
 
+## [2026-10-01] Tackle raté : la carte continue pour l'équipe qui a la main (Transfert, Qui suis-je ?, Le Match)
+- Proposition de David : l'équipe prioritaire doit pouvoir encore gagner des points quand un adversaire rate son Tackle ; les équipes qui n'ont pas encore tacklé peuvent encore jouer.
+- Options discutées : (A) l'équipe prioritaire encaisse le palier en cours et la carte s'arrête ; (B) la carte continue pour elle. **Choix de David : B.**
+- Décision :
+  - Tackle adverse **réussi** : + le palier, carte terminée (inchangé).
+  - Tackle adverse **raté** : − le palier pour l'équipe qui tacle, puis bandeau « Tackle raté » (« La main revient aux … · indice suivant · n pts ») et la carte continue à l'indice ou à l'événement suivant, avec un nouveau chrono (30 s de priorité, puis 15 s de course).
+  - **Une seule tentative par équipe adverse et par carte** : une équipe qui a raté n'apparaît plus dans « Qui a tacklé ? » jusqu'à la carte suivante. L'équipe qui a la main reste toujours dans la liste (règle de la course). Le litige reste proposé tant qu'au moins 2 équipes sont dans la liste.
+  - Tackle raté sur le **dernier** indice ou événement : réponse révélée, carte terminée.
+- Plus ou Moins et Vrai ou Faux : **inchangés** (le Tackle vaut ±3 et termine la carte ; s'il est raté, l'équipe prioritaire encaisse sa cagnotte).
+- Tests : `tests/tackle-timing.test.cjs` couvre le Tackle raté qui continue, l'exclusion de l'équipe qui a raté et le dernier indice. Vérifié en navigateur sur Transfert, Qui suis-je ? et Le Match avec 3 équipes.
+
 ## [2026-09-29] Bouton « Litige : tirage au sort » encadré
 - Demande de David : le litige doit être un bouton encadré aussi gros que les boutons d'équipe, à la même place (sous les indications, au-dessus de « Annuler, personne n'a tacklé »).
 - Décision : bouton pleine largeur, 62 px de haut comme les équipes, cadre doré, texte doré. En mode litige, le même bouton affiche « Retour : l'arbitre choisit ». Aucun autre changement du panneau.

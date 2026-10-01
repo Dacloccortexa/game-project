@@ -47,7 +47,7 @@ Les maquettes 21 à 23 sont accompagnées du [pack `assets/ui/mercato/`](../asse
 - L'équipe active peut répondre ou passer. Passer affiche directement l'indice suivant, sans pénalité, avec un palier de points plus faible. Nous conservons ce comportement pour le prochain test réel.
 - À chaque nouvel indice, le Tackle est grisé pendant 30 secondes, puis actif 15 secondes après le sifflet. Après un Tackle annoncé, on choisit **la première équipe à l'avoir annoncé**, puis elle seule saisit une réponse. Le chrono est suspendu pendant le choix et la saisie.
 - Quand l'équipe active répond, sa réponse saisie lui est montrée avant validation. Bonne réponse : gain du palier, révélation du joueur et fin de carte. Mauvaise réponse : **−1 point**, le joueur reste secret et l'indice suivant apparaît.
-- En Tackle, réussite ou échec vaut respectivement **+ ou − le palier courant** et termine la carte. À l'indice 3 de l'exemple, l'enjeu est donc ±3 points.
+- En Tackle, réussite ou échec vaut respectivement **+ ou − le palier courant**. Réussi, il termine la carte ; raté, la main revient à l'équipe active à l'indice suivant, et l'équipe qui a raté ne peut plus tacler sur cette carte (règle du 2026-10-01). À l'indice 3 de l'exemple, l'enjeu est donc ±3 points.
 - Les animations sont des aperçus de mouvement : dans le produit, jouer une fois le flash, afficher le delta, mettre à jour le score, puis passer à l'état suivant. Une mauvaise réponse ne révèle jamais le joueur avant la fin de la carte.
 
 Les noms de clubs et les équipes affichés sont des exemples de composition. Utiliser les données vérifiées du jeu et les emblèmes fictifs TACKLE ; aucun blason de club dans les illustrations.

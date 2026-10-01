@@ -66,6 +66,7 @@ function reset(game) {
   state.currentRoundMinigame = game;
   state.currentTeamIndex = 0;
   state.teams = [{name:'A', score:0},{name:'B', score:0}];
+  state.tackledThisCard = [];
 }
 
 reset('transfert');
@@ -243,6 +244,45 @@ element('tackle-team-buttons').children[0].click();
 pomGuess('plus');
 assert.equal(state.pomPotential, 1);
 assert.equal(state.teams[1].score, 0);
+
+// Tackle adverse raté (Transfert, Qui suis-je ?, Le Match) : l'équipe qui tacle perd ses points,
+// la carte continue pour l'équipe qui a la main, et cette équipe adverse ne peut plus tacler sur la carte.
+reset('transfert');
+state.teams = [{name:'A', score:0},{name:'B', score:0},{name:'C', score:0}];
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'},{club:'Trois',years:'3'}]};
+state.revealedCount = 1;
+startTackleWindow();
+advance(30000);
+element('btn-tackle').click();
+assert.equal(element('tackle-team-buttons').children.length, 3);
+element('tackle-team-buttons').children[1].click(); // équipe B
+element('tackle-answer-input').value = 'Mauvais';
+element('btn-tackle-submit').click();
+assert.equal(state.teams[1].score, -5);
+assert.equal(state.cardEnded, false);
+advance(3000); // fin de l'animation du verdict : indice suivant
+assert.equal(state.revealedCount, 2);
+assert.equal(element('screen-play').classList.contains('race'), false);
+advance(30000);
+element('btn-tackle').click();
+assert.equal(element('tackle-team-buttons').children.length, 2); // A (la main) et C ; B a déjà tacklé
+element('tackle-team-buttons').children[1].click(); // équipe C
+element('tackle-answer-input').value = 'Joueur';
+element('btn-tackle-submit').click();
+assert.equal(state.teams[2].score, 4);
+assert.equal(state.cardEnded, true);
+
+// Sur le dernier indice, un Tackle raté termine la carte.
+reset('transfert');
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'}]};
+state.revealedCount = 1;
+startTackleWindow();
+advance(30000);
+element('btn-tackle').click();
+element('tackle-team-buttons').children[1].click();
+element('tackle-answer-input').value = 'Mauvais';
+element('btn-tackle-submit').click();
+assert.equal(state.cardEnded, true);
 
 // La version du jeu et version.json doivent correspondre (tools/bump-version.sh).
 const pageVersion = fs.readFileSync('index.html', 'utf8').match(/var APP_VERSION = "([^"]+)"/)[1];
