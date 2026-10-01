@@ -1267,6 +1267,15 @@
     border: 2px solid var(--gold-ring);
     background: rgba(3,20,13,.94);
   }
+  /* Chrono de réponse : 20 s pour taper et valider une réponse (ou un choix après un Tackle). */
+  .answer-timer { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; }
+  .answer-timer-bar { flex: 1; height: 6px; border-radius: 3px; background: rgba(248,246,237,.15); overflow: hidden; }
+  .answer-timer-bar i { display: block; height: 100%; width: 100%; background: var(--gold); border-radius: 3px; transition: width .25s linear; }
+  .answer-timer-text { flex: none; min-width: 42px; text-align: right; font-family: var(--font-cond); font-weight: 700; font-size: 20px; color: var(--gold); font-variant-numeric: tabular-nums; }
+  .answer-timer.urgent .answer-timer-bar i { background: #ff6a55; }
+  .answer-timer.urgent .answer-timer-text { color: #ff8a70; }
+  #pom-answer-zone > .answer-timer, #vf-answer-zone > .answer-timer { margin-bottom: 8px; }
+
   /* Après le sifflet, c'est la course : plus de « Répondre » ni de « Passer », seulement le Tackle
      (l'équipe qui a la main doit aussi le gagner). */
   #screen-play.race #answer-zone, #screen-play.race #qsj-answer-zone, #screen-play.race #lm-answer-zone,
@@ -2054,14 +2063,16 @@
         <button type="button" class="tr-btn-secondary" id="btn-pass">Passer l'indice</button>
       </div>
       <div class="tr-panel hidden-screen" id="type-box">
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
         <h3 class="tr-panel-title" id="type-title">Réponse</h3>
         <p class="tr-panel-sub" id="type-sub"></p>
         <label class="tr-label" for="answer-input">Quel est le joueur ?</label>
         <input type="text" class="tr-input" id="answer-input" placeholder="Nom du joueur…" autocomplete="off" autocapitalize="words" enterkeyhint="done">
         <button type="button" class="tr-btn-primary" id="btn-submit-answer">Faire confirmer</button>
-        <p class="tr-panel-note"><span id="type-stakes"></span><br>Le chrono est arrêté pendant la saisie</p>
+        <p class="tr-panel-note"><span id="type-stakes"></span><br>Temps limité : sans réponse validée à 0, c'est une mauvaise réponse</p>
       </div>
       <div class="tr-panel hidden-screen" id="confirm-box">
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
         <h3 class="tr-panel-title" id="confirm-title">Confirmez ?</h3>
         <p class="tr-panel-sub">Vérifiez le nom avant de l'envoyer</p>
         <div class="tr-typed" id="typed-text"></div>
@@ -2092,6 +2103,7 @@
     <div id="pom-feedback-zone" class="pom-note hidden-screen"></div>
 
     <div id="pom-answer-zone" class="hidden-screen">
+      <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
       <div class="pom-answers">
         <button type="button" class="pom-btn pom-btn-plus" id="pom-btn-plus">Plus <svg class="pom-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5V4M5 10.5L12 3.5l7 7"/></svg></button>
         <button type="button" class="pom-btn pom-btn-moins" id="pom-btn-moins">Moins <svg class="pom-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5V20M5 13.5l7 7 7-7"/></svg></button>
@@ -2139,6 +2151,7 @@
     <div id="vf-feedback-zone" class="hidden-screen"></div>
 
     <div id="vf-answer-zone" class="hidden-screen">
+      <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
       <div class="vf-choices">
         <button type="button" class="vf-choice vf-choice--true" id="btn-vf-vrai">Vrai</button>
         <button type="button" class="vf-choice vf-choice--false" id="btn-vf-faux">Faux</button>
@@ -2189,6 +2202,7 @@
         <button class="btn-answer" id="btn-qsj-answer">Répondre</button>
       </div>
       <div class="confirm-box hidden-screen" id="qsj-type-box">
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
         <div class="field">
           <label>Nom du joueur</label>
           <input type="text" id="qsj-answer-input" placeholder="Tape le nom ici" autocomplete="off">
@@ -2196,6 +2210,7 @@
         <button class="primary" id="btn-qsj-submit-answer" style="margin-top:4px;">Valider</button>
       </div>
       <div class="confirm-box hidden-screen" id="qsj-confirm-box">
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
         <div class="typed">Tu as tapé : « <span id="qsj-typed-text"></span> »</div>
         <div class="confirm-actions">
           <button class="secondary" id="btn-qsj-edit-answer">Modifier</button>
@@ -2221,6 +2236,7 @@
         <button class="btn-answer" id="btn-lm-answer">Répondre</button>
       </div>
       <div class="confirm-box hidden-screen" id="lm-type-box">
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
         <div class="field">
           <label>Équipe 1</label>
           <input type="text" id="lm-answer-input-1" placeholder="Nom de l'équipe" autocomplete="off">
@@ -2232,6 +2248,7 @@
         <button class="primary" id="btn-lm-submit-answer" style="margin-top:4px;">Valider</button>
       </div>
       <div class="confirm-box hidden-screen" id="lm-confirm-box">
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
         <div class="typed">Tu as tapé : « <span id="lm-typed-text"></span> »</div>
         <div class="confirm-actions">
           <button class="secondary" id="btn-lm-edit-answer">Modifier</button>
@@ -2264,6 +2281,7 @@
         </div>
         <span class="tackle-who-stake" id="tackle-stake"></span>
       </div>
+      <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
       <div class="tr-field" id="tackle-answer-field-1">
         <label class="tr-label" id="tackle-answer-label-1" for="tackle-answer-input">Quel est le joueur ?</label>
         <input type="text" class="tr-input" id="tackle-answer-input" placeholder="Nom du joueur…" autocomplete="off" autocapitalize="words" enterkeyhint="done">
@@ -2277,7 +2295,7 @@
         <button type="button" class="tr-btn-secondary" id="tackle-binary-choice-1"></button>
         <button type="button" class="tr-btn-secondary" id="tackle-binary-choice-2"></button>
       </div>
-      <p class="tr-panel-note"><span id="tackle-stakes-note"></span><br>Une seule tentative · la carte se termine ensuite</p>
+      <p class="tr-panel-note"><span id="tackle-stakes-note"></span><br><span id="tackle-after-note">Une seule tentative · la carte se termine ensuite</span></p>
     </div>
 
     <!-- Bandeau de verdict commun aux cinq défis (DECISIONS.md, 2026-09-29) -->
@@ -2626,7 +2644,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.01-2016";
+  var APP_VERSION = "2026.10.01-2052";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3422,6 +3440,7 @@
 
   function beginTurnCommon(minigameLabel) {
     state.cardSeq = (state.cardSeq || 0) + 1;
+    stopAnswerTimer();
     state.tackledThisCard = []; // équipes adverses qui ont déjà tenté leur Tackle sur cette carte
     hideVerdict();
     journalStartCard();
@@ -3521,6 +3540,50 @@
     el("btn-tackle").classList.toggle("blink", open && !alone);
     setRace(open && !alone);
   }
+
+  // ---------- Chrono de réponse ----------
+  // Dès qu'une équipe a la main pour répondre (« Répondre », Tackle, course gagnée), elle a
+  // ANSWER_SECONDS pour valider. À 0 : mauvaise réponse (ou Tackle raté), avec les règles habituelles.
+  var ANSWER_SECONDS = 20;
+  function renderAnswerTimer(ms) {
+    var secs = Math.max(0, Math.ceil(ms / 1000));
+    var pct = Math.max(0, Math.min(100, ms / (ANSWER_SECONDS * 10)));
+    try {
+      document.querySelectorAll(".answer-timer").forEach(function (t) {
+        t.querySelector(".answer-timer-text").textContent = secs + " s";
+        t.querySelector(".answer-timer-bar i").style.width = pct + "%";
+        t.classList.toggle("urgent", secs <= 5);
+      });
+    } catch (e) {}
+  }
+  function showAnswerTimers(on) {
+    try { document.querySelectorAll(".answer-timer").forEach(function (t) { t.classList.toggle("hidden-screen", !on); }); } catch (e) {}
+  }
+  function startAnswerTimer(onExpire) {
+    stopAnswerTimer();
+    state.answerDeadline = Date.now() + ANSWER_SECONDS * 1000;
+    state.answerExpire = onExpire;
+    state.answerSeq = state.cardSeq;
+    renderAnswerTimer(ANSWER_SECONDS * 1000);
+    showAnswerTimers(true);
+    state.answerTimerId = setInterval(tickAnswerTimer, 250);
+  }
+  function tickAnswerTimer() {
+    if (state.cardEnded || state.answerSeq !== state.cardSeq) { stopAnswerTimer(); return; }
+    var ms = state.answerDeadline - Date.now();
+    renderAnswerTimer(ms);
+    if (ms > 0) return;
+    var expire = state.answerExpire;
+    stopAnswerTimer();
+    journalStep("temps de réponse écoulé");
+    if (expire) expire();
+  }
+  function stopAnswerTimer() {
+    if (state.answerTimerId) { clearInterval(state.answerTimerId); state.answerTimerId = null; }
+    state.answerExpire = null;
+    showAnswerTimers(false);
+  }
+  var TIMEOUT_ANSWER = "(temps écoulé)"; // ne correspond à aucun joueur ni aucune équipe
 
   // Course au Tackle (15 s après le sifflet) : les boutons de l'équipe qui a la main disparaissent.
   function setRace(on) { el("screen-play").classList.toggle("race", !!on); }
@@ -3756,7 +3819,17 @@
     if (game === "transfert") el("btn-answer").click();
     else if (game === "quisuisje") el("btn-qsj-answer").click();
     else if (game === "lematch") el("btn-lm-answer").click();
-    // Plus ou Moins / Vrai ou Faux : ses boutons PLUS/MOINS ou VRAI/FAUX réapparaissent.
+    // Plus ou Moins / Vrai ou Faux : ses boutons PLUS/MOINS ou VRAI/FAUX réapparaissent, avec le chrono de réponse.
+    if (game === "plusoumoins") startAnswerTimer(function () { pomGuess(wrongBinaryChoice()); });
+    else if (game === "vraifaux") startAnswerTimer(function () { vfAnswer(wrongBinaryChoice()); });
+  }
+  // Choix forcément faux, utilisé quand le temps de réponse est écoulé sur Plus ou Moins / Vrai ou Faux.
+  function wrongBinaryChoice() {
+    if (state.currentRoundMinigame === "plusoumoins") {
+      var c = state.pomChain.chain;
+      return c[state.pomIndex + 1].value > c[state.pomIndex].value ? "moins" : "plus";
+    }
+    return !state.vfChain[state.vfIndex].est_vraie;
   }
 
   // Équipe retenue pour le Tackle (choisie par l'arbitre ou tirée au sort).
@@ -3799,8 +3872,17 @@
       el("tackle-answer-input").placeholder = "Nom du joueur…";
       hide("tackle-answer-field-2");
     }
+    el("tackle-after-note").textContent = isBinaryGame()
+      ? "Une seule tentative · la carte se termine ensuite"
+      : "Une seule tentative par carte · raté : la main revient à l'équipe qui jouait";
     show("tackle-answer-zone");
     if (!isBinaryGame()) el("tackle-answer-input").focus();
+    startAnswerTimer(function () {
+      if (isBinaryGame()) { resolveOpenBinaryTackle(wrongBinaryChoice()); return; }
+      el("tackle-answer-input").value = TIMEOUT_ANSWER;
+      el("tackle-answer-input-2").value = TIMEOUT_ANSWER;
+      el("btn-tackle-submit").click();
+    });
   }
 
 
@@ -3822,6 +3904,7 @@
   });
 
   function resolveOpenBinaryTackle(choice) {
+    stopAnswerTimer();
     var game = state.currentRoundMinigame;
     var correct = game === "plusoumoins"
       ? choice === (state.pomChain.chain[state.pomIndex + 1].value > state.pomChain.chain[state.pomIndex].value ? "plus" : "moins")
@@ -3892,6 +3975,8 @@
   el("btn-tackle-submit").addEventListener("click", function () {
     var typed = el("tackle-answer-input").value.trim();
     if (!typed) return;
+    if (state.currentRoundMinigame === "lematch" && !el("tackle-answer-input-2").value.trim()) return;
+    stopAnswerTimer();
     var tacklingTeam = state.teams[state.tackleTeamIndex];
     var stake = currentTackleStake();
 
@@ -4092,6 +4177,7 @@
   // Comme sur les autres défis : dès que l'équipe active répond, le chrono s'arrête,
   // le Tackle se ferme et la réponse est jugée tout de suite (DECISIONS.md, 2026-09-29).
   function pomGuess(direction) {
+    stopAnswerTimer();
     state.pomPendingDirection = direction;
     hide("pom-answer-zone");
     clearTackleTimer();
@@ -4252,6 +4338,7 @@
 
   // Comme sur les autres défis : la réponse de l'équipe active ferme le Tackle et se révèle tout de suite.
   function vfAnswer(isVraiChoice) {
+    stopAnswerTimer();
     state.vfPendingAnswer = isVraiChoice;
     hide("vf-answer-zone");
     clearTackleTimer();
@@ -4389,6 +4476,11 @@
     el("qsj-answer-input").value = ""; // toujours un champ vide à chaque nouvelle réponse
     show("qsj-type-box");
     el("qsj-answer-input").focus();
+    startAnswerTimer(function () {
+      hide("qsj-type-box"); hide("qsj-confirm-box");
+      document.querySelector("#qsj-answer-zone .answer-btns").style.display = "flex";
+      checkQsjAnswer(TIMEOUT_ANSWER);
+    });
   });
 
   el("btn-qsj-submit-answer").addEventListener("click", function () {
@@ -4407,6 +4499,7 @@
   });
 
   el("btn-qsj-confirm-answer").addEventListener("click", function () {
+    stopAnswerTimer();
     hide("qsj-confirm-box");
     document.querySelector("#qsj-answer-zone .answer-btns").style.display = "flex";
     checkQsjAnswer(state.typedAnswer);
@@ -4581,6 +4674,11 @@
     el("lm-answer-input-2").value = "";
     show("lm-type-box");
     el("lm-answer-input-1").focus();
+    startAnswerTimer(function () {
+      hide("lm-type-box"); hide("lm-confirm-box");
+      document.querySelector("#lm-answer-zone .answer-btns").style.display = "flex";
+      checkLmAnswer(TIMEOUT_ANSWER, TIMEOUT_ANSWER);
+    });
   });
 
   el("btn-lm-submit-answer").addEventListener("click", function () {
@@ -4601,6 +4699,7 @@
   });
 
   el("btn-lm-confirm-answer").addEventListener("click", function () {
+    stopAnswerTimer();
     hide("lm-confirm-box");
     document.querySelector("#lm-answer-zone .answer-btns").style.display = "flex";
     checkLmAnswer(state.lmTypedTeam1, state.lmTypedTeam2);
@@ -4738,6 +4837,11 @@
     el("answer-input").value = ""; // toujours un champ vide à chaque nouvelle réponse
     show("type-box");
     el("answer-input").focus();
+    startAnswerTimer(function () {
+      hide("type-box"); hide("confirm-box");
+      state.typedAnswer = TIMEOUT_ANSWER;
+      checkAnswer(TIMEOUT_ANSWER);
+    });
   });
 
   el("btn-submit-answer").addEventListener("click", function () {
@@ -4765,6 +4869,7 @@
   });
 
   el("btn-confirm-answer").addEventListener("click", function () {
+    stopAnswerTimer();
     hide("confirm-box");
     checkAnswer(state.typedAnswer);
   });
@@ -4871,6 +4976,7 @@
 
   function endCard() {
     state.cardEnded = true;
+    stopAnswerTimer();
     setRace(false);
     if (state.currentRoundMinigame === "quisuisje") revealQsjName();
     if (state.currentRoundMinigame === "lematch") revealLmTeams();
@@ -4956,6 +5062,7 @@
   el("btn-quit-confirm").addEventListener("click", function () {
     hide("quit-dialog");
     clearTackleTimer();
+    stopAnswerTimer();
     hideTackleUI();
     hideTrResult();
     clearIntermissionTimers();

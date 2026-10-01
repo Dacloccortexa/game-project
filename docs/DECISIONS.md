@@ -1,5 +1,16 @@
 # DECISIONS.md
 
+## [2026-10-01] Chrono de réponse : 20 secondes pour valider
+- Problème relevé par David en test : des joueurs appuient sur « Répondre » pour gagner du temps de réflexion (le chrono principal s'arrête pendant la saisie).
+- Décision : dès qu'une équipe a la main pour répondre, elle a **20 s** pour valider, avec une barre et un compte à rebours (rouge sous 5 s) en haut du panneau :
+  - « Répondre » sur Transfert, Qui suis-je ?, Le Match (saisie + confirmation comprises ; « Modifier » ne remet pas le chrono à zéro) ;
+  - réponse au Tackle d'une équipe adverse (saisie, ou VRAI/FAUX, PLUS/MOINS) ;
+  - équipe qui a la main ayant gagné la course au Tackle (y compris PLUS/MOINS, VRAI/FAUX).
+- À 0 : c'est une **mauvaise réponse** avec les règles habituelles (−1 et indice suivant pour l'équipe qui a la main ; Tackle raté pour un adversaire ; cagnotte perdue sur Plus ou Moins / Vrai ou Faux). Le journal de partie note « temps de réponse écoulé ».
+- Pendant les 30 s de priorité, PLUS/MOINS et VRAI/FAUX restent sans chrono séparé (le choix est immédiat).
+- Durée réglable en un endroit (`ANSWER_SECONDS` dans `index.html`). Tests ajoutés (réponse, Tackle texte, Tackle Vrai ou Faux).
+- Le texte du panneau de Tackle sur Transfert / Qui suis-je ? / Le Match est corrigé : « Une seule tentative par carte · raté : la main revient à l'équipe qui jouait » (il disait encore que la carte se terminait).
+
 ## [2026-10-01] Correctif : champ de réponse toujours vide à chaque nouvelle réponse
 - Bug relevé par David : après une mauvaise réponse, la carte continue ; au « Répondre » suivant, le nom tapé avant était encore dans le champ.
 - Reproduit en navigateur sur Qui suis-je ? et Le Match (les deux champs d'équipes). Sur Transfert le champ était déjà vidé dans le cas testé, mais le correctif s'applique aussi par sécurité.

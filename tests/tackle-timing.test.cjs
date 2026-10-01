@@ -284,6 +284,40 @@ element('tackle-answer-input').value = 'Mauvais';
 element('btn-tackle-submit').click();
 assert.equal(state.cardEnded, true);
 
+// Chrono de réponse : 20 s pour valider, sinon mauvaise réponse (ou Tackle raté).
+reset('transfert');
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
+state.revealedCount = 1;
+startTackleWindow();
+element('btn-answer').click();
+advance(19000);
+assert.equal(state.teams[0].score, 0);
+advance(1500);
+assert.equal(state.teams[0].score, -1);
+
+reset('transfert');
+state.teams = [{name:'A', score:0},{name:'B', score:0},{name:'C', score:0}];
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
+state.revealedCount = 1;
+startTackleWindow();
+advance(30000);
+element('btn-tackle').click();
+element('tackle-team-buttons').children[1].click();
+advance(20500);
+assert.equal(state.teams[1].score, -5);
+assert.equal(state.cardEnded, false);
+
+reset('vraifaux');
+state.vfIndex = 0;
+state.vfPotential = 2;
+startTackleWindow();
+advance(30000);
+element('btn-tackle').click();
+element('tackle-team-buttons').children[1].click();
+advance(20500);
+assert.equal(state.teams[1].score, -3);
+assert.equal(state.cardEnded, true);
+
 // La version du jeu et version.json doivent correspondre (tools/bump-version.sh).
 const pageVersion = fs.readFileSync('index.html', 'utf8').match(/var APP_VERSION = "([^"]+)"/)[1];
 assert.equal(JSON.parse(fs.readFileSync('version.json', 'utf8')).version, pageVersion);
