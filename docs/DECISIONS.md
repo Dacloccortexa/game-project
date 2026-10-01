@@ -1,8 +1,8 @@
 # DECISIONS.md
 
-## [2026-10-01] Chrono de réponse : 20 secondes pour valider
+## [2026-10-01] Chrono de réponse : 15 secondes pour valider (20 s au départ, réduit à 15 s à la demande de David)
 - Problème relevé par David en test : des joueurs appuient sur « Répondre » pour gagner du temps de réflexion (le chrono principal s'arrête pendant la saisie).
-- Décision : dès qu'une équipe a la main pour répondre, elle a **20 s** pour valider, avec une barre et un compte à rebours (rouge sous 5 s) en haut du panneau :
+- Décision : dès qu'une équipe a la main pour répondre, elle a **15 s** pour valider, avec une barre et un compte à rebours (rouge sous 5 s) en haut du panneau :
   - « Répondre » sur Transfert, Qui suis-je ?, Le Match (saisie + confirmation comprises ; « Modifier » ne remet pas le chrono à zéro) ;
   - réponse au Tackle d'une équipe adverse (saisie, ou VRAI/FAUX, PLUS/MOINS) ;
   - équipe qui a la main ayant gagné la course au Tackle (y compris PLUS/MOINS, VRAI/FAUX).

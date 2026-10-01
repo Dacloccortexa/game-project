@@ -284,13 +284,13 @@ element('tackle-answer-input').value = 'Mauvais';
 element('btn-tackle-submit').click();
 assert.equal(state.cardEnded, true);
 
-// Chrono de réponse : 20 s pour valider, sinon mauvaise réponse (ou Tackle raté).
+// Chrono de réponse : 15 s pour valider, sinon mauvaise réponse (ou Tackle raté).
 reset('transfert');
 state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
 state.revealedCount = 1;
 startTackleWindow();
 element('btn-answer').click();
-advance(19000);
+advance(14000);
 assert.equal(state.teams[0].score, 0);
 advance(1500);
 assert.equal(state.teams[0].score, -1);
@@ -303,7 +303,7 @@ startTackleWindow();
 advance(30000);
 element('btn-tackle').click();
 element('tackle-team-buttons').children[1].click();
-advance(20500);
+advance(15500);
 assert.equal(state.teams[1].score, -5);
 assert.equal(state.cardEnded, false);
 
@@ -314,7 +314,7 @@ startTackleWindow();
 advance(30000);
 element('btn-tackle').click();
 element('tackle-team-buttons').children[1].click();
-advance(20500);
+advance(15500);
 assert.equal(state.teams[1].score, -3);
 assert.equal(state.cardEnded, true);
 

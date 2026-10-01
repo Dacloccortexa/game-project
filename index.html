@@ -1267,7 +1267,7 @@
     border: 2px solid var(--gold-ring);
     background: rgba(3,20,13,.94);
   }
-  /* Chrono de réponse : 20 s pour taper et valider une réponse (ou un choix après un Tackle). */
+  /* Chrono de réponse : 15 s pour taper et valider une réponse (ou un choix après un Tackle). */
   .answer-timer { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; }
   .answer-timer-bar { flex: 1; height: 6px; border-radius: 3px; background: rgba(248,246,237,.15); overflow: hidden; }
   .answer-timer-bar i { display: block; height: 100%; width: 100%; background: var(--gold); border-radius: 3px; transition: width .25s linear; }
@@ -2063,7 +2063,7 @@
         <button type="button" class="tr-btn-secondary" id="btn-pass">Passer l'indice</button>
       </div>
       <div class="tr-panel hidden-screen" id="type-box">
-        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">15 s</span></div>
         <h3 class="tr-panel-title" id="type-title">Réponse</h3>
         <p class="tr-panel-sub" id="type-sub"></p>
         <label class="tr-label" for="answer-input">Quel est le joueur ?</label>
@@ -2072,7 +2072,7 @@
         <p class="tr-panel-note"><span id="type-stakes"></span><br>Temps limité : sans réponse validée à 0, c'est une mauvaise réponse</p>
       </div>
       <div class="tr-panel hidden-screen" id="confirm-box">
-        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">15 s</span></div>
         <h3 class="tr-panel-title" id="confirm-title">Confirmez ?</h3>
         <p class="tr-panel-sub">Vérifiez le nom avant de l'envoyer</p>
         <div class="tr-typed" id="typed-text"></div>
@@ -2103,7 +2103,7 @@
     <div id="pom-feedback-zone" class="pom-note hidden-screen"></div>
 
     <div id="pom-answer-zone" class="hidden-screen">
-      <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
+      <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">15 s</span></div>
       <div class="pom-answers">
         <button type="button" class="pom-btn pom-btn-plus" id="pom-btn-plus">Plus <svg class="pom-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5V4M5 10.5L12 3.5l7 7"/></svg></button>
         <button type="button" class="pom-btn pom-btn-moins" id="pom-btn-moins">Moins <svg class="pom-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5V20M5 13.5l7 7 7-7"/></svg></button>
@@ -2151,7 +2151,7 @@
     <div id="vf-feedback-zone" class="hidden-screen"></div>
 
     <div id="vf-answer-zone" class="hidden-screen">
-      <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
+      <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">15 s</span></div>
       <div class="vf-choices">
         <button type="button" class="vf-choice vf-choice--true" id="btn-vf-vrai">Vrai</button>
         <button type="button" class="vf-choice vf-choice--false" id="btn-vf-faux">Faux</button>
@@ -2202,7 +2202,7 @@
         <button class="btn-answer" id="btn-qsj-answer">Répondre</button>
       </div>
       <div class="confirm-box hidden-screen" id="qsj-type-box">
-        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">15 s</span></div>
         <div class="field">
           <label>Nom du joueur</label>
           <input type="text" id="qsj-answer-input" placeholder="Tape le nom ici" autocomplete="off">
@@ -2210,7 +2210,7 @@
         <button class="primary" id="btn-qsj-submit-answer" style="margin-top:4px;">Valider</button>
       </div>
       <div class="confirm-box hidden-screen" id="qsj-confirm-box">
-        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">15 s</span></div>
         <div class="typed">Tu as tapé : « <span id="qsj-typed-text"></span> »</div>
         <div class="confirm-actions">
           <button class="secondary" id="btn-qsj-edit-answer">Modifier</button>
@@ -2236,7 +2236,7 @@
         <button class="btn-answer" id="btn-lm-answer">Répondre</button>
       </div>
       <div class="confirm-box hidden-screen" id="lm-type-box">
-        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">15 s</span></div>
         <div class="field">
           <label>Équipe 1</label>
           <input type="text" id="lm-answer-input-1" placeholder="Nom de l'équipe" autocomplete="off">
@@ -2248,7 +2248,7 @@
         <button class="primary" id="btn-lm-submit-answer" style="margin-top:4px;">Valider</button>
       </div>
       <div class="confirm-box hidden-screen" id="lm-confirm-box">
-        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
+        <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">15 s</span></div>
         <div class="typed">Tu as tapé : « <span id="lm-typed-text"></span> »</div>
         <div class="confirm-actions">
           <button class="secondary" id="btn-lm-edit-answer">Modifier</button>
@@ -2281,7 +2281,7 @@
         </div>
         <span class="tackle-who-stake" id="tackle-stake"></span>
       </div>
-      <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">20 s</span></div>
+      <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">15 s</span></div>
       <div class="tr-field" id="tackle-answer-field-1">
         <label class="tr-label" id="tackle-answer-label-1" for="tackle-answer-input">Quel est le joueur ?</label>
         <input type="text" class="tr-input" id="tackle-answer-input" placeholder="Nom du joueur…" autocomplete="off" autocapitalize="words" enterkeyhint="done">
@@ -2644,7 +2644,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.01-2052";
+  var APP_VERSION = "2026.10.01-2054";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3544,7 +3544,7 @@
   // ---------- Chrono de réponse ----------
   // Dès qu'une équipe a la main pour répondre (« Répondre », Tackle, course gagnée), elle a
   // ANSWER_SECONDS pour valider. À 0 : mauvaise réponse (ou Tackle raté), avec les règles habituelles.
-  var ANSWER_SECONDS = 20;
+  var ANSWER_SECONDS = 15;
   function renderAnswerTimer(ms) {
     var secs = Math.max(0, Math.ceil(ms / 1000));
     var pct = Math.max(0, Math.min(100, ms / (ANSWER_SECONDS * 10)));
