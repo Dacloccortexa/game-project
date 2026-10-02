@@ -1996,6 +1996,10 @@
         <p class="paywall-status" id="settings-status" role="status" aria-live="polite"></p>
       </div>
     </div>
+    <div class="journal-link-box">
+      <button type="button" class="text-btn hidden-screen" id="btn-share-journals">Envoyer le journal des parties</button>
+      <p class="journal-note" id="journals-status" role="status" aria-live="polite"></p>
+    </div>
     <div class="cta-spacer"></div>
     <p class="settings-version" id="settings-version"></p>
   </section>
@@ -2075,10 +2079,6 @@
       <button type="button" class="text-btn" id="btn-open-paywall">Passer à l'illimité</button>
     </div>
 
-    <div class="journal-link-box">
-      <button type="button" class="text-btn hidden-screen" id="btn-share-journals">Envoyer le journal des parties</button>
-      <p class="journal-note" id="journals-status" role="status" aria-live="polite"></p>
-    </div>
     <div class="cta-spacer"></div>
     <div class="setup-footer">
       <button type="button" class="setup-cta" id="btn-continue">Continuer</button>
@@ -2995,7 +2995,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.02-1551";
+  var APP_VERSION = "2026.10.02-1554";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3338,7 +3338,8 @@
     document.body.classList.add("setup-flow");
     show(id);
     if (id === "screen-home") checkForUpdate();
-    if (id === "screen-setup") { refreshJournalLink(); refreshAccessUI(); }
+    if (id === "screen-setup") refreshAccessUI();
+    if (id === "screen-settings") refreshJournalLink();
     else showUpdateBannerIfIdle();
     window.scrollTo(0, 0);
     if (moveFocus) {

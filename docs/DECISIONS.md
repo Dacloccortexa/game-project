@@ -4,7 +4,7 @@
 - Demande de David : une page d'accueil avec 3 boutons (**Jouer**, **Boutique**, **Règles**) et une roue dentée **Réglages** (effets sonores, langue, rétablir les achats).
 - L'appli s'ouvre désormais sur l'accueil (logo, « Le quiz foot entre potes »). Jouer → Créer une partie (bouton retour vers l'accueil). Boutique → page d'abonnement. Règles → résumé des règles (principe, Tackle, chrono de 15 s, points 5→1, cagnotte), en français et en portugais.
 - Réglages : interrupteur **Effets sonores** (mémorisé, coupe tous les sons ; les vibrations restent), choix **Langue** (Français / Português, recharge l'appli), **Rétablir les achats** (RevenueCat), numéro de version.
-- Le lien de langue sous les défis est supprimé (la langue est dans Réglages). Le bandeau « Nouvelle version disponible » s'affiche sur l'accueil.
+- Le lien de langue sous les défis est supprimé (la langue est dans Réglages). « Envoyer le journal des parties (N) » passe aussi dans Réglages (visible seulement s'il y a des parties enregistrées). Le bandeau « Nouvelle version disponible » s'affiche sur l'accueil.
 - Quitter une partie ramène à l'accueil ; « Rejouer » ramène toujours à Créer une partie.
 - Mise en forme provisoire avec les éléments graphiques existants : à refaire quand les maquettes (Règles, Boutique, Réglages, À propos) arrivent.
 
