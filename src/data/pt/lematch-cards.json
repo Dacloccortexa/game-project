@@ -4179,7 +4179,10 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
+        [
+          "Mönchengladbach",
+          "Gladbach"
+        ],
         []
       ]
     },
@@ -4327,9 +4330,13 @@
       "status": "lu",
       "team_aliases": [
         [
+          "Malmö",
           "Malmö FF"
         ],
-        []
+        [
+          "Nottingham",
+          "Forest"
+        ]
       ]
     },
     {
@@ -4400,7 +4407,10 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
+        [
+          "Nottingham",
+          "Forest"
+        ],
         [
           "Hamburger SV",
           "Hambourg",
@@ -4476,7 +4486,9 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
+        [
+          "Real"
+        ],
         []
       ]
     },
@@ -4549,9 +4561,14 @@
       "status": "lu",
       "team_aliases": [
         [
+          "Bayern",
+          "Bayern Munchen",
+          "Bayern München",
           "Bayern Munich"
         ],
-        []
+        [
+          "Villa"
+        ]
       ]
     },
     {
@@ -4627,7 +4644,10 @@
           "Hambourg",
           "Hambourg SV"
         ],
-        []
+        [
+          "Juve",
+          "Juventus Turin"
+        ]
       ]
     },
     {
@@ -4775,7 +4795,10 @@
       "status": "lu",
       "team_aliases": [
         [],
-        []
+        [
+          "Juve",
+          "Juventus Turin"
+        ]
       ]
     },
     {
@@ -4927,6 +4950,9 @@
       "status": "lu",
       "team_aliases": [
         [
+          "Bayern",
+          "Bayern Munchen",
+          "Bayern München",
           "Bayern Munich"
         ],
         [
@@ -5002,7 +5028,9 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
+        [
+          "PSV"
+        ],
         [
           "Benfica",
           "Benfica Lisbonne"
@@ -5629,7 +5657,10 @@
           "Ajax",
           "Ajax Amsterdam"
         ],
-        []
+        [
+          "Juve",
+          "Juventus Turin"
+        ]
       ]
     },
     {
@@ -5700,8 +5731,14 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
-        []
+        [
+          "Dortmund",
+          "BVB"
+        ],
+        [
+          "Juve",
+          "Juventus Turin"
+        ]
       ]
     },
     {
@@ -5772,8 +5809,13 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
-        []
+        [
+          "Juve",
+          "Juventus Turin"
+        ],
+        [
+          "Real"
+        ]
       ]
     },
     {
@@ -5844,8 +5886,16 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
         [
+          "Man United",
+          "Man Utd",
+          "United",
+          "MU"
+        ],
+        [
+          "Bayern",
+          "Bayern Munchen",
+          "Bayern München",
           "Bayern Munich"
         ]
       ]
@@ -5918,7 +5968,9 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
+        [
+          "Real"
+        ],
         [
           "Valencia",
           "Valence",
@@ -5995,6 +6047,9 @@
       "status": "lu",
       "team_aliases": [
         [
+          "Bayern",
+          "Bayern Munchen",
+          "Bayern München",
           "Bayern Munich"
         ],
         [
@@ -6072,8 +6127,12 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
-        []
+        [
+          "Leverkusen"
+        ],
+        [
+          "Real"
+        ]
       ]
     },
     {
@@ -6144,7 +6203,10 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
+        [
+          "Juve",
+          "Juventus Turin"
+        ],
         [
           "Milan"
         ]
@@ -6520,7 +6582,12 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
+        [
+          "Man United",
+          "Man Utd",
+          "United",
+          "MU"
+        ],
         []
       ]
     },
@@ -6598,7 +6665,12 @@
           "Barça",
           "FC Barcelone"
         ],
-        []
+        [
+          "Man United",
+          "Man Utd",
+          "United",
+          "MU"
+        ]
       ]
     },
     {
@@ -6670,9 +6742,15 @@
       "status": "lu",
       "team_aliases": [
         [
+          "Bayern",
+          "Bayern Munchen",
+          "Bayern München",
           "Bayern Munich"
         ],
         [
+          "Inter",
+          "Internazionale",
+          "Inter Milano",
           "Inter Milan"
         ]
       ]
@@ -6751,7 +6829,12 @@
           "Barça",
           "FC Barcelone"
         ],
-        []
+        [
+          "Man United",
+          "Man Utd",
+          "United",
+          "MU"
+        ]
       ]
     },
     {
@@ -6823,6 +6906,9 @@
       "status": "lu",
       "team_aliases": [
         [
+          "Bayern",
+          "Bayern Munchen",
+          "Bayern München",
           "Bayern Munich"
         ],
         []
@@ -6896,8 +6982,14 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
         [
+          "Dortmund",
+          "BVB"
+        ],
+        [
+          "Bayern",
+          "Bayern Munchen",
+          "Bayern München",
           "Bayern Munich"
         ]
       ]
@@ -6970,8 +7062,13 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
         [
+          "Real"
+        ],
+        [
+          "Atlético",
+          "Atlético de Madrid",
+          "Atleti",
           "Atlético Madrid"
         ]
       ]
@@ -7044,7 +7141,10 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
+        [
+          "Juve",
+          "Juventus Turin"
+        ],
         [
           "Barcelona",
           "Barcelone",
@@ -7121,8 +7221,13 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
         [
+          "Real"
+        ],
+        [
+          "Atlético",
+          "Atlético de Madrid",
+          "Atleti",
           "Atlético Madrid"
         ]
       ]
@@ -7195,8 +7300,13 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
-        []
+        [
+          "Juve",
+          "Juventus Turin"
+        ],
+        [
+          "Real"
+        ]
       ]
     },
     {
@@ -7267,7 +7377,9 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
+        [
+          "Real"
+        ],
         []
       ]
     },
@@ -7414,8 +7526,15 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
         [
+          "PSG",
+          "Paris",
+          "Paris SG"
+        ],
+        [
+          "Bayern",
+          "Bayern Munchen",
+          "Bayern München",
           "Bayern Munich"
         ]
       ]
@@ -7488,7 +7607,10 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
+        [
+          "Man City",
+          "City"
+        ],
         []
       ]
     },
@@ -7561,7 +7683,9 @@
       "status": "lu",
       "team_aliases": [
         [],
-        []
+        [
+          "Real"
+        ]
       ]
     },
     {
@@ -7632,8 +7756,14 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
         [
+          "Man City",
+          "City"
+        ],
+        [
+          "Inter",
+          "Internazionale",
+          "Inter Milano",
           "Inter Milan"
         ]
       ]
@@ -7706,8 +7836,13 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
-        []
+        [
+          "Dortmund",
+          "BVB"
+        ],
+        [
+          "Real"
+        ]
       ]
     },
     {
@@ -7778,8 +7913,15 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
         [
+          "PSG",
+          "Paris",
+          "Paris SG"
+        ],
+        [
+          "Inter",
+          "Internazionale",
+          "Inter Milano",
           "Inter Milan"
         ]
       ]
@@ -7852,7 +7994,11 @@
       ],
       "status": "lu",
       "team_aliases": [
-        [],
+        [
+          "PSG",
+          "Paris",
+          "Paris SG"
+        ],
         []
       ]
     }

@@ -8,6 +8,19 @@
 - **À retester après intégration :** combien de cartes sont trouvées, et à quel indice.
 
 
+## Journal des parties du 1er et 2 octobre 2026 (12 parties, envoyé par David)
+
+- **Contexte :** 12 parties (6 à 1 équipe, 6 à 2 équipes), 5 à 20 manches. 4 terminées, 4 abandonnées, 4 jamais fermées (« en cours »). Durée des parties terminées : 2 à 8 min.
+- **« Passer » en rafale :** sur Transfert, Qui suis-je ? et Le Match, les joueurs passent les indices 1 à 4 en 1 ou 2 s chacun (123 passes sur 167 en ≤ 2 s), puis répondent au dernier indice. Qui suis-je ? : 8 cartes trouvées sur 12, **toutes au 5e indice (1 point)**. Transfert : 5 trouvées sur 17 (seuls Messi, Busquets et Salah trouvés tôt), 6 cartes passées jusqu'au bout sans réponse. Les premiers indices ne sont presque pas lus.
+- **Conséquence sur le Tackle :** le Tackle n'ouvre qu'après 30 s sur un indice ; en passant en 1 s, l'équipe active ne laisse jamais la course s'ouvrir. **Seulement 2 Tackles en 6 parties à 2 équipes** (dont 1 litige), tous deux au dernier indice.
+- **Le Match trop difficile (confirmé) :** 3 trouvées sur 16 cartes terminées, toutes au 5e événement, toutes des matchs récents ou très connus (finale 2022, finale 2018, Angleterre–Portugal 1966). Aucune finale de 1958 à 1996 trouvée. 9 mauvaises réponses finales. Va dans le sens de la nouvelle règle d'indices décidée par David.
+- **Bug corrigé :** « Chealsea / Bayern » refusé pour Bayern Munich – Chelsea (2012). La faute « Chealsea » passait, mais « Bayern » n'était pas un nom accepté pour « Bayern Munich ». Ajout des noms courts pour 15 clubs (Bayern, Inter, Juve, PSG, Man United, Man City, Real, Dortmund, Atlético, PSV…), aussi en portugais.
+- **Vrai ou Faux :** 1re affirmation juste 15 fois sur 28 (pile ou face). 18 cartes sur 28 à 0 point. Personne n'a dépassé une cagnotte de 3 ; les joueurs encaissent dès 2. Les affirmations à valeur exacte (« mesure 183 cm », « né en 1983 », « période professionnelle commence en 1992 ») se jouent au hasard ; les comparaisons (plus âgé, plus grand) et les clubs se raisonnent mieux.
+- **Plus ou Moins :** 7 cagnottes encaissées sur 12, toujours tôt (1 à 3). Fonctionne.
+- **Données vérifiées :** les ~45 affirmations et comparaisons jouées sont justes (aucune erreur de données relevée).
+- **Tolérance aux fautes :** fonctionne (« Lewandoski », « Marez », « Mbappe », « Kaka », « Ribery » acceptés).
+- **Pistes proposées (non décidées) :** voir la réponse de Claude du 2 octobre au soir : empêcher de passer avant quelques secondes (ou supprimer « Passer » pour laisser le chrono faire défiler les indices), retirer les affirmations à valeur exacte de Vrai ou Faux, et pour Le Match la nouvelle règle d'indices.
+
 Ce qui s'est réellement passé quand on a joué. Pas des intentions, pas des impressions théoriques — des observations de sessions de jeu réelles.
 
 ## Format d'une entrée
