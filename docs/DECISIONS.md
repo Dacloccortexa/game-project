@@ -1,5 +1,13 @@
 # DECISIONS.md
 
+## [2026-10-02] Le Match : cinq indices factuels dans un ordre fixe
+- Retour d'un essai avec les neveux de David : identifier un match à partir de cinq événements chronologiques était trop difficile.
+- Décision de David : remplacer les événements par **compétition (5 pts), année (4 pts), score final (3 pts), ville du match (2 pts), stade de la compétition (1 pt)**. « Ville » a été précisé par David ; « stade de la compétition » désigne la phase, par exemple finale ou demi-finale, et non le nom de l'enceinte.
+- L'équipe doit toujours trouver les deux équipes ; les règles de réponse, de passe, de pénalité et de Tackle restent celles du Match. Le chrono 30 + 15 secondes repart à chaque indice.
+- La compétition devient le premier indice à 5 points au lieu d'être affichée hors score avant cinq événements. L'année, auparavant cachée, devient le deuxième indice.
+- Mise en œuvre à faire : ajouter une ville fiable et sourcée aux 103 fiches, puis adapter l'écran et les contrôles du jeu. Ne pas confondre cette règle validée avec l'état actuel de l'app.
+
+
 ## [2026-10-01] Jamais deux manches de suite avec le même défi
 - Demande de David : le jeu suivant peut être n'importe lequel, mais pas le même que celui d'avant.
 - Décision : chaque manche tire un défi au hasard parmi ceux sélectionnés, **en excluant celui de la manche précédente** (toutes les équipes jouent toujours le même défi dans une manche). Avec un seul défi sélectionné, il est forcément répété. La première manche d'une partie (y compris une revanche) peut être n'importe quel défi.
