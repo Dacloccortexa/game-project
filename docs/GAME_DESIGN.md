@@ -100,13 +100,21 @@ Les cinq indices d'une carte sont préparés, sourcés et relus **dans cet ordre
 
 ## Cinquième mini-jeu : Le Match
 
-Une carte vise un match de football. **La compétition seule** est affichée dès le départ, sans année ni édition. Cinq événements vérifiés de ce match apparaissent ensuite **strictement dans l'ordre chronologique du match**, sans être réordonnés selon leur difficulté. Leurs valeurs sont successivement **5, 4, 3, 2 et 1 point**. Une seule équipe active joue la carte ; elle cherche à nommer **les deux équipes du match**, acceptées dans n'importe quel ordre, après chaque événement. Les autres équipes ne participent que par le Tackle.
+Une carte vise un match de football. Une seule équipe active cherche à nommer **les deux équipes du match**, acceptées dans n'importe quel ordre. Elle reçoit **cinq indices dans cet ordre fixe** :
 
-**Tackle sur Le Match :** le délai commun de 30 + 15 secondes repart à chaque nouvel événement. La première équipe adverse qui annonce un Tackle après le sifflet donne les deux équipes du match, pour l'enjeu de l'événement en cours (5, 4, 3, 2 puis 1 point) : elle le gagne si elle trouve, le perd sinon. Un Tackle réussi termine la carte ; un Tackle raté coûte le palier à l'équipe qui tacle, puis l'équipe active reprend la main à l'événement suivant (une seule tentative par équipe adverse et par carte). Si personne ne répond au bout de 45 secondes, l'événement suivant apparaît.
+1. **La compétition** — 5 points (par exemple « Coupe du monde »), sans édition ni année.
+2. **L'année du match** — 4 points.
+3. **Le score final** — 3 points, sans nom d'équipe.
+4. **La ville où le match s'est joué** — 2 points.
+5. **Le stade de la compétition** — 1 point (finale ou demi-finale dans le lot actuel ; il s'agit de la phase, pas du nom du stade où se joue le match).
 
-Comme sur Qui suis-je, après chaque événement l'équipe active peut donner **une seule réponse** ou **passer**. Une mauvaise réponse retire **1 point** de son score général puis révèle l'événement suivant ; une passe révèle l'événement suivant sans pénalité. Après une mauvaise réponse ou une passe au cinquième événement, la carte se termine et les deux équipes du match sont révélées. Les pénalités de mauvaises réponses se cumulent. Les matchs sélectionnés doivent comporter cinq événements suffisamment distincts et sourcés ; leur identification réelle sera testée en partie.
+L'équipe active peut répondre ou passer après chaque indice. Les autres équipes ne participent que par le Tackle. Le délai commun de 30 secondes de priorité puis 15 secondes de course repart à chaque nouvel indice.
 
-**Statut :** mini-jeu implémenté dans `index.html` avec **103 fiches sourcées marquées comme lues** dans `src/data/lematch-cards.json` ; les cartes restent à éprouver en partie et les erreurs éventuelles à corriger. Le Match est sélectionné par défaut.
+**Tackle sur Le Match :** la première équipe adverse qui annonce un Tackle après le sifflet donne les deux équipes du match, pour l'enjeu de l'indice en cours (5, 4, 3, 2 puis 1 point) : elle le gagne si elle trouve, le perd sinon. Un Tackle réussi termine la carte ; un Tackle raté coûte le palier à l'équipe qui tacle, puis l'équipe active reprend la main à l'indice suivant (une seule tentative par équipe adverse et par carte). Si personne ne répond au bout de 45 secondes, l'indice suivant apparaît.
+
+Une mauvaise réponse de l'équipe active retire **1 point** de son score général puis révèle l'indice suivant ; une passe révèle l'indice suivant sans pénalité. Après une mauvaise réponse ou une passe au cinquième indice, la carte se termine et les deux équipes du match sont révélées. Les pénalités de mauvaises réponses se cumulent.
+
+**Statut au 2 octobre 2026 :** cette nouvelle suite d'indices est validée à la suite d'un essai avec les neveux de David, qui ont trouvé les événements chronologiques trop difficiles. Elle **n'est pas encore intégrée à l'app** : `index.html` et les 103 fiches de `src/data/lematch-cards.json` utilisent encore les cinq événements. Les fiches possèdent déjà compétition, année, score final et phase ; il faut vérifier et ajouter la **ville** pour chacune avant la migration. Le Match reste sélectionné par défaut.
 
 ## Contenus et difficulté
 
