@@ -329,6 +329,13 @@ assert.equal(state.cardEnded, true);
   assert.notEqual(pickNextMinigame(['vraifaux','lematch'], 'vraifaux'), 'vraifaux');
 }
 
+// Questions en portugais : mêmes cartes, mêmes ids et même ordre que le français (tools/translate_pt.py).
+for (const [file, key] of [['transfert-cards.json', 'cards'], ['quisuisje-cards.json', 'cards'], ['lematch-cards.json', 'cards'], ['vraifaux-statements.json', 'statements']]) {
+  const fr = JSON.parse(fs.readFileSync('src/data/' + file, 'utf8'))[key];
+  const pt = JSON.parse(fs.readFileSync('src/data/pt/' + file, 'utf8'))[key];
+  assert.deepEqual(pt.map(x => x.id), fr.map(x => x.id), file);
+}
+
 // La version du jeu et version.json doivent correspondre (tools/bump-version.sh).
 const pageVersion = fs.readFileSync('index.html', 'utf8').match(/var APP_VERSION = "([^"]+)"/)[1];
 assert.equal(JSON.parse(fs.readFileSync('version.json', 'utf8')).version, pageVersion);

@@ -1,5 +1,16 @@
 # DECISIONS.md
 
+## [2026-10-02] Jeu en portugais (Portugal), en plus du français
+- Demande de David : l'appli en portugais. Choix : **portugais du Portugal (pt-PT)**, **français + portugais** dans la même appli, **écrans + questions**.
+- Langue : celle du téléphone (portugais si le téléphone est en portugais, sinon français), changeable par le lien « Jogar em português » / « Jouer en français » sur Créer une partie (à déplacer dans Réglages avec la maquette). Le choix est mémorisé. Le site suit la même règle.
+- Écrans : textes fixes traduits au chargement (`PT_STATIC`), textes calculés via `L("français", "português")`. Grammaire des noms d'équipes : « aos Leões / às Raposas », « dos / das », « pelos / pelas », « Os Leões confirmam? ». Noms par défaut : Os Leões, As Raposas, Os Touros, As Águias. Vocabulaire : partida, ronda, pista, pote, arrecadar, equipa, golo, guarda-redes… Les défis : Transferência, Mais ou Menos, Verdadeiro ou Falso, Quem sou eu?, O Jogo. « Tackle » reste « Tackle ».
+- Questions : fichiers `src/data/pt/` générés par `tools/translate_pt.py` à partir des fichiers français et des tables `tools/i18n/pt_names.json` (clubs avec genre, pays, nationalités, compétitions, trophées, postes, villes…). Le script échoue s'il manque une traduction : une nouvelle carte française ne peut pas rester en français par oubli. **Après tout ajout de cartes en français : lancer `python3 tools/translate_pt.py`.** Le test vérifie que les fichiers pt ont les mêmes cartes que le français.
+- Le Match en portugais : réponses acceptées en portugais et en français (« Alemanha » ou « Allemagne »). Libellés courts de la frise fournis par les données (`short`). Vrai ou Faux : phrase de correction prête dans les données (`correction`).
+- Le journal de partie envoyé à David reste en français.
+- Relecture indépendante (agent séparé, regard pt-PT football) : corrections appliquées (« Toca », « Saltar pista », « próximo acontecimento », « Meia-final », « aos 90+3 minutos », « 0 pontos » au pluriel, noms de clubs unifiés, noms de joueurs en casse normale…).
+- iOS : `CFBundleLocalizations` = fr, pt-PT (l'App Store affichera le portugais). Fiche App Store en portugais à rédiger le moment venu.
+- Reste à faire : faire relire par un lecteur portugais réel avant la sortie au Portugal ; anomalie de données FR signalée (Le Match `lm-ucl-1989-final`, carton jaune attribué à « c »).
+
 ## [2026-10-02] Appli iPhone : abonnement, 2 parties gratuites par jour de 5 manches
 - Décision de David : modèle **abonnement**. Sans abonnement : **2 parties par jour, de 5 manches**. Prix : définis plus tard par David (rien dans le code, lus dans l'App Store).
 - Précisions retenues : les cinq défis restent jouables en gratuit ; compteur remis à zéro à minuit (heure du téléphone) ; une partie compte au coup d'envoi ; 10/15/20 manches verrouillées (cadenas → page d'abonnement) ; 3e partie du jour → page d'abonnement. **Le site web reste illimité** pour les testeurs.

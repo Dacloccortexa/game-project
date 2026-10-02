@@ -30,6 +30,10 @@ Ces fonctions natives comptent aussi pour la relecture Apple (règle 4.2 « fonc
 - `ITSAppUsesNonExemptEncryption = NO` (pas de chiffrement propre : évite la question d'export à chaque envoi).
 - Politique de confidentialité : [`privacy.html`](../privacy.html), en ligne à `https://dacloccortexa.github.io/game-project/privacy.html` (adresse de contact à compléter).
 
+## Langues
+
+Français et portugais (Portugal). L'appli prend la langue du téléphone ; lien pour changer sur « Créer une partie ». Questions portugaises : `src/data/pt/`, régénérées avec `python3 tools/translate_pt.py` après chaque ajout de cartes françaises (le script refuse de laisser du français). Voir `docs/DECISIONS.md` (2026-10-02).
+
 ## Abonnement
 
 Règle (décision de David, 2026-10-02) : **sans abonnement, 2 parties par jour de 5 manches maximum**, avec les cinq défis. **Abonné : illimité, 5 à 20 manches.** Le site web reste illimité (testeurs). Prix : à définir par David, réglés dans App Store Connect (aucun prix dans le code).

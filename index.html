@@ -839,6 +839,8 @@
   .round-choice.locked { position: relative; opacity: .45; }
   .round-choice.locked::after { content: ""; position: absolute; right: -2px; top: -2px; width: 18px; height: 18px; border-radius: 50%;
     background: #1b2a22 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f2c75a' stroke-width='2.6' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='10' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") center / 12px no-repeat; border: 1px solid var(--gold); }
+  .lang-box { display: flex; justify-content: center; margin: 4px 0 0; }
+  .lang-box .text-btn { color: var(--chalk-dim); font-size: 14px; min-height: 40px; }
   .free-box { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 12px; margin: 16px 0 0; color: var(--chalk-dim); font-size: 14px; }
   .free-box .text-btn { color: var(--gold); font-weight: 700; font-size: 14px; min-height: 40px; }
   .paywall-reason { margin: -8px 0 12px; text-align: center; color: var(--chalk); font-size: 15px; }
@@ -1717,6 +1719,7 @@
   .vf-topline::before, .vf-topline::after { content: ""; width: min(22%, 80px); height: 2px; background: var(--vf-gold); opacity: .8; }
   .vf-badge { display: inline-block; border: 2px solid var(--vf-gold); padding: 2px 8px; font-family: var(--font-cond); font-weight: 700; font-size: 15px; letter-spacing: .08em; }
   .vf-title { margin: 6px 0 0; font-family: var(--font-cond); font-weight: 700; font-size: clamp(32px, 9.5vw, 40px); line-height: 1; letter-spacing: .02em; text-transform: uppercase; text-shadow: 0 2px 12px #000; }
+  :lang(pt-PT) .vf-title { font-size: clamp(25px, 7.4vw, 32px); white-space: nowrap; } /* « Verdadeiro ou Falso » sur une ligne */
   .vf-title em { color: var(--vf-gold); font-style: normal; font-size: .78em; }
   .vf-progress { margin: 5px 0 10px; color: #e6e4db; font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
   .vf-statement {
@@ -1963,6 +1966,8 @@
       <span id="free-count">2 parties gratuites aujourd'hui</span>
       <button type="button" class="text-btn" id="btn-open-paywall">Passer à l'illimité</button>
     </div>
+
+    <div class="lang-box"><button type="button" class="text-btn" id="btn-lang">Português</button></div>
 
     <div class="journal-link-box">
       <button type="button" class="text-btn hidden-screen" id="btn-share-journals">Envoyer le journal des parties</button>
@@ -2431,6 +2436,144 @@
 (function () {
   "use strict";
 
+  // ---------- Langue : français ou portugais (Portugal) ----------
+  // Langue du téléphone par défaut (pt → portugais), choix mémorisé si le joueur la change.
+  var LANG = "fr";
+  try {
+    var savedLang = localStorage.getItem("tackle-lang");
+    if (savedLang === "fr" || savedLang === "pt") LANG = savedLang;
+    else if (/^pt\b/i.test(navigator.language || "")) LANG = "pt";
+  } catch (e) {}
+  try { document.documentElement.lang = LANG === "pt" ? "pt-PT" : "fr"; } catch (e) {}
+  // Texte selon la langue : L("français", "português").
+  function L(fr, pt) { return LANG === "pt" ? pt : fr; }
+  function setLanguage(lang) {
+    try { localStorage.setItem("tackle-lang", lang); } catch (e) {}
+    location.reload();
+  }
+  // Textes fixes de la page (le HTML est écrit en français).
+  var PT_STATIC = {
+    "Nouvelle version de TACKLE disponible": "Nova versão do TACKLE disponível",
+    "Mettre à jour": "Atualizar",
+    "Créer une partie": "Criar uma partida",
+    "Équipes": "Equipas",
+    "Manches": "Rondas",
+    "Défis": "Desafios",
+    "5 sélectionnés": "5 selecionados",
+    "2 parties gratuites aujourd'hui": "2 partidas grátis hoje",
+    "Passer à l'illimité": "Mudar para ilimitado",
+    "Envoyer le journal des parties": "Enviar o registo das partidas",
+    "Continuer": "Continuar",
+    "Choisir les défis": "Escolher os desafios",
+    "Transfert": "Transferência",
+    "Plus ou Moins": "Mais ou Menos",
+    "Vrai ou Faux": "Verdadeiro ou Falso",
+    "Qui suis-je ?": "Quem sou eu?",
+    "Le Match": "O Jogo",
+    "Touchez un défi pour le retirer ou l'ajouter.": "Toca num desafio para o retirar ou adicionar.",
+    "Valider": "Validar",
+    "Personnaliser les équipes": "Personalizar as equipas",
+    "Coup d'envoi": "Pontapé de saída",
+    "TACKLE illimité": "TACKLE ilimitado",
+    "Parties illimitées, tous les jours": "Partidas ilimitadas, todos os dias",
+    "5, 10, 15 ou 20 manches": "5, 10, 15 ou 20 rondas",
+    "Nouvelles questions ajoutées régulièrement": "Novas perguntas adicionadas regularmente",
+    "Restaurer mes achats": "Restaurar compras",
+    "J'ai un code": "Tenho um código",
+    "Abonnement à renouvellement automatique, annulable à tout moment dans Réglages › Identifiant Apple › Abonnements, au moins 24 h avant la fin de la période en cours. Le paiement est débité sur le compte Apple à la confirmation de l'achat.": "Subscrição com renovação automática, que pode ser cancelada a qualquer momento em Definições › ID Apple › Subscrições, pelo menos 24 h antes do fim do período em curso. O pagamento é cobrado na conta Apple quando a compra é confirmada.",
+    "Conditions d'utilisation": "Termos de utilização",
+    "Confidentialité": "Privacidade",
+    "Quitter": "Sair",
+    "Manche 01 / 10": "Ronda 01 / 10",
+    "Priorité": "Prioridade",
+    "Extrait de carrière · devine le joueur": "Excerto da carreira · adivinha o jogador",
+    "Indice 1 / 5": "Pista 1 / 5",
+    "Répondre": "Responder",
+    "Passer l'indice": "Saltar pista",
+    "Réponse": "Resposta",
+    "Quel est le joueur ?": "Quem é o jogador?",
+    "Faire confirmer": "Pedir confirmação",
+    "Temps limité : sans réponse validée à 0, c'est une mauvaise réponse": "Tempo limitado: sem resposta validada a tempo, conta como resposta errada",
+    "Confirmez ?": "Confirmam?",
+    "Vérifiez le nom avant de l'envoyer": "Verifiquem o nome antes de o enviar",
+    "Modifier": "Alterar",
+    "Valider la réponse": "Validar a resposta",
+    "Le résultat apparaît seulement après validation": "O resultado só aparece depois de validar",
+    "Plus": "Mais",
+    "ou": "ou",
+    "Moins": "Menos",
+    "Buts": "Golos",
+    "Comparaison 1 / 5": "Comparação 1 / 5",
+    "Cagnotte : 1 point": "Pote: 1 ponto",
+    "Encaisser": "Arrecadar",
+    "Une erreur fait perdre la cagnotte": "Um erro faz perder o pote",
+    "Révéler": "Revelar",
+    "Quelle équipe tackle ?": "Que equipa faz o tackle?",
+    "Annuler": "Cancelar",
+    "Vrai": "Verdadeiro",
+    "Faux": "Falso",
+    "Affirmation 1 / 5": "Afirmação 1 / 5",
+    "Cagnotte": "Pote",
+    "Passer": "Saltar",
+    "Nom du joueur": "Nome do jogador",
+    "Tu as tapé : «": "Escreveste: «",
+    "Confirmer": "Confirmar",
+    "Équipe 1": "Equipa 1",
+    "Équipe 2": "Equipa 2",
+    "Suivant": "Seguinte",
+    "Qui a tacklé ?": "Quem fez o tackle?",
+    "Celui qui tient le téléphone arbitre : choisir la première équipe à avoir crié « Tackle »": "Quem tem o telemóvel é o árbitro: escolher a primeira equipa a gritar «Tackle»",
+    "Une seule équipe répond": "Só uma equipa responde",
+    "Le chrono est arrêté pendant ce choix": "O cronómetro está parado durante esta escolha",
+    "Tirer au sort": "Sortear",
+    "Litige : tirage au sort": "Disputa: sorteio",
+    "Annuler, personne n'a tacklé": "Cancelar, ninguém fez tackle",
+    "Première équipe à tackler": "Primeira equipa a fazer tackle",
+    "Deuxième équipe": "Segunda equipa",
+    "Une seule tentative · la carte se termine ensuite": "Uma só tentativa · a carta termina a seguir",
+    "Disponible après le sifflet": "Disponível depois do apito",
+    "Quitter la partie ?": "Sair da partida?",
+    "Les scores de cette partie seront perdus.": "As pontuações desta partida vão perder-se.",
+    "Manche 01 / 10 terminée": "Ronda 01 / 10 terminada",
+    "Classement": "Classificação",
+    "Prochaine manche": "Próxima ronda",
+    "À jouer en premier": "Joga primeiro",
+    "Le prochain défi commence avec eux": "O próximo desafio começa com eles",
+    "C'est parti !": "Vamos a isso!",
+    "Tous les scores sont conservés pour la suite": "Todas as pontuações se mantêm para o que vem a seguir",
+    "Résultat final": "Resultado final",
+    "Revanche": "Desforra",
+    "Clubs révélés": "Clubes revelados",
+    "Indices": "Pistas",
+    "Nom de l'équipe": "Nome da equipa",
+    "Nom de l'équipe…": "Nome da equipa…",
+    "Nom du joueur…": "Nome do jogador…",
+    "Retour": "Voltar",
+    "Retour à Créer une partie": "Voltar a Criar uma partida",
+    "Scores des équipes": "Pontuações das equipas",
+    "Tape le nom ici": "Escreve o nome aqui",
+    "Événements du match": "Acontecimentos do jogo"
+    };
+  (function translateStatic() {
+    if (LANG !== "pt" || !document.createTreeWalker) return;
+    try {
+      var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+      var node, nodes = [];
+      while ((node = walker.nextNode())) nodes.push(node);
+      nodes.forEach(function (n) {
+        if (n.parentNode && /^(SCRIPT|STYLE)$/.test(n.parentNode.nodeName)) return;
+        var t = n.nodeValue.trim();
+        if (t && Object.prototype.hasOwnProperty.call(PT_STATIC, t)) n.nodeValue = n.nodeValue.replace(t, PT_STATIC[t]);
+      });
+      ["aria-label", "placeholder", "title", "alt"].forEach(function (attr) {
+        document.querySelectorAll("[" + attr + "]").forEach(function (e) {
+          var v = e.getAttribute(attr);
+          if (Object.prototype.hasOwnProperty.call(PT_STATIC, v)) e.setAttribute(attr, PT_STATIC[v]);
+        });
+      });
+    } catch (e) {}
+  })();
+
   // ---------- Appli iPhone (Capacitor) ----------
   // Le même fichier sert au site et à l'appli. Dans l'appli, on utilise les fonctions natives
   // (vibrations, partage, écran allumé) et les questions sont téléchargées depuis le site.
@@ -2441,7 +2584,13 @@
   }
   // Questions à jour : le site est la source ; la copie embarquée sert hors connexion.
   var REMOTE_DATA_BASE = "https://dacloccortexa.github.io/game-project/";
+  // Questions traduites : src/data/pt/… (générées par tools/translate_pt.py). Les stats Plus ou Moins sont communes.
+  var PT_DATA = ["transfert-cards.json", "quisuisje-cards.json", "lematch-cards.json", "vraifaux-statements.json"];
   function fetchData(path) {
+    if (LANG === "pt") {
+      var file = path.split("/").pop();
+      if (PT_DATA.indexOf(file) !== -1) path = "src/data/pt/" + file;
+    }
     function local() { return fetch(path, { cache: "no-store" }); }
     if (!NATIVE) return local();
     var timeout = new Promise(function (resolve) { setTimeout(function () { resolve(null); }, 5000); });
@@ -2525,7 +2674,7 @@
             teams: c.teams,
             team_aliases: c.team_aliases || [[], []],
             events: c.events.map(function (ev) { return ev.text; }),
-            eventInfo: c.events.map(function (ev) { return { minute: ev.minute, kind: ev.kind }; })
+            eventInfo: c.events.map(function (ev) { return { minute: ev.minute, kind: ev.kind, short: ev.short }; })
           };
         });
         LM_READY = LM_CARDS.length > 0;
@@ -2611,13 +2760,13 @@
   // ---------- Content: chaînes Plus ou Moins ----------
   // Catégories réelles vérifiées, chargées depuis des fichiers sourcés (une par catégorie).
   var POM_REAL_CATEGORIES = [
-    { file: "src/data/stats-premier-league-goals.json", label: "Buts en Premier League" },
-    { file: "src/data/stats-champions-league-goals.json", label: "Buts en Ligue des champions" },
-    { file: "src/data/stats-world-cup-goals.json", label: "Buts en Coupe du monde" },
-    { file: "src/data/stats-national-team-caps.json", label: "Sélections en équipe nationale" },
-    { file: "src/data/stats-la-liga-goals.json", label: "Buts en Liga" },
-    { file: "src/data/stats-serie-a-goals.json", label: "Buts en Serie A" },
-    { file: "src/data/stats-ligue-1-goals.json", label: "Buts en Ligue 1" }
+    { file: "src/data/stats-premier-league-goals.json", label: L("Buts en Premier League", "Golos na Premier League") },
+    { file: "src/data/stats-champions-league-goals.json", label: L("Buts en Ligue des champions", "Golos na Liga dos Campeões") },
+    { file: "src/data/stats-world-cup-goals.json", label: L("Buts en Coupe du monde", "Golos no Mundial") },
+    { file: "src/data/stats-national-team-caps.json", label: L("Sélections en équipe nationale", "Internacionalizações pela seleção") },
+    { file: "src/data/stats-la-liga-goals.json", label: L("Buts en Liga", "Golos na Liga espanhola") },
+    { file: "src/data/stats-serie-a-goals.json", label: L("Buts en Serie A", "Golos na Serie A") },
+    { file: "src/data/stats-ligue-1-goals.json", label: L("Buts en Ligue 1", "Golos na Ligue 1") }
   ];
   var POM_REAL_POOLS = []; // [{label, players: [{name, value}]}]
   var POM_READY = false;
@@ -2628,7 +2777,7 @@
         return fetchData(cat.file)
           .then(function (res) { return res.json(); })
           .then(function (data) {
-            POM_REAL_POOLS.push({ label: data.category_label || cat.label, players: data.players });
+            POM_REAL_POOLS.push({ label: LANG === "pt" ? cat.label : (data.category_label || cat.label), players: data.players });
           })
           .catch(function (err) {
             console.error("Impossible de charger " + cat.file, err);
@@ -2736,7 +2885,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.02-1505";
+  var APP_VERSION = "2026.10.02-1530";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -2920,15 +3069,15 @@
     function copyFallback() {
       try {
         navigator.clipboard.writeText(text).then(function () {
-          say("Journal copié : collez-le dans un message pour David.");
-        }, function () { say("Impossible de partager ou de copier le journal sur cet appareil."); });
-      } catch (e) { say("Impossible de partager ou de copier le journal sur cet appareil."); }
+          say(L("Journal copié : collez-le dans un message pour David.", "Registo copiado: cola-o numa mensagem para o David."));
+        }, function () { say(L("Impossible de partager ou de copier le journal sur cet appareil.", "Não foi possível partilhar nem copiar o registo neste aparelho.")); });
+      } catch (e) { say(L("Impossible de partager ou de copier le journal sur cet appareil.", "Não foi possível partilhar nem copiar o registo neste aparelho.")); }
     }
     var nativeShare = nativePlugin("Share");
     if (nativeShare) {
-      nativeShare.share({ title: "TACKLE · journal de partie", text: text, dialogTitle: "Envoyer le journal" }).then(function (r) {
+      nativeShare.share({ title: "TACKLE · journal de partie", text: text, dialogTitle: L("Envoyer le journal", "Enviar o registo") }).then(function (r) {
         if (r && r.activityType === undefined) { say(""); return; }
-        say("Journal envoyé et effacé du téléphone. Merci !");
+        say(L("Journal envoyé et effacé du téléphone. Merci !", "Registo enviado e apagado do telemóvel. Obrigado!"));
         if (onSent) onSent();
       }, function () { say(""); }); // partage annulé : rien n'est effacé
       return;
@@ -2936,7 +3085,7 @@
     try {
       if (navigator.share) {
         navigator.share({ title: "TACKLE · journal de partie", text: text }).then(function () {
-          say("Journal envoyé et effacé du téléphone. Merci !");
+          say(L("Journal envoyé et effacé du téléphone. Merci !", "Registo enviado e apagado do telemóvel. Obrigado!"));
           if (onSent) onSent();
         }, function (err) {
           if (err && err.name === "AbortError") { say(""); return; }
@@ -2954,7 +3103,7 @@
     teamStep: 0,     // équipe affichée sur « Personnaliser les équipes »
     teamSettings: [0, 1, 2, 3].map(function (i) {
       return {
-        name: ["Les Lions", "Les Renards", "Les Taureaux", "Les Aigles"][i],
+        name: [L("Les Lions", "Os Leões"), L("Les Renards", "As Raposas"), L("Les Taureaux", "Os Touros"), L("Les Aigles", "As Águias")][i],
         logo: ["lion", "fox", "bull", "eagle"][i],
         color: ["gold", "coral", "blue", "violet"][i]
       };
@@ -3031,10 +3180,10 @@
 
   // ---------- PRÉPARATION : 3 écrans (docs/UI_SETUP_FLOW.md) ----------
   var TEAM_LOGOS = [
-    { id: "lion", label: "Lion", teamName: "Les Lions" },
-    { id: "fox", label: "Renard", teamName: "Les Renards" },
-    { id: "bull", label: "Taureau", teamName: "Les Taureaux" },
-    { id: "eagle", label: "Aigle", teamName: "Les Aigles" }
+    { id: "lion", label: L("Lion", "Leão"), teamName: L("Les Lions", "Os Leões") },
+    { id: "fox", label: L("Renard", "Raposa"), teamName: L("Les Renards", "As Raposas") },
+    { id: "bull", label: L("Taureau", "Touro"), teamName: L("Les Taureaux", "Os Touros") },
+    { id: "eagle", label: L("Aigle", "Águia"), teamName: L("Les Aigles", "As Águias") }
   ];
   // Nom par défaut = nom de l'animal. Tant que l'équipe garde un nom par défaut
   // (ou un nom vide), il suit l'animal choisi.
@@ -3048,12 +3197,12 @@
     return "assets/ui/web/team-" + logoId + "-" + colorId + ".webp";
   }
   var TEAM_COLORS = [
-    { id: "gold", label: "Or", hex: "#E9B53C" },
-    { id: "coral", label: "Corail", hex: "#EF5B5B" },
-    { id: "blue", label: "Bleu", hex: "#3E95E6" },
-    { id: "violet", label: "Violet", hex: "#8B5CF0" },
-    { id: "mint", label: "Menthe", hex: "#5ED3A6" },
-    { id: "ivory", label: "Ivoire", hex: "#F1EBDC" }
+    { id: "gold", label: L("Or", "Dourado"), hex: "#E9B53C" },
+    { id: "coral", label: L("Corail", "Coral"), hex: "#EF5B5B" },
+    { id: "blue", label: L("Bleu", "Azul"), hex: "#3E95E6" },
+    { id: "violet", label: L("Violet", "Violeta"), hex: "#8B5CF0" },
+    { id: "mint", label: L("Menthe", "Menta"), hex: "#5ED3A6" },
+    { id: "ivory", label: L("Ivoire", "Marfim"), hex: "#F1EBDC" }
   ];
   var MINIGAME_ORDER = ["transfert", "plusoumoins", "vraifaux", "quisuisje", "lematch"];
 
@@ -3143,7 +3292,7 @@
         var v = parseInt(b.getAttribute("data-value"), 10);
         var isLocked = locked && v > FREE_MAX_ROUNDS;
         b.classList.toggle("locked", isLocked);
-        b.setAttribute("aria-label", v + " manches" + (isLocked ? " (abonnement)" : ""));
+        b.setAttribute("aria-label", v + L(" manches", " rondas") + (isLocked ? L(" (abonnement)", " (subscrição)") : ""));
       });
       if (locked && state.roundsTotal > FREE_MAX_ROUNDS) {
         state.roundsTotal = FREE_MAX_ROUNDS;
@@ -3154,8 +3303,9 @@
       el("free-box").classList.toggle("hidden-screen", !(NATIVE && locked));
       var left = Math.max(0, FREE_GAMES_PER_DAY - freePlaysToday());
       el("free-count").textContent = left > 0
-        ? left + " partie" + (left > 1 ? "s" : "") + " gratuite" + (left > 1 ? "s" : "") + " aujourd'hui"
-        : "Plus de partie gratuite aujourd'hui";
+        ? (LANG === "pt" ? left + (left > 1 ? " partidas grátis hoje" : " partida grátis hoje")
+          : left + " partie" + (left > 1 ? "s" : "") + " gratuite" + (left > 1 ? "s" : "") + " aujourd'hui")
+        : L("Plus de partie gratuite aujourd'hui", "Já não há partidas grátis hoje");
     } catch (e) {}
   }
   // Manches verrouillées : un appui ouvre l'abonnement au lieu de les choisir.
@@ -3172,7 +3322,7 @@
     state.premium = !!(info && info.entitlements && info.entitlements.active && info.entitlements.active[ENTITLEMENT_ID]);
     refreshAccessUI();
     if (state.premium && !was && !el("screen-paywall").classList.contains("hidden-screen")) {
-      el("paywall-status").textContent = "Merci ! TACKLE illimité est activé.";
+      el("paywall-status").textContent = L("Merci ! TACKLE illimité est activé.", "Obrigado! O TACKLE ilimitado está ativo.");
       setTimeout(function () { showSetupScreen(paywallReturn, true); }, 1200);
     }
   }
@@ -3189,8 +3339,8 @@
   }
 
   var PAYWALL_REASONS = {
-    daily: "Les " + FREE_GAMES_PER_DAY + " parties gratuites du jour sont jouées.",
-    rounds: "Les parties de plus de " + FREE_MAX_ROUNDS + " manches sont réservées aux abonnés.",
+    daily: L("Les " + FREE_GAMES_PER_DAY + " parties gratuites du jour sont jouées.", "As " + FREE_GAMES_PER_DAY + " partidas grátis de hoje já foram jogadas."),
+    rounds: L("Les parties de plus de " + FREE_MAX_ROUNDS + " manches sont réservées aux abonnés.", "As partidas com mais de " + FREE_MAX_ROUNDS + " rondas são para subscritores."),
     menu: ""
   };
   function openPaywall(reason) {
@@ -3202,18 +3352,20 @@
   }
   function periodLabel(pkg) {
     var t = pkg && pkg.packageType;
-    return t === "ANNUAL" ? ["Annuel", " / an"] : t === "MONTHLY" ? ["Mensuel", " / mois"] : t === "WEEKLY" ? ["Hebdomadaire", " / semaine"]
-      : t === "SIX_MONTH" ? ["6 mois", " / 6 mois"] : t === "THREE_MONTH" ? ["3 mois", " / 3 mois"] : [(pkg.product && pkg.product.title) || "Abonnement", ""];
+    return t === "ANNUAL" ? [L("Annuel", "Anual"), L(" / an", " / ano")] : t === "MONTHLY" ? [L("Mensuel", "Mensal"), L(" / mois", " / mês")]
+      : t === "WEEKLY" ? [L("Hebdomadaire", "Semanal"), L(" / semaine", " / semana")]
+      : t === "SIX_MONTH" ? [L("6 mois", "6 meses"), L(" / 6 mois", " / 6 meses")] : t === "THREE_MONTH" ? [L("3 mois", "3 meses"), L(" / 3 mois", " / 3 meses")]
+      : [(pkg.product && pkg.product.title) || L("Abonnement", "Subscrição"), ""];
   }
   function loadOfferings() {
     var box = el("paywall-packages"), status = el("paywall-status"), rc = purchases();
     box.innerHTML = "";
-    if (!NATIVE) { status.textContent = "L'abonnement se prend dans l'appli iPhone TACKLE."; return; }
-    if (!rc || !REVENUECAT_IOS_KEY) { status.textContent = "Abonnement bientôt disponible."; return; }
-    status.textContent = "Chargement…";
+    if (!NATIVE) { status.textContent = L("L'abonnement se prend dans l'appli iPhone TACKLE.", "A subscrição faz-se na app TACKLE para iPhone."); return; }
+    if (!rc || !REVENUECAT_IOS_KEY) { status.textContent = L("Abonnement bientôt disponible.", "Subscrição disponível em breve."); return; }
+    status.textContent = L("Chargement…", "A carregar…");
     rc.getOfferings().then(function (o) {
       var pkgs = (o && o.current && o.current.availablePackages) || [];
-      status.textContent = pkgs.length ? "" : "Aucune formule disponible pour le moment.";
+      status.textContent = pkgs.length ? "" : L("Aucune formule disponible pour le moment.", "Nenhum plano disponível de momento.");
       pkgs.forEach(function (pkg) {
         var lab = periodLabel(pkg), prod = pkg.product || {};
         var btn = document.createElement("button");
@@ -3224,7 +3376,11 @@
         var intro = prod.introPrice;
         if (intro && intro.price === 0) {
           var sm = document.createElement("small");
-          sm.textContent = "Essai gratuit : " + intro.periodNumberOfUnits + " " + ({ DAY: "jour", WEEK: "semaine", MONTH: "mois", YEAR: "an" }[intro.periodUnit] || "") + (intro.periodNumberOfUnits > 1 && intro.periodUnit !== "MONTH" ? "s" : "");
+          var nU = intro.periodNumberOfUnits, many = nU > 1;
+          var unit = LANG === "pt"
+            ? ({ DAY: many ? "dias" : "dia", WEEK: many ? "semanas" : "semana", MONTH: many ? "meses" : "mês", YEAR: many ? "anos" : "ano" }[intro.periodUnit] || "")
+            : ({ DAY: "jour", WEEK: "semaine", MONTH: "mois", YEAR: "an" }[intro.periodUnit] || "") + (many && intro.periodUnit !== "MONTH" ? "s" : "");
+          sm.textContent = L("Essai gratuit : ", "Teste grátis: ") + nU + " " + unit;
           left.appendChild(sm);
         }
         var price = document.createElement("span"); price.className = "price"; price.textContent = (prod.priceString || "") + lab[1];
@@ -3232,7 +3388,7 @@
         btn.addEventListener("click", function () { buyPackage(pkg); });
         box.appendChild(btn);
       });
-    }).catch(function () { status.textContent = "Impossible de charger les formules. Vérifie la connexion."; });
+    }).catch(function () { status.textContent = L("Impossible de charger les formules. Vérifie la connexion.", "Não foi possível carregar os planos. Verifica a ligação."); });
   }
   function setPaywallBusy(busy) {
     el("paywall-packages").querySelectorAll("button").forEach(function (b) { b.disabled = busy; });
@@ -3240,24 +3396,24 @@
   function buyPackage(pkg) {
     var rc = purchases(); if (!rc) return;
     setPaywallBusy(true);
-    el("paywall-status").textContent = "Paiement en cours…";
+    el("paywall-status").textContent = L("Paiement en cours…", "Pagamento em curso…");
     rc.purchasePackage({ aPackage: pkg }).then(function (r) {
       applyCustomerInfo(r && r.customerInfo);
       journalStep && journalStep("abonnement acheté");
     }).catch(function (err) {
-      el("paywall-status").textContent = err && err.userCancelled ? "" : "L'achat n'a pas abouti. Tu n'as pas été débité.";
+      el("paywall-status").textContent = err && err.userCancelled ? "" : L("L'achat n'a pas abouti. Tu n'as pas été débité.", "A compra não foi concluída. Não foste cobrado.");
     }).then(function () { setPaywallBusy(false); });
   }
   el("btn-paywall-back").addEventListener("click", function () { showSetupScreen(paywallReturn, true); });
   el("btn-open-paywall").addEventListener("click", function () { openPaywall("menu"); });
   el("btn-paywall-restore").addEventListener("click", function () {
     var rc = purchases();
-    if (!rc || !REVENUECAT_IOS_KEY) { el("paywall-status").textContent = "Disponible dans l'appli iPhone TACKLE."; return; }
-    el("paywall-status").textContent = "Recherche de tes achats…";
+    if (!rc || !REVENUECAT_IOS_KEY) { el("paywall-status").textContent = L("Disponible dans l'appli iPhone TACKLE.", "Disponível na app TACKLE para iPhone."); return; }
+    el("paywall-status").textContent = L("Recherche de tes achats…", "À procura das tuas compras…");
     rc.restorePurchases().then(function (r) {
       applyCustomerInfo(r && r.customerInfo);
-      if (!state.premium) el("paywall-status").textContent = "Aucun abonnement actif pour ce compte Apple.";
-    }).catch(function () { el("paywall-status").textContent = "La restauration n'a pas abouti. Réessaie."; });
+      if (!state.premium) el("paywall-status").textContent = L("Aucun abonnement actif pour ce compte Apple.", "Nenhuma subscrição ativa para esta conta Apple.");
+    }).catch(function () { el("paywall-status").textContent = L("La restauration n'a pas abouti. Réessaie.", "Não foi possível restaurar. Tenta outra vez."); });
   });
   el("btn-paywall-code").addEventListener("click", function () {
     var rc = purchases();
@@ -3266,11 +3422,14 @@
   });
   initPurchases();
   refreshAccessUI();
+  // Changer de langue (le bouton propose l'autre langue, dans cette langue-là).
+  el("btn-lang").textContent = LANG === "pt" ? "Jouer en français" : "Jogar em português";
+  el("btn-lang").addEventListener("click", function () { setLanguage(LANG === "pt" ? "fr" : "pt"); });
 
   // --- Défis ---
   function renderChallengesCount() {
     var n = state.minigamesSelected.length;
-    el("challenges-count").textContent = n + (n > 1 ? " sélectionnés" : " sélectionné");
+    el("challenges-count").textContent = n + (n > 1 ? L(" sélectionnés", " selecionados") : L(" sélectionné", " selecionado"));
   }
   function challengeCards() { return el("challenge-list").querySelectorAll(".challenge-card"); }
   function readChallengeSelection() {
@@ -3298,7 +3457,7 @@
   function closeChallenges() {
     var list = readChallengeSelection();
     if (list.length === 0) {
-      el("challenges-error").textContent = "Garde au moins un défi : la partie tire chaque manche parmi les défis sélectionnés.";
+      el("challenges-error").textContent = L("Garde au moins un défi : la partie tire chaque manche parmi les défis sélectionnés.", "Mantém pelo menos um desafio: cada ronda é sorteada entre os desafios selecionados.");
       return;
     }
     state.minigamesSelected = MINIGAME_ORDER.filter(function (g) { return list.indexOf(g) !== -1; });
@@ -3354,8 +3513,8 @@
       input.disabled = owner !== -1;
       label.classList.toggle("taken", owner !== -1);
       label.querySelector(".sr-only").textContent = input.getAttribute("data-label") +
-        (owner !== -1 ? " (déjà pris par " + teamDisplayName(owner) + ")" : "");
-      label.title = owner !== -1 ? "Déjà pris par " + teamDisplayName(owner) : "";
+        (owner !== -1 ? L(" (déjà pris par ", " (já escolhido por ") + teamDisplayName(owner) + ")" : "");
+      label.title = owner !== -1 ? L("Déjà pris par ", "Já escolhido por ") + teamDisplayName(owner) : "";
     });
   }
 
@@ -3369,16 +3528,16 @@
     refreshTakenOptions();
     renderTeamSteps();
     var last = state.teamStep === state.teamCount - 1;
-    el("btn-start").textContent = last ? "Coup d'envoi" : "Équipe suivante";
+    el("btn-start").textContent = last ? L("Coup d'envoi", "Pontapé de saída") : L("Équipe suivante", "Equipa seguinte");
     el("btn-teams-back").setAttribute("aria-label", state.teamStep === 0
-      ? "Retour à Créer une partie"
-      : "Retour à l'équipe " + state.teamStep);
+      ? L("Retour à Créer une partie", "Voltar a Criar uma partida")
+      : L("Retour à l'équipe ", "Voltar à equipa ") + state.teamStep);
   }
 
   function renderTeamSteps() {
     var box = el("team-steps");
     box.innerHTML = "";
-    box.setAttribute("aria-label", "Équipe " + (state.teamStep + 1) + " sur " + state.teamCount);
+    box.setAttribute("aria-label", L("Équipe ", "Equipa ") + (state.teamStep + 1) + L(" sur ", " de ") + state.teamCount);
     box.hidden = state.teamCount < 2;
     for (var i = 0; i < state.teamCount; i++) {
       if (i > 0) {
@@ -3421,7 +3580,7 @@
     var title = document.createElement("h3");
     title.className = "setup-title";
     title.id = "team-title-" + idx;
-    title.textContent = "Équipe " + (idx + 1);
+    title.textContent = L("Équipe ", "Equipa ") + (idx + 1);
     card.appendChild(title);
 
     var field = document.createElement("div");
@@ -3429,7 +3588,7 @@
     var label = document.createElement("label");
     label.className = "sr-only";
     label.setAttribute("for", "team-name-" + idx);
-    label.textContent = "Nom de l'équipe " + (idx + 1);
+    label.textContent = L("Nom de l'équipe ", "Nome da equipa ") + (idx + 1);
     var input = document.createElement("input");
     input.type = "text";
     input.id = "team-name-" + idx;
@@ -3445,7 +3604,7 @@
     var clearBtn = document.createElement("button");
     clearBtn.type = "button";
     clearBtn.className = "team-name-clear";
-    clearBtn.setAttribute("aria-label", "Effacer le nom de l'équipe " + (idx + 1) + " pour le modifier");
+    clearBtn.setAttribute("aria-label", L("Effacer le nom de l'équipe ", "Apagar o nome da equipa ") + (idx + 1) + L(" pour le modifier", " para o alterar"));
     clearBtn.innerHTML = PENCIL_SVG;
     clearBtn.addEventListener("click", function () {
       input.value = "";
@@ -3458,7 +3617,7 @@
     field.appendChild(clearBtn);
     card.appendChild(field);
 
-    card.appendChild(buildRadioFieldset(idx, "Logo", "logo", TEAM_LOGOS, function (opt, wrapLabel) {
+    card.appendChild(buildRadioFieldset(idx, L("Logo", "Emblema"), "logo", TEAM_LOGOS, function (opt, wrapLabel) {
       wrapLabel.className = "logo-opt";
       var img = document.createElement("img");
       img.src = logoSrc(opt.id, setting.color);
@@ -3473,7 +3632,7 @@
       wrapLabel.appendChild(txt);
     }, "logo-options"));
 
-    card.appendChild(buildRadioFieldset(idx, "Couleur", "color", TEAM_COLORS, function (opt, wrapLabel) {
+    card.appendChild(buildRadioFieldset(idx, L("Couleur", "Cor"), "color", TEAM_COLORS, function (opt, wrapLabel) {
       wrapLabel.className = "swatch";
       wrapLabel.style.setProperty("--swatch", opt.hex);
       var txt = document.createElement("span");
@@ -3566,27 +3725,27 @@
       return;
     }
     if (state.minigamesSelected.length === 0) {
-      setupError("Sélectionne au moins un défi pour lancer la partie.");
+      setupError(L("Sélectionne au moins un défi pour lancer la partie.", "Seleciona pelo menos um desafio para começar a partida."));
       return;
     }
     if (state.minigamesSelected.indexOf("transfert") !== -1 && !CARDS_READY) {
-      setupError("Les cartes ne sont pas encore chargées (ou le fichier est introuvable). Réessaie dans un instant.");
+      setupError(L("Les cartes ne sont pas encore chargées (ou le fichier est introuvable). Réessaie dans un instant.", "As cartas ainda não foram carregadas (ou o ficheiro não foi encontrado). Tenta daqui a um instante."));
       return;
     }
     if (state.minigamesSelected.indexOf("plusoumoins") !== -1 && !POM_READY) {
-      setupError("Les catégories Plus ou Moins ne sont pas encore chargées. Réessaie dans un instant.");
+      setupError(L("Les catégories Plus ou Moins ne sont pas encore chargées. Réessaie dans un instant.", "As categorias de Mais ou Menos ainda não foram carregadas. Tenta daqui a um instante."));
       return;
     }
     if (state.minigamesSelected.indexOf("vraifaux") !== -1 && !VF_READY) {
-      setupError("Les affirmations Vrai ou Faux ne sont pas encore chargées. Réessaie dans un instant.");
+      setupError(L("Les affirmations Vrai ou Faux ne sont pas encore chargées. Réessaie dans un instant.", "As afirmações de Verdadeiro ou Falso ainda não foram carregadas. Tenta daqui a um instante."));
       return;
     }
     if (state.minigamesSelected.indexOf("quisuisje") !== -1 && !QSJ_READY) {
-      setupError("Les cartes Qui suis-je ne sont pas encore chargées. Réessaie dans un instant.");
+      setupError(L("Les cartes Qui suis-je ne sont pas encore chargées. Réessaie dans un instant.", "As cartas de Quem sou eu? ainda não foram carregadas. Tenta daqui a um instante."));
       return;
     }
     if (state.minigamesSelected.indexOf("lematch") !== -1 && !LM_READY) {
-      setupError("Les cartes Le Match ne sont pas encore chargées. Réessaie dans un instant.");
+      setupError(L("Les cartes Le Match ne sont pas encore chargées. Réessaie dans un instant.", "As cartas de O Jogo ainda não foram carregadas. Tenta daqui a um instante."));
       return;
     }
     if (!canStartGame()) { setupError(""); openPaywall("daily"); return; }
@@ -3703,7 +3862,10 @@
 
   // Le téléphone peut être tenu par n'importe qui : l'écran n'affiche que l'équipe active
   // (et l'équipe qui tente un Tackle). Voir DECISIONS.md du 2026-09-28.
-  var MINIGAME_SUBTITLES = { "Transfert": "Extrait de carrière · devine le joueur" };
+  var MINIGAME_SUBTITLES = { "Transfert": L("Extrait de carrière · devine le joueur", "Excerto da carreira · adivinha o jogador") };
+  // Les défis gardent leur nom français comme identifiant ; affichage selon la langue.
+  var GAME_NAMES_PT = { "Transfert": "Transferência", "Plus ou Moins": "Mais ou Menos", "Vrai ou Faux": "Verdadeiro ou Falso", "Qui suis-je ?": "Quem sou eu?", "Le Match": "O Jogo" };
+  function gameDisplayName(frLabel) { return LANG === "pt" ? (GAME_NAMES_PT[frLabel] || frLabel) : frLabel; }
   function pad2(n) { return (n < 10 ? "0" : "") + n; }
 
   function beginTurnCommon(minigameLabel) {
@@ -3712,8 +3874,8 @@
     state.tackledThisCard = []; // équipes adverses qui ont déjà tenté leur Tackle sur cette carte
     hideVerdict();
     journalStartCard();
-    el("round-count").textContent = "Manche " + pad2(state.roundsPlayed + 1) + " / " + pad2(state.roundsTotal);
-    el("minigame-name").textContent = minigameLabel;
+    el("round-count").textContent = L("Manche ", "Ronda ") + pad2(state.roundsPlayed + 1) + " / " + pad2(state.roundsTotal);
+    el("minigame-name").textContent = gameDisplayName(minigameLabel);
     el("minigame-subtitle").textContent = MINIGAME_SUBTITLES[minigameLabel] || "";
     // Plus ou Moins porte son propre titre dans la carte.
     // Les cinq défis portent désormais leur titre dans leur propre carte.
@@ -3724,21 +3886,37 @@
 
   // Accords avec le nom d'équipe : « Priorité aux Lions », « Réponse des Lions »,
   // « Les Lions confirment ? » ; « à Équipe 3 », « de Équipe 3 » pour un nom libre.
-  function teamPlural(name) { return /^les\s/i.test(name); }
+  // Portugais : « aos Leões », « às Raposas », « dos Leões », « das Raposas ».
+  function teamPlural(name) { return LANG === "pt" ? /^(os|as)\s/i.test(name) : /^les\s/i.test(name); }
   function teamAux(name) {
+    if (LANG === "pt") {
+      var m = /^(os|as|o|a)\s+(.*)$/i.exec(name);
+      if (m) return { os: "aos ", as: "às ", o: "ao ", a: "à " }[m[1].toLowerCase()] + m[2];
+      return "a " + name;
+    }
     if (/^les\s/i.test(name)) return "aux " + name.slice(4);
     if (/^le\s/i.test(name)) return "au " + name.slice(3);
     return "à " + name;
   }
   function teamDes(name) {
+    if (LANG === "pt") {
+      var m = /^(os|as|o|a)\s+(.*)$/i.exec(name);
+      if (m) return "d" + m[1].toLowerCase() + " " + m[2];
+      return "de " + name;
+    }
     if (/^les\s/i.test(name)) return "des " + name.slice(4);
     if (/^le\s/i.test(name)) return "du " + name.slice(3);
     return (/^[aeiouyàâéèêîôûh]/i.test(name) ? "d'" : "de ") + name;
   }
+  // Portugais : « pelos Leões », « pelas Raposas ».
+  function teamPor(name) {
+    var m = /^(os|as|o|a)\s+(.*)$/i.exec(name);
+    return m ? { os: "pelos ", as: "pelas ", o: "pelo ", a: "pela " }[m[1].toLowerCase()] + m[2] : "por " + name;
+  }
   function teamVerb(name, plural, singular) { return name + " " + (teamPlural(name) ? plural : singular); }
   function signed(n) { return String(n).replace("-", "−"); }
   function scoreChangeText(name, before, after) {
-    return name + " : " + signed(before) + " → " + signed(after) + " point" + (Math.abs(after) > 1 ? "s" : "");
+    return name + (LANG === "pt" ? ": " : " : ") + signed(before) + " → " + signed(after) + L(" point", " ponto") + ((LANG === "pt" ? Math.abs(after) !== 1 : Math.abs(after) > 1) ? "s" : "");
   }
   function pointsLabel(n) { return Math.abs(n) + " pt" + (Math.abs(n) > 1 ? "s" : ""); }
 
@@ -3793,15 +3971,15 @@
     var open = state.tacklePhase === "open";
     var alone = state.teams.length < 2;
     var active = state.teams[state.currentTeamIndex];
-    el("tackle-main").textContent = open && !alone ? "Tackle !" : "Tackle";
+    el("tackle-main").textContent = open && !alone ? L("Tackle !", "Tackle!") : "Tackle";
     el("tackle-sub").textContent = alone
-      ? "Il faut au moins deux équipes"
+      ? L("Il faut au moins deux équipes", "São precisas pelo menos duas equipas")
       : open
-        ? "Première équipe à l'annoncer : une réponse"
-        : "Disponible après le sifflet · dans " + seconds + " s";
+        ? L("Première équipe à l'annoncer : une réponse", "A primeira equipa a gritar responde")
+        : L("Disponible après le sifflet · dans ", "Disponível depois do apito · daqui a ") + seconds + " s";
     el("turn-clock-label").textContent = open
-      ? (alone ? "Temps restant" : "Tackle ouvert !")
-      : "Priorité " + teamAux(active ? active.name : "");
+      ? (alone ? L("Temps restant", "Tempo restante") : L("Tackle ouvert !", "Tackle aberto!"))
+      : L("Priorité ", "Prioridade ") + teamAux(active ? active.name : "");
     el("turn-clock-time").textContent = "00:" + pad2(Math.max(0, seconds));
     el("turn-clock").classList.toggle("open", open);
     // Le bouton clignote pendant toute la fenêtre de 15 secondes.
@@ -3876,7 +4054,23 @@
 
   function tackleDeltaText(correct) {
     var stake = currentTackleStake();
-    return (stake === 0 ? "" : correct ? "+" : "−") + stake + " point" + (stake > 1 ? "s" : "");
+    return (stake === 0 ? "" : correct ? "+" : "−") + stake + L(" point", " ponto") + ((LANG === "pt" ? stake !== 1 : stake > 1) ? "s" : "");
+  }
+  // « 3 points encaissés » / « 3 pontos arrecadados »
+  function bankedText(points) {
+    var many = points > 1;
+    return LANG === "pt" ? "+" + points + (many ? " pontos arrecadados." : " ponto arrecadado.")
+      : "+" + points + " point" + (many ? "s" : "") + " encaissé" + (many ? "s" : "") + ".";
+  }
+  // Après un Tackle sur Plus ou Moins / Vrai ou Faux : ce qui arrive à l'équipe qui a la main.
+  function activeBankText(correct, points) {
+    var name = state.teams[state.currentTeamIndex].name;
+    if (LANG === "pt") {
+      return correct ? "; " + name + (teamPlural(name) ? " perdem" : " perde") + " o pote."
+        : "; " + name + (teamPlural(name) ? " arrecadam " : " arrecada ") + points + (points > 1 ? " pontos." : " ponto.");
+    }
+    return correct ? " ; " + teamVerb(name, "perdent", "perd") + " sa cagnotte."
+      : " ; " + teamVerb(name, "encaissent", "encaisse") + " " + points + " point" + (points > 1 ? "s" : "") + ".";
   }
 
   function startTackleWindow() {
@@ -3931,15 +4125,15 @@
         hide("pom-answer-zone");
         state.pomRevealed = true;
         renderPomChain(true);
-        showPomVerdict("neutral", "Temps écoulé", false);
-        showPomNote("Personne n'a répondu. " + (points > 0
-          ? "+" + points + " point" + (points > 1 ? "s" : "") + " encaissé" + (points > 1 ? "s" : "") + "."
-          : "Aucune cagnotte à encaisser."));
+        showPomVerdict("neutral", L("Temps écoulé", "Tempo esgotado"), false);
+        showPomNote(L("Personne n'a répondu. ", "Ninguém respondeu. ") + (points > 0
+          ? bankedText(points)
+          : L("Aucune cagnotte à encaisser.", "Não havia pote para arrecadar.")));
       } else {
         var statement = state.vfChain[state.vfIndex];
         hide("vf-answer-zone");
-        showVerdict("neutral", "Temps écoulé", { note: [{ text: "C'était " + (statement.est_vraie ? "VRAI" : "FAUX"), strong: true },
-          "Personne n'a répondu. " + (points > 0 ? "+" + points + " point" + (points > 1 ? "s" : "") + " encaissé" + (points > 1 ? "s" : "") + "." : "Aucune cagnotte à encaisser.")] });
+        showVerdict("neutral", L("Temps écoulé", "Tempo esgotado"), { note: [{ text: L("C'était ", "Era ") + (statement.est_vraie ? L("VRAI", "VERDADEIRO") : L("FAUX", "FALSO")), strong: true },
+          L("Personne n'a répondu. ", "Ninguém respondeu. ") + (points > 0 ? bankedText(points) : L("Aucune cagnotte à encaisser.", "Não havia pote para arrecadar."))] });
       }
       endCard();
     } else if (state.currentRoundMinigame === "lematch") advanceLmEvent(false);
@@ -3957,7 +4151,7 @@
     hide("btn-tackle");
     hide("turn-clock");
     var stake = currentTackleStake();
-    el("tackle-picker-stakes").textContent = "Une seule équipe répond · adversaire ±" + pointsLabel(stake);
+    el("tackle-picker-stakes").textContent = L("Une seule équipe répond · adversaire ±", "Só uma equipa responde · adversário ±") + pointsLabel(stake);
     var buttonsDiv = el("tackle-team-buttons");
     buttonsDiv.innerHTML = "";
     // Toutes les équipes sont dans la course, celle qui a la main en premier.
@@ -3978,7 +4172,7 @@
       if (idx === state.currentTeamIndex) {
         var tag = document.createElement("span");
         tag.className = "tt-tag";
-        tag.textContent = "À la main";
+        tag.textContent = L("À la main", "Tem a vez");
         btn.appendChild(tag);
       }
       var chevron = document.createElement("span");
@@ -4023,17 +4217,17 @@
       if (chev) chev.classList.toggle("hidden-screen", on);
     });
     el("tackle-picker-sub").textContent = on
-      ? "Garder cochées les équipes qui disent avoir crié en premier"
-      : "Celui qui tient le téléphone arbitre : choisir la première équipe à avoir crié « Tackle »";
+      ? L("Garder cochées les équipes qui disent avoir crié en premier", "Deixar marcadas as equipas que dizem ter gritado primeiro")
+      : L("Celui qui tient le téléphone arbitre : choisir la première équipe à avoir crié « Tackle »", "Quem tem o telemóvel é o árbitro: escolher a primeira equipa a gritar «Tackle»");
     el("btn-tackle-draw").classList.toggle("hidden-screen", !on);
     el("btn-tackle-dispute").classList.toggle("hidden-screen", btns.length < 2);
-    el("btn-tackle-dispute").textContent = on ? "Retour : l'arbitre choisit" : "Litige : tirage au sort";
+    el("btn-tackle-dispute").textContent = on ? L("Retour : l'arbitre choisit", "Voltar: o árbitro escolhe") : L("Litige : tirage au sort", "Disputa: sorteio");
     updateDisputeButton();
   }
   function updateDisputeButton() {
     var n = tackleOpponentButtons().filter(function (b) { return b.getAttribute("aria-pressed") === "true"; }).length;
     el("btn-tackle-draw").disabled = n < 2;
-    el("btn-tackle-draw").textContent = n < 2 ? "Cocher au moins 2 équipes" : "Tirer au sort entre " + n + " équipes";
+    el("btn-tackle-draw").textContent = n < 2 ? L("Cocher au moins 2 équipes", "Marcar pelo menos 2 equipas") : L("Tirer au sort entre ", "Sortear entre ") + n + L(" équipes", " equipas");
   }
   function runTackleDraw(candidates) {
     // candidates : [{ idx, btn }] ; petite animation de roulette puis l'équipe tirée joue le Tackle.
@@ -4050,7 +4244,7 @@
       candidates.forEach(function (c) { c.btn.classList.remove("draw-lit"); });
       if (i >= steps) {
         winner.btn.classList.add("draw-win");
-        el("tackle-picker-sub").textContent = "Tirage au sort : " + state.teams[winner.idx].name;
+        el("tackle-picker-sub").textContent = L("Tirage au sort : ", "Sorteio: ") + state.teams[winner.idx].name;
         journalStep("Litige au Tackle : tirage au sort pour " + state.teams[winner.idx].name);
         setTimeout(function () {
           if (seq !== state.tackleDrawSeq || el("tackle-team-picker").classList.contains("hidden-screen")) return;
@@ -4114,7 +4308,7 @@
     badgeBox.innerHTML = "";
     badgeBox.appendChild(teamBadge(team));
     el("tackle-stake").textContent = "±" + pointsLabel(stake);
-    el("tackle-stakes-note").textContent = "Bonne réponse +" + stake + " · mauvaise réponse −" + stake;
+    el("tackle-stakes-note").textContent = L("Bonne réponse +", "Resposta certa +") + stake + L(" · mauvaise réponse −", " · resposta errada −") + stake;
     el("tackle-answer-input").value = "";
     el("tackle-answer-input-2").value = "";
     if (isBinaryGame()) {
@@ -4122,27 +4316,27 @@
       hide("tackle-answer-field-2");
       hide("btn-tackle-submit");
       var first = el("tackle-binary-choice-1"), second = el("tackle-binary-choice-2");
-      first.textContent = state.currentRoundMinigame === "plusoumoins" ? "+ Plus" : "VRAI";
-      second.textContent = state.currentRoundMinigame === "plusoumoins" ? "− Moins" : "FAUX";
+      first.textContent = state.currentRoundMinigame === "plusoumoins" ? L("+ Plus", "+ Mais") : L("VRAI", "VERDADEIRO");
+      second.textContent = state.currentRoundMinigame === "plusoumoins" ? L("− Moins", "− Menos") : L("FAUX", "FALSO");
       show("tackle-binary-choices");
     } else if (isLmTackle) {
       show("tackle-answer-field-1");
       show("btn-tackle-submit");
       hide("tackle-binary-choices");
-      el("tackle-answer-label-1").textContent = "Équipe 1";
-      el("tackle-answer-input").placeholder = "Nom de l'équipe";
+      el("tackle-answer-label-1").textContent = L("Équipe 1", "Equipa 1");
+      el("tackle-answer-input").placeholder = L("Nom de l'équipe", "Nome da equipa");
       show("tackle-answer-field-2");
     } else {
       show("tackle-answer-field-1");
       show("btn-tackle-submit");
       hide("tackle-binary-choices");
-      el("tackle-answer-label-1").textContent = "Quel est le joueur ?";
-      el("tackle-answer-input").placeholder = "Nom du joueur…";
+      el("tackle-answer-label-1").textContent = L("Quel est le joueur ?", "Quem é o jogador?");
+      el("tackle-answer-input").placeholder = L("Nom du joueur…", "Nome do jogador…");
       hide("tackle-answer-field-2");
     }
     el("tackle-after-note").textContent = isBinaryGame()
-      ? "Une seule tentative · la carte se termine ensuite"
-      : "Une seule tentative par carte · raté : la main revient à l'équipe qui jouait";
+      ? L("Une seule tentative · la carte se termine ensuite", "Uma só tentativa · a carta termina a seguir")
+      : L("Une seule tentative par carte · raté : la main revient à l'équipe qui jouait", "Uma só tentativa por carta · se falhar, a vez volta à equipa que estava a jogar");
     show("tackle-answer-zone");
     if (!isBinaryGame()) el("tackle-answer-input").focus();
     startAnswerTimer(function () {
@@ -4182,24 +4376,18 @@
     journalStep("Tackle " + teamDes(team.name) + " (" + (game === "plusoumoins" ? (choice === "plus" ? "PLUS" : "MOINS") : (choice ? "VRAI" : "FAUX")) + ") " + (correct ? "juste" : "faux"));
     awardPointsToTeam(state.tackleTeamIndex, correct ? currentTackleStake() : -currentTackleStake());
     if (!correct) awardPoints(points);
-    var message = "TACKLE " + (correct ? "réussi" : "raté") + " par " + team.name + ". " +
-      (correct ? tackleDeltaText(true) + " ; l'équipe active perd sa cagnotte." : tackleDeltaText(false) + " ; l'équipe active encaisse " + points + " point" + (points > 1 ? "s" : "") + ".");
     hide("tackle-answer-zone");
     if (game === "plusoumoins") {
       hide("pom-answer-zone");
       state.pomRevealed = true;
       renderPomChain(true);
-      showPomVerdict(correct ? "good" : "bad", "Tackle " + (correct ? "réussi" : "raté"), false);
-      showPomNote(team.name + " " + tackleDeltaText(correct) + (correct
-        ? " ; " + teamVerb(state.teams[state.currentTeamIndex].name, "perdent", "perd") + " sa cagnotte."
-        : " ; " + teamVerb(state.teams[state.currentTeamIndex].name, "encaissent", "encaisse") + " " + points + " point" + (points > 1 ? "s" : "") + "."));
+      showPomVerdict(correct ? "good" : "bad", "Tackle " + (correct ? L("réussi", "certeiro") : L("raté", "falhado")), false);
+      showPomNote(team.name + " " + tackleDeltaText(correct) + activeBankText(correct, points));
     } else {
       hide("vf-answer-zone");
-      showVerdict(correct ? "good" : "bad", "Tackle " + (correct ? "réussi" : "raté"), { note: [
-        { text: "C'était " + (state.vfChain[state.vfIndex].est_vraie ? "VRAI" : "FAUX"), strong: true },
-        team.name + " " + tackleDeltaText(correct) + (correct
-          ? " ; " + teamVerb(state.teams[state.currentTeamIndex].name, "perdent", "perd") + " sa cagnotte."
-          : " ; " + teamVerb(state.teams[state.currentTeamIndex].name, "encaissent", "encaisse") + " " + points + " point" + (points > 1 ? "s" : "") + ".")] });
+      showVerdict(correct ? "good" : "bad", "Tackle " + (correct ? L("réussi", "certeiro") : L("raté", "falhado")), { note: [
+        { text: L("C'était ", "Era ") + (state.vfChain[state.vfIndex].est_vraie ? L("VRAI", "VERDADEIRO") : L("FAUX", "FALSO")), strong: true },
+        team.name + " " + tackleDeltaText(correct) + activeBankText(correct, points)] });
     }
     endCard();
   }
@@ -4221,16 +4409,16 @@
       : game === "transfert" ? state.currentCard.career.length : state.currentCard.clues.length;
     var head = { text: tackleDeltaText(false) + " · " + scoreChangeText(tacklingTeam.name, before, tacklingTeam.score), strong: true };
     if (count >= total) {
-      showVerdict("bad", "Tackle raté", { note: [head, { text: "C'était " + answerText, strong: true }, "Fin des indices · carte terminée"] });
+      showVerdict("bad", L("Tackle raté", "Tackle falhado"), { note: [head, { text: L("C'était ", "Era ") + answerText, strong: true }, L("Fin des indices · carte terminée", "Fim das pistas · carta terminada")] });
       endCard();
       return;
     }
     var active = state.teams[state.currentTeamIndex];
     var nextPoints = POINTS_BY_INDEX[Math.min(count, POINTS_BY_INDEX.length - 1)];
     hide(activeAnswerZone());
-    showVerdict("bad", "Tackle raté", {
-      note: [head, (game === "lematch" ? "Les équipes restent secrètes" : "Le joueur reste secret"),
-        "La main revient " + teamAux(active.name) + " · " + (game === "lematch" ? "événement suivant" : "indice suivant") + " · " + pointsLabel(nextPoints)],
+    showVerdict("bad", L("Tackle raté", "Tackle falhado"), {
+      note: [head, (game === "lematch" ? L("Les équipes restent secrètes", "As equipas continuam secretas") : L("Le joueur reste secret", "O jogador continua secreto")),
+        L("La main revient ", "A vez volta ") + teamAux(active.name) + " · " + (game === "lematch" ? L("événement suivant", "próximo acontecimento") : L("indice suivant", "próxima pista")) + " · " + pointsLabel(nextPoints)],
       then: function () {
         show(activeAnswerZone());
         if (game === "lematch") { resetLmAnswerZone(); advanceLmEvent(true); }
@@ -4261,10 +4449,10 @@
       awardPointsToTeam(state.tackleTeamIndex, isLmCorrect ? stake : -stake);
       if (!isLmCorrect) { continueAfterFailedTackle(tacklingTeam, lmBefore, lmCard.teams[0] + " – " + lmCard.teams[1]); return; }
       hide("lm-answer-zone");
-      showVerdict(isLmCorrect ? "good" : "bad", "Tackle " + (isLmCorrect ? "réussi" : "raté"), { note: [
+      showVerdict(isLmCorrect ? "good" : "bad", "Tackle " + (isLmCorrect ? L("réussi", "certeiro") : L("raté", "falhado")), { note: [
         { text: lmCard.teams[0] + " – " + lmCard.teams[1], strong: true },
         tackleDeltaText(isLmCorrect) + " · " + scoreChangeText(tacklingTeam.name, lmBefore, tacklingTeam.score),
-        "Carte terminée"] });
+        L("Carte terminée", "Carta terminada")] });
       endCard();
       return;
     }
@@ -4282,12 +4470,12 @@
       if (!isCorrect) { continueAfterFailedTackle(tacklingTeam, before, card.answer); return; }
       showTrResult({
         good: isCorrect,
-        title: isCorrect ? "Tackle réussi" : "Tackle raté",
+        title: isCorrect ? L("Tackle réussi", "Tackle certeiro") : L("Tackle raté", "Tackle falhado"),
         delta: (isCorrect ? "+" : "−") + pointsLabel(stake),
         lines: [
           { text: card.answer, cls: "strong" },
           { text: scoreChangeText(tacklingTeam.name, before, tacklingTeam.score) },
-          { text: "Carte terminée", cls: "dim" }
+          { text: L("Carte terminée", "Carta terminada"), cls: "dim" }
         ]
       });
       endCard();
@@ -4298,10 +4486,10 @@
     awardPointsToTeam(state.tackleTeamIndex, isCorrect ? stake : -stake);
     if (!isCorrect) { continueAfterFailedTackle(tacklingTeam, tBefore, card.answer); return; }
     hide("qsj-answer-zone");
-    showVerdict(isCorrect ? "good" : "bad", "Tackle " + (isCorrect ? "réussi" : "raté"), { note: [
+    showVerdict(isCorrect ? "good" : "bad", "Tackle " + (isCorrect ? L("réussi", "certeiro") : L("raté", "falhado")), { note: [
       { text: card.answer, strong: true },
       tackleDeltaText(isCorrect) + " · " + scoreChangeText(tacklingTeam.name, tBefore, tacklingTeam.score),
-      "Carte terminée"] });
+      L("Carte terminée", "Carta terminada")] });
     endCard();
   });
 
@@ -4385,8 +4573,8 @@
   function pomUnit(value) {
     var cat = (state.pomChain && state.pomChain.category) || "";
     var plural = Math.abs(value) > 1;
-    if (/^s[ée]lection/i.test(cat)) return plural ? "sélections" : "sélection";
-    return plural ? "buts" : "but";
+    if (/^(s[ée]lection|internacionaliza)/i.test(cat)) return LANG === "pt" ? (plural ? "jogos" : "jogo") : (plural ? "sélections" : "sélection");
+    return LANG === "pt" ? (plural ? "golos" : "golo") : (plural ? "buts" : "but");
   }
   function pomSplitName(name) {
     var parts = String(name).trim().split(/\s+/);
@@ -4410,7 +4598,7 @@
     var val = document.createElement("span");
     val.className = "pom-value" + (showValue ? (animate ? " revealed" : "") : " hidden-value");
     val.innerHTML = (showValue ? player.value : "?") + " <small>" + (showValue ? pomUnit(player.value) : pomUnit(2)) + "</small>";
-    val.setAttribute("aria-label", showValue ? player.value + " " + pomUnit(player.value) : "valeur cachée");
+    val.setAttribute("aria-label", showValue ? player.value + " " + pomUnit(player.value) : L("valeur cachée", "valor escondido"));
     box.appendChild(val);
     return box;
   }
@@ -4419,7 +4607,7 @@
   function renderPomChain(animateReveal) {
     var chain = state.pomChain.chain;
     el("pom-category").textContent = state.pomChain.category;
-    el("pom-step").textContent = "Comparaison " + (state.pomIndex + 1) + " / " + (chain.length - 1);
+    el("pom-step").textContent = L("Comparaison ", "Comparação ") + (state.pomIndex + 1) + " / " + (chain.length - 1);
     var duel = el("pom-chain-list");
     duel.innerHTML = "";
     duel.appendChild(pomPlayerEl(chain[state.pomIndex], "ref", true, false));
@@ -4475,8 +4663,8 @@
 
     if (!isActiveCorrect) {
       awardPoints(0);
-      showPomVerdict("bad", "Mauvaise réponse", false);
-      showPomNote("0 point sur cette carte : la cagnotte est perdue.");
+      showPomVerdict("bad", L("Mauvaise réponse", "Resposta errada"), false);
+      showPomNote(L("0 point sur cette carte : la cagnotte est perdue.", "0 pontos nesta carta: o pote perdeu-se."));
       state.pomPotential = 0;
       endCard();
       return;
@@ -4486,14 +4674,14 @@
     var isLast = state.pomIndex + 1 >= chain.length - 1;
     if (isLast) {
       awardPoints(state.pomPotential);
-      showPomVerdict("good", "5 sur 5 !", false);
-      showPomNote("+" + state.pomPotential + " points encaissés automatiquement.");
+      showPomVerdict("good", L("5 sur 5 !", "5 em 5!"), false);
+      showPomNote("+" + state.pomPotential + L(" points encaissés automatiquement.", " pontos arrecadados automaticamente."));
       endCard();
     } else {
       // Retour vert bref, puis la valeur révélée et la cagnotte restent visibles.
-      showPomVerdict("good", "Bonne réponse", true);
-      el("pom-potential-points").innerHTML = "Cagnotte : <b>" + state.pomPotential + " point" + (state.pomPotential > 1 ? "s" : "") + "</b>";
-      el("pom-btn-encaisser").textContent = "Encaisser " + state.pomPotential + " pt" + (state.pomPotential > 1 ? "s" : "");
+      showPomVerdict("good", L("Bonne réponse", "Resposta certa"), true);
+      el("pom-potential-points").innerHTML = L("Cagnotte : <b>", "Pote: <b>") + state.pomPotential + L(" point", " ponto") + (state.pomPotential > 1 ? "s" : "") + "</b>";
+      el("pom-btn-encaisser").textContent = L("Encaisser ", "Arrecadar ") + state.pomPotential + " pt" + (state.pomPotential > 1 ? "s" : "");
       show("pom-decision-zone");
     }
   }
@@ -4503,7 +4691,7 @@
     awardPoints(state.pomPotential);
     hide("pom-decision-zone");
     hidePomVerdict();
-    showPomNote("Encaissé : +" + state.pomPotential + " point" + (state.pomPotential > 1 ? "s" : "") + ".");
+    showPomNote(L("Encaissé : +", "Arrecadado: +") + state.pomPotential + L(" point", " ponto") + (state.pomPotential > 1 ? "s" : "") + ".");
     endCard();
   });
 
@@ -4544,7 +4732,7 @@
 
   function renderVfStatement() {
     var statement = state.vfChain[state.vfIndex];
-    el("vf-progress").textContent = "Affirmation " + (state.vfIndex + 1) + " / " + state.vfChain.length;
+    el("vf-progress").textContent = L("Affirmation ", "Afirmação ") + (state.vfIndex + 1) + " / " + state.vfChain.length;
     el("vf-statement-text").textContent = statement.affirmation;
     renderVfBank();
   }
@@ -4560,8 +4748,9 @@
   function appendVfFeedback(kind, text) { setVerdictNote(text); }
 
   // Donne la vraie information quand l'affirmation était fausse, pour que la révélation
-  // apprenne quelque chose plutôt que de simplement dire "FAUX".
+  // apprenne quelque chose plutôt que de simplement dire L("FAUX", "FALSO").
   function formatVfCorrection(statement) {
+    if (LANG === "pt") return statement.correction || ""; // phrase prête dans src/data/pt (tools/translate_pt.py)
     var vs = statement.valeur_source;
     var joueurs = statement.joueurs;
     switch (statement.categorie) {
@@ -4621,7 +4810,7 @@
     var isActiveCorrect = (state.vfPendingAnswer === statement.est_vraie);
     journalStep((state.vfPendingAnswer ? "VRAI" : "FAUX") + " " + (isActiveCorrect ? "juste" : "faux"));
     state.vfPendingAnswer = null;
-    var verdictText = "C'était " + (statement.est_vraie ? "VRAI" : "FAUX") + ".";
+    var verdictText = L("C'était ", "Era ") + (statement.est_vraie ? L("VRAI", "VERDADEIRO") : L("FAUX", "FALSO")) + ".";
     if (!statement.est_vraie) {
       // Ne doit jamais bloquer la révélation même si une donnée est incomplète.
       try {
@@ -4634,7 +4823,7 @@
 
     if (!isActiveCorrect) {
       awardPoints(0);
-      showVerdict("bad", "Mauvaise réponse", { note: [{ text: verdictText, strong: true }, "0 point sur cette carte : la cagnotte est perdue."] });
+      showVerdict("bad", L("Mauvaise réponse", "Resposta errada"), { note: [{ text: verdictText, strong: true }, L("0 point sur cette carte : la cagnotte est perdue.", "0 pontos nesta carta: o pote perdeu-se.")] });
       state.vfPotential = 0;
       renderVfBank();
       endCard();
@@ -4646,11 +4835,11 @@
     var isLast = state.vfIndex >= state.vfChain.length - 1;
     if (isLast) {
       awardPoints(state.vfPotential);
-      showVerdict("good", state.vfPotential + " sur " + state.vfChain.length + " !", { note: [{ text: verdictText, strong: true }, "+" + state.vfPotential + " points encaissés automatiquement."] });
+      showVerdict("good", state.vfPotential + L(" sur ", " em ") + state.vfChain.length + L(" !", "!"), { note: [{ text: verdictText, strong: true }, "+" + state.vfPotential + L(" points encaissés automatiquement.", " pontos arrecadados automaticamente.")] });
       endCard();
     } else {
-      showVerdict("good", "Bonne réponse", { autoHide: true, note: [{ text: verdictText, strong: true }] });
-      el("vf-potential-points").textContent = state.vfPotential + " point" + (state.vfPotential > 1 ? "s" : "") + " en jeu";
+      showVerdict("good", L("Bonne réponse", "Resposta certa"), { autoHide: true, note: [{ text: verdictText, strong: true }] });
+      el("vf-potential-points").textContent = state.vfPotential + L(" point", " ponto") + (state.vfPotential > 1 ? "s" : "") + L(" en jeu", " em jogo");
       show("vf-decision-zone");
     }
   }
@@ -4660,7 +4849,7 @@
     awardPoints(state.vfPotential);
     hide("vf-decision-zone");
     hide("verdict");
-    setVerdictNote("Encaissé : +" + state.vfPotential + " point" + (state.vfPotential > 1 ? "s" : "") + ".");
+    setVerdictNote(L("Encaissé : +", "Arrecadado: +") + state.vfPotential + L(" point", " ponto") + (state.vfPotential > 1 ? "s" : "") + ".");
     endCard();
   });
 
@@ -4716,7 +4905,7 @@
         }
       } else {
         li.className = "qsj-clue qsj-clue--locked";
-        copy.textContent = (i + 1) + " · Indice à venir";
+        copy.textContent = (i + 1) + L(" · Indice à venir", " · Pista por revelar");
         li.appendChild(copy);
       }
       list.appendChild(li);
@@ -4791,18 +4980,18 @@
     if (isCorrect) {
       var pointsEarned = POINTS_BY_INDEX[Math.min(state.revealedCount - 1, POINTS_BY_INDEX.length - 1)];
       awardPoints(pointsEarned);
-      showVerdict("good", "Bonne réponse", { note: [{ text: card.answer, strong: true }, "+" + pointsLabel(pointsEarned) + " · " + scoreChangeText(qTeam.name, qBefore, qTeam.score)] });
+      showVerdict("good", L("Bonne réponse", "Resposta certa"), { note: [{ text: card.answer, strong: true }, "+" + pointsLabel(pointsEarned) + " · " + scoreChangeText(qTeam.name, qBefore, qTeam.score)] });
       endCard();
     } else {
       awardPoints(-1);
       if (state.revealedCount >= card.clues.length) {
-        showVerdict("bad", "Mauvaise réponse", { note: ["−1 pt · " + scoreChangeText(qTeam.name, qBefore, qTeam.score), { text: "C'était " + card.answer, strong: true }] });
+        showVerdict("bad", L("Mauvaise réponse", "Resposta errada"), { note: ["−1 pt · " + scoreChangeText(qTeam.name, qBefore, qTeam.score), { text: L("C'était ", "Era ") + card.answer, strong: true }] });
         endCard();
         return;
       }
       hide("qsj-answer-zone");
-      showVerdict("bad", "Mauvaise réponse", {
-        note: ["−1 pt · " + scoreChangeText(qTeam.name, qBefore, qTeam.score), "Le joueur reste secret · indice suivant"],
+      showVerdict("bad", L("Mauvaise réponse", "Resposta errada"), {
+        note: ["−1 pt · " + scoreChangeText(qTeam.name, qBefore, qTeam.score), L("Le joueur reste secret · indice suivant", "O jogador continua secreto · próxima pista")],
         then: function () { show("qsj-answer-zone"); advanceQsjClue(true); }
       });
     }
@@ -4811,7 +5000,7 @@
   function advanceQsjClue(fromWrongAnswer) {
     var card = state.currentCard;
     if (state.revealedCount >= card.clues.length) {
-      showVerdict("neutral", "Fin des indices", { note: [{ text: "C'était " + card.answer, strong: true }] });
+      showVerdict("neutral", L("Fin des indices", "Fim das pistas"), { note: [{ text: L("C'était ", "Era ") + card.answer, strong: true }] });
       endCard();
       return;
     }
@@ -4903,7 +5092,7 @@
       }
       var label = document.createElement("span");
       label.className = "lm-event-label";
-      label.textContent = shown ? lmEventLabel(card.events[i]) : "Événement à venir";
+      label.textContent = shown ? (info.short || lmEventLabel(card.events[i])) : L("Événement à venir", "Acontecimento por revelar");
       row.appendChild(label);
       if (shown && i === current) {
         var pts = document.createElement("span");
@@ -5002,18 +5191,18 @@
     if (isCorrect) {
       var pointsEarned = POINTS_BY_INDEX[Math.min(state.lmRevealedCount - 1, POINTS_BY_INDEX.length - 1)];
       awardPoints(pointsEarned);
-      showVerdict("good", "Bonne réponse", { note: [{ text: matchName, strong: true }, "+" + pointsLabel(pointsEarned) + " · " + scoreChangeText(mTeam.name, mBefore, mTeam.score)] });
+      showVerdict("good", L("Bonne réponse", "Resposta certa"), { note: [{ text: matchName, strong: true }, "+" + pointsLabel(pointsEarned) + " · " + scoreChangeText(mTeam.name, mBefore, mTeam.score)] });
       endCard();
     } else {
       awardPoints(-1);
       if (state.lmRevealedCount >= card.events.length) {
-        showVerdict("bad", "Mauvaise réponse", { note: ["−1 pt · " + scoreChangeText(mTeam.name, mBefore, mTeam.score), { text: "C'était " + matchName, strong: true }] });
+        showVerdict("bad", L("Mauvaise réponse", "Resposta errada"), { note: ["−1 pt · " + scoreChangeText(mTeam.name, mBefore, mTeam.score), { text: L("C'était ", "Era ") + matchName, strong: true }] });
         endCard();
         return;
       }
       hide("lm-answer-zone");
-      showVerdict("bad", "Mauvaise réponse", {
-        note: ["−1 pt · " + scoreChangeText(mTeam.name, mBefore, mTeam.score), "Le match reste secret · événement suivant"],
+      showVerdict("bad", L("Mauvaise réponse", "Resposta errada"), {
+        note: ["−1 pt · " + scoreChangeText(mTeam.name, mBefore, mTeam.score), L("Le match reste secret · événement suivant", "O jogo continua secreto · próximo acontecimento")],
         then: function () { show("lm-answer-zone"); advanceLmEvent(true); }
       });
     }
@@ -5022,7 +5211,7 @@
   function advanceLmEvent(fromWrongAnswer) {
     var card = state.currentLmCard;
     if (state.lmRevealedCount >= card.events.length) {
-      showVerdict("neutral", "Fin des événements", { note: [{ text: "C'était " + card.teams[0] + " – " + card.teams[1], strong: true }] });
+      showVerdict("neutral", L("Fin des événements", "Fim dos acontecimentos"), { note: [{ text: L("C'était ", "Era ") + card.teams[0] + " – " + card.teams[1], strong: true }] });
       endCard();
       return;
     }
@@ -5070,7 +5259,7 @@
       row.appendChild(label);
       list.appendChild(row);
     }
-    el("clue-step").textContent = "Indice " + shown + " / " + total;
+    el("clue-step").textContent = L("Indice ", "Pista ") + shown + " / " + total;
     el("clue-points").textContent = pointsLabel(transfertPoints());
   }
 
@@ -5091,7 +5280,7 @@
   }
 
   function transfertStakesText() {
-    return "Bonne réponse +" + transfertPoints() + " · mauvaise réponse −1";
+    return L("Bonne réponse +", "Resposta certa +") + transfertPoints() + L(" · mauvaise réponse −1", " · resposta errada −1");
   }
 
   el("btn-answer").addEventListener("click", function () {
@@ -5099,8 +5288,8 @@
     clearTackleTimer();
     hideTackleUI();
     hide("tr-actions");
-    el("type-title").textContent = "Réponse " + teamDes(name);
-    el("type-sub").textContent = "Saisir le nom annoncé par " + name.replace(/^Les /, "les ");
+    el("type-title").textContent = L("Réponse ", "Resposta ") + teamDes(name);
+    el("type-sub").textContent = (LANG === "pt" ? "Escrever o nome dito " + teamPor(name) : "Saisir le nom annoncé par " + name.replace(/^Les /, "les "));
     el("type-stakes").textContent = transfertStakesText();
     el("answer-input").value = ""; // toujours un champ vide à chaque nouvelle réponse
     show("type-box");
@@ -5118,7 +5307,7 @@
     var name = state.teams[state.currentTeamIndex].name;
     state.typedAnswer = val;
     el("typed-text").textContent = val;
-    el("confirm-title").textContent = teamVerb(name, "confirment ?", "confirme ?");
+    el("confirm-title").textContent = LANG === "pt" ? name + (teamPlural(name) ? " confirmam?" : " confirma?") : teamVerb(name, "confirment ?", "confirme ?");
     el("confirm-stakes").textContent = transfertStakesText();
     hide("type-box");
     show("confirm-box");
@@ -5160,12 +5349,12 @@
       awardPoints(pointsEarned);
       showTrResult({
         good: true,
-        title: "Bonne réponse",
+        title: L("Bonne réponse", "Resposta certa"),
         delta: "+" + pointsLabel(pointsEarned),
         lines: [
           { text: card.answer, cls: "strong" },
           { text: scoreChangeText(team.name, before, team.score) },
-          { text: "Carte terminée", cls: "dim" }
+          { text: L("Carte terminée", "Carta terminada"), cls: "dim" }
         ]
       });
       endCard();
@@ -5178,12 +5367,12 @@
       // Plus d'indice : la carte se termine et le joueur est révélé.
       showTrResult({
         good: false,
-        title: "Mauvaise réponse",
+        title: L("Mauvaise réponse", "Resposta errada"),
         delta: "−1 pt",
         lines: [
           { text: scoreChangeText(team.name, before, team.score) },
-          { text: "C'était " + card.answer, cls: "strong" },
-          { text: "Fin des indices · carte terminée", cls: "dim" }
+          { text: L("C'était ", "Era ") + card.answer, cls: "strong" },
+          { text: L("Fin des indices · carte terminée", "Fim das pistas · carta terminada"), cls: "dim" }
         ]
       });
       endCard();
@@ -5193,12 +5382,12 @@
     var nextPoints = POINTS_BY_INDEX[Math.min(state.revealedCount, POINTS_BY_INDEX.length - 1)];
     showTrResult({
       good: false,
-      title: "Mauvaise réponse",
+      title: L("Mauvaise réponse", "Resposta errada"),
       delta: "−1 pt",
       lines: [
         { text: scoreChangeText(team.name, before, team.score) },
-        { text: "Le joueur reste secret" },
-        { text: "Indice suivant · " + pointsLabel(nextPoints), cls: "dim" }
+        { text: L("Le joueur reste secret", "O jogador continua secreto") },
+        { text: L("Indice suivant · ", "Próxima pista · ") + pointsLabel(nextPoints), cls: "dim" }
       ],
       then: function () { advanceClue(true); }
     });
@@ -5214,10 +5403,10 @@
       showTrResult({
         good: false,
         kind: "neutral",
-        title: "Fin des indices",
+        title: L("Fin des indices", "Fim das pistas"),
         lines: [
-          { text: "C'était " + card.answer, cls: "strong" },
-          { text: "Carte terminée", cls: "dim" }
+          { text: L("C'était ", "Era ") + card.answer, cls: "strong" },
+          { text: L("Carte terminée", "Carta terminada"), cls: "dim" }
         ]
       });
       endCard();
@@ -5266,10 +5455,10 @@
     var isLastTeamOfRound = state.currentTeamIndex >= state.teams.length - 1;
     var isLastRound = state.roundsPlayed >= state.roundsTotal - 1;
     el("btn-next-card").textContent = (isLastTeamOfRound && isLastRound)
-      ? "Voir le classement final"
+      ? L("Voir le classement final", "Ver a classificação final")
       : isLastTeamOfRound
-        ? "Voir le classement"
-        : "Équipe suivante";
+        ? L("Voir le classement", "Ver a classificação")
+        : L("Équipe suivante", "Equipa seguinte");
 
     show("next-card-zone");
   }
@@ -5307,7 +5496,7 @@
       var chip = document.createElement("div");
       chip.className = "score-chip" + (isActive ? " active" : "");
       chip.setAttribute("role", "listitem");
-      chip.setAttribute("aria-label", team.name + " : " + team.score + " point" + (Math.abs(team.score) > 1 ? "s" : "") + (isActive ? ", au tour de cette équipe" : ""));
+      chip.setAttribute("aria-label", team.name + " : " + team.score + L(" point", " ponto") + (Math.abs(team.score) > 1 ? "s" : "") + (isActive ? L(", au tour de cette équipe", ", é a vez desta equipa") : ""));
       chip.setAttribute("title", team.name);
       var score = document.createElement("div");
       score.className = "score" + (team.score < 0 ? " negative" : "");
@@ -5385,7 +5574,7 @@
     show("screen-intermission");
     window.scrollTo(0, 0);
 
-    el("inter-round").textContent = "Manche " + pad2(state.roundsPlayed) + " / " + pad2(state.roundsTotal) + " terminée";
+    el("inter-round").textContent = L("Manche ", "Ronda ") + pad2(state.roundsPlayed) + " / " + pad2(state.roundsTotal) + L(" terminée", " terminada");
     el("inter-next-count").textContent = (state.roundsPlayed + 1) + " / " + state.roundsTotal;
     var first = state.teams[0]; // l'ordre de jeu réel : chaque manche commence par la première équipe
     var logoBox = el("inter-next-logo");
@@ -5416,7 +5605,7 @@
       name.textContent = entry.team.name;
       var pts = document.createElement("div");
       pts.className = "inter-pts" + (entry.team.score < 0 ? " negative" : "");
-      pts.innerHTML = signed(entry.team.score) + "<small>point" + (Math.abs(entry.team.score) > 1 ? "s" : "") + "</small>";
+      pts.innerHTML = signed(entry.team.score) + "<small>" + L("point", "ponto") + (Math.abs(entry.team.score) > 1 ? "s" : "") + "</small>";
       box.appendChild(name);
       box.appendChild(pts);
       li.appendChild(rank);
@@ -5484,7 +5673,7 @@
     var sorted = state.teams.slice().sort(function (a, b) { return b.score - a.score; });
     var medals = ["🥇", "🥈", "🥉"];
 
-    el("final-subtitle").textContent = state.roundsTotal + " manches jouées";
+    el("final-subtitle").textContent = state.roundsTotal + L(" manches jouées", " rondas jogadas");
 
     var podium = el("podium");
     podium.innerHTML = "";
@@ -5512,7 +5701,7 @@
   // (utile après une partie abandonnée).
   function refreshJournalLink() {
     var n = journalLoadAll().length;
-    el("btn-share-journals").textContent = "Envoyer le journal des parties (" + n + ")";
+    el("btn-share-journals").textContent = L("Envoyer le journal des parties (", "Enviar o registo das partidas (") + n + ")";
     el("btn-share-journals").classList.toggle("hidden-screen", n === 0);
   }
   el("btn-share-journals").addEventListener("click", function () {
