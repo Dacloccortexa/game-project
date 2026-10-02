@@ -1,5 +1,13 @@
 # DECISIONS.md
 
+## [2026-10-02] Prix : pack soirée 1,99 € et abonnement annuel 29,99 €
+- Décision de David : deux offres. **Pack soirée à 1,99 €** (achat unique, 24 h illimitées à partir de l'achat, 5 à 20 manches, sans abonnement) et **abonnement annuel à 29,99 €**. Pas de mensuel. Le gratuit reste à 2 parties par jour de 5 manches.
+- Pourquoi un pack : un jeu de soirée se joue de façon irrégulière ; 1,99 € pour tout le groupe sur un seul téléphone est un achat d'impulsion. L'annuel vise ceux qui jouent au moins deux fois par mois (29,99 € = 15 soirées).
+- App Store : pack = achat intégré consommable `tackle_pack_soiree` ; annuel = abonnement `tackle_annual` (droit RevenueCat `premium`). Portugais : « Pack Noitada ».
+- Boutique : pack soirée en premier (« 24 h illimitées, sans abonnement »), puis l'annuel (« Soit 2,49 € par mois », calculé depuis le prix App Store, essai gratuit affiché s'il existe). Mention légale complétée pour le pack. Pack actif : « Pack soirée actif jusqu'à … » dans la boutique et sous les défis.
+- Une partie commencée n'est jamais coupée à l'expiration du pack. Fin du pack recalculée depuis l'historique RevenueCat (réinstallation, « Rétablir les achats ») et gardée sur le téléphone hors connexion.
+- Ce qui reste à David (net après TVA 20 % et commission Apple 15 % du programme petites entreprises) : ≈ 1,40 € par pack, ≈ 21,20 € par abonnement annuel.
+
 ## [2026-10-02] Écran de démarrage aussi pour le jeu ajouté à l'écran d'accueil (iPhone)
 - Question de David : « ça se voit pas en mobile app ? ». Le jeu ajouté à l'écran d'accueil depuis Safari affichait un écran vide au lancement : iOS n'utilise que des balises `apple-touch-startup-image`, une image par taille d'écran.
 - Ajout de 13 images (`assets/startup/`, iPhone SE 1re génération → 16 Pro Max / Air), même principe que l'appli : l'accueil sans ses boutons, sous la barre d'état noire. Chaque iPhone ne télécharge que la sienne (~0,2 Mo). Fabriquées par `tools/make-startup-images.cjs` (à relancer si l'accueil change), qui met aussi à jour les balises dans `index.html`.

@@ -36,19 +36,27 @@ Français et portugais (Portugal). L'appli prend la langue du téléphone ; on l
 
 ## Abonnement
 
-Règle (décision de David, 2026-10-02) : **sans abonnement, 2 parties par jour de 5 manches maximum**, avec les cinq défis. **Abonné : illimité, 5 à 20 manches.** Le site web reste illimité (testeurs). Prix : à définir par David, réglés dans App Store Connect (aucun prix dans le code).
+Règle (décision de David, 2026-10-02) : **gratuit = 2 parties par jour de 5 manches maximum**, avec les cinq défis. **Illimité (5 à 20 manches)** avec l'une des deux offres :
+
+| Offre | Prix | Type App Store | Identifiant produit |
+| --- | --- | --- | --- |
+| **Pack soirée** (pt : Pack Noitada) | **1,99 €** | Achat intégré **consommable**, 24 h à partir de l'achat | `tackle_pack_soiree` |
+| **Abonnement annuel** | **29,99 € / an** | Abonnement à renouvellement automatique | `tackle_annual` |
+
+Le site web reste illimité (testeurs). Les prix se règlent dans App Store Connect (aucun prix dans le code ; l'appli affiche ceux de l'App Store).
 
 Fonctionnement dans l'appli :
-- Compteur local « parties gratuites aujourd'hui » sous les défis (remis à zéro à minuit, heure du téléphone). Une partie compte au coup d'envoi.
+- Compteur local « parties gratuites aujourd'hui » sous les défis (remis à zéro à minuit, heure du téléphone). Une partie compte au coup d'envoi. Pack soirée en cours : « Pack soirée : illimité jusqu'à 17 h 30 » à la place.
+- Pack soirée : la fin (achat + 24 h) est calculée depuis l'historique d'achats RevenueCat (retrouvé après réinstallation avec le même compte Apple, et par « Rétablir les achats ») et gardée aussi sur le téléphone pour le hors-connexion. Une partie commencée n'est jamais coupée quand le pack expire.
 - 10, 15 et 20 manches portent un cadenas ; les toucher ouvre la page d'abonnement. Après 2 parties, « Coup d'envoi » ouvre aussi la page d'abonnement.
 - Page d'abonnement (provisoire, la maquette arrive) : avantages, formules lues dans l'App Store (nom, prix, essai gratuit éventuel), « Restaurer mes achats », « J'ai un code » (fenêtre Apple des codes d'offre), mentions de renouvellement automatique, liens Conditions d'utilisation (contrat Apple standard) et Confidentialité — obligatoires pour la relecture Apple.
 - Gestion technique : **RevenueCat** (achat, renouvellement, restauration, codes, tableau de bord). Droit d'accès attendu : **`premium`**. Tant que la clé `REVENUECAT_IOS_KEY` (dans `index.html`) est vide, la page affiche « Abonnement bientôt disponible » et la limite gratuite s'applique.
 
 À faire une fois le compte développeur actif :
 1. App Store Connect → **Accords, taxes et banque** : signer le contrat « Applications payantes », renseigner banque et impôts.
-2. App Store Connect → l'app → **Abonnements** : créer un groupe « TACKLE illimité » et les formules (ex. `tackle_monthly`, `tackle_annual`), avec prix et essai éventuel, nom et description en français.
+2. App Store Connect → l'app → **Abonnements** : créer un groupe « TACKLE illimité » et l'abonnement annuel `tackle_annual` à 29,99 € (essai gratuit éventuel), nom et description en français et en portugais. Puis **Achats intégrés** → **Consommable** `tackle_pack_soiree` à 1,99 € (« Pack soirée — 24 h illimitées »).
 3. App Store Connect → **Utilisateurs et accès → Intégrations → Achats intégrés** : générer une clé (.p8).
-4. [RevenueCat](https://app.revenuecat.com) : créer le projet, ajouter l'app iOS (Bundle ID `com.lafamivy.tackle`), y déposer la clé .p8, importer les produits, créer le droit **`premium`** rattaché aux formules, et l'offre **default** avec les formules mensuelle/annuelle.
+4. [RevenueCat](https://app.revenuecat.com) : créer le projet, ajouter l'app iOS (Bundle ID `com.lafamivy.tackle`), y déposer la clé .p8, importer les produits, créer le droit **`premium`** rattaché aux formules, et l'offre **default** avec deux packages : **Annual** (`tackle_annual`) et un package **Custom** contenant `tackle_pack_soiree` (le pack soirée n'est **pas** rattaché au droit `premium` : l'appli le reconnaît à son identifiant).
 5. Copier la **clé publique iOS** (`appl_…`) dans `REVENUECAT_IOS_KEY` (Claude s'en charge), puis nouvelle version de l'appli.
 6. Dans Xcode → **Signing & Capabilities** → **+ Capability** → **In-App Purchase**.
 7. Tester avec un compte **Sandbox** (App Store Connect → Utilisateurs et accès → Sandbox) sur l'iPhone, puis via TestFlight (achats gratuits pour les testeurs).

@@ -939,6 +939,8 @@
   .paywall-package small { display: block; color: var(--chalk-dim); font-size: 13px; }
   .paywall-package .price { font-family: var(--font-cond); font-weight: 700; font-size: 22px; color: var(--gold); white-space: nowrap; }
   .paywall-package[disabled] { opacity: .5; }
+  .paywall-package.best { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold) inset; }
+  .paywall-active { margin: -6px 0 12px; text-align: center; color: var(--gold); font-weight: 700; font-size: 15px; }
   .paywall-status { min-height: 20px; margin: 10px 0 0; text-align: center; color: var(--chalk-dim); font-size: 14px; }
   .paywall-links { display: flex; justify-content: center; gap: 18px; }
   .paywall-links .text-btn { color: var(--chalk); font-size: 14px; min-height: 44px; }
@@ -2300,6 +2302,7 @@
     </div>
     <h2 class="setup-title" id="paywall-title" tabindex="-1">TACKLE illimité</h2>
     <p class="paywall-reason" id="paywall-reason"></p>
+    <p class="paywall-active hidden-screen" id="paywall-active"></p>
     <ul class="paywall-perks">
       <li>Parties illimitées, tous les jours</li>
       <li>5, 10, 15 ou 20 manches</li>
@@ -2311,7 +2314,7 @@
       <button type="button" class="text-btn" id="btn-paywall-restore">Restaurer mes achats</button>
       <button type="button" class="text-btn" id="btn-paywall-code">J'ai un code</button>
     </div>
-    <p class="paywall-legal">Abonnement à renouvellement automatique, annulable à tout moment dans Réglages › Identifiant Apple › Abonnements, au moins 24 h avant la fin de la période en cours. Le paiement est débité sur le compte Apple à la confirmation de l'achat.<br>
+    <p class="paywall-legal">Pack soirée : achat unique, sans renouvellement, valable 24 h à partir de l'achat. Abonnement annuel à renouvellement automatique, annulable à tout moment dans Réglages › Identifiant Apple › Abonnements, au moins 24 h avant la fin de la période en cours. Le paiement est débité sur le compte Apple à la confirmation de l'achat.<br>
       <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Conditions d'utilisation</a> · <a href="https://dacloccortexa.github.io/game-project/privacy.html" target="_blank" rel="noopener">Confidentialité</a></p>
   </section>
 
@@ -2718,7 +2721,7 @@
     "Nouvelles questions ajoutées régulièrement": "Novas perguntas adicionadas regularmente",
     "Restaurer mes achats": "Restaurar compras",
     "J'ai un code": "Tenho um código",
-    "Abonnement à renouvellement automatique, annulable à tout moment dans Réglages › Identifiant Apple › Abonnements, au moins 24 h avant la fin de la période en cours. Le paiement est débité sur le compte Apple à la confirmation de l'achat.": "Subscrição com renovação automática, que pode ser cancelada a qualquer momento em Definições › ID Apple › Subscrições, pelo menos 24 h antes do fim do período em curso. O pagamento é cobrado na conta Apple quando a compra é confirmada.",
+    "Pack soirée : achat unique, sans renouvellement, valable 24 h à partir de l'achat. Abonnement annuel à renouvellement automatique, annulable à tout moment dans Réglages › Identifiant Apple › Abonnements, au moins 24 h avant la fin de la période en cours. Le paiement est débité sur le compte Apple à la confirmation de l'achat.": "Pack Noitada: compra única, sem renovação, válida durante 24 h a partir da compra. Subscrição anual com renovação automática, que pode ser cancelada a qualquer momento em Definições › ID Apple › Subscrições, pelo menos 24 h antes do fim do período em curso. O pagamento é cobrado na conta Apple quando a compra é confirmada.",
     "Conditions d'utilisation": "Termos de utilização",
     "Confidentialité": "Privacidade",
     "Quitter": "Sair",
@@ -3124,7 +3127,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.02-1606";
+  var APP_VERSION = "2026.10.02-1732";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3501,13 +3504,21 @@
 
   // ---------- Abonnement (appli iPhone seulement ; le site reste illimité) ----------
   // Gratuit : FREE_GAMES_PER_DAY parties par jour, de FREE_MAX_ROUNDS manches au plus.
-  // Abonné (droit RevenueCat ENTITLEMENT_ID actif) : illimité, 5 à 20 manches.
+  // Accès illimité (5 à 20 manches) : abonnement annuel (droit RevenueCat ENTITLEMENT_ID)
+  // ou pack soirée (achat unique PASS_PRODUCT_ID, valable PASS_HOURS h à partir de l'achat).
   var FREE_GAMES_PER_DAY = 2;
   var FREE_MAX_ROUNDS = 5;
   var ENTITLEMENT_ID = "premium";
   var REVENUECAT_IOS_KEY = ""; // clé publique iOS RevenueCat (« appl_… ») — à renseigner, voir docs/APP_IOS.md
   var FREE_KEY = "tackle-free-plays-v1";
+  var PASS_PRODUCT_ID = "tackle_pack_soiree"; // produit « consommable » App Store Connect
+  var PASS_HOURS = 24;
+  var PASS_KEY = "tackle-pass-until-v1";      // copie locale de la fin du pack (hors connexion)
   state.premium = !NATIVE;
+  state.subscribed = false;
+  state.passUntil = 0;
+  try { state.passUntil = parseInt(localStorage.getItem(PASS_KEY) || "0", 10) || 0; } catch (e) {}
+  var passTimer = null;
   var paywallReturn = "screen-setup";
 
   function todayKey() {
@@ -3541,7 +3552,10 @@
           b.setAttribute("aria-pressed", parseInt(b.getAttribute("data-value"), 10) === FREE_MAX_ROUNDS ? "true" : "false");
         });
       }
-      el("free-box").classList.toggle("hidden-screen", !(NATIVE && locked));
+      var showPass = NATIVE && !state.subscribed && passActive();
+      el("free-box").classList.toggle("hidden-screen", !(NATIVE && (locked || showPass)));
+      el("btn-open-paywall").classList.toggle("hidden-screen", !locked);
+      if (showPass) { el("free-count").textContent = L("Pack soirée : illimité jusqu'à ", "Pack Noitada: ilimitado até ") + passUntilLabel(); return; }
       var left = Math.max(0, FREE_GAMES_PER_DAY - freePlaysToday());
       el("free-count").textContent = left > 0
         ? (LANG === "pt" ? left + (left > 1 ? " partidas grátis hoje" : " partida grátis hoje")
@@ -3558,12 +3572,40 @@
   } catch (e) {}
 
   function purchases() { return nativePlugin("Purchases"); }
+  function passActive() { return state.passUntil > Date.now(); }
+  function timeLabel(ms) { var d = new Date(ms); return LANG === "pt" ? pad2(d.getHours()) + ":" + pad2(d.getMinutes()) : d.getHours() + " h " + pad2(d.getMinutes()); }
+  function passUntilLabel() {
+    var d = new Date(state.passUntil), today = new Date();
+    var sameDay = d.toDateString() === today.toDateString();
+    return (sameDay ? L("", "às ") : L("demain ", "amanhã às ")) + timeLabel(state.passUntil);
+  }
+  function setPassUntil(ms) {
+    if (!ms || ms <= state.passUntil) return;
+    state.passUntil = ms;
+    try { localStorage.setItem(PASS_KEY, String(ms)); } catch (e) {}
+  }
+  // Recalcule l'accès. Une partie en cours n'est jamais interrompue : l'accès n'est vérifié
+  // qu'au choix des manches et au coup d'envoi.
+  function updateAccess() {
+    if (!NATIVE) { state.premium = true; return; }
+    state.premium = state.subscribed || passActive();
+    if (passTimer) clearTimeout(passTimer);
+    if (passActive()) passTimer = setTimeout(function () { updateAccess(); refreshAccessUI(); }, Math.min(state.passUntil - Date.now() + 1000, 2147483000));
+  }
   function applyCustomerInfo(info) {
     var was = state.premium;
-    state.premium = !!(info && info.entitlements && info.entitlements.active && info.entitlements.active[ENTITLEMENT_ID]);
+    state.subscribed = !!(info && info.entitlements && info.entitlements.active && info.entitlements.active[ENTITLEMENT_ID]);
+    // Packs soirée achetés (gardés par RevenueCat : retrouvés après réinstallation, même compte Apple).
+    ((info && info.nonSubscriptionTransactions) || []).forEach(function (t) {
+      if (t.productIdentifier !== PASS_PRODUCT_ID) return;
+      var at = Date.parse(t.purchaseDate) || t.purchaseDateMillis || 0;
+      if (at) setPassUntil(at + PASS_HOURS * 3600000);
+    });
+    updateAccess();
     refreshAccessUI();
     if (state.premium && !was && !el("screen-paywall").classList.contains("hidden-screen")) {
-      el("paywall-status").textContent = L("Merci ! TACKLE illimité est activé.", "Obrigado! O TACKLE ilimitado está ativo.");
+      el("paywall-status").textContent = state.subscribed ? L("Merci ! TACKLE illimité est activé.", "Obrigado! O TACKLE ilimitado está ativo.")
+        : L("Merci ! Pack soirée activé jusqu'à ", "Obrigado! Pack Noitada ativo até ") + passUntilLabel() + ".";
       setTimeout(function () { showSetupScreen(paywallReturn, true); }, 1200);
     }
   }
@@ -3581,17 +3623,23 @@
 
   var PAYWALL_REASONS = {
     daily: L("Les " + FREE_GAMES_PER_DAY + " parties gratuites du jour sont jouées.", "As " + FREE_GAMES_PER_DAY + " partidas grátis de hoje já foram jogadas."),
-    rounds: L("Les parties de plus de " + FREE_MAX_ROUNDS + " manches sont réservées aux abonnés.", "As partidas com mais de " + FREE_MAX_ROUNDS + " rondas são para subscritores."),
+    rounds: L("Plus de " + FREE_MAX_ROUNDS + " manches : avec le pack soirée ou l'abonnement.", "Mais de " + FREE_MAX_ROUNDS + " rondas: com o Pack Noitada ou a subscrição."),
     menu: ""
   };
   function openPaywall(reason) {
     var visible = SETUP_SCREENS.filter(function (id) { return id !== "screen-paywall" && !el(id).classList.contains("hidden-screen"); })[0];
     paywallReturn = visible || "screen-setup";
     el("paywall-reason").textContent = PAYWALL_REASONS[reason] || "";
+    var act = el("paywall-active");
+    act.textContent = state.subscribed ? L("Ton abonnement annuel est actif.", "A tua subscrição anual está ativa.")
+      : passActive() ? L("Pack soirée actif jusqu'à ", "Pack Noitada ativo até ") + passUntilLabel() + "." : "";
+    act.classList.toggle("hidden-screen", !act.textContent);
     showSetupScreen("screen-paywall", true);
     loadOfferings();
   }
+  function isPassPackage(pkg) { return !!(pkg && pkg.product && pkg.product.identifier === PASS_PRODUCT_ID); }
   function periodLabel(pkg) {
+    if (isPassPackage(pkg)) return [L("Pack soirée", "Pack Noitada"), ""];
     var t = pkg && pkg.packageType;
     return t === "ANNUAL" ? [L("Annuel", "Anual"), L(" / an", " / ano")] : t === "MONTHLY" ? [L("Mensuel", "Mensal"), L(" / mois", " / mês")]
       : t === "WEEKLY" ? [L("Hebdomadaire", "Semanal"), L(" / semaine", " / semana")]
@@ -3605,7 +3653,7 @@
     if (!rc || !REVENUECAT_IOS_KEY) { status.textContent = L("Abonnement bientôt disponible.", "Subscrição disponível em breve."); return; }
     status.textContent = L("Chargement…", "A carregar…");
     rc.getOfferings().then(function (o) {
-      var pkgs = (o && o.current && o.current.availablePackages) || [];
+      var pkgs = ((o && o.current && o.current.availablePackages) || []).slice().sort(function (a, b) { return (isPassPackage(b) ? 1 : 0) - (isPassPackage(a) ? 1 : 0); });
       status.textContent = pkgs.length ? "" : L("Aucune formule disponible pour le moment.", "Nenhum plano disponível de momento.");
       pkgs.forEach(function (pkg) {
         var lab = periodLabel(pkg), prod = pkg.product || {};
@@ -3614,6 +3662,15 @@
         btn.className = "paywall-package";
         var left = document.createElement("span");
         var title = document.createElement("b"); title.textContent = lab[0]; left.appendChild(title);
+        var sub = document.createElement("small");
+        if (isPassPackage(pkg)) sub.textContent = L("24 h illimitées, sans abonnement", "24 h ilimitadas, sem subscrição");
+        else if (pkg.packageType === "ANNUAL" && prod.price && prod.currencyCode) {
+          try {
+            sub.textContent = L("Soit ", "Ou seja, ") + new Intl.NumberFormat(LANG === "pt" ? "pt-PT" : "fr-FR", { style: "currency", currency: prod.currencyCode }).format(Math.floor(prod.price / 12 * 100) / 100) + L(" par mois", " por mês");
+          } catch (e) {}
+        }
+        if (sub.textContent) left.appendChild(sub);
+        if (pkg.packageType === "ANNUAL") btn.classList.add("best");
         var intro = prod.introPrice;
         if (intro && intro.price === 0) {
           var sm = document.createElement("small");
@@ -3638,9 +3695,10 @@
     var rc = purchases(); if (!rc) return;
     setPaywallBusy(true);
     el("paywall-status").textContent = L("Paiement en cours…", "Pagamento em curso…");
+    var wasPass = isPassPackage(pkg), startedAt = Date.now();
     rc.purchasePackage({ aPackage: pkg }).then(function (r) {
+      if (wasPass) setPassUntil(startedAt + PASS_HOURS * 3600000); // au cas où RevenueCat tarde à renvoyer l'achat
       applyCustomerInfo(r && r.customerInfo);
-      journalStep && journalStep("abonnement acheté");
     }).catch(function (err) {
       el("paywall-status").textContent = err && err.userCancelled ? "" : L("L'achat n'a pas abouti. Tu n'as pas été débité.", "A compra não foi concluída. Não foste cobrado.");
     }).then(function () { setPaywallBusy(false); });
@@ -3653,7 +3711,7 @@
     el("paywall-status").textContent = L("Recherche de tes achats…", "À procura das tuas compras…");
     rc.restorePurchases().then(function (r) {
       applyCustomerInfo(r && r.customerInfo);
-      if (!state.premium) el("paywall-status").textContent = L("Aucun abonnement actif pour ce compte Apple.", "Nenhuma subscrição ativa para esta conta Apple.");
+      if (!state.premium) el("paywall-status").textContent = L("Aucun abonnement ni pack soirée en cours pour ce compte Apple.", "Nenhuma subscrição nem Pack Noitada ativo para esta conta Apple.");
     }).catch(function () { el("paywall-status").textContent = L("La restauration n'a pas abouti. Réessaie.", "Não foi possível restaurar. Tenta outra vez."); });
   });
   el("btn-paywall-code").addEventListener("click", function () {
@@ -3661,6 +3719,7 @@
     if (!rc || !REVENUECAT_IOS_KEY) { el("paywall-status").textContent = "Disponible dans l'appli iPhone TACKLE."; return; }
     rc.presentCodeRedemptionSheet().catch(function () {}); // fenêtre Apple de saisie du code ; l'accès s'active tout seul
   });
+  updateAccess();
   initPurchases();
   refreshAccessUI();
 
@@ -3712,8 +3771,9 @@
     status.textContent = L("Recherche de tes achats…", "À procura das tuas compras…");
     rc.restorePurchases().then(function (r) {
       applyCustomerInfo(r && r.customerInfo);
-      status.textContent = state.premium ? L("Abonnement rétabli. TACKLE illimité est activé.", "Subscrição restaurada. O TACKLE ilimitado está ativo.")
-        : L("Aucun abonnement actif pour ce compte Apple.", "Nenhuma subscrição ativa para esta conta Apple.");
+      status.textContent = state.subscribed ? L("Abonnement rétabli. TACKLE illimité est activé.", "Subscrição restaurada. O TACKLE ilimitado está ativo.")
+        : passActive() ? L("Pack soirée rétabli jusqu'à ", "Pack Noitada restaurado até ") + passUntilLabel() + "."
+        : L("Aucun abonnement ni pack soirée en cours pour ce compte Apple.", "Nenhuma subscrição nem Pack Noitada ativo para esta conta Apple.");
     }).catch(function () { status.textContent = L("La restauration n'a pas abouti. Réessaie.", "Não foi possível restaurar. Tenta outra vez."); });
   });
 
