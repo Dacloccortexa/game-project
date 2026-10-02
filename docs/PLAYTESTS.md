@@ -1,5 +1,13 @@
 # PLAYTESTS.md
 
+## Retour du 2 octobre 2026 — partie avec les neveux de David
+
+- **Observation rapportée :** Le Match est trop difficile.
+- **Contexte manquant :** nombre d'équipes, âge des joueurs, cartes sorties et taux de bonnes réponses non relevés.
+- **Suite décidée :** remplacer les cinq événements chronologiques par cinq indices dans un ordre fixe : compétition, année, score final, ville, phase de la compétition (5 à 1 point). Décision détaillée dans `DECISIONS.md`.
+- **À retester après intégration :** combien de cartes sont trouvées, et à quel indice.
+
+
 Ce qui s'est réellement passé quand on a joué. Pas des intentions, pas des impressions théoriques — des observations de sessions de jeu réelles.
 
 ## Format d'une entrée
