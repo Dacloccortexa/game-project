@@ -49,7 +49,7 @@ function advance(ms) {
 let script = fs.readFileSync('index.html', 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
 script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame};})();');
 const context = {
-  document: { getElementById: element, createElement: tag => element(`created-${tag}-${Math.random()}`), querySelector: element },
+  document: { getElementById: element, createElement: tag => element(`created-${tag}-${Math.random()}`), querySelector: element, querySelectorAll: () => [] },
   fetch: () => Promise.resolve({ json: () => Promise.resolve({ cards: [], players: [], statements: [] }) }),
   Date: { now: () => now },
   setInterval: (fn, ms) => addTimer(fn, ms, true), clearInterval: id => timers.delete(id),

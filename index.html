@@ -839,8 +839,38 @@
   .round-choice.locked { position: relative; opacity: .45; }
   .round-choice.locked::after { content: ""; position: absolute; right: -2px; top: -2px; width: 18px; height: 18px; border-radius: 50%;
     background: #1b2a22 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f2c75a' stroke-width='2.6' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='10' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") center / 12px no-repeat; border: 1px solid var(--gold); }
-  .lang-box { display: flex; justify-content: center; margin: 4px 0 0; }
-  .lang-box .text-btn { color: var(--chalk-dim); font-size: 14px; min-height: 40px; }
+  /* Accueil, Réglages, Règles (versions provisoires, en attendant les maquettes) */
+  .home-top { display: flex; justify-content: flex-end; min-height: 48px; }
+  .icon-btn { width: 48px; height: 48px; padding: 0; border-radius: 50%; border: 1.5px solid rgba(248,246,237,.6); background: rgba(3,17,12,.6); color: var(--chalk); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+  .home-logo { text-align: center; margin: 4vh 0 6vh; }
+  .home-logo h1.home-h1 { display: block; margin: 0; font-size: 0; line-height: 0; letter-spacing: 0; }
+  .home-logo h1.home-h1::before, .home-logo h1.home-h1::after { content: none; display: none; }
+  .home-logo img { width: min(72vw, 300px); height: auto; filter: drop-shadow(0 8px 18px rgba(0,0,0,.6)); }
+  .home-tagline { margin: 4px 0 0; font-family: var(--font-cond); font-weight: 600; font-size: 17px; letter-spacing: .14em; text-transform: uppercase; color: var(--chalk-dim); }
+  .home-menu { display: grid; gap: 14px; }
+  .home-btn { display: block; width: 100%; min-height: 60px; border-radius: 999px; border: 1.5px solid var(--gold-ring); background: rgba(3,17,12,.72); color: var(--chalk);
+    font-family: var(--font-cond); font-weight: 700; font-size: 22px; letter-spacing: .04em; text-transform: uppercase; cursor: pointer; }
+  .home-btn:active { transform: translateY(2px); }
+  .settings-list { display: grid; gap: 12px; }
+  .settings-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; padding: 10px 16px; border-radius: 16px; border: 1px solid rgba(248,246,237,.2); background: rgba(3,17,12,.72); }
+  .settings-row-col { flex-direction: column; align-items: stretch; background: none; border: none; padding: 4px 0; }
+  .settings-label { color: var(--chalk); font-size: 17px; font-weight: 700; }
+  .switch { position: relative; width: 56px; height: 32px; flex: none; border-radius: 999px; border: 1.5px solid rgba(248,246,237,.5); background: rgba(248,246,237,.15); cursor: pointer; padding: 0; }
+  .switch span { position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: var(--chalk); transition: transform .18s ease; }
+  .switch[aria-checked="true"] { background: var(--gold); border-color: var(--gold-ring); }
+  .switch[aria-checked="true"] span { transform: translateX(24px); background: #231603; }
+  .lang-choice { display: flex; gap: 6px; }
+  .lang-opt { min-height: 40px; padding: 0 12px; border-radius: 999px; border: 1.5px solid rgba(248,246,237,.45); background: transparent; color: var(--chalk); font-weight: 700; font-size: 14px; cursor: pointer; }
+  .lang-opt[aria-pressed="true"] { background: var(--gold); border-color: var(--gold-ring); color: #231603; }
+  .settings-version { margin: 8px 0 0; text-align: center; color: #8ea398; font-size: 12px; }
+  .rules { color: var(--chalk); font-size: 15px; line-height: 1.5; }
+  .rules h3 { margin: 18px 0 4px; font-family: var(--font-cond); font-weight: 700; font-size: 20px; letter-spacing: .03em; text-transform: uppercase; color: var(--gold); }
+  .rules h3:first-child { margin-top: 0; }
+  .rules p { margin: 0 0 8px; color: var(--chalk-dim); }
+  .rules { padding-bottom: 24px; }
+  .rules b { color: var(--chalk); }
+  .rules[data-lang] { display: none; }
+  :lang(fr) .rules[data-lang="fr"], :lang(pt-PT) .rules[data-lang="pt"] { display: block; }
   .free-box { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 12px; margin: 16px 0 0; color: var(--chalk-dim); font-size: 14px; }
   .free-box .text-btn { color: var(--gold); font-weight: 700; font-size: 14px; min-height: 40px; }
   .paywall-reason { margin: -8px 0 12px; text-align: center; color: var(--chalk); font-size: 15px; }
@@ -1922,14 +1952,92 @@
 
   <!-- SCREENS: PRÉPARATION (voir docs/UI_SETUP_FLOW.md) -->
   <!-- 1. Créer une partie -->
-  <section id="screen-setup" class="setup-screen" aria-labelledby="setup-title">
+  <!-- Accueil : Jouer, Boutique, Règles + Réglages (version provisoire en attendant la maquette) -->
+  <section id="screen-home" class="setup-screen" aria-labelledby="home-logo">
     <!-- Mise à jour : proposée seulement ici, jamais pendant une partie. -->
     <div class="update-banner hidden-screen" id="update-banner" role="status">
       <span class="update-text">Nouvelle version de TACKLE disponible</span>
       <button type="button" class="update-btn" id="btn-update">Mettre à jour</button>
     </div>
+    <div class="home-top">
+      <button type="button" class="icon-btn" id="btn-open-settings" aria-label="Réglages"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button>
+    </div>
+    <div class="home-logo"><h1 id="home-logo" class="home-h1"><img src="assets/ui/web/tackle-logo-brush.webp" width="240" height="120" alt="TACKLE"></h1>
+      <p class="home-tagline">Le quiz foot entre potes</p></div>
+    <div class="home-menu">
+      <button type="button" class="setup-cta" id="btn-home-play">Jouer</button>
+      <button type="button" class="home-btn" id="btn-home-shop">Boutique</button>
+      <button type="button" class="home-btn" id="btn-home-rules">Règles</button>
+    </div>
+    <div class="cta-spacer"></div>
+  </section>
+
+  <!-- Réglages : effets sonores, langue, rétablir les achats -->
+  <section id="screen-settings" class="setup-screen hidden-screen" aria-labelledby="settings-title">
     <div class="setup-top">
-      <h1 class="setup-logo"><img src="assets/ui/web/tackle-logo-brush.webp" width="240" height="120" alt="TACKLE"></h1>
+      <button type="button" class="back-btn" id="btn-settings-back" aria-label="Retour"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="setup-logo"><img src="assets/ui/web/tackle-logo-brush.webp" width="240" height="120" alt="TACKLE"></div>
+    </div>
+    <h2 class="setup-title" id="settings-title" tabindex="-1">Réglages</h2>
+    <div class="settings-list">
+      <div class="settings-row">
+        <span class="settings-label" id="sound-label">Effets sonores</span>
+        <button type="button" class="switch" id="btn-sound" role="switch" aria-checked="true" aria-labelledby="sound-label"><span></span></button>
+      </div>
+      <div class="settings-row">
+        <span class="settings-label">Langue</span>
+        <div class="lang-choice" role="group" aria-label="Langue">
+          <button type="button" class="lang-opt" data-lang="fr" aria-pressed="false">Français</button>
+          <button type="button" class="lang-opt" data-lang="pt" aria-pressed="false">Português</button>
+        </div>
+      </div>
+      <div class="settings-row settings-row-col">
+        <button type="button" class="home-btn" id="btn-settings-restore">Rétablir les achats</button>
+        <p class="paywall-status" id="settings-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="cta-spacer"></div>
+    <p class="settings-version" id="settings-version"></p>
+  </section>
+
+  <!-- Règles : version provisoire (texte), en attendant la maquette -->
+  <section id="screen-rules" class="setup-screen hidden-screen" aria-labelledby="rules-title">
+    <div class="setup-top">
+      <button type="button" class="back-btn" id="btn-rules-back" aria-label="Retour"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="setup-logo"><img src="assets/ui/web/tackle-logo-brush.webp" width="240" height="120" alt="TACKLE"></div>
+    </div>
+    <h2 class="setup-title" id="rules-title" tabindex="-1">Règles</h2>
+    <div class="rules" data-lang="fr">
+      <h3>Le principe</h3>
+      <p>De 1 à 4 équipes, un seul téléphone. À chaque manche, un défi est tiré au hasard et chaque équipe joue une carte. Celui qui tient le téléphone lit, tape les réponses et arbitre.</p>
+      <h3>Le Tackle</h3>
+      <p>L'équipe qui a la main a <b>30 secondes</b> de priorité. Au coup de sifflet, c'est la course pendant <b>15 secondes</b> : la première équipe à crier « Tackle ! » répond, y compris celle qui a la main. En cas de doute, « Litige » tire au sort.</p>
+      <p>Un adversaire qui tacle gagne ou perd les points en jeu (3 points sur Plus ou Moins et Vrai ou Faux). Raté sur Transfert, Qui suis-je ? ou Le Match : la main revient à l'équipe qui jouait, et chaque équipe ne tacle qu'une fois par carte.</p>
+      <p>Une fois « Répondre » appuyé, il reste <b>15 secondes</b> pour valider.</p>
+      <h3>Transfert · Qui suis-je ? · Le Match</h3>
+      <p>Des indices arrivent un par un : clubs du joueur, fiche du joueur mystère, faits du match. Trouver vaut <b>5, 4, 3, 2 puis 1 point</b> selon l'indice. Une erreur coûte 1 point et dévoile l'indice suivant ; passer est gratuit. Pour Le Match, il faut les deux équipes.</p>
+      <h3>Plus ou Moins · Vrai ou Faux</h3>
+      <p>Chaque bonne réponse ajoute 1 point à la cagnotte. Ensuite : <b>encaisser</b> ou <b>continuer</b>. Une erreur fait perdre la cagnotte. Cinq bonnes réponses : 5 points encaissés.</p>
+    </div>
+    <div class="rules" data-lang="pt">
+      <h3>Como funciona</h3>
+      <p>De 1 a 4 equipas, um só telemóvel. Em cada ronda é sorteado um desafio e cada equipa joga uma carta. Quem tem o telemóvel lê, escreve as respostas e é o árbitro.</p>
+      <h3>O Tackle</h3>
+      <p>A equipa que tem a vez tem <b>30 segundos</b> de prioridade. Ao apito, começa a corrida durante <b>15 segundos</b>: a primeira equipa a gritar «Tackle!» responde, incluindo a que tem a vez. Em caso de dúvida, «Disputa» faz um sorteio.</p>
+      <p>Um adversário que faz tackle ganha ou perde os pontos em jogo (3 pontos em Mais ou Menos e Verdadeiro ou Falso). Se falhar em Transferência, Quem sou eu? ou O Jogo, a vez volta à equipa que estava a jogar, e cada equipa só pode fazer tackle uma vez por carta.</p>
+      <p>Depois de carregar em «Responder», há <b>15 segundos</b> para validar.</p>
+      <h3>Transferência · Quem sou eu? · O Jogo</h3>
+      <p>As pistas aparecem uma a uma: clubes do jogador, ficha do jogador mistério, factos do jogo. Acertar vale <b>5, 4, 3, 2 e depois 1 ponto</b>, conforme a pista. Um erro custa 1 ponto e revela a pista seguinte; saltar é grátis. Em O Jogo, é preciso acertar nas duas equipas.</p>
+      <h3>Mais ou Menos · Verdadeiro ou Falso</h3>
+      <p>Cada resposta certa junta 1 ponto ao pote. Depois: <b>arrecadar</b> ou <b>continuar</b>. Um erro faz perder o pote. Cinco respostas certas: 5 pontos arrecadados.</p>
+    </div>
+    <div class="cta-spacer"></div>
+  </section>
+
+  <section id="screen-setup" class="setup-screen hidden-screen" aria-labelledby="setup-title">
+    <div class="setup-top">
+      <button type="button" class="back-btn" id="btn-setup-back" aria-label="Retour à l'accueil"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="setup-logo"><img src="assets/ui/web/tackle-logo-brush.webp" width="240" height="120" alt="TACKLE"></div>
     </div>
     <h2 class="setup-title" id="setup-title" tabindex="-1">Créer une partie</h2>
 
@@ -1966,8 +2074,6 @@
       <span id="free-count">2 parties gratuites aujourd'hui</span>
       <button type="button" class="text-btn" id="btn-open-paywall">Passer à l'illimité</button>
     </div>
-
-    <div class="lang-box"><button type="button" class="text-btn" id="btn-lang">Português</button></div>
 
     <div class="journal-link-box">
       <button type="button" class="text-btn hidden-screen" id="btn-share-journals">Envoyer le journal des parties</button>
@@ -2436,6 +2542,9 @@
 (function () {
   "use strict";
 
+  // Effets sonores (sifflets) : activés par défaut, réglage mémorisé.
+  function soundOn() { try { return localStorage.getItem("tackle-sound") !== "off"; } catch (e) { return true; } }
+
   // ---------- Langue : français ou portugais (Portugal) ----------
   // Langue du téléphone par défaut (pt → portugais), choix mémorisé si le joueur la change.
   var LANG = "fr";
@@ -2542,7 +2651,7 @@
     "C'est parti !": "Vamos a isso!",
     "Tous les scores sont conservés pour la suite": "Todas as pontuações se mantêm para o que vem a seguir",
     "Résultat final": "Resultado final",
-    "Revanche": "Desforra",
+"Revanche": "Desforra", "Le quiz foot entre potes": "O quiz de futebol entre amigos", "Jouer": "Jogar", "Boutique": "Loja", "Règles": "Regras", "Réglages": "Definições", "Effets sonores": "Efeitos sonoros", "Langue": "Idioma", "Rétablir les achats": "Restaurar compras", "Retour à l'accueil": "Voltar ao início",
     "Clubs révélés": "Clubes revelados",
     "Indices": "Pistas",
     "Nom de l'équipe": "Nome da equipa",
@@ -2722,6 +2831,7 @@
   }
 
   function playSound(key) {
+    if (!soundOn()) return;
     try {
       var buffer = audioBuffers[key];
       if (audioCtx && buffer && buffer !== "loading") {
@@ -2885,13 +2995,13 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.02-1530";
+  var APP_VERSION = "2026.10.02-1551";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
     try {
-      var setup = document.getElementById("screen-setup");
-      var idle = setup && !setup.classList.contains("hidden-screen");
+      var home = document.getElementById("screen-home");
+      var idle = home && !home.classList.contains("hidden-screen");
       document.getElementById("update-banner").classList.toggle("hidden-screen", !(updateVersion && idle));
     } catch (e) {}
   }
@@ -3222,12 +3332,13 @@
     return name || animalTeamName(state.teamSettings[idx].logo);
   }
 
-  var SETUP_SCREENS = ["screen-setup", "screen-challenges", "screen-teams", "screen-paywall"];
+  var SETUP_SCREENS = ["screen-home", "screen-settings", "screen-rules", "screen-setup", "screen-challenges", "screen-teams", "screen-paywall"];
   function showSetupScreen(id, moveFocus) {
     SETUP_SCREENS.concat(["screen-play", "screen-intermission", "screen-final"]).forEach(hide);
     document.body.classList.add("setup-flow");
     show(id);
-    if (id === "screen-setup") { refreshJournalLink(); checkForUpdate(); refreshAccessUI(); }
+    if (id === "screen-home") checkForUpdate();
+    if (id === "screen-setup") { refreshJournalLink(); refreshAccessUI(); }
     else showUpdateBannerIfIdle();
     window.scrollTo(0, 0);
     if (moveFocus) {
@@ -3422,9 +3533,41 @@
   });
   initPurchases();
   refreshAccessUI();
-  // Changer de langue (le bouton propose l'autre langue, dans cette langue-là).
-  el("btn-lang").textContent = LANG === "pt" ? "Jouer en français" : "Jogar em português";
-  el("btn-lang").addEventListener("click", function () { setLanguage(LANG === "pt" ? "fr" : "pt"); });
+
+  // ---------- Accueil, Réglages, Règles ----------
+  el("btn-home-play").addEventListener("click", function () { unlockAudio(); showSetupScreen("screen-setup", true); });
+  el("btn-home-shop").addEventListener("click", function () { openPaywall("menu"); });
+  el("btn-home-rules").addEventListener("click", function () { showSetupScreen("screen-rules", true); });
+  el("btn-open-settings").addEventListener("click", function () { renderSettings(); showSetupScreen("screen-settings", true); });
+  el("btn-settings-back").addEventListener("click", function () { showSetupScreen("screen-home", true); });
+  el("btn-rules-back").addEventListener("click", function () { showSetupScreen("screen-home", true); });
+  el("btn-setup-back").addEventListener("click", function () { showSetupScreen("screen-home", true); });
+  function renderSettings() {
+    el("btn-sound").setAttribute("aria-checked", soundOn() ? "true" : "false");
+    document.querySelectorAll(".lang-opt").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-lang") === LANG ? "true" : "false"); });
+    el("settings-status").textContent = "";
+    el("settings-version").textContent = "TACKLE · " + APP_VERSION;
+  }
+  el("btn-sound").addEventListener("click", function () {
+    var on = !soundOn();
+    try { localStorage.setItem("tackle-sound", on ? "on" : "off"); } catch (e) {}
+    renderSettings();
+    if (on) { unlockAudio(); playSound("kickoff"); }
+  });
+  document.querySelectorAll(".lang-opt").forEach(function (b) {
+    b.addEventListener("click", function () { if (b.getAttribute("data-lang") !== LANG) setLanguage(b.getAttribute("data-lang")); });
+  });
+  el("btn-settings-restore").addEventListener("click", function () {
+    var rc = purchases(), status = el("settings-status");
+    if (!rc || !REVENUECAT_IOS_KEY) { status.textContent = L("Disponible dans l'appli iPhone TACKLE.", "Disponível na app TACKLE para iPhone."); return; }
+    status.textContent = L("Recherche de tes achats…", "À procura das tuas compras…");
+    rc.restorePurchases().then(function (r) {
+      applyCustomerInfo(r && r.customerInfo);
+      status.textContent = state.premium ? L("Abonnement rétabli. TACKLE illimité est activé.", "Subscrição restaurada. O TACKLE ilimitado está ativo.")
+        : L("Aucun abonnement actif pour ce compte Apple.", "Nenhuma subscrição ativa para esta conta Apple.");
+    }).catch(function () { status.textContent = L("La restauration n'a pas abouti. Réessaie.", "Não foi possível restaurar. Tenta outra vez."); });
+  });
+
 
   // --- Défis ---
   function renderChallengesCount() {
@@ -5526,7 +5669,7 @@
     hide("screen-intermission");
     state.cardEnded = true;
     journalFinish("abandonnée");
-    showSetupScreen("screen-setup", true);
+    showSetupScreen("screen-home", true);
   });
 
   el("btn-next-card").addEventListener("click", function () {

@@ -32,7 +32,7 @@ Ces fonctions natives comptent aussi pour la relecture Apple (règle 4.2 « fonc
 
 ## Langues
 
-Français et portugais (Portugal). L'appli prend la langue du téléphone ; lien pour changer sur « Créer une partie ». Questions portugaises : `src/data/pt/`, régénérées avec `python3 tools/translate_pt.py` après chaque ajout de cartes françaises (le script refuse de laisser du français). Voir `docs/DECISIONS.md` (2026-10-02).
+Français et portugais (Portugal). L'appli prend la langue du téléphone ; on la change dans **Réglages** (roue dentée de l'accueil). Questions portugaises : `src/data/pt/`, régénérées avec `python3 tools/translate_pt.py` après chaque ajout de cartes françaises (le script refuse de laisser du français). Voir `docs/DECISIONS.md` (2026-10-02).
 
 ## Abonnement
 
