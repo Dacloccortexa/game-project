@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-10-02] Règles : 4 écrans à faire glisser
+- Demande de David : des règles plus didactiques, sur 4 écrans qu'on fait glisser.
+- 1. **Le principe** (équipes + téléphone arbitre) · 2. **Le Tackle** (frise 30 s priorité → sifflet → 15 s course, litige, 15 s pour valider) · 3. **Plus tu trouves tôt, plus tu marques** (paliers 5→1, Transfert / Qui suis-je ? / Le Match) · 4. **La cagnotte** (+1, encaisser ou continuer, Plus ou Moins / Vrai ou Faux).
+- Chaque écran : un visuel simple en CSS, un titre, 3 ou 4 phrases courtes. Points de position cliquables, bouton « Suivant » qui devient « Jouer » sur le dernier écran (→ Créer une partie). Français et portugais.
+- Provisoire en attendant la maquette Règles.
+
 ## [2026-10-02] Accueil, Réglages et page Règles
 - Demande de David : une page d'accueil avec 3 boutons (**Jouer**, **Boutique**, **Règles**) et une roue dentée **Réglages** (effets sonores, langue, rétablir les achats).
 - L'appli s'ouvre désormais sur l'accueil (logo, « Le quiz foot entre potes »). Jouer → Créer une partie (bouton retour vers l'accueil). Boutique → page d'abonnement. Règles → résumé des règles (principe, Tackle, chrono de 15 s, points 5→1, cagnotte), en français et en portugais.
