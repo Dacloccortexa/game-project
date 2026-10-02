@@ -18,6 +18,7 @@ Statut : **projet iOS prêt dans le dépôt** (2026-10-02), à compiler sur le M
 | Écran qui reste allumé pendant la partie | Non | Oui |
 | Envoi du journal de partie | Menu de partage du navigateur | Menu de partage natif iOS |
 | Icône, écran de démarrage, plein écran, portrait verrouillé | Icône d'écran d'accueil | Oui |
+| Limite gratuite et abonnement | Illimité | 2 parties/jour de 5 manches, sinon abonnement |
 
 Ces fonctions natives comptent aussi pour la relecture Apple (règle 4.2 « fonctionnalités minimales » : une appli qui n'est qu'un site emballé peut être refusée).
 
@@ -28,6 +29,27 @@ Ces fonctions natives comptent aussi pour la relecture Apple (règle 4.2 « fonc
 - Icône et écran de démarrage générés depuis `app-resources/` (logo or sur fond noir) : `npm run icons`.
 - `ITSAppUsesNonExemptEncryption = NO` (pas de chiffrement propre : évite la question d'export à chaque envoi).
 - Politique de confidentialité : [`privacy.html`](../privacy.html), en ligne à `https://dacloccortexa.github.io/game-project/privacy.html` (adresse de contact à compléter).
+
+## Abonnement
+
+Règle (décision de David, 2026-10-02) : **sans abonnement, 2 parties par jour de 5 manches maximum**, avec les cinq défis. **Abonné : illimité, 5 à 20 manches.** Le site web reste illimité (testeurs). Prix : à définir par David, réglés dans App Store Connect (aucun prix dans le code).
+
+Fonctionnement dans l'appli :
+- Compteur local « parties gratuites aujourd'hui » sous les défis (remis à zéro à minuit, heure du téléphone). Une partie compte au coup d'envoi.
+- 10, 15 et 20 manches portent un cadenas ; les toucher ouvre la page d'abonnement. Après 2 parties, « Coup d'envoi » ouvre aussi la page d'abonnement.
+- Page d'abonnement (provisoire, la maquette arrive) : avantages, formules lues dans l'App Store (nom, prix, essai gratuit éventuel), « Restaurer mes achats », « J'ai un code » (fenêtre Apple des codes d'offre), mentions de renouvellement automatique, liens Conditions d'utilisation (contrat Apple standard) et Confidentialité — obligatoires pour la relecture Apple.
+- Gestion technique : **RevenueCat** (achat, renouvellement, restauration, codes, tableau de bord). Droit d'accès attendu : **`premium`**. Tant que la clé `REVENUECAT_IOS_KEY` (dans `index.html`) est vide, la page affiche « Abonnement bientôt disponible » et la limite gratuite s'applique.
+
+À faire une fois le compte développeur actif :
+1. App Store Connect → **Accords, taxes et banque** : signer le contrat « Applications payantes », renseigner banque et impôts.
+2. App Store Connect → l'app → **Abonnements** : créer un groupe « TACKLE illimité » et les formules (ex. `tackle_monthly`, `tackle_annual`), avec prix et essai éventuel, nom et description en français.
+3. App Store Connect → **Utilisateurs et accès → Intégrations → Achats intégrés** : générer une clé (.p8).
+4. [RevenueCat](https://app.revenuecat.com) : créer le projet, ajouter l'app iOS (Bundle ID `com.lafamivy.tackle`), y déposer la clé .p8, importer les produits, créer le droit **`premium`** rattaché aux formules, et l'offre **default** avec les formules mensuelle/annuelle.
+5. Copier la **clé publique iOS** (`appl_…`) dans `REVENUECAT_IOS_KEY` (Claude s'en charge), puis nouvelle version de l'appli.
+6. Dans Xcode → **Signing & Capabilities** → **+ Capability** → **In-App Purchase**.
+7. Tester avec un compte **Sandbox** (App Store Connect → Utilisateurs et accès → Sandbox) sur l'iPhone, puis via TestFlight (achats gratuits pour les testeurs).
+
+Offrir l'abonnement à certaines personnes : **codes d'offre** Apple (App Store Connect → abonnement → Codes d'offre), saisis dans l'appli via « J'ai un code ».
 
 ## Sur le Mac : première installation (une fois)
 
@@ -62,5 +84,5 @@ Ces fonctions natives comptent aussi pour la relecture Apple (règle 4.2 « fonc
 - [ ] Captures d'écran iPhone 6,9″ (1320 × 2868), au moins 3.
 - [ ] Description, sous-titre, mots-clés, catégorie **Jeux → Quiz** (et Jeux de société), classification par âge.
 - [ ] « Confidentialité de l'app » : **Aucune donnée collectée**.
-- [ ] Prix : gratuit, payant, ou gratuit + achat « jeu complet » (voir les codes Apple pour offrir l'accès ; à décider).
+- [ ] Abonnement configuré (voir « Abonnement ») et prix choisis.
 - [ ] Vérifier les droits : noms réels de joueurs/clubs en texte (OK pour un quiz factuel), aucune photo, aucun logo de club ni de compétition.

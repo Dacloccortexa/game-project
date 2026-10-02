@@ -1,5 +1,13 @@
 # DECISIONS.md
 
+## [2026-10-02] Appli iPhone : abonnement, 2 parties gratuites par jour de 5 manches
+- Décision de David : modèle **abonnement**. Sans abonnement : **2 parties par jour, de 5 manches**. Prix : définis plus tard par David (rien dans le code, lus dans l'App Store).
+- Précisions retenues : les cinq défis restent jouables en gratuit ; compteur remis à zéro à minuit (heure du téléphone) ; une partie compte au coup d'envoi ; 10/15/20 manches verrouillées (cadenas → page d'abonnement) ; 3e partie du jour → page d'abonnement. **Le site web reste illimité** pour les testeurs.
+- Technique (choix laissé à Claude) : **RevenueCat** (plugin Capacitor), droit `premium`, offre `default`. Clé publique à renseigner (`REVENUECAT_IOS_KEY`) quand le compte développeur et les produits existent.
+- Page d'abonnement **provisoire** (fonctionnelle) en attendant la maquette : avantages, formules et prix de l'App Store, essai gratuit éventuel, restaurer, « J'ai un code » (codes d'offre Apple), mentions obligatoires et liens CGU/confidentialité.
+- Pages à venir avec les maquettes : Règles / comment jouer, Boutique (abonnement), Réglages, À propos / contact.
+- Vérifié en navigateur en simulant l'appli : verrous, compteur 2 → 1 → abonnement à la 3e partie, achat simulé qui déverrouille tout ; site web inchangé.
+
 ## [2026-10-02] Appli iPhone : le même jeu emballé avec Capacitor, questions mises à jour à distance
 - Demande de David : faire l'appli pour l'App Store, en pouvant continuer à modifier le jeu, et ajouter/retirer des questions quand on veut.
 - Décision : un seul code (`index.html`) pour le site et l'appli ; projet iOS Capacitor 8 dans `ios/` (Swift Package Manager, pas de CocoaPods), construit depuis `www/` (`npm run build`, qui copie seulement les fichiers utilisés et vérifie qu'aucun ne manque).

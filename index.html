@@ -835,6 +835,29 @@
     box-shadow: 0 5px 0 #8c5a17, 0 14px 28px rgba(0,0,0,.45);
     cursor: pointer;
   }
+  /* Abonnement : version provisoire, en attendant la maquette. */
+  .round-choice.locked { position: relative; opacity: .45; }
+  .round-choice.locked::after { content: ""; position: absolute; right: -2px; top: -2px; width: 18px; height: 18px; border-radius: 50%;
+    background: #1b2a22 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f2c75a' stroke-width='2.6' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='10' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") center / 12px no-repeat; border: 1px solid var(--gold); }
+  .free-box { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 12px; margin: 16px 0 0; color: var(--chalk-dim); font-size: 14px; }
+  .free-box .text-btn { color: var(--gold); font-weight: 700; font-size: 14px; min-height: 40px; }
+  .paywall-reason { margin: -8px 0 12px; text-align: center; color: var(--chalk); font-size: 15px; }
+  .paywall-reason:empty { display: none; }
+  .paywall-perks { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 8px; }
+  .paywall-perks li { padding-left: 28px; position: relative; color: var(--chalk); font-size: 16px; font-weight: 600; }
+  .paywall-perks li::before { content: "✓"; position: absolute; left: 4px; color: var(--gold); font-weight: 800; }
+  .paywall-packages { display: grid; gap: 10px; }
+  .paywall-package { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; min-height: 64px; padding: 10px 18px;
+    border-radius: 16px; border: 1.5px solid var(--gold-ring); background: rgba(3,17,12,.75); color: var(--chalk); text-align: left; cursor: pointer; }
+  .paywall-package b { font-family: var(--font-cond); font-size: 20px; text-transform: uppercase; letter-spacing: .02em; }
+  .paywall-package small { display: block; color: var(--chalk-dim); font-size: 13px; }
+  .paywall-package .price { font-family: var(--font-cond); font-weight: 700; font-size: 22px; color: var(--gold); white-space: nowrap; }
+  .paywall-package[disabled] { opacity: .5; }
+  .paywall-status { min-height: 20px; margin: 10px 0 0; text-align: center; color: var(--chalk-dim); font-size: 14px; }
+  .paywall-links { display: flex; justify-content: center; gap: 18px; }
+  .paywall-links .text-btn { color: var(--chalk); font-size: 14px; min-height: 44px; }
+  .paywall-legal { margin: 8px 0 0; text-align: center; color: #8ea398; font-size: 11.5px; line-height: 1.45; }
+  .paywall-legal a { color: var(--chalk-dim); }
   .setup-cta:active { transform: translateY(3px); box-shadow: 0 2px 0 #8c5a17, 0 6px 14px rgba(0,0,0,.4); }
   .cta-spacer { flex: 1; min-height: 28px; }
   .setup-error {
@@ -1936,6 +1959,11 @@
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
     </button>
 
+    <div class="free-box hidden-screen" id="free-box">
+      <span id="free-count">2 parties gratuites aujourd'hui</span>
+      <button type="button" class="text-btn" id="btn-open-paywall">Passer à l'illimité</button>
+    </div>
+
     <div class="journal-link-box">
       <button type="button" class="text-btn hidden-screen" id="btn-share-journals">Envoyer le journal des parties</button>
       <p class="journal-note" id="journals-status" role="status" aria-live="polite"></p>
@@ -2020,6 +2048,31 @@
       <p class="setup-error" id="setup-error" role="alert"></p>
       <button type="button" class="setup-cta" id="btn-start">Coup d'envoi</button>
     </div>
+  </section>
+
+  <!-- Abonnement (appli iPhone). Version fonctionnelle provisoire : la maquette arrive (docs/APP_IOS.md). -->
+  <section id="screen-paywall" class="setup-screen hidden-screen" aria-labelledby="paywall-title">
+    <div class="setup-top">
+      <button type="button" class="back-btn" id="btn-paywall-back" aria-label="Retour">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <div class="setup-logo"><img src="assets/ui/web/tackle-logo-brush.webp" width="240" height="120" alt="TACKLE"></div>
+    </div>
+    <h2 class="setup-title" id="paywall-title" tabindex="-1">TACKLE illimité</h2>
+    <p class="paywall-reason" id="paywall-reason"></p>
+    <ul class="paywall-perks">
+      <li>Parties illimitées, tous les jours</li>
+      <li>5, 10, 15 ou 20 manches</li>
+      <li>Nouvelles questions ajoutées régulièrement</li>
+    </ul>
+    <div class="paywall-packages" id="paywall-packages"></div>
+    <p class="paywall-status" id="paywall-status" role="status" aria-live="polite"></p>
+    <div class="paywall-links">
+      <button type="button" class="text-btn" id="btn-paywall-restore">Restaurer mes achats</button>
+      <button type="button" class="text-btn" id="btn-paywall-code">J'ai un code</button>
+    </div>
+    <p class="paywall-legal">Abonnement à renouvellement automatique, annulable à tout moment dans Réglages › Identifiant Apple › Abonnements, au moins 24 h avant la fin de la période en cours. Le paiement est débité sur le compte Apple à la confirmation de l'achat.<br>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Conditions d'utilisation</a> · <a href="https://dacloccortexa.github.io/game-project/privacy.html" target="_blank" rel="noopener">Confidentialité</a></p>
   </section>
 
   <!-- SCREEN: PLAY -->
@@ -2683,7 +2736,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.02-1453";
+  var APP_VERSION = "2026.10.02-1505";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3020,12 +3073,12 @@
     return name || animalTeamName(state.teamSettings[idx].logo);
   }
 
-  var SETUP_SCREENS = ["screen-setup", "screen-challenges", "screen-teams"];
+  var SETUP_SCREENS = ["screen-setup", "screen-challenges", "screen-teams", "screen-paywall"];
   function showSetupScreen(id, moveFocus) {
     SETUP_SCREENS.concat(["screen-play", "screen-intermission", "screen-final"]).forEach(hide);
     document.body.classList.add("setup-flow");
     show(id);
-    if (id === "screen-setup") { refreshJournalLink(); checkForUpdate(); }
+    if (id === "screen-setup") { refreshJournalLink(); checkForUpdate(); refreshAccessUI(); }
     else showUpdateBannerIfIdle();
     window.scrollTo(0, 0);
     if (moveFocus) {
@@ -3055,6 +3108,164 @@
   setupPressedGroup("rounds-group", function (val) {
     state.roundsTotal = val;
   });
+
+  // ---------- Abonnement (appli iPhone seulement ; le site reste illimité) ----------
+  // Gratuit : FREE_GAMES_PER_DAY parties par jour, de FREE_MAX_ROUNDS manches au plus.
+  // Abonné (droit RevenueCat ENTITLEMENT_ID actif) : illimité, 5 à 20 manches.
+  var FREE_GAMES_PER_DAY = 2;
+  var FREE_MAX_ROUNDS = 5;
+  var ENTITLEMENT_ID = "premium";
+  var REVENUECAT_IOS_KEY = ""; // clé publique iOS RevenueCat (« appl_… ») — à renseigner, voir docs/APP_IOS.md
+  var FREE_KEY = "tackle-free-plays-v1";
+  state.premium = !NATIVE;
+  var paywallReturn = "screen-setup";
+
+  function todayKey() {
+    var d = new Date();
+    return d.getFullYear() + "-" + pad2(d.getMonth() + 1) + "-" + pad2(d.getDate());
+  }
+  function freePlaysToday() {
+    try {
+      var o = JSON.parse(localStorage.getItem(FREE_KEY) || "{}");
+      return o.date === todayKey() ? (o.count || 0) : 0;
+    } catch (e) { return 0; }
+  }
+  function recordFreePlay() {
+    if (state.premium) return;
+    try { localStorage.setItem(FREE_KEY, JSON.stringify({ date: todayKey(), count: freePlaysToday() + 1 })); } catch (e) {}
+  }
+  function canStartGame() { return state.premium || freePlaysToday() < FREE_GAMES_PER_DAY; }
+
+  function refreshAccessUI() {
+    try {
+      var locked = !state.premium;
+      el("rounds-group").querySelectorAll("button[data-value]").forEach(function (b) {
+        var v = parseInt(b.getAttribute("data-value"), 10);
+        var isLocked = locked && v > FREE_MAX_ROUNDS;
+        b.classList.toggle("locked", isLocked);
+        b.setAttribute("aria-label", v + " manches" + (isLocked ? " (abonnement)" : ""));
+      });
+      if (locked && state.roundsTotal > FREE_MAX_ROUNDS) {
+        state.roundsTotal = FREE_MAX_ROUNDS;
+        el("rounds-group").querySelectorAll("button[data-value]").forEach(function (b) {
+          b.setAttribute("aria-pressed", parseInt(b.getAttribute("data-value"), 10) === FREE_MAX_ROUNDS ? "true" : "false");
+        });
+      }
+      el("free-box").classList.toggle("hidden-screen", !(NATIVE && locked));
+      var left = Math.max(0, FREE_GAMES_PER_DAY - freePlaysToday());
+      el("free-count").textContent = left > 0
+        ? left + " partie" + (left > 1 ? "s" : "") + " gratuite" + (left > 1 ? "s" : "") + " aujourd'hui"
+        : "Plus de partie gratuite aujourd'hui";
+    } catch (e) {}
+  }
+  // Manches verrouillées : un appui ouvre l'abonnement au lieu de les choisir.
+  try {
+    el("rounds-group").addEventListener("click", function (e) {
+      var b = e.target && e.target.closest ? e.target.closest("button[data-value]") : null;
+      if (b && b.classList.contains("locked")) { e.stopPropagation(); e.preventDefault(); openPaywall("rounds"); }
+    }, true);
+  } catch (e) {}
+
+  function purchases() { return nativePlugin("Purchases"); }
+  function applyCustomerInfo(info) {
+    var was = state.premium;
+    state.premium = !!(info && info.entitlements && info.entitlements.active && info.entitlements.active[ENTITLEMENT_ID]);
+    refreshAccessUI();
+    if (state.premium && !was && !el("screen-paywall").classList.contains("hidden-screen")) {
+      el("paywall-status").textContent = "Merci ! TACKLE illimité est activé.";
+      setTimeout(function () { showSetupScreen(paywallReturn, true); }, 1200);
+    }
+  }
+  function initPurchases() {
+    var rc = purchases();
+    if (!NATIVE || !rc || !REVENUECAT_IOS_KEY) return;
+    try {
+      rc.configure({ apiKey: REVENUECAT_IOS_KEY })
+        .then(function () { return rc.getCustomerInfo(); })
+        .then(function (r) { applyCustomerInfo(r && r.customerInfo); })
+        .catch(function () {});
+      rc.addCustomerInfoUpdateListener(function (info) { applyCustomerInfo(info && info.customerInfo ? info.customerInfo : info); });
+    } catch (e) {}
+  }
+
+  var PAYWALL_REASONS = {
+    daily: "Les " + FREE_GAMES_PER_DAY + " parties gratuites du jour sont jouées.",
+    rounds: "Les parties de plus de " + FREE_MAX_ROUNDS + " manches sont réservées aux abonnés.",
+    menu: ""
+  };
+  function openPaywall(reason) {
+    var visible = SETUP_SCREENS.filter(function (id) { return id !== "screen-paywall" && !el(id).classList.contains("hidden-screen"); })[0];
+    paywallReturn = visible || "screen-setup";
+    el("paywall-reason").textContent = PAYWALL_REASONS[reason] || "";
+    showSetupScreen("screen-paywall", true);
+    loadOfferings();
+  }
+  function periodLabel(pkg) {
+    var t = pkg && pkg.packageType;
+    return t === "ANNUAL" ? ["Annuel", " / an"] : t === "MONTHLY" ? ["Mensuel", " / mois"] : t === "WEEKLY" ? ["Hebdomadaire", " / semaine"]
+      : t === "SIX_MONTH" ? ["6 mois", " / 6 mois"] : t === "THREE_MONTH" ? ["3 mois", " / 3 mois"] : [(pkg.product && pkg.product.title) || "Abonnement", ""];
+  }
+  function loadOfferings() {
+    var box = el("paywall-packages"), status = el("paywall-status"), rc = purchases();
+    box.innerHTML = "";
+    if (!NATIVE) { status.textContent = "L'abonnement se prend dans l'appli iPhone TACKLE."; return; }
+    if (!rc || !REVENUECAT_IOS_KEY) { status.textContent = "Abonnement bientôt disponible."; return; }
+    status.textContent = "Chargement…";
+    rc.getOfferings().then(function (o) {
+      var pkgs = (o && o.current && o.current.availablePackages) || [];
+      status.textContent = pkgs.length ? "" : "Aucune formule disponible pour le moment.";
+      pkgs.forEach(function (pkg) {
+        var lab = periodLabel(pkg), prod = pkg.product || {};
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "paywall-package";
+        var left = document.createElement("span");
+        var title = document.createElement("b"); title.textContent = lab[0]; left.appendChild(title);
+        var intro = prod.introPrice;
+        if (intro && intro.price === 0) {
+          var sm = document.createElement("small");
+          sm.textContent = "Essai gratuit : " + intro.periodNumberOfUnits + " " + ({ DAY: "jour", WEEK: "semaine", MONTH: "mois", YEAR: "an" }[intro.periodUnit] || "") + (intro.periodNumberOfUnits > 1 && intro.periodUnit !== "MONTH" ? "s" : "");
+          left.appendChild(sm);
+        }
+        var price = document.createElement("span"); price.className = "price"; price.textContent = (prod.priceString || "") + lab[1];
+        btn.appendChild(left); btn.appendChild(price);
+        btn.addEventListener("click", function () { buyPackage(pkg); });
+        box.appendChild(btn);
+      });
+    }).catch(function () { status.textContent = "Impossible de charger les formules. Vérifie la connexion."; });
+  }
+  function setPaywallBusy(busy) {
+    el("paywall-packages").querySelectorAll("button").forEach(function (b) { b.disabled = busy; });
+  }
+  function buyPackage(pkg) {
+    var rc = purchases(); if (!rc) return;
+    setPaywallBusy(true);
+    el("paywall-status").textContent = "Paiement en cours…";
+    rc.purchasePackage({ aPackage: pkg }).then(function (r) {
+      applyCustomerInfo(r && r.customerInfo);
+      journalStep && journalStep("abonnement acheté");
+    }).catch(function (err) {
+      el("paywall-status").textContent = err && err.userCancelled ? "" : "L'achat n'a pas abouti. Tu n'as pas été débité.";
+    }).then(function () { setPaywallBusy(false); });
+  }
+  el("btn-paywall-back").addEventListener("click", function () { showSetupScreen(paywallReturn, true); });
+  el("btn-open-paywall").addEventListener("click", function () { openPaywall("menu"); });
+  el("btn-paywall-restore").addEventListener("click", function () {
+    var rc = purchases();
+    if (!rc || !REVENUECAT_IOS_KEY) { el("paywall-status").textContent = "Disponible dans l'appli iPhone TACKLE."; return; }
+    el("paywall-status").textContent = "Recherche de tes achats…";
+    rc.restorePurchases().then(function (r) {
+      applyCustomerInfo(r && r.customerInfo);
+      if (!state.premium) el("paywall-status").textContent = "Aucun abonnement actif pour ce compte Apple.";
+    }).catch(function () { el("paywall-status").textContent = "La restauration n'a pas abouti. Réessaie."; });
+  });
+  el("btn-paywall-code").addEventListener("click", function () {
+    var rc = purchases();
+    if (!rc || !REVENUECAT_IOS_KEY) { el("paywall-status").textContent = "Disponible dans l'appli iPhone TACKLE."; return; }
+    rc.presentCodeRedemptionSheet().catch(function () {}); // fenêtre Apple de saisie du code ; l'accès s'active tout seul
+  });
+  initPurchases();
+  refreshAccessUI();
 
   // --- Défis ---
   function renderChallengesCount() {
@@ -3378,6 +3589,7 @@
       setupError("Les cartes Le Match ne sont pas encore chargées. Réessaie dans un instant.");
       return;
     }
+    if (!canStartGame()) { setupError(""); openPaywall("daily"); return; }
     setupError("");
     startGame();
   });
@@ -3392,6 +3604,7 @@
 
   // ---------- GAME ENGINE ----------
   function startGame() {
+    recordFreePlay(); // une partie gratuite est comptée dès le coup d'envoi
     state.teams = [];
     for (var i = 0; i < state.teamCount; i++) {
       var setting = state.teamSettings[i];
