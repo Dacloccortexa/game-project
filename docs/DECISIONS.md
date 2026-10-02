@@ -1,5 +1,12 @@
 # DECISIONS.md
 
+## [2026-10-02] Appli iPhone : le même jeu emballé avec Capacitor, questions mises à jour à distance
+- Demande de David : faire l'appli pour l'App Store, en pouvant continuer à modifier le jeu, et ajouter/retirer des questions quand on veut.
+- Décision : un seul code (`index.html`) pour le site et l'appli ; projet iOS Capacitor 8 dans `ios/` (Swift Package Manager, pas de CocoaPods), construit depuis `www/` (`npm run build`, qui copie seulement les fichiers utilisés et vérifie qu'aucun ne manque).
+- Dans l'appli : vibrations haptiques, écran toujours allumé, partage natif du journal, barre d'état claire, icône et écran de démarrage (logo or sur noir), iPhone uniquement en portrait. Bandeau « Mettre à jour » du site désactivé (mises à jour par l'App Store).
+- Questions : l'appli lit `src/data/` sur le site au lancement (5 s max), sinon la copie embarquée. Ajouter/retirer des cartes ne demande donc pas de nouvelle version. Règles, écrans et nouveaux défis : nouvelle version (TestFlight puis App Store).
+- Bundle ID provisoire `com.lafamivy.tackle`. Politique de confidentialité `privacy.html` (aucune donnée collectée ; contact à compléter).
+- Vérifié en navigateur en simulant l'appli : questions lues sur le site, repli hors ligne, vibrations appelées, aucune erreur. Reste à compiler et tester sur iPhone (Mac + Xcode) : voir `docs/APP_IOS.md`.
 ## [2026-10-02] Le Match : cinq indices factuels dans un ordre fixe
 - Retour d'un essai avec les neveux de David : identifier un match à partir de cinq événements chronologiques était trop difficile.
 - Décision de David : remplacer les événements par **compétition (5 pts), année (4 pts), score final (3 pts), ville du match (2 pts), stade de la compétition (1 pt)**. « Ville » a été précisé par David ; « stade de la compétition » désigne la phase, par exemple finale ou demi-finale, et non le nom de l'enceinte.

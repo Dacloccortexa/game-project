@@ -2378,13 +2378,36 @@
 (function () {
   "use strict";
 
+  // ---------- Appli iPhone (Capacitor) ----------
+  // Le même fichier sert au site et à l'appli. Dans l'appli, on utilise les fonctions natives
+  // (vibrations, partage, écran allumé) et les questions sont téléchargées depuis le site.
+  var NATIVE = false;
+  try { NATIVE = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()); } catch (e) {}
+  function nativePlugin(name) {
+    try { return NATIVE && window.Capacitor.Plugins && window.Capacitor.Plugins[name] || null; } catch (e) { return null; }
+  }
+  // Questions à jour : le site est la source ; la copie embarquée sert hors connexion.
+  var REMOTE_DATA_BASE = "https://dacloccortexa.github.io/game-project/";
+  function fetchData(path) {
+    function local() { return fetch(path, { cache: "no-store" }); }
+    if (!NATIVE) return local();
+    var timeout = new Promise(function (resolve) { setTimeout(function () { resolve(null); }, 5000); });
+    return Promise.race([fetch(REMOTE_DATA_BASE + path + "?t=" + Date.now(), { cache: "no-store" }), timeout])
+      .then(function (res) { if (res && res.ok) return res; throw new Error("distant indisponible"); })
+      .catch(local);
+  }
+  if (NATIVE) {
+    try { var ka = nativePlugin("KeepAwake"); if (ka) ka.keepAwake(); } catch (e) {} // pas de mise en veille pendant la soirée
+    try { var sb = nativePlugin("StatusBar"); if (sb) sb.setStyle({ style: "DARK" }); } catch (e) {}
+  }
+
   // ---------- Content: cartes Transfert chargées depuis le fichier vérifié ----------
   // Seules les cartes au statut "vérifié" dans transfert-cards.json sont chargées en jeu.
   var CARDS = [];
   var CARDS_READY = false;
 
   function loadCards() {
-    return fetch("src/data/transfert-cards.json", { cache: "no-store" })
+    return fetchData("src/data/transfert-cards.json")
       .then(function (res) { return res.json(); })
       .then(function (data) {
         CARDS = data.cards
@@ -2408,7 +2431,7 @@
   var QSJ_READY = false;
 
   function loadQsjCards() {
-    return fetch("src/data/quisuisje-cards.json", { cache: "no-store" })
+    return fetchData("src/data/quisuisje-cards.json")
       .then(function (res) { return res.json(); })
       .then(function (data) {
         QSJ_CARDS = (data.cards || []).map(function (c) {
@@ -2439,7 +2462,7 @@
   var LM_READY = false;
 
   function loadLmCards() {
-    return fetch("src/data/lematch-cards.json", { cache: "no-store" })
+    return fetchData("src/data/lematch-cards.json")
       .then(function (res) { return res.json(); })
       .then(function (data) {
         LM_CARDS = (data.cards || []).map(function (c) {
@@ -2520,6 +2543,15 @@
   // Android les joue ; l'iPhone ne propose pas la vibration aux sites web (le son et l'écran suffisent).
   var VIBRATIONS = { kickoff: [70, 60, 70], tackle: [350] };
   function vibrate(key) {
+    var haptics = nativePlugin("Haptics");
+    if (haptics) {
+      // Appli iPhone : vraies vibrations (double impact au coup d'envoi, triple au Tackle).
+      try {
+        var hits = key === "tackle" ? [0, 140, 280] : [0, 130];
+        hits.forEach(function (t) { setTimeout(function () { haptics.impact({ style: "HEAVY" }); }, t); });
+      } catch (e) {}
+      return;
+    }
     try { if (navigator.vibrate) navigator.vibrate(VIBRATIONS[key]); } catch (e) { /* non disponible */ }
   }
 
@@ -2540,7 +2572,7 @@
   function loadPomRealCategories() {
     return Promise.all(
       POM_REAL_CATEGORIES.map(function (cat) {
-        return fetch(cat.file, { cache: "no-store" })
+        return fetchData(cat.file)
           .then(function (res) { return res.json(); })
           .then(function (data) {
             POM_REAL_POOLS.push({ label: data.category_label || cat.label, players: data.players });
@@ -2616,7 +2648,7 @@
   var VF_READY = false;
 
   function loadVraiFauxStatements() {
-    return fetch("src/data/vraifaux-statements.json", { cache: "no-store" })
+    return fetchData("src/data/vraifaux-statements.json")
       .then(function (res) { return res.json(); })
       .then(function (data) {
         VF_POOL = data.statements.filter(function (s) { return s.verification_status === "vérifié"; });
@@ -2651,7 +2683,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.01-2241";
+  var APP_VERSION = "2026.10.02-1453";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -2662,6 +2694,7 @@
     } catch (e) {}
   }
   function checkForUpdate() {
+    if (NATIVE) return;
     try {
       if (typeof fetch !== "function" || Date.now() - lastUpdateCheck < 60000) { showUpdateBannerIfIdle(); return; }
       lastUpdateCheck = Date.now();
@@ -2682,7 +2715,7 @@
     document.addEventListener("visibilitychange", function () {
       if (document.visibilityState === "visible") checkForUpdate();
     });
-    setTimeout(checkForUpdate, 1500);
+    if (!NATIVE) setTimeout(checkForUpdate, 1500); // l'appli se met à jour par l'App Store
   } catch (e) {}
 
   var JOURNAL_KEY = "tackle-journal-v1";
@@ -2837,6 +2870,15 @@
           say("Journal copié : collez-le dans un message pour David.");
         }, function () { say("Impossible de partager ou de copier le journal sur cet appareil."); });
       } catch (e) { say("Impossible de partager ou de copier le journal sur cet appareil."); }
+    }
+    var nativeShare = nativePlugin("Share");
+    if (nativeShare) {
+      nativeShare.share({ title: "TACKLE · journal de partie", text: text, dialogTitle: "Envoyer le journal" }).then(function (r) {
+        if (r && r.activityType === undefined) { say(""); return; }
+        say("Journal envoyé et effacé du téléphone. Merci !");
+        if (onSent) onSent();
+      }, function () { say(""); }); // partage annulé : rien n'est effacé
+      return;
     }
     try {
       if (navigator.share) {

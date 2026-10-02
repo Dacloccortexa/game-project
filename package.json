@@ -1,0 +1,26 @@
+{
+  "name": "tackle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TACKLE — jeu de foot entre amis (web + appli iPhone via Capacitor)",
+  "scripts": {
+    "build": "node tools/build-www.cjs",
+    "test": "node tests/tackle-timing.test.cjs",
+    "ios": "npm run build && npx cap sync ios && npx cap open ios",
+    "ios:sync": "npm run build && npx cap sync ios",
+    "icons": "npx @capacitor/assets generate --ios --iconBackgroundColor '#000000' --splashBackgroundColor '#000000' --assetPath app-resources"
+  },
+  "dependencies": {
+    "@capacitor-community/keep-awake": "^8.0.1",
+    "@capacitor/core": "^8.5.2",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/ios": "^8.5.2",
+    "@capacitor/share": "^8.0.2",
+    "@capacitor/splash-screen": "^8.0.2",
+    "@capacitor/status-bar": "^8.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^8.5.2"
+  }
+}

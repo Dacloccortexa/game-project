@@ -1,5 +1,9 @@
 # game-project
 
+## Appli iPhone
+
+Le même jeu est emballé pour l'App Store avec Capacitor (dossier `ios/`). Installation sur le Mac, TestFlight et mises à jour : [docs/APP_IOS.md](docs/APP_IOS.md). Les questions (`src/data/`) se mettent à jour dans l'appli sans nouvelle version.
+
 ## Interface de préparation à intégrer
 
 Les maquettes validées des trois écrans avant le coup d'envoi et leurs règles d'utilisation sont dans [docs/UI_SETUP_FLOW.md](docs/UI_SETUP_FLOW.md). Les images se trouvent dans [docs/ui/](docs/ui/).
