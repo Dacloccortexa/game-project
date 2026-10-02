@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-10-02] Écran de lancement de l'appli = l'accueil sans les boutons
+- Question de David : faire une splash ? Choix : pas d'écran de marque avec attente (déconseillé par Apple), mais l'écran de lancement obligatoire d'iOS reprend **exactement le fond stade et le logo de l'accueil**. Quand le jeu est prêt, il s'efface en fondu (250 ms) et les boutons apparaissent : l'appli semble s'ouvrir directement.
+- Avant : logo or sur fond noir, affiché 0,6 s fixe. Maintenant : masqué par le jeu dès que l'accueil est dessiné (`SplashScreen.hide`, `launchAutoHide: false`), avec un filet de sécurité à 4 s si le jeu plante au démarrage.
+- Image fabriquée par `tools/make-splash.cjs` (capture de l'accueil) ; `npm run icons` la convertit en un seul JPEG (≈0,5 Mo au lieu de 36 Mo de PNG, `tools/splash_jpeg.py`). Le site n'a pas d'écran de lancement.
+
 ## [2026-10-02] Règles : 4 écrans à faire glisser
 - Demande de David : des règles plus didactiques, sur 4 écrans qu'on fait glisser.
 - 1. **Le principe** (équipes + téléphone arbitre) · 2. **Le Tackle** (frise 30 s priorité → sifflet → 15 s course, litige, 15 s pour valider) · 3. **Plus tu trouves tôt, plus tu marques** (paliers 5→1, Transfert / Qui suis-je ? / Le Match) · 4. **La cagnotte** (+1, encaisser ou continuer, Plus ou Moins / Vrai ou Faux).

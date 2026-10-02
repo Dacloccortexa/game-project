@@ -3109,7 +3109,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.02-1557";
+  var APP_VERSION = "2026.10.02-1603";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -6002,7 +6002,29 @@
     showSetupScreen("screen-setup", true);
   });
 
+  // Appli : l'écran de lancement (même image que l'accueil sans les boutons) s'efface
+  // dès que l'accueil est dessiné, logo chargé, en fondu. Pas d'attente artificielle.
+  (function hideLaunchScreen() {
+    var splash = nativePlugin("SplashScreen");
+    if (!splash) return;
+    var done = false;
+    function hide() {
+      if (done) return; done = true;
+      requestAnimationFrame(function () { requestAnimationFrame(function () {
+        try { splash.hide({ fadeOutDuration: 250 }); } catch (e) {}
+      }); });
+    }
+    var logo = document.querySelector("#home-logo img");
+    if (!logo || logo.complete) hide();
+    else { logo.addEventListener("load", hide); logo.addEventListener("error", hide); }
+    setTimeout(hide, 1500);
+  })();
+
 })();
+</script>
+<script>
+  // Filet de sécurité : si le jeu plante au démarrage, l'écran de lancement ne doit pas rester affiché.
+  setTimeout(function () { try { window.Capacitor.Plugins.SplashScreen.hide(); } catch (e) {} }, 4000);
 </script>
 </body>
 </html>

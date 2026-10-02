@@ -26,7 +26,7 @@ Ces fonctions natives comptent aussi pour la relecture Apple (règle 4.2 « fonc
 
 - Identifiant de l'appli (Bundle ID) : **`com.lafamivy.tackle`** (dans `capacitor.config.json` et le projet Xcode). À changer seulement s'il est déjà pris dans App Store Connect.
 - Nom sous l'icône : **TACKLE**. iPhone uniquement, portrait uniquement, iOS 15 minimum.
-- Icône et écran de démarrage générés depuis `app-resources/` (logo or sur fond noir) : `npm run icons`.
+- Icône (logo or sur fond noir) et écran de lancement générés depuis `app-resources/` : `npm run icons`. L'écran de lancement est **l'accueil sans ses boutons** (stade + logo au même endroit), effacé en fondu dès que l'accueil est prêt (aucune attente artificielle). Si l'accueil change : `node tools/make-splash.cjs` puis `npm run icons`.
 - `ITSAppUsesNonExemptEncryption = NO` (pas de chiffrement propre : évite la question d'export à chaque envoi).
 - Politique de confidentialité : [`privacy.html`](../privacy.html), en ligne à `https://dacloccortexa.github.io/game-project/privacy.html` (adresse de contact à compléter).
 
