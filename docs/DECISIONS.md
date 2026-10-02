@@ -1,5 +1,12 @@
 # DECISIONS.md
 
+## [2026-10-02] Écran de démarrage aussi pour le jeu ajouté à l'écran d'accueil (iPhone)
+- Question de David : « ça se voit pas en mobile app ? ». Le jeu ajouté à l'écran d'accueil depuis Safari affichait un écran vide au lancement : iOS n'utilise que des balises `apple-touch-startup-image`, une image par taille d'écran.
+- Ajout de 13 images (`assets/startup/`, iPhone SE 1re génération → 16 Pro Max / Air), même principe que l'appli : l'accueil sans ses boutons, sous la barre d'état noire. Chaque iPhone ne télécharge que la sienne (~0,2 Mo). Fabriquées par `tools/make-startup-images.cjs` (à relancer si l'accueil change), qui met aussi à jour les balises dans `index.html`.
+- Retirées de l'appli iOS au build (`tools/build-www.cjs`) : elle a son propre écran de lancement.
+- Android (Chrome) : écran de démarrage automatique (icône sur fond noir, d'après `manifest.webmanifest`), non personnalisable davantage.
+- Pour le voir : supprimer l'icône de l'écran d'accueil et la rajouter (iOS garde l'ancien écran en mémoire).
+
 ## [2026-10-02] Écran de lancement de l'appli = l'accueil sans les boutons
 - Question de David : faire une splash ? Choix : pas d'écran de marque avec attente (déconseillé par Apple), mais l'écran de lancement obligatoire d'iOS reprend **exactement le fond stade et le logo de l'accueil**. Quand le jeu est prêt, il s'efface en fondu (250 ms) et les boutons apparaissent : l'appli semble s'ouvrir directement.
 - Avant : logo or sur fond noir, affiché 0,6 s fixe. Maintenant : masqué par le jeu dès que l'accueil est dessiné (`SplashScreen.hide`, `launchAutoHide: false`), avec un filet de sécurité à 4 s si le jeu plante au démarrage.

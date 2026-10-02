@@ -28,6 +28,12 @@ fs.readdirSync(path.join(root, 'assets/ui'))
   .filter(f => (f.endsWith('.svg') || f.endsWith('.wav')) && !f.includes('candidate'))
   .forEach(f => copy('assets/ui/' + f));
 
+// Écrans de démarrage du site sur l'écran d'accueil iPhone : inutiles dans l'appli (elle a son propre écran de lancement).
+{
+  const f = path.join(out, 'index.html');
+  fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace(/<!-- startup-images:start -->[\s\S]*?<!-- startup-images:end -->\n?/, ''));
+}
+
 // Vérification : tout chemin « assets/… » ou « src/… » cité dans index.html doit exister.
 const html = fs.readFileSync(path.join(out, 'index.html'), 'utf8');
 const refs = new Set((html.match(/(?:assets|src)\/[A-Za-z0-9_./-]+\.(?:webp|png|jpg|svg|wav|woff2|json)/g) || []));
