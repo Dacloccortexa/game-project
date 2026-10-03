@@ -1620,7 +1620,7 @@
   .turn-clock.open { border: 1.5px solid #e2483c; background: rgba(60,12,10,.82); }
   .turn-clock.open .turn-clock-label { color: #ff8a70; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
 
-  /* Bouton Tackle qui clignote pendant les 15 secondes ouvertes */
+  /* Bouton Tackle qui clignote pendant les 5 secondes ouvertes */
   #btn-tackle.blink { animation: tackle-blink .9s ease-in-out infinite; }
   @keyframes tackle-blink {
     0%, 100% { background: linear-gradient(180deg, #ea554d, #b9302f); box-shadow: 0 6px 0 rgba(82,16,16,.75), 0 0 0 rgba(255,80,60,0); }
@@ -2075,12 +2075,13 @@
           </ul>
         </article>
         <article class="rule-slide" aria-label="2 / 4">
-          <div class="rule-visual"><div class="rv-timeline"><div class="rv-seg rv-prio"><b>30 s</b><span>Priorité</span></div><div class="rv-whistle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="14" r="6"/><path d="M13 9.5L21 6v5l-6 2"/><circle cx="9" cy="14" r="1.6" fill="currentColor"/></svg></div><div class="rv-seg rv-race"><b>15 s</b><span>Course</span></div></div><div class="rv-who"><span>L'équipe qui a la main</span><span>Tout le monde</span></div></div>
+          <div class="rule-visual"><div class="rv-timeline"><div class="rv-seg rv-prio"><b>30 s</b><span>Priorité</span></div><div class="rv-whistle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="14" r="6"/><path d="M13 9.5L21 6v5l-6 2"/><circle cx="9" cy="14" r="1.6" fill="currentColor"/></svg></div><div class="rv-seg rv-race"><b>5 s</b><span>Course</span></div></div><div class="rv-who"><span>L'équipe qui a la main</span><span>Tout le monde</span></div></div>
           <h3>Le Tackle</h3>
           
           <ul class="rule-points">
             <li><b>30 s</b> : seule l'équipe qui a la main peut répondre.</li>
-            <li>Coup de sifflet : la première équipe qui crie <b>«&nbsp;Tackle&nbsp;!&nbsp;»</b> répond, même celle qui a la main.</li>
+            <li>Coup de sifflet : <b>5 s</b> pour crier <b>«&nbsp;Tackle&nbsp;!&nbsp;»</b>. La première équipe répond, même celle qui a la main.</li>
+            <li>L'équipe qui a la main <b>passe</b> ? Les adversaires ont 5 s pour tacler.</li>
             <li>Doute sur qui a crié en premier ? <b>«&nbsp;Litige&nbsp;»</b> tire au sort.</li>
             <li>Après «&nbsp;Répondre&nbsp;» : <b>15 s</b> pour valider.</li>
           </ul>
@@ -2091,7 +2092,7 @@
           <div class="rule-games"><span>Transfert</span><span>Qui suis-je ?</span><span>Le Match</span></div>
           <ul class="rule-points">
             <li>Les indices arrivent un par un : <b>5, 4, 3, 2 puis 1 point</b>.</li>
-            <li>Erreur : <b>−1 point</b> et indice suivant. Passer est gratuit.</li>
+            <li>Erreur : <b>−1 point</b> et indice suivant. Passer ne coûte rien, mais ouvre le Tackle.</li>
             <li>Un adversaire qui tacle gagne ou perd les points de l'indice. Raté : la main revient, <b>un seul tackle par carte</b>.</li>
             <li>Le Match : il faut trouver <b>les deux équipes</b>.</li>
           </ul>
@@ -2122,12 +2123,13 @@
           </ul>
         </article>
         <article class="rule-slide" aria-label="2 / 4">
-          <div class="rule-visual"><div class="rv-timeline"><div class="rv-seg rv-prio"><b>30 s</b><span>Prioridade</span></div><div class="rv-whistle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="14" r="6"/><path d="M13 9.5L21 6v5l-6 2"/><circle cx="9" cy="14" r="1.6" fill="currentColor"/></svg></div><div class="rv-seg rv-race"><b>15 s</b><span>Corrida</span></div></div><div class="rv-who"><span>A equipa que tem a vez</span><span>Todos</span></div></div>
+          <div class="rule-visual"><div class="rv-timeline"><div class="rv-seg rv-prio"><b>30 s</b><span>Prioridade</span></div><div class="rv-whistle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="14" r="6"/><path d="M13 9.5L21 6v5l-6 2"/><circle cx="9" cy="14" r="1.6" fill="currentColor"/></svg></div><div class="rv-seg rv-race"><b>5 s</b><span>Corrida</span></div></div><div class="rv-who"><span>A equipa que tem a vez</span><span>Todos</span></div></div>
           <h3>O Tackle</h3>
           
           <ul class="rule-points">
             <li><b>30 s</b>: só a equipa que tem a vez pode responder.</li>
-            <li>Ao apito: a primeira equipa a gritar <b>«Tackle!»</b> responde, incluindo a que tem a vez.</li>
+            <li>Ao apito: <b>5 s</b> para gritar <b>«Tackle!»</b>. A primeira equipa responde, incluindo a que tem a vez.</li>
+            <li>A equipa que tem a vez <b>salta</b>? Os adversários têm 5 s para fazer tackle.</li>
             <li>Dúvida sobre quem gritou primeiro? <b>«Disputa»</b> faz um sorteio.</li>
             <li>Depois de «Responder»: <b>15 s</b> para validar.</li>
           </ul>
@@ -2138,7 +2140,7 @@
           <div class="rule-games"><span>Transferência</span><span>Quem sou eu?</span><span>O Jogo</span></div>
           <ul class="rule-points">
             <li>As pistas aparecem uma a uma: <b>5, 4, 3, 2 e depois 1 ponto</b>.</li>
-            <li>Erro: <b>−1 ponto</b> e pista seguinte. Saltar é grátis.</li>
+            <li>Erro: <b>−1 ponto</b> e pista seguinte. Saltar não custa nada, mas abre o tackle.</li>
             <li>Um adversário que faz tackle ganha ou perde os pontos da pista. Se falhar, a vez volta e <b>só há um tackle por carta</b>.</li>
             <li>O Jogo: é preciso acertar nas <b>duas equipas</b>.</li>
           </ul>
@@ -3003,7 +3005,7 @@
 
   var POINTS_BY_INDEX = [5, 4, 3, 2, 1];
   var TACKLE_LOCK_SECONDS = 30;
-  var TACKLE_OPEN_SECONDS = 15;
+  var TACKLE_OPEN_SECONDS = 5; // course au Tackle après le sifflet (15 s jusqu'au 2026-10-03)
 
   // ---------- Sifflets (docs/UI_TACKLE_OPEN_ANIMATION.md) ----------
   // Double sifflet bref au départ de chaque chrono de 30 s ; sifflet long à l'ouverture du Tackle.
@@ -3198,7 +3200,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.03-2007";
+  var APP_VERSION = "2026.10.03-2012";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -4357,7 +4359,7 @@
     startTackleWindow();
   }
 
-  // ---------- Bouton Tackle commun : 30 secondes réservées, puis 15 secondes ouvertes ----------
+  // ---------- Bouton Tackle commun : 30 secondes réservées, puis 5 secondes ouvertes (et 5 s après une passe) ----------
   function clearTackleTimer() {
     if (state.tackleTimerId) {
       clearInterval(state.tackleTimerId);
@@ -4400,11 +4402,11 @@
         ? L("Première équipe à l'annoncer : une réponse", "A primeira equipa a gritar responde")
         : L("Disponible après le sifflet · dans ", "Disponível depois do apito · daqui a ") + seconds + " s";
     el("turn-clock-label").textContent = open
-      ? (alone ? L("Temps restant", "Tempo restante") : L("Tackle ouvert !", "Tackle aberto!"))
+      ? (alone ? L("Temps restant", "Tempo restante") : state.passWindow ? L("Passé : Tackle adverse !", "Passou: tackle adversário!") : L("Tackle ouvert !", "Tackle aberto!"))
       : L("Priorité ", "Prioridade ") + teamAux(active ? active.name : "");
     el("turn-clock-time").textContent = "00:" + pad2(Math.max(0, seconds));
     el("turn-clock").classList.toggle("open", open);
-    // Le bouton clignote pendant toute la fenêtre de 15 secondes.
+    // Le bouton clignote pendant toute la fenêtre ouverte.
     el("btn-tackle").classList.toggle("blink", open && !alone);
     // Le bouton n'apparaît qu'au sifflet (DECISIONS.md, 2026-10-03) : pendant la priorité, la bande
     // « Priorité aux … 00:30 » suffit, et le bouton grisé cachait « Répondre » sur les petits écrans.
@@ -4503,6 +4505,7 @@
     hideTackleUI();
     setRace(false);
     state.tacklePhase = "locked";
+    state.passWindow = false;
     state.stepStartedAt = Date.now();
     state.tackleDeadline = Date.now() + TACKLE_LOCK_SECONDS * 1000;
     var button = el("btn-tackle");
@@ -4541,7 +4544,9 @@
     }
     clearTackleTimer();
     hideTackleUI();
-    journalStep(isBinaryGame() ? "temps écoulé, cagnotte encaissée" : "temps écoulé, personne n'a répondu");
+    var afterPass = state.passWindow;
+    state.passWindow = false;
+    journalStep(isBinaryGame() ? "temps écoulé, cagnotte encaissée" : afterPass ? "personne n'a tacklé après la passe" : "temps écoulé, personne n'a répondu");
     if (isBinaryGame()) {
       // Personne n'a répondu ni tacklé : la cagnotte déjà accumulée est encaissée.
       var points = state.currentRoundMinigame === "plusoumoins" ? state.pomPotential : state.vfPotential;
@@ -4566,6 +4571,26 @@
     else advanceClue(false);
   }
 
+  // « Passer » (Transfert, Qui suis-je ?, Le Match) ouvre aussitôt un Tackle de TACKLE_OPEN_SECONDS
+  // aux seuls adversaires, sur l'indice qui vient d'être passé (DECISIONS.md, 2026-10-03).
+  // Sans adversaire possible (partie à 1, ou tous ont déjà raté leur Tackle), l'indice suivant arrive tout de suite.
+  function openPassTackle(advance) {
+    var already = state.tackledThisCard || [];
+    var eligible = state.teams.some(function (t, i) { return i !== state.currentTeamIndex && already.indexOf(i) === -1; });
+    if (!eligible || state.cardEnded) { advance(false); return; }
+    clearTackleTimer();
+    state.passWindow = true;
+    state.tacklePhase = "open";
+    state.tackleDeadline = Date.now() + TACKLE_OPEN_SECONDS * 1000;
+    el("btn-tackle").disabled = false;
+    playSound("tackle");
+    vibrate("tackle");
+    playTackleFlash();
+    updateTackleUI(TACKLE_OPEN_SECONDS);
+    showTackleUI();
+    state.tackleTimerId = setInterval(tickTackleWindow, 250);
+  }
+
   el("btn-tackle").addEventListener("click", function () {
     if (el("btn-tackle").disabled || state.tacklePhase !== "open") return;
     state.tackleRemainingMs = Math.max(0, state.tackleDeadline - Date.now());
@@ -4582,7 +4607,8 @@
     // Toutes les équipes sont dans la course, celle qui a la main en premier.
     // Une équipe adverse qui a déjà raté son Tackle sur cette carte ne peut plus tacler.
     var already = state.tackledThisCard || [];
-    var order = [state.currentTeamIndex];
+    // Après une passe, seuls les adversaires peuvent tacler (l'équipe qui a la main vient de renoncer).
+    var order = state.passWindow ? [] : [state.currentTeamIndex];
     state.teams.forEach(function (t, i) { if (i !== state.currentTeamIndex && already.indexOf(i) === -1) order.push(i); });
     order.forEach(function (idx) {
       var team = state.teams[idx];
@@ -5071,7 +5097,7 @@
 
   // tackleInfo = null (révélation normale) ou { tacklerIdx } (une équipe a tacklé avant la révélation)
   // Révèle la réponse verrouillée de Plus ou Moins quand personne n'a tacklé pendant
-  // les 45 secondes du bouton Tackle commun (voir tickTackleWindow).
+  // les 35 secondes du bouton Tackle commun (voir tickTackleWindow).
   function resolvePomGuess() {
     var chain = state.pomChain.chain;
     var refValue = chain[state.pomIndex].value;
@@ -5229,7 +5255,7 @@
   }
 
   // Révèle la réponse verrouillée de Vrai ou Faux quand personne n'a tacklé pendant
-  // les 45 secondes du bouton Tackle commun (voir tickTackleWindow).
+  // les 35 secondes du bouton Tackle commun (voir tickTackleWindow).
   function resolveVfStatement() {
     var statement = state.vfChain[state.vfIndex];
     var isActiveCorrect = (state.vfPendingAnswer === statement.est_vraie);
@@ -5303,7 +5329,7 @@
     resetQsjAnswerZone();
     show("qsj-answer-zone");
     renderQsjClues();
-    startTackleWindow(); // même bouton Tackle : 30 secondes réservées, puis 15 secondes ouvertes
+    startTackleWindow(); // même bouton Tackle : 30 secondes réservées, puis 5 secondes ouvertes
   }
 
   // Cinq fiches à hauteur fixe : passées (papier crème), courante (dorée + palier), futures verrouillées.
@@ -5389,7 +5415,7 @@
 
   el("btn-qsj-pass").addEventListener("click", function () {
     journalStep("passe");
-    advanceQsjClue(false);
+    openPassTackle(advanceQsjClue);
   });
 
   function showQsjFeedback(kind, text) { setVerdictNote(text); }
@@ -5552,7 +5578,7 @@
 
   el("btn-lm-pass").addEventListener("click", function () {
     journalStep("passe");
-    advanceLmClue(false);
+    openPassTackle(advanceLmClue);
   });
 
   function showLmFeedback(kind, text) { setVerdictNote(text); }
@@ -5609,7 +5635,7 @@
       el("lm-feedback-zone").innerHTML = "";
       el("lm-feedback-zone").classList.add("hidden-screen");
     }
-    startTackleWindow(); // nouvel indice = nouveau délai de 30 secondes, puis 15 secondes ouvertes
+    startTackleWindow(); // nouvel indice = nouveau délai de 30 secondes, puis 5 secondes ouvertes
   }
 
   // ---------- Transfert (docs/UI_TRANSFERT_FLOW.md) ----------
@@ -5721,7 +5747,7 @@
 
   el("btn-pass").addEventListener("click", function () {
     journalStep("passe");
-    advanceClue(false);
+    openPassTackle(advanceClue);
   });
 
   function checkAnswer(typed) {

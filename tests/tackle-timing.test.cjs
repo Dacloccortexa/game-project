@@ -83,6 +83,43 @@ assert.equal(state.revealedCount, 2);
 assert.equal(currentTackleStake(), 4);
 assert.equal(element('btn-tackle').disabled, true);
 
+// « Passer » ouvre 5 s de Tackle aux seuls adversaires, sur l'indice passé (2026-10-03).
+reset('transfert');
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
+state.revealedCount = 1;
+startTackleWindow();
+advance(3000);
+element('btn-pass').click();
+assert.equal(state.passWindow, true);
+assert.equal(state.revealedCount, 1);
+assert.equal(element('btn-tackle').disabled, false);
+advance(5000);
+assert.equal(state.passWindow, false);
+assert.equal(state.revealedCount, 2);
+assert.equal(element('btn-tackle').disabled, true);
+
+reset('transfert');
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
+state.revealedCount = 1;
+startTackleWindow();
+element('btn-pass').click();
+element('btn-tackle').click();
+assert.equal(element('tackle-team-buttons').children.length, 1); // l'équipe qui a passé n'est pas dans la liste
+element('tackle-team-buttons').children[0].click();
+element('tackle-answer-input').value = 'Joueur';
+element('btn-tackle-submit').click();
+assert.equal(state.teams[1].score, 5);
+assert.equal(state.cardEnded, true);
+
+// Seul : passer révèle tout de suite l'indice suivant.
+reset('transfert');
+state.teams = [{name:'A', score:0}];
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
+state.revealedCount = 1;
+startTackleWindow();
+element('btn-pass').click();
+assert.equal(state.revealedCount, 2);
+
 reset('quisuisje');
 state.currentCard = {answer:'Joueur', variants:[], clues:['Club','Titre']};
 state.revealedCount = 1;

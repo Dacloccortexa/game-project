@@ -1,5 +1,13 @@
 # DECISIONS.md
 
+## [2026-10-03] Course au Tackle à 5 s, et Tackle ouvert après chaque « Passer »
+- Idée d'un ami de David, validée par David. Deux changements :
+  1. **Course après le sifflet : 5 s au lieu de 15.** Crier « Tackle ! » est instantané et le chrono s'arrête dès qu'une équipe est choisie. Une étape d'indice passe de 45 s à 35 s au maximum (cartes de 60 à 80 s à 2 équipes dans le journal).
+  2. **« Passer » ouvre 5 s de Tackle aux adversaires** (Transfert, Qui suis-je ?, Le Match), avec l'enjeu de l'indice passé. L'équipe qui a passé n'est pas dans « Qui a tacklé ? ». Personne : indice suivant. Tackle raté : −enjeu, une seule fois par carte et par équipe, puis indice suivant pour l'équipe active. Aucun adversaire possible (partie à 1, tous ont déjà raté) : indice suivant tout de suite.
+- But du 2 : on ne peut plus passer en 1 s pour priver les adversaires de Tackle (journal du 1er–2 octobre : 2 Tackles seulement en 6 parties à 2 équipes). Passer devient un choix risqué.
+- Bouton Tackle **conservé** (décision de David : c'est le nom et la signature du jeu, et il mène à l'écran « Qui a tacklé ? » avec le litige). Il reste caché pendant la priorité et surgit au sifflet ou après une passe.
+- Règles (4 écrans) mises à jour en français et en portugais. Testé (`tests/tackle-timing.test.cjs`).
+
 ## [2026-10-03] Bouton Tackle caché pendant les 30 s de priorité
 - Retour d'un ami de David (capture iPhone, Qui suis-je ?) : le bouton Tackle grisé, fixé en bas de l'écran, cachait « Passer » et « Répondre » ; il a fallu faire défiler plusieurs fois, au point de croire à un bug.
 - Le bouton n'apparaît plus qu'au coup de sifflet (course de 15 s), quand « Répondre » et « Passer » ont déjà disparu. Pendant la priorité, la bande « Priorité aux … 00:30 » donne le temps restant. Partie à une équipe : pas de bouton du tout (le Tackle n'existe pas à un).
