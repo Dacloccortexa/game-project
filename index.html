@@ -1520,6 +1520,28 @@
     background: #06170f;
   }
 
+
+  /* ---------- Fin de partie : vainqueur, classement, partage (DECISIONS.md, 2026-10-03) ---------- */
+  #screen-final:not(.hidden-screen) { display: flex; flex-direction: column; gap: 14px; padding-bottom: 24px; }
+  .final-hero {
+    display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center;
+    padding: 18px 16px 20px; border-radius: 20px; border: 2px solid var(--gold-ring);
+    background: radial-gradient(120% 90% at 50% 0%, rgba(242,191,84,.22), rgba(10,46,30,.95) 60%);
+  }
+  .final-kicker { font-family: var(--font-cond); font-weight: 700; font-size: 15px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+  .final-logo { width: 132px; height: 132px; object-fit: contain; filter: drop-shadow(0 10px 22px rgba(0,0,0,.55)); }
+  .final-name { margin: 0; font-family: var(--font-cond); font-weight: 700; font-size: 32px; line-height: 1.1; text-transform: uppercase; color: var(--chalk); overflow-wrap: anywhere; }
+  .final-name::before, .final-name::after { content: none; display: none; }
+  .final-score { font-family: var(--font-cond); font-weight: 700; font-size: 40px; line-height: 1; color: var(--gold); }
+  .final-score small { margin-left: 6px; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; }
+  .final-ranking .inter-row { opacity: 1; transform: none; }
+  .final-actions { display: grid; gap: 10px; }
+  .final-actions .text-btn { justify-self: center; color: var(--chalk); font-size: 15px; min-height: 44px; }
+  .final-status { margin: 0; min-height: 20px; text-align: center; font-size: 14px; color: var(--chalk-dim); }
+  .final-status:empty { display: none; }
+  .share-preview { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 20px; background: rgba(0,0,0,.88); text-align: center; color: var(--chalk); }
+  .share-preview.hidden-screen { display: none; }
+  .share-preview img { max-width: min(420px, 100%); max-height: 72vh; border-radius: 12px; }
   /* ---------- Entre deux manches : classement cumulé (docs/UI_INTERMISSION_FLOW.md) ---------- */
   #screen-intermission:not(.hidden-screen) { position: relative; display: flex; flex-direction: column; gap: 12px; }
   .inter-round { color: var(--gold); }
@@ -2657,11 +2679,29 @@
   </section>
 
   <!-- SCREEN: FINAL -->
-  <section id="screen-final" class="hidden-screen">
-    <h1>Résultat final</h1>
-    <p class="subtitle" id="final-subtitle"></p>
-    <div class="podium" id="podium"></div>
-    <button class="primary" id="btn-rematch">Revanche</button>
+  <section id="screen-final" class="hidden-screen" aria-labelledby="final-title">
+    <div class="play-brand">
+      <img src="assets/ui/web/tackle-logo-brush.webp" width="190" height="95" alt="TACKLE">
+      <div class="play-round inter-round" id="final-subtitle">10 manches · partie terminée</div>
+    </div>
+    <div class="final-hero" id="final-hero">
+      <span class="final-kicker" id="final-kicker">Victoire</span>
+      <img class="final-logo" id="final-logo" src="" alt="" width="132" height="132">
+      <h2 class="final-name" id="final-title" tabindex="-1"></h2>
+      <div class="final-score" id="final-score"></div>
+    </div>
+    <ol class="inter-ranking final-ranking" id="podium"></ol>
+    <div class="final-actions">
+      <button type="button" class="tr-btn-primary" id="btn-final-share">Partager le résultat</button>
+      <button type="button" class="tr-btn-secondary" id="btn-rematch">Revanche</button>
+      <button type="button" class="text-btn" id="btn-final-home">Retour à l'accueil</button>
+    </div>
+    <p class="final-status" id="final-status" role="status" aria-live="polite"></p>
+    <div class="share-preview hidden-screen" id="share-preview">
+      <p>Appuie longuement sur l'image pour l'enregistrer ou l'envoyer.</p>
+      <img id="share-preview-img" alt="Résultat de la partie TACKLE">
+      <button type="button" class="text-btn" id="btn-share-preview-close">Fermer</button>
+    </div>
   </section>
 
 </div>
@@ -2759,6 +2799,10 @@
     "Équipe 2": "Equipa 2",
     "Suivant": "Seguinte",
     "Qui a tacklé ?": "Quem fez o tackle?",
+    "Partager le résultat": "Partilhar o resultado",
+    "Victoire": "Vitória",
+    "Appuie longuement sur l'image pour l'enregistrer ou l'envoyer.": "Mantém o dedo na imagem para a guardar ou enviar.",
+    "Fermer": "Fechar",
     "Celui qui tient le téléphone arbitre : choisir la première équipe à avoir crié « Tackle »": "Quem tem o telemóvel é o árbitro: escolher a primeira equipa a gritar «Tackle»",
     "Une seule équipe répond": "Só uma equipa responde",
     "Le chrono est arrêté pendant ce choix": "O cronómetro está parado durante esta escolha",
@@ -3200,7 +3244,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.03-2012";
+  var APP_VERSION = "2026.10.03-2103";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -6082,34 +6126,141 @@
   function endGame() {
     hide("screen-play");
     show("screen-final");
+    window.scrollTo(0, 0);
     journalFinish("terminée");
+    el("final-status").textContent = "";
 
-    var sorted = state.teams.slice().sort(function (a, b) { return b.score - a.score; });
-    var medals = ["🥇", "🥈", "🥉"];
+    var ranked = rankedTeams();
+    var top = ranked.filter(function (e) { return e.rank === 1; });
+    var mins = state.journal && state.journal.startedAt ? Math.max(1, Math.round((Date.now() - state.journal.startedAt) / 60000)) : 0;
+    el("final-subtitle").textContent = state.roundsTotal + L(" manches", " rondas") + (mins ? " · " + mins + " min" : "");
+    var alone = state.teams.length < 2, tie = top.length > 1;
+    var winner = top[0].team;
+    el("final-kicker").textContent = alone ? L("Ton score", "A tua pontuação") : tie ? L("Égalité", "Empate") : L("Victoire", "Vitória");
+    el("final-logo").src = teamLogoSrc(winner);
+    el("final-title").textContent = tie ? top.map(function (e) { return e.team.name; }).join(" · ") : winner.name;
+    el("final-score").innerHTML = signed(winner.score) + "<small>" + L("point", "ponto") + (Math.abs(winner.score) > 1 ? "s" : "") + "</small>";
 
-    el("final-subtitle").textContent = state.roundsTotal + L(" manches jouées", " rondas jogadas");
+    var list = el("podium");
+    list.innerHTML = "";
+    list.classList.toggle("compact", state.teams.length >= 4);
+    list.classList.toggle("hidden-screen", alone);
+    ranked.forEach(function (entry) {
+      var li = document.createElement("li");
+      li.className = "inter-row" + (entry.rank === 1 ? " first" : entry.rank === 2 ? " second" : entry.rank === 3 ? " third" : "");
+      var rank = document.createElement("span"); rank.className = "inter-rank"; rank.textContent = entry.rank;
+      var img = document.createElement("img"); img.className = "inter-logo"; img.src = teamLogoSrc(entry.team); img.alt = "";
+      var box = document.createElement("div"); box.className = "inter-team";
+      var name = document.createElement("div"); name.className = "inter-name"; name.textContent = entry.team.name;
+      var pts = document.createElement("div"); pts.className = "inter-pts" + (entry.team.score < 0 ? " negative" : "");
+      pts.innerHTML = signed(entry.team.score) + "<small>" + L("point", "ponto") + (Math.abs(entry.team.score) > 1 ? "s" : "") + "</small>";
+      box.appendChild(name); box.appendChild(pts);
+      li.appendChild(rank); li.appendChild(img); li.appendChild(box);
+      list.appendChild(li);
+    });
+    state.finalSnapshot = { ranked: ranked, alone: alone, tie: tie, rounds: state.roundsTotal, mins: mins };
+  }
 
-    var podium = el("podium");
-    podium.innerHTML = "";
-    sorted.forEach(function (team, idx) {
-      var row = document.createElement("div");
-      row.className = "podium-row" + (idx === 0 ? " first" : "");
-      var medal = document.createElement("div");
-      medal.className = "medal";
-      medal.textContent = medals[idx] || (idx + 1) + ".";
-      var name = document.createElement("div");
-      name.className = "p-name";
-      name.textContent = team.name;
-      var score = document.createElement("div");
-      score.className = "p-score";
-      score.textContent = team.score;
-      row.appendChild(medal);
-      row.appendChild(teamBadge(team));
-      row.appendChild(name);
-      row.appendChild(score);
-      podium.appendChild(row);
+  // ---------- Image de résultat à partager (1080 × 1350, format portrait des réseaux) ----------
+  var SHARE_URL = "lafamivy.com"; // à remplacer par le lien App Store à la sortie
+  function loadImg(src) {
+    return new Promise(function (resolve) {
+      var img = new Image();
+      img.onload = function () { resolve(img); };
+      img.onerror = function () { resolve(null); };
+      img.src = src;
     });
   }
+  function fitText(ctx, text, maxW, size, weight) {
+    var s = size;
+    do { ctx.font = weight + " " + s + "px Oswald, 'Arial Narrow', Impact, sans-serif"; s -= 2; } while (ctx.measureText(text).width > maxW && s > 18);
+  }
+  function buildResultImage() {
+    var snap = state.finalSnapshot;
+    var W = 1080, H = 1350;
+    var c = document.createElement("canvas"); c.width = W; c.height = H;
+    var ctx = c.getContext("2d");
+    var fonts = document.fonts && document.fonts.load ? Promise.all([document.fonts.load("700 80px Oswald"), document.fonts.load("500 40px Oswald")]).catch(function () {}) : Promise.resolve();
+    var imgs = [loadImg("assets/ui/web/stadium-night.webp"), loadImg("assets/ui/web/tackle-logo-brush.webp")]
+      .concat(snap.ranked.map(function (e) { return loadImg(teamLogoSrc(e.team)); }));
+    return Promise.all([fonts].concat(imgs)).then(function (res) {
+      var bg = res[1], logo = res[2], logos = res.slice(3);
+      ctx.fillStyle = "#06170f"; ctx.fillRect(0, 0, W, H);
+      if (bg) { var sc = Math.max(W / bg.width, H / bg.height); ctx.drawImage(bg, (W - bg.width * sc) / 2, 0, bg.width * sc, bg.height * sc); }
+      var g = ctx.createLinearGradient(0, 0, 0, H);
+      g.addColorStop(0, "rgba(4,16,11,.35)"); g.addColorStop(.45, "rgba(4,16,11,.72)"); g.addColorStop(1, "rgba(4,16,11,.94)");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+      ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";
+      if (logo) { var lw = 520, lh = lw * logo.height / logo.width; ctx.drawImage(logo, (W - lw) / 2, 40, lw, lh); }
+      ctx.fillStyle = "#f2bf54"; ctx.font = "500 34px Oswald, sans-serif";
+      ctx.fillText((L("PARTIE TERMINÉE · ", "PARTIDA TERMINADA · ") + snap.rounds + L(" MANCHES", " RONDAS")).split("").join(String.fromCharCode(8202)), W / 2, 340);
+      var win = snap.ranked[0];
+      var kicker = snap.alone ? L("SCORE FINAL", "PONTUAÇÃO FINAL") : snap.tie ? L("ÉGALITÉ", "EMPATE") : L("VICTOIRE", "VITÓRIA");
+      ctx.fillStyle = "#f8f6ed"; ctx.font = "700 46px Oswald, sans-serif"; ctx.fillText(kicker, W / 2, 420);
+      if (logos[0]) ctx.drawImage(logos[0], (W - 240) / 2, 450, 240, 240);
+      var title = snap.tie ? snap.ranked.filter(function (e) { return e.rank === 1; }).map(function (e) { return e.team.name; }).join(" · ") : win.team.name;
+      ctx.fillStyle = "#f8f6ed"; fitText(ctx, title.toUpperCase(), 940, 92, 700); ctx.fillText(title.toUpperCase(), W / 2, 790);
+      ctx.fillStyle = "#f2bf54"; ctx.font = "700 120px Oswald, sans-serif";
+      ctx.fillText(signed(win.team.score) + " " + L("PTS", "PTS"), W / 2, 920);
+      // Les autres équipes
+      var others = snap.alone ? [] : snap.ranked.slice(snap.tie ? 0 : 1).filter(function (e) { return snap.tie ? e.rank !== 1 : true; }).slice(0, 3);
+      var y0 = 990;
+      others.forEach(function (e, i) {
+        var y = y0 + i * 96, idx = snap.ranked.indexOf(e);
+        ctx.fillStyle = "rgba(8,35,24,.85)"; roundRect(ctx, 120, y, 840, 80, 18); ctx.fill();
+        ctx.strokeStyle = "rgba(248,246,237,.28)"; ctx.lineWidth = 2; ctx.stroke();
+        ctx.textAlign = "left"; ctx.fillStyle = "#d1e0d5"; ctx.font = "700 44px Oswald, sans-serif"; ctx.fillText(String(e.rank), 150, y + 56);
+        if (logos[idx]) ctx.drawImage(logos[idx], 200, y + 8, 64, 64);
+        ctx.fillStyle = "#f8f6ed"; fitText(ctx, e.team.name.toUpperCase(), 480, 40, 600); ctx.fillText(e.team.name.toUpperCase(), 284, y + 54);
+        ctx.textAlign = "right"; ctx.fillStyle = "#f8f6ed"; ctx.font = "700 44px Oswald, sans-serif"; ctx.fillText(signed(e.team.score), 930, y + 56);
+        ctx.textAlign = "center";
+      });
+      ctx.fillStyle = "#d1e0d5"; ctx.font = "500 36px Oswald, sans-serif";
+      ctx.fillText(L("Le quiz foot entre potes · ", "O quiz de futebol entre amigos · ") + SHARE_URL, W / 2, H - 52);
+      return c;
+    });
+  }
+  function roundRect(ctx, x, y, w, h, r) {
+    ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+  }
+  function shareText() {
+    var snap = state.finalSnapshot, win = snap.ranked[0];
+    var line = snap.alone ? L("J'ai fait ", "Fiz ") + signed(win.team.score) + L(" points sur TACKLE !", " pontos no TACKLE!")
+      : snap.tie ? L("Égalité au sommet sur TACKLE !", "Empate no topo no TACKLE!")
+      : win.team.name + L(" gagne sur TACKLE avec ", " ganha no TACKLE com ") + signed(win.team.score) + L(" points !", " pontos!");
+    return line + " " + L("Le quiz foot entre potes : ", "O quiz de futebol entre amigos: ") + "https://" + SHARE_URL;
+  }
+  el("btn-final-share").addEventListener("click", function () {
+    if (!state.finalSnapshot) return;
+    var btn = el("btn-final-share"), status = el("final-status");
+    btn.disabled = true; status.textContent = L("Préparation de l'image…", "A preparar a imagem…");
+    buildResultImage().then(function (canvas) {
+      var dataUrl = canvas.toDataURL("image/png");
+      var text = shareText();
+      var fs = nativePlugin("Filesystem"), share = nativePlugin("Share");
+      if (fs && share) {
+        // Appli : image écrite dans le cache, puis menu de partage iOS (WhatsApp, Instagram, Messages…).
+        return fs.writeFile({ path: "tackle-resultat.png", data: dataUrl.split(",")[1], directory: "CACHE" })
+          .then(function (r) { return share.share({ title: "TACKLE", text: text, files: [r.uri], dialogTitle: L("Partager le résultat", "Partilhar o resultado") }); })
+          .then(function () { status.textContent = ""; }, function () { status.textContent = ""; });
+      }
+      return new Promise(function (resolve) { canvas.toBlob(resolve, "image/png"); }).then(function (blob) {
+        var file = blob && typeof File === "function" ? new File([blob], "tackle-resultat.png", { type: "image/png" }) : null;
+        if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+          return navigator.share({ files: [file], text: text }).then(function () { status.textContent = ""; }, function () { status.textContent = ""; });
+        }
+        // Navigateur sans partage d'image : on affiche l'image à enregistrer d'un appui long.
+        el("share-preview-img").src = dataUrl;
+        show("share-preview");
+        status.textContent = "";
+      });
+    }).catch(function () {
+      status.textContent = L("Impossible de préparer l'image sur cet appareil.", "Não foi possível preparar a imagem neste aparelho.");
+    }).then(function () { btn.disabled = false; });
+  });
+  el("btn-share-preview-close").addEventListener("click", function () { hide("share-preview"); });
+  el("btn-final-home").addEventListener("click", function () { hide("screen-final"); showSetupScreen("screen-home", true); });
 
   // Sur « Créer une partie » : envoyer les dernières parties gardées sur le téléphone
   // (utile après une partie abandonnée).

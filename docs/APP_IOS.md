@@ -17,6 +17,7 @@ Statut : **projet iOS prêt dans le dépôt** (2026-10-02), à compiler sur le M
 | Vibrations (coup d'envoi, ouverture du Tackle) | Android seulement | iPhone : impacts haptiques (2 au coup d'envoi, 3 au Tackle) |
 | Écran qui reste allumé pendant la partie | Non | Oui |
 | Envoi du journal de partie | Menu de partage du navigateur | Menu de partage natif iOS |
+| Partage de l'image de résultat (fin de partie) | Partage du navigateur ou image à enregistrer | Menu de partage natif iOS avec l'image |
 | Icône, écran de démarrage, plein écran, portrait verrouillé | Icône d'écran d'accueil | Oui |
 | Limite gratuite et abonnement | Illimité | 2 parties/jour de 5 manches, sinon abonnement |
 
