@@ -1,5 +1,16 @@
 # PLAYTESTS.md
 
+## Journal des parties du 29 septembre au 3 octobre 2026 (11 parties, envoyé par David le 3 octobre au soir)
+
+- **Contexte :** surtout des parties à 1 équipe (tests de David), plus 2 parties à 2 équipes « Arthur » contre « Antoine ».
+- **Comportement inverse du journal précédent :** ici les joueurs ne passent presque plus, ils **proposent un nom à chaque indice** (souvent au hasard : Messi, Ronaldo, Mbappé…). Avec −1 par erreur, des cartes **trouvées** finissent en négatif : Pepe Reina −5 (pas trouvé), José Bosingwa −4, Samir Nasri −3 et Mohamed Salah −3 (trouvés au 5e indice après 4 erreurs), Luís Figo −1. Passer est toujours plus rentable que deviner, mais les joueurs ne le savent pas ou ne le font pas.
+- **Durée :** à 2 équipes, une carte Transfert / Qui suis-je ? dure 60 à 80 s (Pepe Reina : 125 s). Partie Arthur–Antoine abandonnée après 1,5 manche en 8 min : une partie de 5 manches à 2 équipes prendrait ~25 min à ce rythme.
+- **Chrono de réponse (15 s) :** fonctionne (« temps de réponse écoulé » noté 2 fois, compté comme erreur).
+- **Le Match (nouveaux indices) :** une seule carte jouée (Barcelone–Sampdoria 1992), tous les indices passés en 0–1 s sans réponse. Pas encore de signal.
+- **Vrai ou Faux :** Antoine fait 5/5 (+5) ; Arthur perd sa cagnotte de 4 au 5e (« Owen plus jeune que Fowler »). La tension de la cagnotte fonctionne quand on va loin.
+- **Données vérifiées :** les ~30 affirmations et comparaisons jouées sont justes.
+- **Question ouverte pour David :** faut-il limiter la perte sur une carte (ex. une carte ne peut pas faire descendre sous 0, ou une erreur ne coûte que si on se trompe 2 fois) ? À trancher avec plus de parties.
+
 ## Retour du 2 octobre 2026 — partie avec les neveux de David
 
 - **Observation rapportée :** Le Match est trop difficile.
