@@ -3244,7 +3244,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.03-2103";
+  var APP_VERSION = "2026.10.03-2107";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -6162,7 +6162,7 @@
   }
 
   // ---------- Image de résultat à partager (1080 × 1350, format portrait des réseaux) ----------
-  var SHARE_URL = "lafamivy.com"; // à remplacer par le lien App Store à la sortie
+  var SHARE_URL = "lafamivy.com/tackle"; // page qui renverra vers l'App Store à la sortie (même QR code)
   function loadImg(src) {
     return new Promise(function (resolve) {
       var img = new Image();
@@ -6181,10 +6181,10 @@
     var c = document.createElement("canvas"); c.width = W; c.height = H;
     var ctx = c.getContext("2d");
     var fonts = document.fonts && document.fonts.load ? Promise.all([document.fonts.load("700 80px Oswald"), document.fonts.load("500 40px Oswald")]).catch(function () {}) : Promise.resolve();
-    var imgs = [loadImg("assets/ui/web/stadium-night.webp"), loadImg("assets/ui/web/tackle-logo-brush.webp")]
+    var imgs = [loadImg("assets/ui/web/stadium-night.webp"), loadImg("assets/ui/web/tackle-logo-brush.webp"), loadImg("assets/ui/web/qr-tackle.png")]
       .concat(snap.ranked.map(function (e) { return loadImg(teamLogoSrc(e.team)); }));
     return Promise.all([fonts].concat(imgs)).then(function (res) {
-      var bg = res[1], logo = res[2], logos = res.slice(3);
+      var bg = res[1], logo = res[2], qr = res[3], logos = res.slice(4);
       ctx.fillStyle = "#06170f"; ctx.fillRect(0, 0, W, H);
       if (bg) { var sc = Math.max(W / bg.width, H / bg.height); ctx.drawImage(bg, (W - bg.width * sc) / 2, 0, bg.width * sc, bg.height * sc); }
       var g = ctx.createLinearGradient(0, 0, 0, H);
@@ -6197,26 +6197,35 @@
       var win = snap.ranked[0];
       var kicker = snap.alone ? L("SCORE FINAL", "PONTUAÇÃO FINAL") : snap.tie ? L("ÉGALITÉ", "EMPATE") : L("VICTOIRE", "VITÓRIA");
       ctx.fillStyle = "#f8f6ed"; ctx.font = "700 46px Oswald, sans-serif"; ctx.fillText(kicker, W / 2, 420);
-      if (logos[0]) ctx.drawImage(logos[0], (W - 240) / 2, 450, 240, 240);
+      if (logos[0]) ctx.drawImage(logos[0], (W - 200) / 2, 442, 200, 200);
       var title = snap.tie ? snap.ranked.filter(function (e) { return e.rank === 1; }).map(function (e) { return e.team.name; }).join(" · ") : win.team.name;
-      ctx.fillStyle = "#f8f6ed"; fitText(ctx, title.toUpperCase(), 940, 92, 700); ctx.fillText(title.toUpperCase(), W / 2, 790);
-      ctx.fillStyle = "#f2bf54"; ctx.font = "700 120px Oswald, sans-serif";
-      ctx.fillText(signed(win.team.score) + " " + L("PTS", "PTS"), W / 2, 920);
+      ctx.fillStyle = "#f8f6ed"; fitText(ctx, title.toUpperCase(), 940, 84, 700); ctx.fillText(title.toUpperCase(), W / 2, 735);
+      ctx.fillStyle = "#f2bf54"; ctx.font = "700 104px Oswald, sans-serif";
+      ctx.fillText(signed(win.team.score) + " " + L("PTS", "PTS"), W / 2, 845);
       // Les autres équipes
       var others = snap.alone ? [] : snap.ranked.slice(snap.tie ? 0 : 1).filter(function (e) { return snap.tie ? e.rank !== 1 : true; }).slice(0, 3);
-      var y0 = 990;
+      var y0 = 884;
       others.forEach(function (e, i) {
-        var y = y0 + i * 96, idx = snap.ranked.indexOf(e);
-        ctx.fillStyle = "rgba(8,35,24,.85)"; roundRect(ctx, 120, y, 840, 80, 18); ctx.fill();
+        var y = y0 + i * 88, idx = snap.ranked.indexOf(e);
+        ctx.fillStyle = "rgba(8,35,24,.85)"; roundRect(ctx, 120, y, 840, 76, 18); ctx.fill();
         ctx.strokeStyle = "rgba(248,246,237,.28)"; ctx.lineWidth = 2; ctx.stroke();
-        ctx.textAlign = "left"; ctx.fillStyle = "#d1e0d5"; ctx.font = "700 44px Oswald, sans-serif"; ctx.fillText(String(e.rank), 150, y + 56);
-        if (logos[idx]) ctx.drawImage(logos[idx], 200, y + 8, 64, 64);
-        ctx.fillStyle = "#f8f6ed"; fitText(ctx, e.team.name.toUpperCase(), 480, 40, 600); ctx.fillText(e.team.name.toUpperCase(), 284, y + 54);
-        ctx.textAlign = "right"; ctx.fillStyle = "#f8f6ed"; ctx.font = "700 44px Oswald, sans-serif"; ctx.fillText(signed(e.team.score), 930, y + 56);
+        ctx.textAlign = "left"; ctx.fillStyle = "#d1e0d5"; ctx.font = "700 44px Oswald, sans-serif"; ctx.fillText(String(e.rank), 150, y + 54);
+        if (logos[idx]) ctx.drawImage(logos[idx], 200, y + 8, 60, 60);
+        ctx.fillStyle = "#f8f6ed"; fitText(ctx, e.team.name.toUpperCase(), 480, 40, 600); ctx.fillText(e.team.name.toUpperCase(), 284, y + 52);
+        ctx.textAlign = "right"; ctx.fillStyle = "#f8f6ed"; ctx.font = "700 44px Oswald, sans-serif"; ctx.fillText(signed(e.team.score), 930, y + 54);
         ctx.textAlign = "center";
       });
-      ctx.fillStyle = "#d1e0d5"; ctx.font = "500 36px Oswald, sans-serif";
-      ctx.fillText(L("Le quiz foot entre potes · ", "O quiz de futebol entre amigos · ") + SHARE_URL, W / 2, H - 52);
+      // Bas de l'image : QR code vers la page du jeu, à scanner pour jouer.
+      var qy = H - 186;
+      if (qr) {
+        ctx.fillStyle = "#f8f6ed"; roundRect(ctx, 120, qy, 156, 156, 14); ctx.fill();
+        ctx.imageSmoothingEnabled = false; ctx.drawImage(qr, 128, qy + 8, 140, 140); ctx.imageSmoothingEnabled = true;
+      }
+      ctx.textAlign = "left";
+      ctx.fillStyle = "#f2bf54"; ctx.font = "700 48px Oswald, sans-serif"; ctx.fillText(L("SCANNE POUR JOUER", "LÊ PARA JOGAR"), 306, qy + 58);
+      ctx.fillStyle = "#f8f6ed"; ctx.font = "500 34px Oswald, sans-serif"; ctx.fillText(L("Le quiz foot entre potes", "O quiz de futebol entre amigos"), 306, qy + 104);
+      ctx.fillStyle = "#d1e0d5"; ctx.font = "500 30px Oswald, sans-serif"; ctx.fillText(SHARE_URL, 306, qy + 144);
+      ctx.textAlign = "center";
       return c;
     });
   }
