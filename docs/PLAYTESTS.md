@@ -8,6 +8,10 @@
 - **À retester après intégration :** combien de cartes sont trouvées, et à quel indice.
 
 
+## [2026-10-03] Partie de David avec Achille
+- Ressenti : « super marrant », envie de refaire une partie à chaque fois.
+- Problème : des questions reviennent vite ; le même match de Le Match est sorti deux fois d'affilée. Corrigé le jour même (tirage sans répétition, voir `DECISIONS.md`).
+
 ## Journal des parties du 1er et 2 octobre 2026 (12 parties, envoyé par David)
 
 - **Contexte :** 12 parties (6 à 1 équipe, 6 à 2 équipes), 5 à 20 manches. 4 terminées, 4 abandonnées, 4 jamais fermées (« en cours »). Durée des parties terminées : 2 à 8 min.

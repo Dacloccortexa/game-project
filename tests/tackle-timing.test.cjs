@@ -47,7 +47,7 @@ function advance(ms) {
 }
 
 let script = fs.readFileSync('index.html', 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
-script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame};})();');
+script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame, drawFromDeck};})();');
 const context = {
   document: { getElementById: element, createElement: tag => element(`created-${tag}-${Math.random()}`), querySelector: element, querySelectorAll: () => [] },
   fetch: () => Promise.resolve({ json: () => Promise.resolve({ cards: [], players: [], statements: [] }) }),
@@ -58,7 +58,7 @@ const context = {
 };
 vm.createContext(context);
 vm.runInContext(script, context);
-const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake, pickNextMinigame } = context.testApi;
+const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake, pickNextMinigame, drawFromDeck } = context.testApi;
 
 function reset(game) {
   timers.clear();
@@ -327,6 +327,24 @@ assert.equal(state.cardEnded, true);
   assert.equal(seen.size, 4);
   assert.equal(pickNextMinigame(['vraifaux'], 'vraifaux'), 'vraifaux');
   assert.notEqual(pickNextMinigame(['vraifaux','lematch'], 'vraifaux'), 'vraifaux');
+}
+
+// Tirage sans répétition : toutes les cartes sortent avant qu'une revienne, et jamais juste après.
+{
+  const items = Array.from({ length: 30 }, (_, i) => ({ id: 'c' + i, answer: 'Joueur ' + (i % 25) }));
+  const id = c => c.id;
+  const first = []; for (let i = 0; i < 30; i++) first.push(drawFromDeck('test-deck', items, id).id);
+  assert.equal(new Set(first).size, 30);
+  for (let round = 0; round < 20; round++) {
+    const last = first.slice(-10);
+    const next = drawFromDeck('test-deck', items, id).id;
+    assert.ok(!last.includes(next), 'carte revenue trop vite : ' + next);
+    first.push(next);
+  }
+  // Un joueur sorti récemment (même dans un autre défi) est évité tant qu'il reste d'autres cartes.
+  const a = [{ id: 'x1', answer: 'Mohamed Salah' }, { id: 'x2', answer: 'Kaka' }];
+  drawFromDeck('test-a', [{ id: 'y1', answer: 'Mohamed Salah' }], id, c => c.answer);
+  assert.equal(drawFromDeck('test-b', a, id, c => c.answer).id, 'x2');
 }
 
 // Questions en portugais : mêmes cartes, mêmes ids et même ordre que le français (tools/translate_pt.py).

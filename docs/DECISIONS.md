@@ -1,5 +1,12 @@
 # DECISIONS.md
 
+## [2026-10-03] Plus de questions qui reviennent trop vite
+- Retour de David (partie avec Achille) : des questions reviennent rapidement, et le même match de Le Match est sorti deux fois d'affilée. Cause : chaque carte était tirée au hasard dans tout le lot, sans mémoire.
+- Maintenant chaque défi pioche dans un **paquet** : une carte ne revient qu'une fois toutes les autres jouées, **d'une partie à l'autre** (mémorisé sur le téléphone, clé `tackle-seen-v1`). Quand le paquet est épuisé, il est remélangé en gardant de côté les dernières cartes vues (le tiers du lot, 15 au plus) : rien ne ressort juste après.
+- Paquets : Transfert, Qui suis-je ?, Le Match (par carte) ; Vrai ou Faux (par fait : deux formulations du même fait comptent comme une seule) ; Plus ou Moins (par catégorie, et dans chaque catégorie par joueur).
+- Transfert et Qui suis-je ? évitent aussi un joueur sorti dans l'autre défi parmi les 20 derniers (ex. Paul Scholes en Transfert puis en Qui suis-je ?).
+- Même mémoire en français et en portugais. Testé (`tests/tackle-timing.test.cjs`).
+
 ## [2026-10-02] Prix : pack soirée 1,99 € et abonnement annuel 29,99 €
 - Décision de David : deux offres. **Pack soirée à 1,99 €** (achat unique, 24 h illimitées à partir de l'achat, 5 à 20 manches, sans abonnement) et **abonnement annuel à 29,99 €**. Pas de mensuel. Le gratuit reste à 2 parties par jour de 5 manches.
 - Pourquoi un pack : un jeu de soirée se joue de façon irrégulière ; 1,99 € pour tout le groupe sur un seul téléphone est un achat d'impulsion. L'annuel vise ceux qui jouent au moins deux fois par mois (29,99 € = 15 soirées).

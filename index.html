@@ -2893,9 +2893,76 @@
       });
   }
 
+  // ---------- Tirage sans répétition (décision de David, 2026-10-03) ----------
+  // Chaque défi pioche dans un « paquet » : une carte déjà vue ne revient qu'une fois toutes
+  // les autres jouées, d'une partie à l'autre (mémorisé sur le téléphone). Quand le paquet est
+  // épuisé, on le remélange en gardant de côté les dernières cartes vues, pour qu'aucune ne
+  // ressorte juste après. Transfert et Qui suis-je ? évitent aussi un joueur sorti récemment
+  // dans l'autre défi.
+  var SEEN_KEY = "tackle-seen-v1";
+  var RECENT_PLAYERS = 20;
+  var seenStore = null;
+  function seenLoad() {
+    if (seenStore) return seenStore;
+    try { seenStore = JSON.parse(localStorage.getItem(SEEN_KEY) || "{}") || {}; } catch (e) { seenStore = {}; }
+    return seenStore;
+  }
+  function seenSave() { try { localStorage.setItem(SEEN_KEY, JSON.stringify(seenStore)); } catch (e) {} }
+  function shuffled(list) {
+    var a = list.slice();
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
+  // Ordonne les éléments : jamais vus d'abord (au hasard), puis les plus anciennement vus.
+  // Si tout a été vu, le paquet repart à zéro sauf le dernier tiers vu (max 15), gardé de côté.
+  function deckOrder(key, items, idOf) {
+    var store = seenLoad();
+    var ids = {}; items.forEach(function (x) { ids[idOf(x)] = true; });
+    var seen = (store[key] || []).filter(function (id) { return ids[id]; });
+    var seenSet = {}; seen.forEach(function (id) { seenSet[id] = true; });
+    var fresh = items.filter(function (x) { return !seenSet[idOf(x)]; });
+    if (!fresh.length && items.length > 1) {
+      seen = seen.slice(-Math.min(15, Math.floor(items.length / 3)));
+      seenSet = {}; seen.forEach(function (id) { seenSet[id] = true; });
+      fresh = items.filter(function (x) { return !seenSet[idOf(x)]; });
+    }
+    store[key] = seen;
+    var rank = {}; seen.forEach(function (id, i) { rank[id] = i; });
+    var old = items.filter(function (x) { return seenSet[idOf(x)]; }).sort(function (a, b) { return rank[idOf(a)] - rank[idOf(b)]; });
+    return shuffled(fresh).concat(old);
+  }
+  function deckMark(key, id) {
+    var store = seenLoad();
+    var list = (store[key] || []).filter(function (x) { return x !== id; });
+    list.push(id);
+    store[key] = list;
+  }
+  function recentPlayer(name) {
+    var n = normalize(name || "");
+    return (seenLoad().players || []).indexOf(n) !== -1;
+  }
+  function markPlayer(name) {
+    var store = seenLoad(), n = normalize(name || "");
+    if (!n) return;
+    store.players = (store.players || []).filter(function (x) { return x !== n; }).concat([n]).slice(-RECENT_PLAYERS);
+  }
+  // Pioche une carte : la première du paquet, en sautant si possible un joueur sorti récemment.
+  function drawFromDeck(key, items, idOf, playerOf) {
+    if (!items.length) return null;
+    var order = deckOrder(key, items, idOf);
+    var pick = order[0];
+    if (playerOf) {
+      for (var i = 0; i < order.length; i++) { if (!recentPlayer(playerOf(order[i]))) { pick = order[i]; break; } }
+      markPlayer(playerOf(pick));
+    }
+    deckMark(key, idOf(pick));
+    seenSave();
+    return pick;
+  }
+  function cardId(c) { return c.id; }
+
   function drawQsjCard() {
-    var idx = Math.floor(Math.random() * QSJ_CARDS.length);
-    return QSJ_CARDS[idx];
+    return drawFromDeck("qsj", QSJ_CARDS, cardId, function (c) { return c.answer; });
   }
 
   // ---------- Content: cartes Le Match ----------
@@ -2927,8 +2994,7 @@
   }
 
   function drawLmCard() {
-    var idx = Math.floor(Math.random() * LM_CARDS.length);
-    return LM_CARDS[idx];
+    return drawFromDeck("lm", LM_CARDS, cardId);
   }
 
   var POINTS_BY_INDEX = [5, 4, 3, 2, 1];
@@ -3019,7 +3085,7 @@
         return fetchData(cat.file)
           .then(function (res) { return res.json(); })
           .then(function (data) {
-            POM_REAL_POOLS.push({ label: LANG === "pt" ? cat.label : (data.category_label || cat.label), players: data.players });
+            POM_REAL_POOLS.push({ key: cat.file, label: LANG === "pt" ? cat.label : (data.category_label || cat.label), players: data.players });
           })
           .catch(function (err) {
             console.error("Impossible de charger " + cat.file, err);
@@ -3060,15 +3126,17 @@
 
   // Construit une chaîne de 6 joueurs à valeurs distinctes, tirés au hasard dans un pool réel.
   function buildChainFromPool(pool) {
-    var players = pool.players.slice();
+    // Joueurs jamais vus dans cette catégorie d'abord (paquet propre à la catégorie).
+    var dkey = "pom:" + (pool.key || pool.label);
+    var players = pool.key ? deckOrder(dkey, pool.players, function (p) { return p.name; }) : shuffled(pool.players);
     var chosen = [];
-    while (chosen.length < 6 && players.length > 0) {
-      var idx = Math.floor(Math.random() * players.length);
-      var candidate = players.splice(idx, 1)[0];
+    for (var k = 0; k < players.length && chosen.length < 6; k++) {
+      var candidate = players[k];
       if (!chosen.some(function (p) { return p.value === candidate.value; })) {
         chosen.push(candidate);
       }
     }
+    if (pool.key) { chosen.forEach(function (p) { deckMark(dkey, p.name); }); seenSave(); }
     // Ordre d'affichage mélangé (la comparaison utilise les vraies valeurs, pas l'ordre de la liste).
     for (var i = chosen.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
@@ -3079,7 +3147,7 @@
 
   function drawPomChain() {
     if (POM_REAL_POOLS.length > 0) {
-      var pool = POM_REAL_POOLS[Math.floor(Math.random() * POM_REAL_POOLS.length)];
+      var pool = drawFromDeck("pom", POM_REAL_POOLS, function (p) { return p.key || p.label; });
       return buildChainFromPool(pool);
     }
     var idx = Math.floor(Math.random() * POM_TEST_CHAINS.length);
@@ -3105,12 +3173,9 @@
   }
 
   // Tire 5 affirmations sans jamais réunir deux énoncés sur le même fait (groupe_exclusif).
+  // Paquet par fait (groupe_exclusif) : un fait déjà joué ne revient qu'une fois tous les autres vus.
   function drawVraiFauxChain() {
-    var pool = VF_POOL.slice();
-    for (var i = pool.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
-    }
+    var pool = deckOrder("vf", VF_POOL, function (s) { return s.groupe_exclusif; });
     var chosen = [];
     var usedGroups = {};
     for (var k = 0; k < pool.length && chosen.length < 5; k++) {
@@ -3119,6 +3184,8 @@
       usedGroups[s.groupe_exclusif] = true;
       chosen.push(s);
     }
+    chosen.forEach(function (s) { deckMark("vf", s.groupe_exclusif); });
+    seenSave();
     return chosen;
   }
 
@@ -3127,7 +3194,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.02-2219";
+  var APP_VERSION = "2026.10.03-0920";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3412,8 +3479,7 @@
   }
 
   function drawCard() {
-    var idx = Math.floor(Math.random() * CARDS.length);
-    return CARDS[idx];
+    return drawFromDeck("transfert", CARDS, cardId, function (c) { return c.answer; });
   }
 
   function el(id) { return document.getElementById(id); }
