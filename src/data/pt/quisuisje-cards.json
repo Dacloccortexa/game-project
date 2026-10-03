@@ -1,9 +1,9 @@
 {
   "lang": "pt-PT",
   "game_id": "qui_suis_je",
-  "version": 1,
+  "version": 2,
   "prepared_at": "2026-09-27",
-  "status": "fiches sourcées, difficulté à éprouver en partie",
+  "status": "premier indice recalibré ; difficulté à retester en partie",
   "source_snapshot": "Wikipédia, révisions relevées le 24 septembre 2026; carrières Transfert vérifiées dans le dépôt",
   "rules": {
     "clue_order": [
@@ -35,10 +35,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Sporting.",
           "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Sporting"
           }
         },
         {
@@ -96,10 +96,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Paris Saint-Germain.",
           "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
           "fact": {
-            "club": "FC Barcelone"
+            "club": "Paris Saint-Germain"
           }
         },
         {
@@ -158,10 +158,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Mónaco.",
           "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Mónaco"
           }
         },
         {
@@ -219,10 +219,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Lyon.",
           "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Lyon"
           }
         },
         {
@@ -281,10 +281,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Ajax.",
           "source": "https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28Uruguayan_footballer%29",
           "fact": {
-            "club": "FC Barcelone"
+            "club": "Ajax"
           }
         },
         {
@@ -342,10 +342,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Borussia Dortmund.",
           "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
           "fact": {
-            "club": "FC Barcelone"
+            "club": "Borussia Dortmund"
           }
         },
         {
@@ -404,10 +404,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei na Roma.",
           "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
           "fact": {
-            "club": "Chelsea"
+            "club": "Roma"
           }
         },
         {
@@ -465,10 +465,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Santos.",
           "source": "https://en.wikipedia.org/wiki/Neymar",
           "fact": {
-            "club": "FC Barcelone"
+            "club": "Santos"
           }
         },
         {
@@ -527,10 +527,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Tottenham.",
           "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Tottenham"
           }
         },
         {
@@ -588,10 +588,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Sevilha.",
           "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Sevilha"
           }
         },
         {
@@ -649,10 +649,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Manchester United.",
+          "text": "Joguei na Juventus.",
           "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
           "fact": {
-            "club": "Manchester United"
+            "club": "Juventus"
           }
         },
         {
@@ -711,10 +711,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no Wolfsburgo.",
           "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
           "fact": {
-            "club": "Chelsea"
+            "club": "Wolfsburgo"
           }
         },
         {
@@ -773,10 +773,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Liverpool.",
+          "text": "Joguei no Manchester City.",
           "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
           "fact": {
-            "club": "Liverpool"
+            "club": "Manchester City"
           }
         },
         {
@@ -834,10 +834,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Southampton.",
+          "text": "Joguei no Blackburn Rovers.",
           "source": "https://en.wikipedia.org/wiki/Alan_Shearer",
           "fact": {
-            "club": "Southampton"
+            "club": "Blackburn Rovers"
           }
         },
         {
@@ -895,10 +895,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no PSV Eindhoven.",
           "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
           "fact": {
-            "club": "Real Madrid"
+            "club": "PSV Eindhoven"
           }
         },
         {
@@ -956,10 +956,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Liberty Professionals.",
+          "text": "Joguei no Sunderland.",
           "source": "https://en.wikipedia.org/wiki/Asamoah_Gyan",
           "fact": {
-            "club": "Liberty Professionals"
+            "club": "Sunderland"
           }
         },
         {
@@ -1017,10 +1017,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no Arsenal.",
           "source": "https://en.wikipedia.org/wiki/Ashley_Cole",
           "fact": {
-            "club": "Chelsea"
+            "club": "Arsenal"
           }
         },
         {
@@ -1078,10 +1078,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Manchester City.",
+          "text": "Joguei no Arsenal.",
           "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
           "fact": {
-            "club": "Manchester City"
+            "club": "Arsenal"
           }
         },
         {
@@ -1139,10 +1139,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei na Juventus.",
+          "text": "Joguei no Saint-Étienne.",
           "source": "https://en.wikipedia.org/wiki/Blaise_Matuidi",
           "fact": {
-            "club": "Juventus"
+            "club": "Saint-Étienne"
           }
         },
         {
@@ -1261,10 +1261,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei na Juventus.",
+          "text": "Joguei no Manchester City.",
           "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
           "fact": {
-            "club": "Juventus"
+            "club": "Manchester City"
           }
         },
         {
@@ -1322,10 +1322,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Mónaco.",
           "source": "https://en.wikipedia.org/wiki/Cesc_F%C3%A0bregas",
           "fact": {
-            "club": "Barcelona"
+            "club": "Mónaco"
           }
         },
         {
@@ -1383,10 +1383,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Nantes.",
           "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Nantes"
           }
         },
         {
@@ -1444,10 +1444,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Chelsea.",
           "source": "https://en.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Chelsea"
           }
         },
         {
@@ -1505,10 +1505,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Sevilha.",
           "source": "https://en.wikipedia.org/wiki/Dani_Alves",
           "fact": {
-            "club": "Barcelona"
+            "club": "Sevilha"
           }
         },
         {
@@ -1566,10 +1566,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Manchester City.",
+          "text": "Joguei no Valência.",
           "source": "https://en.wikipedia.org/wiki/David_Silva",
           "fact": {
-            "club": "Manchester City"
+            "club": "Valência"
           }
         },
         {
@@ -1627,10 +1627,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei na Juventus.",
+          "text": "Joguei no Mónaco.",
           "source": "https://en.wikipedia.org/wiki/David_Trezeguet",
           "fact": {
-            "club": "Juventus"
+            "club": "Mónaco"
           }
         },
         {
@@ -1688,10 +1688,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Valência.",
           "source": "https://en.wikipedia.org/wiki/David_Villa",
           "fact": {
-            "club": "Barcelona"
+            "club": "Valência"
           }
         },
         {
@@ -1748,10 +1748,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no FC Porto.",
           "source": "https://en.wikipedia.org/wiki/Deco",
           "fact": {
-            "club": "Barcelona"
+            "club": "FC Porto"
           }
         },
         {
@@ -1809,10 +1809,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no Marselha.",
           "source": "https://en.wikipedia.org/wiki/Didier_Deschamps",
           "fact": {
-            "club": "Chelsea"
+            "club": "Marselha"
           }
         },
         {
@@ -1870,10 +1870,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no Marselha.",
           "source": "https://en.wikipedia.org/wiki/Didier_Drogba",
           "fact": {
-            "club": "Chelsea"
+            "club": "Marselha"
           }
         },
         {
@@ -1931,10 +1931,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no Atlético de Madrid.",
           "source": "https://en.wikipedia.org/wiki/Diego_Costa",
           "fact": {
-            "club": "Chelsea"
+            "club": "Atlético de Madrid"
           }
         },
         {
@@ -1992,10 +1992,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Liverpool.",
+          "text": "Joguei no Auxerre.",
           "source": "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
           "fact": {
-            "club": "Liverpool"
+            "club": "Auxerre"
           }
         },
         {
@@ -2053,10 +2053,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Manchester City.",
+          "text": "Joguei no Arsenal.",
           "source": "https://en.wikipedia.org/wiki/Emmanuel_Adebayor",
           "fact": {
-            "club": "Manchester City"
+            "club": "Arsenal"
           }
         },
         {
@@ -2114,10 +2114,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei na Juventus.",
+          "text": "Joguei no Athletic Bilbau.",
           "source": "https://en.wikipedia.org/wiki/Fernando_Llorente",
           "fact": {
-            "club": "Juventus"
+            "club": "Athletic Bilbau"
           }
         },
         {
@@ -2175,10 +2175,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Mónaco.",
           "source": "https://en.wikipedia.org/wiki/Fernando_Morientes",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Mónaco"
           }
         },
         {
@@ -2236,10 +2236,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no Atlético de Madrid.",
           "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
           "fact": {
-            "club": "Chelsea"
+            "club": "Atlético de Madrid"
           }
         },
         {
@@ -2358,10 +2358,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no West Ham.",
           "source": "https://en.wikipedia.org/wiki/Frank_Lampard",
           "fact": {
-            "club": "Chelsea"
+            "club": "West Ham"
           }
         },
         {
@@ -2419,10 +2419,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Leicester.",
           "source": "https://en.wikipedia.org/wiki/Gary_Lineker",
           "fact": {
-            "club": "Barcelona"
+            "club": "Leicester"
           }
         },
         {
@@ -2541,10 +2541,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Manchester United.",
           "source": "https://en.wikipedia.org/wiki/Gerard_Piqu%C3%A9",
           "fact": {
-            "club": "Barcelona"
+            "club": "Manchester United"
           }
         },
         {
@@ -2602,10 +2602,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Nápoles.",
           "source": "https://en.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Nápoles"
           }
         },
         {
@@ -2663,10 +2663,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Marselha.",
+          "text": "Joguei no Nice.",
           "source": "https://en.wikipedia.org/wiki/Hatem_Ben_Arfa",
           "fact": {
-            "club": "Marseille"
+            "club": "Nice"
           }
         },
         {
@@ -2724,10 +2724,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no Parma.",
           "source": "https://en.wikipedia.org/wiki/Hern%C3%A1n_Crespo",
           "fact": {
-            "club": "Chelsea"
+            "club": "Parma"
           }
         },
         {
@@ -2785,10 +2785,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no FC Porto.",
           "source": "https://en.wikipedia.org/wiki/Iker_Casillas",
           "fact": {
-            "club": "Real Madrid"
+            "club": "FC Porto"
           }
         },
         {
@@ -2846,10 +2846,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Liverpool.",
           "source": "https://en.wikipedia.org/wiki/Javier_Mascherano",
           "fact": {
-            "club": "Barcelona"
+            "club": "Liverpool"
           }
         },
         {
@@ -2907,10 +2907,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Mónaco.",
           "source": "https://en.wikipedia.org/wiki/Javier_Saviola",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Mónaco"
           }
         },
         {
@@ -3028,10 +3028,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no Aston Villa.",
           "source": "https://en.wikipedia.org/wiki/John_Terry",
           "fact": {
-            "club": "Chelsea"
+            "club": "Aston Villa"
           }
         },
         {
@@ -3089,10 +3089,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no FC Porto.",
           "source": "https://en.wikipedia.org/wiki/Jos%C3%A9_Bosingwa",
           "fact": {
-            "club": "Chelsea"
+            "club": "FC Porto"
           }
         },
         {
@@ -3211,10 +3211,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Villarreal.",
           "source": "https://en.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme",
           "fact": {
-            "club": "Barcelona"
+            "club": "Villarreal"
           }
         },
         {
@@ -3272,10 +3272,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no Manchester United.",
           "source": "https://en.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Ver%C3%B3n",
           "fact": {
-            "club": "Chelsea"
+            "club": "Manchester United"
           }
         },
         {
@@ -3332,10 +3332,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Atlético de Madrid.",
           "source": "https://en.wikipedia.org/wiki/Juanfran_%28footballer%2C_born_1985%29",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Atlético de Madrid"
           }
         },
         {
@@ -3453,10 +3453,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no AC Milan.",
           "source": "https://en.wikipedia.org/wiki/Kak%C3%A1",
           "fact": {
-            "club": "Real Madrid"
+            "club": "AC Milan"
           }
         },
         {
@@ -3575,10 +3575,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Sporting.",
           "source": "https://en.wikipedia.org/wiki/Lu%C3%ADs_Figo",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Sporting"
           }
         },
         {
@@ -3636,10 +3636,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no AC Milan.",
           "source": "https://en.wikipedia.org/wiki/Marcel_Desailly",
           "fact": {
-            "club": "Chelsea"
+            "club": "AC Milan"
           }
         },
         {
@@ -3696,10 +3696,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Fluminense.",
           "source": "https://en.wikipedia.org/wiki/Marcelo_%28footballer%2C_born_1988%29",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Fluminense"
           }
         },
         {
@@ -3757,10 +3757,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Chelsea.",
+          "text": "Joguei no Lyon.",
           "source": "https://en.wikipedia.org/wiki/Michael_Essien",
           "fact": {
-            "club": "Chelsea"
+            "club": "Lyon"
           }
         },
         {
@@ -3818,10 +3818,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Newcastle.",
           "source": "https://en.wikipedia.org/wiki/Michael_Owen",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Newcastle"
           }
         },
         {
@@ -4000,10 +4000,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Manchester United.",
+          "text": "Joguei no Sporting.",
           "source": "https://en.wikipedia.org/wiki/Nani_%28footballer%29",
           "fact": {
-            "club": "Manchester United"
+            "club": "Sporting"
           }
         },
         {
@@ -4061,10 +4061,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Paris Saint-Germain.",
           "source": "https://en.wikipedia.org/wiki/Nicolas_Anelka",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Paris Saint-Germain"
           }
         },
         {
@@ -4122,10 +4122,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Manchester United.",
+          "text": "Joguei no Mónaco.",
           "source": "https://en.wikipedia.org/wiki/Patrice_Evra",
           "fact": {
-            "club": "Manchester United"
+            "club": "Mónaco"
           }
         },
         {
@@ -4304,10 +4304,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei na Lazio.",
           "source": "https://en.wikipedia.org/wiki/Pedro_%28footballer%2C_born_1987%29",
           "fact": {
-            "club": "Barcelona"
+            "club": "Lazio"
           }
         },
         {
@@ -4364,10 +4364,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no FC Porto.",
           "source": "https://en.wikipedia.org/wiki/Pepe_%28footballer%2C_born_February_1983%29",
           "fact": {
-            "club": "Real Madrid"
+            "club": "FC Porto"
           }
         },
         {
@@ -4425,10 +4425,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Bayern Munique.",
           "source": "https://en.wikipedia.org/wiki/Pepe_Reina",
           "fact": {
-            "club": "Barcelona"
+            "club": "Bayern Munique"
           }
         },
         {
@@ -4486,10 +4486,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Liverpool.",
+          "text": "Joguei no Portsmouth.",
           "source": "https://en.wikipedia.org/wiki/Peter_Crouch",
           "fact": {
-            "club": "Liverpool"
+            "club": "Portsmouth"
           }
         },
         {
@@ -4547,10 +4547,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Lens.",
           "source": "https://en.wikipedia.org/wiki/Rapha%C3%ABl_Varane",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Lens"
           }
         },
         {
@@ -4607,10 +4607,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Schalke 04.",
           "source": "https://en.wikipedia.org/wiki/Ra%C3%BAl_Gonz%C3%A1lez",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Schalke 04"
           }
         },
         {
@@ -4668,10 +4668,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no FC Porto.",
           "source": "https://en.wikipedia.org/wiki/Ricardo_Carvalho",
           "fact": {
-            "club": "Real Madrid"
+            "club": "FC Porto"
           }
         },
         {
@@ -4729,10 +4729,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Inter de Milão.",
           "source": "https://en.wikipedia.org/wiki/Ricardo_Quaresma",
           "fact": {
-            "club": "Barcelona"
+            "club": "Inter de Milão"
           }
         },
         {
@@ -4790,10 +4790,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Manchester United.",
+          "text": "Joguei no Leeds United.",
           "source": "https://en.wikipedia.org/wiki/Rio_Ferdinand",
           "fact": {
-            "club": "Manchester United"
+            "club": "Leeds United"
           }
         },
         {
@@ -4850,10 +4850,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no AC Milan.",
           "source": "https://en.wikipedia.org/wiki/Rivaldo",
           "fact": {
-            "club": "Barcelona"
+            "club": "AC Milan"
           }
         },
         {
@@ -4911,10 +4911,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Manchester City.",
+          "text": "Joguei no Leicester.",
           "source": "https://en.wikipedia.org/wiki/Riyad_Mahrez",
           "fact": {
-            "club": "Manchester City"
+            "club": "Leicester"
           }
         },
         {
@@ -5094,10 +5094,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Inter de Milão.",
           "source": "https://en.wikipedia.org/wiki/Roberto_Carlos",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Inter de Milão"
           }
         },
         {
@@ -5154,10 +5154,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Paris Saint-Germain.",
           "source": "https://en.wikipedia.org/wiki/Ronaldinho",
           "fact": {
-            "club": "Barcelona"
+            "club": "Paris Saint-Germain"
           }
         },
         {
@@ -5214,10 +5214,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Inter de Milão.",
           "source": "https://en.wikipedia.org/wiki/Ronaldo_%28Brazilian_footballer%29",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Inter de Milão"
           }
         },
         {
@@ -5275,10 +5275,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Liverpool.",
+          "text": "Joguei no Southampton.",
           "source": "https://en.wikipedia.org/wiki/Sadio_Man%C3%A9",
           "fact": {
-            "club": "Liverpool"
+            "club": "Southampton"
           }
         },
         {
@@ -5336,10 +5336,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Manchester City.",
+          "text": "Joguei no Arsenal.",
           "source": "https://en.wikipedia.org/wiki/Samir_Nasri",
           "fact": {
-            "club": "Manchester City"
+            "club": "Arsenal"
           }
         },
         {
@@ -5397,10 +5397,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Maiorca.",
           "source": "https://en.wikipedia.org/wiki/Samuel_Eto%27o",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Maiorca"
           }
         },
         {
@@ -5458,10 +5458,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Arsenal.",
+          "text": "Joguei no Málaga.",
           "source": "https://en.wikipedia.org/wiki/Santi_Cazorla",
           "fact": {
-            "club": "Arsenal"
+            "club": "Málaga"
           }
         },
         {
@@ -5519,10 +5519,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Atlético de Madrid.",
           "source": "https://en.wikipedia.org/wiki/Sergio_Ag%C3%BCero",
           "fact": {
-            "club": "Barcelona"
+            "club": "Atlético de Madrid"
           }
         },
         {
@@ -5702,10 +5702,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Manchester United.",
+          "text": "Joguei no Tottenham.",
           "source": "https://en.wikipedia.org/wiki/Teddy_Sheringham",
           "fact": {
-            "club": "Manchester United"
+            "club": "Tottenham"
           }
         },
         {
@@ -5763,10 +5763,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Liverpool.",
+          "text": "Joguei no Southampton.",
           "source": "https://en.wikipedia.org/wiki/Virgil_van_Dijk",
           "fact": {
-            "club": "Liverpool"
+            "club": "Southampton"
           }
         },
         {
@@ -5824,10 +5824,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Manchester United.",
+          "text": "Joguei no Everton.",
           "source": "https://en.wikipedia.org/wiki/Wayne_Rooney",
           "fact": {
-            "club": "Manchester United"
+            "club": "Everton"
           }
         },
         {
@@ -5885,10 +5885,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Real Sociedad.",
           "source": "https://en.wikipedia.org/wiki/Xabi_Alonso",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Real Sociedad"
           }
         },
         {
@@ -6006,10 +6006,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Barcelona.",
+          "text": "Joguei no Mónaco.",
           "source": "https://en.wikipedia.org/wiki/Yaya_Tour%C3%A9",
           "fact": {
-            "club": "Barcelona"
+            "club": "Mónaco"
           }
         },
         {
@@ -6067,10 +6067,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "Joguei no Real Madrid.",
+          "text": "Joguei no Manchester United.",
           "source": "https://en.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa",
           "fact": {
-            "club": "Real Madrid"
+            "club": "Manchester United"
           }
         },
         {
@@ -6116,5 +6116,6 @@
       "source_revision_fr": 239532157,
       "editorial_difficulty": "à tester en partie"
     }
-  ]
+  ],
+  "recalibrated_at": "2026-10-03"
 }
