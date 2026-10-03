@@ -1502,6 +1502,7 @@
   #btn-tackle .tk-main { font-family: var(--font-cond); font-weight: 700; font-size: 22px; letter-spacing: .06em; text-transform: uppercase; }
   #btn-tackle .tk-sub { font-size: 12.5px; font-weight: 500; }
   #btn-tackle.tk-waiting { display: none !important; }
+  #turn-clock.note #turn-clock-label { color: var(--gold); }
 
   #next-card-zone .tr-btn-primary { margin-top: 2px; }
   #feedback-zone:empty { display: none; }
@@ -3244,7 +3245,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.03-2107";
+  var APP_VERSION = "2026.10.03-2119";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -4445,7 +4446,9 @@
       : open
         ? L("Première équipe à l'annoncer : une réponse", "A primeira equipa a gritar responde")
         : L("Disponible après le sifflet · dans ", "Disponível depois do apito · daqui a ") + seconds + " s";
-    el("turn-clock-label").textContent = open
+    var noteOn = !open && state.clockNote && Date.now() < (state.clockNoteUntil || 0);
+    el("turn-clock").classList.toggle("note", !!noteOn);
+    el("turn-clock-label").textContent = noteOn ? state.clockNote : open
       ? (alone ? L("Temps restant", "Tempo restante") : state.passWindow ? L("Passé : Tackle adverse !", "Passou: tackle adversário!") : L("Tackle ouvert !", "Tackle aberto!"))
       : L("Priorité ", "Prioridade ") + teamAux(active ? active.name : "");
     el("turn-clock-time").textContent = "00:" + pad2(Math.max(0, seconds));
@@ -4621,7 +4624,18 @@
   function openPassTackle(advance) {
     var already = state.tackledThisCard || [];
     var eligible = state.teams.some(function (t, i) { return i !== state.currentTeamIndex && already.indexOf(i) === -1; });
-    if (!eligible || state.cardEnded) { advance(false); return; }
+    if (!eligible || state.cardEnded) {
+      // Pas de Tackle possible : on le dit 3 s dans la bande du chrono, sinon on croit à un bug.
+      var others = state.teams.filter(function (t, i) { return i !== state.currentTeamIndex; });
+      if (others.length && !state.cardEnded) {
+        state.clockNote = others.length === 1
+          ? L("Pas de Tackle : ", "Sem tackle: ") + others[0].name + L(" l'ont déjà tenté", " já tentaram")
+          : L("Pas de Tackle : les adversaires l'ont déjà tenté", "Sem tackle: os adversários já tentaram");
+        state.clockNoteUntil = Date.now() + 3000;
+      }
+      advance(false);
+      return;
+    }
     clearTackleTimer();
     state.passWindow = true;
     state.tacklePhase = "open";
