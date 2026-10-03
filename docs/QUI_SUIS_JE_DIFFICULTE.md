@@ -1,6 +1,14 @@
 # Qui suis-je ? — difficulté des indices (analyse du 3 octobre 2026)
 
-Analyse demandée par David après les journaux de parties du 29 septembre au 3 octobre. **Rien n'est changé dans les cartes** : proposition à valider.
+Analyse demandée par David après les journaux de parties du 29 septembre au 3 octobre. Les chiffres ci-dessous décrivent les cartes **avant** le recalibrage du 3 octobre.
+
+## Recalibrage du 3 octobre 2026
+
+David a choisi de recalibrer les fiches tout en conservant l'ordre fixe : **club → trophée → poste → coéquipier → nationalité**, un seul fait par indice et 5/4/3/2/1 points.
+
+- Le premier club a été remplacé dans **84 fiches sur 100** par un autre club de la carrière Transfert déjà sourcée du même joueur. Les quatre autres indices et les réponses n'ont pas changé. Les fichiers français et portugais ont été mis à jour ensemble.
+- Avant, le premier indice affichait « Real Madrid » sur 27 fiches, « Barcelona » ou « FC Barcelone » sur 22 et « Chelsea » sur 15. Après recalibrage, aucun premier club n'apparaît sur plus de 8 fiches en français. Cette diversité est un contrôle éditorial, **pas une preuve de difficulté réelle** : un club moins partagé peut aussi être inconnu des joueurs.
+- **À retester en partie :** relever l'indice de chaque bonne réponse. L'objectif est de voir davantage de réponses aux indices 2–3 sans rendre le premier indice évident.
 
 ## Ce que montrent les parties (21 parties, deux journaux)
 
@@ -30,7 +38,7 @@ Ordre actuel (5 → 1 point) : club → trophée → poste → coéquipier → n
 
 L'indice à 5 points cite le club **le plus célèbre** du joueur, partagé par des dizaines de joueurs : impossible de trouver avec. L'indice le plus discriminant (coéquipier) n'arrive qu'en 4e. La nationalité, ajoutée à tout le reste, fait trouver au 5e.
 
-## Proposition (non validée)
+## Proposition antérieure, non retenue
 
 Ordre du plus dur (mais trouvable par un connaisseur) au plus facile :
 
@@ -40,7 +48,7 @@ Ordre du plus dur (mais trouvable par un connaisseur) au plus facile :
 4. **Coéquipier** (2 pts).
 5. **Grand club** (1 pt) : « J'ai joué au Real Madrid » — presque donné avec le reste.
 
-Objectif : que les joueurs connus se trouvent vers les indices 2–3, comme Transfert.
+Cette proposition changeait l'ordre et combinait deux informations au troisième indice. Elle n'a pas été appliquée : le recalibrage ci-dessus respecte la structure validée par David.
 
 ## Petite incohérence à corriger au passage
 
