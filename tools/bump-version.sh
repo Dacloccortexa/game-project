@@ -7,4 +7,5 @@ cd "$(dirname "$0")/.."
 V=$(TZ=Indian/Mauritius date +%Y.%m.%d-%H%M)
 sed -i.bak "s/var APP_VERSION = \"[^\"]*\";/var APP_VERSION = \"$V\";/" index.html && rm -f index.html.bak
 printf '{ "version": "%s" }\n' "$V" > version.json
+node tools/data-manifest.cjs >/dev/null
 echo "Version $V"

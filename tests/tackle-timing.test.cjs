@@ -417,6 +417,9 @@ for (const [file, key] of [['transfert-cards.json', 'cards'], ['quisuisje-cards.
   }
 }
 
+// Empreintes des fichiers de questions à jour (tools/data-manifest.cjs, lancé par bump-version.sh).
+require('child_process').execFileSync('node', ['tools/data-manifest.cjs', '--check'], { stdio: 'inherit' });
+
 // La version du jeu et version.json doivent correspondre (tools/bump-version.sh).
 const pageVersion = fs.readFileSync('index.html', 'utf8').match(/var APP_VERSION = "([^"]+)"/)[1];
 assert.equal(JSON.parse(fs.readFileSync('version.json', 'utf8')).version, pageVersion);

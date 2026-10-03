@@ -2885,6 +2885,28 @@
   var REMOTE_DATA_BASE = "https://dacloccortexa.github.io/game-project/";
   // Questions traduites : src/data/pt/… (générées par tools/translate_pt.py). Les stats Plus ou Moins sont communes.
   var PT_DATA = ["transfert-cards.json", "quisuisje-cards.json", "lematch-cards.json", "vraifaux-statements.json"];
+  // Appli : on télécharge d'abord src/data/manifest.json (empreinte de chaque fichier, quelques Ko),
+  // puis seulement les fichiers qui diffèrent de la copie embarquée ; ils sont gardés sur le
+  // téléphone jusqu'au prochain changement (DECISIONS.md, 2026-10-03). Sans réseau : dernière
+  // version téléchargée, sinon copie embarquée.
+  var DATA_CACHE_PREFIX = "tackle-data-v1:";
+  var remoteManifestP = null, localManifestP = null;
+  function withTimeout(p, ms) {
+    return Promise.race([p, new Promise(function (resolve) { setTimeout(function () { resolve(null); }, ms); })]);
+  }
+  function remoteManifest() {
+    if (!remoteManifestP) remoteManifestP = withTimeout(fetch(REMOTE_DATA_BASE + "src/data/manifest.json?t=" + Date.now(), { cache: "no-store" }), 5000)
+      .then(function (r) { return r && r.ok ? r.json() : null; }).catch(function () { return null; });
+    return remoteManifestP;
+  }
+  function localManifest() {
+    if (!localManifestP) localManifestP = fetch("src/data/manifest.json").then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
+    return localManifestP;
+  }
+  function readDataCache(path) { try { return JSON.parse(localStorage.getItem(DATA_CACHE_PREFIX + path) || "null"); } catch (e) { return null; } }
+  function writeDataCache(path, h, text) { try { localStorage.setItem(DATA_CACHE_PREFIX + path, JSON.stringify({ h: h, text: text })); } catch (e) {} }
+  function dropDataCache(path) { try { localStorage.removeItem(DATA_CACHE_PREFIX + path); } catch (e) {} }
+  function textResponse(text) { return new Response(text, { headers: { "Content-Type": "application/json" } }); }
   function fetchData(path) {
     if (LANG === "pt") {
       var file = path.split("/").pop();
@@ -2892,10 +2914,18 @@
     }
     function local() { return fetch(path, { cache: "no-store" }); }
     if (!NATIVE) return local();
-    var timeout = new Promise(function (resolve) { setTimeout(function () { resolve(null); }, 5000); });
-    return Promise.race([fetch(REMOTE_DATA_BASE + path + "?t=" + Date.now(), { cache: "no-store" }), timeout])
-      .then(function (res) { if (res && res.ok) return res; throw new Error("distant indisponible"); })
-      .catch(local);
+    return Promise.all([remoteManifest(), localManifest()]).then(function (m) {
+      var remote = m[0] && m[0].files, embedded = (m[1] && m[1].files) || {};
+      var cached = readDataCache(path);
+      if (!remote || !remote[path]) return cached ? textResponse(cached.text) : local();
+      var h = remote[path];
+      if (embedded[path] === h) { if (cached) dropDataCache(path); return local(); } // la copie embarquée est à jour
+      if (cached && cached.h === h) return textResponse(cached.text);                   // déjà téléchargé
+      return withTimeout(fetch(REMOTE_DATA_BASE + path + "?v=" + h), 8000).then(function (res) {
+        if (!res || !res.ok) throw new Error("distant indisponible");
+        return res.text().then(function (text) { JSON.parse(text); writeDataCache(path, h, text); return textResponse(text); });
+      }).catch(function () { return cached ? textResponse(cached.text) : local(); });
+    }).catch(local);
   }
   if (NATIVE) {
     try { var ka = nativePlugin("KeepAwake"); if (ka) ka.keepAwake(); } catch (e) {} // pas de mise en veille pendant la soirée
@@ -3261,7 +3291,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.03-2146";
+  var APP_VERSION = "2026.10.03-2226";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {

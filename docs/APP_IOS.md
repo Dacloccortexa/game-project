@@ -6,7 +6,7 @@ Statut : **projet iOS prêt dans le dépôt** (2026-10-02), à compiler sur le M
 
 - **Un seul jeu.** `index.html` sert à la fois au site (GitHub Pages) et à l'appli. On continue de tout modifier au même endroit.
 - L'appli est le jeu **embarqué** dans une appli native via [Capacitor](https://capacitorjs.com) (dossier `ios/`). Elle fonctionne sans connexion.
-- **Questions à jour sans nouvelle version** : au lancement, l'appli télécharge les fichiers de `src/data/` depuis le site (`https://dacloccortexa.github.io/game-project/`). Sans réseau (ou si le site ne répond pas en 5 s), elle utilise la copie embarquée. Ajouter, corriger ou retirer des cartes = modifier `src/data/` sur `main`, c'est tout.
+- **Questions à jour sans nouvelle version** : au lancement, l'appli télécharge les fichiers de `src/data/` depuis le site (`https://dacloccortexa.github.io/game-project/`). Sans réseau (ou si le site ne répond pas en 5 s), elle utilise la copie embarquée. Seuls les fichiers modifiés sont téléchargés (empreintes dans `src/data/manifest.json`), puis gardés sur le téléphone. Ajouter, corriger ou retirer des cartes = modifier `src/data/` sur `main`, puis lancer `tools/bump-version.sh` (il met le manifeste à jour) avant d'envoyer.
 - **Tout le reste** (règles, écrans, nouveaux défis) nécessite une nouvelle version de l'appli (TestFlight : ~1 h ; App Store : relecture Apple, en général 1 à 2 jours).
 - Le bandeau « Nouvelle version disponible » du site est désactivé dans l'appli (elle se met à jour par l'App Store).
 

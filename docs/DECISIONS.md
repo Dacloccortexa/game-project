@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-10-03] Appli : ne retélécharger que les questions qui ont changé
+- Question de David : « à 10 000 joueurs par jour, l'appli va-t-elle planter ? » Non : pas de serveur, tout se joue sur le téléphone. Seul point : chaque lancement retéléchargeait toutes les questions depuis GitHub Pages (~130 Ko compressés), soit ~60 Go/mois à 10 000 joueurs/jour, près de la limite gratuite de GitHub Pages (~100 Go/mois).
+- Maintenant : `src/data/manifest.json` donne l'empreinte de chaque fichier de questions (~1 Ko). Au lancement, l'appli lit ce fichier, puis ne télécharge que les fichiers différents de sa copie embarquée, et les garde sur le téléphone jusqu'au prochain changement. Trafic divisé par ~100 en temps normal. Sans réseau : dernière version téléchargée, sinon copie embarquée (comme avant).
+- Le manifeste est régénéré par `tools/bump-version.sh` (via `tools/data-manifest.cjs`) ; le test échoue s'il n'est pas à jour. **Après une modification de questions, toujours lancer `tools/bump-version.sh` avant d'envoyer.**
+- Le site (navigateur) n'est pas concerné : il lit ses fichiers directement.
+
 ## [2026-10-03] Nouvel écran de fin de partie, avec image de résultat à partager
 - Demande de David, pour faire connaître le jeu (chaque partie montre TACKLE à 4–8 personnes ; partage = premier levier de la projection « ambitieuse »).
 - Écran de fin refait dans le style du classement entre deux manches : logo, « 10 manches · 24 min », encadré du vainqueur (logo, nom, score ; « Égalité » si ex æquo ; « Ton score » à une équipe), classement complet, puis **Partager le résultat**, **Revanche**, **Retour à l'accueil**.
