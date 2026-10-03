@@ -95,6 +95,6 @@ Offrir l'abonnement à certaines personnes : **codes d'offre** Apple (App Store 
 - [ ] Adresse de contact dans `privacy.html` + URL de support.
 - [ ] Captures d'écran iPhone 6,9″ (1320 × 2868), au moins 3.
 - [ ] Description, sous-titre, mots-clés, catégorie **Jeux → Quiz** (et Jeux de société), classification par âge.
-- [ ] « Confidentialité de l'app » : **Aucune donnée collectée**.
+- [ ] « Confidentialité de l'app » : déclarer **Achats → Historique d'achats** (finalités : Fonctionnalité de l'app + Analyse ; **non lié** à l'identité ; **pas de suivi**). Rien d'autre (identifiants RevenueCat anonymes). Source : [guide RevenueCat](https://www.revenuecat.com/docs/platform-resources/apple-platform-resources/apple-app-privacy). `privacy.html` le mentionne.
 - [ ] Abonnement configuré (voir « Abonnement ») et prix choisis.
 - [ ] Vérifier les droits : noms réels de joueurs/clubs en texte (OK pour un quiz factuel), aucune photo, aucun logo de club ni de compétition.
