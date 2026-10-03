@@ -5,6 +5,7 @@
 - Écran de fin refait dans le style du classement entre deux manches : logo, « 10 manches · 24 min », encadré du vainqueur (logo, nom, score ; « Égalité » si ex æquo ; « Ton score » à une équipe), classement complet, puis **Partager le résultat**, **Revanche**, **Retour à l'accueil**.
 - **Partager le résultat** fabrique une image 1080 × 1350 (format portrait des réseaux) : stade, logo TACKLE, vainqueur et score, autres équipes, « Le quiz foot entre potes · lafamivy.com ». Appli : menu de partage iOS avec l'image et un texte (« Les Lions gagnent sur TACKLE avec 23 points ! … »). Navigateur : partage natif si possible, sinon l'image s'affiche pour l'enregistrer d'un appui long.
 - **QR code** en bas de l'image (« Scanne pour jouer ») vers **lafamivy.com/tackle** (`assets/ui/web/qr-tackle.png`, `SHARE_URL`). Cette page du site présente le jeu et renvoie pour l'instant vers la version navigateur ; **à la sortie, il suffira de la faire pointer vers l'App Store** : le QR code et les images déjà partagées resteront valables.
+- Le même QR code est aussi affiché sur l'écran de fin, sous les boutons (« Tes potes veulent y rejouer ? Scannez pour avoir TACKLE ») : les joueurs autour de la table scannent directement le téléphone.
 - Appli iOS : plugin `@capacitor/filesystem` ajouté (l'image est écrite dans le cache avant le partage). Français et portugais.
 
 ## [2026-10-03] Course au Tackle à 5 s, et Tackle ouvert après chaque « Passer »

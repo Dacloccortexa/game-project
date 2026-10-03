@@ -1540,6 +1540,12 @@
   .final-actions .text-btn { justify-self: center; color: var(--chalk); font-size: 15px; min-height: 44px; }
   .final-status { margin: 0; min-height: 20px; text-align: center; font-size: 14px; color: var(--chalk-dim); }
   .final-status:empty { display: none; }
+  .final-qr { display: flex; align-items: center; gap: 14px; padding: 12px 14px; border-radius: 16px; border: 1.5px solid rgba(248,246,237,.3); background: rgba(8,35,24,.9); }
+  .final-qr img { width: 112px; height: 112px; flex-shrink: 0; border-radius: 10px; image-rendering: pixelated; }
+  .final-qr > div { min-width: 0; display: grid; gap: 2px; }
+  .final-qr-title { font-family: var(--font-cond); font-weight: 700; font-size: 20px; line-height: 1.15; text-transform: uppercase; color: var(--gold); }
+  .final-qr-text { font-size: 15px; color: var(--chalk); }
+  .final-qr-url { font-size: 13px; color: var(--chalk-dim); }
   .share-preview { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 20px; background: rgba(0,0,0,.88); text-align: center; color: var(--chalk); }
   .share-preview.hidden-screen { display: none; }
   .share-preview img { max-width: min(420px, 100%); max-height: 72vh; border-radius: 12px; }
@@ -2698,6 +2704,14 @@
       <button type="button" class="text-btn" id="btn-final-home">Retour à l'accueil</button>
     </div>
     <p class="final-status" id="final-status" role="status" aria-live="polite"></p>
+    <div class="final-qr">
+      <img src="assets/ui/web/qr-tackle.png" width="112" height="112" alt="QR code vers lafamivy.com/tackle">
+      <div>
+        <div class="final-qr-title">Tes potes veulent y rejouer ?</div>
+        <div class="final-qr-text">Scannez pour avoir TACKLE</div>
+        <div class="final-qr-url">lafamivy.com/tackle</div>
+      </div>
+    </div>
     <div class="share-preview hidden-screen" id="share-preview">
       <p>Appuie longuement sur l'image pour l'enregistrer ou l'envoyer.</p>
       <img id="share-preview-img" alt="Résultat de la partie TACKLE">
@@ -2804,6 +2818,8 @@
     "Victoire": "Vitória",
     "Appuie longuement sur l'image pour l'enregistrer ou l'envoyer.": "Mantém o dedo na imagem para a guardar ou enviar.",
     "Fermer": "Fechar",
+    "Tes potes veulent y rejouer ?": "Os teus amigos querem voltar a jogar?",
+    "Scannez pour avoir TACKLE": "Leiam o código para ter o TACKLE",
     "Celui qui tient le téléphone arbitre : choisir la première équipe à avoir crié « Tackle »": "Quem tem o telemóvel é o árbitro: escolher a primeira equipa a gritar «Tackle»",
     "Une seule équipe répond": "Só uma equipa responde",
     "Le chrono est arrêté pendant ce choix": "O cronómetro está parado durante esta escolha",
@@ -3245,7 +3261,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.03-2119";
+  var APP_VERSION = "2026.10.03-2146";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
