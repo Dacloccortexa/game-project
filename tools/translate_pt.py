@@ -228,6 +228,9 @@ def do_lematch(d):
         r = lookup("rounds", card["round"], card["id"])
         if r:
             card["round"] = r
+        city = lookup("cities", card["city"], card["id"])
+        if city:
+            card["city"] = city["pt"]
         fr_teams = list(card["teams"])
         card["teams"] = [team(t, card["id"])[0] for t in fr_teams]
         aliases = card.get("team_aliases") or [[] for _ in fr_teams]

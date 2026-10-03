@@ -72,7 +72,7 @@
 - Décision de David : remplacer les événements par **compétition (5 pts), année (4 pts), score final (3 pts), ville du match (2 pts), stade de la compétition (1 pt)**. « Ville » a été précisé par David ; « stade de la compétition » désigne la phase, par exemple finale ou demi-finale, et non le nom de l'enceinte.
 - L'équipe doit toujours trouver les deux équipes ; les règles de réponse, de passe, de pénalité et de Tackle restent celles du Match. Le chrono 30 + 15 secondes repart à chaque indice.
 - La compétition devient le premier indice à 5 points au lieu d'être affichée hors score avant cinq événements. L'année, auparavant cachée, devient le deuxième indice.
-- Mise en œuvre à faire : ajouter une ville fiable et sourcée aux 103 fiches, puis adapter l'écran et les contrôles du jeu. Ne pas confondre cette règle validée avec l'état actuel de l'app.
+- Mise en œuvre le 2 octobre : ville et lien source ajoutés aux 103 fiches ; écran et progression adaptés. Les anciens événements restent dans les données pour archivage, mais ne sont plus joués.
 
 
 ## [2026-10-01] Jamais deux manches de suite avec le même défi

@@ -1,6 +1,6 @@
 # Le Match : pack « tableau d'affichage »
 
-La [planche validée](../../../docs/ui/26-le-match-evenement-3.jpg) montre l'intention. [`preview.html`](preview.html) assemble les éléments séparés et permet de voir les cinq événements. Les faits de l'aperçu ne sont pas des cartes à ajouter au jeu.
+La [planche initiale](../../../docs/ui/26-le-match-evenement-3.jpg) montre l'ambiance. [`preview.html`](preview.html) assemble les éléments séparés avec l'ancienne mécanique à cinq événements ; depuis le 2 octobre 2026, le jeu affiche à la place cinq indices : compétition, année, score final, ville et phase. Les faits de l'aperçu ne sont pas des cartes à ajouter au jeu.
 
 | Fichier | Usage |
 | --- | --- |

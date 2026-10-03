@@ -1,6 +1,8 @@
 # Le Match — finales et demi-finales
 
-103 fiches sourcées marquées comme lues le 28 septembre 2026. Leur difficulté et les erreurs éventuelles restent à éprouver en partie. La compétition seule est affichée dans le jeu ; années et équipes sont réservées à la vérification.
+**Archive de la mécanique initiale.** Depuis le 2 octobre 2026, les événements détaillés ci-dessous ne sont plus montrés dans l'app. Le jeu révèle compétition, année, score final, ville et phase, dans cet ordre. Les villes et leurs liens sources figurent dans `src/data/lematch-cards.json` ; les règles actuelles figurent dans `GAME_DESIGN.md`.
+
+103 fiches sourcées marquées comme lues le 28 septembre 2026. Dans cette ancienne version, la compétition seule était affichée avant les événements ; les années et les équipes servaient à la vérification.
 Les cinq événements sont des extraits du match, dans l’ordre chronologique. Les scores peuvent sauter lorsqu’un but intermédiaire ne figure pas parmi les cinq événements sélectionnés.
 La Coupe du monde 1950 avait un groupe final, sans finale ni demi-finales officielles. Les éditions 1974 et 1978 avaient une finale mais pas de demi-finales officielles. Les finales européennes de 1977–1992 relèvent de la Coupe des clubs champions.
 

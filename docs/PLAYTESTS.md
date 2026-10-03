@@ -5,7 +5,8 @@
 - **Observation rapportée :** Le Match est trop difficile.
 - **Contexte manquant :** nombre d'équipes, âge des joueurs, cartes sorties et taux de bonnes réponses non relevés.
 - **Suite décidée :** remplacer les cinq événements chronologiques par cinq indices dans un ordre fixe : compétition, année, score final, ville, phase de la compétition (5 à 1 point). Décision détaillée dans `DECISIONS.md`.
-- **À retester après intégration :** combien de cartes sont trouvées, et à quel indice.
+- **Intégration du 2 octobre :** la suite d'indices a remplacé les événements dans l'app ; les 103 villes sont sourcées dans les fiches.
+- **À retester :** combien de cartes sont trouvées, et à quel indice.
 
 
 ## [2026-10-03] Partie de David avec Achille

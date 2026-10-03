@@ -47,7 +47,7 @@ function advance(ms) {
 }
 
 let script = fs.readFileSync('index.html', 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
-script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame, drawFromDeck};})();');
+script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame, drawFromDeck, renderLmClues};})();');
 const context = {
   document: { getElementById: element, createElement: tag => element(`created-${tag}-${Math.random()}`), querySelector: element, querySelectorAll: () => [] },
   fetch: () => Promise.resolve({ json: () => Promise.resolve({ cards: [], players: [], statements: [] }) }),
@@ -58,7 +58,7 @@ const context = {
 };
 vm.createContext(context);
 vm.runInContext(script, context);
-const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake, pickNextMinigame, drawFromDeck } = context.testApi;
+const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake, pickNextMinigame, drawFromDeck, renderLmClues } = context.testApi;
 
 function reset(game) {
   timers.clear();
@@ -95,8 +95,12 @@ assert.equal(currentTackleStake(), 4);
 assert.equal(element('btn-tackle').disabled, true);
 
 reset('lematch');
-state.currentLmCard = {competition:'Coupe du monde', teams:['A','B'], events:['But','Mi-temps']};
+state.currentLmCard = {teams:['A','B'], clues:['Coupe du monde','Année : 2018','Score final : 4–2','Ville : Moscou','Phase : Finale']};
 state.lmRevealedCount = 1;
+renderLmClues();
+assert.equal(element('lm-event-list').children.length, 5);
+assert.equal(element('lm-event-list').children[0].children[2].children[0].textContent, 'Coupe du monde');
+assert.equal(element('lm-event-list').children[1].children[2].children[0].textContent, 'Indice à venir');
 startTackleWindow();
 assert.equal(currentTackleStake(), 5);
 advance(30000);
@@ -104,6 +108,7 @@ advance(15000);
 assert.equal(state.lmRevealedCount, 2);
 assert.equal(currentTackleStake(), 4);
 assert.equal(element('btn-tackle').disabled, true);
+assert.equal(element('lm-event-list').children[1].children[2].children[0].textContent, 'Année : 2018');
 
 reset('transfert');
 state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
@@ -352,6 +357,27 @@ for (const [file, key] of [['transfert-cards.json', 'cards'], ['quisuisje-cards.
   const fr = JSON.parse(fs.readFileSync('src/data/' + file, 'utf8'))[key];
   const pt = JSON.parse(fs.readFileSync('src/data/pt/' + file, 'utf8'))[key];
   assert.deepEqual(pt.map(x => x.id), fr.map(x => x.id), file);
+}
+
+// Chaque match doit pouvoir révéler les cinq indices, sans deux cartes identiques au dernier indice.
+{
+  const cards = JSON.parse(fs.readFileSync('src/data/lematch-cards.json', 'utf8')).cards;
+  const ptCards = JSON.parse(fs.readFileSync('src/data/pt/lematch-cards.json', 'utf8')).cards;
+  const citiesPt = JSON.parse(fs.readFileSync('tools/i18n/pt_names.json', 'utf8')).cities;
+  assert.equal(cards.length, 103);
+  assert.equal(ptCards.length, cards.length);
+  const signatures = new Set();
+  for (const [index, card] of cards.entries()) {
+    assert.ok(card.competition && Number.isInteger(card.year) && card.city && card.city_source_url, card.id);
+    assert.equal(card.score.length, 2, card.id);
+    assert.ok(['Final', 'Semi-final'].includes(card.round), card.id);
+    const signature = JSON.stringify([card.competition, card.year, card.score, card.city, card.round]);
+    assert.equal(signatures.has(signature), false, `Indices identiques : ${card.id}`);
+    signatures.add(signature);
+    assert.equal(ptCards[index].id, card.id);
+    assert.equal(ptCards[index].city, citiesPt[card.city].pt, card.id);
+    assert.equal(ptCards[index].city_source_url, card.city_source_url, card.id);
+  }
 }
 
 // La version du jeu et version.json doivent correspondre (tools/bump-version.sh).

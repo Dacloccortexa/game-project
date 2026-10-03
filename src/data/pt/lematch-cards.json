@@ -1,13 +1,13 @@
 {
   "lang": "pt-PT",
   "game_id": "lematch",
-  "version": "lu-1",
-  "prepared_at": "2026-09-28",
+  "version": "clues-2",
+  "prepared_at": "2026-10-02",
   "scope": {
     "world_cup": "Finales et demi-finales officielles 1954–2026 (1950 sans finale ni demi-finale ; 1974 et 1978 sans demi-finales)",
     "european_cup": "50 finales de 1977 à 2026, dont 16 Coupes des clubs champions avant 1993"
   },
-  "status": "lot marqué comme lu, à éprouver en partie",
+  "status": "103 fiches enrichies de la ville pour la nouvelle mécanique à cinq indices",
   "attribution": {
     "world_cup": "openfootball/worldcup.json, CC0 1.0; https://github.com/openfootball/worldcup.json",
     "european_cup": "Wikipédia + liens de feuilles de match UEFA quand présents"
@@ -90,7 +90,9 @@
           "Austria",
           "Autriche"
         ]
-      ]
+      ],
+      "city": "Basileia",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup-full.json"
     },
     {
       "id": "lm-wc-1954-semifinal-2",
@@ -166,7 +168,9 @@
         [
           "Uruguay"
         ]
-      ]
+      ],
+      "city": "Lausana",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup-full.json"
     },
     {
       "id": "lm-wc-1954-final-3",
@@ -245,7 +249,9 @@
           "Hungary",
           "Hongrie"
         ]
-      ]
+      ],
+      "city": "Berna",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup-full.json"
     },
     {
       "id": "lm-wc-1958-semifinal-1",
@@ -321,7 +327,9 @@
         [
           "France"
         ]
-      ]
+      ],
+      "city": "Solna",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1958/worldcup-full.json"
     },
     {
       "id": "lm-wc-1958-semifinal-2",
@@ -400,7 +408,9 @@
           "Allemagne de l'Ouest",
           "Allemagne de l’Ouest"
         ]
-      ]
+      ],
+      "city": "Gotemburgo",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1958/worldcup-full.json"
     },
     {
       "id": "lm-wc-1958-final-3",
@@ -477,7 +487,9 @@
           "Sweden",
           "Suède"
         ]
-      ]
+      ],
+      "city": "Solna",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1958/worldcup-full.json"
     },
     {
       "id": "lm-wc-1962-semifinal-1",
@@ -554,7 +566,9 @@
           "Yugoslavia",
           "Yougoslavie"
         ]
-      ]
+      ],
+      "city": "Viña del Mar",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1962/worldcup-full.json"
     },
     {
       "id": "lm-wc-1962-semifinal-2",
@@ -631,7 +645,9 @@
           "Chile",
           "Chili"
         ]
-      ]
+      ],
+      "city": "Santiago",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1962/worldcup-full.json"
     },
     {
       "id": "lm-wc-1962-final-3",
@@ -708,7 +724,9 @@
           "Czechoslovakia",
           "Tchécoslovaquie"
         ]
-      ]
+      ],
+      "city": "Santiago",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1962/worldcup-full.json"
     },
     {
       "id": "lm-wc-1966-semifinal-1",
@@ -787,7 +805,9 @@
           "Soviet Union",
           "Union soviétique"
         ]
-      ]
+      ],
+      "city": "Liverpool",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup-full.json"
     },
     {
       "id": "lm-wc-1966-semifinal-2",
@@ -861,7 +881,9 @@
           "Angleterre"
         ],
         []
-      ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup-full.json"
     },
     {
       "id": "lm-wc-1966-final-3",
@@ -940,7 +962,9 @@
           "Allemagne de l'Ouest",
           "Allemagne de l’Ouest"
         ]
-      ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup-full.json"
     },
     {
       "id": "lm-wc-1970-semifinal-1",
@@ -1016,7 +1040,9 @@
         [
           "Uruguay"
         ]
-      ]
+      ],
+      "city": "Guadalajara",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup-full.json"
     },
     {
       "id": "lm-wc-1970-semifinal-2",
@@ -1095,7 +1121,9 @@
           "Allemagne de l'Ouest",
           "Allemagne de l’Ouest"
         ]
-      ]
+      ],
+      "city": "Cidade do México",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup-full.json"
     },
     {
       "id": "lm-wc-1970-final-3",
@@ -1172,7 +1200,9 @@
           "Italy",
           "Italie"
         ]
-      ]
+      ],
+      "city": "Cidade do México",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup-full.json"
     },
     {
       "id": "lm-wc-1974-final-1",
@@ -1252,7 +1282,9 @@
           "Allemagne de l'Ouest",
           "Allemagne de l’Ouest"
         ]
-      ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1974/worldcup-full.json"
     },
     {
       "id": "lm-wc-1978-final-1",
@@ -1330,7 +1362,9 @@
           "Hollande",
           "Pays-Bas"
         ]
-      ]
+      ],
+      "city": "Buenos Aires",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1978/worldcup-full.json"
     },
     {
       "id": "lm-wc-1982-semifinal-1",
@@ -1407,7 +1441,9 @@
           "Italy",
           "Italie"
         ]
-      ]
+      ],
+      "city": "Barcelona",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup-full.json"
     },
     {
       "id": "lm-wc-1982-semifinal-2",
@@ -1485,7 +1521,9 @@
         [
           "France"
         ]
-      ]
+      ],
+      "city": "Sevilha",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup-full.json"
     },
     {
       "id": "lm-wc-1982-final-3",
@@ -1564,7 +1602,9 @@
           "Allemagne de l'Ouest",
           "Allemagne de l’Ouest"
         ]
-      ]
+      ],
+      "city": "Madrid",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup-full.json"
     },
     {
       "id": "lm-wc-1986-semifinal-1",
@@ -1642,7 +1682,9 @@
           "Allemagne de l'Ouest",
           "Allemagne de l’Ouest"
         ]
-      ]
+      ],
+      "city": "Guadalajara",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup-full.json"
     },
     {
       "id": "lm-wc-1986-semifinal-2",
@@ -1719,7 +1761,9 @@
           "Belgium",
           "Belgique"
         ]
-      ]
+      ],
+      "city": "Cidade do México",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup-full.json"
     },
     {
       "id": "lm-wc-1986-final-3",
@@ -1798,7 +1842,9 @@
           "Allemagne de l'Ouest",
           "Allemagne de l’Ouest"
         ]
-      ]
+      ],
+      "city": "Cidade do México",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup-full.json"
     },
     {
       "id": "lm-wc-1990-semifinal-1",
@@ -1875,7 +1921,9 @@
           "Argentina",
           "Argentine"
         ]
-      ]
+      ],
+      "city": "Nápoles",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup-full.json"
     },
     {
       "id": "lm-wc-1990-semifinal-2",
@@ -1954,7 +2002,9 @@
           "England",
           "Angleterre"
         ]
-      ]
+      ],
+      "city": "Turim",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup-full.json"
     },
     {
       "id": "lm-wc-1990-final-3",
@@ -2033,7 +2083,9 @@
           "Argentina",
           "Argentine"
         ]
-      ]
+      ],
+      "city": "Roma",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup-full.json"
     },
     {
       "id": "lm-wc-1994-semifinal-1",
@@ -2110,7 +2162,9 @@
           "Italy",
           "Italie"
         ]
-      ]
+      ],
+      "city": "East Rutherford",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup-full.json"
     },
     {
       "id": "lm-wc-1994-semifinal-2",
@@ -2187,7 +2241,9 @@
           "Brazil",
           "Brésil"
         ]
-      ]
+      ],
+      "city": "Pasadena",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup-full.json"
     },
     {
       "id": "lm-wc-1994-final-3",
@@ -2264,7 +2320,9 @@
           "Italy",
           "Italie"
         ]
-      ]
+      ],
+      "city": "Pasadena",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup-full.json"
     },
     {
       "id": "lm-wc-1998-semifinal-1",
@@ -2342,7 +2400,9 @@
           "Hollande",
           "Pays-Bas"
         ]
-      ]
+      ],
+      "city": "Marselha",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup-full.json"
     },
     {
       "id": "lm-wc-1998-semifinal-2",
@@ -2418,7 +2478,9 @@
           "Croatia",
           "Croatie"
         ]
-      ]
+      ],
+      "city": "Saint-Denis",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup-full.json"
     },
     {
       "id": "lm-wc-1998-final-3",
@@ -2494,7 +2556,9 @@
         [
           "France"
         ]
-      ]
+      ],
+      "city": "Saint-Denis",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup-full.json"
     },
     {
       "id": "lm-wc-2002-semifinal-1",
@@ -2572,7 +2636,9 @@
           "South Korea",
           "Corée du Sud"
         ]
-      ]
+      ],
+      "city": "Seul",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup-full.json"
     },
     {
       "id": "lm-wc-2002-semifinal-2",
@@ -2649,7 +2715,9 @@
           "Turkey",
           "Turquie"
         ]
-      ]
+      ],
+      "city": "Saitama",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup-full.json"
     },
     {
       "id": "lm-wc-2002-final-3",
@@ -2727,7 +2795,9 @@
           "Brazil",
           "Brésil"
         ]
-      ]
+      ],
+      "city": "Yokohama",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup-full.json"
     },
     {
       "id": "lm-wc-2006-semifinal-1",
@@ -2805,7 +2875,9 @@
           "Italy",
           "Italie"
         ]
-      ]
+      ],
+      "city": "Dortmund",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup-full.json"
     },
     {
       "id": "lm-wc-2006-semifinal-2",
@@ -2878,7 +2950,9 @@
         [
           "France"
         ]
-      ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup-full.json"
     },
     {
       "id": "lm-wc-2006-final-3",
@@ -2954,7 +3028,9 @@
         [
           "France"
         ]
-      ]
+      ],
+      "city": "Berlim",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup-full.json"
     },
     {
       "id": "lm-wc-2010-semifinal-1",
@@ -3031,7 +3107,9 @@
           "Hollande",
           "Pays-Bas"
         ]
-      ]
+      ],
+      "city": "Cidade do Cabo",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup-full.json"
     },
     {
       "id": "lm-wc-2010-semifinal-2",
@@ -3109,7 +3187,9 @@
           "Spain",
           "Espagne"
         ]
-      ]
+      ],
+      "city": "Durban",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup-full.json"
     },
     {
       "id": "lm-wc-2010-final-3",
@@ -3187,7 +3267,9 @@
           "Spain",
           "Espagne"
         ]
-      ]
+      ],
+      "city": "Joanesburgo",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup-full.json"
     },
     {
       "id": "lm-wc-2014-semifinal-1",
@@ -3265,7 +3347,9 @@
           "RFA",
           "Allemagne"
         ]
-      ]
+      ],
+      "city": "Belo Horizonte",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup-full.json"
     },
     {
       "id": "lm-wc-2014-semifinal-2",
@@ -3343,7 +3427,9 @@
           "Argentina",
           "Argentine"
         ]
-      ]
+      ],
+      "city": "São Paulo",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup-full.json"
     },
     {
       "id": "lm-wc-2014-final-3",
@@ -3421,7 +3507,9 @@
           "Argentina",
           "Argentine"
         ]
-      ]
+      ],
+      "city": "Rio de Janeiro",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup-full.json"
     },
     {
       "id": "lm-wc-2018-semifinal-1",
@@ -3497,7 +3585,9 @@
           "Belgium",
           "Belgique"
         ]
-      ]
+      ],
+      "city": "São Petersburgo",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup-full.json"
     },
     {
       "id": "lm-wc-2018-semifinal-2",
@@ -3574,7 +3664,9 @@
           "England",
           "Angleterre"
         ]
-      ]
+      ],
+      "city": "Moscovo",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup-full.json"
     },
     {
       "id": "lm-wc-2018-final-3",
@@ -3650,7 +3742,9 @@
           "Croatia",
           "Croatie"
         ]
-      ]
+      ],
+      "city": "Moscovo",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup-full.json"
     },
     {
       "id": "lm-wc-2022-semifinal-1",
@@ -3727,7 +3821,9 @@
           "Croatia",
           "Croatie"
         ]
-      ]
+      ],
+      "city": "Lusail",
+      "city_source_url": "https://www.fifa.com/en/articles/argentina-croatia-semi-final-world-cup-qatar-2022-messi-alvarez-fans-video-reaction"
     },
     {
       "id": "lm-wc-2022-semifinal-2",
@@ -3803,7 +3899,9 @@
           "Morocco",
           "Maroc"
         ]
-      ]
+      ],
+      "city": "Al Khor",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup-full.json"
     },
     {
       "id": "lm-wc-2022-final-3",
@@ -3879,7 +3977,9 @@
         [
           "France"
         ]
-      ]
+      ],
+      "city": "Lusail",
+      "city_source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/argentina-france-2022-final-greatest-games"
     },
     {
       "id": "lm-wc-2026-semifinal-1",
@@ -3955,7 +4055,9 @@
           "Spain",
           "Espagne"
         ]
-      ]
+      ],
+      "city": "Dallas",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup-full.json"
     },
     {
       "id": "lm-wc-2026-semifinal-2",
@@ -4032,7 +4134,9 @@
           "Argentina",
           "Argentine"
         ]
-      ]
+      ],
+      "city": "Atlanta",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup-full.json"
     },
     {
       "id": "lm-wc-2026-final-3",
@@ -4109,7 +4213,9 @@
           "Argentina",
           "Argentine"
         ]
-      ]
+      ],
+      "city": "East Rutherford",
+      "city_source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/world-cup-2026-stadiums-fifa-soccer-football-mexico-usa-canada"
     },
     {
       "id": "lm-ucl-1977-final",
@@ -4184,7 +4290,9 @@
           "Gladbach"
         ],
         []
-      ]
+      ],
+      "city": "Roma",
+      "city_source_url": "https://en.wikipedia.org/wiki/1977_European_Cup_final"
     },
     {
       "id": "lm-ucl-1978-final",
@@ -4259,7 +4367,9 @@
           "Club Bruges"
         ],
         []
-      ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/1978_European_Cup_final"
     },
     {
       "id": "lm-ucl-1979-final",
@@ -4337,7 +4447,9 @@
           "Nottingham",
           "Forest"
         ]
-      ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://en.wikipedia.org/wiki/1979_European_Cup_final"
     },
     {
       "id": "lm-ucl-1980-final",
@@ -4416,7 +4528,9 @@
           "Hambourg",
           "Hambourg SV"
         ]
-      ]
+      ],
+      "city": "Madrid",
+      "city_source_url": "https://en.wikipedia.org/wiki/1980_European_Cup_final"
     },
     {
       "id": "lm-ucl-1981-final",
@@ -4490,7 +4604,9 @@
           "Real"
         ],
         []
-      ]
+      ],
+      "city": "Paris",
+      "city_source_url": "https://en.wikipedia.org/wiki/1981_European_Cup_final"
     },
     {
       "id": "lm-ucl-1982-final",
@@ -4569,7 +4685,9 @@
         [
           "Villa"
         ]
-      ]
+      ],
+      "city": "Roterdão",
+      "city_source_url": "https://en.wikipedia.org/wiki/1982_European_Cup_final"
     },
     {
       "id": "lm-ucl-1983-final",
@@ -4648,7 +4766,9 @@
           "Juve",
           "Juventus Turin"
         ]
-      ]
+      ],
+      "city": "Atenas",
+      "city_source_url": "https://en.wikipedia.org/wiki/1983_European_Cup_final"
     },
     {
       "id": "lm-ucl-1984-final",
@@ -4724,7 +4844,9 @@
           "Rome",
           "AS Rome"
         ]
-      ]
+      ],
+      "city": "Roma",
+      "city_source_url": "https://en.wikipedia.org/wiki/1984_European_Cup_final"
     },
     {
       "id": "lm-ucl-1985-final",
@@ -4799,7 +4921,9 @@
           "Juve",
           "Juventus Turin"
         ]
-      ]
+      ],
+      "city": "Bruxelas",
+      "city_source_url": "https://en.wikipedia.org/wiki/1985_European_Cup_final"
     },
     {
       "id": "lm-ucl-1986-final",
@@ -4879,7 +5003,9 @@
           "Steaua București",
           "Steaua Bucarest"
         ]
-      ]
+      ],
+      "city": "Sevilha",
+      "city_source_url": "https://en.wikipedia.org/wiki/1986_European_Cup_final"
     },
     {
       "id": "lm-ucl-1987-final",
@@ -4958,7 +5084,9 @@
         [
           "Porto"
         ]
-      ]
+      ],
+      "city": "Viena",
+      "city_source_url": "https://en.wikipedia.org/wiki/1987_European_Cup_final"
     },
     {
       "id": "lm-ucl-1988-final",
@@ -5035,7 +5163,9 @@
           "Benfica",
           "Benfica Lisbonne"
         ]
-      ]
+      ],
+      "city": "Estugarda",
+      "city_source_url": "https://en.wikipedia.org/wiki/1988_European_Cup_final"
     },
     {
       "id": "lm-ucl-1989-final",
@@ -5112,7 +5242,9 @@
         [
           "Milan"
         ]
-      ]
+      ],
+      "city": "Barcelona",
+      "city_source_url": "https://en.wikipedia.org/wiki/1989_European_Cup_final"
     },
     {
       "id": "lm-ucl-1990-final",
@@ -5189,7 +5321,9 @@
           "Benfica",
           "Benfica Lisbonne"
         ]
-      ]
+      ],
+      "city": "Viena",
+      "city_source_url": "https://en.wikipedia.org/wiki/1990_European_Cup_final"
     },
     {
       "id": "lm-ucl-1991-final",
@@ -5269,7 +5403,9 @@
           "OM",
           "Olympique de Marseille"
         ]
-      ]
+      ],
+      "city": "Bari",
+      "city_source_url": "https://en.wikipedia.org/wiki/1991_European_Cup_final"
     },
     {
       "id": "lm-ucl-1992-final",
@@ -5349,7 +5485,9 @@
           "Sampdoria",
           "Sampdoria Gênes"
         ]
-      ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/1992_European_Cup_final"
     },
     {
       "id": "lm-ucl-1993-final",
@@ -5427,7 +5565,9 @@
         [
           "Milan"
         ]
-      ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://en.wikipedia.org/wiki/1993_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-1994-final",
@@ -5506,7 +5646,9 @@
           "Barça",
           "FC Barcelone"
         ]
-      ]
+      ],
+      "city": "Atenas",
+      "city_source_url": "https://en.wikipedia.org/wiki/1994_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-1995-final",
@@ -5583,7 +5725,9 @@
         [
           "Milan"
         ]
-      ]
+      ],
+      "city": "Viena",
+      "city_source_url": "https://en.wikipedia.org/wiki/1995_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-1996-final",
@@ -5661,7 +5805,9 @@
           "Juve",
           "Juventus Turin"
         ]
-      ]
+      ],
+      "city": "Roma",
+      "city_source_url": "https://en.wikipedia.org/wiki/1996_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-1997-final",
@@ -5739,7 +5885,9 @@
           "Juve",
           "Juventus Turin"
         ]
-      ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://en.wikipedia.org/wiki/1997_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-1998-final",
@@ -5816,7 +5964,9 @@
         [
           "Real"
         ]
-      ]
+      ],
+      "city": "Amesterdão",
+      "city_source_url": "https://en.wikipedia.org/wiki/1998_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-1999-final",
@@ -5898,7 +6048,9 @@
           "Bayern München",
           "Bayern Munich"
         ]
-      ]
+      ],
+      "city": "Barcelona",
+      "city_source_url": "https://en.wikipedia.org/wiki/1999_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2000-final",
@@ -5976,7 +6128,9 @@
           "Valence",
           "Valence CF"
         ]
-      ]
+      ],
+      "city": "Saint-Denis",
+      "city_source_url": "https://en.wikipedia.org/wiki/2000_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2001-final",
@@ -6057,7 +6211,9 @@
           "Valence",
           "Valence CF"
         ]
-      ]
+      ],
+      "city": "Milão",
+      "city_source_url": "https://en.wikipedia.org/wiki/2001_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2002-final",
@@ -6133,7 +6289,9 @@
         [
           "Real"
         ]
-      ]
+      ],
+      "city": "Glasgow",
+      "city_source_url": "https://en.wikipedia.org/wiki/2002_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2003-final",
@@ -6210,7 +6368,9 @@
         [
           "Milan"
         ]
-      ]
+      ],
+      "city": "Manchester",
+      "city_source_url": "https://en.wikipedia.org/wiki/2003_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2004-final",
@@ -6287,7 +6447,9 @@
         [
           "Porto"
         ]
-      ]
+      ],
+      "city": "Gelsenkirchen",
+      "city_source_url": "https://en.wikipedia.org/wiki/2004_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2005-final",
@@ -6361,7 +6523,9 @@
           "Milan"
         ],
         []
-      ]
+      ],
+      "city": "Istambul",
+      "city_source_url": "https://en.wikipedia.org/wiki/2005_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2006-final",
@@ -6438,7 +6602,9 @@
           "FC Barcelone"
         ],
         []
-      ]
+      ],
+      "city": "Saint-Denis",
+      "city_source_url": "https://en.wikipedia.org/wiki/2006_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2007-final",
@@ -6512,7 +6678,9 @@
           "Milan"
         ],
         []
-      ]
+      ],
+      "city": "Atenas",
+      "city_source_url": "https://en.wikipedia.org/wiki/2007_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2008-final",
@@ -6589,7 +6757,9 @@
           "MU"
         ],
         []
-      ]
+      ],
+      "city": "Moscovo",
+      "city_source_url": "https://en.wikipedia.org/wiki/2008_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2009-final",
@@ -6671,7 +6841,9 @@
           "United",
           "MU"
         ]
-      ]
+      ],
+      "city": "Roma",
+      "city_source_url": "https://en.wikipedia.org/wiki/2009_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2010-final",
@@ -6753,7 +6925,9 @@
           "Inter Milano",
           "Inter Milan"
         ]
-      ]
+      ],
+      "city": "Madrid",
+      "city_source_url": "https://en.wikipedia.org/wiki/2010_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2011-final",
@@ -6835,7 +7009,9 @@
           "United",
           "MU"
         ]
-      ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/2011_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2012-final",
@@ -6912,7 +7088,9 @@
           "Bayern Munich"
         ],
         []
-      ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://en.wikipedia.org/wiki/2012_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2013-final",
@@ -6992,7 +7170,9 @@
           "Bayern München",
           "Bayern Munich"
         ]
-      ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/2013_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2014-final",
@@ -7071,7 +7251,9 @@
           "Atleti",
           "Atlético Madrid"
         ]
-      ]
+      ],
+      "city": "Lisboa",
+      "city_source_url": "https://en.wikipedia.org/wiki/2014_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2015-final",
@@ -7151,7 +7333,9 @@
           "Barça",
           "FC Barcelone"
         ]
-      ]
+      ],
+      "city": "Berlim",
+      "city_source_url": "https://en.wikipedia.org/wiki/2015_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2016-final",
@@ -7230,7 +7414,9 @@
           "Atleti",
           "Atlético Madrid"
         ]
-      ]
+      ],
+      "city": "Milão",
+      "city_source_url": "https://en.wikipedia.org/wiki/2016_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2017-final",
@@ -7307,7 +7493,9 @@
         [
           "Real"
         ]
-      ]
+      ],
+      "city": "Cardiff",
+      "city_source_url": "https://en.wikipedia.org/wiki/2017_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2018-final",
@@ -7381,7 +7569,9 @@
           "Real"
         ],
         []
-      ]
+      ],
+      "city": "Kyiv",
+      "city_source_url": "https://en.wikipedia.org/wiki/2018_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2019-final",
@@ -7456,7 +7646,9 @@
           "Spurs"
         ],
         []
-      ]
+      ],
+      "city": "Madrid",
+      "city_source_url": "https://en.wikipedia.org/wiki/2019_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2020-final",
@@ -7537,7 +7729,9 @@
           "Bayern München",
           "Bayern Munich"
         ]
-      ]
+      ],
+      "city": "Lisboa",
+      "city_source_url": "https://en.wikipedia.org/wiki/2020_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2021-final",
@@ -7612,7 +7806,9 @@
           "City"
         ],
         []
-      ]
+      ],
+      "city": "Porto",
+      "city_source_url": "https://en.wikipedia.org/wiki/2021_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2022-final",
@@ -7686,7 +7882,9 @@
         [
           "Real"
         ]
-      ]
+      ],
+      "city": "Saint-Denis",
+      "city_source_url": "https://en.wikipedia.org/wiki/2022_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2023-final",
@@ -7766,7 +7964,9 @@
           "Inter Milano",
           "Inter Milan"
         ]
-      ]
+      ],
+      "city": "Istambul",
+      "city_source_url": "https://en.wikipedia.org/wiki/2023_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2024-final",
@@ -7843,7 +8043,9 @@
         [
           "Real"
         ]
-      ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/2024_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2025-final",
@@ -7924,7 +8126,9 @@
           "Inter Milano",
           "Inter Milan"
         ]
-      ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://en.wikipedia.org/wiki/2025_UEFA_Champions_League_final"
     },
     {
       "id": "lm-ucl-2026-final",
@@ -8000,7 +8204,9 @@
           "Paris SG"
         ],
         []
-      ]
+      ],
+      "city": "Budapeste",
+      "city_source_url": "https://en.wikipedia.org/wiki/2026_UEFA_Champions_League_final"
     }
   ],
   "read_status_recorded_at": "2026-09-28",

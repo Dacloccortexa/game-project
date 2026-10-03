@@ -1880,8 +1880,6 @@
   }
   .lm-title { display: grid; place-items: center; min-height: 50px; margin: 0 10% 4px; background: url("assets/ui/le-match/title-plate.svg") center / 100% 100% no-repeat; }
   .lm-title span { font-family: var(--font-cond); font-weight: 700; font-size: clamp(28px, 8vw, 36px); line-height: 1; letter-spacing: .04em; text-transform: uppercase; text-shadow: 0 2px 7px #000; }
-  .lm-competition { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 2px; color: #e6eaf0; font-family: var(--font-cond); font-weight: 600; font-size: clamp(13px, 3.8vw, 15px); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
-  .lm-competition::before, .lm-competition::after { content: ""; flex: 0 1 12%; min-width: 10px; height: 2px; background: #f3bd55; }
   .lm-unknown { display: flex; justify-content: center; align-items: center; gap: 12px; min-height: 36px; margin: 0 0 6px; }
   .lm-unknown b { color: #fff; font-family: var(--font-cond); font-weight: 700; font-size: 30px; line-height: 1; text-shadow: 0 0 14px #6ebdff; }
   .lm-unknown span { font-family: var(--font-cond); font-weight: 700; font-size: 16px; text-transform: uppercase; color: #c9d3de; text-shadow: 0 2px 6px #000; }
@@ -1904,14 +1902,10 @@
   .lm-event--current .lm-row { background-image: url("assets/ui/le-match/event-current.svg"); color: #fff; padding-right: 4px; }
   .lm-event--current.new .lm-row { animation: mercato-in .45s ease-out 1; }
   .lm-event--locked .lm-row { background-image: url("assets/ui/le-match/event-locked.svg"); color: #7e8d9d; padding-left: 13%; }
-  .lm-event-icon { width: 18px; height: 18px; flex: none; }
-  .lm-card-icon { width: 11px; height: 15px; margin: 0 3px; flex: none; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.5); }
-  .lm-card-icon.yellow { background: #ffd23f; }
-  .lm-card-icon.red { background: #e2382e; }
   .lm-event-label { min-width: 0; flex: 1; font-size: clamp(12px, 3.5vw, 14px); font-weight: 700; line-height: 1.15; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .lm-event--locked .lm-event-label { font-family: var(--font-cond); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
   .lm-points { flex: none; min-width: 42px; padding: 3px 4px; border: 1px solid #e9bc5f; border-radius: 6px; text-align: center; color: #ffdf8a; font-family: var(--font-cond); font-weight: 700; font-size: 15px; white-space: nowrap; }
-  @media (max-width: 360px) { .lm-board { padding-inline: 7%; } .lm-event { grid-template-columns: 34px 13px minmax(0, 1fr); height: 42px; } .lm-event-icon { width: 15px; height: 15px; } .lm-points { min-width: 36px; font-size: 13px; } }
+  @media (max-width: 360px) { .lm-board { padding-inline: 7%; } .lm-event { grid-template-columns: 34px 13px minmax(0, 1fr); height: 42px; } .lm-event-label { font-size: 12px; } .lm-points { min-width: 36px; font-size: 13px; } }
   @media (prefers-reduced-motion: reduce) { .lm-event--current.new .lm-row, .lm-unknown.revealed b { animation: none; } }
 
   /* ---------- Transfert : identité « mercato » (assets/ui/mercato/) ---------- */
@@ -2526,9 +2520,8 @@
     <!-- Le Match : identité « tableau d'affichage » (assets/ui/le-match/, docs/UI_LE_MATCH_FLOW.md) -->
     <div class="lm-board hidden-screen" id="stage-lm">
       <h3 class="lm-title"><span>Le Match</span></h3>
-      <p class="lm-competition" id="lm-competition"></p>
       <div class="lm-unknown" id="lm-unknown"><b id="lm-team-1">?</b><span>vs</span><b id="lm-team-2">?</b></div>
-      <ol class="lm-timeline" id="lm-event-list" aria-label="Événements du match"></ol>
+      <ol class="lm-timeline" id="lm-event-list" aria-label="Indices du match"></ol>
     </div>
 
     <div id="lm-feedback-zone" class="hidden-screen"></div>
@@ -2793,7 +2786,8 @@
     "Retour à Créer une partie": "Voltar a Criar uma partida",
     "Scores des équipes": "Pontuações das equipas",
     "Tape le nom ici": "Escreve o nome aqui",
-    "Événements du match": "Acontecimentos do jogo"
+    "Événements du match": "Acontecimentos do jogo",
+    "Indices du match": "Pistas do jogo"
     };
   (function translateStatic() {
     if (LANG !== "pt" || !document.createTreeWalker) return;
@@ -2966,7 +2960,7 @@
   }
 
   // ---------- Content: cartes Le Match ----------
-  // 103 fiches sourcées marquées comme lues ; difficulté à tester en partie.
+  // Les indices sont dérivés de cinq faits vérifiés pour chaque match.
   // Voir docs/LE_MATCH_CARDS_REVIEW.md et docs/TODO.md.
   var LM_CARDS = [];
   var LM_READY = false;
@@ -2976,13 +2970,22 @@
       .then(function (res) { return res.json(); })
       .then(function (data) {
         LM_CARDS = (data.cards || []).map(function (c) {
+          if (!c.competition || !c.year || !Array.isArray(c.score) || c.score.length !== 2 || !c.city || !c.round) {
+            throw new Error("Fiche Le Match incomplète : " + (c.id || "sans identifiant"));
+          }
+          var phase = c.round === "Final" ? L("Finale", "Final") : c.round === "Semi-final" ? "Demi-finale" : c.round;
           return {
             id: c.id,
             competition: c.competition,
             teams: c.teams,
             team_aliases: c.team_aliases || [[], []],
-            events: c.events.map(function (ev) { return ev.text; }),
-            eventInfo: c.events.map(function (ev) { return { minute: ev.minute, kind: ev.kind, short: ev.short }; })
+            clues: [
+              c.competition,
+              L("Année : ", "Ano: ") + c.year,
+              L("Score final : ", "Resultado final: ") + c.score.join("–"),
+              L("Ville : ", "Cidade: ") + c.city,
+              L("Phase : ", "Fase: ") + phase
+            ]
           };
         });
         LM_READY = LM_CARDS.length > 0;
@@ -3194,7 +3197,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.03-1126";
+  var APP_VERSION = "2026.10.03-1130";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3295,7 +3298,7 @@
   function journalStepLabel() {
     var g = state.currentRoundMinigame;
     if (g === "transfert" || g === "quisuisje") return "indice " + state.revealedCount;
-    if (g === "lematch") return "événement " + state.lmRevealedCount;
+    if (g === "lematch") return "indice " + state.lmRevealedCount;
     if (g === "plusoumoins") {
       var ch = state.pomChain && state.pomChain.chain;
       var i = state.pomIndex;
@@ -4554,7 +4557,7 @@
           L("Personne n'a répondu. ", "Ninguém respondeu. ") + (points > 0 ? bankedText(points) : L("Aucune cagnotte à encaisser.", "Não havia pote para arrecadar."))] });
       }
       endCard();
-    } else if (state.currentRoundMinigame === "lematch") advanceLmEvent(false);
+    } else if (state.currentRoundMinigame === "lematch") advanceLmClue(false);
     else if (state.currentRoundMinigame === "quisuisje") advanceQsjClue(false);
     else advanceClue(false);
   }
@@ -4823,7 +4826,7 @@
   function continueAfterFailedTackle(tacklingTeam, before, answerText) {
     var game = state.currentRoundMinigame;
     var count = game === "lematch" ? state.lmRevealedCount : state.revealedCount;
-    var total = game === "lematch" ? state.currentLmCard.events.length
+    var total = game === "lematch" ? state.currentLmCard.clues.length
       : game === "transfert" ? state.currentCard.career.length : state.currentCard.clues.length;
     var head = { text: tackleDeltaText(false) + " · " + scoreChangeText(tacklingTeam.name, before, tacklingTeam.score), strong: true };
     if (count >= total) {
@@ -4836,10 +4839,10 @@
     hide(activeAnswerZone());
     showVerdict("bad", L("Tackle raté", "Tackle falhado"), {
       note: [head, (game === "lematch" ? L("Les équipes restent secrètes", "As equipas continuam secretas") : L("Le joueur reste secret", "O jogador continua secreto")),
-        L("La main revient ", "A vez volta ") + teamAux(active.name) + " · " + (game === "lematch" ? L("événement suivant", "próximo acontecimento") : L("indice suivant", "próxima pista")) + " · " + pointsLabel(nextPoints)],
+        L("La main revient ", "A vez volta ") + teamAux(active.name) + " · " + L("indice suivant", "próxima pista") + " · " + pointsLabel(nextPoints)],
       then: function () {
         show(activeAnswerZone());
-        if (game === "lematch") { resetLmAnswerZone(); advanceLmEvent(true); }
+        if (game === "lematch") { resetLmAnswerZone(); advanceLmClue(true); }
         else if (game === "quisuisje") { resetQsjAnswerZone(); advanceQsjClue(true); }
         else advanceClue(true);
       }
@@ -5430,7 +5433,7 @@
     startTackleWindow();
   }
 
-  // ---------- Le Match (103 fiches sourcées — voir docs/LE_MATCH_CARDS_REVIEW.md) ----------
+  // ---------- Le Match : cinq indices factuels, du plus large au plus précis ----------
   function beginLmTurn() {
     setActiveMinigameUI("lematch");
     state.cardEnded = false;
@@ -5444,45 +5447,13 @@
     el("lm-feedback-zone").classList.add("hidden-screen");
     resetLmAnswerZone();
     show("lm-answer-zone");
-    renderLmEvents();
-    startTackleWindow(); // le délai repart à chaque événement
+    renderLmClues();
+    startTackleWindow(); // le délai repart à chaque indice
   }
 
-  // Texte court pour la frise : la minute a sa propre colonne, le score devient « · 2-1 ».
-  function lmEventLabel(text) {
-    return String(text)
-      .replace(/\s*à la \d+e minute(\s*\(\+\d+\))?/i, "")
-      .replace(/\.\s*Le score passe à\s*/i, " · ")
-      .replace(/^À la mi-temps, le score est de\s*/i, "Mi-temps · ")
-      .replace(/^Au coup de sifflet final, le score est de\s*/i, "Fin du match · ")
-      .replace(/^À la fin du temps réglementaire,\s*([\d-]+)\s*: la prolongation commence/i, "Prolongation · $1")
-      .replace(/^La séance de tirs au but se termine\s*/i, "Tirs au but · ")
-      .replace(/\.\s*$/, "");
-  }
-  function lmMinuteLabel(minute) {
-    if (minute === undefined || minute === null || minute === "") return "";
-    var m = String(minute);
-    return /\+$/.test(m) ? m : m + "′";
-  }
-  function lmEventIcon(kind) {
-    if (kind === "goal") {
-      var img = document.createElement("img");
-      img.className = "lm-event-icon"; img.src = "assets/ui/le-match/event-ball.svg"; img.alt = ""; img.width = 18; img.height = 18;
-      return img;
-    }
-    if (kind === "yellow_card" || kind === "red_card") {
-      var c = document.createElement("span");
-      c.className = "lm-card-icon " + (kind === "red_card" ? "red" : "yellow");
-      c.setAttribute("aria-hidden", "true");
-      return c;
-    }
-    return null; // mi-temps, remplacement, prolongation… : le texte suffit
-  }
-
-  // Frise chronologique : événements passés visibles, courant éclairé avec son palier, suivants verrouillés.
-  function renderLmEvents() {
+  // Les indices passés restent visibles ; le courant porte son palier, les suivants restent cachés.
+  function renderLmClues() {
     var card = state.currentLmCard;
-    el("lm-competition").textContent = card.competition;
     if (!state.cardEnded) {
       el("lm-unknown").classList.remove("revealed");
       el("lm-team-1").textContent = "?";
@@ -5491,26 +5462,21 @@
     var list = el("lm-event-list");
     list.innerHTML = "";
     var current = state.lmRevealedCount - 1;
-    for (var i = 0; i < card.events.length; i++) {
-      var info = (card.eventInfo && card.eventInfo[i]) || {};
+    for (var i = 0; i < card.clues.length; i++) {
       var shown = i < state.lmRevealedCount;
       var li = document.createElement("li");
       li.className = "lm-event " + (!shown ? "lm-event--locked" : i === current ? "lm-event--current" + (i > 0 ? " new" : "") : "lm-event--past");
-      var minute = document.createElement("span");
-      minute.className = "lm-minute";
-      minute.textContent = shown ? lmMinuteLabel(info.minute) : "—";
+      var number = document.createElement("span");
+      number.className = "lm-minute";
+      number.textContent = String(i + 1);
       var node = document.createElement("span");
       node.className = "lm-node";
       node.setAttribute("aria-hidden", "true");
       var row = document.createElement("span");
       row.className = "lm-row";
-      if (shown) {
-        var icon = lmEventIcon(info.kind);
-        if (icon) row.appendChild(icon);
-      }
       var label = document.createElement("span");
       label.className = "lm-event-label";
-      label.textContent = shown ? (info.short || lmEventLabel(card.events[i])) : L("Événement à venir", "Acontecimento por revelar");
+      label.textContent = shown ? card.clues[i] : L("Indice à venir", "Pista por revelar");
       row.appendChild(label);
       if (shown && i === current) {
         var pts = document.createElement("span");
@@ -5518,7 +5484,7 @@
         pts.textContent = pointsLabel(POINTS_BY_INDEX[Math.min(i, POINTS_BY_INDEX.length - 1)]);
         row.appendChild(pts);
       }
-      li.appendChild(minute);
+      li.appendChild(number);
       li.appendChild(node);
       li.appendChild(row);
       list.appendChild(li);
@@ -5582,7 +5548,7 @@
 
   el("btn-lm-pass").addEventListener("click", function () {
     journalStep("passe");
-    advanceLmEvent(false);
+    advanceLmClue(false);
   });
 
   function showLmFeedback(kind, text) { setVerdictNote(text); }
@@ -5613,33 +5579,33 @@
       endCard();
     } else {
       awardPoints(-1);
-      if (state.lmRevealedCount >= card.events.length) {
+      if (state.lmRevealedCount >= card.clues.length) {
         showVerdict("bad", L("Mauvaise réponse", "Resposta errada"), { note: ["−1 pt · " + scoreChangeText(mTeam.name, mBefore, mTeam.score), { text: L("C'était ", "Era ") + matchName, strong: true }] });
         endCard();
         return;
       }
       hide("lm-answer-zone");
       showVerdict("bad", L("Mauvaise réponse", "Resposta errada"), {
-        note: ["−1 pt · " + scoreChangeText(mTeam.name, mBefore, mTeam.score), L("Le match reste secret · événement suivant", "O jogo continua secreto · próximo acontecimento")],
-        then: function () { show("lm-answer-zone"); advanceLmEvent(true); }
+        note: ["−1 pt · " + scoreChangeText(mTeam.name, mBefore, mTeam.score), L("Le match reste secret · indice suivant", "O jogo continua secreto · próxima pista")],
+        then: function () { show("lm-answer-zone"); advanceLmClue(true); }
       });
     }
   }
 
-  function advanceLmEvent(fromWrongAnswer) {
+  function advanceLmClue(fromWrongAnswer) {
     var card = state.currentLmCard;
-    if (state.lmRevealedCount >= card.events.length) {
-      showVerdict("neutral", L("Fin des événements", "Fim dos acontecimentos"), { note: [{ text: L("C'était ", "Era ") + card.teams[0] + " – " + card.teams[1], strong: true }] });
+    if (state.lmRevealedCount >= card.clues.length) {
+      showVerdict("neutral", L("Fin des indices", "Fim das pistas"), { note: [{ text: L("C'était ", "Era ") + card.teams[0] + " – " + card.teams[1], strong: true }] });
       endCard();
       return;
     }
     state.lmRevealedCount += 1;
-    renderLmEvents();
+    renderLmClues();
     if (!fromWrongAnswer) {
       el("lm-feedback-zone").innerHTML = "";
       el("lm-feedback-zone").classList.add("hidden-screen");
     }
-    startTackleWindow(); // nouvel événement = nouveau délai de 30 secondes, puis 15 secondes ouvertes
+    startTackleWindow(); // nouvel indice = nouveau délai de 30 secondes, puis 15 secondes ouvertes
   }
 
   // ---------- Transfert (docs/UI_TRANSFERT_FLOW.md) ----------
