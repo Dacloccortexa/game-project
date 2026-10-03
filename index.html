@@ -1501,6 +1501,7 @@
   }
   #btn-tackle .tk-main { font-family: var(--font-cond); font-weight: 700; font-size: 22px; letter-spacing: .06em; text-transform: uppercase; }
   #btn-tackle .tk-sub { font-size: 12.5px; font-weight: 500; }
+  #btn-tackle.tk-waiting { display: none !important; }
 
   #next-card-zone .tr-btn-primary { margin-top: 2px; }
   #feedback-zone:empty { display: none; }
@@ -3197,7 +3198,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.03-1130";
+  var APP_VERSION = "2026.10.03-2007";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -4405,6 +4406,9 @@
     el("turn-clock").classList.toggle("open", open);
     // Le bouton clignote pendant toute la fenêtre de 15 secondes.
     el("btn-tackle").classList.toggle("blink", open && !alone);
+    // Le bouton n'apparaît qu'au sifflet (DECISIONS.md, 2026-10-03) : pendant la priorité, la bande
+    // « Priorité aux … 00:30 » suffit, et le bouton grisé cachait « Répondre » sur les petits écrans.
+    el("btn-tackle").classList.toggle("tk-waiting", !(open && !alone));
     setRace(open && !alone);
   }
 

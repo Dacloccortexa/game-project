@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-10-03] Bouton Tackle caché pendant les 30 s de priorité
+- Retour d'un ami de David (capture iPhone, Qui suis-je ?) : le bouton Tackle grisé, fixé en bas de l'écran, cachait « Passer » et « Répondre » ; il a fallu faire défiler plusieurs fois, au point de croire à un bug.
+- Le bouton n'apparaît plus qu'au coup de sifflet (course de 15 s), quand « Répondre » et « Passer » ont déjà disparu. Pendant la priorité, la bande « Priorité aux … 00:30 » donne le temps restant. Partie à une équipe : pas de bouton du tout (le Tackle n'existe pas à un).
+- Règles du Tackle inchangées. Idées de David à trancher : course réduite à 5 s, et Tackle ouvert aussi quand l'équipe active passe (voir réponse de Claude du 3 octobre au soir).
+
 ## [2026-10-03] Plus de questions qui reviennent trop vite
 - Retour de David (partie avec Achille) : des questions reviennent rapidement, et le même match de Le Match est sorti deux fois d'affilée. Cause : chaque carte était tirée au hasard dans tout le lot, sans mémoire.
 - Maintenant chaque défi pioche dans un **paquet** : une carte ne revient qu'une fois toutes les autres jouées, **d'une partie à l'autre** (mémorisé sur le téléphone, clé `tackle-seen-v1`). Quand le paquet est épuisé, il est remélangé en gardant de côté les dernières cartes vues (le tiers du lot, 15 au plus) : rien ne ressort juste après.
