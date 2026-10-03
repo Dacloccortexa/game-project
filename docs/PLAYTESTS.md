@@ -9,6 +9,7 @@
 - **Le Match (nouveaux indices) :** une seule carte jouée (Barcelone–Sampdoria 1992), tous les indices passés en 0–1 s sans réponse. Pas encore de signal.
 - **Vrai ou Faux :** Antoine fait 5/5 (+5) ; Arthur perd sa cagnotte de 4 au 5e (« Owen plus jeune que Fowler »). La tension de la cagnotte fonctionne quand on va loin.
 - **Données vérifiées :** les ~30 affirmations et comparaisons jouées sont justes.
+- **À quel indice on trouve (les deux journaux, 21 parties) :** Transfert 14/27 trouvées, surtout aux indices 1–3 ; Qui suis-je ? 15/20, dont **10 au 5e indice** ; Le Match 3/18, toutes au 5e. Détail et proposition pour Qui suis-je ? dans [QUI_SUIS_JE_DIFFICULTE.md](QUI_SUIS_JE_DIFFICULTE.md).
 - **Question ouverte pour David :** faut-il limiter la perte sur une carte (ex. une carte ne peut pas faire descendre sous 0, ou une erreur ne coûte que si on se trompe 2 fois) ? À trancher avec plus de parties.
 
 ## Retour du 2 octobre 2026 — partie avec les neveux de David
