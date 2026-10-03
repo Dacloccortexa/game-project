@@ -21,6 +21,10 @@
 - **À retester :** combien de cartes sont trouvées, et à quel indice.
 
 
+## [2026-10-03] Version portugaise relue par des lecteurs portugais
+- Retour rapporté par David : le portugais est validé ; ils ont même dit que c'est une des meilleures traductions de jeux qu'ils aient vues.
+- Conséquence : la sortie peut viser la France **et** le Portugal en même temps.
+
 ## [2026-10-03] Partie de David avec Achille
 - Ressenti : « super marrant », envie de refaire une partie à chaque fois.
 - Problème : des questions reviennent vite ; le même match de Le Match est sorti deux fois d'affilée. Corrigé le jour même (tirage sans répétition, voir `DECISIONS.md`).

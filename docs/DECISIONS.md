@@ -78,7 +78,7 @@
 - Le journal de partie envoyé à David reste en français.
 - Relecture indépendante (agent séparé, regard pt-PT football) : corrections appliquées (« Toca », « Saltar pista », « próximo acontecimento », « Meia-final », « aos 90+3 minutos », « 0 pontos » au pluriel, noms de clubs unifiés, noms de joueurs en casse normale…).
 - iOS : `CFBundleLocalizations` = fr, pt-PT (l'App Store affichera le portugais). Fiche App Store en portugais à rédiger le moment venu.
-- Reste à faire : faire relire par un lecteur portugais réel avant la sortie au Portugal ; anomalie de données FR signalée (Le Match `lm-ucl-1989-final`, carton jaune attribué à « c »).
+- ~~Reste à faire : faire relire par un lecteur portugais réel avant la sortie au Portugal~~ → **fait** (2026-10-03, voir PLAYTESTS.md) ; reste : anomalie de données FR signalée (Le Match `lm-ucl-1989-final`, carton jaune attribué à « c »).
 
 ## [2026-10-02] Appli iPhone : abonnement, 2 parties gratuites par jour de 5 manches
 - Décision de David : modèle **abonnement**. Sans abonnement : **2 parties par jour, de 5 manches**. Prix : définis plus tard par David (rien dans le code, lus dans l'App Store).
