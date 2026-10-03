@@ -92,9 +92,10 @@ Offrir l'abonnement à certaines personnes : **codes d'offre** Apple (App Store 
 ## Avant la sortie publique sur l'App Store (liste à cocher)
 
 - [x] D-U-N-S de **LA FAMIVY LTD** : **369782130** (confirmé par Apple le 2026-10-03). Ce nom légal sera le nom du vendeur sur l'App Store.
-- [ ] Site web de LA FAMIVY LTD sur son propre domaine + adresse e-mail sur ce domaine (exigés par Apple pour une société).
+- [x] Domaine **lafamivy.com** (Cloudflare) et adresse **contact@lafamivy.com** (Cloudflare Email Routing → boîte de David), 2026-10-03.
+- [ ] Site de la société en ligne sur lafamivy.com (dépôt `Dacloccortexa/lafamivy-site`, GitHub Pages) : activer Pages dans le dépôt + DNS Cloudflare.
 - [ ] Compte Apple Developer actif (99 USD/an), inscription en tant qu'organisation avec le D-U-N-S ci-dessus : https://developer.apple.com/enroll/
-- [ ] Adresse de contact dans `privacy.html` + URL de support.
+- [x] Adresse de contact dans `privacy.html` (contact@lafamivy.com). URL de support pour la fiche App Store : https://lafamivy.com
 - [ ] Captures d'écran iPhone 6,9″ (1320 × 2868), au moins 3.
 - [ ] Description, sous-titre, mots-clés, catégorie **Jeux → Quiz** (et Jeux de société), classification par âge.
 - [ ] « Confidentialité de l'app » : déclarer **Achats → Historique d'achats** (finalités : Fonctionnalité de l'app + Analyse ; **non lié** à l'identité ; **pas de suivi**). Rien d'autre (identifiants RevenueCat anonymes). Source : [guide RevenueCat](https://www.revenuecat.com/docs/platform-resources/apple-platform-resources/apple-app-privacy). `privacy.html` le mentionne.
