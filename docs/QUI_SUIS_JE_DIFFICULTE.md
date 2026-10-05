@@ -10,6 +10,15 @@ David a choisi de recalibrer les fiches tout en conservant l'ordre fixe : **club
 - Avant, le premier indice affichait « Real Madrid » sur 27 fiches, « Barcelona » ou « FC Barcelone » sur 22 et « Chelsea » sur 15. Après recalibrage, aucun premier club n'apparaît sur plus de 8 fiches en français. Cette diversité est un contrôle éditorial, **pas une preuve de difficulté réelle** : un club moins partagé peut aussi être inconnu des joueurs.
 - **À retester en partie :** relever l'indice de chaque bonne réponse. L'objectif est de voir davantage de réponses aux indices 2–3 sans rendre le premier indice évident.
 
+## Contrôle d'ambiguïté du 5 octobre 2026
+
+Le recalibrage du premier club ne suffisait pas : **un indice plus rare ne garantit pas une seule réponse**. David a relevé qu'un joueur espagnol, milieu, ayant joué à Barcelone avec Messi pouvait désigner plusieurs joueurs.
+
+- **14 fiches ont été reprises** dans les deux langues. Exemples : Xavi commence par Al Sadd, Busquets par l'Inter Miami ; Puyol indique désormais l'Euro 2008 et Rivaldo ; Gary Neville précise ses huit titres de Premier League et son poste d'arrière droit. Les autres changements ciblent aussi Messi, Mbappé, Pogba, Scholes, Pepe, Fowler, Pirès, Ronaldinho, Nasri et Gerrard.
+- Les catégories, leur ordre, le fait unique par indice et le barème 5/4/3/2/1 restent inchangés. Une édition ou un nombre de titres précise un **seul** indice « trophée ».
+- **Règle de relecture pour les 100 fiches :** chercher d'autres joueurs plausibles qui satisfont les cinq faits, y compris hors du lot de cartes. Si une autre réponse reste valable après le cinquième indice, remplacer un fait par un fait sourcé qui distingue le joueur, ou retirer la fiche du jeu. Vérifier que le club et le coéquipier ont bien coexisté à la même période.
+- Ce lot corrige des ambiguïtés démontrées ; **l'unicité du reste des fiches n'est pas encore garantie**. Relecture éditoriale et playtest restent nécessaires avant de considérer les 100 fiches validées.
+
 ## Ce que montrent les parties (21 parties, deux journaux)
 
 À quel indice les joueurs trouvent (cartes allées jusqu'au bout) :
