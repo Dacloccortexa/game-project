@@ -2,10 +2,10 @@
  "files": {
   "src/data/lematch-cards.json": "f5131384ad62",
   "src/data/pt/lematch-cards.json": "6518441b23c1",
-  "src/data/pt/quisuisje-cards.json": "2759565a5151",
+  "src/data/pt/quisuisje-cards.json": "2a40c4d6219f",
   "src/data/pt/transfert-cards.json": "ae43bd8e24dd",
   "src/data/pt/vraifaux-statements.json": "00581b1821ad",
-  "src/data/quisuisje-cards.json": "d6756540bda3",
+  "src/data/quisuisje-cards.json": "676b2661023f",
   "src/data/stats-champions-league-goals.json": "44ee9829a20f",
   "src/data/stats-la-liga-goals.json": "712cd4cd793a",
   "src/data/stats-ligue-1-goals.json": "37c689ba9679",
