@@ -1,8 +1,8 @@
 {
   "game_id": "qui_suis_je",
-  "version": 2,
+  "version": 3,
   "prepared_at": "2026-09-27",
-  "status": "premier indice recalibré ; difficulté à retester en partie",
+  "status": "indices recalibrés ; unicité des réponses à relire et à retester",
   "source_snapshot": "Wikipédia, révisions relevées le 24 septembre 2026; carrières Transfert vérifiées dans le dépôt",
   "rules": {
     "clue_order": [
@@ -95,10 +95,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à PSG.",
-          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
+          "text": "J'ai joué à l'Inter Miami.",
+          "source": "https://www.intermiamicf.com/club/about",
           "fact": {
-            "club": "PSG"
+            "club": "Inter Miami"
           }
         },
         {
@@ -166,11 +166,11 @@
         {
           "kind": "trophy",
           "points": 4,
-          "text": "J'ai gagné la Ligue 1.",
-          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
+          "text": "J'ai gagné la Coupe du monde 2018.",
+          "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/all-kylian-mbappe-world-cup-numbers-and-records",
           "fact": {
-            "trophy": "Ligue 1",
-            "evidence": "* Ligue 1: 2016–17"
+            "trophy": "Coupe du monde 2018",
+            "evidence": "France championne en 2018 ; Kylian Mbappé dans l'équipe"
           }
         },
         {
@@ -676,11 +676,11 @@
         {
           "kind": "teammate",
           "points": 2,
-          "text": "J'ai joué avec Carlos Tevez.",
-          "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
+          "text": "J'ai joué avec Bruno Fernandes.",
+          "source": "https://www.manutd.com/en/news/match-report-man-utd-vs-leeds-august-14-2021",
           "fact": {
-            "name": "Carlos Tevez",
-            "shared_club": "Juventus"
+            "name": "Bruno Fernandes",
+            "shared_club": "Manchester United"
           }
         },
         {
@@ -1208,11 +1208,11 @@
         {
           "kind": "trophy",
           "points": 4,
-          "text": "J'ai gagné la Liga.",
-          "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
+          "text": "J'ai remporté l'Euro 2008.",
+          "source": "https://www.uefa.com/uefaeuro/history/news/025f-0ff0bba775e3-451a9527dcbf-1000--euro-winners-every-player-from-every-victorious-squad/",
           "fact": {
-            "trophy": "La Liga",
-            "evidence": "*La Liga: 2004–05,"
+            "trophy": "Euro 2008",
+            "evidence": "Carles Puyol figure dans l'effectif vainqueur de l'Euro 2008"
           }
         },
         {
@@ -1227,10 +1227,10 @@
         {
           "kind": "teammate",
           "points": 2,
-          "text": "J'ai joué avec Lionel Messi.",
-          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
+          "text": "J'ai joué avec Rivaldo.",
+          "source": "https://players.fcbarcelona.com/en/chronology/2001",
           "fact": {
-            "name": "Lionel Messi",
+            "name": "Rivaldo",
             "shared_club": "Barcelona"
           }
         },
@@ -2488,20 +2488,20 @@
         {
           "kind": "trophy",
           "points": 4,
-          "text": "J'ai gagné la Premier League.",
-          "source": "https://en.wikipedia.org/wiki/Gary_Neville",
+          "text": "J'ai remporté 8 titres de Premier League.",
+          "source": "https://www.premierleague.com/en/news/4449719",
           "fact": {
-            "trophy": "Premier League",
-            "evidence": "*Premier League: 1995–96, 1996–97, 1998–99, 1999–2000, 2000–01, 2002–03, 2006–07, 2008–09"
+            "trophy": "8 titres de Premier League",
+            "evidence": "Gary Neville a remporté huit titres de Premier League"
           }
         },
         {
           "kind": "position",
           "points": 3,
-          "text": "Je suis défenseur.",
-          "source": "https://fr.wikipedia.org/wiki/Gary_Neville",
+          "text": "Je suis arrière droit.",
+          "source": "https://www.premierleague.com/en/news/4449719",
           "fact": {
-            "position": "défenseur"
+            "position": "arrière droit"
           }
         },
         {
@@ -4252,11 +4252,11 @@
         {
           "kind": "trophy",
           "points": 4,
-          "text": "J'ai gagné la Premier League.",
-          "source": "https://en.wikipedia.org/wiki/Paul_Scholes",
+          "text": "J'ai remporté 11 titres de Premier League.",
+          "source": "https://www.premierleague.com/en/events/hall-of-fame/inductees/paul-scholes",
           "fact": {
-            "trophy": "Premier League",
-            "evidence": "*Premier League: 1995–96, 1996–97, 1998–99, 1999–2000, 2000–01, 2002–03, 2006–07, 2007–08, 2008–09, 2010–11, 2012–13"
+            "trophy": "11 titres de Premier League",
+            "evidence": "Paul Scholes a remporté onze titres de Premier League"
           }
         },
         {
@@ -4363,10 +4363,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Porto.",
-          "source": "https://en.wikipedia.org/wiki/Pepe_%28footballer%2C_born_February_1983%29",
+          "text": "J'ai joué au Beşiktaş.",
+          "source": "https://www.bjk.com.tr/en/news/70423/pepe_puts_pen_to_a_two_year_contract_with_besiktas.html",
           "fact": {
-            "club": "Porto"
+            "club": "Beşiktaş"
           }
         },
         {
@@ -4971,10 +4971,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Liverpool.",
-          "source": "https://en.wikipedia.org/wiki/Robbie_Fowler",
+          "text": "J'ai joué à Leeds United.",
+          "source": "https://www.premierleague.com/en/news/4091163",
           "fact": {
-            "club": "Liverpool"
+            "club": "Leeds United"
           }
         },
         {
@@ -5032,10 +5032,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Marseille.",
-          "source": "https://en.wikipedia.org/wiki/Robert_Pires",
+          "text": "J'ai joué à Villarreal.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Pir%C3%A8s",
           "fact": {
-            "club": "Marseille"
+            "club": "Villarreal"
           }
         },
         {
@@ -5153,10 +5153,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Paris Saint-Germain.",
+          "text": "J'ai joué à l'AC Milan.",
           "source": "https://en.wikipedia.org/wiki/Ronaldinho",
           "fact": {
-            "club": "Paris Saint-Germain"
+            "club": "AC Milan"
           }
         },
         {
@@ -5335,10 +5335,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Arsenal.",
+          "text": "J'ai joué à Marseille.",
           "source": "https://en.wikipedia.org/wiki/Samir_Nasri",
           "fact": {
-            "club": "Arsenal"
+            "club": "Marseille"
           }
         },
         {
@@ -5579,10 +5579,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Barcelona.",
-          "source": "https://en.wikipedia.org/wiki/Sergio_Busquets",
+          "text": "J'ai joué à l'Inter Miami.",
+          "source": "https://www.intermiamicf.com/news/inter-miami-cf-signs-legendary-midfielder-sergio-busquets",
           "fact": {
-            "club": "Barcelona"
+            "club": "Inter Miami"
           }
         },
         {
@@ -5640,10 +5640,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Liverpool.",
-          "source": "https://en.wikipedia.org/wiki/Steven_Gerrard",
+          "text": "J'ai joué au LA Galaxy.",
+          "source": "https://www.lagalaxy.com/news/la-galaxy-sign-midfielder-steven-gerrard",
           "fact": {
-            "club": "Liverpool"
+            "club": "LA Galaxy"
           }
         },
         {
@@ -5944,10 +5944,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Barcelona.",
-          "source": "https://en.wikipedia.org/wiki/Xavi_%28footballer%2C_born_1980%29",
+          "text": "J'ai joué à Al Sadd.",
+          "source": "https://players.fcbarcelona.com/en/player/949-xavi-xavier-hernandez-creus",
           "fact": {
-            "club": "Barcelona"
+            "club": "Al Sadd"
           }
         },
         {
@@ -6116,5 +6116,6 @@
       "editorial_difficulty": "à tester en partie"
     }
   ],
-  "recalibrated_at": "2026-10-03"
+  "recalibrated_at": "2026-10-03",
+  "ambiguity_audit_at": "2026-10-05"
 }
