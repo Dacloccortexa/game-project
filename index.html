@@ -3255,12 +3255,16 @@
   // Seules les affirmations au statut "vérifié" dans vraifaux-statements.json sont chargées en jeu.
   var VF_POOL = [];
   var VF_READY = false;
+  var VF_EXACT_CATEGORIES = { annee_naissance: true, taille: true, debut_professionnel: true };
+  var VF_COMPARISON_CATEGORIES = { comparaison_age: true, comparaison_taille: true };
 
   function loadVraiFauxStatements() {
     return fetchData("src/data/vraifaux-statements.json")
       .then(function (res) { return res.json(); })
       .then(function (data) {
-        VF_POOL = data.statements.filter(function (s) { return s.verification_status === "vérifié"; });
+        VF_POOL = data.statements.filter(function (s) {
+          return s.verification_status === "vérifié" && !VF_EXACT_CATEGORIES[s.categorie];
+        });
         VF_READY = VF_POOL.length > 0;
       })
       .catch(function (err) {
@@ -3269,17 +3273,21 @@
       });
   }
 
-  // Tire 5 affirmations sans jamais réunir deux énoncés sur le même fait (groupe_exclusif).
+  // Tire 5 affirmations : cinq faits distincts, dont au plus deux comparaisons d'âge ou de taille.
   // Paquet par fait (groupe_exclusif) : un fait déjà joué ne revient qu'une fois tous les autres vus.
   function drawVraiFauxChain() {
     var pool = deckOrder("vf", VF_POOL, function (s) { return s.groupe_exclusif; });
     var chosen = [];
     var usedGroups = {};
+    var comparisonCount = 0;
     for (var k = 0; k < pool.length && chosen.length < 5; k++) {
       var s = pool[k];
       if (usedGroups[s.groupe_exclusif]) continue;
+      var isComparison = !!VF_COMPARISON_CATEGORIES[s.categorie];
+      if (isComparison && comparisonCount >= 2) continue;
       usedGroups[s.groupe_exclusif] = true;
       chosen.push(s);
+      if (isComparison) comparisonCount++;
     }
     chosen.forEach(function (s) { deckMark("vf", s.groupe_exclusif); });
     seenSave();
@@ -3291,7 +3299,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.06-1145";
+  var APP_VERSION = "2026.10.06-1159";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
