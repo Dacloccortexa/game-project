@@ -1,5 +1,12 @@
 # DECISIONS.md
 
+## [2026-10-06] Positionnement et phrases de TACKLE
+- Décision de David après comparaison des propositions dans [MARKETING.md](MARKETING.md) : **« Vos débats foot valent enfin des points. »** est la phrase principale des campagnes et de la page de présentation.
+- **« Le quiz foot entre potes »** reste le sous-titre de l'app et de l'image partagée. Il apporte une explication immédiate du produit ; la fiche App Store sera rédigée avant la sortie.
+- **« Réponds. Tackle. Renverse le score. »** est la signature des vidéos qui montrent cette action. Garder l'orthographe « Tackle » du cri et du nom du jeu.
+- **« Le foot se joue entre vous »** n'est pas retenu comme phrase principale. « Vole la réponse aux footix » reste une piste de ton pour TikTok, à tester.
+- Pas de changement immédiat des textes affichés dans l'app : le choix est éditorial. Vérifier les accroches auprès de nouveaux joueurs et avec les vidéos ; adapter au portugais avec des joueurs locaux.
+
 ## [2026-10-06] Le Match : noms usuels acceptés pour toutes les cartes
 Fusion de la branche Codex « 100 matchs historiques » (203 cartes, nouvel ordre des indices décidé par David). Relecture : les 100 nouveaux matchs (date, score, ville, phase) ont été contrôlés un par un ; aucun doublon ; les cartes françaises existantes sont inchangées.
 - Les nouvelles cartes n'acceptaient pas les noms courants décidés plus tôt (« Hollande », « Allemagne » pour la RFA, « RDA »…). Nouveau script `tools/lematch_aliases.py` : une seule liste de noms usuels par équipe (pays et clubs : PSG, Barça, Juve, Spurs, Napoli…), appliquée à toutes les cartes en français et en portugais, sans jamais retirer d'alias. À relancer après tout ajout de cartes Le Match.
