@@ -266,7 +266,7 @@ advance(30000);
 assert.equal(element('screen-play').classList.contains('race'), false);
 assert.equal(element('btn-tackle').disabled, true);
 assert.equal(element('btn-tackle').classList.contains('tk-waiting'), true);
-assert.equal(element('turn-clock-label').textContent, 'Temps restant');
+assert.match(element('turn-clock-label').textContent, /^Pas de Tackle : B l/);
 advance(5000);
 assert.equal(state.revealedCount, 2);
 assert.equal(state.cardEnded, false);

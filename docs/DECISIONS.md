@@ -1,7 +1,7 @@
 # DECISIONS.md
 
 ## [2026-10-06] Pas de course au Tackle quand aucun adversaire ne peut tacler
-Validé par David (revue du code n° 16). Les 5 s après la priorité servent aussi à l'équipe qui a la main : on les garde. Mais si tous les adversaires ont déjà tenté leur Tackle sur la carte, il n'y a plus de course : pas de son ni de flash, le bouton Tackle reste caché, la bande affiche « Temps restant 00:05 » et l'équipe garde « Répondre » et « Passer ». Sans réponse, l'indice suivant arrive comme avant. Test ajouté.
+Validé par David (revue du code n° 16). Les 5 s après la priorité servent aussi à l'équipe qui a la main : on les garde. Mais si tous les adversaires ont déjà tenté leur Tackle sur la carte, il n'y a plus de course : pas de son ni de flash, le bouton Tackle reste caché, la bande, en doré et non en rouge, affiche « Pas de Tackle : B l'a déjà tenté 00:05 » et l'équipe garde « Répondre » et « Passer ». Sans réponse, l'indice suivant arrive comme avant. Test ajouté.
 
 ## [2026-10-06] Boutons « Signaler une erreur » et « Nous contacter »
 Demande de David. Sans serveur : les deux ouvrent l'appli mail du téléphone vers contact@lafamivy.com ; rien ne part sans appui sur Envoyer (rien à déclarer en plus à Apple).

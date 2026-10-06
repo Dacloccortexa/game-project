@@ -3408,7 +3408,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.06-1429";
+  var APP_VERSION = "2026.10.06-1431";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -4682,6 +4682,14 @@
     return !state.teams.some(function (t, i) { return i !== state.currentTeamIndex && already.indexOf(i) === -1; });
   }
 
+  // « Pas de Tackle : B l'a déjà tenté » (même phrase qu'après une passe sans Tackle possible).
+  function noTackleNote() {
+    var others = state.teams.filter(function (t, i) { return i !== state.currentTeamIndex; });
+    return others.length === 1
+      ? L("Pas de Tackle : ", "Sem tackle: ") + teamVerb(others[0].name, L("l'ont déjà tenté", "já tentaram"), L("l'a déjà tenté", "já tentou"))
+      : L("Pas de Tackle : les adversaires l'ont déjà tenté", "Sem tackle: os adversários já tentaram");
+  }
+
   function updateTackleUI(seconds) {
     var open = state.tacklePhase === "open";
     var alone = !state.passWindow && noOpponentCanTackle();
@@ -4695,10 +4703,12 @@
     var noteOn = !open && state.clockNote && Date.now() < (state.clockNoteUntil || 0);
     el("turn-clock").classList.toggle("note", !!noteOn);
     el("turn-clock-label").textContent = noteOn ? state.clockNote : open
-      ? (alone ? L("Temps restant", "Tempo restante") : state.passWindow ? L("Passé : Tackle adverse !", "Passou: tackle adversário!") : L("Tackle ouvert !", "Tackle aberto!"))
+      ? (alone ? (state.teams.length < 2 ? L("Temps restant", "Tempo restante") : noTackleNote()) : state.passWindow ? L("Passé : Tackle adverse !", "Passou: tackle adversário!") : L("Tackle ouvert !", "Tackle aberto!"))
       : L("Priorité ", "Prioridade ") + teamAux(active ? active.name : "");
     el("turn-clock-time").textContent = "00:" + pad2(Math.max(0, seconds));
-    el("turn-clock").classList.toggle("open", open);
+    // Sans course (aucun adversaire ne peut tacler) : bande calme, pas le rouge du Tackle.
+    el("turn-clock").classList.toggle("open", open && !alone);
+    if (open && alone && state.teams.length > 1) el("turn-clock").classList.add("note");
     // Le bouton clignote pendant toute la fenêtre ouverte.
     el("btn-tackle").classList.toggle("blink", open && !alone);
     // Le bouton n'apparaît qu'au sifflet (DECISIONS.md, 2026-10-03) : pendant la priorité, la bande
