@@ -2,6 +2,17 @@
 
 Analyse demandée par David après les journaux de parties du 29 septembre au 3 octobre. Les chiffres ci-dessous décrivent les cartes **avant** le recalibrage du 3 octobre.
 
+## Ordre adapté à chaque carte — 6 octobre 2026
+
+David a validé l'abandon de l'ordre de catégories identique pour toutes les fiches. Les cinq faits déjà sourcés restent chacun sur une fiche distincte ; les paliers restent **5 / 4 / 3 / 2 / 1**. Le club, le titre, le poste, le coéquipier et la nationalité peuvent maintenant apparaître à des positions différentes selon le joueur.
+
+- **89 fiches sur 100** ont changé d'ordre dans les lots français et portugais ; 11 avaient déjà un ordre conservé. Le lot emploie 16 suites de catégories différentes. Les deux langues gardent le même ordre pour chaque identifiant.
+- Exemple Xavi : **David Villa → Liga → milieu central → espagnol → Al Sadd**. Le passage à Al Sadd, auparavant donné dès le palier à 5 points, termine maintenant la fiche et aide à distinguer Xavi d'autres milieux espagnols du Barça.
+- Exemple Pepe : **Arjen Robben → Primeira Liga → défenseur central → portugais → Beşiktaş**. Le dernier club aide à le distinguer notamment de Ricardo Carvalho.
+- L'ordre est une **première passe éditoriale**, pas un score de difficulté prouvé par calcul. Il faut encore relire les 100 fiches face à des joueurs extérieurs au lot et relever le palier des bonnes réponses en playtest. Si les cinq faits d'une fiche ne peuvent pas former une progression utile et une réponse unique, remplacer un fait par un fait sourcé ou retirer la fiche.
+
+Les analyses datées ci-dessous décrivent l'ancien ordre fixe et restent conservées pour expliquer la décision.
+
 ## Recalibrage du 3 octobre 2026
 
 David a choisi de recalibrer les fiches tout en conservant l'ordre fixe : **club → trophée → poste → coéquipier → nationalité**, un seul fait par indice et 5/4/3/2/1 points.
