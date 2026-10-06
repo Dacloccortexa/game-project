@@ -3,7 +3,7 @@
  "steps": [
   {
    "do": "hold",
-   "s": 1.6,
+   "s": 2.0,
    "caption": "Ils ont eu 5 indices pour trouver <b>DROGBA</b>… 😭",
    "sound": "kickoff"
   },
@@ -15,7 +15,7 @@
   },
   {
    "do": "hold",
-   "s": 0.7,
+   "s": 0.9,
    "caption": "<i>❌ Gervinho ?!</i>",
    "sound": "wrong",
    "flash": "#e2483c",
@@ -25,6 +25,10 @@
    "do": "cutTo"
   },
   {
+   "do": "hold",
+   "s": 0.3
+  },
+  {
    "do": "answer",
    "text": "Koscielny",
    "bubble": "<small>🦁 Les Lions</small>« Koscielny ! »",
@@ -32,7 +36,7 @@
   },
   {
    "do": "hold",
-   "s": 0.7,
+   "s": 0.9,
    "caption": "<i>❌ Koscielny…</i> 😭",
    "sound": "wrong",
    "flash": "#e2483c",
@@ -42,6 +46,10 @@
    "do": "cutTo"
   },
   {
+   "do": "hold",
+   "s": 0.3
+  },
+  {
    "do": "answer",
    "text": "Gignac",
    "bubble": "<small>🦁 Les Lions</small>« Gignac ! »",
@@ -49,7 +57,7 @@
   },
   {
    "do": "hold",
-   "s": 0.7,
+   "s": 0.9,
    "caption": "<i>❌ GIGNAC</i> 💀",
    "sound": "wrong",
    "flash": "#e2483c",
@@ -59,6 +67,10 @@
    "do": "cutTo"
   },
   {
+   "do": "hold",
+   "s": 0.3
+  },
+  {
    "do": "answer",
    "text": "Anelka",
    "bubble": "<small>🦁 Les Lions</small>« Anelka ! »",
@@ -66,7 +78,7 @@
   },
   {
    "do": "hold",
-   "s": 0.7,
+   "s": 0.9,
    "caption": "<i>❌ ANELKA ?!</i> Il était à côté 😩",
    "sound": "wrong",
    "flash": "#e2483c",
@@ -77,7 +89,7 @@
   },
   {
    "do": "hold",
-   "s": 0.8,
+   "s": 2.2,
    "caption": "Shanghai… toujours rien 😶"
   },
   {
@@ -86,11 +98,11 @@
   },
   {
    "do": "hold",
-   "s": 0.9,
-   "caption": "Coup de sifflet : <i>TACKLE !</i> 🦊",
+   "s": 1.5,
+   "caption": "<i>TACKLE !</i> 🦊",
    "sound": "tackle",
    "flash": "#e2483c",
-   "flashMax": 0.55
+   "flashMax": 0.6
   },
   {
    "do": "tackle",
@@ -101,7 +113,7 @@
   },
   {
    "do": "hold",
-   "s": 1.6,
+   "s": 2.0,
    "caption": "<b>✅ DROGBA.</b> Volé par les Renards<br><small>Toi, tu l'avais à quel indice ? 👇</small>",
    "sound": "right",
    "flash": "#2fbf71",
@@ -109,7 +121,7 @@
   },
   {
    "do": "end",
-   "s": 2.6,
+   "s": 2.0,
    "q": "Vos débats foot valent enfin <b>des points</b>.",
    "tag": "Réponds. Tackle. Renverse le score.",
    "cta": "Joue gratuitement<br>lafamivy.com/tackle",
