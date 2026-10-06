@@ -2553,7 +2553,7 @@
       </div>
     </div>
 
-    <!-- Le Match (103 fiches sourcées — voir docs/LE_MATCH_CARDS_REVIEW.md) -->
+    <!-- Le Match (203 fiches sourcées — voir docs/LE_MATCH_CARDS_REVIEW.md et docs/LE_MATCH_100_HISTORIC_CARDS.md) -->
     <!-- Le Match : identité « tableau d'affichage » (assets/ui/le-match/, docs/UI_LE_MATCH_FLOW.md) -->
     <div class="lm-board hidden-screen" id="stage-lm">
       <h3 class="lm-title"><span>Le Match</span></h3>
@@ -3127,11 +3127,11 @@
             teams: c.teams,
             team_aliases: c.team_aliases || [[], []],
             clues: [
-              c.competition,
-              L("Année : ", "Ano: ") + c.year,
               L("Score final : ", "Resultado final: ") + c.score.join("–"),
               L("Ville : ", "Cidade: ") + c.city,
-              L("Phase : ", "Fase: ") + phase
+              L("Phase : ", "Fase: ") + phase,
+              L("Année : ", "Ano: ") + c.year,
+              c.competition
             ]
           };
         });
@@ -3408,7 +3408,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.06-1741";
+  var APP_VERSION = "2026.10.06-1759";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -5791,7 +5791,7 @@
     startTackleWindow();
   }
 
-  // ---------- Le Match : cinq indices factuels, du plus large au plus précis ----------
+  // ---------- Le Match : score, ville, phase, année, compétition ----------
   function beginLmTurn() {
     setActiveMinigameUI("lematch");
     state.cardEnded = false;

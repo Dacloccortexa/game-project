@@ -132,11 +132,11 @@ assert.equal(currentTackleStake(), 4);
 assert.equal(element('btn-tackle').disabled, true);
 
 reset('lematch');
-state.currentLmCard = {teams:['A','B'], clues:['Coupe du monde','Année : 2018','Score final : 4–2','Ville : Moscou','Phase : Finale']};
+state.currentLmCard = {teams:['A','B'], clues:['Score final : 4–2','Ville : Moscou','Phase : Finale','Année : 2018','Coupe du monde']};
 state.lmRevealedCount = 1;
 renderLmClues();
 assert.equal(element('lm-event-list').children.length, 5);
-assert.equal(element('lm-event-list').children[0].children[2].children[0].textContent, 'Coupe du monde');
+assert.equal(element('lm-event-list').children[0].children[2].children[0].textContent, 'Score final : 4–2');
 assert.equal(element('lm-event-list').children[1].children[2].children[0].textContent, 'Indice à venir');
 startTackleWindow();
 assert.equal(currentTackleStake(), 5);
@@ -145,7 +145,7 @@ advance(15000);
 assert.equal(state.lmRevealedCount, 2);
 assert.equal(currentTackleStake(), 4);
 assert.equal(element('btn-tackle').disabled, true);
-assert.equal(element('lm-event-list').children[1].children[2].children[0].textContent, 'Année : 2018');
+assert.equal(element('lm-event-list').children[1].children[2].children[0].textContent, 'Ville : Moscou');
 
 reset('transfert');
 state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
@@ -430,6 +430,12 @@ assert.equal(state.cardEnded, true);
   assert.ok(!matchesAnyAnswer('nice', ['nimes']));
   assert.ok(!matchesAnyAnswer('fernando morientes', ['fernando llorente']));
   assert.ok(!matchesBothTeams('France', 'Allemagne', wg));
+  const byId = id => lm.find(c => c.id === id);
+  assert.ok(matchesBothTeams('Hollande', 'Tchéquie', byId('lm-hist-038')));
+  assert.ok(matchesBothTeams('RDA', 'Allemagne', byId('lm-hist-007')));
+  assert.ok(matchesBothTeams('PSG', 'Barça', byId('lm-hist-062')));
+  assert.ok(matchesBothTeams('Napoli', 'Chelsea', byId('lm-hist-051')));
+  for (const c of lm) assert.ok(matchesBothTeams(c.teams[1], c.teams[0], c), c.id);
 }
 
 // Revue du code 2026-10-06
@@ -495,20 +501,29 @@ for (const [file, key] of [['transfert-cards.json', 'cards'], ['quisuisje-cards.
   const cards = JSON.parse(fs.readFileSync('src/data/lematch-cards.json', 'utf8')).cards;
   const ptCards = JSON.parse(fs.readFileSync('src/data/pt/lematch-cards.json', 'utf8')).cards;
   const citiesPt = JSON.parse(fs.readFileSync('tools/i18n/pt_names.json', 'utf8')).cities;
-  assert.equal(cards.length, 103);
+  assert.equal(cards.length, 203);
   assert.equal(ptCards.length, cards.length);
   const signatures = new Set();
+  const matchKeys = new Set();
   for (const [index, card] of cards.entries()) {
     assert.ok(card.competition && Number.isInteger(card.year) && card.city && card.city_source_url, card.id);
     assert.equal(card.score.length, 2, card.id);
-    assert.ok(['Final', 'Semi-final'].includes(card.round), card.id);
+    assert.ok(['Final', 'Semi-final', 'Tour final', 'Phase de groupes', 'Deuxième tour', 'Huitième de finale', 'Quart de finale', 'Demi-finale', 'Finale', 'Phase de ligue'].includes(card.round) || /^Journée \d+$/.test(card.round), card.id);
     const signature = JSON.stringify([card.competition, card.year, card.score, card.city, card.round]);
     assert.equal(signatures.has(signature), false, `Indices identiques : ${card.id}`);
     signatures.add(signature);
+    if (card.id.startsWith('lm-hist-')) {
+      assert.ok(card.date && card.source_urls.length > 0 && card.events.length === 0, card.id);
+      assert.ok(card.score.every(Number.isInteger), card.id);
+      const matchKey = JSON.stringify([card.competition, card.date, card.teams]);
+      assert.equal(matchKeys.has(matchKey), false, `Match répété : ${card.id}`);
+      matchKeys.add(matchKey);
+    }
     assert.equal(ptCards[index].id, card.id);
     assert.equal(ptCards[index].city, citiesPt[card.city].pt, card.id);
     assert.equal(ptCards[index].city_source_url, card.city_source_url, card.id);
   }
+  assert.equal(matchKeys.size, 100);
 }
 
 // Empreintes des fichiers de questions à jour (tools/data-manifest.cjs, lancé par bump-version.sh).

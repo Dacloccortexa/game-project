@@ -2,15 +2,17 @@
   "lang": "pt-PT",
   "game_id": "lematch",
   "version": "clues-2",
-  "prepared_at": "2026-10-02",
+  "prepared_at": "2026-10-06",
   "scope": {
     "world_cup": "Finales et demi-finales officielles 1954–2026 (1950 sans finale ni demi-finale ; 1974 et 1978 sans demi-finales)",
-    "european_cup": "50 finales de 1977 à 2026, dont 16 Coupes des clubs champions avant 1993"
+    "european_cup": "50 finales de 1977 à 2026, dont 16 Coupes des clubs champions avant 1993",
+    "historic_100": "100 matchs marquants supplémentaires : 37 Coupes du monde, 13 Euros, 25 Ligues des champions et 25 championnats nationaux (Premier League, Liga, Serie A, Ligue 1)."
   },
-  "status": "103 fiches enrichies de la ville pour la nouvelle mécanique à cinq indices",
+  "status": "203 fiches Le Match sourcées ; les 100 nouvelles sont identifiées par lm-hist-*",
   "attribution": {
     "world_cup": "openfootball/worldcup.json, CC0 1.0; https://github.com/openfootball/worldcup.json",
-    "european_cup": "Wikipédia + liens de feuilles de match UEFA quand présents"
+    "european_cup": "Wikipédia + liens de feuilles de match UEFA quand présents",
+    "historic_100": "Données de résultats openfootball (CC0 1.0) ; villes des compétitions internationales dans les mêmes archives ; stades de clubs et exception Lisbonne indiqués par carte."
   },
   "cards": [
     {
@@ -84,10 +86,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ],
         [
           "Austria",
@@ -246,10 +248,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ],
         [
           "Hungary",
@@ -412,10 +414,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ]
       ],
       "city": "Gotemburgo",
@@ -569,18 +571,18 @@
       "team_aliases": [
         [
           "Czechoslovakia",
-          "Tchécoslovaquie",
           "Tchéquie",
           "République tchèque",
           "Chéquia",
-          "Czech Republic"
+          "Czech Republic",
+          "Tchécoslovaquie"
         ],
         [
           "Yugoslavia",
-          "Yougoslavie",
           "Serbie",
           "Sérvia",
-          "Serbia"
+          "Serbia",
+          "Yougoslavie"
         ]
       ],
       "city": "Viña del Mar",
@@ -738,11 +740,11 @@
         ],
         [
           "Czechoslovakia",
-          "Tchécoslovaquie",
           "Tchéquie",
           "République tchèque",
           "Chéquia",
-          "Czech Republic"
+          "Czech Republic",
+          "Tchécoslovaquie"
         ]
       ],
       "city": "Santiago",
@@ -819,17 +821,18 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ],
         [
           "Soviet Union",
           "Union soviétique",
           "Russie",
           "Rússia",
-          "Russia"
+          "Russia",
+          "União Soviética"
         ]
       ],
       "city": "Liverpool",
@@ -986,10 +989,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ]
       ],
       "city": "Londres",
@@ -1148,10 +1151,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ]
       ],
       "city": "Cidade do México",
@@ -1306,16 +1309,18 @@
         [
           "Netherlands",
           "Hollande",
-          "Pays-Bas"
+          "Holanda",
+          "Pays-Bas",
+          "Holland"
         ],
         [
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ]
       ],
       "city": "Munique",
@@ -1395,7 +1400,9 @@
         [
           "Netherlands",
           "Hollande",
-          "Pays-Bas"
+          "Holanda",
+          "Pays-Bas",
+          "Holland"
         ]
       ],
       "city": "Buenos Aires",
@@ -1551,10 +1558,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ],
         [
           "France"
@@ -1638,10 +1645,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ]
       ],
       "city": "Madrid",
@@ -1721,10 +1728,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ]
       ],
       "city": "Guadalajara",
@@ -1884,10 +1891,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ]
       ],
       "city": "Cidade do México",
@@ -2043,10 +2050,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ],
         [
           "England",
@@ -2127,10 +2134,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest",
           "Allemagne",
           "Alemanha",
-          "Germany"
+          "Germany",
+          "Allemagne de l’Ouest"
         ],
         [
           "Argentina",
@@ -2451,7 +2458,9 @@
         [
           "Netherlands",
           "Hollande",
-          "Pays-Bas"
+          "Holanda",
+          "Pays-Bas",
+          "Holland"
         ]
       ],
       "city": "Marselha",
@@ -2683,13 +2692,15 @@
         [
           "Germany",
           "RFA",
+          "Alemanha",
           "Allemagne"
         ],
         [
           "South Korea",
-          "Corée du Sud",
           "Corée",
-          "Coreia"
+          "Coreia",
+          "Corée du Sud",
+          "Korea"
         ]
       ],
       "city": "Seul",
@@ -2844,6 +2855,7 @@
         [
           "Germany",
           "RFA",
+          "Alemanha",
           "Allemagne"
         ],
         [
@@ -2924,6 +2936,7 @@
         [
           "Germany",
           "RFA",
+          "Alemanha",
           "Allemagne"
         ],
         [
@@ -3160,7 +3173,9 @@
         [
           "Netherlands",
           "Hollande",
-          "Pays-Bas"
+          "Holanda",
+          "Pays-Bas",
+          "Holland"
         ]
       ],
       "city": "Cidade do Cabo",
@@ -3236,6 +3251,7 @@
         [
           "Germany",
           "RFA",
+          "Alemanha",
           "Allemagne"
         ],
         [
@@ -3316,7 +3332,9 @@
         [
           "Netherlands",
           "Hollande",
-          "Pays-Bas"
+          "Holanda",
+          "Pays-Bas",
+          "Holland"
         ],
         [
           "Spain",
@@ -3400,6 +3418,7 @@
         [
           "Germany",
           "RFA",
+          "Alemanha",
           "Allemagne"
         ]
       ],
@@ -3476,7 +3495,9 @@
         [
           "Netherlands",
           "Hollande",
-          "Pays-Bas"
+          "Holanda",
+          "Pays-Bas",
+          "Holland"
         ],
         [
           "Argentina",
@@ -3556,6 +3577,7 @@
         [
           "Germany",
           "RFA",
+          "Alemanha",
           "Allemagne"
         ],
         [
@@ -4419,7 +4441,8 @@
       "team_aliases": [
         [
           "Club Brugge",
-          "Club Bruges"
+          "Club Bruges",
+          "Bruges"
         ],
         []
       ],
@@ -4581,7 +4604,9 @@
         [
           "Hamburger SV",
           "Hambourg",
-          "Hambourg SV"
+          "Hambourg SV",
+          "Hamburg",
+          "HSV"
         ]
       ],
       "city": "Madrid",
@@ -4815,7 +4840,9 @@
         [
           "Hamburger SV",
           "Hambourg",
-          "Hambourg SV"
+          "Hambourg SV",
+          "Hamburg",
+          "HSV"
         ],
         [
           "Juve",
@@ -5052,11 +5079,13 @@
           "Barcelona",
           "Barcelone",
           "Barça",
-          "FC Barcelone"
+          "FC Barcelone",
+          "Barca"
         ],
         [
           "Steaua București",
-          "Steaua Bucarest"
+          "Steaua Bucarest",
+          "Steaua"
         ]
       ],
       "city": "Sevilha",
@@ -5216,7 +5245,8 @@
         ],
         [
           "Benfica",
-          "Benfica Lisbonne"
+          "Benfica Lisbonne",
+          "SL Benfica"
         ]
       ],
       "city": "Estugarda",
@@ -5292,10 +5322,12 @@
       "team_aliases": [
         [
           "Steaua București",
-          "Steaua Bucarest"
+          "Steaua Bucarest",
+          "Steaua"
         ],
         [
-          "Milan"
+          "Milan",
+          "Milan AC"
         ]
       ],
       "city": "Barcelona",
@@ -5370,11 +5402,13 @@
       "status": "lu",
       "team_aliases": [
         [
-          "Milan"
+          "Milan",
+          "Milan AC"
         ],
         [
           "Benfica",
-          "Benfica Lisbonne"
+          "Benfica Lisbonne",
+          "SL Benfica"
         ]
       ],
       "city": "Viena",
@@ -5451,7 +5485,9 @@
         [
           "Red Star Belgrade",
           "Étoile rouge",
-          "Étoile rouge de Belgrade"
+          "Étoile rouge de Belgrade",
+          "Red Star",
+          "Crvena Zvezda"
         ],
         [
           "Marseille",
@@ -5534,7 +5570,8 @@
           "Barcelona",
           "Barcelone",
           "Barça",
-          "FC Barcelone"
+          "FC Barcelone",
+          "Barca"
         ],
         [
           "Sampdoria",
@@ -5618,7 +5655,8 @@
           "Olympique de Marseille"
         ],
         [
-          "Milan"
+          "Milan",
+          "Milan AC"
         ]
       ],
       "city": "Munique",
@@ -5693,13 +5731,15 @@
       "status": "lu",
       "team_aliases": [
         [
-          "Milan"
+          "Milan",
+          "Milan AC"
         ],
         [
           "Barcelona",
           "Barcelone",
           "Barça",
-          "FC Barcelone"
+          "FC Barcelone",
+          "Barca"
         ]
       ],
       "city": "Atenas",
@@ -5778,7 +5818,8 @@
           "Ajax Amsterdam"
         ],
         [
-          "Milan"
+          "Milan",
+          "Milan AC"
         ]
       ],
       "city": "Viena",
@@ -6095,7 +6136,8 @@
           "Man United",
           "Man Utd",
           "United",
-          "MU"
+          "MU",
+          "Manchester Utd"
         ],
         [
           "Bayern",
@@ -6421,7 +6463,8 @@
           "Juventus Turin"
         ],
         [
-          "Milan"
+          "Milan",
+          "Milan AC"
         ]
       ],
       "city": "Manchester",
@@ -6575,7 +6618,8 @@
       "status": "lu",
       "team_aliases": [
         [
-          "Milan"
+          "Milan",
+          "Milan AC"
         ],
         []
       ],
@@ -6654,7 +6698,8 @@
           "Barcelona",
           "Barcelone",
           "Barça",
-          "FC Barcelone"
+          "FC Barcelone",
+          "Barca"
         ],
         []
       ],
@@ -6730,7 +6775,8 @@
       "status": "lu",
       "team_aliases": [
         [
-          "Milan"
+          "Milan",
+          "Milan AC"
         ],
         []
       ],
@@ -6809,7 +6855,8 @@
           "Man United",
           "Man Utd",
           "United",
-          "MU"
+          "MU",
+          "Manchester Utd"
         ],
         []
       ],
@@ -6888,13 +6935,15 @@
           "Barcelona",
           "Barcelone",
           "Barça",
-          "FC Barcelone"
+          "FC Barcelone",
+          "Barca"
         ],
         [
           "Man United",
           "Man Utd",
           "United",
-          "MU"
+          "MU",
+          "Manchester Utd"
         ]
       ],
       "city": "Roma",
@@ -6978,7 +7027,9 @@
           "Inter",
           "Internazionale",
           "Inter Milano",
-          "Inter Milan"
+          "Inter Milan",
+          "Inter de Milan",
+          "Inter Milão"
         ]
       ],
       "city": "Madrid",
@@ -7056,13 +7107,15 @@
           "Barcelona",
           "Barcelone",
           "Barça",
-          "FC Barcelone"
+          "FC Barcelone",
+          "Barca"
         ],
         [
           "Man United",
           "Man Utd",
           "United",
-          "MU"
+          "MU",
+          "Manchester Utd"
         ]
       ],
       "city": "Londres",
@@ -7304,7 +7357,8 @@
           "Atlético",
           "Atlético de Madrid",
           "Atleti",
-          "Atlético Madrid"
+          "Atlético Madrid",
+          "Atletico"
         ]
       ],
       "city": "Lisboa",
@@ -7386,7 +7440,8 @@
           "Barcelona",
           "Barcelone",
           "Barça",
-          "FC Barcelone"
+          "FC Barcelone",
+          "Barca"
         ]
       ],
       "city": "Berlim",
@@ -7467,7 +7522,8 @@
           "Atlético",
           "Atlético de Madrid",
           "Atleti",
-          "Atlético Madrid"
+          "Atlético Madrid",
+          "Atletico"
         ]
       ],
       "city": "Milão",
@@ -8017,7 +8073,9 @@
           "Inter",
           "Internazionale",
           "Inter Milano",
-          "Inter Milan"
+          "Inter Milan",
+          "Inter de Milan",
+          "Inter Milão"
         ]
       ],
       "city": "Istambul",
@@ -8179,7 +8237,9 @@
           "Inter",
           "Internazionale",
           "Inter Milano",
-          "Inter Milan"
+          "Inter Milan",
+          "Inter de Milan",
+          "Inter Milão"
         ]
       ],
       "city": "Munique",
@@ -8262,8 +8322,3514 @@
       ],
       "city": "Budapeste",
       "city_source_url": "https://en.wikipedia.org/wiki/2026_UEFA_Champions_League_final"
+    },
+    {
+      "id": "lm-hist-001",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1950,
+      "round": "Fase final",
+      "date": "1950-07-16",
+      "teams": [
+        "Uruguai",
+        "Brasil"
+      ],
+      "score": [
+        2,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1950/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Uruguay"
+        ],
+        [
+          "Brazil",
+          "Brésil"
+        ]
+      ],
+      "city": "Rio de Janeiro",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1950/worldcup.json"
+    },
+    {
+      "id": "lm-hist-002",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1954,
+      "round": "Quartos de final",
+      "date": "1954-06-27",
+      "teams": [
+        "Brasil",
+        "Hungria"
+      ],
+      "score": [
+        2,
+        4
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Brazil",
+          "Brésil"
+        ],
+        [
+          "Hungary",
+          "Hongrie"
+        ]
+      ],
+      "city": "Berna",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup.json"
+    },
+    {
+      "id": "lm-hist-003",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1966,
+      "round": "Fase de grupos",
+      "date": "1966-07-19",
+      "teams": [
+        "Coreia do Norte",
+        "Itália"
+      ],
+      "score": [
+        1,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "North Korea",
+          "Corée du Nord"
+        ],
+        [
+          "Italy",
+          "Italie"
+        ]
+      ],
+      "city": "Middlesbrough",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup.json"
+    },
+    {
+      "id": "lm-hist-004",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1966,
+      "round": "Quartos de final",
+      "date": "1966-07-23",
+      "teams": [
+        "Portugal",
+        "Coreia do Norte"
+      ],
+      "score": [
+        5,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [],
+        [
+          "North Korea",
+          "Corée du Nord"
+        ]
+      ],
+      "city": "Liverpool",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup.json"
+    },
+    {
+      "id": "lm-hist-005",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1970,
+      "round": "Fase de grupos",
+      "date": "1970-06-07",
+      "teams": [
+        "Inglaterra",
+        "Brasil"
+      ],
+      "score": [
+        0,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "England",
+          "Angleterre"
+        ],
+        [
+          "Brazil",
+          "Brésil"
+        ]
+      ],
+      "city": "Guadalajara",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup.json"
+    },
+    {
+      "id": "lm-hist-006",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1970,
+      "round": "Quartos de final",
+      "date": "1970-06-14",
+      "teams": [
+        "Alemanha Ocidental",
+        "Inglaterra"
+      ],
+      "score": [
+        3,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "West Germany",
+          "Allemagne de l’Ouest",
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "RFA",
+          "Germany",
+          "Alemanha"
+        ],
+        [
+          "England",
+          "Angleterre"
+        ]
+      ],
+      "city": "León",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup.json"
+    },
+    {
+      "id": "lm-hist-007",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1974,
+      "round": "Fase de grupos",
+      "date": "1974-06-22",
+      "teams": [
+        "Alemanha Oriental",
+        "Alemanha Ocidental"
+      ],
+      "score": [
+        1,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1974/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "East Germany",
+          "Allemagne de l’Est",
+          "Allemagne de l'Est",
+          "RDA"
+        ],
+        [
+          "West Germany",
+          "Allemagne de l’Ouest",
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "RFA",
+          "Germany",
+          "Alemanha"
+        ]
+      ],
+      "city": "Hamburgo",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1974/worldcup.json"
+    },
+    {
+      "id": "lm-hist-008",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1978,
+      "round": "Segunda fase",
+      "date": "1978-06-21",
+      "teams": [
+        "Argentina",
+        "Peru"
+      ],
+      "score": [
+        6,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1978/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Argentina",
+          "Argentine"
+        ],
+        [
+          "Peru",
+          "Pérou"
+        ]
+      ],
+      "city": "Rosario",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1978/worldcup.json"
+    },
+    {
+      "id": "lm-hist-009",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1982,
+      "round": "Segunda fase",
+      "date": "1982-07-05",
+      "teams": [
+        "Itália",
+        "Brasil"
+      ],
+      "score": [
+        3,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Italy",
+          "Italie"
+        ],
+        [
+          "Brazil",
+          "Brésil"
+        ]
+      ],
+      "city": "Barcelona",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup.json"
+    },
+    {
+      "id": "lm-hist-010",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1982,
+      "round": "Fase de grupos",
+      "date": "1982-06-25",
+      "teams": [
+        "Alemanha Ocidental",
+        "Áustria"
+      ],
+      "score": [
+        1,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "West Germany",
+          "Allemagne de l’Ouest",
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "RFA",
+          "Germany",
+          "Alemanha"
+        ],
+        [
+          "Austria",
+          "Autriche"
+        ]
+      ],
+      "city": "Gijón",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup.json"
+    },
+    {
+      "id": "lm-hist-011",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1986,
+      "round": "Quartos de final",
+      "date": "1986-06-22",
+      "teams": [
+        "Argentina",
+        "Inglaterra"
+      ],
+      "score": [
+        2,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Argentina",
+          "Argentine"
+        ],
+        [
+          "England",
+          "Angleterre"
+        ]
+      ],
+      "city": "Cidade do México",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup.json"
+    },
+    {
+      "id": "lm-hist-012",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1986,
+      "round": "Oitavos de final",
+      "date": "1986-06-15",
+      "teams": [
+        "URSS",
+        "Bélgica"
+      ],
+      "score": [
+        3,
+        4
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Soviet Union",
+          "Russie",
+          "Union soviétique",
+          "Russia",
+          "Rússia",
+          "União Soviética"
+        ],
+        [
+          "Belgium",
+          "Belgique"
+        ]
+      ],
+      "city": "León",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup.json"
+    },
+    {
+      "id": "lm-hist-013",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1990,
+      "round": "Fase de grupos",
+      "date": "1990-06-08",
+      "teams": [
+        "Argentina",
+        "Camarões"
+      ],
+      "score": [
+        0,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Argentina",
+          "Argentine"
+        ],
+        [
+          "Cameroon",
+          "Cameroun"
+        ]
+      ],
+      "city": "Milão",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup.json"
+    },
+    {
+      "id": "lm-hist-014",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1990,
+      "round": "Oitavos de final",
+      "date": "1990-06-23",
+      "teams": [
+        "Camarões",
+        "Colômbia"
+      ],
+      "score": [
+        2,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Cameroon",
+          "Cameroun"
+        ],
+        [
+          "Colombia",
+          "Colombie"
+        ]
+      ],
+      "city": "Nápoles",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup.json"
+    },
+    {
+      "id": "lm-hist-015",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1994,
+      "round": "Fase de grupos",
+      "date": "1994-06-18",
+      "teams": [
+        "Itália",
+        "Irlanda"
+      ],
+      "score": [
+        0,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Italy",
+          "Italie"
+        ],
+        [
+          "Ireland",
+          "Irlande",
+          "Eire",
+          "République d'Irlande"
+        ]
+      ],
+      "city": "East Rutherford",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup.json"
+    },
+    {
+      "id": "lm-hist-016",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1994,
+      "round": "Fase de grupos",
+      "date": "1994-06-29",
+      "teams": [
+        "Bélgica",
+        "Arábia Saudita"
+      ],
+      "score": [
+        0,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Belgium",
+          "Belgique"
+        ],
+        [
+          "Saudi Arabia",
+          "Arabie saoudite"
+        ]
+      ],
+      "city": "Washington",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup.json"
+    },
+    {
+      "id": "lm-hist-017",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1994,
+      "round": "Quartos de final",
+      "date": "1994-07-09",
+      "teams": [
+        "Países Baixos",
+        "Brasil"
+      ],
+      "score": [
+        2,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Netherlands",
+          "Pays-Bas",
+          "Hollande",
+          "Holland",
+          "Holanda"
+        ],
+        [
+          "Brazil",
+          "Brésil"
+        ]
+      ],
+      "city": "Dallas",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup.json"
+    },
+    {
+      "id": "lm-hist-018",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1998,
+      "round": "Fase de grupos",
+      "date": "1998-06-13",
+      "teams": [
+        "Espanha",
+        "Nigéria"
+      ],
+      "score": [
+        2,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Spain",
+          "Espagne"
+        ],
+        [
+          "Nigeria"
+        ]
+      ],
+      "city": "Nantes",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup.json"
+    },
+    {
+      "id": "lm-hist-019",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1998,
+      "round": "Oitavos de final",
+      "date": "1998-06-28",
+      "teams": [
+        "França",
+        "Paraguai"
+      ],
+      "score": [
+        1,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "France"
+        ],
+        [
+          "Paraguay"
+        ]
+      ],
+      "city": "Lens",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup.json"
+    },
+    {
+      "id": "lm-hist-020",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 1998,
+      "round": "Oitavos de final",
+      "date": "1998-06-30",
+      "teams": [
+        "Argentina",
+        "Inglaterra"
+      ],
+      "score": [
+        2,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Argentina",
+          "Argentine"
+        ],
+        [
+          "England",
+          "Angleterre"
+        ]
+      ],
+      "city": "Saint-Étienne",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup.json",
+      "penalty_score": [
+        4,
+        3
+      ]
+    },
+    {
+      "id": "lm-hist-021",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2002,
+      "round": "Fase de grupos",
+      "date": "2002-05-31",
+      "teams": [
+        "França",
+        "Senegal"
+      ],
+      "score": [
+        0,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "France"
+        ],
+        [
+          "Senegal",
+          "Sénégal"
+        ]
+      ],
+      "city": "Seul",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup.json"
+    },
+    {
+      "id": "lm-hist-022",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2002,
+      "round": "Oitavos de final",
+      "date": "2002-06-18",
+      "teams": [
+        "Coreia do Sul",
+        "Itália"
+      ],
+      "score": [
+        2,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "South Korea",
+          "Corée du Sud",
+          "Corée",
+          "Korea",
+          "Coreia"
+        ],
+        [
+          "Italy",
+          "Italie"
+        ]
+      ],
+      "city": "Daejeon",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup.json"
+    },
+    {
+      "id": "lm-hist-023",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2002,
+      "round": "Quartos de final",
+      "date": "2002-06-21",
+      "teams": [
+        "Inglaterra",
+        "Brasil"
+      ],
+      "score": [
+        1,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "England",
+          "Angleterre"
+        ],
+        [
+          "Brazil",
+          "Brésil"
+        ]
+      ],
+      "city": "Shizuoka",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup.json"
+    },
+    {
+      "id": "lm-hist-024",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2006,
+      "round": "Quartos de final",
+      "date": "2006-06-30",
+      "teams": [
+        "Alemanha",
+        "Argentina"
+      ],
+      "score": [
+        1,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Germany",
+          "Allemagne"
+        ],
+        [
+          "Argentina",
+          "Argentine"
+        ]
+      ],
+      "city": "Berlim",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup.json",
+      "penalty_score": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "lm-hist-025",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2006,
+      "round": "Oitavos de final",
+      "date": "2006-06-25",
+      "teams": [
+        "Portugal",
+        "Países Baixos"
+      ],
+      "score": [
+        1,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [],
+        [
+          "Netherlands",
+          "Pays-Bas",
+          "Hollande",
+          "Holland",
+          "Holanda"
+        ]
+      ],
+      "city": "Nuremberga",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup.json"
+    },
+    {
+      "id": "lm-hist-026",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2010,
+      "round": "Oitavos de final",
+      "date": "2010-06-27",
+      "teams": [
+        "Alemanha",
+        "Inglaterra"
+      ],
+      "score": [
+        4,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Germany",
+          "Allemagne"
+        ],
+        [
+          "England",
+          "Angleterre"
+        ]
+      ],
+      "city": "Bloemfontein",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup.json"
+    },
+    {
+      "id": "lm-hist-027",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2010,
+      "round": "Quartos de final",
+      "date": "2010-07-02",
+      "teams": [
+        "Uruguai",
+        "Gana"
+      ],
+      "score": [
+        1,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Uruguay"
+        ],
+        [
+          "Ghana"
+        ]
+      ],
+      "city": "Joanesburgo",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup.json",
+      "penalty_score": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "lm-hist-028",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2014,
+      "round": "Fase de grupos",
+      "date": "2014-06-13",
+      "teams": [
+        "Espanha",
+        "Países Baixos"
+      ],
+      "score": [
+        1,
+        5
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Spain",
+          "Espagne"
+        ],
+        [
+          "Netherlands",
+          "Pays-Bas",
+          "Hollande",
+          "Holland",
+          "Holanda"
+        ]
+      ],
+      "city": "Salvador",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup.json"
+    },
+    {
+      "id": "lm-hist-029",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2014,
+      "round": "Fase de grupos",
+      "date": "2014-06-20",
+      "teams": [
+        "Itália",
+        "Costa Rica"
+      ],
+      "score": [
+        0,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Italy",
+          "Italie"
+        ],
+        []
+      ],
+      "city": "Recife",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup.json"
+    },
+    {
+      "id": "lm-hist-030",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2014,
+      "round": "Oitavos de final",
+      "date": "2014-06-30",
+      "teams": [
+        "Alemanha",
+        "Argélia"
+      ],
+      "score": [
+        2,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Germany",
+          "Allemagne"
+        ],
+        [
+          "Algeria",
+          "Algérie"
+        ]
+      ],
+      "city": "Porto Alegre",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup.json"
+    },
+    {
+      "id": "lm-hist-031",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2018,
+      "round": "Oitavos de final",
+      "date": "2018-06-30",
+      "teams": [
+        "França",
+        "Argentina"
+      ],
+      "score": [
+        4,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "France"
+        ],
+        [
+          "Argentina",
+          "Argentine"
+        ]
+      ],
+      "city": "Kazan",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup.json"
+    },
+    {
+      "id": "lm-hist-032",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2018,
+      "round": "Oitavos de final",
+      "date": "2018-07-02",
+      "teams": [
+        "Bélgica",
+        "Japão"
+      ],
+      "score": [
+        3,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Belgium",
+          "Belgique"
+        ],
+        [
+          "Japan",
+          "Japon"
+        ]
+      ],
+      "city": "Rostov do Don",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup.json"
+    },
+    {
+      "id": "lm-hist-033",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2022,
+      "round": "Fase de grupos",
+      "date": "2022-11-22",
+      "teams": [
+        "Argentina",
+        "Arábia Saudita"
+      ],
+      "score": [
+        1,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Argentina",
+          "Argentine"
+        ],
+        [
+          "Saudi Arabia",
+          "Arabie saoudite"
+        ]
+      ],
+      "city": "Lusail",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup.json"
+    },
+    {
+      "id": "lm-hist-034",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2022,
+      "round": "Oitavos de final",
+      "date": "2022-12-06",
+      "teams": [
+        "Marrocos",
+        "Espanha"
+      ],
+      "score": [
+        0,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Morocco",
+          "Maroc"
+        ],
+        [
+          "Spain",
+          "Espagne"
+        ]
+      ],
+      "city": "Al Rayyan",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup.json",
+      "penalty_score": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "lm-hist-035",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2022,
+      "round": "Quartos de final",
+      "date": "2022-12-09",
+      "teams": [
+        "Países Baixos",
+        "Argentina"
+      ],
+      "score": [
+        2,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Netherlands",
+          "Pays-Bas",
+          "Hollande",
+          "Holland",
+          "Holanda"
+        ],
+        [
+          "Argentina",
+          "Argentine"
+        ]
+      ],
+      "city": "Lusail",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup.json",
+      "penalty_score": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "lm-hist-036",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2022,
+      "round": "Quartos de final",
+      "date": "2022-12-09",
+      "teams": [
+        "Croácia",
+        "Brasil"
+      ],
+      "score": [
+        1,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Croatia",
+          "Croatie"
+        ],
+        [
+          "Brazil",
+          "Brésil"
+        ]
+      ],
+      "city": "Al Rayyan",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup.json",
+      "penalty_score": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "lm-hist-037",
+      "competition": "Campeonato do Mundo",
+      "competition_key": "world_cup",
+      "year": 2022,
+      "round": "Quartos de final",
+      "date": "2022-12-10",
+      "teams": [
+        "Marrocos",
+        "Portugal"
+      ],
+      "score": [
+        1,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Morocco",
+          "Maroc"
+        ],
+        []
+      ],
+      "city": "Doha",
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup.json"
+    },
+    {
+      "id": "lm-hist-038",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2021,
+      "round": "Oitavos de final",
+      "date": "2021-06-27",
+      "teams": [
+        "Países Baixos",
+        "Chéquia"
+      ],
+      "score": [
+        0,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2020/euro.json",
+        "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Netherlands",
+          "Pays-Bas",
+          "Hollande",
+          "Holland",
+          "Holanda"
+        ],
+        [
+          "Czech Republic",
+          "Tchéquie",
+          "République tchèque",
+          "Czechia",
+          "República Checa"
+        ]
+      ],
+      "city": "Budapeste",
+      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+    },
+    {
+      "id": "lm-hist-039",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2021,
+      "round": "Oitavos de final",
+      "date": "2021-06-28",
+      "teams": [
+        "Croácia",
+        "Espanha"
+      ],
+      "score": [
+        3,
+        5
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2020/euro.json",
+        "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Croatia",
+          "Croatie"
+        ],
+        [
+          "Spain",
+          "Espagne"
+        ]
+      ],
+      "city": "Copenhaga",
+      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+    },
+    {
+      "id": "lm-hist-040",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2021,
+      "round": "Oitavos de final",
+      "date": "2021-06-28",
+      "teams": [
+        "França",
+        "Suíça"
+      ],
+      "score": [
+        3,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2020/euro.json",
+        "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "France"
+        ],
+        [
+          "Switzerland",
+          "Suisse"
+        ]
+      ],
+      "city": "Bucareste",
+      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/",
+      "penalty_score": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "lm-hist-041",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2021,
+      "round": "Oitavos de final",
+      "date": "2021-06-29",
+      "teams": [
+        "Inglaterra",
+        "Alemanha"
+      ],
+      "score": [
+        2,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2020/euro.json",
+        "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "England",
+          "Angleterre"
+        ],
+        [
+          "Germany",
+          "Allemagne"
+        ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+    },
+    {
+      "id": "lm-hist-042",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2021,
+      "round": "Quartos de final",
+      "date": "2021-07-02",
+      "teams": [
+        "Bélgica",
+        "Itália"
+      ],
+      "score": [
+        1,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2020/euro.json",
+        "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Belgium",
+          "Belgique"
+        ],
+        [
+          "Italy",
+          "Italie"
+        ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+    },
+    {
+      "id": "lm-hist-043",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2021,
+      "round": "Meia-final",
+      "date": "2021-07-06",
+      "teams": [
+        "Itália",
+        "Espanha"
+      ],
+      "score": [
+        1,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2020/euro.json",
+        "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Italy",
+          "Italie"
+        ],
+        [
+          "Spain",
+          "Espagne"
+        ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/",
+      "penalty_score": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "lm-hist-044",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2021,
+      "round": "Final",
+      "date": "2021-07-11",
+      "teams": [
+        "Itália",
+        "Inglaterra"
+      ],
+      "score": [
+        1,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2020/euro.json",
+        "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Italy",
+          "Italie"
+        ],
+        [
+          "England",
+          "Angleterre"
+        ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/",
+      "penalty_score": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "lm-hist-045",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2024,
+      "round": "Fase de grupos",
+      "date": "2024-06-26",
+      "teams": [
+        "Geórgia",
+        "Portugal"
+      ],
+      "score": [
+        2,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2024/euro.json",
+        "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Georgia",
+          "Géorgie"
+        ],
+        []
+      ],
+      "city": "Gelsenkirchen",
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+    },
+    {
+      "id": "lm-hist-046",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2024,
+      "round": "Oitavos de final",
+      "date": "2024-06-30",
+      "teams": [
+        "Inglaterra",
+        "Eslováquia"
+      ],
+      "score": [
+        2,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2024/euro.json",
+        "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "England",
+          "Angleterre"
+        ],
+        [
+          "Slovakia",
+          "Slovaquie"
+        ]
+      ],
+      "city": "Gelsenkirchen",
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+    },
+    {
+      "id": "lm-hist-047",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2024,
+      "round": "Oitavos de final",
+      "date": "2024-07-02",
+      "teams": [
+        "Áustria",
+        "Turquia"
+      ],
+      "score": [
+        1,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2024/euro.json",
+        "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Austria",
+          "Autriche"
+        ],
+        [
+          "Turkey",
+          "Turquie"
+        ]
+      ],
+      "city": "Leipzig",
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+    },
+    {
+      "id": "lm-hist-048",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2024,
+      "round": "Quartos de final",
+      "date": "2024-07-05",
+      "teams": [
+        "Espanha",
+        "Alemanha"
+      ],
+      "score": [
+        2,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2024/euro.json",
+        "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Spain",
+          "Espagne"
+        ],
+        [
+          "Germany",
+          "Allemagne"
+        ]
+      ],
+      "city": "Estugarda",
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+    },
+    {
+      "id": "lm-hist-049",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2024,
+      "round": "Meia-final",
+      "date": "2024-07-09",
+      "teams": [
+        "Espanha",
+        "França"
+      ],
+      "score": [
+        2,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2024/euro.json",
+        "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Spain",
+          "Espagne"
+        ],
+        [
+          "France"
+        ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+    },
+    {
+      "id": "lm-hist-050",
+      "competition": "Euro",
+      "competition_key": "euro",
+      "year": 2024,
+      "round": "Final",
+      "date": "2024-07-14",
+      "teams": [
+        "Espanha",
+        "Inglaterra"
+      ],
+      "score": [
+        2,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/euro.json/blob/master/2024/euro.json",
+        "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Spain",
+          "Espagne"
+        ],
+        [
+          "England",
+          "Angleterre"
+        ]
+      ],
+      "city": "Berlim",
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+    },
+    {
+      "id": "lm-hist-051",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2012,
+      "round": "Oitavos de final",
+      "date": "2012-03-14",
+      "teams": [
+        "Chelsea",
+        "Nápoles"
+      ],
+      "score": [
+        4,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2011-12/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Chelsea FC",
+          "Chelsea FC (ENG)"
+        ],
+        [
+          "SSC Napoli",
+          "SSC Napoli (ITA)",
+          "Napoli",
+          "Naples"
+        ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)"
+    },
+    {
+      "id": "lm-hist-052",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2012,
+      "round": "Meia-final",
+      "date": "2012-04-24",
+      "teams": [
+        "Barcelona",
+        "Chelsea"
+      ],
+      "score": [
+        2,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2011-12/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "FC Barcelona",
+          "FC Barcelona (ESP)",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ],
+        [
+          "Chelsea FC",
+          "Chelsea FC (ENG)"
+        ]
+      ],
+      "city": "Barcelona",
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+    },
+    {
+      "id": "lm-hist-053",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2013,
+      "round": "Oitavos de final",
+      "date": "2013-03-12",
+      "teams": [
+        "Barcelona",
+        "AC Milan"
+      ],
+      "score": [
+        4,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2012-13/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "FC Barcelona",
+          "FC Barcelona (ESP)",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ],
+        [
+          "AC Milan (ITA)",
+          "Milan",
+          "Milan AC"
+        ]
+      ],
+      "city": "Barcelona",
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+    },
+    {
+      "id": "lm-hist-054",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2013,
+      "round": "Meia-final",
+      "date": "2013-04-23",
+      "teams": [
+        "Bayern Munique",
+        "Barcelona"
+      ],
+      "score": [
+        4,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2012-13/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Bayern München",
+          "Bayern München (GER)",
+          "Bayern Munich",
+          "Bayern"
+        ],
+        [
+          "FC Barcelona",
+          "FC Barcelona (ESP)",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://en.wikipedia.org/wiki/Allianz_Arena"
+    },
+    {
+      "id": "lm-hist-055",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2013,
+      "round": "Meia-final",
+      "date": "2013-04-24",
+      "teams": [
+        "Borussia Dortmund",
+        "Real Madrid"
+      ],
+      "score": [
+        4,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2012-13/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Borussia Dortmund (GER)",
+          "Dortmund",
+          "BVB"
+        ],
+        [
+          "Real Madrid (ESP)",
+          "Real"
+        ]
+      ],
+      "city": "Dortmund",
+      "city_source_url": "https://en.wikipedia.org/wiki/Westfalenstadion"
+    },
+    {
+      "id": "lm-hist-056",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2014,
+      "round": "Quartos de final",
+      "date": "2014-04-08",
+      "teams": [
+        "Chelsea",
+        "Paris Saint-Germain"
+      ],
+      "score": [
+        2,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2013-14/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Chelsea FC",
+          "Chelsea FC (ENG)"
+        ],
+        [
+          "Paris Saint-Germain (FRA)",
+          "PSG",
+          "Paris SG",
+          "Paris"
+        ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)"
+    },
+    {
+      "id": "lm-hist-057",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2014,
+      "round": "Meia-final",
+      "date": "2014-04-29",
+      "teams": [
+        "Bayern Munique",
+        "Real Madrid"
+      ],
+      "score": [
+        0,
+        4
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2013-14/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Bayern München",
+          "Bayern München (GER)",
+          "Bayern Munich",
+          "Bayern"
+        ],
+        [
+          "Real Madrid (ESP)",
+          "Real"
+        ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://en.wikipedia.org/wiki/Allianz_Arena"
+    },
+    {
+      "id": "lm-hist-058",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2015,
+      "round": "Meia-final",
+      "date": "2015-05-06",
+      "teams": [
+        "Barcelona",
+        "Bayern Munique"
+      ],
+      "score": [
+        3,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2014-15/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "FC Barcelona",
+          "FC Barcelona (ESP)",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ],
+        [
+          "Bayern München",
+          "Bayern München (GER)",
+          "Bayern Munich",
+          "Bayern"
+        ]
+      ],
+      "city": "Barcelona",
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+    },
+    {
+      "id": "lm-hist-059",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2015,
+      "round": "Quartos de final",
+      "date": "2015-04-21",
+      "teams": [
+        "Bayern Munique",
+        "FC Porto"
+      ],
+      "score": [
+        6,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2014-15/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Bayern München",
+          "Bayern München (GER)",
+          "Bayern Munich",
+          "Bayern"
+        ],
+        [
+          "FC Porto (POR)",
+          "Porto"
+        ]
+      ],
+      "city": "Munique",
+      "city_source_url": "https://en.wikipedia.org/wiki/Allianz_Arena"
+    },
+    {
+      "id": "lm-hist-060",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2015,
+      "round": "Oitavos de final",
+      "date": "2015-03-11",
+      "teams": [
+        "Chelsea",
+        "Paris Saint-Germain"
+      ],
+      "score": [
+        2,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2014-15/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Chelsea FC",
+          "Chelsea FC (ENG)"
+        ],
+        [
+          "Paris Saint-Germain (FRA)",
+          "PSG",
+          "Paris SG",
+          "Paris"
+        ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)"
+    },
+    {
+      "id": "lm-hist-061",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2016,
+      "round": "Quartos de final",
+      "date": "2016-04-12",
+      "teams": [
+        "Real Madrid",
+        "Wolfsburgo"
+      ],
+      "score": [
+        3,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2015-16/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Real Madrid (ESP)",
+          "Real"
+        ],
+        [
+          "VfL Wolfsburg",
+          "VfL Wolfsburg (GER)",
+          "Wolfsburg"
+        ]
+      ],
+      "city": "Madrid",
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+    },
+    {
+      "id": "lm-hist-062",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2017,
+      "round": "Oitavos de final",
+      "date": "2017-03-08",
+      "teams": [
+        "Barcelona",
+        "Paris Saint-Germain"
+      ],
+      "score": [
+        6,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2016-17/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "FC Barcelona",
+          "FC Barcelona (ESP)",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ],
+        [
+          "Paris Saint-Germain (FRA)",
+          "PSG",
+          "Paris SG",
+          "Paris"
+        ]
+      ],
+      "city": "Barcelona",
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+    },
+    {
+      "id": "lm-hist-063",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2017,
+      "round": "Oitavos de final",
+      "date": "2017-02-21",
+      "teams": [
+        "Manchester City",
+        "Mónaco"
+      ],
+      "score": [
+        5,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2016-17/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Manchester City (ENG)",
+          "Man City"
+        ],
+        [
+          "AS Monaco (FRA)",
+          "AS Monaco",
+          "Monaco"
+        ]
+      ],
+      "city": "Manchester",
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+    },
+    {
+      "id": "lm-hist-064",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2017,
+      "round": "Oitavos de final",
+      "date": "2017-03-15",
+      "teams": [
+        "Mónaco",
+        "Manchester City"
+      ],
+      "score": [
+        3,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2016-17/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "AS Monaco (FRA)",
+          "AS Monaco",
+          "Monaco"
+        ],
+        [
+          "Manchester City (ENG)",
+          "Man City"
+        ]
+      ],
+      "city": "Mónaco",
+      "city_source_url": "https://en.wikipedia.org/wiki/Stade_Louis_II"
+    },
+    {
+      "id": "lm-hist-065",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2017,
+      "round": "Quartos de final",
+      "date": "2017-04-18",
+      "teams": [
+        "Real Madrid",
+        "Bayern Munique"
+      ],
+      "score": [
+        4,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2016-17/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Real Madrid (ESP)",
+          "Real"
+        ],
+        [
+          "Bayern München",
+          "Bayern München (GER)",
+          "Bayern Munich",
+          "Bayern"
+        ]
+      ],
+      "city": "Madrid",
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+    },
+    {
+      "id": "lm-hist-066",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2018,
+      "round": "Quartos de final",
+      "date": "2018-04-10",
+      "teams": [
+        "Roma",
+        "Barcelona"
+      ],
+      "score": [
+        3,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2017-18/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "AS Roma",
+          "AS Roma (ITA)",
+          "AS Rome",
+          "Rome"
+        ],
+        [
+          "FC Barcelona",
+          "FC Barcelona (ESP)",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ]
+      ],
+      "city": "Roma",
+      "city_source_url": "https://en.wikipedia.org/wiki/Stadio_Olimpico"
+    },
+    {
+      "id": "lm-hist-067",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2018,
+      "round": "Quartos de final",
+      "date": "2018-04-04",
+      "teams": [
+        "Liverpool",
+        "Manchester City"
+      ],
+      "score": [
+        3,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2017-18/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Liverpool FC",
+          "Liverpool FC (ENG)"
+        ],
+        [
+          "Manchester City (ENG)",
+          "Man City"
+        ]
+      ],
+      "city": "Liverpool",
+      "city_source_url": "https://en.wikipedia.org/wiki/Anfield"
+    },
+    {
+      "id": "lm-hist-068",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2019,
+      "round": "Oitavos de final",
+      "date": "2019-03-05",
+      "teams": [
+        "Real Madrid",
+        "Ajax"
+      ],
+      "score": [
+        1,
+        4
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2018-19/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Real Madrid (ESP)",
+          "Real"
+        ],
+        [
+          "AFC Ajax",
+          "AFC Ajax (NED)",
+          "Ajax Amsterdam"
+        ]
+      ],
+      "city": "Madrid",
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+    },
+    {
+      "id": "lm-hist-069",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2019,
+      "round": "Oitavos de final",
+      "date": "2019-03-06",
+      "teams": [
+        "Paris Saint-Germain",
+        "Manchester United"
+      ],
+      "score": [
+        1,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2018-19/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Paris Saint-Germain (FRA)",
+          "PSG",
+          "Paris SG",
+          "Paris"
+        ],
+        [
+          "Manchester United (ENG)",
+          "Man United",
+          "Man Utd",
+          "Manchester Utd"
+        ]
+      ],
+      "city": "Paris",
+      "city_source_url": "https://en.wikipedia.org/wiki/Parc_des_Princes"
+    },
+    {
+      "id": "lm-hist-070",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2019,
+      "round": "Oitavos de final",
+      "date": "2019-03-12",
+      "teams": [
+        "Juventus",
+        "Atlético de Madrid"
+      ],
+      "score": [
+        3,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2018-19/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Juventus (ITA)",
+          "Juve"
+        ],
+        [
+          "Atlético Madrid (ESP)",
+          "Atlético Madrid",
+          "Atlético",
+          "Atletico",
+          "Atleti"
+        ]
+      ],
+      "city": "Turim",
+      "city_source_url": "https://en.wikipedia.org/wiki/Juventus_Stadium"
+    },
+    {
+      "id": "lm-hist-071",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2019,
+      "round": "Meia-final",
+      "date": "2019-05-07",
+      "teams": [
+        "Liverpool",
+        "Barcelona"
+      ],
+      "score": [
+        4,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2018-19/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Liverpool FC",
+          "Liverpool FC (ENG)"
+        ],
+        [
+          "FC Barcelona",
+          "FC Barcelona (ESP)",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ]
+      ],
+      "city": "Liverpool",
+      "city_source_url": "https://en.wikipedia.org/wiki/Anfield"
+    },
+    {
+      "id": "lm-hist-072",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2019,
+      "round": "Meia-final",
+      "date": "2019-05-08",
+      "teams": [
+        "Ajax",
+        "Tottenham"
+      ],
+      "score": [
+        2,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2018-19/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "AFC Ajax",
+          "AFC Ajax (NED)",
+          "Ajax Amsterdam"
+        ],
+        [
+          "Tottenham Hotspur (ENG)",
+          "Tottenham Hotspur",
+          "Spurs"
+        ]
+      ],
+      "city": "Amesterdão",
+      "city_source_url": "https://en.wikipedia.org/wiki/Johan_Cruyff_Arena"
+    },
+    {
+      "id": "lm-hist-073",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2020,
+      "round": "Quartos de final",
+      "date": "2020-08-14",
+      "teams": [
+        "Barcelona",
+        "Bayern Munique"
+      ],
+      "score": [
+        2,
+        8
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2019-20/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "FC Barcelona",
+          "FC Barcelona (ESP)",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ],
+        [
+          "Bayern München",
+          "Bayern München (GER)",
+          "Bayern Munich",
+          "Bayern"
+        ]
+      ],
+      "city": "Lisboa",
+      "city_source_url": "https://www.uefa.com/newsfiles/UCL/2020/2030146_TS.pdf"
+    },
+    {
+      "id": "lm-hist-074",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2025,
+      "round": "Fase de liga",
+      "date": "2025-01-21",
+      "teams": [
+        "Benfica",
+        "Barcelona"
+      ],
+      "score": [
+        4,
+        5
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2024-25/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Sport Lisboa e Benfica",
+          "Sport Lisboa e Benfica (POR)",
+          "SL Benfica"
+        ],
+        [
+          "FC Barcelona",
+          "FC Barcelona (ESP)",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ]
+      ],
+      "city": "Lisboa",
+      "city_source_url": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Luz"
+    },
+    {
+      "id": "lm-hist-075",
+      "competition": "Liga dos Campeões",
+      "competition_key": "champions_league",
+      "year": 2025,
+      "round": "Meia-final",
+      "date": "2025-05-06",
+      "teams": [
+        "Inter de Milão",
+        "Barcelona"
+      ],
+      "score": [
+        4,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2024-25/uefa.cl.json"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "FC Internazionale Milano",
+          "FC Internazionale Milano (ITA)",
+          "Inter",
+          "Internazionale",
+          "Inter Milan",
+          "Inter de Milan",
+          "Inter Milão"
+        ],
+        [
+          "FC Barcelona",
+          "FC Barcelona (ESP)",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ]
+      ],
+      "city": "Milão",
+      "city_source_url": "https://en.wikipedia.org/wiki/San_Siro"
+    },
+    {
+      "id": "lm-hist-076",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2011,
+      "round": "Jornada 3",
+      "date": "2011-08-28",
+      "teams": [
+        "Manchester United",
+        "Arsenal"
+      ],
+      "score": [
+        8,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2011-12/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/1112/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Man United",
+          "Man Utd",
+          "Manchester Utd"
+        ],
+        [
+          "Arsenal FC"
+        ]
+      ],
+      "city": "Manchester",
+      "city_source_url": "https://en.wikipedia.org/wiki/Old_Trafford"
+    },
+    {
+      "id": "lm-hist-077",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2011,
+      "round": "Jornada 9",
+      "date": "2011-10-23",
+      "teams": [
+        "Manchester United",
+        "Manchester City"
+      ],
+      "score": [
+        1,
+        6
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2011-12/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/1112/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Man United",
+          "Man Utd",
+          "Manchester Utd"
+        ],
+        [
+          "Man City"
+        ]
+      ],
+      "city": "Manchester",
+      "city_source_url": "https://en.wikipedia.org/wiki/Old_Trafford"
+    },
+    {
+      "id": "lm-hist-078",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2012,
+      "round": "Jornada 38",
+      "date": "2012-05-13",
+      "teams": [
+        "Manchester City",
+        "Queens Park Rangers"
+      ],
+      "score": [
+        3,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2011-12/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/1112/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Man City"
+        ],
+        [
+          "QPR"
+        ]
+      ],
+      "city": "Manchester",
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+    },
+    {
+      "id": "lm-hist-079",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2014,
+      "round": "Jornada 36",
+      "date": "2014-04-27",
+      "teams": [
+        "Liverpool",
+        "Chelsea"
+      ],
+      "score": [
+        0,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2013-14/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/1314/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Liverpool FC"
+        ],
+        [
+          "Chelsea FC"
+        ]
+      ],
+      "city": "Liverpool",
+      "city_source_url": "https://en.wikipedia.org/wiki/Anfield"
+    },
+    {
+      "id": "lm-hist-080",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2014,
+      "round": "Jornada 37",
+      "date": "2014-05-05",
+      "teams": [
+        "Crystal Palace",
+        "Liverpool"
+      ],
+      "score": [
+        3,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2013-14/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/1314/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Palace"
+        ],
+        [
+          "Liverpool FC"
+        ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/Selhurst_Park"
+    },
+    {
+      "id": "lm-hist-081",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2016,
+      "round": "Jornada 25",
+      "date": "2016-02-06",
+      "teams": [
+        "Manchester City",
+        "Leicester"
+      ],
+      "score": [
+        1,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2015-16/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/1516/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Man City"
+        ],
+        [
+          "Leicester City"
+        ]
+      ],
+      "city": "Manchester",
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+    },
+    {
+      "id": "lm-hist-082",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2016,
+      "round": "Jornada 36",
+      "date": "2016-05-02",
+      "teams": [
+        "Chelsea",
+        "Tottenham"
+      ],
+      "score": [
+        2,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2015-16/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/1516/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Chelsea FC"
+        ],
+        [
+          "Tottenham Hotspur",
+          "Spurs"
+        ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)"
+    },
+    {
+      "id": "lm-hist-083",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2018,
+      "round": "Jornada 33",
+      "date": "2018-04-07",
+      "teams": [
+        "Manchester City",
+        "Manchester United"
+      ],
+      "score": [
+        2,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2017-18/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/1718/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Man City"
+        ],
+        [
+          "Man United",
+          "Man Utd",
+          "Manchester Utd"
+        ]
+      ],
+      "city": "Manchester",
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+    },
+    {
+      "id": "lm-hist-084",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2019,
+      "round": "Jornada 21",
+      "date": "2019-01-03",
+      "teams": [
+        "Manchester City",
+        "Liverpool"
+      ],
+      "score": [
+        2,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2018-19/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/1819/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Man City"
+        ],
+        [
+          "Liverpool FC"
+        ]
+      ],
+      "city": "Manchester",
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+    },
+    {
+      "id": "lm-hist-085",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2019,
+      "round": "Jornada 12",
+      "date": "2019-11-10",
+      "teams": [
+        "Liverpool",
+        "Manchester City"
+      ],
+      "score": [
+        3,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2019-20/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/1920/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Liverpool FC"
+        ],
+        [
+          "Man City"
+        ]
+      ],
+      "city": "Liverpool",
+      "city_source_url": "https://en.wikipedia.org/wiki/Anfield"
+    },
+    {
+      "id": "lm-hist-086",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2022,
+      "round": "Jornada 38",
+      "date": "2022-05-22",
+      "teams": [
+        "Manchester City",
+        "Aston Villa"
+      ],
+      "score": [
+        3,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2021-22/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/2122/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Manchester City FC",
+          "Man City"
+        ],
+        [
+          "Aston Villa FC",
+          "Villa"
+        ]
+      ],
+      "city": "Manchester",
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+    },
+    {
+      "id": "lm-hist-087",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2023,
+      "round": "Jornada 26",
+      "date": "2023-03-05",
+      "teams": [
+        "Liverpool",
+        "Manchester United"
+      ],
+      "score": [
+        7,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2022-23/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/2223/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Liverpool FC"
+        ],
+        [
+          "Manchester United FC",
+          "Man United",
+          "Man Utd",
+          "Manchester Utd"
+        ]
+      ],
+      "city": "Liverpool",
+      "city_source_url": "https://en.wikipedia.org/wiki/Anfield"
+    },
+    {
+      "id": "lm-hist-088",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2023,
+      "round": "Jornada 11",
+      "date": "2023-11-06",
+      "teams": [
+        "Tottenham",
+        "Chelsea"
+      ],
+      "score": [
+        1,
+        4
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2023-24/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/2324/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Tottenham Hotspur FC",
+          "Tottenham Hotspur",
+          "Spurs"
+        ],
+        [
+          "Chelsea FC"
+        ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/Tottenham_Hotspur_Stadium"
+    },
+    {
+      "id": "lm-hist-089",
+      "competition": "Premier League",
+      "competition_key": "premier_league",
+      "year": 2024,
+      "round": "Jornada 31",
+      "date": "2024-04-04",
+      "teams": [
+        "Chelsea",
+        "Manchester United"
+      ],
+      "score": [
+        4,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2023-24/en.1.json",
+        "https://www.football-data.co.uk/mmz4281/2324/E0.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Chelsea FC"
+        ],
+        [
+          "Manchester United FC",
+          "Man United",
+          "Man Utd",
+          "Manchester Utd"
+        ]
+      ],
+      "city": "Londres",
+      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)"
+    },
+    {
+      "id": "lm-hist-090",
+      "competition": "La Liga",
+      "competition_key": "la_liga",
+      "year": 2012,
+      "round": "Jornada 7",
+      "date": "2012-10-07",
+      "teams": [
+        "Barcelona",
+        "Real Madrid"
+      ],
+      "score": [
+        2,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2012-13/es.1.json",
+        "https://www.football-data.co.uk/mmz4281/1213/SP1.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "FC Barcelona",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ],
+        [
+          "Real"
+        ]
+      ],
+      "city": "Barcelona",
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+    },
+    {
+      "id": "lm-hist-091",
+      "competition": "La Liga",
+      "competition_key": "la_liga",
+      "year": 2014,
+      "round": "Jornada 38",
+      "date": "2014-05-17",
+      "teams": [
+        "Barcelona",
+        "Atlético de Madrid"
+      ],
+      "score": [
+        1,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2013-14/es.1.json",
+        "https://www.football-data.co.uk/mmz4281/1314/SP1.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "FC Barcelona",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ],
+        [
+          "Atlético Madrid",
+          "Atlético",
+          "Atletico",
+          "Atleti"
+        ]
+      ],
+      "city": "Barcelona",
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+    },
+    {
+      "id": "lm-hist-092",
+      "competition": "La Liga",
+      "competition_key": "la_liga",
+      "year": 2017,
+      "round": "Jornada 33",
+      "date": "2017-04-23",
+      "teams": [
+        "Real Madrid",
+        "Barcelona"
+      ],
+      "score": [
+        2,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2016-17/es.1.json",
+        "https://www.football-data.co.uk/mmz4281/1617/SP1.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Real"
+        ],
+        [
+          "FC Barcelona",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ]
+      ],
+      "city": "Madrid",
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+    },
+    {
+      "id": "lm-hist-093",
+      "competition": "La Liga",
+      "competition_key": "la_liga",
+      "year": 2020,
+      "round": "Jornada 26",
+      "date": "2020-03-01",
+      "teams": [
+        "Real Madrid",
+        "Barcelona"
+      ],
+      "score": [
+        2,
+        0
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2019-20/es.1.json",
+        "https://www.football-data.co.uk/mmz4281/1920/SP1.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Real"
+        ],
+        [
+          "FC Barcelona",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ]
+      ],
+      "city": "Madrid",
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+    },
+    {
+      "id": "lm-hist-094",
+      "competition": "La Liga",
+      "competition_key": "la_liga",
+      "year": 2024,
+      "round": "Jornada 32",
+      "date": "2024-04-21",
+      "teams": [
+        "Real Madrid",
+        "Barcelona"
+      ],
+      "score": [
+        3,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2023-24/es.1.json",
+        "https://www.football-data.co.uk/mmz4281/2324/SP1.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Real Madrid CF",
+          "Real"
+        ],
+        [
+          "FC Barcelona",
+          "Barcelone",
+          "Barça",
+          "Barcelona",
+          "FC Barcelone",
+          "Barca"
+        ]
+      ],
+      "city": "Madrid",
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+    },
+    {
+      "id": "lm-hist-095",
+      "competition": "Serie A",
+      "competition_key": "serie_a",
+      "year": 2018,
+      "round": "Jornada 34",
+      "date": "2018-04-22",
+      "teams": [
+        "Juventus",
+        "Nápoles"
+      ],
+      "score": [
+        0,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2017-18/it.1.json",
+        "https://www.football-data.co.uk/mmz4281/1718/I1.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Juve"
+        ],
+        [
+          "SSC Napoli",
+          "Napoli",
+          "Naples"
+        ]
+      ],
+      "city": "Turim",
+      "city_source_url": "https://en.wikipedia.org/wiki/Juventus_Stadium"
+    },
+    {
+      "id": "lm-hist-096",
+      "competition": "Serie A",
+      "competition_key": "serie_a",
+      "year": 2022,
+      "round": "Jornada 24",
+      "date": "2022-02-05",
+      "teams": [
+        "Inter de Milão",
+        "AC Milan"
+      ],
+      "score": [
+        1,
+        2
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2021-22/it.1.json",
+        "https://www.football-data.co.uk/mmz4281/2122/I1.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "FC Internazionale Milano",
+          "Inter",
+          "Internazionale",
+          "Inter Milan",
+          "Inter de Milan",
+          "Inter Milão"
+        ],
+        [
+          "Milan",
+          "Milan AC"
+        ]
+      ],
+      "city": "Milão",
+      "city_source_url": "https://en.wikipedia.org/wiki/San_Siro"
+    },
+    {
+      "id": "lm-hist-097",
+      "competition": "Serie A",
+      "competition_key": "serie_a",
+      "year": 2023,
+      "round": "Jornada 18",
+      "date": "2023-01-13",
+      "teams": [
+        "Nápoles",
+        "Juventus"
+      ],
+      "score": [
+        5,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2022-23/it.1.json",
+        "https://www.football-data.co.uk/mmz4281/2223/I1.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "SSC Napoli",
+          "Napoli",
+          "Naples"
+        ],
+        [
+          "Juventus FC",
+          "Juve"
+        ]
+      ],
+      "city": "Nápoles",
+      "city_source_url": "https://en.wikipedia.org/wiki/Stadio_Diego_Armando_Maradona"
+    },
+    {
+      "id": "lm-hist-098",
+      "competition": "Ligue 1",
+      "competition_key": "ligue_1",
+      "year": 2015,
+      "round": "Jornada 31",
+      "date": "2015-04-05",
+      "teams": [
+        "Marselha",
+        "Paris Saint-Germain"
+      ],
+      "score": [
+        2,
+        3
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2014-15/fr.1.json",
+        "https://www.football-data.co.uk/mmz4281/1415/F1.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "Olympique Marseille",
+          "Marseille",
+          "OM",
+          "Olympique de Marseille"
+        ],
+        [
+          "PSG",
+          "Paris SG",
+          "Paris"
+        ]
+      ],
+      "city": "Marselha",
+      "city_source_url": "https://en.wikipedia.org/wiki/Stade_V%C3%A9lodrome"
+    },
+    {
+      "id": "lm-hist-099",
+      "competition": "Ligue 1",
+      "competition_key": "ligue_1",
+      "year": 2020,
+      "round": "Jornada 3",
+      "date": "2020-09-13",
+      "teams": [
+        "Paris Saint-Germain",
+        "Marselha"
+      ],
+      "score": [
+        0,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2020-21/fr.1.json",
+        "https://www.football-data.co.uk/mmz4281/2021/F1.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "PSG",
+          "Paris SG",
+          "Paris"
+        ],
+        [
+          "Olympique Marseille",
+          "Marseille",
+          "OM",
+          "Olympique de Marseille"
+        ]
+      ],
+      "city": "Paris",
+      "city_source_url": "https://en.wikipedia.org/wiki/Parc_des_Princes"
+    },
+    {
+      "id": "lm-hist-100",
+      "competition": "Ligue 1",
+      "competition_key": "ligue_1",
+      "year": 2021,
+      "round": "Jornada 31",
+      "date": "2021-04-03",
+      "teams": [
+        "Paris Saint-Germain",
+        "Lille"
+      ],
+      "score": [
+        0,
+        1
+      ],
+      "source_urls": [
+        "https://github.com/openfootball/football.json/blob/master/2020-21/fr.1.json",
+        "https://www.football-data.co.uk/mmz4281/2021/F1.csv"
+      ],
+      "events": [],
+      "status": "sourcé",
+      "team_aliases": [
+        [
+          "PSG",
+          "Paris SG",
+          "Paris"
+        ],
+        [
+          "Lille OSC",
+          "LOSC"
+        ]
+      ],
+      "city": "Paris",
+      "city_source_url": "https://en.wikipedia.org/wiki/Parc_des_Princes"
     }
   ],
   "read_status_recorded_at": "2026-09-28",
-  "read_status_note": "Statut de lecture demandé par David ; les erreurs découvertes en partie seront à signaler et corriger."
+  "read_status_note": "Les 103 fiches initiales ont été marquées lues sur demande de David. Les 100 nouvelles sont sourcées séparément et restent signalables dans le jeu."
 }

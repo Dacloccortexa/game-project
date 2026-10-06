@@ -226,7 +226,12 @@ def do_lematch(d):
         v = lookup("competitions", card["competition"], card["id"])
         if v:
             card["competition"] = v
-        r = lookup("rounds", card["round"], card["id"])
+        # Les journées de championnat sont numérotées : inutile d'ajouter
+        # chaque numéro à la table de traduction.
+        if re.fullmatch(r"Journée \d+", card["round"]):
+            r = "Jornada " + card["round"].split()[-1]
+        else:
+            r = lookup("rounds", card["round"], card["id"])
         if r:
             card["round"] = r
         city = lookup("cities", card["city"], card["id"])

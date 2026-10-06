@@ -1,5 +1,13 @@
 # DECISIONS.md
 
+## [2026-10-06] Le Match : noms usuels acceptés pour toutes les cartes
+Fusion de la branche Codex « 100 matchs historiques » (203 cartes, nouvel ordre des indices décidé par David). Relecture : les 100 nouveaux matchs (date, score, ville, phase) ont été contrôlés un par un ; aucun doublon ; les cartes françaises existantes sont inchangées.
+- Les nouvelles cartes n'acceptaient pas les noms courants décidés plus tôt (« Hollande », « Allemagne » pour la RFA, « RDA »…). Nouveau script `tools/lematch_aliases.py` : une seule liste de noms usuels par équipe (pays et clubs : PSG, Barça, Juve, Spurs, Napoli…), appliquée à toutes les cartes en français et en portugais, sans jamais retirer d'alias. À relancer après tout ajout de cartes Le Match.
+- Tests ajoutés : chaque carte accepte ses deux équipes dans les deux ordres, plus quelques alias.
+
+## [2026-10-06] Le Match : nouvel ordre des cinq indices
+Décision de David après les parties entre amis : **score final (5 pts) → ville (4 pts) → phase (3 pts) → année (2 pts) → compétition (1 pt)**. Les équipes du match restent cachées jusqu'à la bonne réponse ou la fin de la carte. Les règles de réponse, de passe, de pénalité et de Tackle ne changent pas ; seul l'ordre des indices et leur palier associé changent. L'ancien ordre figure dans la décision du 2 octobre ci-dessous.
+
 ## [2026-10-06] Pas de course au Tackle quand aucun adversaire ne peut tacler
 Validé par David (revue du code n° 16). Les 5 s après la priorité servent aussi à l'équipe qui a la main : on les garde. Mais si tous les adversaires ont déjà tenté leur Tackle sur la carte, il n'y a plus de course : pas de son ni de flash, le bouton Tackle reste caché, la bande, en doré et non en rouge, affiche « Pas de Tackle : B l'a déjà tenté 00:05 » et l'équipe garde « Répondre » et « Passer ». Sans réponse, l'indice suivant arrive comme avant. Test ajouté.
 
