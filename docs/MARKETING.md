@@ -111,6 +111,15 @@ Format retenu pour la suite : **11 à 14 s**. Accroche brutale dès la 1re secon
 
 Idée de David : la pub ne montre pas des gens qui jouent, elle **fait jouer celui qui regarde**. Une micro-partie dans le feed. Accroche « Tu le trouves avant eux ? 👀 », puis chaque indice en grand (« J'ai joué à Marseille ») avec un compte à rebours de 3 s pour chercher, la mauvaise réponse qui tombe, et ainsi de suite jusqu'au Tackle. Environ 30 s : le temps de réflexion fait partie de la pub. Fin : « Tu l'avais à quel indice ? 👇 ». Scénario : `tools/tiktok/scripts/drogba-joue.json`.
 
+### Organique : série quotidienne « Tu le trouves avant eux ? » (2026-10-06)
+
+Distinction entre **pub payante** (on montre la réponse, slogan, bouton « Télécharger ») et **contenu organique** (compte TikTok de TACKLE). En organique, **ne jamais donner la réponse dans la vidéo** : on joue Le Mans → Guingamp → Marseille → Chelsea → Shanghai, les mauvaises réponses tombent, l'autre équipe crie « TACKLE ! »… et on coupe. Fin : « Tu penses que c'est qui ? 👇 Réponse demain ». Ceux qui ont trouvé l'écrivent en commentaire (« Drogba dès Guingamp »), les autres ouvrent les commentaires pour la réponse.
+- Ne pas épingler la réponse tout de suite : laisser les gens débattre. L'épingler le lendemain.
+- Série numérotée (#1, #2…), une par jour. L'épisode suivant s'ouvre 1 s sur « Hier : c'était Drogba », puis enchaîne sur le nouveau joueur. Boucle quotidienne : jouer → commenter → revenir.
+- Pas de « télécharge l'appli » appuyé : TACKLE en petit à la fin. Le spectateur aime d'abord le jeu, puis découvre qu'il existe une appli.
+- Préparer les épisodes d'avance et les programmer.
+- Scénarios : `tools/tiktok/scripts/organique/` ; pubs : `tools/tiktok/scripts/pub/`.
+
 ## Mesure des pubs (plus tard)
 
 Pour savoir quelles pubs rapportent des achats, on pourra brancher la mesure de TikTok (leur kit ou AppsFlyer/Adjust). Ça changera la déclaration de confidentialité App Store (aujourd'hui « pas de suivi ») et peut-être l'affichage de la fenêtre Apple « Autoriser le suivi ». À décider avec David avant de l'ajouter.

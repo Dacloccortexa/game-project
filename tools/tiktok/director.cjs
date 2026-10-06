@@ -116,7 +116,7 @@ body.ad-hide-clues #clue-list { opacity: 0 !important; }
       }
       if (end) {
         const k = Math.min(1, (t - end.at) / 300);
-        h += `<div class="end" style="opacity:${k}"><div class="q">${end.q}</div><img src="assets/ui/web/tackle-logo-brush.webp" style="transform:scale(${(0.85 + 0.15 * k).toFixed(2)})"><div class="tag">${end.tag}</div><div class="cta">${end.cta}</div></div>`;
+        h += `<div class="end" style="opacity:${k}"><div class="q">${end.q}</div><img src="assets/ui/web/tackle-logo-brush.webp" style="width:${end.small ? 150 : 250}px;transform:scale(${(0.85 + 0.15 * k).toFixed(2)})"><div class="tag">${end.tag}</div>${end.cta ? `<div class="cta">${end.cta}</div>` : ''}</div>`;
       }
       ad.innerHTML = h;
     }, { caption, tap, flash, end, bubble, info, count, t });
@@ -199,7 +199,7 @@ body.ad-hide-clues #clue-list { opacity: 0 !important; }
         await step(1); bubble = null;
         break;
       }
-      case 'end': info = null; end = { q: emo(a.q), tag: a.tag, cta: a.cta, at: t }; caption = null; await step(sec(a.s)); break;
+      case 'end': info = null; end = { q: emo(a.q), tag: emo(a.tag || ''), cta: a.cta, small: !!a.small, at: t }; caption = null; await step(sec(a.s)); break;
       case 'debug': console.log('debug', t | 0, await p.evaluate(() => [...document.querySelectorAll('button')].filter(e => e.offsetParent).map(e => e.id || e.textContent.trim()).join(' | '))); break;
     }
   }
