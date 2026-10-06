@@ -430,7 +430,8 @@
       "answer": "Neymar",
       "variants": [
         "neymar",
-        "neymar jr"
+        "neymar jr",
+        "neymar junior"
       ],
       "career": [
         {
@@ -1099,7 +1100,8 @@
       "answer": "Cesc Fàbregas",
       "variants": [
         "cesc fàbregas",
-        "fàbregas"
+        "fàbregas",
+        "cesc"
       ],
       "career": [
         {
@@ -1207,7 +1209,8 @@
       "answer": "Dani Alves",
       "variants": [
         "dani alves",
-        "alves"
+        "alves",
+        "daniel alves"
       ],
       "career": [
         {
@@ -2033,7 +2036,8 @@
       "id": "t061",
       "answer": "Joaquín",
       "variants": [
-        "joaquín"
+        "joaquín",
+        "joaquin sanchez"
       ],
       "career": [
         {
@@ -2240,7 +2244,8 @@
       "id": "t067",
       "answer": "Juanfran",
       "variants": [
-        "juanfran"
+        "juanfran",
+        "juanfran torres"
       ],
       "career": [
         {
@@ -2312,7 +2317,8 @@
       "id": "t069",
       "answer": "Kaká",
       "variants": [
-        "kaká"
+        "kaká",
+        "kaka"
       ],
       "career": [
         {
@@ -2451,7 +2457,8 @@
       "id": "t073",
       "answer": "Marcelo",
       "variants": [
-        "marcelo"
+        "marcelo",
+        "marcelo vieira"
       ],
       "career": [
         {
@@ -2618,7 +2625,8 @@
       "id": "t078",
       "answer": "Nani",
       "variants": [
-        "nani"
+        "nani",
+        "luis nani"
       ],
       "career": [
         {
@@ -2781,7 +2789,8 @@
       "id": "t083",
       "answer": "Pedro",
       "variants": [
-        "pedro"
+        "pedro",
+        "pedro rodriguez"
       ],
       "career": [
         {
@@ -2951,7 +2960,8 @@
       "id": "t088",
       "answer": "Raúl",
       "variants": [
-        "raúl"
+        "raúl",
+        "raul gonzalez"
       ],
       "career": [
         {
@@ -3269,7 +3279,8 @@
       "id": "t097",
       "answer": "Ronaldinho",
       "variants": [
-        "ronaldinho"
+        "ronaldinho",
+        "ronaldinho gaucho"
       ],
       "career": [
         {
@@ -3304,7 +3315,9 @@
       "id": "t098",
       "answer": "Ronaldo",
       "variants": [
-        "ronaldo"
+        "ronaldo",
+        "r9",
+        "ronaldo nazario"
       ],
       "career": [
         {
@@ -3484,7 +3497,9 @@
       "answer": "Sergio Agüero",
       "variants": [
         "sergio agüero",
-        "agüero"
+        "agüero",
+        "kun",
+        "kun aguero"
       ],
       "career": [
         {
@@ -3703,7 +3718,8 @@
       "id": "t110",
       "answer": "Xavi",
       "variants": [
-        "xavi"
+        "xavi",
+        "xavi hernandez"
       ],
       "career": [
         {

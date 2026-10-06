@@ -459,7 +459,8 @@
       "answer": "Neymar",
       "variants": [
         "neymar",
-        "neymar jr"
+        "neymar jr",
+        "neymar junior"
       ],
       "transfert_card_id": "t014",
       "clues": [
@@ -1316,7 +1317,8 @@
       "answer": "Cesc Fàbregas",
       "variants": [
         "cesc fàbregas",
-        "fàbregas"
+        "fàbregas",
+        "cesc"
       ],
       "transfert_card_id": "t034",
       "clues": [
@@ -1499,7 +1501,8 @@
       "answer": "Dani Alves",
       "variants": [
         "dani alves",
-        "alves"
+        "alves",
+        "daniel alves"
       ],
       "transfert_card_id": "t037",
       "clues": [
@@ -2961,7 +2964,8 @@
       "id": "qs049",
       "answer": "Joaquín",
       "variants": [
-        "joaquín"
+        "joaquín",
+        "joaquin sanchez"
       ],
       "transfert_card_id": "t061",
       "clues": [
@@ -3326,7 +3330,8 @@
       "id": "qs055",
       "answer": "Juanfran",
       "variants": [
-        "juanfran"
+        "juanfran",
+        "juanfran torres"
       ],
       "transfert_card_id": "t067",
       "clues": [
@@ -3448,7 +3453,8 @@
       "id": "qs057",
       "answer": "Kaká",
       "variants": [
-        "kaká"
+        "kaká",
+        "kaka"
       ],
       "transfert_card_id": "t069",
       "clues": [
@@ -3691,7 +3697,8 @@
       "id": "qs061",
       "answer": "Marcelo",
       "variants": [
-        "marcelo"
+        "marcelo",
+        "marcelo vieira"
       ],
       "transfert_card_id": "t073",
       "clues": [
@@ -3995,7 +4002,8 @@
       "id": "qs066",
       "answer": "Nani",
       "variants": [
-        "nani"
+        "nani",
+        "luis nani"
       ],
       "transfert_card_id": "t078",
       "clues": [
@@ -4299,7 +4307,8 @@
       "id": "qs071",
       "answer": "Pedro",
       "variants": [
-        "pedro"
+        "pedro",
+        "pedro rodriguez"
       ],
       "transfert_card_id": "t083",
       "clues": [
@@ -4602,7 +4611,8 @@
       "id": "qs076",
       "answer": "Raúl",
       "variants": [
-        "raúl"
+        "raúl",
+        "raul gonzalez"
       ],
       "transfert_card_id": "t088",
       "clues": [
@@ -5149,7 +5159,8 @@
       "id": "qs085",
       "answer": "Ronaldinho",
       "variants": [
-        "ronaldinho"
+        "ronaldinho",
+        "ronaldinho gaucho"
       ],
       "transfert_card_id": "t097",
       "clues": [
@@ -5209,7 +5220,9 @@
       "id": "qs086",
       "answer": "Ronaldo Nazário",
       "variants": [
-        "ronaldo"
+        "ronaldo",
+        "r9",
+        "ronaldo nazario"
       ],
       "transfert_card_id": "t098",
       "clues": [
@@ -5514,7 +5527,9 @@
       "answer": "Sergio Agüero",
       "variants": [
         "sergio agüero",
-        "agüero"
+        "agüero",
+        "kun",
+        "kun aguero"
       ],
       "transfert_card_id": "t103",
       "clues": [
@@ -5940,7 +5955,8 @@
       "id": "qs098",
       "answer": "Xavi",
       "variants": [
-        "xavi"
+        "xavi",
+        "xavi hernandez"
       ],
       "transfert_card_id": "t110",
       "clues": [

@@ -109,7 +109,8 @@ def do_quisuisje(d):
                 c["text"] = f"Joguei {em(n, g)}."
             elif k == "trophy":
                 v = lookup("trophies", f["trophy"], w)
-                c["text"] = f"Ganhei {ART[v['g']]} {v['pt']}." if v else ""
+                # « 11 títulos da Premier League » : pas d'article devant un nombre.
+                c["text"] = (f"Ganhei {v['pt']}." if v['pt'][:1].isdigit() else f"Ganhei {ART[v['g']]} {v['pt']}.") if v else ""
             elif k == "position":
                 v = lookup("positions", f["position"], w)
                 c["text"] = f"Sou {v}." if v else ""

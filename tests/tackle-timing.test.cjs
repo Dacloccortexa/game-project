@@ -399,6 +399,11 @@ assert.equal(state.cardEnded, true);
   assert.ok(ok(byName('Ángel Di María'), 'di maria'));
   assert.ok(ok(byName('Kevin De Bruyne'), 'de bruyne'));
   assert.ok(!ok(byName('Kevin De Bruyne'), 'kevin'));
+  assert.ok(ok(byName('Ronaldo Nazário'), 'Ronaldo'));
+  assert.ok(ok(byName('Ronaldo Nazário'), 'R9'));
+  assert.ok(ok(byName('Xavi'), 'Xavi Hernandez'));
+  assert.ok(ok(byName('Sergio Agüero'), 'Kun'));
+  assert.ok(ok(byName('Kaká'), 'kaka'));
 }
 
 // Questions en portugais : mêmes cartes, mêmes ids et même ordre que le français (tools/translate_pt.py).

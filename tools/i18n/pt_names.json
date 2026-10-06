@@ -273,6 +273,10 @@
     "Coupe des clubs champions": "Taça dos Clubes Campeões Europeus"
   },
   "trophies": {
+    "11 titres de Premier League": {"pt": "11 títulos da Premier League", "g": "m"},
+    "8 titres de Premier League": {"pt": "8 títulos da Premier League", "g": "m"},
+    "Coupe du monde 2018": {"pt": "Mundial de 2018", "g": "m"},
+    "Euro 2008": {"pt": "Euro 2008", "g": "m"},
     "Argentine Primera División": {"pt": "campeonato argentino", "g": "m"},
     "Bundesliga": {"pt": "Bundesliga", "g": "f"},
     "Copa Libertadores": {"pt": "Taça Libertadores", "g": "f"},
