@@ -24359,14 +24359,14 @@
     },
     {
       "id": "lf-f-0101",
-      "affirmation": "Pepe (defesa português) nasceu em Terrassa.",
+      "affirmation": "Pepe (defesa português) nasceu no Recife.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Pepe (defesa português)"
       ],
       "groupe_exclusif": "ville_naissance:Pepe (défenseur portugais)",
-      "valeur_affirmee": "Terrassa",
+      "valeur_affirmee": "Recife",
       "valeur_source": "Maceió",
       "sources": [
         "https://fr.wikipedia.org/wiki/Pepe_%28football%29"
@@ -24378,14 +24378,14 @@
     },
     {
       "id": "lf-f-0102",
-      "affirmation": "Luis Suárez nasceu em Clamart.",
+      "affirmation": "Luis Suárez nasceu em Montevideu.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Luis Suárez"
       ],
       "groupe_exclusif": "ville_naissance:Luis Suárez",
-      "valeur_affirmee": "Clamart",
+      "valeur_affirmee": "Montevideu",
       "valeur_source": "Salto",
       "sources": [
         "https://fr.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28football%2C_1987%29"
@@ -24397,14 +24397,14 @@
     },
     {
       "id": "lf-f-0103",
-      "affirmation": "Raphaël Varane nasceu em Bambali.",
+      "affirmation": "Raphaël Varane nasceu em Ruão.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Raphaël Varane"
       ],
       "groupe_exclusif": "ville_naissance:Raphaël Varane",
-      "valeur_affirmee": "Bambali",
+      "valeur_affirmee": "Ruão",
       "valeur_source": "Lille",
       "sources": [
         "https://fr.wikipedia.org/wiki/Rapha%C3%ABl_Varane"
@@ -24416,14 +24416,14 @@
     },
     {
       "id": "lf-f-0104",
-      "affirmation": "John Obi Mikel nasceu em Terrassa.",
+      "affirmation": "John Obi Mikel nasceu em Lagos.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "John Obi Mikel"
       ],
       "groupe_exclusif": "ville_naissance:John Obi Mikel",
-      "valeur_affirmee": "Terrassa",
+      "valeur_affirmee": "Lagos",
       "valeur_source": "Jos",
       "sources": [
         "https://fr.wikipedia.org/wiki/John_Obi_Mikel"
@@ -24435,14 +24435,14 @@
     },
     {
       "id": "lf-f-0105",
-      "affirmation": "Sadio Mané nasceu em Reims.",
+      "affirmation": "Sadio Mané nasceu em Dacar.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Sadio Mané"
       ],
       "groupe_exclusif": "ville_naissance:Sadio Mané",
-      "valeur_affirmee": "Reims",
+      "valeur_affirmee": "Dacar",
       "valeur_source": "Bambali",
       "sources": [
         "https://fr.wikipedia.org/wiki/Sadio_Man%C3%A9"
@@ -24454,14 +24454,14 @@
     },
     {
       "id": "lf-f-0106",
-      "affirmation": "Claude Makélélé nasceu em Breda.",
+      "affirmation": "Claude Makélélé nasceu em Mbandaka.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Claude Makélélé"
       ],
       "groupe_exclusif": "ville_naissance:Claude Makélélé",
-      "valeur_affirmee": "Breda",
+      "valeur_affirmee": "Mbandaka",
       "valeur_source": "Kinshasa",
       "sources": [
         "https://fr.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9"
@@ -24473,14 +24473,14 @@
     },
     {
       "id": "lf-f-0107",
-      "affirmation": "Juan Sebastián Verón nasceu em Lifou.",
+      "affirmation": "Juan Sebastián Verón nasceu em Rosario.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Juan Sebastián Verón"
       ],
       "groupe_exclusif": "ville_naissance:Juan Sebastián Verón",
-      "valeur_affirmee": "Lifou",
+      "valeur_affirmee": "Rosario",
       "valeur_source": "La Plata",
       "sources": [
         "https://fr.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Ver%C3%B3n"
@@ -24492,14 +24492,14 @@
     },
     {
       "id": "lf-f-0108",
-      "affirmation": "Didier Drogba nasceu em Le Chesnay.",
+      "affirmation": "Didier Drogba nasceu em Bouaké.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Didier Drogba"
       ],
       "groupe_exclusif": "ville_naissance:Didier Drogba",
-      "valeur_affirmee": "Le Chesnay",
+      "valeur_affirmee": "Bouaké",
       "valeur_source": "Abidjã",
       "sources": [
         "https://fr.wikipedia.org/wiki/Didier_Drogba"
@@ -24511,14 +24511,14 @@
     },
     {
       "id": "lf-f-0109",
-      "affirmation": "Luka Modrić nasceu em Lomé.",
+      "affirmation": "Luka Modrić nasceu em Split.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Luka Modrić"
       ],
       "groupe_exclusif": "ville_naissance:Luka Modrić",
-      "valeur_affirmee": "Lomé",
+      "valeur_affirmee": "Split",
       "valeur_source": "Zadar",
       "sources": [
         "https://fr.wikipedia.org/wiki/Luka_Modri%C4%87"
@@ -24530,14 +24530,14 @@
     },
     {
       "id": "lf-f-0110",
-      "affirmation": "Nicolas Anelka nasceu em Leicester.",
+      "affirmation": "Nicolas Anelka nasceu em Lille.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Nicolas Anelka"
       ],
       "groupe_exclusif": "ville_naissance:Nicolas Anelka",
-      "valeur_affirmee": "Leicester",
+      "valeur_affirmee": "Lille",
       "valeur_source": "Le Chesnay",
       "sources": [
         "https://fr.wikipedia.org/wiki/Nicolas_Anelka"
@@ -24568,14 +24568,14 @@
     },
     {
       "id": "lf-f-0112",
-      "affirmation": "Kaká nasceu em La Plata.",
+      "affirmation": "Kaká nasceu no Recife.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Kaká"
       ],
       "groupe_exclusif": "ville_naissance:Kaká",
-      "valeur_affirmee": "La Plata",
+      "valeur_affirmee": "Recife",
       "valeur_source": "Gama",
       "sources": [
         "https://fr.wikipedia.org/wiki/Kak%C3%A1"
@@ -24587,14 +24587,14 @@
     },
     {
       "id": "lf-f-0113",
-      "affirmation": "Sergio Agüero nasceu em Le Chesnay.",
+      "affirmation": "Sergio Agüero nasceu em Rosario.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Sergio Agüero"
       ],
       "groupe_exclusif": "ville_naissance:Sergio Agüero",
-      "valeur_affirmee": "Le Chesnay",
+      "valeur_affirmee": "Rosario",
       "valeur_source": "Buenos Aires",
       "sources": [
         "https://fr.wikipedia.org/wiki/Sergio_Ag%C3%BCero"
@@ -24606,14 +24606,14 @@
     },
     {
       "id": "lf-f-0114",
-      "affirmation": "Peter Crouch nasceu em Arles.",
+      "affirmation": "Peter Crouch nasceu em Chester.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Peter Crouch"
       ],
       "groupe_exclusif": "ville_naissance:Peter Crouch",
-      "valeur_affirmee": "Arles",
+      "valeur_affirmee": "Chester",
       "valeur_source": "Macclesfield",
       "sources": [
         "https://fr.wikipedia.org/wiki/Peter_Crouch"
@@ -24625,14 +24625,14 @@
     },
     {
       "id": "lf-f-0115",
-      "affirmation": "Didier Deschamps nasceu em Leicester.",
+      "affirmation": "Didier Deschamps nasceu em Toulouse.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Didier Deschamps"
       ],
       "groupe_exclusif": "ville_naissance:Didier Deschamps",
-      "valeur_affirmee": "Leicester",
+      "valeur_affirmee": "Toulouse",
       "valeur_source": "Baiona",
       "sources": [
         "https://fr.wikipedia.org/wiki/Didier_Deschamps"
@@ -24644,14 +24644,14 @@
     },
     {
       "id": "lf-f-0116",
-      "affirmation": "Roberto Carlos nasceu em Almada.",
+      "affirmation": "Roberto Carlos nasceu no Recife.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Roberto Carlos"
       ],
       "groupe_exclusif": "ville_naissance:Roberto Carlos",
-      "valeur_affirmee": "Almada",
+      "valeur_affirmee": "Recife",
       "valeur_source": "Garça",
       "sources": [
         "https://fr.wikipedia.org/wiki/Roberto_Carlos_%28football%29"
@@ -24663,14 +24663,14 @@
     },
     {
       "id": "lf-f-0117",
-      "affirmation": "Xavi Hernández nasceu em Nagrig.",
+      "affirmation": "Xavi Hernández nasceu em Sabadell.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Xavi Hernández"
       ],
       "groupe_exclusif": "ville_naissance:Xavi Hernández",
-      "valeur_affirmee": "Nagrig",
+      "valeur_affirmee": "Sabadell",
       "valeur_source": "Terrassa",
       "sources": [
         "https://fr.wikipedia.org/wiki/Xavi"
@@ -24682,14 +24682,14 @@
     },
     {
       "id": "lf-f-0118",
-      "affirmation": "Ángel Di María nasceu em São Bernardo do Campo.",
+      "affirmation": "Ángel Di María nasceu em Buenos Aires.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Ángel Di María"
       ],
       "groupe_exclusif": "ville_naissance:Ángel Di María",
-      "valeur_affirmee": "São Bernardo do Campo",
+      "valeur_affirmee": "Buenos Aires",
       "valeur_source": "Rosario",
       "sources": [
         "https://fr.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa"
@@ -24701,14 +24701,14 @@
     },
     {
       "id": "lf-f-0119",
-      "affirmation": "Wayne Rooney nasceu em Arenys de Mar.",
+      "affirmation": "Wayne Rooney nasceu em Leicester.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Wayne Rooney"
       ],
       "groupe_exclusif": "ville_naissance:Wayne Rooney",
-      "valeur_affirmee": "Arenys de Mar",
+      "valeur_affirmee": "Leicester",
       "valeur_source": "Liverpool",
       "sources": [
         "https://fr.wikipedia.org/wiki/Wayne_Rooney"
@@ -24720,14 +24720,14 @@
     },
     {
       "id": "lf-f-0120",
-      "affirmation": "Ricardo Carvalho nasceu em Arles.",
+      "affirmation": "Ricardo Carvalho nasceu em Almada.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Ricardo Carvalho"
       ],
       "groupe_exclusif": "ville_naissance:Ricardo Carvalho",
-      "valeur_affirmee": "Arles",
+      "valeur_affirmee": "Almada",
       "valeur_source": "Amarante",
       "sources": [
         "https://fr.wikipedia.org/wiki/Ricardo_Carvalho"
@@ -24739,14 +24739,14 @@
     },
     {
       "id": "lf-f-0121",
-      "affirmation": "Christian Karembeu nasceu em Cilleros.",
+      "affirmation": "Christian Karembeu nasceu em Numeá.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Christian Karembeu"
       ],
       "groupe_exclusif": "ville_naissance:Christian Karembeu",
-      "valeur_affirmee": "Cilleros",
+      "valeur_affirmee": "Numeá",
       "valeur_source": "Lifou",
       "sources": [
         "https://fr.wikipedia.org/wiki/Christian_Karembeu"
@@ -24758,14 +24758,14 @@
     },
     {
       "id": "lf-f-0122",
-      "affirmation": "Paul Scholes nasceu em Tolosa.",
+      "affirmation": "Paul Scholes nasceu em Bury.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Paul Scholes"
       ],
       "groupe_exclusif": "ville_naissance:Paul Scholes",
-      "valeur_affirmee": "Tolosa",
+      "valeur_affirmee": "Bury",
       "valeur_source": "Salford",
       "sources": [
         "https://fr.wikipedia.org/wiki/Paul_Scholes"
@@ -24777,14 +24777,14 @@
     },
     {
       "id": "lf-f-0123",
-      "affirmation": "Mohamed Salah nasceu no Rio de Janeiro.",
+      "affirmation": "Mohamed Salah nasceu no Cairo.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Mohamed Salah"
       ],
       "groupe_exclusif": "ville_naissance:Mohamed Salah",
-      "valeur_affirmee": "Rio de Janeiro",
+      "valeur_affirmee": "Cairo",
       "valeur_source": "Nagrig",
       "sources": [
         "https://fr.wikipedia.org/wiki/Mohamed_Salah"
@@ -24796,14 +24796,14 @@
     },
     {
       "id": "lf-f-0124",
-      "affirmation": "José Bosingwa nasceu em Jos.",
+      "affirmation": "José Bosingwa nasceu em Kinshasa.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "José Bosingwa"
       ],
       "groupe_exclusif": "ville_naissance:José Bosingwa",
-      "valeur_affirmee": "Jos",
+      "valeur_affirmee": "Kinshasa",
       "valeur_source": "Mbandaka",
       "sources": [
         "https://fr.wikipedia.org/wiki/Jos%C3%A9_Bosingwa"
@@ -24815,14 +24815,14 @@
     },
     {
       "id": "lf-f-0125",
-      "affirmation": "Sergio Busquets nasceu em Le Chesnay.",
+      "affirmation": "Sergio Busquets nasceu em Terrassa.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Sergio Busquets"
       ],
       "groupe_exclusif": "ville_naissance:Sergio Busquets",
-      "valeur_affirmee": "Le Chesnay",
+      "valeur_affirmee": "Terrassa",
       "valeur_source": "Sabadell",
       "sources": [
         "https://fr.wikipedia.org/wiki/Sergio_Busquets"
@@ -24834,14 +24834,14 @@
     },
     {
       "id": "lf-f-0126",
-      "affirmation": "Fernando Torres nasceu em Cilleros.",
+      "affirmation": "Fernando Torres nasceu em Móstoles.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Fernando Torres"
       ],
       "groupe_exclusif": "ville_naissance:Fernando Torres",
-      "valeur_affirmee": "Cilleros",
+      "valeur_affirmee": "Móstoles",
       "valeur_source": "Fuenlabrada",
       "sources": [
         "https://fr.wikipedia.org/wiki/Fernando_Torres"
@@ -24853,14 +24853,14 @@
     },
     {
       "id": "lf-f-0127",
-      "affirmation": "Deco nasceu em Zadar.",
+      "affirmation": "Deco nasceu no Rio de Janeiro.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Deco"
       ],
       "groupe_exclusif": "ville_naissance:Deco",
-      "valeur_affirmee": "Zadar",
+      "valeur_affirmee": "Rio de Janeiro",
       "valeur_source": "São Bernardo do Campo",
       "sources": [
         "https://fr.wikipedia.org/wiki/Deco"
@@ -24872,14 +24872,14 @@
     },
     {
       "id": "lf-f-0128",
-      "affirmation": "Emmanuel Adebayor nasceu em San Lorenzo.",
+      "affirmation": "Emmanuel Adebayor nasceu em Sokodé.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Emmanuel Adebayor"
       ],
       "groupe_exclusif": "ville_naissance:Emmanuel Adebayor",
-      "valeur_affirmee": "San Lorenzo",
+      "valeur_affirmee": "Sokodé",
       "valeur_source": "Lomé",
       "sources": [
         "https://fr.wikipedia.org/wiki/Emmanuel_Adebayor"
@@ -24891,14 +24891,14 @@
     },
     {
       "id": "lf-f-0129",
-      "affirmation": "Carles Puyol nasceu em Cilleros.",
+      "affirmation": "Carles Puyol nasceu em Terrassa.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Carles Puyol"
       ],
       "groupe_exclusif": "ville_naissance:Carles Puyol",
-      "valeur_affirmee": "Cilleros",
+      "valeur_affirmee": "Terrassa",
       "valeur_source": "La Pobla de Segur",
       "sources": [
         "https://fr.wikipedia.org/wiki/Carles_Puyol"
@@ -24910,14 +24910,14 @@
     },
     {
       "id": "lf-f-0130",
-      "affirmation": "Hernán Crespo nasceu em Amadora.",
+      "affirmation": "Hernán Crespo nasceu em La Plata.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Hernán Crespo"
       ],
       "groupe_exclusif": "ville_naissance:Hernán Crespo",
-      "valeur_affirmee": "Amadora",
+      "valeur_affirmee": "La Plata",
       "valeur_source": "Florida",
       "sources": [
         "https://fr.wikipedia.org/wiki/Hern%C3%A1n_Crespo"
@@ -24948,14 +24948,14 @@
     },
     {
       "id": "lf-f-0132",
-      "affirmation": "Virgil van Dijk nasceu em Florida.",
+      "affirmation": "Virgil van Dijk nasceu em Bedum.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Virgil van Dijk"
       ],
       "groupe_exclusif": "ville_naissance:Virgil van Dijk",
-      "valeur_affirmee": "Florida",
+      "valeur_affirmee": "Bedum",
       "valeur_source": "Breda",
       "sources": [
         "https://fr.wikipedia.org/wiki/Virgil_van_Dijk"
@@ -24967,14 +24967,14 @@
     },
     {
       "id": "lf-f-0133",
-      "affirmation": "Juninho Pernambucano nasceu em Tulle.",
+      "affirmation": "Juninho Pernambucano nasceu em Maceió.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Juninho Pernambucano"
       ],
       "groupe_exclusif": "ville_naissance:Juninho Pernambucano",
-      "valeur_affirmee": "Tulle",
+      "valeur_affirmee": "Maceió",
       "valeur_source": "Recife",
       "sources": [
         "https://fr.wikipedia.org/wiki/Juninho"
@@ -24986,14 +24986,14 @@
     },
     {
       "id": "lf-f-0134",
-      "affirmation": "Javier Mascherano nasceu em Dacar.",
+      "affirmation": "Javier Mascherano nasceu em Rosario.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Javier Mascherano"
       ],
       "groupe_exclusif": "ville_naissance:Javier Mascherano",
-      "valeur_affirmee": "Dacar",
+      "valeur_affirmee": "Rosario",
       "valeur_source": "San Lorenzo",
       "sources": [
         "https://fr.wikipedia.org/wiki/Javier_Mascherano"
@@ -25005,14 +25005,14 @@
     },
     {
       "id": "lf-f-0135",
-      "affirmation": "Gary Lineker nasceu em Bambali.",
+      "affirmation": "Gary Lineker nasceu em Liverpool.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Gary Lineker"
       ],
       "groupe_exclusif": "ville_naissance:Gary Lineker",
-      "valeur_affirmee": "Bambali",
+      "valeur_affirmee": "Liverpool",
       "valeur_source": "Leicester",
       "sources": [
         "https://fr.wikipedia.org/wiki/Gary_Lineker"
@@ -25024,14 +25024,14 @@
     },
     {
       "id": "lf-f-0136",
-      "affirmation": "Patrick Vieira nasceu em Kinshasa.",
+      "affirmation": "Patrick Vieira nasceu em Bambali.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Patrick Vieira"
       ],
       "groupe_exclusif": "ville_naissance:Patrick Vieira",
-      "valeur_affirmee": "Kinshasa",
+      "valeur_affirmee": "Bambali",
       "valeur_source": "Dacar",
       "sources": [
         "https://fr.wikipedia.org/wiki/Patrick_Vieira"
@@ -25043,14 +25043,14 @@
     },
     {
       "id": "lf-f-0137",
-      "affirmation": "Laurent Koscielny nasceu no Recife.",
+      "affirmation": "Laurent Koscielny nasceu em Reims.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Laurent Koscielny"
       ],
       "groupe_exclusif": "ville_naissance:Laurent Koscielny",
-      "valeur_affirmee": "Recife",
+      "valeur_affirmee": "Reims",
       "valeur_source": "Tulle",
       "sources": [
         "https://fr.wikipedia.org/wiki/Laurent_Koscielny"
@@ -25062,14 +25062,14 @@
     },
     {
       "id": "lf-f-0138",
-      "affirmation": "Diego Costa nasceu em Crevillent.",
+      "affirmation": "Diego Costa nasceu no Recife.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Diego Costa"
       ],
       "groupe_exclusif": "ville_naissance:Diego Costa",
-      "valeur_affirmee": "Crevillent",
+      "valeur_affirmee": "Recife",
       "valeur_source": "Lagarto",
       "sources": [
         "https://fr.wikipedia.org/wiki/Diego_Costa"
@@ -25081,14 +25081,14 @@
     },
     {
       "id": "lf-f-0139",
-      "affirmation": "David Silva nasceu em Llanera.",
+      "affirmation": "David Silva nasceu em Santa Cruz de Tenerife.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "David Silva"
       ],
       "groupe_exclusif": "ville_naissance:David Silva",
-      "valeur_affirmee": "Llanera",
+      "valeur_affirmee": "Santa Cruz de Tenerife",
       "valeur_source": "Arguineguín",
       "sources": [
         "https://fr.wikipedia.org/wiki/David_Silva"
@@ -25100,14 +25100,14 @@
     },
     {
       "id": "lf-f-0140",
-      "affirmation": "Paul Pogba nasceu em Dacar.",
+      "affirmation": "Paul Pogba nasceu em Clamart.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Paul Pogba"
       ],
       "groupe_exclusif": "ville_naissance:Paul Pogba",
-      "valeur_affirmee": "Dacar",
+      "valeur_affirmee": "Clamart",
       "valeur_source": "Lagny-sur-Marne",
       "sources": [
         "https://fr.wikipedia.org/wiki/Paul_Pogba"
@@ -25119,14 +25119,14 @@
     },
     {
       "id": "lf-f-0141",
-      "affirmation": "Dani Alves nasceu em São Bernardo do Campo.",
+      "affirmation": "Dani Alves nasceu no Recife.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Dani Alves"
       ],
       "groupe_exclusif": "ville_naissance:Dani Alves",
-      "valeur_affirmee": "São Bernardo do Campo",
+      "valeur_affirmee": "Recife",
       "valeur_source": "Juazeiro",
       "sources": [
         "https://fr.wikipedia.org/wiki/Dani_Alves"
@@ -25138,14 +25138,14 @@
     },
     {
       "id": "lf-f-0142",
-      "affirmation": "Rivaldo nasceu em Lifou.",
+      "affirmation": "Rivaldo nasceu em Maceió.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Rivaldo"
       ],
       "groupe_exclusif": "ville_naissance:Rivaldo",
-      "valeur_affirmee": "Lifou",
+      "valeur_affirmee": "Maceió",
       "valeur_source": "Recife",
       "sources": [
         "https://fr.wikipedia.org/wiki/Rivaldo"
@@ -25157,14 +25157,14 @@
     },
     {
       "id": "lf-f-0143",
-      "affirmation": "Bacary Sagna nasceu em La Plata.",
+      "affirmation": "Bacary Sagna nasceu em Tulle.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Bacary Sagna"
       ],
       "groupe_exclusif": "ville_naissance:Bacary Sagna",
-      "valeur_affirmee": "La Plata",
+      "valeur_affirmee": "Tulle",
       "valeur_source": "Sens",
       "sources": [
         "https://fr.wikipedia.org/wiki/Bacary_Sagna"
@@ -25176,14 +25176,14 @@
     },
     {
       "id": "lf-f-0144",
-      "affirmation": "Asamoah Gyan nasceu em Lomé.",
+      "affirmation": "Asamoah Gyan nasceu em Kumasi.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Asamoah Gyan"
       ],
       "groupe_exclusif": "ville_naissance:Asamoah Gyan",
-      "valeur_affirmee": "Lomé",
+      "valeur_affirmee": "Kumasi",
       "valeur_source": "Acra",
       "sources": [
         "https://fr.wikipedia.org/wiki/Asamoah_Gyan"
@@ -25195,14 +25195,14 @@
     },
     {
       "id": "lf-f-0145",
-      "affirmation": "Michael Owen nasceu em Toulouse.",
+      "affirmation": "Michael Owen nasceu em Liverpool.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Michael Owen"
       ],
       "groupe_exclusif": "ville_naissance:Michael Owen",
-      "valeur_affirmee": "Toulouse",
+      "valeur_affirmee": "Liverpool",
       "valeur_source": "Chester",
       "sources": [
         "https://fr.wikipedia.org/wiki/Michael_Owen_%28football%29"
@@ -25214,14 +25214,14 @@
     },
     {
       "id": "lf-f-0146",
-      "affirmation": "Cristiano Ronaldo nasceu em Madrid.",
+      "affirmation": "Cristiano Ronaldo nasceu em Amadora.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Cristiano Ronaldo"
       ],
       "groupe_exclusif": "ville_naissance:Cristiano Ronaldo",
-      "valeur_affirmee": "Madrid",
+      "valeur_affirmee": "Amadora",
       "valeur_source": "Funchal",
       "sources": [
         "https://fr.wikipedia.org/wiki/Cristiano_Ronaldo"
@@ -25233,14 +25233,14 @@
     },
     {
       "id": "lf-f-0147",
-      "affirmation": "Marcelo Vieira nasceu em Buenos Aires.",
+      "affirmation": "Marcelo Vieira nasceu em Porto Alegre.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Marcelo Vieira"
       ],
       "groupe_exclusif": "ville_naissance:Marcelo Vieira",
-      "valeur_affirmee": "Buenos Aires",
+      "valeur_affirmee": "Porto Alegre",
       "valeur_source": "Rio de Janeiro",
       "sources": [
         "https://fr.wikipedia.org/wiki/Marcelo_%28football%2C_1988%29"
@@ -25252,14 +25252,14 @@
     },
     {
       "id": "lf-f-0148",
-      "affirmation": "Michael Essien nasceu em Terrassa.",
+      "affirmation": "Michael Essien nasceu em Kumasi.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Michael Essien"
       ],
       "groupe_exclusif": "ville_naissance:Michael Essien",
-      "valeur_affirmee": "Terrassa",
+      "valeur_affirmee": "Kumasi",
       "valeur_source": "Acra",
       "sources": [
         "https://fr.wikipedia.org/wiki/Michael_Essien"
@@ -25271,14 +25271,14 @@
     },
     {
       "id": "lf-f-0149",
-      "affirmation": "Sergio Ramos nasceu em Salto.",
+      "affirmation": "Sergio Ramos nasceu em Fuenlabrada.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Sergio Ramos"
       ],
       "groupe_exclusif": "ville_naissance:Sergio Ramos",
-      "valeur_affirmee": "Salto",
+      "valeur_affirmee": "Fuenlabrada",
       "valeur_source": "Camas",
       "sources": [
         "https://fr.wikipedia.org/wiki/Sergio_Ramos"
@@ -25290,14 +25290,14 @@
     },
     {
       "id": "lf-f-0150",
-      "affirmation": "Gary Neville nasceu em Lagarto.",
+      "affirmation": "Gary Neville nasceu em Leicester.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Gary Neville"
       ],
       "groupe_exclusif": "ville_naissance:Gary Neville",
-      "valeur_affirmee": "Lagarto",
+      "valeur_affirmee": "Leicester",
       "valeur_source": "Bury",
       "sources": [
         "https://fr.wikipedia.org/wiki/Gary_Neville"
@@ -25309,14 +25309,14 @@
     },
     {
       "id": "lf-f-0151",
-      "affirmation": "Lionel Messi nasceu em Crevillent.",
+      "affirmation": "Lionel Messi nasceu em Buenos Aires.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Lionel Messi"
       ],
       "groupe_exclusif": "ville_naissance:Lionel Messi",
-      "valeur_affirmee": "Crevillent",
+      "valeur_affirmee": "Buenos Aires",
       "valeur_source": "Rosario",
       "sources": [
         "https://fr.wikipedia.org/wiki/Lionel_Messi"
@@ -25328,14 +25328,14 @@
     },
     {
       "id": "lf-f-0152",
-      "affirmation": "Marcel Desailly nasceu em Mbandaka.",
+      "affirmation": "Marcel Desailly nasceu em Kumasi.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Marcel Desailly"
       ],
       "groupe_exclusif": "ville_naissance:Marcel Desailly",
-      "valeur_affirmee": "Mbandaka",
+      "valeur_affirmee": "Kumasi",
       "valeur_source": "Acra",
       "sources": [
         "https://fr.wikipedia.org/wiki/Marcel_Desailly"
@@ -25347,14 +25347,14 @@
     },
     {
       "id": "lf-f-0153",
-      "affirmation": "Juan Román Riquelme nasceu em Lagny-sur-Marne.",
+      "affirmation": "Juan Román Riquelme nasceu em Rosario.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Juan Román Riquelme"
       ],
       "groupe_exclusif": "ville_naissance:Juan Román Riquelme",
-      "valeur_affirmee": "Lagny-sur-Marne",
+      "valeur_affirmee": "Rosario",
       "valeur_source": "San Fernando",
       "sources": [
         "https://fr.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme"
@@ -25366,14 +25366,14 @@
     },
     {
       "id": "lf-f-0154",
-      "affirmation": "Cesc Fàbregas nasceu em Florida.",
+      "affirmation": "Cesc Fàbregas nasceu em Sabadell.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Cesc Fàbregas"
       ],
       "groupe_exclusif": "ville_naissance:Cesc Fàbregas",
-      "valeur_affirmee": "Florida",
+      "valeur_affirmee": "Sabadell",
       "valeur_source": "Arenys de Mar",
       "sources": [
         "https://fr.wikipedia.org/wiki/Cesc_F%C3%A0bregas"
@@ -25385,14 +25385,14 @@
     },
     {
       "id": "lf-f-0155",
-      "affirmation": "Robert Pires nasceu em Llanera.",
+      "affirmation": "Robert Pires nasceu em Lille.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Robert Pires"
       ],
       "groupe_exclusif": "ville_naissance:Robert Pires",
-      "valeur_affirmee": "Llanera",
+      "valeur_affirmee": "Lille",
       "valeur_source": "Reims",
       "sources": [
         "https://fr.wikipedia.org/wiki/Robert_Pir%C3%A8s"
@@ -25404,14 +25404,14 @@
     },
     {
       "id": "lf-f-0156",
-      "affirmation": "Santi Cazorla nasceu em Nagrig.",
+      "affirmation": "Santi Cazorla nasceu em Tolosa.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Santi Cazorla"
       ],
       "groupe_exclusif": "ville_naissance:Santi Cazorla",
-      "valeur_affirmee": "Nagrig",
+      "valeur_affirmee": "Tolosa",
       "valeur_source": "Llanera",
       "sources": [
         "https://fr.wikipedia.org/wiki/Santi_Cazorla"
@@ -25423,14 +25423,14 @@
     },
     {
       "id": "lf-f-0157",
-      "affirmation": "Iker Casillas nasceu em El Puerto de Santa María.",
+      "affirmation": "Iker Casillas nasceu em Fuenlabrada.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Iker Casillas"
       ],
       "groupe_exclusif": "ville_naissance:Iker Casillas",
-      "valeur_affirmee": "El Puerto de Santa María",
+      "valeur_affirmee": "Fuenlabrada",
       "valeur_source": "Móstoles",
       "sources": [
         "https://fr.wikipedia.org/wiki/Iker_Casillas"
@@ -25442,14 +25442,14 @@
     },
     {
       "id": "lf-f-0158",
-      "affirmation": "Joaquín Sánchez nasceu em Fuenlabrada.",
+      "affirmation": "Joaquín Sánchez nasceu em Camas.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Joaquín Sánchez"
       ],
       "groupe_exclusif": "ville_naissance:Joaquín Sánchez",
-      "valeur_affirmee": "Fuenlabrada",
+      "valeur_affirmee": "Camas",
       "valeur_source": "El Puerto de Santa María",
       "sources": [
         "https://fr.wikipedia.org/wiki/Joaqu%C3%ADn_%28football%2C_1981%29"
@@ -25461,14 +25461,14 @@
     },
     {
       "id": "lf-f-0159",
-      "affirmation": "David Trezeguet nasceu em Chester.",
+      "affirmation": "David Trezeguet nasceu em Baiona.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "David Trezeguet"
       ],
       "groupe_exclusif": "ville_naissance:David Trezeguet",
-      "valeur_affirmee": "Chester",
+      "valeur_affirmee": "Baiona",
       "valeur_source": "Ruão",
       "sources": [
         "https://fr.wikipedia.org/wiki/David_Trezeguet"
@@ -25480,14 +25480,14 @@
     },
     {
       "id": "lf-f-0160",
-      "affirmation": "Ronaldinho nasceu em Lagarto.",
+      "affirmation": "Ronaldinho nasceu no Rio de Janeiro.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Ronaldinho"
       ],
       "groupe_exclusif": "ville_naissance:Ronaldinho",
-      "valeur_affirmee": "Lagarto",
+      "valeur_affirmee": "Rio de Janeiro",
       "valeur_source": "Porto Alegre",
       "sources": [
         "https://fr.wikipedia.org/wiki/Ronaldinho"
@@ -25499,14 +25499,14 @@
     },
     {
       "id": "lf-f-0161",
-      "affirmation": "Franck Ribéry nasceu em Buenos Aires.",
+      "affirmation": "Franck Ribéry nasceu em Reims.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Franck Ribéry"
       ],
       "groupe_exclusif": "ville_naissance:Franck Ribéry",
-      "valeur_affirmee": "Buenos Aires",
+      "valeur_affirmee": "Reims",
       "valeur_source": "Boulogne-sur-Mer",
       "sources": [
         "https://fr.wikipedia.org/wiki/Franck_Rib%C3%A9ry"
@@ -25518,14 +25518,14 @@
     },
     {
       "id": "lf-f-0162",
-      "affirmation": "Pepe Reina nasceu em Abidjã.",
+      "affirmation": "Pepe Reina nasceu em Móstoles.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Pepe Reina"
       ],
       "groupe_exclusif": "ville_naissance:Pepe Reina",
-      "valeur_affirmee": "Abidjã",
+      "valeur_affirmee": "Móstoles",
       "valeur_source": "Madrid",
       "sources": [
         "https://fr.wikipedia.org/wiki/Pepe_Reina"
@@ -25537,14 +25537,14 @@
     },
     {
       "id": "lf-f-0163",
-      "affirmation": "Xabi Alonso nasceu no Funchal.",
+      "affirmation": "Xabi Alonso nasceu em Sabadell.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Xabi Alonso"
       ],
       "groupe_exclusif": "ville_naissance:Xabi Alonso",
-      "valeur_affirmee": "Funchal",
+      "valeur_affirmee": "Sabadell",
       "valeur_source": "Tolosa",
       "sources": [
         "https://fr.wikipedia.org/wiki/Xabi_Alonso"
@@ -25556,14 +25556,14 @@
     },
     {
       "id": "lf-f-0164",
-      "affirmation": "Nani nasceu em Lagny-sur-Marne.",
+      "affirmation": "Nani nasceu em Almada.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Nani"
       ],
       "groupe_exclusif": "ville_naissance:Nani",
-      "valeur_affirmee": "Lagny-sur-Marne",
+      "valeur_affirmee": "Almada",
       "valeur_source": "Amadora",
       "sources": [
         "https://fr.wikipedia.org/wiki/Nani"
@@ -25575,14 +25575,14 @@
     },
     {
       "id": "lf-f-0165",
-      "affirmation": "Fernando Morientes nasceu em Kinshasa.",
+      "affirmation": "Fernando Morientes nasceu em Fuenlabrada.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Fernando Morientes"
       ],
       "groupe_exclusif": "ville_naissance:Fernando Morientes",
-      "valeur_affirmee": "Kinshasa",
+      "valeur_affirmee": "Fuenlabrada",
       "valeur_source": "Cilleros",
       "sources": [
         "https://fr.wikipedia.org/wiki/Fernando_Morientes"
@@ -25594,14 +25594,14 @@
     },
     {
       "id": "lf-f-0166",
-      "affirmation": "Juanfran Torres nasceu em Florida.",
+      "affirmation": "Juanfran Torres nasceu em El Puerto de Santa María.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Juanfran Torres"
       ],
       "groupe_exclusif": "ville_naissance:Juanfran Torres",
-      "valeur_affirmee": "Florida",
+      "valeur_affirmee": "El Puerto de Santa María",
       "valeur_source": "Crevillent",
       "sources": [
         "https://fr.wikipedia.org/wiki/Juanfran_%28football%2C_1985%29"
@@ -25613,14 +25613,14 @@
     },
     {
       "id": "lf-f-0167",
-      "affirmation": "Gonzalo Higuaín nasceu em La Plata.",
+      "affirmation": "Gonzalo Higuaín nasceu em Lille.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Gonzalo Higuaín"
       ],
       "groupe_exclusif": "ville_naissance:Gonzalo Higuaín",
-      "valeur_affirmee": "La Plata",
+      "valeur_affirmee": "Lille",
       "valeur_source": "Brest",
       "sources": [
         "https://fr.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn"
@@ -25632,14 +25632,14 @@
     },
     {
       "id": "lf-f-0168",
-      "affirmation": "Yaya Touré nasceu em Arles.",
+      "affirmation": "Yaya Touré nasceu em Abidjã.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Yaya Touré"
       ],
       "groupe_exclusif": "ville_naissance:Yaya Touré",
-      "valeur_affirmee": "Arles",
+      "valeur_affirmee": "Abidjã",
       "valeur_source": "Bouaké",
       "sources": [
         "https://fr.wikipedia.org/wiki/Yaya_Tour%C3%A9"
@@ -25651,14 +25651,14 @@
     },
     {
       "id": "lf-f-0169",
-      "affirmation": "Raúl González nasceu em Nagrig.",
+      "affirmation": "Raúl González nasceu em Móstoles.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Raúl González"
       ],
       "groupe_exclusif": "ville_naissance:Raúl González",
-      "valeur_affirmee": "Nagrig",
+      "valeur_affirmee": "Móstoles",
       "valeur_source": "Madrid",
       "sources": [
         "https://fr.wikipedia.org/wiki/Ra%C3%BAl_%28football%29"
@@ -25670,14 +25670,14 @@
     },
     {
       "id": "lf-f-0170",
-      "affirmation": "Blaise Matuidi nasceu em Garça.",
+      "affirmation": "Blaise Matuidi nasceu em Baiona.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Blaise Matuidi"
       ],
       "groupe_exclusif": "ville_naissance:Blaise Matuidi",
-      "valeur_affirmee": "Garça",
+      "valeur_affirmee": "Baiona",
       "valeur_source": "Toulouse",
       "sources": [
         "https://fr.wikipedia.org/wiki/Blaise_Matuidi"
@@ -25689,14 +25689,14 @@
     },
     {
       "id": "lf-f-0171",
-      "affirmation": "Carlos Tevez nasceu em Cilleros.",
+      "affirmation": "Carlos Tevez nasceu em Buenos Aires.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Carlos Tevez"
       ],
       "groupe_exclusif": "ville_naissance:Carlos Tevez",
-      "valeur_affirmee": "Cilleros",
+      "valeur_affirmee": "Buenos Aires",
       "valeur_source": "Ciudadela",
       "sources": [
         "https://fr.wikipedia.org/wiki/Carlos_T%C3%A9vez"
@@ -25708,14 +25708,14 @@
     },
     {
       "id": "lf-f-0172",
-      "affirmation": "Arjen Robben nasceu em Tolosa.",
+      "affirmation": "Arjen Robben nasceu em Breda.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Arjen Robben"
       ],
       "groupe_exclusif": "ville_naissance:Arjen Robben",
-      "valeur_affirmee": "Tolosa",
+      "valeur_affirmee": "Breda",
       "valeur_source": "Bedum",
       "sources": [
         "https://fr.wikipedia.org/wiki/Arjen_Robben"
@@ -25727,14 +25727,14 @@
     },
     {
       "id": "lf-f-0173",
-      "affirmation": "Patrice Evra nasceu em Crevillent.",
+      "affirmation": "Patrice Evra nasceu em Bambali.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Patrice Evra"
       ],
       "groupe_exclusif": "ville_naissance:Patrice Evra",
-      "valeur_affirmee": "Crevillent",
+      "valeur_affirmee": "Bambali",
       "valeur_source": "Dacar",
       "sources": [
         "https://fr.wikipedia.org/wiki/Patrice_%C3%89vra"
@@ -25746,14 +25746,14 @@
     },
     {
       "id": "lf-f-0174",
-      "affirmation": "Pedro Rodríguez nasceu em Lille.",
+      "affirmation": "Pedro Rodríguez nasceu em Arguineguín.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Pedro Rodríguez"
       ],
       "groupe_exclusif": "ville_naissance:Pedro Rodríguez",
-      "valeur_affirmee": "Lille",
+      "valeur_affirmee": "Arguineguín",
       "valeur_source": "Santa Cruz de Tenerife",
       "sources": [
         "https://fr.wikipedia.org/wiki/Pedro_%28football%29"
@@ -25765,14 +25765,14 @@
     },
     {
       "id": "lf-f-0175",
-      "affirmation": "Hatem Ben Arfa nasceu em Lille.",
+      "affirmation": "Hatem Ben Arfa nasceu em Le Chesnay.",
       "est_vraie": false,
       "categorie": "ville_naissance",
       "joueurs": [
         "Hatem Ben Arfa"
       ],
       "groupe_exclusif": "ville_naissance:Hatem Ben Arfa",
-      "valeur_affirmee": "Lille",
+      "valeur_affirmee": "Le Chesnay",
       "valeur_source": "Clamart",
       "sources": [
         "https://fr.wikipedia.org/wiki/Hatem_Ben_Arfa"

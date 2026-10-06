@@ -4,7 +4,7 @@
   "src/data/pt/lematch-cards.json": "37c1ac727706",
   "src/data/pt/quisuisje-cards.json": "e9f60a7c0392",
   "src/data/pt/transfert-cards.json": "a9f86f8c4fd0",
-  "src/data/pt/vraifaux-statements.json": "00581b1821ad",
+  "src/data/pt/vraifaux-statements.json": "2f6e18e97d53",
   "src/data/quisuisje-cards.json": "df3f759a31f5",
   "src/data/stats-champions-league-goals.json": "44ee9829a20f",
   "src/data/stats-la-liga-goals.json": "712cd4cd793a",
@@ -14,6 +14,6 @@
   "src/data/stats-serie-a-goals.json": "b4ac23241f78",
   "src/data/stats-world-cup-goals.json": "fb5131dc2f0a",
   "src/data/transfert-cards.json": "6f9bb57ba9ab",
-  "src/data/vraifaux-statements.json": "789a039ab830"
+  "src/data/vraifaux-statements.json": "690935fc327e"
  }
 }
