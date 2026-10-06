@@ -1,24 +1,25 @@
 {
   "lang": "pt-PT",
   "game_id": "qui_suis_je",
-  "version": 3,
+  "version": 4,
   "prepared_at": "2026-09-27",
-  "status": "indices recalibrés ; unicité des réponses à relire et à retester",
+  "status": "ordem das pistas personalizada por ficha; unicidade e dificuldade por testar",
   "source_snapshot": "Wikipédia, révisions relevées le 24 septembre 2026; carrières Transfert vérifiées dans le dépôt",
   "rules": {
-    "clue_order": [
-      "club",
-      "trophy",
-      "position",
-      "teammate",
-      "nationality"
-    ],
+    "clue_order": "card_specific",
     "points": [
       5,
       4,
       3,
       2,
       1
+    ],
+    "clue_kinds": [
+      "club",
+      "trophy",
+      "position",
+      "teammate",
+      "nationality"
     ]
   },
   "cards": [
@@ -61,22 +62,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou português.",
+          "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Karim Benzema.",
           "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
           "fact": {
             "name": "Karim Benzema",
             "shared_club": "Real Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou português.",
-          "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
-          "fact": {
-            "national_team": "Portugal"
           }
         }
       ],
@@ -94,12 +95,13 @@
       "transfert_card_id": "t003",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Inter Miami.",
-          "source": "https://www.intermiamicf.com/club/about",
+          "text": "Joguei com Kylian Mbappé.",
+          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
           "fact": {
-            "club": "Inter Miami"
+            "name": "Kylian Mbappé",
+            "shared_club": "PSG"
           }
         },
         {
@@ -122,22 +124,21 @@
           }
         },
         {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com Kylian Mbappé.",
-          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
-          "fact": {
-            "name": "Kylian Mbappé",
-            "shared_club": "PSG"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou argentino.",
           "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
           "fact": {
             "national_team": "Argentina"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Inter Miami.",
+          "source": "https://www.intermiamicf.com/club/about",
+          "fact": {
+            "club": "Inter Miami"
           }
         }
       ],
@@ -165,22 +166,21 @@
           }
         },
         {
-          "kind": "trophy",
-          "points": 4,
-          "text": "Ganhei o Mundial de 2018.",
-          "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/all-kylian-mbappe-world-cup-numbers-and-records",
-          "fact": {
-            "trophy": "Coupe du monde 2018",
-            "evidence": "France championne en 2018 ; Kylian Mbappé dans l'équipe"
-          }
-        },
-        {
           "kind": "position",
-          "points": 3,
+          "points": 4,
           "text": "Sou avançado.",
           "source": "https://fr.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
           "fact": {
             "position": "attaquant"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 3,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
+          "fact": {
+            "national_team": "France"
           }
         },
         {
@@ -194,12 +194,13 @@
           }
         },
         {
-          "kind": "nationality",
+          "kind": "trophy",
           "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
+          "text": "Ganhei o Mundial de 2018.",
+          "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/all-kylian-mbappe-world-cup-numbers-and-records",
           "fact": {
-            "national_team": "France"
+            "trophy": "Coupe du monde 2018",
+            "evidence": "France championne en 2018 ; Kylian Mbappé dans l'équipe"
           }
         }
       ],
@@ -245,22 +246,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
+          "fact": {
+            "national_team": "France"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Cristiano Ronaldo.",
           "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
           "fact": {
             "name": "Cristiano Ronaldo",
             "shared_club": "Real Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -463,36 +464,8 @@
       "transfert_card_id": "t014",
       "clues": [
         {
-          "kind": "club",
-          "points": 5,
-          "text": "Joguei no Santos.",
-          "source": "https://en.wikipedia.org/wiki/Neymar",
-          "fact": {
-            "club": "Santos"
-          }
-        },
-        {
-          "kind": "trophy",
-          "points": 4,
-          "text": "Ganhei a Taça Libertadores.",
-          "source": "https://en.wikipedia.org/wiki/Neymar",
-          "fact": {
-            "trophy": "Copa Libertadores",
-            "evidence": "* Copa Libertadores: 2011"
-          }
-        },
-        {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio ofensivo.",
-          "source": "https://fr.wikipedia.org/wiki/Neymar",
-          "fact": {
-            "position": "milieu offensif"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 5,
           "text": "Joguei com Luis Suárez.",
           "source": "https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28Uruguayan_footballer%29",
           "fact": {
@@ -501,12 +474,40 @@
           }
         },
         {
+          "kind": "position",
+          "points": 4,
+          "text": "Sou médio ofensivo.",
+          "source": "https://fr.wikipedia.org/wiki/Neymar",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
+          "text": "Ganhei a Taça Libertadores.",
+          "source": "https://en.wikipedia.org/wiki/Neymar",
+          "fact": {
+            "trophy": "Copa Libertadores",
+            "evidence": "* Copa Libertadores: 2011"
+          }
+        },
+        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou brasileiro.",
           "source": "https://en.wikipedia.org/wiki/Neymar",
           "fact": {
             "national_team": "Brazil"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Santos.",
+          "source": "https://en.wikipedia.org/wiki/Neymar",
+          "fact": {
+            "club": "Santos"
           }
         }
       ],
@@ -534,22 +535,22 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio.",
+          "source": "https://fr.wikipedia.org/wiki/Luka_Modri%C4%87",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei o campeonato espanhol.",
           "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
           "fact": {
             "trophy": "La Liga",
             "evidence": "*La Liga: 2016–17, 2019–20,"
-          }
-        },
-        {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio.",
-          "source": "https://fr.wikipedia.org/wiki/Luka_Modri%C4%87",
-          "fact": {
-            "position": "milieu de terrain"
           }
         },
         {
@@ -614,22 +615,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Luka Modrić.",
           "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
           "fact": {
             "name": "Luka Modrić",
             "shared_club": "Real Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -656,8 +657,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio.",
+          "source": "https://fr.wikipedia.org/wiki/Paul_Pogba",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Serie A.",
           "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
           "fact": {
@@ -666,31 +676,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio.",
-          "source": "https://fr.wikipedia.org/wiki/Paul_Pogba",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
           "fact": {
-            "position": "milieu de terrain"
+            "national_team": "France"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Bruno Fernandes.",
           "source": "https://www.manutd.com/en/news/match-report-man-utd-vs-leeds-august-14-2021",
           "fact": {
             "name": "Bruno Fernandes",
             "shared_club": "Manchester United"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -718,22 +719,22 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio ofensivo.",
+          "source": "https://fr.wikipedia.org/wiki/Kevin_De_Bruyne",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Taça da Alemanha.",
           "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
           "fact": {
             "trophy": "DFB-Pokal",
             "evidence": "*DFB-Pokal: 2014–15"
-          }
-        },
-        {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio ofensivo.",
-          "source": "https://fr.wikipedia.org/wiki/Kevin_De_Bruyne",
-          "fact": {
-            "position": "milieu offensif"
           }
         },
         {
@@ -771,12 +772,13 @@
       "transfert_card_id": "t025",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Manchester City.",
-          "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
+          "text": "Joguei com David Silva.",
+          "source": "https://en.wikipedia.org/wiki/David_Silva",
           "fact": {
-            "club": "Manchester City"
+            "name": "David Silva",
+            "shared_club": "Manchester City"
           }
         },
         {
@@ -799,13 +801,12 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "club",
           "points": 2,
-          "text": "Joguei com David Silva.",
-          "source": "https://en.wikipedia.org/wiki/David_Silva",
+          "text": "Joguei no Manchester City.",
+          "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
           "fact": {
-            "name": "David Silva",
-            "shared_club": "Manchester City"
+            "club": "Manchester City"
           }
         },
         {
@@ -860,22 +861,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou inglês.",
+          "source": "https://en.wikipedia.org/wiki/Alan_Shearer",
+          "fact": {
+            "national_team": "England"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Michael Owen.",
           "source": "https://en.wikipedia.org/wiki/Michael_Owen",
           "fact": {
             "name": "Michael Owen",
             "shared_club": "Newcastle United"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou inglês.",
-          "source": "https://en.wikipedia.org/wiki/Alan_Shearer",
-          "fact": {
-            "national_team": "England"
           }
         }
       ],
@@ -963,22 +964,22 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou avançado.",
+          "source": "https://fr.wikipedia.org/wiki/Asamoah_Gyan",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei o campeonato dos Emirados Árabes Unidos.",
           "source": "https://en.wikipedia.org/wiki/Asamoah_Gyan",
           "fact": {
             "trophy": "UAE Pro League",
             "evidence": "* UAE Pro League: 2011–12, 2012–13, 2014–15"
-          }
-        },
-        {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou avançado.",
-          "source": "https://fr.wikipedia.org/wiki/Asamoah_Gyan",
-          "fact": {
-            "position": "attaquant"
           }
         },
         {
@@ -1043,22 +1044,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou inglês.",
+          "source": "https://en.wikipedia.org/wiki/Ashley_Cole",
+          "fact": {
+            "national_team": "England"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Kevin De Bruyne.",
           "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
           "fact": {
             "name": "Kevin De Bruyne",
             "shared_club": "Chelsea"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou inglês.",
-          "source": "https://en.wikipedia.org/wiki/Ashley_Cole",
-          "fact": {
-            "national_team": "England"
           }
         }
       ],
@@ -1085,8 +1086,26 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou defesa.",
+          "source": "https://fr.wikipedia.org/wiki/Bacary_Sagna",
+          "fact": {
+            "position": "défenseur"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 3,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
+          "fact": {
+            "national_team": "France"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 2,
           "text": "Ganhei a Taça de França.",
           "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
           "fact": {
@@ -1095,31 +1114,13 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou defesa.",
-          "source": "https://fr.wikipedia.org/wiki/Bacary_Sagna",
-          "fact": {
-            "position": "défenseur"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Kevin De Bruyne.",
           "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
           "fact": {
             "name": "Kevin De Bruyne",
             "shared_club": "Manchester City"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -1146,8 +1147,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio.",
+          "source": "https://fr.wikipedia.org/wiki/Blaise_Matuidi",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Ligue 1.",
           "source": "https://en.wikipedia.org/wiki/Blaise_Matuidi",
           "fact": {
@@ -1156,31 +1166,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio.",
-          "source": "https://fr.wikipedia.org/wiki/Blaise_Matuidi",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Blaise_Matuidi",
           "fact": {
-            "position": "milieu de terrain"
+            "national_team": "France"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Cristiano Ronaldo.",
           "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
           "fact": {
             "name": "Cristiano Ronaldo",
             "shared_club": "Juventus"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Blaise_Matuidi",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -1207,8 +1208,26 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou defesa central.",
+          "source": "https://fr.wikipedia.org/wiki/Carles_Puyol",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 3,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 2,
           "text": "Ganhei o Euro 2008.",
           "source": "https://www.uefa.com/uefaeuro/history/news/025f-0ff0bba775e3-451a9527dcbf-1000--euro-winners-every-player-from-every-victorious-squad/",
           "fact": {
@@ -1217,31 +1236,13 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou defesa central.",
-          "source": "https://fr.wikipedia.org/wiki/Carles_Puyol",
-          "fact": {
-            "position": "défenseur central"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Rivaldo.",
           "source": "https://players.fcbarcelona.com/en/chronology/2001",
           "fact": {
             "name": "Rivaldo",
             "shared_club": "Barcelona"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -1259,36 +1260,8 @@
       "transfert_card_id": "t033",
       "clues": [
         {
-          "kind": "club",
-          "points": 5,
-          "text": "Joguei no Manchester City.",
-          "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
-          "fact": {
-            "club": "Manchester City"
-          }
-        },
-        {
-          "kind": "trophy",
-          "points": 4,
-          "text": "Ganhei a Taça Libertadores.",
-          "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
-          "fact": {
-            "trophy": "Copa Libertadores",
-            "evidence": "*Copa Libertadores: 2003"
-          }
-        },
-        {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou avançado.",
-          "source": "https://fr.wikipedia.org/wiki/Carlos_T%C3%A9vez",
-          "fact": {
-            "position": "attaquant"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 5,
           "text": "Joguei com Paul Pogba.",
           "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
           "fact": {
@@ -1297,12 +1270,40 @@
           }
         },
         {
+          "kind": "position",
+          "points": 4,
+          "text": "Sou avançado.",
+          "source": "https://fr.wikipedia.org/wiki/Carlos_T%C3%A9vez",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
+          "text": "Ganhei a Taça Libertadores.",
+          "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
+          "fact": {
+            "trophy": "Copa Libertadores",
+            "evidence": "*Copa Libertadores: 2003"
+          }
+        },
+        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou argentino.",
           "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
           "fact": {
             "national_team": "Argentina"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Manchester City.",
+          "source": "https://en.wikipedia.org/wiki/Carlos_Tevez",
+          "fact": {
+            "club": "Manchester City"
           }
         }
       ],
@@ -1348,22 +1349,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Cesc_F%C3%A0bregas",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Mohamed Salah.",
           "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
           "fact": {
             "name": "Mohamed Salah",
             "shared_club": "Chelsea"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Cesc_F%C3%A0bregas",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -1390,8 +1391,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio.",
+          "source": "https://fr.wikipedia.org/wiki/Christian_Karembeu",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Liga dos Campeões.",
           "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
           "fact": {
@@ -1400,31 +1410,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio.",
-          "source": "https://fr.wikipedia.org/wiki/Christian_Karembeu",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
           "fact": {
-            "position": "milieu de terrain"
+            "national_team": "France"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Claude Makélélé.",
           "source": "https://en.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9",
           "fact": {
             "name": "Claude Makélélé",
             "shared_club": "Nantes"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -1442,12 +1443,13 @@
       "transfert_card_id": "t036",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Chelsea.",
-          "source": "https://en.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9",
+          "text": "Joguei com Christian Karembeu.",
+          "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
           "fact": {
-            "club": "Chelsea"
+            "name": "Christian Karembeu",
+            "shared_club": "Nantes"
           }
         },
         {
@@ -1470,22 +1472,21 @@
           }
         },
         {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com Christian Karembeu.",
-          "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
-          "fact": {
-            "name": "Christian Karembeu",
-            "shared_club": "Nantes"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou francês.",
           "source": "https://en.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9",
           "fact": {
             "national_team": "France"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Chelsea.",
+          "source": "https://en.wikipedia.org/wiki/Claude_Mak%C3%A9l%C3%A9l%C3%A9",
+          "fact": {
+            "club": "Chelsea"
           }
         }
       ],
@@ -1512,8 +1513,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou lateral direito.",
+          "source": "https://fr.wikipedia.org/wiki/Dani_Alves",
+          "fact": {
+            "position": "arrière droit"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Taça do Rei.",
           "source": "https://en.wikipedia.org/wiki/Dani_Alves",
           "fact": {
@@ -1522,31 +1532,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou lateral direito.",
-          "source": "https://fr.wikipedia.org/wiki/Dani_Alves",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou brasileiro.",
+          "source": "https://en.wikipedia.org/wiki/Dani_Alves",
           "fact": {
-            "position": "arrière droit"
+            "national_team": "Brazil"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Kylian Mbappé.",
           "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
           "fact": {
             "name": "Kylian Mbappé",
             "shared_club": "Paris Saint-Germain"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou brasileiro.",
-          "source": "https://en.wikipedia.org/wiki/Dani_Alves",
-          "fact": {
-            "national_team": "Brazil"
           }
         }
       ],
@@ -1564,36 +1565,8 @@
       "transfert_card_id": "t038",
       "clues": [
         {
-          "kind": "club",
-          "points": 5,
-          "text": "Joguei no Valência.",
-          "source": "https://en.wikipedia.org/wiki/David_Silva",
-          "fact": {
-            "club": "Valência"
-          }
-        },
-        {
-          "kind": "trophy",
-          "points": 4,
-          "text": "Ganhei a Taça do Rei.",
-          "source": "https://en.wikipedia.org/wiki/David_Silva",
-          "fact": {
-            "trophy": "Copa del Rey",
-            "evidence": "*Copa del Rey: 2007–08"
-          }
-        },
-        {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio ofensivo.",
-          "source": "https://fr.wikipedia.org/wiki/David_Silva",
-          "fact": {
-            "position": "milieu offensif"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 5,
           "text": "Joguei com Mario Balotelli.",
           "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
           "fact": {
@@ -1602,12 +1575,40 @@
           }
         },
         {
+          "kind": "position",
+          "points": 4,
+          "text": "Sou médio ofensivo.",
+          "source": "https://fr.wikipedia.org/wiki/David_Silva",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
           "kind": "nationality",
-          "points": 1,
+          "points": 3,
           "text": "Sou espanhol.",
           "source": "https://en.wikipedia.org/wiki/David_Silva",
           "fact": {
             "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 2,
+          "text": "Ganhei a Taça do Rei.",
+          "source": "https://en.wikipedia.org/wiki/David_Silva",
+          "fact": {
+            "trophy": "Copa del Rey",
+            "evidence": "*Copa del Rey: 2007–08"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Valência.",
+          "source": "https://en.wikipedia.org/wiki/David_Silva",
+          "fact": {
+            "club": "Valência"
           }
         }
       ],
@@ -1644,8 +1645,17 @@
           }
         },
         {
-          "kind": "position",
+          "kind": "nationality",
           "points": 3,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/David_Trezeguet",
+          "fact": {
+            "national_team": "France"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 2,
           "text": "Sou ponta de lança.",
           "source": "https://fr.wikipedia.org/wiki/David_Trezeguet",
           "fact": {
@@ -1654,21 +1664,12 @@
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Patrick Vieira.",
           "source": "https://en.wikipedia.org/wiki/Patrick_Vieira",
           "fact": {
             "name": "Patrick Vieira",
             "shared_club": "Juventus"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/David_Trezeguet",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -1695,13 +1696,12 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "nationality",
           "points": 4,
-          "text": "Ganhei a Taça do Rei.",
+          "text": "Sou espanhol.",
           "source": "https://en.wikipedia.org/wiki/David_Villa",
           "fact": {
-            "trophy": "Copa del Rey",
-            "evidence": "*Copa del Rey: 2003–04"
+            "national_team": "Spain"
           }
         },
         {
@@ -1714,22 +1714,23 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "trophy",
           "points": 2,
+          "text": "Ganhei a Taça do Rei.",
+          "source": "https://en.wikipedia.org/wiki/David_Villa",
+          "fact": {
+            "trophy": "Copa del Rey",
+            "evidence": "*Copa del Rey: 2003–04"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Carles Puyol.",
           "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
           "fact": {
             "name": "Carles Puyol",
             "shared_club": "Barcelona"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/David_Villa",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -1774,22 +1775,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou português.",
+          "source": "https://en.wikipedia.org/wiki/Deco",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Lionel Messi.",
           "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
           "fact": {
             "name": "Lionel Messi",
             "shared_club": "Barcelona"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou português.",
-          "source": "https://en.wikipedia.org/wiki/Deco",
-          "fact": {
-            "national_team": "Portugal"
           }
         }
       ],
@@ -1835,22 +1836,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Didier_Deschamps",
+          "fact": {
+            "national_team": "France"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com John Terry.",
           "source": "https://en.wikipedia.org/wiki/John_Terry",
           "fact": {
             "name": "John Terry",
             "shared_club": "Chelsea"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Didier_Deschamps",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -1868,12 +1869,13 @@
       "transfert_card_id": "t043",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Marselha.",
-          "source": "https://en.wikipedia.org/wiki/Didier_Drogba",
+          "text": "Joguei com Arjen Robben.",
+          "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
           "fact": {
-            "club": "Marselha"
+            "name": "Arjen Robben",
+            "shared_club": "Chelsea"
           }
         },
         {
@@ -1896,13 +1898,12 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "club",
           "points": 2,
-          "text": "Joguei com Arjen Robben.",
-          "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
+          "text": "Joguei no Marselha.",
+          "source": "https://en.wikipedia.org/wiki/Didier_Drogba",
           "fact": {
-            "name": "Arjen Robben",
-            "shared_club": "Chelsea"
+            "club": "Marselha"
           }
         },
         {
@@ -1957,22 +1958,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Diego_Costa",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Mohamed Salah.",
           "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
           "fact": {
             "name": "Mohamed Salah",
             "shared_club": "Chelsea"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Diego_Costa",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -1999,8 +2000,26 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou avançado-centro.",
+          "source": "https://fr.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
+          "fact": {
+            "position": "attaquant axial"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 3,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
+          "fact": {
+            "national_team": "France"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 2,
           "text": "Ganhei a Taça de França.",
           "source": "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
           "fact": {
@@ -2009,31 +2028,13 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou avançado-centro.",
-          "source": "https://fr.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
-          "fact": {
-            "position": "attaquant axial"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Fernando Morientes.",
           "source": "https://en.wikipedia.org/wiki/Fernando_Morientes",
           "fact": {
             "name": "Fernando Morientes",
             "shared_club": "Liverpool"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -2131,8 +2132,17 @@
           }
         },
         {
-          "kind": "position",
+          "kind": "nationality",
           "points": 3,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Llorente",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 2,
           "text": "Sou ponta de lança.",
           "source": "https://fr.wikipedia.org/wiki/Fernando_Llorente",
           "fact": {
@@ -2141,21 +2151,12 @@
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Paul Pogba.",
           "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
           "fact": {
             "name": "Paul Pogba",
             "shared_club": "Juventus"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Fernando_Llorente",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -2201,22 +2202,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Morientes",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Djibril Cissé.",
           "source": "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
           "fact": {
             "name": "Djibril Cissé",
             "shared_club": "Liverpool"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Fernando_Morientes",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -2243,8 +2244,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "nationality",
           "points": 4,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Liga Europa.",
           "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
           "fact": {
@@ -2254,7 +2264,7 @@
         },
         {
           "kind": "position",
-          "points": 3,
+          "points": 2,
           "text": "Sou ponta de lança.",
           "source": "https://fr.wikipedia.org/wiki/Fernando_Torres",
           "fact": {
@@ -2263,21 +2273,12 @@
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Ashley Cole.",
           "source": "https://en.wikipedia.org/wiki/Ashley_Cole",
           "fact": {
             "name": "Ashley Cole",
             "shared_club": "Chelsea"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -2304,13 +2305,12 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "nationality",
           "points": 4,
-          "text": "Ganhei a Bundesliga.",
+          "text": "Sou francês.",
           "source": "https://en.wikipedia.org/wiki/Franck_Rib%C3%A9ry",
           "fact": {
-            "trophy": "Bundesliga",
-            "evidence": "* Bundesliga: 2007–08, 2009–10, 2012–13, 2013–14, 2014–15, 2015–16, 2016–17, 2017–18, 2018–19"
+            "national_team": "France"
           }
         },
         {
@@ -2323,22 +2323,23 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "trophy",
           "points": 2,
+          "text": "Ganhei a Bundesliga.",
+          "source": "https://en.wikipedia.org/wiki/Franck_Rib%C3%A9ry",
+          "fact": {
+            "trophy": "Bundesliga",
+            "evidence": "* Bundesliga: 2007–08, 2009–10, 2012–13, 2013–14, 2014–15, 2015–16, 2016–17, 2017–18, 2018–19"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Robert Lewandowski.",
           "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
           "fact": {
             "name": "Robert Lewandowski",
             "shared_club": "Bayern Munich"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Franck_Rib%C3%A9ry",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -2384,22 +2385,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou inglês.",
+          "source": "https://en.wikipedia.org/wiki/Frank_Lampard",
+          "fact": {
+            "national_team": "England"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Deco.",
           "source": "https://en.wikipedia.org/wiki/Deco",
           "fact": {
             "name": "Deco",
             "shared_club": "Chelsea"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou inglês.",
-          "source": "https://en.wikipedia.org/wiki/Frank_Lampard",
-          "fact": {
-            "national_team": "England"
           }
         }
       ],
@@ -2426,8 +2427,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou avançado.",
+          "source": "https://fr.wikipedia.org/wiki/Gary_Lineker",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Taça do Rei.",
           "source": "https://en.wikipedia.org/wiki/Gary_Lineker",
           "fact": {
@@ -2436,31 +2446,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou avançado.",
-          "source": "https://fr.wikipedia.org/wiki/Gary_Lineker",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou inglês.",
+          "source": "https://en.wikipedia.org/wiki/Gary_Lineker",
           "fact": {
-            "position": "attaquant"
+            "national_team": "England"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Paul Gascoigne.",
           "source": "https://en.wikipedia.org/wiki/1990%E2%80%9391_Tottenham_Hotspur_F.C._season",
           "fact": {
             "name": "Paul Gascoigne",
             "shared_club": "Tottenham Hotspur"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou inglês.",
-          "source": "https://en.wikipedia.org/wiki/Gary_Lineker",
-          "fact": {
-            "national_team": "England"
           }
         }
       ],
@@ -2487,22 +2488,21 @@
           }
         },
         {
-          "kind": "trophy",
-          "points": 4,
-          "text": "Ganhei 8 títulos da Premier League.",
-          "source": "https://www.premierleague.com/en/news/4449719",
-          "fact": {
-            "trophy": "8 titres de Premier League",
-            "evidence": "Gary Neville a remporté huit titres de Premier League"
-          }
-        },
-        {
           "kind": "position",
-          "points": 3,
+          "points": 4,
           "text": "Sou defesa direito.",
           "source": "https://www.premierleague.com/en/news/4449719",
           "fact": {
             "position": "arrière droit"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 3,
+          "text": "Sou inglês.",
+          "source": "https://en.wikipedia.org/wiki/Gary_Neville",
+          "fact": {
+            "national_team": "England"
           }
         },
         {
@@ -2516,12 +2516,13 @@
           }
         },
         {
-          "kind": "nationality",
+          "kind": "trophy",
           "points": 1,
-          "text": "Sou inglês.",
-          "source": "https://en.wikipedia.org/wiki/Gary_Neville",
+          "text": "Ganhei 8 títulos da Premier League.",
+          "source": "https://www.premierleague.com/en/news/4449719",
           "fact": {
-            "national_team": "England"
+            "trophy": "8 titres de Premier League",
+            "evidence": "Gary Neville a remporté huit titres de Premier League"
           }
         }
       ],
@@ -2567,22 +2568,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Gerard_Piqu%C3%A9",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Luis Suárez.",
           "source": "https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28Uruguayan_footballer%29",
           "fact": {
             "name": "Luis Suárez",
             "shared_club": "Barcelona"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Gerard_Piqu%C3%A9",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -2600,12 +2601,13 @@
       "transfert_card_id": "t055",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Nápoles.",
-          "source": "https://en.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn",
+          "text": "Joguei com Karim Benzema.",
+          "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
           "fact": {
-            "club": "Nápoles"
+            "name": "Karim Benzema",
+            "shared_club": "Real Madrid"
           }
         },
         {
@@ -2628,22 +2630,21 @@
           }
         },
         {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com Karim Benzema.",
-          "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
-          "fact": {
-            "name": "Karim Benzema",
-            "shared_club": "Real Madrid"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou argentino.",
           "source": "https://en.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn",
           "fact": {
             "national_team": "Argentina"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Nápoles.",
+          "source": "https://en.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn",
+          "fact": {
+            "club": "Nápoles"
           }
         }
       ],
@@ -2670,8 +2671,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio ofensivo.",
+          "source": "https://fr.wikipedia.org/wiki/Hatem_Ben_Arfa",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Ligue 1.",
           "source": "https://en.wikipedia.org/wiki/Hatem_Ben_Arfa",
           "fact": {
@@ -2680,31 +2690,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio ofensivo.",
-          "source": "https://fr.wikipedia.org/wiki/Hatem_Ben_Arfa",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Hatem_Ben_Arfa",
           "fact": {
-            "position": "milieu offensif"
+            "national_team": "France"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Blaise Matuidi.",
           "source": "https://en.wikipedia.org/wiki/Blaise_Matuidi",
           "fact": {
             "name": "Blaise Matuidi",
             "shared_club": "Paris Saint-Germain"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Hatem_Ben_Arfa",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -2750,22 +2751,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou argentino.",
+          "source": "https://en.wikipedia.org/wiki/Hern%C3%A1n_Crespo",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Didier Drogba.",
           "source": "https://en.wikipedia.org/wiki/Didier_Drogba",
           "fact": {
             "name": "Didier Drogba",
             "shared_club": "Chelsea"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou argentino.",
-          "source": "https://en.wikipedia.org/wiki/Hern%C3%A1n_Crespo",
-          "fact": {
-            "national_team": "Argentina"
           }
         }
       ],
@@ -2783,12 +2784,13 @@
       "transfert_card_id": "t058",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no FC Porto.",
-          "source": "https://en.wikipedia.org/wiki/Iker_Casillas",
+          "text": "Joguei com Luka Modrić.",
+          "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
           "fact": {
-            "club": "FC Porto"
+            "name": "Luka Modrić",
+            "shared_club": "Real Madrid"
           }
         },
         {
@@ -2802,31 +2804,30 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou guarda-redes.",
-          "source": "https://fr.wikipedia.org/wiki/Iker_Casillas",
-          "fact": {
-            "position": "gardien de but"
-          }
-        },
-        {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com Luka Modrić.",
-          "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
-          "fact": {
-            "name": "Luka Modrić",
-            "shared_club": "Real Madrid"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 1,
+          "points": 3,
           "text": "Sou espanhol.",
           "source": "https://en.wikipedia.org/wiki/Iker_Casillas",
           "fact": {
             "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 2,
+          "text": "Joguei no FC Porto.",
+          "source": "https://en.wikipedia.org/wiki/Iker_Casillas",
+          "fact": {
+            "club": "FC Porto"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 1,
+          "text": "Sou guarda-redes.",
+          "source": "https://fr.wikipedia.org/wiki/Iker_Casillas",
+          "fact": {
+            "position": "gardien de but"
           }
         }
       ],
@@ -2853,8 +2854,26 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou defesa central.",
+          "source": "https://fr.wikipedia.org/wiki/Javier_Mascherano",
+          "fact": {
+            "position": "défenseur central"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 3,
+          "text": "Sou argentino.",
+          "source": "https://en.wikipedia.org/wiki/Javier_Mascherano",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 2,
           "text": "Ganhei o campeonato argentino.",
           "source": "https://en.wikipedia.org/wiki/Javier_Mascherano",
           "fact": {
@@ -2863,31 +2882,13 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou defesa central.",
-          "source": "https://fr.wikipedia.org/wiki/Javier_Mascherano",
-          "fact": {
-            "position": "défenseur central"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Neymar.",
           "source": "https://en.wikipedia.org/wiki/Neymar",
           "fact": {
             "name": "Neymar",
             "shared_club": "Barcelona"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou argentino.",
-          "source": "https://en.wikipedia.org/wiki/Javier_Mascherano",
-          "fact": {
-            "national_team": "Argentina"
           }
         }
       ],
@@ -2914,8 +2915,26 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou ponta de lança.",
+          "source": "https://fr.wikipedia.org/wiki/Javier_Saviola",
+          "fact": {
+            "position": "avant-centre"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 3,
+          "text": "Sou argentino.",
+          "source": "https://en.wikipedia.org/wiki/Javier_Saviola",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 2,
           "text": "Ganhei o campeonato argentino.",
           "source": "https://en.wikipedia.org/wiki/Javier_Saviola",
           "fact": {
@@ -2924,31 +2943,13 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou ponta de lança.",
-          "source": "https://fr.wikipedia.org/wiki/Javier_Saviola",
-          "fact": {
-            "position": "avant-centre"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Sergio Ramos.",
           "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
           "fact": {
             "name": "Sergio Ramos",
             "shared_club": "Real Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou argentino.",
-          "source": "https://en.wikipedia.org/wiki/Javier_Saviola",
-          "fact": {
-            "national_team": "Argentina"
           }
         }
       ],
@@ -2974,13 +2975,12 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "nationality",
           "points": 4,
-          "text": "Ganhei a Taça do Rei.",
+          "text": "Sou espanhol.",
           "source": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_%28footballer%2C_born_1981%29",
           "fact": {
-            "trophy": "Copa del Rey",
-            "evidence": "*Copa del Rey: 2004–05,"
+            "national_team": "Spain"
           }
         },
         {
@@ -2993,22 +2993,23 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "trophy",
           "points": 2,
+          "text": "Ganhei a Taça do Rei.",
+          "source": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_%28footballer%2C_born_1981%29",
+          "fact": {
+            "trophy": "Copa del Rey",
+            "evidence": "*Copa del Rey: 2004–05,"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com David Villa.",
           "source": "https://en.wikipedia.org/wiki/David_Villa",
           "fact": {
             "name": "David Villa",
             "shared_club": "Valencia"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_%28footballer%2C_born_1981%29",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -3026,12 +3027,13 @@
       "transfert_card_id": "t062",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Aston Villa.",
-          "source": "https://en.wikipedia.org/wiki/John_Terry",
+          "text": "Joguei com Didier Deschamps.",
+          "source": "https://en.wikipedia.org/wiki/Didier_Deschamps",
           "fact": {
-            "club": "Aston Villa"
+            "name": "Didier Deschamps",
+            "shared_club": "Chelsea"
           }
         },
         {
@@ -3054,22 +3056,21 @@
           }
         },
         {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com Didier Deschamps.",
-          "source": "https://en.wikipedia.org/wiki/Didier_Deschamps",
-          "fact": {
-            "name": "Didier Deschamps",
-            "shared_club": "Chelsea"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou inglês.",
           "source": "https://en.wikipedia.org/wiki/John_Terry",
           "fact": {
             "national_team": "England"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Aston Villa.",
+          "source": "https://en.wikipedia.org/wiki/John_Terry",
+          "fact": {
+            "club": "Aston Villa"
           }
         }
       ],
@@ -3115,22 +3116,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou português.",
+          "source": "https://en.wikipedia.org/wiki/Jos%C3%A9_Bosingwa",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Fernando Torres.",
           "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
           "fact": {
             "name": "Fernando Torres",
             "shared_club": "Chelsea"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou português.",
-          "source": "https://en.wikipedia.org/wiki/Jos%C3%A9_Bosingwa",
-          "fact": {
-            "national_team": "Portugal"
           }
         }
       ],
@@ -3157,8 +3158,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio.",
+          "source": "https://fr.wikipedia.org/wiki/Jo%C3%A3o_Moutinho",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei o campeonato português.",
           "source": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Moutinho",
           "fact": {
@@ -3167,31 +3177,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio.",
-          "source": "https://fr.wikipedia.org/wiki/Jo%C3%A3o_Moutinho",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou português.",
+          "source": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Moutinho",
           "fact": {
-            "position": "milieu de terrain"
+            "national_team": "Portugal"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Kylian Mbappé.",
           "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
           "fact": {
             "name": "Kylian Mbappé",
             "shared_club": "Monaco"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou português.",
-          "source": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Moutinho",
-          "fact": {
-            "national_team": "Portugal"
           }
         }
       ],
@@ -3218,8 +3219,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio ofensivo.",
+          "source": "https://fr.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Taça Libertadores.",
           "source": "https://en.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme",
           "fact": {
@@ -3228,31 +3238,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio ofensivo.",
-          "source": "https://fr.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou argentino.",
+          "source": "https://en.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme",
           "fact": {
-            "position": "milieu offensif"
+            "national_team": "Argentina"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Diego Forlán.",
           "source": "https://en.wikipedia.org/wiki/Diego_Forl%C3%A1n",
           "fact": {
             "name": "Diego Forlán",
             "shared_club": "Villarreal"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou argentino.",
-          "source": "https://en.wikipedia.org/wiki/Juan_Rom%C3%A1n_Riquelme",
-          "fact": {
-            "national_team": "Argentina"
           }
         }
       ],
@@ -3298,22 +3299,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou argentino.",
+          "source": "https://en.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Ver%C3%B3n",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Rio Ferdinand.",
           "source": "https://en.wikipedia.org/wiki/Rio_Ferdinand",
           "fact": {
             "name": "Rio Ferdinand",
             "shared_club": "Manchester United"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou argentino.",
-          "source": "https://en.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Ver%C3%B3n",
-          "fact": {
-            "national_team": "Argentina"
           }
         }
       ],
@@ -3339,8 +3340,26 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou defesa.",
+          "source": "https://fr.wikipedia.org/wiki/Juanfran_%28football%2C_1985%29",
+          "fact": {
+            "position": "défenseur"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 3,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Juanfran_%28footballer%2C_born_1985%29",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 2,
           "text": "Ganhei a Taça do Rei.",
           "source": "https://en.wikipedia.org/wiki/Juanfran_%28footballer%2C_born_1985%29",
           "fact": {
@@ -3349,31 +3368,13 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou defesa.",
-          "source": "https://fr.wikipedia.org/wiki/Juanfran_%28football%2C_1985%29",
-          "fact": {
-            "position": "défenseur"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Fernando Torres.",
           "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
           "fact": {
             "name": "Fernando Torres",
             "shared_club": "Atlético Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Juanfran_%28footballer%2C_born_1985%29",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -3400,8 +3401,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio ofensivo.",
+          "source": "https://fr.wikipedia.org/wiki/Juninho",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Taça Libertadores.",
           "source": "https://en.wikipedia.org/wiki/Juninho_Pernambucano",
           "fact": {
@@ -3410,31 +3420,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio ofensivo.",
-          "source": "https://fr.wikipedia.org/wiki/Juninho",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou brasileiro.",
+          "source": "https://en.wikipedia.org/wiki/Juninho_Pernambucano",
           "fact": {
-            "position": "milieu offensif"
+            "national_team": "Brazil"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Karim Benzema.",
           "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
           "fact": {
             "name": "Karim Benzema",
             "shared_club": "Lyon"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou brasileiro.",
-          "source": "https://en.wikipedia.org/wiki/Juninho_Pernambucano",
-          "fact": {
-            "national_team": "Brazil"
           }
         }
       ],
@@ -3479,22 +3480,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou brasileiro.",
+          "source": "https://en.wikipedia.org/wiki/Kak%C3%A1",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Luka Modrić.",
           "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
           "fact": {
             "name": "Luka Modrić",
             "shared_club": "Real Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou brasileiro.",
-          "source": "https://en.wikipedia.org/wiki/Kak%C3%A1",
-          "fact": {
-            "national_team": "Brazil"
           }
         }
       ],
@@ -3540,22 +3541,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Laurent_Koscielny",
+          "fact": {
+            "national_team": "France"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Bacary Sagna.",
           "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
           "fact": {
             "name": "Bacary Sagna",
             "shared_club": "Arsenal"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Laurent_Koscielny",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -3601,22 +3602,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou português.",
+          "source": "https://en.wikipedia.org/wiki/Lu%C3%ADs_Figo",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Carles Puyol.",
           "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
           "fact": {
             "name": "Carles Puyol",
             "shared_club": "Barcelona"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou português.",
-          "source": "https://en.wikipedia.org/wiki/Lu%C3%ADs_Figo",
-          "fact": {
-            "national_team": "Portugal"
           }
         }
       ],
@@ -3662,22 +3663,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Marcel_Desailly",
+          "fact": {
+            "national_team": "France"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Christian Karembeu.",
           "source": "https://en.wikipedia.org/wiki/Christian_Karembeu",
           "fact": {
             "name": "Christian Karembeu",
             "shared_club": "Nantes"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Marcel_Desailly",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -3703,8 +3704,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou lateral esquerdo.",
+          "source": "https://fr.wikipedia.org/wiki/Marcelo_%28football%2C_1988%29",
+          "fact": {
+            "position": "latéral gauche"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Taça Libertadores.",
           "source": "https://en.wikipedia.org/wiki/Marcelo_%28footballer%2C_born_1988%29",
           "fact": {
@@ -3713,31 +3723,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou lateral esquerdo.",
-          "source": "https://fr.wikipedia.org/wiki/Marcelo_%28football%2C_1988%29",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou brasileiro.",
+          "source": "https://en.wikipedia.org/wiki/Marcelo_%28footballer%2C_born_1988%29",
           "fact": {
-            "position": "latéral gauche"
+            "national_team": "Brazil"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Sergio Ramos.",
           "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
           "fact": {
             "name": "Sergio Ramos",
             "shared_club": "Real Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou brasileiro.",
-          "source": "https://en.wikipedia.org/wiki/Marcelo_%28footballer%2C_born_1988%29",
-          "fact": {
-            "national_team": "Brazil"
           }
         }
       ],
@@ -3844,22 +3845,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou inglês.",
+          "source": "https://en.wikipedia.org/wiki/Michael_Owen",
+          "fact": {
+            "national_team": "England"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Alan Shearer.",
           "source": "https://en.wikipedia.org/wiki/Alan_Shearer",
           "fact": {
             "name": "Alan Shearer",
             "shared_club": "Newcastle United"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou inglês.",
-          "source": "https://en.wikipedia.org/wiki/Michael_Owen",
-          "fact": {
-            "national_team": "England"
           }
         }
       ],
@@ -3877,36 +3878,8 @@
       "transfert_card_id": "t076",
       "clues": [
         {
-          "kind": "club",
-          "points": 5,
-          "text": "Joguei na Juventus.",
-          "source": "https://en.wikipedia.org/wiki/Michel_Platini",
-          "fact": {
-            "club": "Juventus"
-          }
-        },
-        {
-          "kind": "trophy",
-          "points": 4,
-          "text": "Ganhei a Taça de França.",
-          "source": "https://en.wikipedia.org/wiki/Michel_Platini",
-          "fact": {
-            "trophy": "Coupe de France",
-            "evidence": "*Coupe de France: 1977–78"
-          }
-        },
-        {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio.",
-          "source": "https://fr.wikipedia.org/wiki/Michel_Platini",
-          "fact": {
-            "position": "milieu de terrain"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 5,
           "text": "Joguei com Zbigniew Boniek.",
           "source": "https://en.wikipedia.org/wiki/Michel_Platini",
           "fact": {
@@ -3915,12 +3888,40 @@
           }
         },
         {
+          "kind": "position",
+          "points": 4,
+          "text": "Sou médio.",
+          "source": "https://fr.wikipedia.org/wiki/Michel_Platini",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
           "kind": "nationality",
-          "points": 1,
+          "points": 3,
           "text": "Sou francês.",
           "source": "https://en.wikipedia.org/wiki/Michel_Platini",
           "fact": {
             "national_team": "France"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 2,
+          "text": "Ganhei a Taça de França.",
+          "source": "https://en.wikipedia.org/wiki/Michel_Platini",
+          "fact": {
+            "trophy": "Coupe de France",
+            "evidence": "*Coupe de France: 1977–78"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei na Juventus.",
+          "source": "https://en.wikipedia.org/wiki/Michel_Platini",
+          "fact": {
+            "club": "Juventus"
           }
         }
       ],
@@ -4026,22 +4027,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou português.",
+          "source": "https://en.wikipedia.org/wiki/Nani_%28footballer%29",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Paul Pogba.",
           "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
           "fact": {
             "name": "Paul Pogba",
             "shared_club": "Manchester United"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou português.",
-          "source": "https://en.wikipedia.org/wiki/Nani_%28footballer%29",
-          "fact": {
-            "national_team": "Portugal"
           }
         }
       ],
@@ -4087,22 +4088,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Nicolas_Anelka",
+          "fact": {
+            "national_team": "France"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Frank Lampard.",
           "source": "https://en.wikipedia.org/wiki/Frank_Lampard",
           "fact": {
             "name": "Frank Lampard",
             "shared_club": "Chelsea"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Nicolas_Anelka",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -4148,22 +4149,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Patrice_Evra",
+          "fact": {
+            "national_team": "France"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Dani Alves.",
           "source": "https://en.wikipedia.org/wiki/Dani_Alves",
           "fact": {
             "name": "Dani Alves",
             "shared_club": "Juventus"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Patrice_Evra",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -4209,22 +4210,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Patrick_Vieira",
+          "fact": {
+            "national_team": "France"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com David Trezeguet.",
           "source": "https://en.wikipedia.org/wiki/David_Trezeguet",
           "fact": {
             "name": "David Trezeguet",
             "shared_club": "Juventus"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Patrick_Vieira",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -4251,22 +4252,21 @@
           }
         },
         {
-          "kind": "trophy",
-          "points": 4,
-          "text": "Ganhei 11 títulos da Premier League.",
-          "source": "https://www.premierleague.com/en/events/hall-of-fame/inductees/paul-scholes",
-          "fact": {
-            "trophy": "11 titres de Premier League",
-            "evidence": "Paul Scholes a remporté onze titres de Premier League"
-          }
-        },
-        {
           "kind": "position",
-          "points": 3,
+          "points": 4,
           "text": "Sou médio.",
           "source": "https://fr.wikipedia.org/wiki/Paul_Scholes",
           "fact": {
             "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "nationality",
+          "points": 3,
+          "text": "Sou inglês.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Scholes",
+          "fact": {
+            "national_team": "England"
           }
         },
         {
@@ -4280,12 +4280,13 @@
           }
         },
         {
-          "kind": "nationality",
+          "kind": "trophy",
           "points": 1,
-          "text": "Sou inglês.",
-          "source": "https://en.wikipedia.org/wiki/Paul_Scholes",
+          "text": "Ganhei 11 títulos da Premier League.",
+          "source": "https://www.premierleague.com/en/events/hall-of-fame/inductees/paul-scholes",
           "fact": {
-            "national_team": "England"
+            "trophy": "11 titres de Premier League",
+            "evidence": "Paul Scholes a remporté onze titres de Premier League"
           }
         }
       ],
@@ -4321,8 +4322,17 @@
           }
         },
         {
-          "kind": "position",
+          "kind": "nationality",
           "points": 3,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Pedro_%28footballer%2C_born_1987%29",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 2,
           "text": "Sou extremo.",
           "source": "https://fr.wikipedia.org/wiki/Pedro_%28football%29",
           "fact": {
@@ -4331,21 +4341,12 @@
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Luis Suárez.",
           "source": "https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28Uruguayan_footballer%29",
           "fact": {
             "name": "Luis Suárez",
             "shared_club": "Barcelona"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Pedro_%28footballer%2C_born_1987%29",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -4362,12 +4363,13 @@
       "transfert_card_id": "t084",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Beşiktaş.",
-          "source": "https://www.bjk.com.tr/en/news/70423/pepe_puts_pen_to_a_two_year_contract_with_besiktas.html",
+          "text": "Joguei com Arjen Robben.",
+          "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
           "fact": {
-            "club": "Beşiktaş"
+            "name": "Arjen Robben",
+            "shared_club": "Real Madrid"
           }
         },
         {
@@ -4390,22 +4392,21 @@
           }
         },
         {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com Arjen Robben.",
-          "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
-          "fact": {
-            "name": "Arjen Robben",
-            "shared_club": "Real Madrid"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou português.",
           "source": "https://en.wikipedia.org/wiki/Pepe_%28footballer%2C_born_February_1983%29",
           "fact": {
             "national_team": "Portugal"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Beşiktaş.",
+          "source": "https://www.bjk.com.tr/en/news/70423/pepe_puts_pen_to_a_two_year_contract_with_besiktas.html",
+          "fact": {
+            "club": "Beşiktaş"
           }
         }
       ],
@@ -4423,12 +4424,13 @@
       "transfert_card_id": "t085",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Bayern Munique.",
-          "source": "https://en.wikipedia.org/wiki/Pepe_Reina",
+          "text": "Joguei com Robert Lewandowski.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
           "fact": {
-            "club": "Bayern Munique"
+            "name": "Robert Lewandowski",
+            "shared_club": "Bayern Munich"
           }
         },
         {
@@ -4442,8 +4444,17 @@
           }
         },
         {
-          "kind": "position",
+          "kind": "nationality",
           "points": 3,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Pepe_Reina",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 2,
           "text": "Sou guarda-redes.",
           "source": "https://fr.wikipedia.org/wiki/Pepe_Reina",
           "fact": {
@@ -4451,22 +4462,12 @@
           }
         },
         {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com Robert Lewandowski.",
-          "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
-          "fact": {
-            "name": "Robert Lewandowski",
-            "shared_club": "Bayern Munich"
-          }
-        },
-        {
-          "kind": "nationality",
+          "kind": "club",
           "points": 1,
-          "text": "Sou espanhol.",
+          "text": "Joguei no Bayern Munique.",
           "source": "https://en.wikipedia.org/wiki/Pepe_Reina",
           "fact": {
-            "national_team": "Spain"
+            "club": "Bayern Munique"
           }
         }
       ],
@@ -4512,22 +4513,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou inglês.",
+          "source": "https://en.wikipedia.org/wiki/Peter_Crouch",
+          "fact": {
+            "national_team": "England"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Djibril Cissé.",
           "source": "https://en.wikipedia.org/wiki/Djibril_Ciss%C3%A9",
           "fact": {
             "name": "Djibril Cissé",
             "shared_club": "Liverpool"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou inglês.",
-          "source": "https://en.wikipedia.org/wiki/Peter_Crouch",
-          "fact": {
-            "national_team": "England"
           }
         }
       ],
@@ -4573,22 +4574,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou francês.",
+          "source": "https://en.wikipedia.org/wiki/Rapha%C3%ABl_Varane",
+          "fact": {
+            "national_team": "France"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Karim Benzema.",
           "source": "https://en.wikipedia.org/wiki/Karim_Benzema",
           "fact": {
             "name": "Karim Benzema",
             "shared_club": "Real Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou francês.",
-          "source": "https://en.wikipedia.org/wiki/Rapha%C3%ABl_Varane",
-          "fact": {
-            "national_team": "France"
           }
         }
       ],
@@ -4633,22 +4634,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Ra%C3%BAl_Gonz%C3%A1lez",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Gonzalo Higuaín.",
           "source": "https://en.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn",
           "fact": {
             "name": "Gonzalo Higuaín",
             "shared_club": "Real Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Ra%C3%BAl_Gonz%C3%A1lez",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -4694,22 +4695,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou português.",
+          "source": "https://en.wikipedia.org/wiki/Ricardo_Carvalho",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Kylian Mbappé.",
           "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
           "fact": {
             "name": "Kylian Mbappé",
             "shared_club": "Monaco"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou português.",
-          "source": "https://en.wikipedia.org/wiki/Ricardo_Carvalho",
-          "fact": {
-            "national_team": "Portugal"
           }
         }
       ],
@@ -4755,22 +4756,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou português.",
+          "source": "https://en.wikipedia.org/wiki/Ricardo_Quaresma",
+          "fact": {
+            "national_team": "Portugal"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Carles Puyol.",
           "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
           "fact": {
             "name": "Carles Puyol",
             "shared_club": "Barcelona"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou português.",
-          "source": "https://en.wikipedia.org/wiki/Ricardo_Quaresma",
-          "fact": {
-            "national_team": "Portugal"
           }
         }
       ],
@@ -4816,22 +4817,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou inglês.",
+          "source": "https://en.wikipedia.org/wiki/Rio_Ferdinand",
+          "fact": {
+            "national_team": "England"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Gary Neville.",
           "source": "https://en.wikipedia.org/wiki/Gary_Neville",
           "fact": {
             "name": "Gary Neville",
             "shared_club": "Manchester United"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou inglês.",
-          "source": "https://en.wikipedia.org/wiki/Rio_Ferdinand",
-          "fact": {
-            "national_team": "England"
           }
         }
       ],
@@ -4857,8 +4858,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio ofensivo.",
+          "source": "https://fr.wikipedia.org/wiki/Rivaldo",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei o campeonato espanhol.",
           "source": "https://en.wikipedia.org/wiki/Rivaldo",
           "fact": {
@@ -4867,31 +4877,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio ofensivo.",
-          "source": "https://fr.wikipedia.org/wiki/Rivaldo",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou brasileiro.",
+          "source": "https://en.wikipedia.org/wiki/Rivaldo",
           "fact": {
-            "position": "milieu offensif"
+            "national_team": "Brazil"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Javier Saviola.",
           "source": "https://en.wikipedia.org/wiki/Javier_Saviola",
           "fact": {
             "name": "Javier Saviola",
             "shared_club": "Barcelona"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou brasileiro.",
-          "source": "https://en.wikipedia.org/wiki/Rivaldo",
-          "fact": {
-            "national_team": "Brazil"
           }
         }
       ],
@@ -4970,12 +4971,13 @@
       "transfert_card_id": "t094",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Leeds United.",
-          "source": "https://www.premierleague.com/en/news/4091163",
+          "text": "Joguei com Michael Owen.",
+          "source": "https://en.wikipedia.org/wiki/Michael_Owen",
           "fact": {
-            "club": "Leeds United"
+            "name": "Michael Owen",
+            "shared_club": "Liverpool"
           }
         },
         {
@@ -4998,22 +5000,21 @@
           }
         },
         {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com Michael Owen.",
-          "source": "https://en.wikipedia.org/wiki/Michael_Owen",
-          "fact": {
-            "name": "Michael Owen",
-            "shared_club": "Liverpool"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou inglês.",
           "source": "https://en.wikipedia.org/wiki/Robbie_Fowler",
           "fact": {
             "national_team": "England"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Leeds United.",
+          "source": "https://www.premierleague.com/en/news/4091163",
+          "fact": {
+            "club": "Leeds United"
           }
         }
       ],
@@ -5031,12 +5032,13 @@
       "transfert_card_id": "t095",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Villarreal.",
-          "source": "https://en.wikipedia.org/wiki/Robert_Pir%C3%A8s",
+          "text": "Joguei com Cesc Fàbregas.",
+          "source": "https://en.wikipedia.org/wiki/Cesc_F%C3%A0bregas",
           "fact": {
-            "club": "Villarreal"
+            "name": "Cesc Fàbregas",
+            "shared_club": "Arsenal"
           }
         },
         {
@@ -5059,22 +5061,21 @@
           }
         },
         {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com Cesc Fàbregas.",
-          "source": "https://en.wikipedia.org/wiki/Cesc_F%C3%A0bregas",
-          "fact": {
-            "name": "Cesc Fàbregas",
-            "shared_club": "Arsenal"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou francês.",
           "source": "https://en.wikipedia.org/wiki/Robert_Pires",
           "fact": {
             "national_team": "France"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Villarreal.",
+          "source": "https://en.wikipedia.org/wiki/Robert_Pir%C3%A8s",
+          "fact": {
+            "club": "Villarreal"
           }
         }
       ],
@@ -5120,22 +5121,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou brasileiro.",
+          "source": "https://en.wikipedia.org/wiki/Roberto_Carlos",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Iker Casillas.",
           "source": "https://en.wikipedia.org/wiki/Iker_Casillas",
           "fact": {
             "name": "Iker Casillas",
             "shared_club": "Real Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou brasileiro.",
-          "source": "https://en.wikipedia.org/wiki/Roberto_Carlos",
-          "fact": {
-            "national_team": "Brazil"
           }
         }
       ],
@@ -5152,12 +5153,13 @@
       "transfert_card_id": "t097",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no AC Milan.",
-          "source": "https://en.wikipedia.org/wiki/Ronaldinho",
+          "text": "Joguei com Lionel Messi.",
+          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
           "fact": {
-            "club": "AC Milan"
+            "name": "Lionel Messi",
+            "shared_club": "Barcelona"
           }
         },
         {
@@ -5180,22 +5182,21 @@
           }
         },
         {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com Lionel Messi.",
-          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
-          "fact": {
-            "name": "Lionel Messi",
-            "shared_club": "Barcelona"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou brasileiro.",
           "source": "https://en.wikipedia.org/wiki/Ronaldinho",
           "fact": {
             "national_team": "Brazil"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no AC Milan.",
+          "source": "https://en.wikipedia.org/wiki/Ronaldinho",
+          "fact": {
+            "club": "AC Milan"
           }
         }
       ],
@@ -5240,22 +5241,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou brasileiro.",
+          "source": "https://en.wikipedia.org/wiki/Ronaldo_%28Brazilian_footballer%29",
+          "fact": {
+            "national_team": "Brazil"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Sergio Ramos.",
           "source": "https://en.wikipedia.org/wiki/Sergio_Ramos",
           "fact": {
             "name": "Sergio Ramos",
             "shared_club": "Real Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou brasileiro.",
-          "source": "https://en.wikipedia.org/wiki/Ronaldo_%28Brazilian_footballer%29",
-          "fact": {
-            "national_team": "Brazil"
           }
         }
       ],
@@ -5334,36 +5335,8 @@
       "transfert_card_id": "t100",
       "clues": [
         {
-          "kind": "club",
-          "points": 5,
-          "text": "Joguei no Marselha.",
-          "source": "https://en.wikipedia.org/wiki/Samir_Nasri",
-          "fact": {
-            "club": "Marselha"
-          }
-        },
-        {
-          "kind": "trophy",
-          "points": 4,
-          "text": "Ganhei a Premier League.",
-          "source": "https://en.wikipedia.org/wiki/Samir_Nasri",
-          "fact": {
-            "trophy": "Premier League",
-            "evidence": "*Premier League: 2011–12, 2013–14"
-          }
-        },
-        {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio ofensivo.",
-          "source": "https://fr.wikipedia.org/wiki/Samir_Nasri",
-          "fact": {
-            "position": "milieu offensif"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 5,
           "text": "Joguei com Mario Balotelli.",
           "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
           "fact": {
@@ -5372,12 +5345,40 @@
           }
         },
         {
+          "kind": "position",
+          "points": 4,
+          "text": "Sou médio ofensivo.",
+          "source": "https://fr.wikipedia.org/wiki/Samir_Nasri",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
+          "text": "Ganhei a Premier League.",
+          "source": "https://en.wikipedia.org/wiki/Samir_Nasri",
+          "fact": {
+            "trophy": "Premier League",
+            "evidence": "*Premier League: 2011–12, 2013–14"
+          }
+        },
+        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou francês.",
           "source": "https://en.wikipedia.org/wiki/Samir_Nasri",
           "fact": {
             "national_team": "France"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Marselha.",
+          "source": "https://en.wikipedia.org/wiki/Samir_Nasri",
+          "fact": {
+            "club": "Marselha"
           }
         }
       ],
@@ -5465,8 +5466,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio ofensivo.",
+          "source": "https://fr.wikipedia.org/wiki/Santi_Cazorla",
+          "fact": {
+            "position": "milieu offensif"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Taça de Inglaterra.",
           "source": "https://en.wikipedia.org/wiki/Santi_Cazorla",
           "fact": {
@@ -5475,31 +5485,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio ofensivo.",
-          "source": "https://fr.wikipedia.org/wiki/Santi_Cazorla",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Santi_Cazorla",
           "fact": {
-            "position": "milieu offensif"
+            "national_team": "Spain"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Bacary Sagna.",
           "source": "https://en.wikipedia.org/wiki/Bacary_Sagna",
           "fact": {
             "name": "Bacary Sagna",
             "shared_club": "Arsenal"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Santi_Cazorla",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -5526,8 +5527,17 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou avançado.",
+          "source": "https://fr.wikipedia.org/wiki/Sergio_Ag%C3%BCero",
+          "fact": {
+            "position": "attaquant"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei a Liga Europa.",
           "source": "https://en.wikipedia.org/wiki/Sergio_Ag%C3%BCero",
           "fact": {
@@ -5536,31 +5546,22 @@
           }
         },
         {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou avançado.",
-          "source": "https://fr.wikipedia.org/wiki/Sergio_Ag%C3%BCero",
+          "kind": "nationality",
+          "points": 2,
+          "text": "Sou argentino.",
+          "source": "https://en.wikipedia.org/wiki/Sergio_Ag%C3%BCero",
           "fact": {
-            "position": "attaquant"
+            "national_team": "Argentina"
           }
         },
         {
           "kind": "teammate",
-          "points": 2,
+          "points": 1,
           "text": "Joguei com Diego Costa.",
           "source": "https://en.wikipedia.org/wiki/Diego_Costa",
           "fact": {
             "name": "Diego Costa",
             "shared_club": "Atlético Madrid"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou argentino.",
-          "source": "https://en.wikipedia.org/wiki/Sergio_Ag%C3%BCero",
-          "fact": {
-            "national_team": "Argentina"
           }
         }
       ],
@@ -5578,12 +5579,13 @@
       "transfert_card_id": "t104",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Inter Miami.",
-          "source": "https://www.intermiamicf.com/news/inter-miami-cf-signs-legendary-midfielder-sergio-busquets",
+          "text": "Joguei com Neymar.",
+          "source": "https://en.wikipedia.org/wiki/Neymar",
           "fact": {
-            "club": "Inter Miami"
+            "name": "Neymar",
+            "shared_club": "Barcelona"
           }
         },
         {
@@ -5606,22 +5608,21 @@
           }
         },
         {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com Neymar.",
-          "source": "https://en.wikipedia.org/wiki/Neymar",
-          "fact": {
-            "name": "Neymar",
-            "shared_club": "Barcelona"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou espanhol.",
           "source": "https://en.wikipedia.org/wiki/Sergio_Busquets",
           "fact": {
             "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Inter Miami.",
+          "source": "https://www.intermiamicf.com/news/inter-miami-cf-signs-legendary-midfielder-sergio-busquets",
+          "fact": {
+            "club": "Inter Miami"
           }
         }
       ],
@@ -5639,36 +5640,8 @@
       "transfert_card_id": "t105",
       "clues": [
         {
-          "kind": "club",
-          "points": 5,
-          "text": "Joguei no LA Galaxy.",
-          "source": "https://www.lagalaxy.com/news/la-galaxy-sign-midfielder-steven-gerrard",
-          "fact": {
-            "club": "LA Galaxy"
-          }
-        },
-        {
-          "kind": "trophy",
-          "points": 4,
-          "text": "Ganhei a Taça de Inglaterra.",
-          "source": "https://en.wikipedia.org/wiki/Steven_Gerrard",
-          "fact": {
-            "trophy": "FA Cup",
-            "evidence": "*FA Cup: 2000–01,"
-          }
-        },
-        {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio.",
-          "source": "https://fr.wikipedia.org/wiki/Steven_Gerrard",
-          "fact": {
-            "position": "milieu de terrain"
-          }
-        },
-        {
           "kind": "teammate",
-          "points": 2,
+          "points": 5,
           "text": "Joguei com Mario Balotelli.",
           "source": "https://en.wikipedia.org/wiki/Mario_Balotelli",
           "fact": {
@@ -5677,12 +5650,40 @@
           }
         },
         {
+          "kind": "position",
+          "points": 4,
+          "text": "Sou médio.",
+          "source": "https://fr.wikipedia.org/wiki/Steven_Gerrard",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
+          "text": "Ganhei a Taça de Inglaterra.",
+          "source": "https://en.wikipedia.org/wiki/Steven_Gerrard",
+          "fact": {
+            "trophy": "FA Cup",
+            "evidence": "*FA Cup: 2000–01,"
+          }
+        },
+        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou inglês.",
           "source": "https://en.wikipedia.org/wiki/Steven_Gerrard",
           "fact": {
             "national_team": "England"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no LA Galaxy.",
+          "source": "https://www.lagalaxy.com/news/la-galaxy-sign-midfielder-steven-gerrard",
+          "fact": {
+            "club": "LA Galaxy"
           }
         }
       ],
@@ -5728,22 +5729,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou inglês.",
+          "source": "https://en.wikipedia.org/wiki/Teddy_Sheringham",
+          "fact": {
+            "national_team": "England"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Gary Neville.",
           "source": "https://en.wikipedia.org/wiki/Gary_Neville",
           "fact": {
             "name": "Gary Neville",
             "shared_club": "Manchester United"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou inglês.",
-          "source": "https://en.wikipedia.org/wiki/Teddy_Sheringham",
-          "fact": {
-            "national_team": "England"
           }
         }
       ],
@@ -5850,22 +5851,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou inglês.",
+          "source": "https://en.wikipedia.org/wiki/Wayne_Rooney",
+          "fact": {
+            "national_team": "England"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Gerard Piqué.",
           "source": "https://en.wikipedia.org/wiki/Gerard_Piqu%C3%A9",
           "fact": {
             "name": "Gerard Piqué",
             "shared_club": "Manchester United"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou inglês.",
-          "source": "https://en.wikipedia.org/wiki/Wayne_Rooney",
-          "fact": {
-            "national_team": "England"
           }
         }
       ],
@@ -5911,22 +5912,22 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou espanhol.",
+          "source": "https://en.wikipedia.org/wiki/Xabi_Alonso",
+          "fact": {
+            "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Franck Ribéry.",
           "source": "https://en.wikipedia.org/wiki/Franck_Rib%C3%A9ry",
           "fact": {
             "name": "Franck Ribéry",
             "shared_club": "Bayern Munich"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou espanhol.",
-          "source": "https://en.wikipedia.org/wiki/Xabi_Alonso",
-          "fact": {
-            "national_team": "Spain"
           }
         }
       ],
@@ -5943,12 +5944,13 @@
       "transfert_card_id": "t110",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "Joguei no Al Sadd.",
-          "source": "https://players.fcbarcelona.com/en/player/949-xavi-xavier-hernandez-creus",
+          "text": "Joguei com David Villa.",
+          "source": "https://en.wikipedia.org/wiki/David_Villa",
           "fact": {
-            "club": "Al Sadd"
+            "name": "David Villa",
+            "shared_club": "Barcelona"
           }
         },
         {
@@ -5971,22 +5973,21 @@
           }
         },
         {
-          "kind": "teammate",
-          "points": 2,
-          "text": "Joguei com David Villa.",
-          "source": "https://en.wikipedia.org/wiki/David_Villa",
-          "fact": {
-            "name": "David Villa",
-            "shared_club": "Barcelona"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 1,
+          "points": 2,
           "text": "Sou espanhol.",
           "source": "https://en.wikipedia.org/wiki/Xavi_%28footballer%2C_born_1980%29",
           "fact": {
             "national_team": "Spain"
+          }
+        },
+        {
+          "kind": "club",
+          "points": 1,
+          "text": "Joguei no Al Sadd.",
+          "source": "https://players.fcbarcelona.com/en/player/949-xavi-xavier-hernandez-creus",
+          "fact": {
+            "club": "Al Sadd"
           }
         }
       ],
@@ -6013,22 +6014,22 @@
           }
         },
         {
-          "kind": "trophy",
+          "kind": "position",
           "points": 4,
+          "text": "Sou médio.",
+          "source": "https://fr.wikipedia.org/wiki/Yaya_Tour%C3%A9",
+          "fact": {
+            "position": "milieu de terrain"
+          }
+        },
+        {
+          "kind": "trophy",
+          "points": 3,
           "text": "Ganhei o campeonato espanhol.",
           "source": "https://en.wikipedia.org/wiki/Yaya_Tour%C3%A9",
           "fact": {
             "trophy": "La Liga",
             "evidence": "*La Liga: 2008–09,"
-          }
-        },
-        {
-          "kind": "position",
-          "points": 3,
-          "text": "Sou médio.",
-          "source": "https://fr.wikipedia.org/wiki/Yaya_Tour%C3%A9",
-          "fact": {
-            "position": "milieu de terrain"
           }
         },
         {
@@ -6065,17 +6066,8 @@
       "transfert_card_id": "t112",
       "clues": [
         {
-          "kind": "club",
-          "points": 5,
-          "text": "Joguei no Manchester United.",
-          "source": "https://en.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa",
-          "fact": {
-            "club": "Manchester United"
-          }
-        },
-        {
           "kind": "trophy",
-          "points": 4,
+          "points": 5,
           "text": "Ganhei o campeonato português.",
           "source": "https://en.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa",
           "fact": {
@@ -6085,7 +6077,7 @@
         },
         {
           "kind": "position",
-          "points": 3,
+          "points": 4,
           "text": "Sou extremo polivalente.",
           "source": "https://fr.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa",
           "fact": {
@@ -6093,22 +6085,31 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "club",
+          "points": 3,
+          "text": "Joguei no Manchester United.",
+          "source": "https://en.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa",
+          "fact": {
+            "club": "Manchester United"
+          }
+        },
+        {
+          "kind": "nationality",
           "points": 2,
+          "text": "Sou argentino.",
+          "source": "https://en.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa",
+          "fact": {
+            "national_team": "Argentina"
+          }
+        },
+        {
+          "kind": "teammate",
+          "points": 1,
           "text": "Joguei com Blaise Matuidi.",
           "source": "https://en.wikipedia.org/wiki/Blaise_Matuidi",
           "fact": {
             "name": "Blaise Matuidi",
             "shared_club": "Paris Saint-Germain"
-          }
-        },
-        {
-          "kind": "nationality",
-          "points": 1,
-          "text": "Sou argentino.",
-          "source": "https://en.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa",
-          "fact": {
-            "national_team": "Argentina"
           }
         }
       ],
