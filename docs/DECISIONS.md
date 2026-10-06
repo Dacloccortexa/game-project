@@ -1,5 +1,8 @@
 # DECISIONS.md
 
+## [2026-10-06] Validation mobile initiale : iPhone
+- Décision de David : pour commencer, tester et ajuster le jeu uniquement sur iPhone. La vérification Android viendra plus tard et ne bloque pas la prochaine soirée test.
+
 ## [2026-10-06] Vrai ou Faux : valeurs exactes retirées du tirage, comparaisons limitées
 - Décision de David après audit et retours de parties : les 470 affirmations demandant une année ou une taille exacte restent dans les fichiers, mais ne sont plus tirées en jeu.
 - Les séries de cinq comportent au plus deux comparaisons d'âge ou de taille ; chaque affirmation conserve un groupe de fait distinct.
