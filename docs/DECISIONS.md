@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-10-06] Qui suis-je ? : l'ordre des indices dépend de chaque carte
+- Décision de David : conserver cinq informations courtes et les paliers 5/4/3/2/1, mais ne plus imposer « club → trophée → poste → coéquipier → nationalité » à toutes les cartes.
+- Raison : un club peu partagé peut révéler le joueur dès 5 points, tandis qu'une nationalité donnée en dernier peut n'apporter presque rien ; l'ordre doit tenir compte des faits déjà dévoilés et des autres joueurs plausibles.
+- Mise en œuvre : les cinq faits existants ont été réordonnés carte par carte sur les lots français et portugais (89 fiches modifiées sur 100). Les points suivent la position affichée ; l'application lit déjà les indices dans cet ordre.
+- Contrôle restant : ce premier réordonnancement ne démontre pas l'unicité de toutes les réponses ni la difficulté réelle. Relire les concurrents plausibles hors du lot, remplacer ou retirer les fiches encore ambiguës, puis mesurer les réponses par palier en partie.
+
 ## [2026-10-03] Appli : ne retélécharger que les questions qui ont changé
 - Question de David : « à 10 000 joueurs par jour, l'appli va-t-elle planter ? » Non : pas de serveur, tout se joue sur le téléphone. Seul point : chaque lancement retéléchargeait toutes les questions depuis GitHub Pages (~130 Ko compressés), soit ~60 Go/mois à 10 000 joueurs/jour, près de la limite gratuite de GitHub Pages (~100 Go/mois).
 - Maintenant : `src/data/manifest.json` donne l'empreinte de chaque fichier de questions (~1 Ko). Au lancement, l'appli lit ce fichier, puis ne télécharge que les fichiers différents de sa copie embarquée, et les garde sur le téléphone jusqu'au prochain changement. Trafic divisé par ~100 en temps normal. Sans réseau : dernière version téléchargée, sinon copie embarquée (comme avant).
