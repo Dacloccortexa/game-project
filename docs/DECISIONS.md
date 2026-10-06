@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-10-06] Vrai ou Faux : valeurs exactes retirées du tirage, comparaisons limitées
+- Décision de David après audit et retours de parties : les 470 affirmations demandant une année ou une taille exacte restent dans les fichiers, mais ne sont plus tirées en jeu.
+- Les séries de cinq comportent au plus deux comparaisons d'âge ou de taille ; chaque affirmation conserve un groupe de fait distinct.
+- Le lot jouable passe de 2 000 à 1 530 affirmations (765 vraies, 765 fausses), en français et en portugais. Cagnotte et Tackle inchangés.
+- La relecture des fausses affirmations de poste et de ville, ainsi que le contrôle externe des sources, restent à faire. Voir `docs/VRAI_FAUX_AUDIT_2026-10-06.md`.
+
 ## [2026-10-06] « Juninho » refusé : réponses acceptées élargies
 - Retour de David : sur la carte Juninho Pernambucano (Qui suis-je ?), « Juninho » a été refusé. Seuls « Juninho Pernambucano » et « Pernambucano » étaient acceptés.
 - Correctif : variante « juninho » ajoutée (Transfert et Qui suis-je ?, français et portugais).
