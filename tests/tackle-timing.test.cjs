@@ -495,20 +495,29 @@ for (const [file, key] of [['transfert-cards.json', 'cards'], ['quisuisje-cards.
   const cards = JSON.parse(fs.readFileSync('src/data/lematch-cards.json', 'utf8')).cards;
   const ptCards = JSON.parse(fs.readFileSync('src/data/pt/lematch-cards.json', 'utf8')).cards;
   const citiesPt = JSON.parse(fs.readFileSync('tools/i18n/pt_names.json', 'utf8')).cities;
-  assert.equal(cards.length, 103);
+  assert.equal(cards.length, 203);
   assert.equal(ptCards.length, cards.length);
   const signatures = new Set();
+  const matchKeys = new Set();
   for (const [index, card] of cards.entries()) {
     assert.ok(card.competition && Number.isInteger(card.year) && card.city && card.city_source_url, card.id);
     assert.equal(card.score.length, 2, card.id);
-    assert.ok(['Final', 'Semi-final'].includes(card.round), card.id);
+    assert.ok(['Final', 'Semi-final', 'Tour final', 'Phase de groupes', 'Deuxième tour', 'Huitième de finale', 'Quart de finale', 'Demi-finale', 'Finale', 'Phase de ligue'].includes(card.round) || /^Journée \d+$/.test(card.round), card.id);
     const signature = JSON.stringify([card.competition, card.year, card.score, card.city, card.round]);
     assert.equal(signatures.has(signature), false, `Indices identiques : ${card.id}`);
     signatures.add(signature);
+    if (card.id.startsWith('lm-hist-')) {
+      assert.ok(card.date && card.source_urls.length > 0 && card.events.length === 0, card.id);
+      assert.ok(card.score.every(Number.isInteger), card.id);
+      const matchKey = JSON.stringify([card.competition, card.date, card.teams]);
+      assert.equal(matchKeys.has(matchKey), false, `Match répété : ${card.id}`);
+      matchKeys.add(matchKey);
+    }
     assert.equal(ptCards[index].id, card.id);
     assert.equal(ptCards[index].city, citiesPt[card.city].pt, card.id);
     assert.equal(ptCards[index].city_source_url, card.city_source_url, card.id);
   }
+  assert.equal(matchKeys.size, 100);
 }
 
 // Empreintes des fichiers de questions à jour (tools/data-manifest.cjs, lancé par bump-version.sh).

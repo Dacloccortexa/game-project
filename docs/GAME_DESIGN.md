@@ -102,7 +102,7 @@ Une carte vise un match de football. Une seule équipe active cherche à nommer 
 2. **L'année du match** — 4 points.
 3. **Le score final** — 3 points, sans nom d'équipe.
 4. **La ville où le match s'est joué** — 2 points.
-5. **Le stade de la compétition** — 1 point (finale ou demi-finale dans le lot actuel ; il s'agit de la phase, pas du nom du stade où se joue le match).
+5. **Le stade de la compétition** — 1 point (finale, demi-finale, autre tour de coupe ou journée de championnat selon le match ; il s'agit de la phase, pas du nom du stade où se joue le match).
 
 L'équipe active peut répondre ou passer après chaque indice. Les autres équipes ne participent que par le Tackle. Le délai commun de 30 secondes de priorité puis 5 secondes de course repart (passer ouvre aussi 5 s de Tackle aux adversaires) à chaque nouvel indice.
 
@@ -110,7 +110,7 @@ L'équipe active peut répondre ou passer après chaque indice. Les autres équi
 
 Une mauvaise réponse de l'équipe active retire **1 point** de son score général puis révèle l'indice suivant ; une passe révèle l'indice suivant sans pénalité. Après une mauvaise réponse ou une passe au cinquième indice, la carte se termine et les deux équipes du match sont révélées. Les pénalités de mauvaises réponses se cumulent.
 
-**Statut au 2 octobre 2026 :** cette nouvelle suite d'indices est intégrée à `index.html` après un essai avec les neveux de David, qui ont trouvé les événements chronologiques trop difficiles. Les 103 fiches de `src/data/lematch-cards.json` possèdent désormais une ville sourcée ; les anciens événements restent dans le fichier comme archive, sans être affichés en partie. Le Match reste sélectionné par défaut. La difficulté de cette version doit être retestée en partie.
+**Statut au 6 octobre 2026 :** cette suite d'indices est intégrée à `index.html` après un essai avec les neveux de David, qui ont trouvé les événements chronologiques trop difficiles. Les 103 fiches initiales gardent leurs anciens événements en archive ; 100 matchs marquants supplémentaires issus des coupes et des championnats portent le total à 203 cartes. Chaque carte possède un score et une ville sourcés. Le Match reste sélectionné par défaut. La difficulté et l'ordre des indices doivent être retestés en partie.
 
 ## Contenus et difficulté
 
