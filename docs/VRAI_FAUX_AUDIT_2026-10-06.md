@@ -28,10 +28,11 @@ Une simulation de **3 000 séries de cinq**, reprenant le tirage aléatoire et l
 
 Les **60 fausses affirmations de poste** opposent souvent des rôles manifestement impossibles : un milieu présenté comme gardien de but, ou un attaquant comme défenseur. Elles sont cohérentes avec la fiche source, mais peuvent offrir un point trop facile. Les villes de naissance fausses sont aussi parfois choisies dans un pays sans rapport évident avec le joueur. Leur crédibilité doit être relue avant d'étendre les tests.
 
-## Proposition à trancher avec David
+## Décision de David et mise en œuvre
 
-1. Retirer du tirage les **470 affirmations à valeur exacte**, sans supprimer leurs données source. Il resterait **1 530 affirmations** (765 vraies, 765 fausses).
-2. Limiter à **deux** comparaisons d'âge ou de taille par série de cinq pour préserver la variété de Vrai ou Faux face à Plus ou Moins.
-3. Faire une seconde passe éditoriale sur les postes faux et les villes de naissance fausses, puis tester de nouvelles séries en relevant la cagnotte encaissée et les questions jouées au hasard.
+David a validé le 6 octobre les deux réglages de tirage suivants :
 
-Aucune de ces modifications de sélection n'est appliquée tant que David n'a pas arbitré : elles changent la difficulté et le rythme du défi. La mécanique de cagnotte et le Tackle restent tels que décrits dans [GAME_DESIGN.md](GAME_DESIGN.md).
+1. Les **470 affirmations à valeur exacte** restent dans les fichiers, mais ne sont plus proposées en partie. Le lot jouable contient **1 530 affirmations** : 765 vraies et 765 fausses.
+2. Chaque série de cinq contient **au plus deux comparaisons d'âge ou de taille**. Les cinq affirmations portent toujours sur des faits distincts.
+
+La mécanique de cagnotte et le Tackle ne changent pas. La relecture éditoriale des fausses affirmations de poste et de ville, le contrôle indépendant des sources Wikipédia et un nouveau playtest restent à faire.
