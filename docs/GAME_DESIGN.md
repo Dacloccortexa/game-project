@@ -86,19 +86,13 @@ Le contenu provient d'un jeu de 2 000 affirmations (1 000 vraies, 1 000 fausses)
 
 Une carte porte sur **un seul joueur mystère** et appartient à **une seule équipe active**. Comme dans les autres mini-jeux, chaque équipe joue sa propre carte pendant la manche. Les autres équipes ne répondent qu'en tentant le **Tackle**, selon le même déclenchement que sur Transfert.
 
-Les cinq indices sont révélés un par un, toujours dans cet ordre fixe. Chaque indice apporte **une seule information courte** :
-
-1. **Un club où le joueur a joué** — bonne réponse : **5 points**.
-2. **Une coupe ou un championnat qu'il a gagné** — **4 points**.
-3. **Son poste** — **3 points**.
-4. **Un coéquipier avec qui il a joué** — **2 points**.
-5. **Sa nationalité** — **1 point**.
+Les cinq indices sont révélés un par un et valent **5, 4, 3, 2 puis 1 point**. Chaque indice apporte **une seule information courte** : un club où le joueur a joué, un titre qu'il a gagné, son poste, un coéquipier ou sa nationalité. **L'ordre de ces cinq catégories est choisi pour chaque carte** selon ce que les joueurs peuvent déduire des indices déjà révélés : les premiers doivent permettre une tentative difficile mais plausible, et les derniers doivent aider à départager les réponses encore possibles. Aucun ordre de catégories n'est imposé à toutes les cartes.
 
 À chaque indice, l'équipe active peut donner **une seule réponse** ou **passer**. Passer révèle l'indice suivant sans pénalité. Une bonne réponse rapporte les points de l'indice et termine la carte. Une mauvaise réponse retire **1 point** du score général et révèle l'indice suivant — la carte continue, comme sur Transfert. La réponse de l'équipe active est vérifiée immédiatement. Après une mauvaise réponse ou une passe au dernier indice, la carte se termine et révèle le joueur ; les pénalités se cumulent, le résultat net d'une carte peut être négatif.
 
 **Tackle sur ce jeu :** le bouton commun se réinitialise à chaque indice. Après 30 secondes, le premier adversaire peut proposer le joueur pendant 5 secondes (et 5 s après chaque passe). Un Tackle réussi termine la carte ; un Tackle raté coûte le palier à l'équipe qui tacle, puis l'équipe active reprend la main à l'indice suivant (une seule tentative par équipe adverse et par carte). Sans réponse, l'indice suivant arrive automatiquement.
 
-Les cinq indices d'une carte sont préparés, sourcés et relus **dans cet ordre** avant mise en jeu. La nature fixe des indices ne garantit pas à elle seule une difficulté croissante : il faut vérifier que chaque nouvelle information rend effectivement le joueur plus identifiable dans le contexte des indices déjà révélés.
+Les cinq indices d'une carte sont préparés, sourcés et relus **dans l'ordre propre à cette carte** avant mise en jeu. La relecture cherche des joueurs concurrents plausibles, y compris hors du lot de 100 cartes ; si plusieurs réponses restent valables après le cinquième indice, un fait doit être remplacé ou la carte retirée. L'ordre seul ne garantit pas une difficulté équilibrée : la répartition des bonnes réponses par palier doit être retestée en partie.
 
 ## Cinquième mini-jeu : Le Match
 
