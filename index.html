@@ -2956,8 +2956,8 @@
 
   // ---------- Content: cartes Qui suis-je ----------
   // Cartes sourcées (profils Wikipédia + carrières Transfert vérifiées), chargées depuis
-  // src/data/quisuisje-cards.json. Ordre fixe des indices : club, titre gagné, poste,
-  // coéquipier, nationalité (voir GAME_DESIGN.md).
+  // src/data/quisuisje-cards.json. L'ordre des cinq faits dépend de chaque carte
+  // (voir GAME_DESIGN.md).
   var QSJ_CARDS = [];
   var QSJ_READY = false;
 
@@ -3291,7 +3291,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.05-1855";
+  var APP_VERSION = "2026.10.06-1130";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
