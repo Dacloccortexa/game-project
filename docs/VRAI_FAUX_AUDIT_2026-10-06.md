@@ -2,7 +2,7 @@
 
 ## Ce qui a été contrôlé
 
-Les deux lots jouables, français et portugais, contiennent chacun **2 000 affirmations** : 1 000 vraies et 1 000 fausses, réparties dans **931 groupes de faits**. Une série de cinq évite de reprendre deux affirmations du même groupe.
+Les deux fichiers de données, français et portugais, contiennent chacun **2 000 affirmations** : 1 000 vraies et 1 000 fausses, réparties dans **931 groupes de faits**. Une série de cinq évite de reprendre deux affirmations du même groupe.
 
 Contrôles effectués sur les 2 000 entrées des deux langues : identifiants, catégories, vérité, groupe, sources présentes, valeurs affirmées comparées aux valeurs source, ordre de deux clubs, comparaisons d'années de naissance et de tailles, et cohérence d'un même fait réutilisé dans plusieurs affirmations. **Aucune contradiction interne détectée.** Les 1 000 affirmations fausses portugaises disposent aussi d'une phrase de correction.
 
@@ -24,9 +24,9 @@ Dans les [journaux du 1er au 3 octobre](PLAYTESTS.md), les questions à valeur e
 
 Une simulation de **3 000 séries de cinq**, reprenant le tirage aléatoire et l'exclusion des doublons de faits du jeu, donne environ **75 % de séries avec au moins une valeur exacte** et **41 % avec trois comparaisons ou plus**. Ces chiffres sont des estimations du tirage, pas des résultats de parties.
 
-## Autre défaut éditorial
+## Défauts éditoriaux relevés
 
-Les **60 fausses affirmations de poste** opposent souvent des rôles manifestement impossibles : un milieu présenté comme gardien de but, ou un attaquant comme défenseur. Elles sont cohérentes avec la fiche source, mais peuvent offrir un point trop facile. Les villes de naissance fausses sont aussi parfois choisies dans un pays sans rapport évident avec le joueur. Leur crédibilité doit être relue avant d'étendre les tests.
+Les **60 fausses affirmations de poste** opposaient souvent des rôles manifestement impossibles. Les 120 affirmations de cette catégorie sont conservées dans les fichiers mais retirées du tirage, afin de ne pas rendre les réponses prévisibles. Les 75 fausses affirmations de ville de naissance utilisaient parfois un lieu situé dans un pays sans rapport avec le lieu de naissance indiqué dans la fiche ; leurs leurres ont été remplacés par des villes du même pays ou territoire.
 
 ## Décision de David et mise en œuvre
 
@@ -35,4 +35,4 @@ David a validé le 6 octobre les deux réglages de tirage suivants :
 1. Les **470 affirmations à valeur exacte** restent dans les fichiers, mais ne sont plus proposées en partie. Le lot jouable contient **1 530 affirmations** : 765 vraies et 765 fausses.
 2. Chaque série de cinq contient **au plus deux comparaisons d'âge ou de taille**. Les cinq affirmations portent toujours sur des faits distincts.
 
-La mécanique de cagnotte et le Tackle ne changent pas. La relecture éditoriale des fausses affirmations de poste et de ville, le contrôle indépendant des sources Wikipédia et un nouveau playtest restent à faire.
+David a ensuite décidé de retirer temporairement les **120 affirmations de poste** du tirage. Les **75 fausses villes** ont été remplacées dans les fichiers français et portugais par des villes géographiquement cohérentes avec le lieu de naissance source. Le lot jouable contient désormais **1 410 affirmations** (705 vraies, 705 fausses). La mécanique de cagnotte et le Tackle ne changent pas. Un contrôle indépendant des fiches Wikipédia et un nouveau playtest sur iPhone restent à faire ; la pertinence des leurres en partie n'est pas encore mesurée.

@@ -9,6 +9,12 @@ Demande de David. Sans serveur : les deux ouvrent l'appli mail du téléphone ve
 ## [2026-10-06] Réponses : tolérance « à l'oreille »
 Demande de David (« italli alemmagne » doit passer). En plus des fautes de frappe, la réponse est comparée sur sa prononciation : lettres doublées, ph/f, th/t, y/i, c/k/qu, z/s, w/v et e/s/h muets en fin de mot ne comptent plus, puis la même tolérance s'applique (1 erreur jusqu'à 7 lettres, 2 jusqu'à 14). Comparaison mot à mot (« Morientes » ≠ « Llorente ») et 5 lettres minimum (« Nice » ≠ « Nîmes »). Vérifié sur les 717 noms des cartes : aucune confusion nouvelle entre deux réponses d'une même catégorie.
 
+## [2026-10-06] Vrai ou Faux : postes suspendus, leurres de ville revus
+- David a décidé de retirer temporairement du tirage les 120 affirmations de poste (60 vraies et 60 fausses) : les faux postes trop éloignés étaient évidents, tandis que des postes voisins risqueraient d'être discutables. Les données restent dans les fichiers.
+- Les 75 fausses villes de naissance ont été remplacées par des leurres situés dans le même pays ou territoire que la ville de naissance indiquée par la source, en français et en portugais. Le dictionnaire de traduction a été complété.
+- Après l'exclusion des 470 valeurs exactes décidée plus tôt, le lot jouable compte 1 410 affirmations : 705 vraies et 705 fausses. Cinq faits distincts et au plus deux comparaisons par série ; cagnotte et Tackle inchangés.
+- Un playtest sur iPhone et le contrôle individuel des fiches sources restent ouverts. Voir `docs/VRAI_FAUX_AUDIT_2026-10-06.md`.
+
 ## [2026-10-06] Le Match : noms de pays historiques et ponctuation
 Demande de David (« Italie Allemagne » refusé sur une carte RFA–Italie).
 - Alias ajoutés dans `lematch-cards.json` (fr et pt, édités à la main, sans relancer `translate_pt.py`) : Allemagne de l'Ouest → Allemagne ; URSS → Russie, Union soviétique ; Tchécoslovaquie → Tchéquie, République tchèque ; Yougoslavie → Serbie ; Pays-Bas → Hollande ; Corée du Sud → Corée (+ équivalents portugais et anglais).

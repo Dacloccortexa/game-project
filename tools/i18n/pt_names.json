@@ -286,6 +286,7 @@
     "FA Cup": {"pt": "Taça de Inglaterra", "g": "f"},
     "La Liga": {"pt": "campeonato espanhol", "g": "m"},
     "Ligue 1": {"pt": "Ligue 1", "g": "f"},
+    "Ligue Europa 2011": {"pt": "Liga Europa em 2011", "g": "f"},
     "Premier League": {"pt": "Premier League", "g": "f"},
     "Primeira Liga": {"pt": "campeonato português", "g": "m"},
     "Serie A": {"pt": "Serie A", "g": "f"},
@@ -320,6 +321,13 @@
     "milieu relayeur": "médio interior"
   },
   "cities": {
+    "Kumasi": {"pt": "Kumasi"},
+    "Lagos": {"pt": "Lagos"},
+    "Le Caire": {"pt": "Cairo", "g": "m"},
+    "Montevideo": {"pt": "Montevideu"},
+    "Nouméa": {"pt": "Numeá"},
+    "Sokodé": {"pt": "Sokodé"},
+    "Split": {"pt": "Split"},
     "Abidjan": {"pt": "Abidjã"},
     "Accra": {"pt": "Acra"},
     "Almada": {"pt": "Almada"},

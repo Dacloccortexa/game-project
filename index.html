@@ -3307,13 +3307,13 @@
   // Seules les affirmations au statut "vérifié" dans vraifaux-statements.json sont chargées en jeu.
   var VF_POOL = [];
   var VF_READY = false;
-  var VF_EXACT_CATEGORIES = { annee_naissance: true, taille: true, debut_professionnel: true };
+  var VF_EXCLUDED_CATEGORIES = { annee_naissance: true, taille: true, debut_professionnel: true, poste: true };
   var VF_COMPARISON_CATEGORIES = { comparaison_age: true, comparaison_taille: true };
 
   function loadVraiFauxStatements() {
     return loadJson("src/data/vraifaux-statements.json", function (data) {
         VF_POOL = data.statements.filter(function (s) {
-          return s.verification_status === "vérifié" && !VF_EXACT_CATEGORIES[s.categorie];
+          return s.verification_status === "vérifié" && !VF_EXCLUDED_CATEGORIES[s.categorie];
         });
         VF_READY = VF_POOL.length > 0;
       })
@@ -3408,7 +3408,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.06-1405";
+  var APP_VERSION = "2026.10.06-1418";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
