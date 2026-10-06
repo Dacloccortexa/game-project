@@ -3,14 +3,16 @@
  "steps": [
   {
    "do": "hold",
-   "s": 2.0,
-   "caption": "Tu le trouves <b>avant eux</b> ? 👀",
-   "sound": "kickoff"
+   "s": 1.5,
+   "caption": "Trouve le joueur <b>avant eux</b> 👀",
+   "sound": "kickoff",
+   "hideClues": true
   },
   {
    "do": "count",
    "s": 3,
-   "caption": "J'ai joué au <b>Mans</b>"
+   "caption": "J'ai joué au <b>Mans</b>",
+   "hideClues": false
   },
   {
    "do": "answer",

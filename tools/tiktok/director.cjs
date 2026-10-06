@@ -49,6 +49,7 @@ const OVERLAY_CSS = `
 #type-box, #confirm-box, #tackle-team-picker, #tackle-answer-zone { opacity: 0 !important; }
 /* Le compte à rebours de la vidéo remplace la bande du chrono du jeu (deux chronos se contrediraient). */
 #turn-clock { opacity: 0 !important; }
+body.ad-hide-clues #clue-list { opacity: 0 !important; }
 #ad .count { position: absolute; left: 52px; top: 330px; width: 78px; height: 78px; margin: -39px 0 0 -39px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center; font: 700 46px/1 "Oswald", sans-serif; color: #fff;
   background: rgba(6,16,10,.88); box-shadow: 0 6px 22px rgba(0,0,0,.6); }
@@ -148,6 +149,7 @@ const OVERLAY_CSS = `
   for (const a of script.steps) {
     const waitSel = a.waitFor || (a.do === 'answer' ? '#btn-answer' : a.do === 'pass' ? '#btn-pass' : null);
     if (waitSel) for (let k = 0; k < 150 && !(await p.isVisible(waitSel)); k++) await step(1);
+    if (a.hideClues !== undefined) await p.evaluate(on => document.body.classList.toggle('ad-hide-clues', on), !!a.hideClues);
     if (a.info !== undefined) info = a.info ? { html: emo(a.info), at: t } : null;
     if (a.caption !== undefined) caption = a.caption ? { html: emo(a.caption), at: t } : null;
     if (a.sound) events.push({ t, sound: a.sound });

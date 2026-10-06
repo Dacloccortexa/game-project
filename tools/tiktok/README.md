@@ -29,6 +29,7 @@ Chaque étape (`steps`) peut avoir :
 - `caption` : le sous-titre, qui reste affiché jusqu'au suivant. `<b>` pour l'or, `<i>` pour le rouge, emojis acceptés. `""` pour effacer.
 - `sound` : `tick`, `kickoff`, `wrong`, `right`, `tackle`, `tap` ou `end` (fichiers de `sfx/`).
 - `flash` : couleur d'un flash plein écran (`flashMax` pour son intensité).
+- `hideClues` : `true` cache les clubs de la carte (avant le premier indice), `false` les montre.
 - `waitFor` : attendre qu'un bouton du jeu soit visible avant l'étape, par exemple `#btn-answer` pour attendre l'indice suivant.
 
 Et une action, `do` :
