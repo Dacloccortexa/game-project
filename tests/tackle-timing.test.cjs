@@ -406,6 +406,57 @@ assert.equal(state.cardEnded, true);
   assert.ok(ok(byName('Kaká'), 'kaka'));
 }
 
+// Revue du code 2026-10-06
+// (3) Tackle pressé à la dernière milliseconde puis « Annuler » : la carte se termine et le Tackle ne revient pas.
+reset('plusoumoins');
+state.pomChain = {category:'Test',chain:[{name:'A',value:1},{name:'B',value:2},{name:'C',value:3}]};
+state.pomIndex = 0;
+state.pomPotential = 2;
+startTackleWindow();
+advance(30000);
+advance(4800);
+element('btn-tackle').click();
+state.tackleRemainingMs = 0;
+element('btn-tackle-cancel').click();
+assert.equal(state.cardEnded, true);
+assert.equal(state.teams[0].score, 2);
+assert.equal(element('btn-tackle').classList.contains('hidden-screen'), true);
+element('btn-tackle').click();
+assert.equal(element('tackle-team-picker').classList.contains('hidden-screen'), true);
+assert.equal(state.teams[0].score, 2);
+
+// (15) Mauvaise équipe touchée : « Retour » rend son Tackle à l'équipe et rouvre la liste.
+reset('transfert');
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
+state.revealedCount = 1;
+startTackleWindow();
+advance(30000);
+element('btn-tackle').click();
+element('tackle-team-buttons').children.at(-1).click();
+assert.deepEqual(Array.from(state.tackledThisCard), [1]);
+element('btn-tackle-back').click();
+assert.deepEqual(Array.from(state.tackledThisCard), []);
+assert.equal(element('tackle-team-picker').classList.contains('hidden-screen'), false);
+assert.equal(element('tackle-answer-zone').classList.contains('hidden-screen'), true);
+
+// (4) « Quitter ? » fige les chronos ; « Continuer » les reprend où ils en étaient.
+reset('transfert');
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
+state.revealedCount = 1;
+startTackleWindow();
+advance(10000);
+element('btn-quit').click();
+advance(60000);
+assert.equal(state.revealedCount, 1);
+assert.equal(state.tacklePhase, 'locked');
+element('btn-quit-cancel').click();
+advance(19000);
+assert.equal(state.tacklePhase, 'locked');
+advance(2000);
+assert.equal(state.tacklePhase, 'open');
+advance(6000);
+assert.equal(state.revealedCount, 2);
+
 // Questions en portugais : mêmes cartes, mêmes ids et même ordre que le français (tools/translate_pt.py).
 for (const [file, key] of [['transfert-cards.json', 'cards'], ['quisuisje-cards.json', 'cards'], ['lematch-cards.json', 'cards'], ['vraifaux-statements.json', 'statements']]) {
   const fr = JSON.parse(fs.readFileSync('src/data/' + file, 'utf8'))[key];

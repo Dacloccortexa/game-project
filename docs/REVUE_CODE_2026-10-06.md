@@ -1,6 +1,6 @@
 # Revue du code — 6 octobre 2026
 
-Revue complète d'`index.html` et des outils, en trois volets indépendants (logique de jeu et Tackle ; données, appli, achats ; écrans, langues, sécurité). Chaque point a été vérifié dans le code, la plupart reproduits dans un navigateur. **Rien n'est corrigé dans ce document** : liste de travail.
+Revue complète d'`index.html` et des outils, en trois volets indépendants (logique de jeu et Tackle ; données, appli, achats ; écrans, langues, sécurité). Chaque point a été vérifié dans le code, la plupart reproduits dans un navigateur. **Mise à jour du 6 octobre (après-midi) : corrigés** les points 1 à 15, 17, 18, 20, 21 (fenêtre Quitter : Échap et retour du focus) et 22. **Restent** : 16 (course sans adversaire possible, à trancher), 19 (heure du téléphone, faible enjeu), le reste de l'accessibilité du point 21, et la section « À savoir avant l'App Store ».
 
 **Rien de grave côté sécurité** : aucun texte saisi (noms d'équipes, réponses) n'est interprété comme du code ; testé avec des noms piégés.
 

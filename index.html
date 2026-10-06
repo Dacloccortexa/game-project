@@ -1449,7 +1449,7 @@
     cursor: pointer;
   }
   .tackle-team-btn .team-badge { width: 44px; height: 44px; }
-  .tackle-team-btn .tt-name { flex: 1; }
+  .tackle-team-btn .tt-name { flex: 1; min-width: 0; overflow-wrap: anywhere; }
   /* Litige : l'arbitre coche les équipes qui réclament, puis l'appli tire au sort. */
   .tackle-team-btn .tt-check { width: 26px; height: 26px; border-radius: 50%; border: 2px solid rgba(248,246,237,.5); display: grid; place-items: center; font-size: 16px; line-height: 1; color: transparent; }
   .tackle-team-btn[aria-pressed="true"] { border-color: var(--gold-ring); background: rgba(40,70,40,.9); }
@@ -1503,6 +1503,8 @@
   #btn-tackle .tk-sub { font-size: 12.5px; font-weight: 500; }
   #btn-tackle.tk-waiting { display: none !important; }
   #turn-clock.note #turn-clock-label { color: var(--gold); }
+  #turn-clock-label { min-width: 0; overflow-wrap: anywhere; }
+  :lang(pt-PT) .vf-choice { font-size: clamp(22px, 6.6vw, 32px); letter-spacing: 0; }
 
   #next-card-zone .tr-btn-primary { margin-top: 2px; }
   #feedback-zone:empty { display: none; }
@@ -2624,6 +2626,7 @@
         <button type="button" class="tr-btn-secondary" id="tackle-binary-choice-2"></button>
       </div>
       <p class="tr-panel-note"><span id="tackle-stakes-note"></span><br><span id="tackle-after-note">Une seule tentative · la carte se termine ensuite</span></p>
+      <button type="button" class="text-btn" id="btn-tackle-back">Retour : mauvaise équipe</button>
     </div>
 
     <!-- Bandeau de verdict commun aux cinq défis (DECISIONS.md, 2026-09-29) -->
@@ -2818,6 +2821,9 @@
     "Victoire": "Vitória",
     "Appuie longuement sur l'image pour l'enregistrer ou l'envoyer.": "Mantém o dedo na imagem para a guardar ou enviar.",
     "Fermer": "Fechar",
+    "Retour : mauvaise équipe": "Voltar: equipa errada",
+    "QR code vers lafamivy.com/tackle": "Código QR para lafamivy.com/tackle",
+    "Résultat de la partie TACKLE": "Resultado da partida TACKLE",
     "Tes potes veulent y rejouer ?": "Os teus amigos querem voltar a jogar?",
     "Scannez pour avoir TACKLE": "Leiam o código para ter o TACKLE",
     "Celui qui tient le téléphone arbitre : choisir la première équipe à avoir crié « Tackle »": "Quem tem o telemóvel é o árbitro: escolher a primeira equipa a gritar «Tackle»",
@@ -2889,7 +2895,14 @@
   // puis seulement les fichiers qui diffèrent de la copie embarquée ; ils sont gardés sur le
   // téléphone jusqu'au prochain changement (DECISIONS.md, 2026-10-03). Sans réseau : dernière
   // version téléchargée, sinon copie embarquée.
-  var DATA_CACHE_PREFIX = "tackle-data-v1:";
+  // Stockage (revue du code 2026-10-06) : le contenu des fichiers téléchargés va dans les fichiers de
+  // l'appli (module Filesystem, pas de limite pratique) ; seul un petit index reste dans localStorage
+  // (h = empreinte du fichier, e = empreinte de la copie embarquée au moment du téléchargement : si
+  // l'appli est mise à jour avec une copie plus récente, l'ancien téléchargement est ignoré).
+  var DATA_META_PREFIX = "tackle-data-v2:";
+  try { // ancien cache (v1) : contenu complet dans localStorage, trop gros → effacé
+    Object.keys(localStorage).forEach(function (k) { if (k.indexOf("tackle-data-v1:") === 0) localStorage.removeItem(k); });
+  } catch (e) {}
   var remoteManifestP = null, localManifestP = null;
   function withTimeout(p, ms) {
     return Promise.race([p, new Promise(function (resolve) { setTimeout(function () { resolve(null); }, ms); })]);
@@ -2903,29 +2916,68 @@
     if (!localManifestP) localManifestP = fetch("src/data/manifest.json").then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
     return localManifestP;
   }
-  function readDataCache(path) { try { return JSON.parse(localStorage.getItem(DATA_CACHE_PREFIX + path) || "null"); } catch (e) { return null; } }
-  function writeDataCache(path, h, text) { try { localStorage.setItem(DATA_CACHE_PREFIX + path, JSON.stringify({ h: h, text: text })); } catch (e) {} }
-  function dropDataCache(path) { try { localStorage.removeItem(DATA_CACHE_PREFIX + path); } catch (e) {} }
+  function cacheFileName(path) { return "tackle-data/" + path.replace(/[^a-zA-Z0-9.-]/g, "_"); }
+  function readDataMeta(path) { try { return JSON.parse(localStorage.getItem(DATA_META_PREFIX + path) || "null"); } catch (e) { return null; } }
+  function readDataCache(path) { // → Promise<{h, e, text} | null>
+    var meta = readDataMeta(path), fs = nativePlugin("Filesystem");
+    if (!meta || !fs) return Promise.resolve(null);
+    return fs.readFile({ path: cacheFileName(path), directory: "DATA", encoding: "utf8" })
+      .then(function (r) { return { h: meta.h, e: meta.e, text: r.data }; })
+      .catch(function () { return null; });
+  }
+  var dataDropped = {}; // fichier rejeté pendant que son écriture était en cours : ne pas l'enregistrer
+  function writeDataCache(path, h, e, text) {
+    var fs = nativePlugin("Filesystem");
+    if (!fs) return;
+    var started = Date.now();
+    fs.writeFile({ path: cacheFileName(path), directory: "DATA", encoding: "utf8", data: text, recursive: true })
+      .then(function () {
+        if ((dataDropped[path] || 0) >= started) { fs.deleteFile({ path: cacheFileName(path), directory: "DATA" }).catch(function () {}); return; }
+        try { localStorage.setItem(DATA_META_PREFIX + path, JSON.stringify({ h: h, e: e || null })); } catch (err) {}
+      })
+      .catch(function () {});
+  }
+  function dropDataCache(path) {
+    dataDropped[path] = Date.now();
+    try { localStorage.removeItem(DATA_META_PREFIX + path); } catch (e) {}
+    var fs = nativePlugin("Filesystem");
+    if (fs) fs.deleteFile({ path: cacheFileName(path), directory: "DATA" }).catch(function () {});
+  }
   function textResponse(text) { return new Response(text, { headers: { "Content-Type": "application/json" } }); }
-  function fetchData(path) {
+  function dataPath(path) {
     if (LANG === "pt") {
       var file = path.split("/").pop();
-      if (PT_DATA.indexOf(file) !== -1) path = "src/data/pt/" + file;
+      if (PT_DATA.indexOf(file) !== -1) return "src/data/pt/" + file;
     }
+    return path;
+  }
+  function fetchData(path) {
+    path = dataPath(path);
     function local() { return fetch(path, { cache: "no-store" }); }
     if (!NATIVE) return local();
-    return Promise.all([remoteManifest(), localManifest()]).then(function (m) {
-      var remote = m[0] && m[0].files, embedded = (m[1] && m[1].files) || {};
-      var cached = readDataCache(path);
+    return Promise.all([remoteManifest(), localManifest(), readDataCache(path)]).then(function (m) {
+      var remote = m[0] && m[0].files, embedded = (m[1] && m[1].files) || {}, cached = m[2];
+      // Téléchargement fait avec une autre copie embarquée (appli mise à jour depuis) : ignoré.
+      if (cached && cached.e !== (embedded[path] || null)) { dropDataCache(path); cached = null; }
       if (!remote || !remote[path]) return cached ? textResponse(cached.text) : local();
       var h = remote[path];
       if (embedded[path] === h) { if (cached) dropDataCache(path); return local(); } // la copie embarquée est à jour
       if (cached && cached.h === h) return textResponse(cached.text);                   // déjà téléchargé
       return withTimeout(fetch(REMOTE_DATA_BASE + path + "?v=" + h), 8000).then(function (res) {
         if (!res || !res.ok) throw new Error("distant indisponible");
-        return res.text().then(function (text) { JSON.parse(text); writeDataCache(path, h, text); return textResponse(text); });
+        return res.text().then(function (text) { JSON.parse(text); writeDataCache(path, h, embedded[path], text); return textResponse(text); });
       }).catch(function () { return cached ? textResponse(cached.text) : local(); });
     }).catch(local);
+  }
+  // Charge un fichier de questions ; si la version téléchargée est illisible ou incomplète
+  // (le chargeur lève une erreur), on l'oublie et on reprend la copie embarquée.
+  function loadJson(path, use) {
+    return fetchData(path).then(function (res) { return res.json(); }).then(use).catch(function (err) {
+      if (!NATIVE) throw err;
+      var p = dataPath(path);
+      dropDataCache(p);
+      return fetch(p, { cache: "no-store" }).then(function (res) { return res.json(); }).then(use);
+    });
   }
   if (NATIVE) {
     try { var ka = nativePlugin("KeepAwake"); if (ka) ka.keepAwake(); } catch (e) {} // pas de mise en veille pendant la soirée
@@ -2938,9 +2990,7 @@
   var CARDS_READY = false;
 
   function loadCards() {
-    return fetchData("src/data/transfert-cards.json")
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
+    return loadJson("src/data/transfert-cards.json", function (data) {
         CARDS = data.cards
           .filter(function (c) { return c.verification_status === "vérifié"; })
           .map(function (c) {
@@ -2962,9 +3012,7 @@
   var QSJ_READY = false;
 
   function loadQsjCards() {
-    return fetchData("src/data/quisuisje-cards.json")
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
+    return loadJson("src/data/quisuisje-cards.json", function (data) {
         QSJ_CARDS = (data.cards || []).map(function (c) {
           return {
             id: c.id,
@@ -3060,14 +3108,12 @@
   var LM_READY = false;
 
   function loadLmCards() {
-    return fetchData("src/data/lematch-cards.json")
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
+    return loadJson("src/data/lematch-cards.json", function (data) {
         LM_CARDS = (data.cards || []).map(function (c) {
           if (!c.competition || !c.year || !Array.isArray(c.score) || c.score.length !== 2 || !c.city || !c.round) {
             throw new Error("Fiche Le Match incomplète : " + (c.id || "sans identifiant"));
           }
-          var phase = c.round === "Final" ? L("Finale", "Final") : c.round === "Semi-final" ? "Demi-finale" : c.round;
+          var phase = c.round === "Final" ? L("Finale", "Final") : c.round === "Semi-final" ? L("Demi-finale", "Meia-final") : c.round;
           return {
             id: c.id,
             competition: c.competition,
@@ -3177,11 +3223,10 @@
   var POM_READY = false;
 
   function loadPomRealCategories() {
+    POM_REAL_POOLS = [];
     return Promise.all(
       POM_REAL_CATEGORIES.map(function (cat) {
-        return fetchData(cat.file)
-          .then(function (res) { return res.json(); })
-          .then(function (data) {
+        return loadJson(cat.file, function (data) {
             POM_REAL_POOLS.push({ key: cat.file, label: LANG === "pt" ? cat.label : (data.category_label || cat.label), players: data.players });
           })
           .catch(function (err) {
@@ -3259,9 +3304,7 @@
   var VF_COMPARISON_CATEGORIES = { comparaison_age: true, comparaison_taille: true };
 
   function loadVraiFauxStatements() {
-    return fetchData("src/data/vraifaux-statements.json")
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
+    return loadJson("src/data/vraifaux-statements.json", function (data) {
         VF_POOL = data.statements.filter(function (s) {
           return s.verification_status === "vérifié" && !VF_EXACT_CATEGORIES[s.categorie];
         });
@@ -3299,7 +3342,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.06-1159";
+  var APP_VERSION = "2026.10.06-1346";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3683,6 +3726,7 @@
   });
   setupPressedGroup("rounds-group", function (val) {
     state.roundsTotal = val;
+    state.roundsWanted = val; // choix du joueur, rétabli quand l'accès illimité est confirmé
   });
 
   // ---------- Abonnement (appli iPhone seulement ; le site reste illimité) ----------
@@ -3718,7 +3762,7 @@
     if (state.premium) return;
     try { localStorage.setItem(FREE_KEY, JSON.stringify({ date: todayKey(), count: freePlaysToday() + 1 })); } catch (e) {}
   }
-  function canStartGame() { return state.premium || freePlaysToday() < FREE_GAMES_PER_DAY; }
+  function canStartGame() { updateAccess(); return state.premium || freePlaysToday() < FREE_GAMES_PER_DAY; }
 
   function refreshAccessUI() {
     try {
@@ -3729,11 +3773,15 @@
         b.classList.toggle("locked", isLocked);
         b.setAttribute("aria-label", v + L(" manches", " rondas") + (isLocked ? L(" (abonnement)", " (subscrição)") : ""));
       });
-      if (locked && state.roundsTotal > FREE_MAX_ROUNDS) {
-        state.roundsTotal = FREE_MAX_ROUNDS;
-        el("rounds-group").querySelectorAll("button[data-value]").forEach(function (b) {
-          b.setAttribute("aria-pressed", parseInt(b.getAttribute("data-value"), 10) === FREE_MAX_ROUNDS ? "true" : "false");
-        });
+      // Jamais pendant une partie : une partie commencée n'est pas raccourcie (fin du pack soirée…).
+      if (!state.inGame) {
+        var want = locked ? Math.min(state.roundsWanted || state.roundsTotal, FREE_MAX_ROUNDS) : (state.roundsWanted || state.roundsTotal);
+        if (want !== state.roundsTotal) {
+          state.roundsTotal = want;
+          el("rounds-group").querySelectorAll("button[data-value]").forEach(function (b) {
+            b.setAttribute("aria-pressed", parseInt(b.getAttribute("data-value"), 10) === want ? "true" : "false");
+          });
+        }
       }
       var showPass = NATIVE && !state.subscribed && passActive();
       el("free-box").classList.toggle("hidden-screen", !(NATIVE && (locked || showPass)));
@@ -3779,11 +3827,14 @@
     var was = state.premium;
     state.subscribed = !!(info && info.entitlements && info.entitlements.active && info.entitlements.active[ENTITLEMENT_ID]);
     // Packs soirée achetés (gardés par RevenueCat : retrouvés après réinstallation, même compte Apple).
-    ((info && info.nonSubscriptionTransactions) || []).forEach(function (t) {
-      if (t.productIdentifier !== PASS_PRODUCT_ID) return;
-      var at = Date.parse(t.purchaseDate) || t.purchaseDateMillis || 0;
-      if (at) setPassUntil(at + PASS_HOURS * 3600000);
-    });
+    // Plusieurs packs : chacun ajoute 24 h à la suite du précédent s'il était encore actif.
+    var passEnd = 0;
+    ((info && info.nonSubscriptionTransactions) || [])
+      .filter(function (t) { return t.productIdentifier === PASS_PRODUCT_ID; })
+      .map(function (t) { return Date.parse(t.purchaseDate) || t.purchaseDateMillis || 0; })
+      .filter(Boolean).sort(function (a, b) { return a - b; })
+      .forEach(function (at) { passEnd = Math.max(at, passEnd) + PASS_HOURS * 3600000; });
+    if (passEnd) setPassUntil(passEnd);
     updateAccess();
     refreshAccessUI();
     if (state.premium && !was && !el("screen-paywall").classList.contains("hidden-screen")) {
@@ -3880,7 +3931,7 @@
     el("paywall-status").textContent = L("Paiement en cours…", "Pagamento em curso…");
     var wasPass = isPassPackage(pkg), startedAt = Date.now();
     rc.purchasePackage({ aPackage: pkg }).then(function (r) {
-      if (wasPass) setPassUntil(startedAt + PASS_HOURS * 3600000); // au cas où RevenueCat tarde à renvoyer l'achat
+      if (wasPass) setPassUntil(Math.max(startedAt, state.passUntil) + PASS_HOURS * 3600000); // au cas où RevenueCat tarde à renvoyer l'achat
       applyCustomerInfo(r && r.customerInfo);
     }).catch(function (err) {
       el("paywall-status").textContent = err && err.userCancelled ? "" : L("L'achat n'a pas abouti. Tu n'as pas été débité.", "A compra não foi concluída. Não foste cobrado.");
@@ -3899,10 +3950,16 @@
   });
   el("btn-paywall-code").addEventListener("click", function () {
     var rc = purchases();
-    if (!rc || !REVENUECAT_IOS_KEY) { el("paywall-status").textContent = "Disponible dans l'appli iPhone TACKLE."; return; }
+    if (!rc || !REVENUECAT_IOS_KEY) { el("paywall-status").textContent = L("Disponible dans l'appli iPhone TACKLE.", "Disponível na app TACKLE para iPhone."); return; }
     rc.presentCodeRedemptionSheet().catch(function () {}); // fenêtre Apple de saisie du code ; l'accès s'active tout seul
   });
   updateAccess();
+  // iOS suspend les minuteries en veille : on revérifie l'accès (fin du pack soirée) au retour dans l'appli.
+  try {
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible") { updateAccess(); refreshAccessUI(); }
+    });
+  } catch (e) {}
   initPurchases();
   refreshAccessUI();
 
@@ -4263,6 +4320,19 @@
       setupError(L("Sélectionne au moins un défi pour lancer la partie.", "Seleciona pelo menos um desafio para começar a partida."));
       return;
     }
+    // Un défi pas encore chargé (réseau lent, fichier défectueux) : on recharge ce qui manque, puis on réessaie une fois.
+    var sel = state.minigamesSelected, missing = [];
+    if (sel.indexOf("transfert") !== -1 && !CARDS_READY) missing.push(loadCards());
+    if (sel.indexOf("plusoumoins") !== -1 && !POM_READY) missing.push(loadPomRealCategories());
+    if (sel.indexOf("vraifaux") !== -1 && !VF_READY) missing.push(loadVraiFauxStatements());
+    if (sel.indexOf("quisuisje") !== -1 && !QSJ_READY) missing.push(loadQsjCards());
+    if (sel.indexOf("lematch") !== -1 && !LM_READY) missing.push(loadLmCards());
+    if (missing.length && !state.reloadingData) {
+      state.reloadingData = true;
+      setupError(L("Chargement des questions…", "A carregar as perguntas…"));
+      Promise.all(missing).catch(function () {}).then(function () { el("btn-start").click(); state.reloadingData = false; });
+      return;
+    }
     if (state.minigamesSelected.indexOf("transfert") !== -1 && !CARDS_READY) {
       setupError(L("Les cartes ne sont pas encore chargées (ou le fichier est introuvable). Réessaie dans un instant.", "As cartas ainda não foram carregadas (ou o ficheiro não foi encontrado). Tenta daqui a um instante."));
       return;
@@ -4310,6 +4380,7 @@
       });
     }
     state.roundsPlayed = 0;
+    state.inGame = true;
     state.currentTeamIndex = 0;
     state.currentRoundMinigame = null; // nouvelle partie : la première manche peut être n'importe quel défi
     journalStartGame();
@@ -4407,6 +4478,9 @@
     state.cardSeq = (state.cardSeq || 0) + 1;
     stopAnswerTimer();
     state.tackledThisCard = []; // équipes adverses qui ont déjà tenté leur Tackle sur cette carte
+    state.clockNote = null;
+    state.passWindow = false;
+    state.inputGuardUntil = Date.now() + 450; // un double appui sur « Équipe suivante » ne doit pas toucher la carte
     hideVerdict();
     journalStartCard();
     el("round-count").textContent = L("Manche ", "Ronda ") + pad2(state.roundsPlayed + 1) + " / " + pad2(state.roundsTotal);
@@ -4450,6 +4524,8 @@
   }
   function teamVerb(name, plural, singular) { return name + " " + (teamPlural(name) ? plural : singular); }
   function signed(n) { return String(n).replace("-", "−"); }
+  // « 1 point / 2 points / 0 point » ; portugais « 1 ponto / 0 pontos / 2 pontos ».
+  function ptsWord(n) { var a = Math.abs(n); return L("point", "ponto") + ((LANG === "pt" ? a !== 1 : a > 1) ? "s" : ""); }
   function scoreChangeText(name, before, after) {
     return name + (LANG === "pt" ? ": " : " : ") + signed(before) + " → " + signed(after) + L(" point", " ponto") + ((LANG === "pt" ? Math.abs(after) !== 1 : Math.abs(after) > 1) ? "s" : "");
   }
@@ -4695,7 +4771,7 @@
       var others = state.teams.filter(function (t, i) { return i !== state.currentTeamIndex; });
       if (others.length && !state.cardEnded) {
         state.clockNote = others.length === 1
-          ? L("Pas de Tackle : ", "Sem tackle: ") + others[0].name + L(" l'ont déjà tenté", " já tentaram")
+          ? L("Pas de Tackle : ", "Sem tackle: ") + teamVerb(others[0].name, L("l'ont déjà tenté", "já tentaram"), L("l'a déjà tenté", "já tentou"))
           : L("Pas de Tackle : les adversaires l'ont déjà tenté", "Sem tackle: os adversários já tentaram");
         state.clockNoteUntil = Date.now() + 3000;
       }
@@ -4716,7 +4792,7 @@
   }
 
   el("btn-tackle").addEventListener("click", function () {
-    if (el("btn-tackle").disabled || state.tacklePhase !== "open") return;
+    if (el("btn-tackle").disabled || state.tacklePhase !== "open" || state.cardEnded) return;
     state.tackleRemainingMs = Math.max(0, state.tackleDeadline - Date.now());
     clearTackleTimer();
     hide(activeAnswerZone());
@@ -4923,6 +4999,19 @@
   }
 
 
+  // Mauvaise équipe touchée dans « Qui a tacklé ? » : on annule ce choix (son Tackle n'est pas consommé).
+  el("btn-tackle-back").addEventListener("click", function () {
+    if (state.cardEnded || state.tackleTeamIndex === undefined || state.tackleTeamIndex === null) return;
+    var idx = state.tackleTeamIndex;
+    state.tackledThisCard = (state.tackledThisCard || []).filter(function (i) { return i !== idx; });
+    state.tackleTeamIndex = null;
+    stopAnswerTimer();
+    hide("tackle-answer-zone");
+    journalStep("choix de l'équipe annulé");
+    setTackleDispute(false);
+    show("tackle-team-picker");
+  });
+
   el("btn-tackle-cancel").addEventListener("click", function () {
     setTackleDispute(false);
     journalStep("Tackle annulé");
@@ -4935,9 +5024,9 @@
       show(activeAnswerZone());
     }
     state.tackleDeadline = Date.now() + state.tackleRemainingMs;
+    showTackleUI(); // avant le premier tic : s'il termine la carte, il recache tout
     state.tackleTimerId = setInterval(tickTackleWindow, 250);
     tickTackleWindow();
-    showTackleUI();
   });
 
   function resolveOpenBinaryTackle(choice) {
@@ -5971,6 +6060,9 @@
 
   function endCard() {
     state.cardEnded = true;
+    state.tacklePhase = "ended";
+    state.passWindow = false;
+    state.clockNote = null;
     stopAnswerTimer();
     setRace(false);
     if (state.currentRoundMinigame === "quisuisje") revealQsjName();
@@ -6046,14 +6138,37 @@
   }
 
   // Quitter : confirmation, puis retour à « Créer une partie » (réglages conservés).
-  el("btn-quit").addEventListener("click", function () {
+  // Pendant « Quitter ? », les chronos (Tackle, réponse) sont figés, puis repris sur « Continuer ».
+  function pauseTimers() {
+    var now = Date.now(), p = {};
+    if (state.tackleTimerId) { p.tackle = Math.max(0, state.tackleDeadline - now); clearTackleTimer(); }
+    if (state.answerTimerId) { p.answer = Math.max(0, state.answerDeadline - now); clearInterval(state.answerTimerId); state.answerTimerId = null; }
+    state.pausedTimers = p;
+  }
+  function resumeTimers() {
+    var p = state.pausedTimers; state.pausedTimers = null;
+    if (!p || state.cardEnded) return;
+    var now = Date.now();
+    if (p.tackle !== undefined) { state.tackleDeadline = now + p.tackle; state.tackleTimerId = setInterval(tickTackleWindow, 250); }
+    if (p.answer !== undefined) { state.answerDeadline = now + p.answer; state.answerTimerId = setInterval(tickAnswerTimer, 250); }
+  }
+  function openQuitDialog(from) {
+    state.quitFrom = from;
+    pauseTimers();
     show("quit-dialog");
     el("btn-quit-cancel").focus();
-  });
+  }
+  el("btn-quit").addEventListener("click", function () { openQuitDialog("btn-quit"); });
   el("btn-quit-cancel").addEventListener("click", function () {
     hide("quit-dialog");
-    el("btn-quit").focus();
+    resumeTimers();
+    try { el(state.quitFrom || "btn-quit").focus(); } catch (e) {}
   });
+  try {
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !el("quit-dialog").classList.contains("hidden-screen")) el("btn-quit-cancel").click();
+    });
+  } catch (e) {}
   el("btn-quit-confirm").addEventListener("click", function () {
     hide("quit-dialog");
     clearTackleTimer();
@@ -6063,9 +6178,19 @@
     clearIntermissionTimers();
     hide("screen-intermission");
     state.cardEnded = true;
+    state.inGame = false;
+    state.pausedTimers = null;
     journalFinish("abandonnée");
     showSetupScreen("screen-home", true);
   });
+
+  try {
+    el("screen-play").addEventListener("click", function (e) {
+      if (!state.inputGuardUntil || Date.now() >= state.inputGuardUntil) return;
+      var b = e.target && e.target.closest ? e.target.closest("button") : null;
+      if (b && b.id !== "btn-quit" && b.id !== "btn-next-card") { e.stopPropagation(); e.preventDefault(); }
+    }, true);
+  } catch (e) {}
 
   el("btn-next-card").addEventListener("click", function () {
     state.currentTeamIndex += 1;
@@ -6143,7 +6268,7 @@
       name.textContent = entry.team.name;
       var pts = document.createElement("div");
       pts.className = "inter-pts" + (entry.team.score < 0 ? " negative" : "");
-      pts.innerHTML = signed(entry.team.score) + "<small>" + L("point", "ponto") + (Math.abs(entry.team.score) > 1 ? "s" : "") + "</small>";
+      pts.innerHTML = signed(entry.team.score) + "<small>" + ptsWord(entry.team.score) + "</small>";
       box.appendChild(name);
       box.appendChild(pts);
       li.appendChild(rank);
@@ -6197,13 +6322,11 @@
     beginTurn();
   });
 
-  el("btn-quit-inter").addEventListener("click", function () {
-    show("quit-dialog");
-    el("btn-quit-cancel").focus();
-  });
+  el("btn-quit-inter").addEventListener("click", function () { openQuitDialog("btn-quit-inter"); });
 
   // ---------- FINAL SCREEN ----------
   function endGame() {
+    state.inGame = false;
     hide("screen-play");
     show("screen-final");
     window.scrollTo(0, 0);
@@ -6219,7 +6342,7 @@
     el("final-kicker").textContent = alone ? L("Ton score", "A tua pontuação") : tie ? L("Égalité", "Empate") : L("Victoire", "Vitória");
     el("final-logo").src = teamLogoSrc(winner);
     el("final-title").textContent = tie ? top.map(function (e) { return e.team.name; }).join(" · ") : winner.name;
-    el("final-score").innerHTML = signed(winner.score) + "<small>" + L("point", "ponto") + (Math.abs(winner.score) > 1 ? "s" : "") + "</small>";
+    el("final-score").innerHTML = signed(winner.score) + "<small>" + ptsWord(winner.score) + "</small>";
 
     var list = el("podium");
     list.innerHTML = "";
@@ -6233,7 +6356,7 @@
       var box = document.createElement("div"); box.className = "inter-team";
       var name = document.createElement("div"); name.className = "inter-name"; name.textContent = entry.team.name;
       var pts = document.createElement("div"); pts.className = "inter-pts" + (entry.team.score < 0 ? " negative" : "");
-      pts.innerHTML = signed(entry.team.score) + "<small>" + L("point", "ponto") + (Math.abs(entry.team.score) > 1 ? "s" : "") + "</small>";
+      pts.innerHTML = signed(entry.team.score) + "<small>" + ptsWord(entry.team.score) + "</small>";
       box.appendChild(name); box.appendChild(pts);
       li.appendChild(rank); li.appendChild(img); li.appendChild(box);
       list.appendChild(li);
@@ -6315,9 +6438,9 @@
   }
   function shareText() {
     var snap = state.finalSnapshot, win = snap.ranked[0];
-    var line = snap.alone ? L("J'ai fait ", "Fiz ") + signed(win.team.score) + L(" points sur TACKLE !", " pontos no TACKLE!")
+    var line = snap.alone ? L("J'ai fait ", "Fiz ") + signed(win.team.score) + " " + ptsWord(win.team.score) + L(" sur TACKLE !", " no TACKLE!")
       : snap.tie ? L("Égalité au sommet sur TACKLE !", "Empate no topo no TACKLE!")
-      : win.team.name + L(" gagne sur TACKLE avec ", " ganha no TACKLE com ") + signed(win.team.score) + L(" points !", " pontos!");
+      : teamVerb(win.team.name, L("gagnent", "ganham"), L("gagne", "ganha")) + L(" sur TACKLE avec ", " no TACKLE com ") + signed(win.team.score) + " " + ptsWord(win.team.score) + L(" !", "!");
     return line + " " + L("Le quiz foot entre potes : ", "O quiz de futebol entre amigos: ") + "https://" + SHARE_URL;
   }
   el("btn-final-share").addEventListener("click", function () {

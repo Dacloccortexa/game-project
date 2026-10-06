@@ -6,6 +6,9 @@ const path = require('path');
 const root = path.join(__dirname, '..');
 const out = path.join(root, 'www');
 
+// Les empreintes des questions doivent être à jour, sinon les applis installées ne verraient pas les changements.
+require('child_process').execFileSync('node', [path.join(__dirname, 'data-manifest.cjs'), '--check'], { stdio: 'inherit' });
+
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
 

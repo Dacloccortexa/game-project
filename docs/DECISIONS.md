@@ -1,5 +1,20 @@
 # DECISIONS.md
 
+## [2026-10-06] Corrections de la revue du code
+Suite de `docs/REVUE_CODE_2026-10-06.md` (validée par David). Testé (tests automatiques ajoutés + scénarios rejoués dans un navigateur).
+- **Partie jamais raccourcie** : le nombre de manches n'est plus modifié pendant une partie (fin du pack soirée, réponse de RevenueCat). Le choix du joueur est mémorisé et rétabli quand l'accès illimité est confirmé (les abonnés ne repartent plus à 5 manches).
+- **Questions téléchargées stockées dans les fichiers de l'appli** (module Filesystem) au lieu du stockage du navigateur (~5 Mo, presque plein) ; seul un petit index reste. L'ancien cache est effacé.
+- **Fichier de questions distant défectueux** : oublié aussitôt, la copie embarquée est reprise ; au coup d'envoi, un défi pas encore chargé est rechargé une fois (« Chargement des questions… »).
+- **Après une mise à jour de l'appli**, un ancien téléchargement fait avec une autre copie embarquée est ignoré.
+- **Pack soirée** : revérifié au coup d'envoi et au retour dans l'appli (veille) ; un 2e pack acheté pendant le premier ajoute 24 h à la suite.
+- **Tackle** : plus de Tackle possible sur une carte terminée (annulation à la dernière milliseconde) ; bouton « Retour : mauvaise équipe » dans la réponse au Tackle (son Tackle n'est pas consommé).
+- **« Quitter ? »** fige les chronos (Tackle, réponse) et les reprend sur « Continuer » ; Échap ferme la fenêtre ; le focus revient au bon bouton.
+- **Double appui** : les appuis sur la carte sont ignorés 0,45 s après son arrivée (le 2e appui sur « Équipe suivante » ne fait plus « Passer »).
+- **Textes** : partage accordé (« Les Lions gagnent… », « Os Leões ganham… », « 1 point »), « 0 pontos » en portugais, « Pas de Tackle : Équipe 3 l'a déjà tenté » (singulier), message qui ne déborde plus sur la carte suivante, « Meia-final » pour Le Match, derniers textes français traduits.
+- **Affichage** : « VERDADEIRO » tient dans son bouton ; noms d'équipe longs sans espace coupés proprement.
+- **Construction de l'appli** : `npm run build` refuse de construire si `src/data/manifest.json` n'est pas à jour.
+- Non changé (à trancher) : à 2 équipes, après le Tackle raté de l'adversaire, la course de 5 s continue alors que personne ne peut plus tacler.
+
 ## [2026-10-06] Validation mobile initiale : iPhone
 - Décision de David : pour commencer, tester et ajuster le jeu uniquement sur iPhone. La vérification Android viendra plus tard et ne bloque pas la prochaine soirée test.
 
