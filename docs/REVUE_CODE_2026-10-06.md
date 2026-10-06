@@ -24,7 +24,7 @@ Revue complète d'`index.html` et des outils, en trois volets indépendants (log
 13. Trois textes restés en français en mode portugais (« Disponible dans l'appli iPhone TACKLE. » du bouton « J'ai un code », textes de remplacement de deux images).
 14. « Pas de Tackle : Équipe 3 l'ont déjà tenté » : accord au pluriel forcé ; et ce message peut déborder sur la carte suivante (si on enchaîne en moins de 3 s).
 15. Mauvaise équipe touchée dans « Qui a tacklé ? » : impossible de revenir en arrière (son Tackle de la carte est consommé).
-16. À 2 équipes, après le Tackle raté de l'adversaire, la course de 5 s continue à chaque indice alors que personne ne peut plus tacler (Répondre/Passer cachés). À trancher.
+16. À 2 équipes, après le Tackle raté de l'adversaire, la course de 5 s continue à chaque indice alors que personne ne peut plus tacler (Répondre/Passer cachés). **Corrigé (2026-10-06)** : plus de course quand aucun adversaire ne peut tacler ; l'équipe qui a la main garde ses 5 s avec Répondre/Passer.
 17. Abonné : la partie démarre à 5 manches (choix remis à 5 avant que l'abonnement soit confirmé, jamais rétabli).
 18. Acheter un 2e pack soirée pendant qu'un pack est actif n'ajoute pas 24 h.
 19. Heure du téléphone reculée → le pack soirée dure plus longtemps (faible enjeu).

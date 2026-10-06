@@ -255,6 +255,22 @@ vfAnswer(true);
 assert.equal(state.cardEnded, true);
 assert.equal(state.teams[0].score, 0);
 
+// Plus aucun adversaire ne peut tacler (B a déjà raté son Tackle) : pas de course au sifflet,
+// l'équipe qui a la main garde « Répondre »/« Passer » pendant les 5 s, puis indice suivant.
+reset('transfert');
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'},{club:'Trois',years:'3'}]};
+state.revealedCount = 1;
+state.tackledThisCard = [1];
+startTackleWindow();
+advance(30000);
+assert.equal(element('screen-play').classList.contains('race'), false);
+assert.equal(element('btn-tackle').disabled, true);
+assert.equal(element('btn-tackle').classList.contains('tk-waiting'), true);
+assert.equal(element('turn-clock-label').textContent, 'Temps restant');
+advance(5000);
+assert.equal(state.revealedCount, 2);
+assert.equal(state.cardEnded, false);
+
 // Course au Tackle : après le sifflet, « Répondre »/« Passer » disparaissent (classe race) ;
 // si l'équipe qui a la main gagne la course, elle répond normalement avec ses points habituels.
 reset('transfert');

@@ -3408,7 +3408,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.06-1405";
+  var APP_VERSION = "2026.10.06-1429";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -4673,13 +4673,22 @@
   }
 
   // Bouton Tackle sur deux lignes + bande « Priorité aux … » avec le temps restant de la phase.
+  // Aucun adversaire ne peut tacler : partie à une équipe, ou tous les adversaires ont déjà tenté
+  // leur Tackle sur cette carte. Les 5 s restent alors à l'équipe qui a la main, sans course :
+  // elle garde « Répondre » et « Passer », sans son ni flash de Tackle (revue du code n° 16, 2026-10-06).
+  function noOpponentCanTackle() {
+    if (state.teams.length < 2) return true;
+    var already = state.tackledThisCard || [];
+    return !state.teams.some(function (t, i) { return i !== state.currentTeamIndex && already.indexOf(i) === -1; });
+  }
+
   function updateTackleUI(seconds) {
     var open = state.tacklePhase === "open";
-    var alone = state.teams.length < 2;
+    var alone = !state.passWindow && noOpponentCanTackle();
     var active = state.teams[state.currentTeamIndex];
     el("tackle-main").textContent = open && !alone ? L("Tackle !", "Tackle!") : "Tackle";
     el("tackle-sub").textContent = alone
-      ? L("Il faut au moins deux équipes", "São precisas pelo menos duas equipas")
+      ? (state.teams.length < 2 ? L("Il faut au moins deux équipes", "São precisas pelo menos duas equipas") : L("Les adversaires ont déjà tenté", "Os adversários já tentaram"))
       : open
         ? L("Première équipe à l'annoncer : une réponse", "A primeira equipa a gritar responde")
         : L("Disponible après le sifflet · dans ", "Disponível depois do apito · daqui a ") + seconds + " s";
@@ -4814,8 +4823,9 @@
       }
       state.tacklePhase = "open";
       state.tackleDeadline = Date.now() + TACKLE_OPEN_SECONDS * 1000;
-      button.disabled = state.teams.length < 2;
-      if (state.teams.length > 1) {
+      var noRace = noOpponentCanTackle();
+      button.disabled = noRace;
+      if (!noRace) {
         playSound("tackle");
         vibrate("tackle");
         playTackleFlash();
