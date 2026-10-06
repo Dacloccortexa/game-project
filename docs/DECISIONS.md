@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-10-06] Boutons « Signaler une erreur » et « Nous contacter »
+Demande de David. Sans serveur : les deux ouvrent l'appli mail du téléphone vers contact@lafamivy.com ; rien ne part sans appui sur Envoyer (rien à déclarer en plus à Apple).
+- **Signaler une erreur sur cette question** : sous « Équipe suivante », une fois la carte terminée (la partie n'est pas interrompue). Le mail est prérempli : défi, identifiant de la carte, réponse attendue (clubs pour Transfert, équipes/score pour Le Match, valeurs pour Plus ou Moins, affirmations et vrai/faux pour Vrai ou Faux), réponses tapées par les équipes, langue, version, appli ou site. Objet « TACKLE · Erreur sur une question t052 ».
+- **Nous contacter** : dans Réglages, mail avec langue et version.
+- Si aucune appli mail ne s'ouvre, l'adresse s'affiche sous le bouton.
+
 ## [2026-10-06] Réponses : tolérance « à l'oreille »
 Demande de David (« italli alemmagne » doit passer). En plus des fautes de frappe, la réponse est comparée sur sa prononciation : lettres doublées, ph/f, th/t, y/i, c/k/qu, z/s, w/v et e/s/h muets en fin de mot ne comptent plus, puis la même tolérance s'applique (1 erreur jusqu'à 7 lettres, 2 jusqu'à 14). Comparaison mot à mot (« Morientes » ≠ « Llorente ») et 5 lettres minimum (« Nice » ≠ « Nîmes »). Vérifié sur les 717 noms des cartes : aucune confusion nouvelle entre deux réponses d'une même catégorie.
 

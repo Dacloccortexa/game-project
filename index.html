@@ -1507,6 +1507,7 @@
   :lang(pt-PT) .vf-choice { font-size: clamp(22px, 6.6vw, 32px); letter-spacing: 0; }
 
   #next-card-zone .tr-btn-primary { margin-top: 2px; }
+  #next-card-zone .report-btn { display: block; margin: 10px auto 0; min-height: 44px; font-size: 13px; }
   #feedback-zone:empty { display: none; }
 
   .quit-dialog {
@@ -2079,6 +2080,8 @@
       </div>
     </div>
     <div class="journal-link-box">
+      <button type="button" class="text-btn" id="btn-contact">Nous contacter</button>
+      <p class="journal-note" id="contact-status" role="status" aria-live="polite"></p>
       <button type="button" class="text-btn hidden-screen" id="btn-share-journals">Envoyer le journal des parties</button>
       <p class="journal-note" id="journals-status" role="status" aria-live="polite"></p>
     </div>
@@ -2589,6 +2592,8 @@
 
     <div class="hidden-screen" id="next-card-zone">
       <button type="button" class="tr-btn-primary" id="btn-next-card">Suivant</button>
+      <button type="button" class="text-btn report-btn" id="btn-report">Signaler une erreur sur cette question</button>
+      <p class="journal-note" id="report-status" role="status" aria-live="polite"></p>
     </div>
 
     <div class="tr-panel hidden-screen" id="tackle-team-picker">
@@ -2857,7 +2862,9 @@
     "Scores des équipes": "Pontuações das equipas",
     "Tape le nom ici": "Escreve o nome aqui",
     "Événements du match": "Acontecimentos do jogo",
-    "Indices du match": "Pistas do jogo"
+    "Indices du match": "Pistas do jogo",
+    "Signaler une erreur sur cette question": "Reportar um erro nesta pergunta",
+    "Nous contacter": "Contactar-nos"
     };
   (function translateStatic() {
     if (LANG !== "pt" || !document.createTreeWalker) return;
@@ -3340,9 +3347,68 @@
   // ---------- Journal de partie (pour les parties test) ----------
   // Tout reste sur le téléphone ; rien n'est envoyé sans un appui sur « Envoyer le journal ».
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
+  // ---------- Signaler une erreur / Nous contacter (décision de David, 2026-10-06) ----------
+  // Pas de serveur : on ouvre l'appli mail du téléphone avec un message prérempli (carte,
+  // réponse, version) vers contact@lafamivy.com. Rien n'est envoyé sans que le joueur appuie sur Envoyer.
+  var CONTACT_EMAIL = "contact@lafamivy.com";
+  function openMail(subject, body) {
+    var url = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    try {
+      var link = document.createElement("a");
+      link.href = url;
+      link.style.display = "none";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (e) { try { window.location.href = url; } catch (e2) {} }
+  }
+  function mailFooter() {
+    return L("Langue : ", "Idioma: ") + LANG + " · Version " + APP_VERSION + " · " + (NATIVE ? "appli iPhone" : "site");
+  }
+  function reportCardDetails() {
+    var g = state.currentRoundMinigame;
+    var lines = [L("Défi : ", "Desafio: ") + (GAME_LABELS[g] || g)];
+    if (g === "transfert" || g === "quisuisje") {
+      var c = state.currentCard || {};
+      lines.push(L("Carte : ", "Carta: ") + (c.id || "?") + " · " + L("réponse : ", "resposta: ") + (c.answer || "?"));
+      if (g === "transfert" && c.career) {
+        lines.push(L("Clubs : ", "Clubes: ") + c.career.map(function (x) { return typeof x === "string" ? x : (x.club || x.name || ""); }).join(" → "));
+      }
+    } else if (g === "lematch") {
+      var m = state.currentLmCard || {};
+      lines.push(L("Carte : ", "Carta: ") + (m.id || "?") + " · " + (m.teams || []).join(" – ") + (m.score ? " " + m.score : "") +
+        (m.competition ? " · " + m.competition : "") + (m.year ? " " + m.year : ""));
+    } else if (g === "plusoumoins") {
+      var ch = state.pomChain || {};
+      lines.push(L("Catégorie : ", "Categoria: ") + (ch.category || "?"));
+      (ch.chain || []).forEach(function (p) { lines.push("- " + p.name + " : " + p.value); });
+    } else if (g === "vraifaux") {
+      (state.vfChain || []).forEach(function (st) {
+        lines.push("- " + (st.id ? st.id + " " : "") + st.affirmation + " (" + (st.est_vraie ? L("vrai", "verdadeiro") : L("faux", "falso")) + ")");
+      });
+    }
+    // Réponses tapées sur cette carte (utile pour une réponse refusée à tort).
+    var jc = journalCurrentCard();
+    var typed = jc ? jc.steps.filter(function (t) { return t.indexOf("«") >= 0; }) : [];
+    if (typed.length) lines.push(L("Réponses données :", "Respostas dadas:") + "\n" + typed.map(function (t) { return "- " + t; }).join("\n"));
+    return lines.join("\n");
+  }
+  el("btn-report").addEventListener("click", function () {
+    var c = state.currentRoundMinigame === "lematch" ? state.currentLmCard : state.currentCard;
+    var id = (state.currentRoundMinigame === "transfert" || state.currentRoundMinigame === "quisuisje" || state.currentRoundMinigame === "lematch") && c && c.id ? " " + c.id : "";
+    openMail(L("TACKLE · Erreur sur une question", "TACKLE · Erro numa pergunta") + id,
+      L("Qu'est-ce qui ne va pas ? (réponse refusée, fait faux, faute…)", "O que está errado? (resposta recusada, facto errado, gralha…)") +
+      "\n\n\n---\n" + reportCardDetails() + "\n" + mailFooter());
+    el("report-status").textContent = L("Ton appli mail s'ouvre avec la question jointe. Rien ne s'ouvre ? Écris à ", "A tua app de e-mail abre com a pergunta incluída. Nada abre? Escreve para ") + CONTACT_EMAIL;
+  });
+  el("btn-contact").addEventListener("click", function () {
+    openMail("TACKLE", "\n\n\n---\n" + mailFooter());
+    el("contact-status").textContent = CONTACT_EMAIL;
+  });
+
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.06-1357";
+  var APP_VERSION = "2026.10.06-1405";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -6119,6 +6185,7 @@
         ? L("Voir le classement", "Ver a classificação")
         : L("Équipe suivante", "Equipa seguinte");
 
+    el("report-status").textContent = "";
     show("next-card-zone");
   }
 
