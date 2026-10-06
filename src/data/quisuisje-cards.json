@@ -1,8 +1,8 @@
 {
   "game_id": "qui_suis_je",
-  "version": 4,
+  "version": 5,
   "prepared_at": "2026-09-27",
-  "status": "ordre des indices personnalisé par carte ; unicité et difficulté à retester",
+  "status": "trois collisions de réponses corrigées ; revue continue des autres fiches nécessaire",
   "source_snapshot": "Wikipédia, révisions relevées le 24 septembre 2026; carrières Transfert vérifiées dans le dépôt",
   "rules": {
     "clue_order": "card_specific",
@@ -1200,7 +1200,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Barcelona.",
+          "text": "J'ai joué au FC Barcelone.",
           "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
           "fact": {
             "club": "Barcelona"
@@ -3166,18 +3166,8 @@
           }
         },
         {
-          "kind": "trophy",
-          "points": 3,
-          "text": "J'ai gagné la Primeira Liga.",
-          "source": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Moutinho",
-          "fact": {
-            "trophy": "Primeira Liga",
-            "evidence": "*Primeira Liga: 2010–11, 2011–12, 2012–13"
-          }
-        },
-        {
           "kind": "nationality",
-          "points": 2,
+          "points": 3,
           "text": "Je suis portugais.",
           "source": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Moutinho",
           "fact": {
@@ -3186,18 +3176,28 @@
         },
         {
           "kind": "teammate",
-          "points": 1,
+          "points": 2,
           "text": "J'ai joué avec Kylian Mbappé.",
           "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
           "fact": {
             "name": "Kylian Mbappé",
             "shared_club": "Monaco"
           }
+        },
+        {
+          "kind": "trophy",
+          "points": 1,
+          "text": "J'ai gagné la Ligue Europa en 2011.",
+          "source": "https://www.uefa.com/MultimediaFiles/Download/competitions/Statistics/01/85/99/82/1859982_DOWNLOAD.pdf",
+          "fact": {
+            "trophy": "Ligue Europa 2011",
+            "evidence": "FC Porto vainqueur de la finale 2011 ; João Moutinho titulaire"
+          }
         }
       ],
       "source_revision": 1375895997,
       "source_revision_fr": 239811863,
-      "editorial_difficulty": "à tester en partie"
+      "editorial_difficulty": "collision de réponses corrigée ; à tester en partie"
     },
     {
       "id": "qs053",
@@ -3999,12 +3999,13 @@
       "transfert_card_id": "t078",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "J'ai joué à Sporting CP.",
-          "source": "https://en.wikipedia.org/wiki/Nani_%28footballer%29",
+          "text": "J'ai joué avec Paul Pogba.",
+          "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
           "fact": {
-            "club": "Sporting CP"
+            "name": "Paul Pogba",
+            "shared_club": "Manchester United"
           }
         },
         {
@@ -4036,19 +4037,18 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "club",
           "points": 1,
-          "text": "J'ai joué avec Paul Pogba.",
-          "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
+          "text": "J'ai joué à Fenerbahçe.",
+          "source": "https://www.uefa.com/uefaeuro/history/news/0253-0d80dd18b958-3e6ccbda28c0-1000--portugal-s-nani-on-capoeira-and-cristiano-ronaldo/",
           "fact": {
-            "name": "Paul Pogba",
-            "shared_club": "Manchester United"
+            "club": "Fenerbahçe"
           }
         }
       ],
       "source_revision": 1369525236,
       "source_revision_fr": 237402448,
-      "editorial_difficulty": "à tester en partie"
+      "editorial_difficulty": "collision de réponses corrigée ; à tester en partie"
     },
     {
       "id": "qs067",
@@ -4849,31 +4849,32 @@
       "transfert_card_id": "t092",
       "clues": [
         {
-          "kind": "club",
+          "kind": "teammate",
           "points": 5,
-          "text": "J'ai joué à AC Milan.",
-          "source": "https://en.wikipedia.org/wiki/Rivaldo",
+          "text": "J'ai joué avec Javier Saviola.",
+          "source": "https://en.wikipedia.org/wiki/Javier_Saviola",
           "fact": {
-            "club": "AC Milan"
-          }
-        },
-        {
-          "kind": "position",
-          "points": 4,
-          "text": "Je suis milieu offensif.",
-          "source": "https://fr.wikipedia.org/wiki/Rivaldo",
-          "fact": {
-            "position": "milieu offensif"
+            "name": "Javier Saviola",
+            "shared_club": "Barcelona"
           }
         },
         {
           "kind": "trophy",
-          "points": 3,
+          "points": 4,
           "text": "J'ai gagné la Liga.",
           "source": "https://en.wikipedia.org/wiki/Rivaldo",
           "fact": {
             "trophy": "La Liga",
             "evidence": "* La Liga: 1997–98, 1998–99"
+          }
+        },
+        {
+          "kind": "position",
+          "points": 3,
+          "text": "Je suis milieu offensif.",
+          "source": "https://fr.wikipedia.org/wiki/Rivaldo",
+          "fact": {
+            "position": "milieu offensif"
           }
         },
         {
@@ -4886,19 +4887,18 @@
           }
         },
         {
-          "kind": "teammate",
+          "kind": "club",
           "points": 1,
-          "text": "J'ai joué avec Javier Saviola.",
-          "source": "https://en.wikipedia.org/wiki/Javier_Saviola",
+          "text": "J'ai joué à l'Olympiakos.",
+          "source": "https://www.uefa.com/news-media/news/01c1-0f84afd09be1-fdb49375fbe2-1000--aek-ambition-appeals-to-rivaldo/",
           "fact": {
-            "name": "Javier Saviola",
-            "shared_club": "Barcelona"
+            "club": "Olympiacos"
           }
         }
       ],
       "source_revision": 1374387306,
       "source_revision_fr": 239394228,
-      "editorial_difficulty": "à tester en partie"
+      "editorial_difficulty": "collision de réponses corrigée ; à tester en partie"
     },
     {
       "id": "qs081",
