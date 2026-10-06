@@ -107,6 +107,10 @@ Format retenu pour la suite : **11 à 14 s**. Accroche brutale dès la 1re secon
 - Deux accroches à comparer : avec le nom (« Ils ont eu 5 indices pour trouver DROGBA… 😭 », on regarde le fiasco en sachant la réponse) et sans le nom (« Ils ont eu 5 indices… et ils ont TOUT raté 😭 Toi, tu le trouves ? », on joue avec eux). Publier les deux et garder celle qui retient le mieux.
 - Le format se décline à l'infini : chaque partie peut devenir une vidéo (« Ils n'ont pas reconnu Mbappé », « Le mec qui connaît soi-disant tout », « Il tackle après 2 indices et se ridiculise »).
 
+### Format « joue avec nous » (2026-10-06)
+
+Idée de David : la pub ne montre pas des gens qui jouent, elle **fait jouer celui qui regarde**. Une micro-partie dans le feed. Accroche « Tu le trouves avant eux ? 👀 », puis chaque indice en grand (« J'ai joué à Marseille ») avec un compte à rebours de 3 s pour chercher, la mauvaise réponse qui tombe, et ainsi de suite jusqu'au Tackle. Environ 30 s : le temps de réflexion fait partie de la pub. Fin : « Tu l'avais à quel indice ? 👇 ». Scénario : `tools/tiktok/scripts/drogba-joue.json`.
+
 ## Mesure des pubs (plus tard)
 
 Pour savoir quelles pubs rapportent des achats, on pourra brancher la mesure de TikTok (leur kit ou AppsFlyer/Adjust). Ça changera la déclaration de confidentialité App Store (aujourd'hui « pas de suivi ») et peut-être l'affichage de la fenêtre Apple « Autoriser le suivi ». À décider avec David avant de l'ajouter.

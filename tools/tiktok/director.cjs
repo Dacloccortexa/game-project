@@ -47,6 +47,12 @@ const OVERLAY_CSS = `
 #ad .info b { color: #f5c542; }
 /* Mode vidéo : on cache les panneaux de saisie (la réponse s'affiche en bulle) et l'écran ne défile pas. */
 #type-box, #confirm-box, #tackle-team-picker, #tackle-answer-zone { opacity: 0 !important; }
+/* Le compte à rebours de la vidéo remplace la bande du chrono du jeu (deux chronos se contrediraient). */
+#turn-clock { opacity: 0 !important; }
+#ad .count { position: absolute; left: 52px; top: 330px; width: 78px; height: 78px; margin: -39px 0 0 -39px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font: 700 46px/1 "Oswald", sans-serif; color: #fff;
+  background: rgba(6,16,10,.88); box-shadow: 0 6px 22px rgba(0,0,0,.6); }
+#ad .count.last { color: #ff6b5a; }
 #ad .end { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(20,40,25,.94), rgba(3,8,5,.98));
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; color: #fff; }
 #ad .end .q { font-weight: 700; font-size: 34px; line-height: 1.1; text-transform: uppercase; padding: 0 22px; font-family: "Oswald", sans-serif; }
@@ -82,9 +88,9 @@ const OVERLAY_CSS = `
   // --- horloge vidéo ---
   let t = 0, frame = 0;
   const events = []; // sons à poser au montage
-  let caption = null, tap = null, flash = null, end = null, bubble = null, info = null;
+  let caption = null, tap = null, flash = null, end = null, bubble = null, info = null, count = null;
   async function drawOverlay() {
-    await p.evaluate(({ caption, tap, flash, end, bubble, info, t }) => {
+    await p.evaluate(({ caption, tap, flash, end, bubble, info, count, t }) => {
       const ad = document.getElementById('ad'); let h = '';
       if (caption) {
         const k = Math.min(1, (t - caption.at) / 160); const s = 0.6 + 0.4 * (1 - Math.pow(1 - k, 3)) + (k >= 1 ? 0 : 0.08 * Math.sin(k * Math.PI));
@@ -93,6 +99,12 @@ const OVERLAY_CSS = `
       const pop = at => { const k = Math.min(1, (t - at) / 180); return { k, s: 0.7 + 0.3 * (1 - Math.pow(1 - k, 3)) }; };
       if (bubble) { const { k, s } = pop(bubble.at); h += `<div class="bub" style="transform:translateX(-50%) scale(${s.toFixed(3)});opacity:${Math.min(1, k * 2)}">${bubble.html}</div>`; }
       if (info) { const { k } = pop(info.at); h += `<div class="info" style="opacity:${k}">${info.html}</div>`; }
+      if (count) {
+        const left = count.dur - (t - count.at), n = Math.max(1, Math.ceil(left / 1000)), frac = Math.max(0, left / count.dur);
+        const deg = Math.round(frac * 360), col = n === 1 ? '#ff6b5a' : '#f5c542';
+        const pulse = 1 + 0.12 * Math.max(0, 1 - ((count.dur - left) % 1000) / 220);
+        h += `<div class="count${n === 1 ? ' last' : ''}" style="transform:scale(${pulse.toFixed(3)});background:radial-gradient(closest-side, rgba(6,16,10,.92) 82%, transparent 84% 100%), conic-gradient(${col} ${deg}deg, rgba(255,255,255,.15) 0)">${n}</div>`;
+      }
       if (tap && t - tap.at < 380) {
         const k = (t - tap.at) / 380;
         h += `<div class="tap" style="left:${tap.x}px;top:${tap.y}px;transform:scale(${(0.7 + k * 0.6).toFixed(2)});opacity:${(1 - k).toFixed(2)}"></div>`;
@@ -106,7 +118,7 @@ const OVERLAY_CSS = `
         h += `<div class="end" style="opacity:${k}"><div class="q">${end.q}</div><img src="assets/ui/web/tackle-logo-brush.webp" style="transform:scale(${(0.85 + 0.15 * k).toFixed(2)})"><div class="tag">${end.tag}</div><div class="cta">${end.cta}</div></div>`;
       }
       ad.innerHTML = h;
-    }, { caption, tap, flash, end, bubble, info, t });
+    }, { caption, tap, flash, end, bubble, info, count, t });
   }
   async function step(n = 1) {
     for (let i = 0; i < n; i++) {
@@ -142,6 +154,11 @@ const OVERLAY_CSS = `
     if (a.flash) flash = { color: a.flash, max: a.flashMax || 0.5, dur: 450, at: t };
     switch (a.do) {
       case 'hold': await step(sec(a.s)); break;
+      case 'count': { // compte à rebours affiché, avec un tic par seconde
+        count = { dur: a.s * 1000, at: t };
+        for (let k = 0; k < a.s; k++) { events.push({ t, sound: 'tick' }); await step(FPS); }
+        count = null; break;
+      }
       case 'answer': {
         for (let k = 0; k < 150 && !(await p.isVisible('#btn-answer')); k++) await step(1);
         bubble = { html: emo(a.bubble || a.text), at: t };

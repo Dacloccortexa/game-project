@@ -1,0 +1,144 @@
+{
+ "card": "t043",
+ "steps": [
+  {
+   "do": "hold",
+   "s": 2.0,
+   "caption": "Tu le trouves <b>avant eux</b> ? 👀",
+   "sound": "kickoff"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "J'ai joué au <b>Mans</b>"
+  },
+  {
+   "do": "answer",
+   "text": "Gervinho",
+   "bubble": "<small>🦁 Les Lions</small>« Gervinho ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "<i>❌ Gervinho ?!</i>",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "J'ai joué à <b>Guingamp</b>"
+  },
+  {
+   "do": "answer",
+   "text": "Koscielny",
+   "bubble": "<small>🦁 Les Lions</small>« Koscielny ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "<i>❌ Koscielny…</i> 😭",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "J'ai joué à <b>Marseille</b>"
+  },
+  {
+   "do": "answer",
+   "text": "Gignac",
+   "bubble": "<small>🦁 Les Lions</small>« Gignac ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "<i>❌ GIGNAC ?!</i> 💀",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "J'ai joué à <b>Chelsea</b>"
+  },
+  {
+   "do": "answer",
+   "text": "Anelka",
+   "bubble": "<small>🦁 Les Lions</small>« Anelka ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "<i>❌ ANELKA ?!</i> Il était à côté 😩",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "J'ai joué à <b>Shanghai</b>"
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "Les Lions sèchent… 😶"
+  },
+  {
+   "do": "skipTo",
+   "ms": 25300
+  },
+  {
+   "do": "hold",
+   "s": 1.5,
+   "caption": "<i>TACKLE !</i> Les Renards volent la réponse 🦊",
+   "sound": "tackle",
+   "flash": "#e2483c",
+   "flashMax": 0.6
+  },
+  {
+   "do": "tackle",
+   "team": "Renards",
+   "text": "Drogba",
+   "bubble": "<small>🦊 Les Renards</small>« Drogba ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 2.0,
+   "caption": "<b>✅ DROGBA</b><br><small>Tu l'avais à quel indice ? 👇</small>",
+   "sound": "right",
+   "flash": "#2fbf71",
+   "flashMax": 0.3
+  },
+  {
+   "do": "end",
+   "s": 2.0,
+   "q": "Vos débats foot valent enfin <b>des points</b>.",
+   "tag": "Réponds. Tackle. Renverse le score.",
+   "cta": "Joue gratuitement<br>lafamivy.com/tackle",
+   "sound": "end"
+  }
+ ]
+}

@@ -27,12 +27,13 @@ En vidéo, l'écran ne défile pas et les panneaux de saisie sont cachés : la r
 Chaque étape (`steps`) peut avoir :
 - `info` : un encadré d'explication au milieu de l'écran (règle du jeu, Tackle). `""` pour l'enlever.
 - `caption` : le sous-titre, qui reste affiché jusqu'au suivant. `<b>` pour l'or, `<i>` pour le rouge, emojis acceptés. `""` pour effacer.
-- `sound` : `kickoff`, `wrong`, `right`, `tackle`, `tap` ou `end` (fichiers de `sfx/`).
+- `sound` : `tick`, `kickoff`, `wrong`, `right`, `tackle`, `tap` ou `end` (fichiers de `sfx/`).
 - `flash` : couleur d'un flash plein écran (`flashMax` pour son intensité).
 - `waitFor` : attendre qu'un bouton du jeu soit visible avant l'étape, par exemple `#btn-answer` pour attendre l'indice suivant.
 
 Et une action, `do` :
 - `hold` : attendre `s` secondes ;
+- `count` : compte à rebours de `s` secondes affiché sur la silhouette du joueur, avec un tic par seconde (le spectateur cherche en même temps) ;
 - `answer` : l'équipe qui a la main répond `text` (bulle `bubble`, durée `think` en secondes) ;
 - `pass` : l'équipe qui a la main passe l'indice ;
 - `skipTo` : coupe au montage, `ms` millisecondes passent sans être filmées (par exemple jusqu'au sifflet du Tackle) ;
