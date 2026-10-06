@@ -94,7 +94,7 @@ Offrir l'abonnement à certaines personnes : **codes d'offre** Apple (App Store 
 
 - [x] D-U-N-S de **LA FAMIVY LTD** : **369782130** (confirmé par Apple le 2026-10-03). Ce nom légal sera le nom du vendeur sur l'App Store.
 - [x] Domaine **lafamivy.com** (Cloudflare) et adresse **contact@lafamivy.com** (Cloudflare Email Routing → boîte de David), 2026-10-03.
-- [x] Site de la société en ligne sur lafamivy.com (dépôt `Dacloccortexa/lafamivy-site`, GitHub Pages, DNS Cloudflare), 2026-10-03. Cocher « Enforce HTTPS » dans Settings → Pages dès que possible.
+- [x] Site de la société en ligne sur lafamivy.com (dépôt `Dacloccortexa/lafamivy-site`, GitHub Pages, DNS Cloudflare), 2026-10-03. HTTPS activé (Enforce HTTPS) le 2026-10-06.
 - [ ] Compte Apple Developer actif (99 USD/an), inscription en tant qu'organisation avec le D-U-N-S ci-dessus : https://developer.apple.com/enroll/
 - [x] Adresse de contact dans `privacy.html` (contact@lafamivy.com). URL de support pour la fiche App Store : https://lafamivy.com
 - [ ] Captures d'écran iPhone 6,9″ (1320 × 2868), au moins 3.
