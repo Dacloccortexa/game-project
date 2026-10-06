@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-10-06] « Juninho » refusé : réponses acceptées élargies
+- Retour de David : sur la carte Juninho Pernambucano (Qui suis-je ?), « Juninho » a été refusé. Seuls « Juninho Pernambucano » et « Pernambucano » étaient acceptés.
+- Correctif : variante « juninho » ajoutée (Transfert et Qui suis-je ?, français et portugais).
+- Correctif général : la **fin du nom** est maintenant toujours acceptée (« Van Dijk », « Di María », « De Bruyne »…), en plus du nom complet et des variantes. Avant, « Van Dijk » et « Di Maria » étaient refusés (seuls « Dijk » et « María » figuraient dans les variantes). Le début du nom seul n'est pas accepté (« Kevin » ne vaut pas De Bruyne). Contrôlé par le test.
+
 ## [2026-10-06] Qui suis-je ? : l'ordre des indices dépend de chaque carte
 - Décision de David : conserver cinq informations courtes et les paliers 5/4/3/2/1, mais ne plus imposer « club → trophée → poste → coéquipier → nationalité » à toutes les cartes.
 - Raison : un club peu partagé peut révéler le joueur dès 5 points, tandis qu'une nationalité donnée en dernier peut n'apporter presque rien ; l'ordre doit tenir compte des faits déjà dévoilés et des autres joueurs plausibles.

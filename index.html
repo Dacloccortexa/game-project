@@ -3291,7 +3291,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.06-1130";
+  var APP_VERSION = "2026.10.06-1141";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3526,6 +3526,18 @@
   };
 
   // ---------- Helpers ----------
+  // Réponses acceptées pour un joueur : nom complet, variantes de la carte, et la fin du nom
+  // (« Van Dijk », « Di María », « De Bruyne », « Pernambucano ») — DECISIONS.md, 2026-10-06.
+  function playerAnswers(card) {
+    var list = [card.answer].concat(card.variants || []).map(normalize);
+    var words = normalize(card.answer).split(" ");
+    for (var i = 1; i < words.length; i++) {
+      var tail = words.slice(i).join(" ");
+      if (tail.replace(/[^a-z]/g, "").length >= 4 && list.indexOf(tail) === -1) list.push(tail);
+    }
+    return list;
+  }
+
   function normalize(str) {
     return str
       .normalize("NFD")
@@ -5013,7 +5025,7 @@
     }
 
     var card = state.currentCard;
-    var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
+    var validAnswers = playerAnswers(card);
     var isCorrect = matchesAnyAnswer(typed, validAnswers);
     journalStep("Tackle " + teamDes(tacklingTeam.name) + " « " + typed + " » " + (isCorrect ? "juste" : "faux"));
 
@@ -5526,7 +5538,7 @@
 
   function checkQsjAnswer(typed) {
     var card = state.currentCard;
-    var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
+    var validAnswers = playerAnswers(card);
     var isCorrect = matchesAnyAnswer(typed, validAnswers);
     journalStep("réponse « " + typed + " » " + (isCorrect ? "juste" : "fausse"));
 
@@ -5857,7 +5869,7 @@
   function checkAnswer(typed) {
     var card = state.currentCard;
     var team = state.teams[state.currentTeamIndex];
-    var validAnswers = [card.answer].concat(card.variants || []).map(normalize);
+    var validAnswers = playerAnswers(card);
     var isCorrect = matchesAnyAnswer(typed, validAnswers);
     journalStep("réponse « " + typed + " » " + (isCorrect ? "juste" : "fausse"));
     var before = team.score;

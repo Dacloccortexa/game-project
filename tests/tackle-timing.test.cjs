@@ -47,7 +47,7 @@ function advance(ms) {
 }
 
 let script = fs.readFileSync('index.html', 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
-script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame, drawFromDeck, renderLmClues};})();');
+script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame, drawFromDeck, playerAnswers, matchesAnyAnswer, renderLmClues};})();');
 const context = {
   document: { getElementById: element, createElement: tag => element(`created-${tag}-${Math.random()}`), querySelector: element, querySelectorAll: () => [] },
   fetch: () => Promise.resolve({ json: () => Promise.resolve({ cards: [], players: [], statements: [] }) }),
@@ -58,7 +58,7 @@ const context = {
 };
 vm.createContext(context);
 vm.runInContext(script, context);
-const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake, pickNextMinigame, drawFromDeck, renderLmClues } = context.testApi;
+const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake, pickNextMinigame, drawFromDeck, playerAnswers, matchesAnyAnswer, renderLmClues } = context.testApi;
 
 function reset(game) {
   timers.clear();
@@ -387,6 +387,18 @@ assert.equal(state.cardEnded, true);
   const a = [{ id: 'x1', answer: 'Mohamed Salah' }, { id: 'x2', answer: 'Kaka' }];
   drawFromDeck('test-a', [{ id: 'y1', answer: 'Mohamed Salah' }], id, c => c.answer);
   assert.equal(drawFromDeck('test-b', a, id, c => c.answer).id, 'x2');
+}
+
+// Réponses acceptées : nom complet, variantes, fin du nom (« Van Dijk », « Di María »).
+{
+  const ok = (card, typed) => matchesAnyAnswer(typed, playerAnswers(card));
+  const qs = JSON.parse(fs.readFileSync('src/data/quisuisje-cards.json', 'utf8')).cards;
+  const byName = n => qs.find(c => c.answer === n);
+  assert.ok(ok(byName('Juninho Pernambucano'), 'juninho'));
+  assert.ok(ok(byName('Virgil van Dijk'), 'Van Dijk'));
+  assert.ok(ok(byName('Ángel Di María'), 'di maria'));
+  assert.ok(ok(byName('Kevin De Bruyne'), 'de bruyne'));
+  assert.ok(!ok(byName('Kevin De Bruyne'), 'kevin'));
 }
 
 // Questions en portugais : mêmes cartes, mêmes ids et même ordre que le français (tools/translate_pt.py).
