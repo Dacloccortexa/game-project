@@ -3,76 +3,108 @@
  "steps": [
   {
    "do": "hold",
-   "s": 1.6,
+   "s": 2.6,
    "caption": "Le joueur le plus <b>FACILE</b> du jeu… et il se plante <i>4&nbsp;fois</i> 🤦‍♂️",
+   "info": "<b>Le jeu :</b> trouve le joueur grâce à ses anciens clubs.<br>2 équipes · 1 téléphone.",
    "sound": "kickoff"
   },
   {
-   "do": "answer",
-   "text": "Gervinho",
-   "caption": "Indice 1 : <b>Le Mans</b>"
-  },
-  {
    "do": "hold",
-   "s": 1.3,
-   "caption": "<i>❌ Gervinho ?!</i>",
-   "sound": "wrong",
-   "flash": "#e2483c",
-   "flashMax": 0.35
-  },
-  {
-   "do": "answer",
-   "text": "Koscielny",
-   "caption": "Indice 2 : <b>Guingamp</b>"
-  },
-  {
-   "do": "hold",
-   "s": 1.3,
-   "caption": "<i>❌ Koscielny…</i> sérieux 😭",
-   "sound": "wrong",
-   "flash": "#e2483c",
-   "flashMax": 0.35
-  },
-  {
-   "do": "answer",
-   "text": "Gignac",
-   "caption": "Indice 3 : <b>Marseille</b>"
-  },
-  {
-   "do": "hold",
-   "s": 1.3,
-   "caption": "<i>❌ GIGNAC</i> 💀",
-   "sound": "wrong",
-   "flash": "#e2483c",
-   "flashMax": 0.35
-  },
-  {
-   "do": "answer",
-   "text": "Anelka",
-   "caption": "Indice 4 : <b>Chelsea</b>… c'est cadeau là"
-  },
-  {
-   "do": "hold",
-   "s": 1.3,
-   "caption": "<i>❌ ANELKA ?!</i> 😩",
-   "sound": "wrong",
-   "flash": "#e2483c",
-   "flashMax": 0.35
-  },
-  {
-   "do": "hold",
-   "s": 1.0,
-   "caption": "Indice 5. Il hésite encore…",
-   "waitFor": "#btn-answer"
-  },
-  {
-   "do": "skipTo",
-   "ms": 29000
+   "s": 0.01,
+   "info": ""
   },
   {
    "do": "hold",
    "s": 0.9,
-   "caption": "Et là… 👀"
+   "caption": "🦁 Les Lions ont la main<br>Indice 1 : <b>Le Mans</b>",
+   "waitFor": "#btn-answer"
+  },
+  {
+   "do": "answer",
+   "text": "Gervinho",
+   "bubble": "<small>🦁 Les Lions</small>« Gervinho ! »"
+  },
+  {
+   "do": "hold",
+   "s": 1.1,
+   "caption": "<i>❌ Gervinho ?!</i><br><small>−1 point</small>",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "Indice 2 : <b>Guingamp</b>",
+   "waitFor": "#btn-answer"
+  },
+  {
+   "do": "answer",
+   "text": "Koscielny",
+   "bubble": "<small>🦁 Les Lions</small>« Koscielny ! »"
+  },
+  {
+   "do": "hold",
+   "s": 1.1,
+   "caption": "<i>❌ Koscielny…</i> sérieux 😭<br><small>−1 point</small>",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "Indice 3 : <b>Marseille</b>",
+   "waitFor": "#btn-answer"
+  },
+  {
+   "do": "answer",
+   "text": "Gignac",
+   "bubble": "<small>🦁 Les Lions</small>« Gignac ! »"
+  },
+  {
+   "do": "hold",
+   "s": 1.1,
+   "caption": "<i>❌ GIGNAC</i> 💀<br><small>−1 point</small>",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "Indice 4 : <b>Chelsea</b>",
+   "waitFor": "#btn-answer"
+  },
+  {
+   "do": "answer",
+   "text": "Anelka",
+   "bubble": "<small>🦁 Les Lions</small>« Anelka ! »"
+  },
+  {
+   "do": "hold",
+   "s": 1.1,
+   "caption": "<i>❌ ANELKA ?!</i> 😩<br><small>−1 point</small>",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "hold",
+   "s": 2.4,
+   "caption": "Indice 5 : <b>Shanghai</b>… il sèche 😶",
+   "info": "<b>Au bout de 30 s</b>, coup de sifflet :<br>la 1<sup>re</sup> équipe qui crie <b>« TACKLE ! »</b><br>vole la réponse.",
+   "waitFor": "#btn-answer"
+  },
+  {
+   "do": "skipTo",
+   "ms": 29000,
+   "info": ""
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "Coup de sifflet… 👀"
   },
   {
    "do": "hold",
@@ -85,7 +117,8 @@
   {
    "do": "tackle",
    "team": "Renards",
-   "text": "Drogba"
+   "text": "Drogba",
+   "bubble": "<small>🦊 Les Renards</small>« Drogba ! »"
   },
   {
    "do": "hold",

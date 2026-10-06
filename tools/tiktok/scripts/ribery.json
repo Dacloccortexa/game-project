@@ -3,39 +3,57 @@
  "steps": [
   {
    "do": "hold",
-   "s": 1.6,
+   "s": 2.6,
    "caption": "« Moi je connais <b>TOUT</b> le foot français » 🤡",
+   "info": "<b>Le jeu :</b> trouve le joueur grâce à ses anciens clubs.<br>2 équipes · 1 téléphone.",
    "sound": "kickoff"
+  },
+  {
+   "do": "hold",
+   "s": 0.01,
+   "info": ""
+  },
+  {
+   "do": "hold",
+   "s": 0.9,
+   "caption": "🦁 Les Lions ont la main<br>Indice 1 : <b>Boulogne</b>",
+   "waitFor": "#btn-answer"
   },
   {
    "do": "answer",
    "text": "Kanté",
-   "caption": "Indice 1 : <b>Boulogne</b>"
+   "bubble": "<small>🦁 Les Lions</small>« Kanté ! »"
   },
   {
    "do": "hold",
-   "s": 1.2,
-   "caption": "<i>❌ Kanté</i>… pas loin 😅",
+   "s": 1.1,
+   "caption": "<i>❌ Kanté</i>… pas loin 😅<br><small>−1 point</small>",
    "sound": "wrong",
    "flash": "#e2483c",
    "flashMax": 0.35
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "Indice 2 : <b>Alès</b>",
+   "waitFor": "#btn-answer"
   },
   {
    "do": "answer",
    "text": "Zidane",
-   "caption": "Indice 2 : <b>Alès</b>"
+   "bubble": "<small>🦁 Les Lions</small>« Zidane ! »"
   },
   {
    "do": "hold",
-   "s": 1.2,
-   "caption": "<i>❌ ZIDANE À ALÈS ?!</i> 💀",
+   "s": 1.1,
+   "caption": "<i>❌ ZIDANE À ALÈS ?!</i> 💀<br><small>−1 point</small>",
    "sound": "wrong",
    "flash": "#e2483c",
    "flashMax": 0.35
   },
   {
    "do": "hold",
-   "s": 0.8,
+   "s": 0.9,
    "caption": "Indice 3 : <b>Brest</b>… il passe 🙈",
    "waitFor": "#btn-pass"
   },
@@ -44,40 +62,48 @@
   },
   {
    "do": "hold",
-   "s": 0.8,
-   "caption": "Les adversaires ont 5 s pour tackler…"
+   "s": 1.0,
+   "caption": "Il passe : les adversaires ont <b>5 s</b> pour tackler…"
   },
   {
    "do": "skipTo",
    "ms": 4600
   },
   {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "Indice 4 : <b>Marseille</b>",
+   "waitFor": "#btn-answer"
+  },
+  {
    "do": "answer",
    "text": "Payet",
-   "caption": "Indice 4 : <b>Marseille</b>"
+   "bubble": "<small>🦁 Les Lions</small>« Payet ! »"
   },
   {
    "do": "hold",
-   "s": 1.2,
-   "caption": "<i>❌ PAYET</i> 😩",
+   "s": 1.1,
+   "caption": "<i>❌ PAYET</i> 😩<br><small>−1 point</small>",
    "sound": "wrong",
    "flash": "#e2483c",
    "flashMax": 0.35
   },
   {
    "do": "hold",
-   "s": 1.0,
-   "caption": "Indice 5 : <b>Bayern</b>… toujours rien",
+   "s": 2.4,
+   "caption": "Indice 5 : <b>Bayern</b>… toujours rien 😶",
+   "info": "<b>Au bout de 30 s</b>, coup de sifflet :<br>la 1<sup>re</sup> équipe qui crie <b>« TACKLE ! »</b><br>vole la réponse.",
    "waitFor": "#btn-answer"
   },
   {
    "do": "skipTo",
-   "ms": 29000
+   "ms": 29000,
+   "info": ""
   },
   {
    "do": "hold",
-   "s": 0.9,
-   "caption": "Et là… 👀"
+   "s": 0.7,
+   "caption": "Coup de sifflet… 👀"
   },
   {
    "do": "hold",
@@ -90,7 +116,8 @@
   {
    "do": "tackle",
    "team": "Renards",
-   "text": "Ribéry"
+   "text": "Ribéry",
+   "bubble": "<small>🦊 Les Renards</small>« Ribéry ! »"
   },
   {
    "do": "hold",

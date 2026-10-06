@@ -22,7 +22,10 @@ Pour vérifier un scénario vite, `STILLS=1` n'enregistre qu'une image sur 15.
 
 `card` est l'identifiant d'une carte Transfert **vérifiée**, par exemple `t043` pour Drogba. La partie se joue à 2 équipes : les Lions ont la main, les Renards tacklent.
 
+En vidéo, l'écran ne défile pas et les panneaux de saisie sont cachés : la réponse tapée s'affiche dans une bulle (« 🦁 Les Lions : « Gervinho ! » »), pour que la vidéo reste lisible.
+
 Chaque étape (`steps`) peut avoir :
+- `info` : un encadré d'explication au milieu de l'écran (règle du jeu, Tackle). `""` pour l'enlever.
 - `caption` : le sous-titre, qui reste affiché jusqu'au suivant. `<b>` pour l'or, `<i>` pour le rouge, emojis acceptés. `""` pour effacer.
 - `sound` : `kickoff`, `wrong`, `right`, `tackle`, `tap` ou `end` (fichiers de `sfx/`).
 - `flash` : couleur d'un flash plein écran (`flashMax` pour son intensité).
@@ -30,10 +33,10 @@ Chaque étape (`steps`) peut avoir :
 
 Et une action, `do` :
 - `hold` : attendre `s` secondes ;
-- `answer` : l'équipe qui a la main répond `text` (Répondre, saisie, confirmation) ;
+- `answer` : l'équipe qui a la main répond `text` (bulle `bubble`, durée `think` en secondes) ;
 - `pass` : l'équipe qui a la main passe l'indice ;
 - `skipTo` : coupe au montage, `ms` millisecondes passent sans être filmées (par exemple jusqu'au sifflet du Tackle) ;
-- `tackle` : l'équipe `team` tackle et répond `text` ;
+- `tackle` : l'équipe `team` tackle et répond `text` (bulle `bubble`) ;
 - `end` : écran de fin (`q`, `tag`, `cta`) pendant `s` secondes.
 
 Les mauvaises réponses doivent rester crédibles : un joueur qui est vraiment passé par le club de l'indice. C'est ce qui fait réagir en commentaire.

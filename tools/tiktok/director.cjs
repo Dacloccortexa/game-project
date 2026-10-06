@@ -31,10 +31,22 @@ const OVERLAY_CSS = `
   font-family: "Oswald", sans-serif; }
 #ad .cap b { color: #f5c542; }
 #ad .cap i { font-style: normal; color: #ff6b5a; }
+#ad .cap small { font-size: 17px; color: #ffb4a8; letter-spacing: .04em; }
 #ad .emo { height: 1.05em; width: auto; vertical-align: -0.17em; margin: 0 .05em; }
 #ad .tap { position: absolute; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%;
   background: rgba(255,255,255,.55); border: 3px solid #fff; box-shadow: 0 0 18px rgba(255,255,255,.7); }
 #ad .flash { position: absolute; inset: 0; }
+#ad .bub { position: absolute; left: 50%; top: 168px; transform: translateX(-50%); max-width: 330px; white-space: nowrap;
+  font: 700 24px/1.15 "Oswald", sans-serif; color: #10140f; background: #f8f6ed; padding: 10px 18px 11px; border-radius: 22px;
+  box-shadow: 0 8px 26px rgba(0,0,0,.55); }
+#ad .bub small { display: block; font: 600 13px/1.2 "Oswald", sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #5b6b5f; }
+#ad .bub:after { content: ""; position: absolute; left: 34px; bottom: -9px; border: 10px solid transparent; border-top-color: #f8f6ed; border-bottom: 0; }
+#ad .info { position: absolute; left: 50%; top: 360px; transform: translateX(-50%); width: 316px; text-align: center;
+  font: 600 18px/1.3 "Oswald", sans-serif; color: #fff; background: rgba(6,16,10,.9); border: 2px solid #f5c542; border-radius: 16px;
+  padding: 12px 14px; box-shadow: 0 8px 26px rgba(0,0,0,.6); }
+#ad .info b { color: #f5c542; }
+/* Mode vidéo : on cache les panneaux de saisie (la réponse s'affiche en bulle) et l'écran ne défile pas. */
+#type-box, #confirm-box, #tackle-team-picker, #tackle-answer-zone { opacity: 0 !important; }
 #ad .end { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(20,40,25,.94), rgba(3,8,5,.98));
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; color: #fff; }
 #ad .end .q { font-weight: 700; font-size: 34px; line-height: 1.1; text-transform: uppercase; padding: 0 22px; font-family: "Oswald", sans-serif; }
@@ -70,14 +82,17 @@ const OVERLAY_CSS = `
   // --- horloge vidéo ---
   let t = 0, frame = 0;
   const events = []; // sons à poser au montage
-  let caption = null, tap = null, flash = null, end = null;
+  let caption = null, tap = null, flash = null, end = null, bubble = null, info = null;
   async function drawOverlay() {
-    await p.evaluate(({ caption, tap, flash, end, t }) => {
+    await p.evaluate(({ caption, tap, flash, end, bubble, info, t }) => {
       const ad = document.getElementById('ad'); let h = '';
       if (caption) {
         const k = Math.min(1, (t - caption.at) / 160); const s = 0.6 + 0.4 * (1 - Math.pow(1 - k, 3)) + (k >= 1 ? 0 : 0.08 * Math.sin(k * Math.PI));
         h += `<div class="cap" style="transform:translateX(-50%) scale(${s.toFixed(3)});opacity:${Math.min(1, k * 2)}">${caption.html}</div>`;
       }
+      const pop = at => { const k = Math.min(1, (t - at) / 180); return { k, s: 0.7 + 0.3 * (1 - Math.pow(1 - k, 3)) }; };
+      if (bubble) { const { k, s } = pop(bubble.at); h += `<div class="bub" style="transform:translateX(-50%) scale(${s.toFixed(3)});opacity:${Math.min(1, k * 2)}">${bubble.html}</div>`; }
+      if (info) { const { k } = pop(info.at); h += `<div class="info" style="opacity:${k}">${info.html}</div>`; }
       if (tap && t - tap.at < 380) {
         const k = (t - tap.at) / 380;
         h += `<div class="tap" style="left:${tap.x}px;top:${tap.y}px;transform:scale(${(0.7 + k * 0.6).toFixed(2)});opacity:${(1 - k).toFixed(2)}"></div>`;
@@ -91,12 +106,12 @@ const OVERLAY_CSS = `
         h += `<div class="end" style="opacity:${k}"><div class="q">${end.q}</div><img src="assets/ui/web/tackle-logo-brush.webp" style="transform:scale(${(0.85 + 0.15 * k).toFixed(2)})"><div class="tag">${end.tag}</div><div class="cta">${end.cta}</div></div>`;
       }
       ad.innerHTML = h;
-    }, { caption, tap, flash, end, t });
+    }, { caption, tap, flash, end, bubble, info, t });
   }
   async function step(n = 1) {
     for (let i = 0; i < n; i++) {
       await p.clock.runFor(DT);
-      await p.evaluate(dt => document.getAnimations().forEach(a => { try { if (a.playState !== 'finished') { a.pause(); a.currentTime = (a.currentTime || 0) + dt; } } catch (e) {} }), DT);
+      await p.evaluate(dt => { document.scrollingElement.scrollTop = 0; document.getAnimations().forEach(a => { try { if (a.playState !== 'finished') { a.pause(); a.currentTime = (a.currentTime || 0) + dt; } } catch (e) {} }); }, DT);
       await drawOverlay();
       if (!STILLS || frame % 15 === 0) await p.screenshot({ path: `${OUT}/frames/${String(frame).padStart(5, '0')}.jpg`, type: 'jpeg', quality: 90 });
       frame++; t += DT;
@@ -114,11 +129,14 @@ const OVERLAY_CSS = `
     await p.click(sel);
     for (const ch of text) { await p.type(sel, ch); await step(2); }
   }
+  async function quietClick(sel) { await p.evaluate(s => document.querySelector(s).click(), sel); }
+  async function quietFill(sel, text) { await p.evaluate(([s, v]) => { const i = document.querySelector(s); i.value = v; i.dispatchEvent(new Event('input', { bubbles: true })); }, [sel, text]); }
   async function visibleOf(sels) { for (const s of sels) if (await p.isVisible(s)) return s; return null; }
 
   for (const a of script.steps) {
     const waitSel = a.waitFor || (a.do === 'answer' ? '#btn-answer' : a.do === 'pass' ? '#btn-pass' : null);
     if (waitSel) for (let k = 0; k < 150 && !(await p.isVisible(waitSel)); k++) await step(1);
+    if (a.info !== undefined) info = a.info ? { html: emo(a.info), at: t } : null;
     if (a.caption !== undefined) caption = a.caption ? { html: emo(a.caption), at: t } : null;
     if (a.sound) events.push({ t, sound: a.sound });
     if (a.flash) flash = { color: a.flash, max: a.flashMax || 0.5, dur: 450, at: t };
@@ -126,10 +144,11 @@ const OVERLAY_CSS = `
       case 'hold': await step(sec(a.s)); break;
       case 'answer': {
         for (let k = 0; k < 150 && !(await p.isVisible('#btn-answer')); k++) await step(1);
-        await tapEl('#btn-answer'); await step(sec(0.25));
-        await typeIn('#answer-input', a.text); await step(sec(0.2));
-        await tapEl('#btn-submit-answer'); await step(sec(0.35));
-        await tapEl('#btn-confirm-answer');
+        bubble = { html: emo(a.bubble || a.text), at: t };
+        await quietClick('#btn-answer'); await quietFill('#answer-input', a.text);
+        await step(sec(a.think || 0.9));
+        await quietClick('#btn-submit-answer'); await quietClick('#btn-confirm-answer');
+        await step(1); bubble = null;
         break;
       }
       case 'pass': {
@@ -142,17 +161,17 @@ const OVERLAY_CSS = `
         break;
       }
       case 'tackle': {
-        await tapEl('#btn-tackle'); await step(sec(0.35));
+        await tapEl('#btn-tackle'); await step(sec(0.2));
         const idx = await p.evaluate(name => [...document.querySelectorAll('#tackle-team-buttons button')].findIndex(b => b.textContent.includes(name)), a.team);
-        await tapEl(`#tackle-team-buttons button >> nth=${idx}`); await step(sec(0.3));
-        const input = await visibleOf(['#tackle-answer-input']);
-        await typeIn(input, a.text); await step(sec(0.2));
-        await tapEl('#btn-tackle-submit'); await step(sec(0.2));
-        const conf = await visibleOf(['#btn-tackle-confirm', '#btn-confirm-tackle']);
-        if (conf) await tapEl(conf);
+        await p.evaluate(i => document.querySelectorAll('#tackle-team-buttons button')[i].click(), idx);
+        await quietFill('#tackle-answer-input', a.text);
+        bubble = { html: emo(a.bubble || a.text), at: t };
+        await step(sec(a.think || 0.9));
+        await quietClick('#btn-tackle-submit');
+        await step(1); bubble = null;
         break;
       }
-      case 'end': end = { q: emo(a.q), tag: a.tag, cta: a.cta, at: t }; caption = null; await step(sec(a.s)); break;
+      case 'end': info = null; end = { q: emo(a.q), tag: a.tag, cta: a.cta, at: t }; caption = null; await step(sec(a.s)); break;
       case 'debug': console.log('debug', t | 0, await p.evaluate(() => [...document.querySelectorAll('button')].filter(e => e.offsetParent).map(e => e.id || e.textContent.trim()).join(' | '))); break;
     }
   }

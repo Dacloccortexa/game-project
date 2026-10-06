@@ -3,50 +3,70 @@
  "steps": [
   {
    "do": "hold",
-   "s": 1.6,
+   "s": 2.6,
    "caption": "3 indices. Le joueur le plus <b>connu</b> du monde. 😭",
+   "info": "<b>Le jeu :</b> trouve le joueur grâce à ses anciens clubs.<br>2 équipes · 1 téléphone.",
    "sound": "kickoff"
   },
   {
-   "do": "answer",
-   "text": "Falcao",
-   "caption": "Indice 1 : <b>Monaco</b>"
-  },
-  {
    "do": "hold",
-   "s": 1.2,
-   "caption": "<i>❌ Falcao</i>… ok pourquoi pas",
-   "sound": "wrong",
-   "flash": "#e2483c",
-   "flashMax": 0.35
-  },
-  {
-   "do": "answer",
-   "text": "Neymar",
-   "caption": "Indice 2 : <b>PSG</b>"
-  },
-  {
-   "do": "hold",
-   "s": 1.2,
-   "caption": "<i>❌ NEYMAR ?!</i> 💀",
-   "sound": "wrong",
-   "flash": "#e2483c",
-   "flashMax": 0.35
-  },
-  {
-   "do": "hold",
-   "s": 1.0,
-   "caption": "Indice 3 : <b>Real Madrid</b>… il bloque 🫠",
-   "waitFor": "#btn-answer"
-  },
-  {
-   "do": "skipTo",
-   "ms": 29000
+   "s": 0.01,
+   "info": ""
   },
   {
    "do": "hold",
    "s": 0.9,
-   "caption": "Et là… 👀"
+   "caption": "🦁 Les Lions ont la main<br>Indice 1 : <b>Monaco</b>",
+   "waitFor": "#btn-answer"
+  },
+  {
+   "do": "answer",
+   "text": "Falcao",
+   "bubble": "<small>🦁 Les Lions</small>« Falcao ! »"
+  },
+  {
+   "do": "hold",
+   "s": 1.1,
+   "caption": "<i>❌ Falcao</i>… ok pourquoi pas<br><small>−1 point</small>",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "Indice 2 : <b>PSG</b>",
+   "waitFor": "#btn-answer"
+  },
+  {
+   "do": "answer",
+   "text": "Neymar",
+   "bubble": "<small>🦁 Les Lions</small>« Neymar ! »"
+  },
+  {
+   "do": "hold",
+   "s": 1.1,
+   "caption": "<i>❌ NEYMAR ?!</i> 💀<br><small>−1 point</small>",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "hold",
+   "s": 2.4,
+   "caption": "Indice 3 : <b>Real Madrid</b>… il bloque 🫠",
+   "info": "<b>Au bout de 30 s</b>, coup de sifflet :<br>la 1<sup>re</sup> équipe qui crie <b>« TACKLE ! »</b><br>vole la réponse.",
+   "waitFor": "#btn-answer"
+  },
+  {
+   "do": "skipTo",
+   "ms": 29000,
+   "info": ""
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "Coup de sifflet… 👀"
   },
   {
    "do": "hold",
@@ -59,7 +79,8 @@
   {
    "do": "tackle",
    "team": "Renards",
-   "text": "Mbappé"
+   "text": "Mbappé",
+   "bubble": "<small>🦊 Les Renards</small>« Mbappé ! »"
   },
   {
    "do": "hold",
