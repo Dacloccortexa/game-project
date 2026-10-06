@@ -99,6 +99,14 @@ _(À compléter : phrases, idées de vidéos, réactions des testeurs…)_
 - Fin des vidéos : « Joue gratuitement · lafamivy.com/tackle » aujourd'hui. Au lancement, la remplacer par « Gratuit sur l'App Store » (ou rien, quand la pub a son bouton).
 - À faire : versions Vrai ou Faux et Le Match, versions portugaises, une série d'une vidéo par jour, et filmer de vraies soirées (le cri « TACKLE ! »).
 
+### Format court (retour de l'équipe, 2026-10-06)
+
+Note de l'équipe : 8/10 pour la version longue (28 s). Ce qui marche : une vraie partie où l'on cherche avec les joueurs, les mauvaises réponses qui chambrent, le Tackle comme moment fort, la fin « Vos débats foot valent enfin des points. ». À corriger : un début trop lent et une durée trop longue.
+
+Format retenu pour la suite : **11 à 14 s**. Accroche brutale dès la 1re seconde, 3 ou 4 mauvaises réponses enchaînées (temps morts coupés au montage), sifflet, Tackle, réponse, slogan, lien. Scénarios `*-court.json` dans `tools/tiktok/scripts/`.
+- Deux accroches à comparer : avec le nom (« Ils ont eu 5 indices pour trouver DROGBA… 😭 », on regarde le fiasco en sachant la réponse) et sans le nom (« Ils ont eu 5 indices… et ils ont TOUT raté 😭 Toi, tu le trouves ? », on joue avec eux). Publier les deux et garder celle qui retient le mieux.
+- Le format se décline à l'infini : chaque partie peut devenir une vidéo (« Ils n'ont pas reconnu Mbappé », « Le mec qui connaît soi-disant tout », « Il tackle après 2 indices et se ridiculise »).
+
 ## Mesure des pubs (plus tard)
 
 Pour savoir quelles pubs rapportent des achats, on pourra brancher la mesure de TikTok (leur kit ou AppsFlyer/Adjust). Ça changera la déclaration de confidentialité App Store (aujourd'hui « pas de suivi ») et peut-être l'affichage de la fenêtre Apple « Autoriser le suivi ». À décider avec David avant de l'ajouter.

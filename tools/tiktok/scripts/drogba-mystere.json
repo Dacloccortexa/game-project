@@ -1,0 +1,119 @@
+{
+ "card": "t043",
+ "steps": [
+  {
+   "do": "hold",
+   "s": 1.6,
+   "caption": "Ils ont eu 5 indices… et ils ont <i>TOUT</i> raté 😭<br><small>Toi, tu le trouves ?</small>",
+   "sound": "kickoff"
+  },
+  {
+   "do": "answer",
+   "text": "Gervinho",
+   "bubble": "<small>🦁 Les Lions</small>« Gervinho ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "<i>❌ Gervinho ?!</i>",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "answer",
+   "text": "Koscielny",
+   "bubble": "<small>🦁 Les Lions</small>« Koscielny ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "<i>❌ Koscielny…</i> 😭",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "answer",
+   "text": "Gignac",
+   "bubble": "<small>🦁 Les Lions</small>« Gignac ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "<i>❌ GIGNAC</i> 💀",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "answer",
+   "text": "Anelka",
+   "bubble": "<small>🦁 Les Lions</small>« Anelka ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "<i>❌ ANELKA ?!</i> Il était à côté 😩",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "hold",
+   "s": 0.8,
+   "caption": "Shanghai… toujours rien 😶"
+  },
+  {
+   "do": "skipTo",
+   "ms": 29000
+  },
+  {
+   "do": "hold",
+   "s": 0.9,
+   "caption": "Coup de sifflet : <i>TACKLE !</i> 🦊",
+   "sound": "tackle",
+   "flash": "#e2483c",
+   "flashMax": 0.55
+  },
+  {
+   "do": "tackle",
+   "team": "Renards",
+   "text": "Drogba",
+   "bubble": "<small>🦊 Les Renards</small>« Drogba ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.6,
+   "caption": "<b>✅ DROGBA.</b> Volé par les Renards<br><small>Toi, tu l'avais à quel indice ? 👇</small>",
+   "sound": "right",
+   "flash": "#2fbf71",
+   "flashMax": 0.3
+  },
+  {
+   "do": "end",
+   "s": 2.6,
+   "q": "Vos débats foot valent enfin <b>des points</b>.",
+   "tag": "Réponds. Tackle. Renverse le score.",
+   "cta": "Joue gratuitement<br>lafamivy.com/tackle",
+   "sound": "end"
+  }
+ ]
+}

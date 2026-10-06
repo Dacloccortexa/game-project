@@ -1,0 +1,113 @@
+{
+ "card": "t050",
+ "steps": [
+  {
+   "do": "hold",
+   "s": 1.6,
+   "caption": "« Je connais <b>TOUT</b> le foot français »… même pas <b>RIBÉRY</b> 🤡",
+   "sound": "kickoff"
+  },
+  {
+   "do": "answer",
+   "text": "Kanté",
+   "bubble": "<small>🦁 Les Lions</small>« Kanté ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "<i>❌ Kanté</i> 😅",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "answer",
+   "text": "Zidane",
+   "bubble": "<small>🦁 Les Lions</small>« Zidane ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "<i>❌ ZIDANE À ALÈS ?!</i> 💀",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "pass",
+   "caption": "Brest… il passe 🙈"
+  },
+  {
+   "do": "hold",
+   "s": 0.6
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "answer",
+   "text": "Payet",
+   "bubble": "<small>🦁 Les Lions</small>« Payet ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "<i>❌ PAYET</i> 😩",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "hold",
+   "s": 0.8,
+   "caption": "Bayern… toujours rien 😶"
+  },
+  {
+   "do": "skipTo",
+   "ms": 29000
+  },
+  {
+   "do": "hold",
+   "s": 0.9,
+   "caption": "Coup de sifflet : <i>TACKLE !</i> 🦊",
+   "sound": "tackle",
+   "flash": "#e2483c",
+   "flashMax": 0.55
+  },
+  {
+   "do": "tackle",
+   "team": "Renards",
+   "text": "Ribéry",
+   "bubble": "<small>🦊 Les Renards</small>« Ribéry ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.6,
+   "caption": "<b>✅ RIBÉRY.</b> Évidemment<br><small>Toi, tu l'avais à quel indice ? 👇</small>",
+   "sound": "right",
+   "flash": "#2fbf71",
+   "flashMax": 0.3
+  },
+  {
+   "do": "end",
+   "s": 2.6,
+   "q": "Vos débats foot valent enfin <b>des points</b>.",
+   "tag": "Réponds. Tackle. Renverse le score.",
+   "cta": "Joue gratuitement<br>lafamivy.com/tackle",
+   "sound": "end"
+  }
+ ]
+}

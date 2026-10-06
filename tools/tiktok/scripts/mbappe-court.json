@@ -1,0 +1,85 @@
+{
+ "card": "t004",
+ "steps": [
+  {
+   "do": "hold",
+   "s": 1.6,
+   "caption": "Ils n'ont pas reconnu <b>MBAPPÉ</b>. Avec 3 clubs. 😭",
+   "sound": "kickoff"
+  },
+  {
+   "do": "answer",
+   "text": "Falcao",
+   "bubble": "<small>🦁 Les Lions</small>« Falcao ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "<i>❌ Falcao…</i> ok",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "answer",
+   "text": "Neymar",
+   "bubble": "<small>🦁 Les Lions</small>« Neymar ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 0.7,
+   "caption": "<i>❌ NEYMAR ?!</i> 💀",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "hold",
+   "s": 0.8,
+   "caption": "Real Madrid… il bloque 🫠"
+  },
+  {
+   "do": "skipTo",
+   "ms": 29000
+  },
+  {
+   "do": "hold",
+   "s": 0.9,
+   "caption": "Coup de sifflet : <i>TACKLE !</i> 🦊",
+   "sound": "tackle",
+   "flash": "#e2483c",
+   "flashMax": 0.55
+  },
+  {
+   "do": "tackle",
+   "team": "Renards",
+   "text": "Mbappé",
+   "bubble": "<small>🦊 Les Renards</small>« Mbappé ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.6,
+   "caption": "<b>✅ MBAPPÉ.</b> 3 points volés<br><small>Toi, tu l'avais à quel indice ? 👇</small>",
+   "sound": "right",
+   "flash": "#2fbf71",
+   "flashMax": 0.3
+  },
+  {
+   "do": "end",
+   "s": 2.6,
+   "q": "Vos débats foot valent enfin <b>des points</b>.",
+   "tag": "Réponds. Tackle. Renverse le score.",
+   "cta": "Joue gratuitement<br>lafamivy.com/tackle",
+   "sound": "end"
+  }
+ ]
+}

@@ -155,6 +155,15 @@ const OVERLAY_CSS = `
         for (let k = 0; k < 150 && !(await p.isVisible('#btn-pass')); k++) await step(1);
         await tapEl('#btn-pass'); break;
       }
+      case 'cutTo': { // coupe : le jeu avance sans être filmé jusqu'à ce que le bouton apparaisse
+        for (let k = 0; k < 100 && !(await p.isVisible(a.sel || '#btn-answer')); k++) {
+          await p.clock.runFor(100);
+          await p.evaluate(() => document.getAnimations().forEach(x => { try { x.pause(); x.currentTime = (x.currentTime || 0) + 100; } catch (e) {} }));
+        }
+        await p.clock.runFor(400);
+        await p.evaluate(() => document.getAnimations().forEach(x => { try { x.pause(); x.currentTime = (x.currentTime || 0) + 400; } catch (e) {} }));
+        break;
+      }
       case 'skipTo': { // coupe : le temps passe sans être filmé
         await p.clock.runFor(a.ms);
         await p.evaluate(ms => document.getAnimations().forEach(x => { try { x.pause(); x.currentTime = (x.currentTime || 0) + ms; } catch (e) {} }), a.ms);
