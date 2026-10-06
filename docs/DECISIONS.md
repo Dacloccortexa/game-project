@@ -1,5 +1,8 @@
 # DECISIONS.md
 
+## [2026-10-06] Réponses : tolérance « à l'oreille »
+Demande de David (« italli alemmagne » doit passer). En plus des fautes de frappe, la réponse est comparée sur sa prononciation : lettres doublées, ph/f, th/t, y/i, c/k/qu, z/s, w/v et e/s/h muets en fin de mot ne comptent plus, puis la même tolérance s'applique (1 erreur jusqu'à 7 lettres, 2 jusqu'à 14). Comparaison mot à mot (« Morientes » ≠ « Llorente ») et 5 lettres minimum (« Nice » ≠ « Nîmes »). Vérifié sur les 717 noms des cartes : aucune confusion nouvelle entre deux réponses d'une même catégorie.
+
 ## [2026-10-06] Le Match : noms de pays historiques et ponctuation
 Demande de David (« Italie Allemagne » refusé sur une carte RFA–Italie).
 - Alias ajoutés dans `lematch-cards.json` (fr et pt, édités à la main, sans relancer `translate_pt.py`) : Allemagne de l'Ouest → Allemagne ; URSS → Russie, Union soviétique ; Tchécoslovaquie → Tchéquie, République tchèque ; Yougoslavie → Serbie ; Pays-Bas → Hollande ; Corée du Sud → Corée (+ équivalents portugais et anglais).

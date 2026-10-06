@@ -409,6 +409,10 @@ assert.equal(state.cardEnded, true);
   const wg = lm.find(c => c.teams.includes('Allemagne de l’Ouest') && c.teams.includes('Italie'));
   assert.ok(matchesBothTeams('Italie', 'Allemagne', wg));
   assert.ok(matchesBothTeams('alemagne', 'itali', wg));
+  assert.ok(matchesBothTeams('italli', 'alemmagne', wg));
+  assert.ok(ok(byName('Cristiano Ronaldo'), 'kristiano ronaldo'));
+  assert.ok(!matchesAnyAnswer('nice', ['nimes']));
+  assert.ok(!matchesAnyAnswer('fernando morientes', ['fernando llorente']));
   assert.ok(!matchesBothTeams('France', 'Allemagne', wg));
 }
 

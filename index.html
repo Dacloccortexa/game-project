@@ -3342,7 +3342,7 @@
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.06-1350";
+  var APP_VERSION = "2026.10.06-1357";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3629,7 +3629,34 @@
     if (typedNorm.length < 4 || validNorm.length < 4) return false; // trop court, trop risqué
     var maxLen = Math.max(typedNorm.length, validNorm.length);
     var threshold = maxLen <= 7 ? 1 : (maxLen <= 14 ? 2 : 3);
-    return levenshtein(typedNorm, validNorm) <= threshold;
+    if (levenshtein(typedNorm, validNorm) <= threshold) return true;
+    // Même chose sur la prononciation (décision de David, 2026-10-06) : « italli » = « italie »,
+    // « alemmagne » = « allemagne », « Kristiano » = « Cristiano ». Les erreurs « qui sonnent
+    // pareil » (lettres doublées, ph/f, y/i, c/k, e muet final…) ne comptent plus.
+    // Mot à mot quand le nombre de mots est le même : « Morientes » ne vaut pas « Llorente ».
+    var a = soundKey(typedNorm), b = soundKey(validNorm);
+    if (a.length !== b.length) return closeKey(a.join(""), b.join(""));
+    for (var i = 0; i < a.length; i++) {
+      if (a[i] !== b[i] && !closeKey(a[i], b[i])) return false;
+    }
+    return true;
+  }
+
+  function closeKey(a, b) {
+    if (a === b) return true;
+    if (a.length < 5 || b.length < 5) return false; // « Nice » ≠ « Nîmes »
+    var keyLen = Math.max(a.length, b.length);
+    return levenshtein(a, b) <= (keyLen <= 7 ? 1 : (keyLen <= 14 ? 2 : 3));
+  }
+
+  function soundKey(s) {
+    return s.split(" ").map(function (w) {
+      w = w.replace(/ph/g, "f").replace(/th/g, "t").replace(/ck/g, "k").replace(/qu/g, "k")
+        .replace(/c([aou])/g, "k$1").replace(/c$/, "k").replace(/y/g, "i").replace(/w/g, "v")
+        .replace(/z/g, "s").replace(/(.)\1+/g, "$1");
+      if (w.length > 3) w = w.replace(/[esh]+$/, "");
+      return w;
+    });
   }
 
   function matchesAnyAnswer(typed, validAnswersNorm) {
