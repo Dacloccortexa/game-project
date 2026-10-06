@@ -77,7 +77,10 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         [
           "Austria"
@@ -221,7 +224,10 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         [
           "Hungary"
@@ -368,7 +374,10 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Göteborg",
@@ -509,10 +518,17 @@
       "status": "lu",
       "team_aliases": [
         [
-          "Czechoslovakia"
+          "Czechoslovakia",
+          "Tchéquie",
+          "République tchèque",
+          "Chéquia",
+          "Czech Republic"
         ],
         [
-          "Yugoslavia"
+          "Yugoslavia",
+          "Serbie",
+          "Sérvia",
+          "Serbia"
         ]
       ],
       "city": "Viña del Mar",
@@ -656,7 +672,11 @@
           "Brazil"
         ],
         [
-          "Czechoslovakia"
+          "Czechoslovakia",
+          "Tchéquie",
+          "République tchèque",
+          "Chéquia",
+          "Czech Republic"
         ]
       ],
       "city": "Santiago",
@@ -727,11 +747,17 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         [
           "Soviet Union",
-          "Union soviétique"
+          "Union soviétique",
+          "Russie",
+          "Rússia",
+          "Russia"
         ]
       ],
       "city": "Liverpool",
@@ -875,7 +901,10 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Londres",
@@ -1019,7 +1048,10 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Mexico",
@@ -1161,12 +1193,16 @@
       "team_aliases": [
         [
           "Netherlands",
-          "Hollande"
+          "Hollande",
+          "Holanda"
         ],
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Munich",
@@ -1239,7 +1275,8 @@
         ],
         [
           "Netherlands",
-          "Hollande"
+          "Hollande",
+          "Holanda"
         ]
       ],
       "city": "Buenos Aires",
@@ -1382,7 +1419,10 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         []
       ],
@@ -1457,7 +1497,10 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Madrid",
@@ -1529,7 +1572,10 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Guadalajara",
@@ -1675,7 +1721,10 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Mexico",
@@ -1818,7 +1867,10 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         [
           "England"
@@ -1892,7 +1944,10 @@
         [
           "West Germany",
           "RFA",
-          "Allemagne de l'Ouest"
+          "Allemagne de l'Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         [
           "Argentina"
@@ -2184,7 +2239,8 @@
         ],
         [
           "Netherlands",
-          "Hollande"
+          "Hollande",
+          "Holanda"
         ]
       ],
       "city": "Marseille",
@@ -2394,10 +2450,13 @@
       "team_aliases": [
         [
           "Germany",
-          "RFA"
+          "RFA",
+          "Alemanha"
         ],
         [
-          "South Korea"
+          "South Korea",
+          "Corée",
+          "Coreia"
         ]
       ],
       "city": "Séoul",
@@ -2539,7 +2598,8 @@
       "team_aliases": [
         [
           "Germany",
-          "RFA"
+          "RFA",
+          "Alemanha"
         ],
         [
           "Brazil"
@@ -2612,7 +2672,8 @@
       "team_aliases": [
         [
           "Germany",
-          "RFA"
+          "RFA",
+          "Alemanha"
         ],
         [
           "Italy"
@@ -2824,7 +2885,8 @@
         [],
         [
           "Netherlands",
-          "Hollande"
+          "Hollande",
+          "Holanda"
         ]
       ],
       "city": "Le Cap",
@@ -2894,7 +2956,8 @@
       "team_aliases": [
         [
           "Germany",
-          "RFA"
+          "RFA",
+          "Alemanha"
         ],
         [
           "Spain"
@@ -2967,7 +3030,8 @@
       "team_aliases": [
         [
           "Netherlands",
-          "Hollande"
+          "Hollande",
+          "Holanda"
         ],
         [
           "Spain"
@@ -3043,7 +3107,8 @@
         ],
         [
           "Germany",
-          "RFA"
+          "RFA",
+          "Alemanha"
         ]
       ],
       "city": "Belo Horizonte",
@@ -3113,7 +3178,8 @@
       "team_aliases": [
         [
           "Netherlands",
-          "Hollande"
+          "Hollande",
+          "Holanda"
         ],
         [
           "Argentina"
@@ -3186,7 +3252,8 @@
       "team_aliases": [
         [
           "Germany",
-          "RFA"
+          "RFA",
+          "Alemanha"
         ],
         [
           "Argentina"

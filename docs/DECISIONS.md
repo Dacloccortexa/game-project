@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-10-06] Le Match : noms de pays historiques et ponctuation
+Demande de David (« Italie Allemagne » refusé sur une carte RFA–Italie).
+- Alias ajoutés dans `lematch-cards.json` (fr et pt, édités à la main, sans relancer `translate_pt.py`) : Allemagne de l'Ouest → Allemagne ; URSS → Russie, Union soviétique ; Tchécoslovaquie → Tchéquie, République tchèque ; Yougoslavie → Serbie ; Pays-Bas → Hollande ; Corée du Sud → Corée (+ équivalents portugais et anglais).
+- Les fautes de frappe étaient déjà tolérées (1 lettre jusqu'à 7 caractères, 2 jusqu'à 14, 3 au-delà ; 4 caractères minimum). Désormais apostrophes, tirets et points sont aussi ignorés partout (« Etoo » = « Eto'o », « Saint Etienne » = « Saint-Étienne »).
+- Tests ajoutés (Italie/Allemagne, « alemagne »/« itali », refus de France/Allemagne).
+
 ## [2026-10-06] Corrections de la revue du code
 Suite de `docs/REVUE_CODE_2026-10-06.md` (validée par David). Testé (tests automatiques ajoutés + scénarios rejoués dans un navigateur).
 - **Partie jamais raccourcie** : le nombre de manches n'est plus modifié pendant une partie (fin du pack soirée, réponse de RevenueCat). Le choix du joueur est mémorisé et rétabli quand l'accès illimité est confirmé (les abonnés ne repartent plus à 5 manches).

@@ -84,7 +84,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         [
           "Austria",
@@ -243,7 +246,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         [
           "Hungary",
@@ -406,7 +412,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Gotemburgo",
@@ -560,11 +569,18 @@
       "team_aliases": [
         [
           "Czechoslovakia",
-          "Tchécoslovaquie"
+          "Tchécoslovaquie",
+          "Tchéquie",
+          "République tchèque",
+          "Chéquia",
+          "Czech Republic"
         ],
         [
           "Yugoslavia",
-          "Yougoslavie"
+          "Yougoslavie",
+          "Serbie",
+          "Sérvia",
+          "Serbia"
         ]
       ],
       "city": "Viña del Mar",
@@ -722,7 +738,11 @@
         ],
         [
           "Czechoslovakia",
-          "Tchécoslovaquie"
+          "Tchécoslovaquie",
+          "Tchéquie",
+          "République tchèque",
+          "Chéquia",
+          "Czech Republic"
         ]
       ],
       "city": "Santiago",
@@ -799,11 +819,17 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         [
           "Soviet Union",
-          "Union soviétique"
+          "Union soviétique",
+          "Russie",
+          "Rússia",
+          "Russia"
         ]
       ],
       "city": "Liverpool",
@@ -960,7 +986,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Londres",
@@ -1119,7 +1148,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Cidade do México",
@@ -1280,7 +1312,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Munique",
@@ -1516,7 +1551,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         [
           "France"
@@ -1600,7 +1638,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Madrid",
@@ -1680,7 +1721,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Guadalajara",
@@ -1840,7 +1884,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ]
       ],
       "city": "Cidade do México",
@@ -1996,7 +2043,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         [
           "England",
@@ -2077,7 +2127,10 @@
           "West Germany",
           "RFA",
           "Allemagne de l'Ouest",
-          "Allemagne de l’Ouest"
+          "Allemagne de l’Ouest",
+          "Allemagne",
+          "Alemanha",
+          "Germany"
         ],
         [
           "Argentina",
@@ -2634,7 +2687,9 @@
         ],
         [
           "South Korea",
-          "Corée du Sud"
+          "Corée du Sud",
+          "Corée",
+          "Coreia"
         ]
       ],
       "city": "Seul",

@@ -47,7 +47,7 @@ function advance(ms) {
 }
 
 let script = fs.readFileSync('index.html', 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
-script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame, drawFromDeck, playerAnswers, matchesAnyAnswer, renderLmClues};})();');
+script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame, drawFromDeck, playerAnswers, matchesAnyAnswer, matchesBothTeams, renderLmClues};})();');
 const context = {
   document: { getElementById: element, createElement: tag => element(`created-${tag}-${Math.random()}`), querySelector: element, querySelectorAll: () => [] },
   fetch: () => Promise.resolve({ json: () => Promise.resolve({ cards: [], players: [], statements: [] }) }),
@@ -58,7 +58,7 @@ const context = {
 };
 vm.createContext(context);
 vm.runInContext(script, context);
-const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake, pickNextMinigame, drawFromDeck, playerAnswers, matchesAnyAnswer, renderLmClues } = context.testApi;
+const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake, pickNextMinigame, drawFromDeck, playerAnswers, matchesAnyAnswer, matchesBothTeams, renderLmClues } = context.testApi;
 
 function reset(game) {
   timers.clear();
@@ -404,6 +404,12 @@ assert.equal(state.cardEnded, true);
   assert.ok(ok(byName('Xavi'), 'Xavi Hernandez'));
   assert.ok(ok(byName('Sergio Agüero'), 'Kun'));
   assert.ok(ok(byName('Kaká'), 'kaka'));
+  assert.ok(ok(byName("Samuel Eto'o"), 'Etoo'));
+  const lm = JSON.parse(fs.readFileSync('src/data/lematch-cards.json', 'utf8')).cards;
+  const wg = lm.find(c => c.teams.includes('Allemagne de l’Ouest') && c.teams.includes('Italie'));
+  assert.ok(matchesBothTeams('Italie', 'Allemagne', wg));
+  assert.ok(matchesBothTeams('alemagne', 'itali', wg));
+  assert.ok(!matchesBothTeams('France', 'Allemagne', wg));
 }
 
 // Revue du code 2026-10-06
