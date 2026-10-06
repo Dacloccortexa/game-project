@@ -101,10 +101,15 @@
    "flashMax": 0.3
   },
   {
+   "do": "hold",
+   "s": 1.3,
+   "caption": "Toi, tu l'avais à <b>quel indice</b> ? 👇"
+  },
+  {
    "do": "end",
-   "s": 3.2,
-   "q": "Toi, tu l'avais à <b>quel indice</b> ? 👇",
-   "tag": "Le quiz foot entre potes",
+   "s": 3.4,
+   "q": "Vos débats foot valent enfin <b>des points</b>.",
+   "tag": "Réponds. Tackle. Renverse le score.",
    "cta": "Joue gratuitement<br>lafamivy.com/tackle",
    "sound": "end"
   }
