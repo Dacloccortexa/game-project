@@ -1,0 +1,112 @@
+{
+ "card": "t050",
+ "steps": [
+  {
+   "do": "hold",
+   "s": 1.6,
+   "caption": "« Moi je connais <b>TOUT</b> le foot français » 🤡",
+   "sound": "kickoff"
+  },
+  {
+   "do": "answer",
+   "text": "Kanté",
+   "caption": "Indice 1 : <b>Boulogne</b>"
+  },
+  {
+   "do": "hold",
+   "s": 1.2,
+   "caption": "<i>❌ Kanté</i>… pas loin 😅",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "answer",
+   "text": "Zidane",
+   "caption": "Indice 2 : <b>Alès</b>"
+  },
+  {
+   "do": "hold",
+   "s": 1.2,
+   "caption": "<i>❌ ZIDANE À ALÈS ?!</i> 💀",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "hold",
+   "s": 0.8,
+   "caption": "Indice 3 : <b>Brest</b>… il passe 🙈",
+   "waitFor": "#btn-pass"
+  },
+  {
+   "do": "pass"
+  },
+  {
+   "do": "hold",
+   "s": 0.8,
+   "caption": "Les adversaires ont 5 s pour tackler…"
+  },
+  {
+   "do": "skipTo",
+   "ms": 4600
+  },
+  {
+   "do": "answer",
+   "text": "Payet",
+   "caption": "Indice 4 : <b>Marseille</b>"
+  },
+  {
+   "do": "hold",
+   "s": 1.2,
+   "caption": "<i>❌ PAYET</i> 😩",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "Indice 5 : <b>Bayern</b>… toujours rien",
+   "waitFor": "#btn-answer"
+  },
+  {
+   "do": "skipTo",
+   "ms": 29000
+  },
+  {
+   "do": "hold",
+   "s": 0.9,
+   "caption": "Et là… 👀"
+  },
+  {
+   "do": "hold",
+   "s": 0.9,
+   "caption": "<i>TACKLE !</i> 🦊",
+   "sound": "tackle",
+   "flash": "#e2483c",
+   "flashMax": 0.55
+  },
+  {
+   "do": "tackle",
+   "team": "Renards",
+   "text": "Ribéry"
+  },
+  {
+   "do": "hold",
+   "s": 1.8,
+   "caption": "<b>✅ RIBÉRY.</b> Évidemment.",
+   "sound": "right",
+   "flash": "#2fbf71",
+   "flashMax": 0.3
+  },
+  {
+   "do": "end",
+   "s": 3.2,
+   "q": "Toi, tu l'avais à <b>quel indice</b> ? 👇",
+   "tag": "Le quiz foot entre potes",
+   "cta": "Joue gratuitement<br>lafamivy.com/tackle",
+   "sound": "end"
+  }
+ ]
+}

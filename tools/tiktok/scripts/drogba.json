@@ -1,0 +1,107 @@
+{
+ "card": "t043",
+ "steps": [
+  {
+   "do": "hold",
+   "s": 1.6,
+   "caption": "Le joueur le plus <b>FACILE</b> du jeu… et il se plante <i>4&nbsp;fois</i> 🤦‍♂️",
+   "sound": "kickoff"
+  },
+  {
+   "do": "answer",
+   "text": "Gervinho",
+   "caption": "Indice 1 : <b>Le Mans</b>"
+  },
+  {
+   "do": "hold",
+   "s": 1.3,
+   "caption": "<i>❌ Gervinho ?!</i>",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "answer",
+   "text": "Koscielny",
+   "caption": "Indice 2 : <b>Guingamp</b>"
+  },
+  {
+   "do": "hold",
+   "s": 1.3,
+   "caption": "<i>❌ Koscielny…</i> sérieux 😭",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "answer",
+   "text": "Gignac",
+   "caption": "Indice 3 : <b>Marseille</b>"
+  },
+  {
+   "do": "hold",
+   "s": 1.3,
+   "caption": "<i>❌ GIGNAC</i> 💀",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "answer",
+   "text": "Anelka",
+   "caption": "Indice 4 : <b>Chelsea</b>… c'est cadeau là"
+  },
+  {
+   "do": "hold",
+   "s": 1.3,
+   "caption": "<i>❌ ANELKA ?!</i> 😩",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "Indice 5. Il hésite encore…",
+   "waitFor": "#btn-answer"
+  },
+  {
+   "do": "skipTo",
+   "ms": 29000
+  },
+  {
+   "do": "hold",
+   "s": 0.9,
+   "caption": "Et là… 👀"
+  },
+  {
+   "do": "hold",
+   "s": 0.9,
+   "caption": "<i>TACKLE !</i> 🦊",
+   "sound": "tackle",
+   "flash": "#e2483c",
+   "flashMax": 0.55
+  },
+  {
+   "do": "tackle",
+   "team": "Renards",
+   "text": "Drogba"
+  },
+  {
+   "do": "hold",
+   "s": 1.8,
+   "caption": "<b>✅ DROGBA.</b> Les Renards volent le point",
+   "sound": "right",
+   "flash": "#2fbf71",
+   "flashMax": 0.3
+  },
+  {
+   "do": "end",
+   "s": 3.2,
+   "q": "Toi, tu l'avais à <b>quel indice</b> ? 👇",
+   "tag": "Le quiz foot entre potes",
+   "cta": "Joue gratuitement<br>lafamivy.com/tackle",
+   "sound": "end"
+  }
+ ]
+}

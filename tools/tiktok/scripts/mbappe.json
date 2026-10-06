@@ -1,0 +1,81 @@
+{
+ "card": "t004",
+ "steps": [
+  {
+   "do": "hold",
+   "s": 1.6,
+   "caption": "3 indices. Le joueur le plus <b>connu</b> du monde. 😭",
+   "sound": "kickoff"
+  },
+  {
+   "do": "answer",
+   "text": "Falcao",
+   "caption": "Indice 1 : <b>Monaco</b>"
+  },
+  {
+   "do": "hold",
+   "s": 1.2,
+   "caption": "<i>❌ Falcao</i>… ok pourquoi pas",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "answer",
+   "text": "Neymar",
+   "caption": "Indice 2 : <b>PSG</b>"
+  },
+  {
+   "do": "hold",
+   "s": 1.2,
+   "caption": "<i>❌ NEYMAR ?!</i> 💀",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "Indice 3 : <b>Real Madrid</b>… il bloque 🫠",
+   "waitFor": "#btn-answer"
+  },
+  {
+   "do": "skipTo",
+   "ms": 29000
+  },
+  {
+   "do": "hold",
+   "s": 0.9,
+   "caption": "Et là… 👀"
+  },
+  {
+   "do": "hold",
+   "s": 0.9,
+   "caption": "<i>TACKLE !</i> 🦊",
+   "sound": "tackle",
+   "flash": "#e2483c",
+   "flashMax": 0.55
+  },
+  {
+   "do": "tackle",
+   "team": "Renards",
+   "text": "Mbappé"
+  },
+  {
+   "do": "hold",
+   "s": 1.8,
+   "caption": "<b>✅ MBAPPÉ.</b> 3 points volés",
+   "sound": "right",
+   "flash": "#2fbf71",
+   "flashMax": 0.3
+  },
+  {
+   "do": "end",
+   "s": 3.2,
+   "q": "Toi, tu l'avais à <b>quel indice</b> ? 👇",
+   "tag": "Le quiz foot entre potes",
+   "cta": "Joue gratuitement<br>lafamivy.com/tackle",
+   "sound": "end"
+  }
+ ]
+}
