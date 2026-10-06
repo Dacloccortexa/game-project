@@ -80,7 +80,7 @@ Remplace l'ancien concept « Le Faux ». Une carte présente jusqu'à **5 affirm
 
 **Tackle sur ce jeu :** applique la fenêtre commune de 30 + 5 secondes décrite ci-dessus, sans fenêtre séparée. Les cinq affirmations gardent leur cagnotte de 1 à 5 points.
 
-Le contenu provient d'un jeu de 2 000 affirmations (1 000 vraies, 1 000 fausses) préparé par David, dérivées de données déjà vérifiées (années de naissance, tailles, pied fort, poste, ordre des clubs, ville de naissance, débuts professionnels) avec sources par affirmation. Chaque fait dispose d'une version vraie et d'une version fausse regroupées par un identifiant commun, pour ne jamais réunir deux énoncés sur le même fait dans une même carte. Implémenté dans `index.html` (`src/data/vraifaux-statements.json`).
+Le fichier conserve les 2 000 affirmations (1 000 vraies, 1 000 fausses) préparées par David, avec leurs sources et leurs groupes de faits. Depuis le recalibrage du 6 octobre, les 470 affirmations demandant une valeur exacte (année de naissance, taille ou année de début professionnel) sont exclues du tirage, sans être supprimées du fichier : **1 530 affirmations restent jouables**. Une carte réunit cinq faits distincts et **au plus deux comparaisons d'âge ou de taille** ; les autres affirmations portent sur les clubs, le pied fort, le poste ou la ville de naissance. Chaque fait dispose de versions vraie et fausse regroupées sous le même identifiant, qui ne peuvent apparaître ensemble sur une carte. Implémenté dans `index.html` (`src/data/vraifaux-statements.json`). Voir [l'audit du 6 octobre](VRAI_FAUX_AUDIT_2026-10-06.md).
 
 ## Quatrième mini-jeu prévu : Qui suis-je ?
 
