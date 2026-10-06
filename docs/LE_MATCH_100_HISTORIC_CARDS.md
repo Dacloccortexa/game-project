@@ -6,7 +6,7 @@ Les résultats, dates, équipes et phases sont issus des archives [openfootball/
 
 Le score affiché est celui du match après prolongation lorsqu’il y en a une ; une éventuelle séance de tirs au but reste distincte et ne modifie pas le score. L’Euro 2020 s’est joué en 2021 : l’indice « année » indique l’année civile du match, donc 2021. Les matchs de Coupe du monde 1950, 1978 et 1982 respectent leur formule historique de groupes finaux ou de deuxième tour.
 
-Ces cartes utilisent les cinq indices actuellement en jeu : compétition, année, score, ville, phase. Leur ajout ne tranche pas le réordonnancement des indices discuté après les essais entre amis. Les nouveaux matchs restent signalables depuis le bouton prévu dans le jeu.
+Ces cartes utilisent les cinq indices actuellement en jeu : score, ville, phase, année, compétition, aux paliers 5, 4, 3, 2 et 1 point. Les nouveaux matchs restent signalables depuis le bouton prévu dans le jeu.
 
 ## Coupe du monde
 

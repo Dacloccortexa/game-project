@@ -132,11 +132,11 @@ assert.equal(currentTackleStake(), 4);
 assert.equal(element('btn-tackle').disabled, true);
 
 reset('lematch');
-state.currentLmCard = {teams:['A','B'], clues:['Coupe du monde','Année : 2018','Score final : 4–2','Ville : Moscou','Phase : Finale']};
+state.currentLmCard = {teams:['A','B'], clues:['Score final : 4–2','Ville : Moscou','Phase : Finale','Année : 2018','Coupe du monde']};
 state.lmRevealedCount = 1;
 renderLmClues();
 assert.equal(element('lm-event-list').children.length, 5);
-assert.equal(element('lm-event-list').children[0].children[2].children[0].textContent, 'Coupe du monde');
+assert.equal(element('lm-event-list').children[0].children[2].children[0].textContent, 'Score final : 4–2');
 assert.equal(element('lm-event-list').children[1].children[2].children[0].textContent, 'Indice à venir');
 startTackleWindow();
 assert.equal(currentTackleStake(), 5);
@@ -145,7 +145,7 @@ advance(15000);
 assert.equal(state.lmRevealedCount, 2);
 assert.equal(currentTackleStake(), 4);
 assert.equal(element('btn-tackle').disabled, true);
-assert.equal(element('lm-event-list').children[1].children[2].children[0].textContent, 'Année : 2018');
+assert.equal(element('lm-event-list').children[1].children[2].children[0].textContent, 'Ville : Moscou');
 
 reset('transfert');
 state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
