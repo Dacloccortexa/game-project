@@ -2,6 +2,18 @@
 
 Analyse demandée par David après les journaux de parties du 29 septembre au 3 octobre. Les chiffres ci-dessous décrivent les cartes **avant** le recalibrage du 3 octobre.
 
+## Audit des réponses concurrentes — 6 octobre 2026
+
+Première passe sur les **100 fiches** avec recherche de joueurs susceptibles de satisfaire les cinq faits, y compris hors du lot. Trois collisions démontrées ont été corrigées dans les versions française et portugaise :
+
+| Fiche | Autre réponse valable avant correction | Correction sourcée |
+| --- | --- | --- |
+| qs052 · João Moutinho | Bernardo Silva a lui aussi joué à Monaco avec Mbappé et gagné le championnat portugais avec Benfica en 2013/14 ; [Monaco](https://www.asmonaco.com/en/joueurs/bernardo-silva), [Benfica](https://www.slbenfica.pt/pt-pt/instalacoes/museu-benfica/ecras-interactivos/area-06/2013-14). | Le dernier indice devient « Ligue Europa 2011 », remportée par Porto avec Moutinho ; [UEFA](https://www.uefa.com/MultimediaFiles/Download/competitions/Statistics/01/85/99/82/1859982_DOWNLOAD.pdf). |
+| qs066 · Nani | Cristiano Ronaldo remplit aussi l'ancienne combinaison Sporting, Premier League, ailier portugais et coéquipier de Pogba à Manchester United ; [Manchester United](https://www.manutd.com/en/news/five-previous-portuguese-players-who-have-represented-man-utd), [effectif 2021](https://ir.manutd.com/~/media/Files/M/Manutd-IR/documents/2021-mu-plc-form-20-f.pdf). | Le dernier indice devient Fenerbahçe, où Nani a joué ; [UEFA](https://www.uefa.com/uefaeuro/history/news/0253-0d80dd18b958-3e6ccbda28c0-1000--portugal-s-nani-on-capoeira-and-cristiano-ronaldo/). |
+| qs080 · Rivaldo | Ronaldinho a lui aussi joué à l'AC Milan, gagné la Liga, joué avec Saviola à Barcelone et occupé un rôle offensif ; [Barcelone](https://players.fcbarcelona.com/es/jugador/763-ronaldinho-ronaldo-assis-moreira), [UEFA](https://www.uefa.com/uefachampionsleague/news/0253-0d800887aac2-25900ede1fb7-1000--neymar-sets-new-mark-leading-brazilians-in-europe/). | Le dernier indice devient Olympiakos, où Rivaldo a joué ; [UEFA](https://www.uefa.com/news-media/news/01c1-0f84afd09be1-fdb49375fbe2-1000--aek-ambition-appeals-to-rivaldo/). |
+
+Les 97 autres fiches n'ont pas révélé de collision certaine dans cette première passe. **Cela ne prouve pas qu'il n'en existe aucune** : continuer le contrôle avec d'autres candidats et les signalements de parties. Un fait absent des cinq indices n'est jamais une preuve qu'un joueur n'a pas connu ce club ou ce titre.
+
 ## Ordre adapté à chaque carte — 6 octobre 2026
 
 David a validé l'abandon de l'ordre de catégories identique pour toutes les fiches. Les cinq faits déjà sourcés restent chacun sur une fiche distincte ; les paliers restent **5 / 4 / 3 / 2 / 1**. Le club, le titre, le poste, le coéquipier et la nationalité peuvent maintenant apparaître à des positions différentes selon le joueur.
