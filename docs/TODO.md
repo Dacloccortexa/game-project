@@ -37,7 +37,7 @@
 - ⏳ Le Match : retester en partie la difficulté des 103 fiches avec les nouveaux indices et corriger les erreurs signalées. La Coupe du monde 1950 n'avait pas de finale/demi-finale officielle ; 1974 et 1978 n'avaient pas de demi-finale officielle.
 - ✅ Tackle commun : minuteur réinitialisé à chaque indice, événement, comparaison et affirmation ; délai 30 + 15 secondes, première réponse adverse retenue, encaissement automatique des cagnottes binaires à l'expiration. Vérifié par `tests/tackle-timing.test.cjs`.
 - ✅ Consistance Tackle : `GAME_DESIGN.md` et `tests/tackle-timing.test.cjs` étaient restés sur +5/−5 partout alors que le code appliquait déjà un palier (5/4/3/2/1, vol de réponse) ou un forfait de 3 points (Plus ou Moins/Vrai ou Faux). Doc et test corrigés pour suivre le code réellement en ligne — voir DECISIONS.md du 2026-09-28. Forfait de 3 points confirmé par David le 2026-09-28.
-- ⏳ Ajouter un bouton « Signaler cette question » sur les cartes de tous les mini-jeux. Le signalement doit identifier le jeu, la carte et l'indice, l'événement ou l'affirmation en cause, permettre un court commentaire et ne pas modifier les points ni interrompre la partie. Prévoir ensuite une liste de signalements à examiner, corriger et marquer comme résolus.
+- ✅ Bouton « Signaler une erreur sur cette question » en fin de carte, tous défis (mail prérempli vers contact@lafamivy.com : défi, carte, réponse attendue, réponses tapées, version), et « Nous contacter » dans Réglages. Les signalements arrivent dans la boîte de David. Voir DECISIONS.md du 2026-10-06.
 
 ## Arbitrages de game design à faire avant le déroulé complet
 
