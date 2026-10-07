@@ -5,7 +5,7 @@ Une vraie partie de TACKLE, filmée image par image à 30 images/s en 1080 × 19
 ## Faire une vidéo
 
 1. Écrire un scénario. Deux dossiers :
-   - `scripts/organique/` : vidéos publiées sur le compte TikTok, en série numérotée (« Tu le trouves avant eux ? #1 »). **La réponse n'est jamais montrée** : la vidéo s'arrête sur le cri « TACKLE ! », fin « Tu penses que c'est qui ? 👇 Réponse demain ». Les gens répondent en commentaire ; la réponse est épinglée le lendemain et donnée en ouverture de l'épisode suivant (« Hier : c'était Drogba »). Nom : `NN-joueur.json`.
+   - `scripts/organique/` : vidéos publiées sur le compte TikTok. **La réponse n'est jamais montrée** : la vidéo s'arrête sur le cri « TACKLE ! », fin « Tu penses que c'est qui ? 👇 Réponse en commentaire ». David épingle la réponse en commentaire. Toutes les vidéos commencent pareil (« Trouve le joueur avant eux 👀 »), sans numéro ni renvoi à une autre vidéo : elles peuvent être publiées dans n'importe quel ordre. Nom : `joueur.json`.
    - `scripts/pub/` : pubs payantes (bouton « Télécharger »). La réponse est montrée, puis le slogan et le lien.
 2. Lancer un serveur à la racine du dépôt :
    ```sh
@@ -13,10 +13,10 @@ Une vraie partie de TACKLE, filmée image par image à 30 images/s en 1080 × 19
    ```
 3. Filmer, puis monter (il faut Playwright et ffmpeg) :
    ```sh
-   node tools/tiktok/director.cjs tools/tiktok/scripts/organique/01-drogba.json /tmp/out-01
-   python3 tools/tiktok/render.py /tmp/out-01 tackle-organique-01-drogba
+   node tools/tiktok/director.cjs tools/tiktok/scripts/organique/drogba.json /tmp/out-drogba
+   python3 tools/tiktok/render.py /tmp/out-drogba tackle-organique-drogba
    ```
-   La vidéo sort dans `/tmp/out-01/tackle-organique-01-drogba.mp4`.
+   La vidéo sort dans `/tmp/out-drogba/tackle-organique-drogba.mp4`.
 
 Pour vérifier un scénario vite, `STILLS=1` n'enregistre qu'une image sur 15.
 

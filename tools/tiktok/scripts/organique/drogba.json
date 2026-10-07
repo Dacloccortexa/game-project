@@ -4,7 +4,7 @@
   {
    "do": "hold",
    "s": 1.5,
-   "caption": "Tu le trouves <b>avant eux</b> ? <b>#1</b> 👀",
+   "caption": "Trouve le joueur <b>avant eux</b> 👀",
    "sound": "kickoff",
    "hideClues": true
   },
@@ -123,7 +123,7 @@
    "do": "end",
    "s": 3.2,
    "q": "Tu penses que c'est <b>qui</b> ? 👇",
-   "tag": "<b style='font-size:24px;color:#f5c542'>Réponse demain</b><br><span style='font-size:14px;opacity:.8'>Le quiz foot entre potes</span>",
+   "tag": "<b style='font-size:24px;color:#f5c542'>Réponse en commentaire</b><br><span style='font-size:14px;opacity:.8'>Le quiz foot entre potes</span>",
    "small": true,
    "sound": "end",
    "cta": "Télécharge TACKLE<br>sur l'App&nbsp;Store"
