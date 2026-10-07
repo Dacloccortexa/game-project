@@ -1,0 +1,138 @@
+{
+ "game": "quisuisje",
+ "card": "qs038",
+ "steps": [
+  {
+   "do": "hold",
+   "s": 1.2,
+   "caption": "Hier : c'était <b>DROGBA</b> ✅",
+   "hideClues": true,
+   "sound": "kickoff"
+  },
+  {
+   "do": "hold",
+   "s": 1.5,
+   "caption": "Qui suis-je ? Trouve-le <b>avant eux</b> <b>#2</b> 👀"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "« J'ai joué à <b>Marseille</b> »",
+   "hideClues": false
+  },
+  {
+   "do": "answer",
+   "text": "Payet",
+   "bubble": "<small>🦁 Les Lions</small>« Payet ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "<i>❌ Payet</i>… 😅",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "« Je suis <b>français</b> »"
+  },
+  {
+   "do": "answer",
+   "text": "Valbuena",
+   "bubble": "<small>🦁 Les Lions</small>« Valbuena ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "<i>❌ VALBUENA ?!</i> 😭",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "« Je suis <b>ailier</b> »"
+  },
+  {
+   "do": "answer",
+   "text": "Ben Arfa",
+   "bubble": "<small>🦁 Les Lions</small>« Ben Arfa ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "<i>❌ Ben Arfa</i>… presque 💀",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "« J'ai gagné la <b>Bundesliga</b> »"
+  },
+  {
+   "do": "answer",
+   "text": "Coman",
+   "bubble": "<small>🦁 Les Lions</small>« Coman ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "<i>❌ COMAN ?!</i> Jamais à l'OM 😩",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "« J'ai joué avec <b>Lewandowski</b> »"
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "Les Lions sèchent… 😶"
+  },
+  {
+   "do": "skipTo",
+   "ms": 25300
+  },
+  {
+   "do": "hold",
+   "s": 1.6,
+   "caption": "<i>TACKLE !</i> Les Renards tentent leur chance… 🦊",
+   "sound": "tackle",
+   "flash": "#e2483c",
+   "flashMax": 0.6
+  },
+  {
+   "do": "end",
+   "s": 3.2,
+   "q": "Tu penses que c'est <b>qui</b> ? 👇",
+   "tag": "<b style='font-size:24px;color:#f5c542'>Réponse demain</b><br><span style='font-size:14px;opacity:.8'>Le quiz foot entre potes</span>",
+   "cta": "Télécharge TACKLE<br>sur l'App&nbsp;Store",
+   "small": true,
+   "sound": "end"
+  }
+ ]
+}

@@ -22,7 +22,7 @@ Pour vérifier un scénario vite, `STILLS=1` n'enregistre qu'une image sur 15.
 
 ## Écrire un scénario
 
-`card` est l'identifiant d'une carte Transfert **vérifiée**, par exemple `t043` pour Drogba. La partie se joue à 2 équipes : les Lions ont la main, les Renards tacklent.
+`game` choisit le défi : `transfert` (par défaut) ou `quisuisje`. `card` est l'identifiant d'une carte **vérifiée** de ce défi, par exemple `t043` (Transfert, Drogba) ou `qs038` (Qui suis-je ?, Ribéry). La partie se joue à 2 équipes : les Lions ont la main, les Renards tacklent.
 
 En vidéo, l'écran ne défile pas et les panneaux de saisie sont cachés : la réponse tapée s'affiche dans une bulle (« 🦁 Les Lions : « Gervinho ! » »), pour que la vidéo reste lisible.
 

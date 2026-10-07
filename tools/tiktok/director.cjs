@@ -12,6 +12,12 @@ const script = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
 const OUT = process.argv[3]; fs.mkdirSync(OUT + '/frames', { recursive: true });
 for (const f of fs.readdirSync(OUT + '/frames')) fs.unlinkSync(OUT + '/frames/' + f);
 const STILLS = process.env.STILLS === '1';
+// Défis filmables : Transfert (par défaut) et Qui suis-je ?
+const GAMES = {
+  transfert: { file: 'transfert-cards.json', answer: '#btn-answer', input: '#answer-input', submit: '#btn-submit-answer', confirm: '#btn-confirm-answer', pass: '#btn-pass', clues: '#clue-list', ring: [52, 330] },
+  quisuisje: { file: 'quisuisje-cards.json', answer: '#btn-qsj-answer', input: '#qsj-answer-input', submit: '#btn-qsj-submit-answer', confirm: '#btn-qsj-confirm-answer', pass: '#btn-qsj-pass', clues: '#qsj-clue-list', ring: [292, 232] },
+};
+const G = GAMES[script.game || 'transfert'];
 // Emojis en images Twemoji (le Chromium sans écran n'affiche pas les emojis couleur).
 function emo(html) {
   return html.replace(/\p{Extended_Pictographic}(?:\ufe0f|\u200d\p{Extended_Pictographic}|\u200d[\u2640\u2642]\ufe0f?)*/gu, m => {
@@ -46,10 +52,10 @@ const OVERLAY_CSS = `
   padding: 12px 14px; box-shadow: 0 8px 26px rgba(0,0,0,.6); }
 #ad .info b { color: #f5c542; }
 /* Mode vidéo : on cache les panneaux de saisie (la réponse s'affiche en bulle) et l'écran ne défile pas. */
-#type-box, #confirm-box, #tackle-team-picker, #tackle-answer-zone { opacity: 0 !important; }
+#type-box, #confirm-box, #qsj-type-box, #qsj-confirm-box, #tackle-team-picker, #tackle-answer-zone { opacity: 0 !important; }
 /* Le compte à rebours de la vidéo remplace la bande du chrono du jeu (deux chronos se contrediraient). */
 #turn-clock { opacity: 0 !important; }
-body.ad-hide-clues #clue-list { opacity: 0 !important; }
+body.ad-hide-clues #clue-list, body.ad-hide-clues #qsj-clue-list { opacity: 0 !important; }
 #ad .count { position: absolute; left: 52px; top: 330px; width: 78px; height: 78px; margin: -39px 0 0 -39px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center; font: 700 46px/1 "Oswald", sans-serif; color: #fff;
   background: rgba(6,16,10,.88); box-shadow: 0 6px 22px rgba(0,0,0,.6); }
@@ -67,9 +73,9 @@ body.ad-hide-clues #clue-list { opacity: 0 !important; }
 (async () => {
   const b = await chromium.launch();
   const ctx = await b.newContext({ viewport: { width: 360, height: 640 }, deviceScaleFactor: 3 });
-  const cards = JSON.parse(fs.readFileSync(ROOT + '/src/data/transfert-cards.json', 'utf8'));
+  const cards = JSON.parse(fs.readFileSync(ROOT + '/src/data/' + G.file, 'utf8'));
   const card = cards.cards.find(c => c.id === script.card);
-  await ctx.route('**/src/data/transfert-cards.json', r => r.fulfill({ contentType: 'application/json', body: JSON.stringify({ ...cards, cards: [card] }) }));
+  await ctx.route('**/src/data/' + G.file, r => r.fulfill({ contentType: 'application/json', body: JSON.stringify({ ...cards, cards: [card] }) }));
   await ctx.route('**/__tw/**', r => r.fulfill({ contentType: 'image/svg+xml', body: fs.readFileSync(TWEMOJI + '/' + path.basename(new URL(r.request().url()).pathname)) }));
   const p = await ctx.newPage(); p.on('pageerror', e => console.log('ERR', e.message));
   const T0 = new Date('2026-10-06T18:00:00+04:00').getTime();
@@ -77,7 +83,7 @@ body.ad-hide-clues #clue-list { opacity: 0 !important; }
   await p.goto((process.env.TACKLE_URL || 'http://localhost:8766') + '/index.html'); await p.clock.runFor(2500);
   await p.click('#btn-home-play'); await p.click('#team-count-group [data-value="2"]'); await p.click('#rounds-group [data-value="5"]');
   await p.click('#btn-open-challenges');
-  for (const g of ['plusoumoins', 'vraifaux', 'quisuisje', 'lematch']) {
+  for (const g of ['transfert', 'plusoumoins', 'vraifaux', 'quisuisje', 'lematch'].filter(g => g !== (script.game || 'transfert'))) {
     const el = await p.$(`#challenge-list [data-game="${g}"]`);
     if ((await el.getAttribute('aria-pressed')) === 'true' || (await el.getAttribute('aria-checked')) === 'true') await el.click();
   }
@@ -104,7 +110,7 @@ body.ad-hide-clues #clue-list { opacity: 0 !important; }
         const left = count.dur - (t - count.at), n = Math.max(1, Math.ceil(left / 1000)), frac = Math.max(0, left / count.dur);
         const deg = Math.round(frac * 360), col = n === 1 ? '#ff6b5a' : '#f5c542';
         const pulse = 1 + 0.12 * Math.max(0, 1 - ((count.dur - left) % 1000) / 220);
-        h += `<div class="count${n === 1 ? ' last' : ''}" style="transform:scale(${pulse.toFixed(3)});background:radial-gradient(closest-side, rgba(6,16,10,.92) 82%, transparent 84% 100%), conic-gradient(${col} ${deg}deg, rgba(255,255,255,.15) 0)">${n}</div>`;
+        h += `<div class="count${n === 1 ? ' last' : ''}" style="left:${count.x}px;top:${count.y}px;transform:scale(${pulse.toFixed(3)});background:radial-gradient(closest-side, rgba(6,16,10,.92) 82%, transparent 84% 100%), conic-gradient(${col} ${deg}deg, rgba(255,255,255,.15) 0)">${n}</div>`;
       }
       if (tap && t - tap.at < 380) {
         const k = (t - tap.at) / 380;
@@ -147,7 +153,7 @@ body.ad-hide-clues #clue-list { opacity: 0 !important; }
   async function visibleOf(sels) { for (const s of sels) if (await p.isVisible(s)) return s; return null; }
 
   for (const a of script.steps) {
-    const waitSel = a.waitFor || (a.do === 'answer' ? '#btn-answer' : a.do === 'pass' ? '#btn-pass' : null);
+    const waitSel = a.waitFor || (a.do === 'answer' ? G.answer : a.do === 'pass' ? G.pass : null);
     if (waitSel) for (let k = 0; k < 150 && !(await p.isVisible(waitSel)); k++) await step(1);
     if (a.hideClues !== undefined) await p.evaluate(on => document.body.classList.toggle('ad-hide-clues', on), !!a.hideClues);
     if (a.info !== undefined) info = a.info ? { html: emo(a.info), at: t } : null;
@@ -157,25 +163,25 @@ body.ad-hide-clues #clue-list { opacity: 0 !important; }
     switch (a.do) {
       case 'hold': await step(sec(a.s)); break;
       case 'count': { // compte à rebours affiché, avec un tic par seconde
-        count = { dur: a.s * 1000, at: t };
+        count = { dur: a.s * 1000, at: t, x: G.ring[0], y: G.ring[1] };
         for (let k = 0; k < a.s; k++) { events.push({ t, sound: 'tick' }); await step(FPS); }
         count = null; break;
       }
       case 'answer': {
-        for (let k = 0; k < 150 && !(await p.isVisible('#btn-answer')); k++) await step(1);
+        for (let k = 0; k < 150 && !(await p.isVisible(G.answer)); k++) await step(1);
         bubble = { html: emo(a.bubble || a.text), at: t };
-        await quietClick('#btn-answer'); await quietFill('#answer-input', a.text);
+        await quietClick(G.answer); await quietFill(G.input, a.text);
         await step(sec(a.think || 0.9));
-        await quietClick('#btn-submit-answer'); await quietClick('#btn-confirm-answer');
+        await quietClick(G.submit); await quietClick(G.confirm);
         await step(1); bubble = null;
         break;
       }
       case 'pass': {
-        for (let k = 0; k < 150 && !(await p.isVisible('#btn-pass')); k++) await step(1);
-        await tapEl('#btn-pass'); break;
+        for (let k = 0; k < 150 && !(await p.isVisible(G.pass)); k++) await step(1);
+        await tapEl(G.pass); break;
       }
       case 'cutTo': { // coupe : le jeu avance sans être filmé jusqu'à ce que le bouton apparaisse
-        for (let k = 0; k < 100 && !(await p.isVisible(a.sel || '#btn-answer')); k++) {
+        for (let k = 0; k < 100 && !(await p.isVisible(a.sel || G.answer)); k++) {
           await p.clock.runFor(100);
           await p.evaluate(() => document.getAnimations().forEach(x => { try { x.pause(); x.currentTime = (x.currentTime || 0) + 100; } catch (e) {} }));
         }
