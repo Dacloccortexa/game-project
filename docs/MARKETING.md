@@ -117,7 +117,7 @@ Distinction entre **pub payante** (on montre la réponse, slogan, bouton « Tél
 - Ne pas épingler la réponse tout de suite : laisser les gens débattre. L'épingler le lendemain.
 - Série numérotée (#1, #2…), une par jour. L'épisode suivant s'ouvre 1 s sur « Hier : c'était Drogba », puis enchaîne sur le nouveau joueur. Boucle quotidienne : jouer → commenter → revenir.
 - Pas de « télécharge l'appli » appuyé : TACKLE en petit à la fin. Le spectateur aime d'abord le jeu, puis découvre qu'il existe une appli.
-- Fin des épisodes : un bouton « Bientôt sur l'App Store » sous le logo (choix de David). Le jour de la sortie, le remplacer par « Télécharge TACKLE sur l'App Store » dans les scénarios de `tools/tiktok/scripts/organique/`.
+- Fin des épisodes : bouton « Télécharge TACKLE sur l'App Store » sous le logo. David ne publie les vidéos qu'une fois l'appli disponible sur l'App Store.
 - Préparer les épisodes d'avance et les programmer.
 - Scénarios : `tools/tiktok/scripts/organique/` ; pubs : `tools/tiktok/scripts/pub/`.
 
