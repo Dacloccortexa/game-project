@@ -123,7 +123,7 @@
   {
    "do": "end",
    "s": 3.2,
-   "q": "Tu penses que c'est <b>qui</b> ? 👇",
+   "q": "Tu penses que<br>c'est <b>qui</b> ? 👇",
    "tag": "<b style='font-size:24px;color:#f5c542'>Réponse en commentaire</b><br><span style='font-size:14px;opacity:.8'>Le quiz foot entre potes</span>",
    "cta": "Télécharge TACKLE<br>sur l'App&nbsp;Store",
    "small": true,
