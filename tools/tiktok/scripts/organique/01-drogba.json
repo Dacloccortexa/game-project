@@ -121,11 +121,12 @@
   },
   {
    "do": "end",
-   "s": 3.0,
+   "s": 3.2,
    "q": "Tu penses que c'est <b>qui</b> ? 👇",
    "tag": "<b style='font-size:24px;color:#f5c542'>Réponse demain</b><br><span style='font-size:14px;opacity:.8'>Le quiz foot entre potes</span>",
    "small": true,
-   "sound": "end"
+   "sound": "end",
+   "cta": "Bientôt sur l'App Store "
   }
  ]
 }
