@@ -117,6 +117,7 @@ Distinction entre **pub payante** (on montre la réponse, slogan, bouton « Tél
 - David met la réponse en commentaire. Ceux qui ont trouvé l'écrivent aussi (« Drogba dès Guingamp »), les autres ouvrent les commentaires pour la voir.
 - Toutes les vidéos commencent de la même façon (« Trouve le joueur avant eux 👀 »), **sans numéro ni renvoi à la vidéo précédente** : David choisit l'ordre de publication.
 - Publication seulement une fois l'appli disponible sur l'App Store.
+- **Validées par David le 2026-10-07** : `organique/drogba.json` (Transfert, réponse : Didier Drogba) et `organique/ribery.json` (Qui suis-je ?, réponse : Franck Ribéry). Elles servent de modèle pour les suivantes.
 - Défis filmables : Transfert et Qui suis-je ?. Scénarios : `tools/tiktok/scripts/organique/` ; pubs : `tools/tiktok/scripts/pub/`.
 
 ## Mesure des pubs (plus tard)
