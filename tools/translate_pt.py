@@ -21,6 +21,9 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "src" / "data"
 OUT = DATA / "pt"
 NAMES = json.loads((ROOT / "tools" / "i18n" / "pt_names.json").read_text(encoding="utf-8"))
+EXTRA = json.loads((ROOT / "tools" / "i18n" / "pt_new_players_2026.json").read_text(encoding="utf-8"))
+for section, values in EXTRA.items():
+    NAMES.setdefault(section, {}).update(values)
 
 FILES = ["transfert-cards", "quisuisje-cards", "lematch-cards", "vraifaux-statements"]
 

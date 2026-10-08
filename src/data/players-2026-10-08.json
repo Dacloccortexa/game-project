@@ -1,0 +1,7138 @@
+{
+  "description": "Cent nouvelles fiches joueurs utilisées pour Transfert, Qui suis-je ? et Vrai ou Faux. Les faits et les passages source sont extraits des révisions Wikipédia liées ; les cartes Transfert retiennent des extraits. Les indices de difficulté restent à tester en partie. Aucune affirmation sur le pied fort sans source explicite.",
+  "verified_date": "2026-10-08",
+  "players": [
+    {
+      "answer": "Jude Bellingham",
+      "wikipedia_title": "Jude Bellingham",
+      "revision": 1379046959,
+      "source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+      "birth_year": 2003,
+      "birth_place": "Stourbridge",
+      "height_cm": 186,
+      "position": "milieu offensif",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Birmingham City",
+          "years": "2019–2020"
+        },
+        {
+          "club": "Borussia Dortmund",
+          "years": "2020–2023"
+        },
+        {
+          "club": "Real Madrid",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "* UEFA Champions League: 2023–24",
+      "teammate": {
+        "name": "Jadon Sancho",
+        "shared_club": "Borussia Dortmund",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Birmingham City",
+          "start": 2019,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund",
+          "start": 2020,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Harry Kane",
+      "wikipedia_title": "Harry Kane",
+      "revision": 1378956672,
+      "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+      "birth_year": 1993,
+      "birth_place": "Leytonstone",
+      "height_cm": 188,
+      "position": "attaquant",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Tottenham",
+          "years": "2009–2023"
+        },
+        {
+          "club": "Leyton Orient (prêt)",
+          "years": "2011"
+        },
+        {
+          "club": "Norwich City (prêt)",
+          "years": "2012–2013"
+        },
+        {
+          "club": "Leicester City (prêt)",
+          "years": "2013"
+        },
+        {
+          "club": "Bayern Munich",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "Bundesliga",
+      "title_evidence": "* Bundesliga: 2024–25, 2025–26",
+      "teammate": {
+        "name": "Son Heung-min",
+        "shared_club": "Tottenham",
+        "source": "https://en.wikipedia.org/w/index.php?title=Son_Heung-min&oldid=1378990669",
+        "overlap_years": 9
+      },
+      "source_career": [
+        {
+          "club": "Tottenham Hotspur",
+          "start": 2009,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Leyton Orient",
+          "start": 2011,
+          "end": 2011,
+          "loan": true
+        },
+        {
+          "club": "Millwall",
+          "start": 2012,
+          "end": 2012,
+          "loan": true
+        },
+        {
+          "club": "Norwich City",
+          "start": 2012,
+          "end": 2013,
+          "loan": true
+        },
+        {
+          "club": "Leicester City",
+          "start": 2013,
+          "end": 2013,
+          "loan": true
+        },
+        {
+          "club": "Bayern Munich",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Son Heung-min",
+      "wikipedia_title": "Son Heung-min",
+      "revision": 1378990669,
+      "source": "https://en.wikipedia.org/w/index.php?title=Son_Heung-min&oldid=1378990669",
+      "birth_year": 1992,
+      "birth_place": "Chuncheon",
+      "height_cm": 183,
+      "position": "attaquant",
+      "national_team": "South Korea",
+      "career": [
+        {
+          "club": "Hambourg SV",
+          "years": "2010–2013"
+        },
+        {
+          "club": "Bayer Leverkusen",
+          "years": "2013–2015"
+        },
+        {
+          "club": "Tottenham",
+          "years": "2015–2025"
+        },
+        {
+          "club": "LAFC",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "UEFA Europa League",
+      "title_evidence": "*UEFA Europa League: 2024–25",
+      "teammate": {
+        "name": "Harry Kane",
+        "shared_club": "Tottenham",
+        "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+        "overlap_years": 9
+      },
+      "source_career": [
+        {
+          "club": "Hamburger SV II",
+          "start": 2010,
+          "end": 2010,
+          "loan": false
+        },
+        {
+          "club": "Hamburger SV",
+          "start": 2010,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Bayer Leverkusen",
+          "start": 2013,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Tottenham Hotspur",
+          "start": 2015,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Los Angeles FC",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Declan Rice",
+      "wikipedia_title": "Declan Rice",
+      "revision": 1378729514,
+      "source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
+      "birth_year": 1999,
+      "birth_place": "Kingston upon Thames",
+      "height_cm": 188,
+      "position": "milieu",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "West Ham United",
+          "years": "2015–2023"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "Ligue Conférence",
+      "title_evidence": "*UEFA Europa Conference League: 2022–23",
+      "teammate": {
+        "name": "David Raya",
+        "shared_club": "Arsenal",
+        "source": "https://en.wikipedia.org/w/index.php?title=David_Raya&oldid=1379075954",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "West Ham United",
+          "start": 2015,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Cole Palmer",
+      "wikipedia_title": "Cole Palmer",
+      "revision": 1376196058,
+      "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+      "birth_year": 2002,
+      "birth_place": "Manchester",
+      "height_cm": 185,
+      "position": "milieu offensif",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Manchester City",
+          "years": "2020–2023"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2022–23",
+      "teammate": {
+        "name": "Jack Grealish",
+        "shared_club": "Manchester City",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jack_Grealish&oldid=1379137658",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Manchester City",
+          "start": 2020,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Marcus Rashford",
+      "wikipedia_title": "Marcus Rashford",
+      "revision": 1378545129,
+      "source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+      "birth_year": 1997,
+      "birth_place": "Manchester",
+      "height_cm": 188,
+      "position": "attaquant",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Manchester United",
+          "years": "2015–présent"
+        },
+        {
+          "club": "Aston Villa (prêt)",
+          "years": "2025"
+        },
+        {
+          "club": "FC Barcelone (prêt)",
+          "years": "2025–2026"
+        }
+      ],
+      "title": "UEFA Europa League",
+      "title_evidence": "* UEFA Europa League: 2016–17;",
+      "teammate": {
+        "name": "Jadon Sancho",
+        "shared_club": "Manchester United",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Manchester United",
+          "start": 2015,
+          "end": null,
+          "loan": false
+        },
+        {
+          "club": "Aston Villa",
+          "start": 2025,
+          "end": 2025,
+          "loan": true
+        },
+        {
+          "club": "Barcelona",
+          "start": 2025,
+          "end": 2026,
+          "loan": true
+        }
+      ]
+    },
+    {
+      "answer": "Jadon Sancho",
+      "wikipedia_title": "Jadon Sancho",
+      "revision": 1378133925,
+      "source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
+      "birth_year": 2000,
+      "birth_place": "Camberwell",
+      "height_cm": 180,
+      "position": "milieu",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Borussia Dortmund",
+          "years": "2017–2021"
+        },
+        {
+          "club": "Manchester United",
+          "years": "2021–2026"
+        },
+        {
+          "club": "Borussia Dortmund (prêt)",
+          "years": "2024"
+        },
+        {
+          "club": "Chelsea (prêt)",
+          "years": "2024–2025"
+        },
+        {
+          "club": "Aston Villa (prêt)",
+          "years": "2025–2026"
+        }
+      ],
+      "title": "DFB-Pokal",
+      "title_evidence": "*DFB-Pokal: 2020–21",
+      "teammate": {
+        "name": "Jude Bellingham",
+        "shared_club": "Borussia Dortmund",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Borussia Dortmund II",
+          "start": 2017,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund",
+          "start": 2017,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "Manchester United",
+          "start": 2021,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund",
+          "start": 2024,
+          "end": 2024,
+          "loan": true
+        },
+        {
+          "club": "Chelsea",
+          "start": 2024,
+          "end": 2025,
+          "loan": true
+        },
+        {
+          "club": "Aston Villa",
+          "start": 2025,
+          "end": 2026,
+          "loan": true
+        }
+      ]
+    },
+    {
+      "answer": "Jack Grealish",
+      "wikipedia_title": "Jack Grealish",
+      "revision": 1379137658,
+      "source": "https://en.wikipedia.org/w/index.php?title=Jack_Grealish&oldid=1379137658",
+      "birth_year": 1995,
+      "birth_place": "Birmingham",
+      "height_cm": 180,
+      "position": "ailier",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Notts County (prêt)",
+          "years": "2013–2014"
+        },
+        {
+          "club": "Aston Villa",
+          "years": "2013–2021"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2021–présent"
+        },
+        {
+          "club": "Everton (prêt)",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2022–23",
+      "teammate": {
+        "name": "Cole Palmer",
+        "shared_club": "Manchester City",
+        "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Aston Villa",
+          "start": 2013,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "Notts County",
+          "start": 2013,
+          "end": 2014,
+          "loan": true
+        },
+        {
+          "club": "Manchester City",
+          "start": 2021,
+          "end": null,
+          "loan": false
+        },
+        {
+          "club": "Everton",
+          "start": 2025,
+          "end": null,
+          "loan": true
+        }
+      ]
+    },
+    {
+      "answer": "Mason Mount",
+      "wikipedia_title": "Mason Mount",
+      "revision": 1375897248,
+      "source": "https://en.wikipedia.org/w/index.php?title=Mason_Mount&oldid=1375897248",
+      "birth_year": 1999,
+      "birth_place": "Portsmouth",
+      "height_cm": 181,
+      "position": "milieu",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Vitesse (prêt)",
+          "years": "2017–2018"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2017–2023"
+        },
+        {
+          "club": "Derby County (prêt)",
+          "years": "2018–2019"
+        },
+        {
+          "club": "Manchester United",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "* UEFA Champions League: 2020–21",
+      "teammate": {
+        "name": "Marcus Rashford",
+        "shared_club": "Manchester United",
+        "source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Chelsea",
+          "start": 2017,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Vitesse Arnhem",
+          "start": 2017,
+          "end": 2018,
+          "loan": true
+        },
+        {
+          "club": "Derby County",
+          "start": 2018,
+          "end": 2019,
+          "loan": true
+        },
+        {
+          "club": "Manchester United",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Raheem Sterling",
+      "wikipedia_title": "Raheem Sterling",
+      "revision": 1378948244,
+      "source": "https://en.wikipedia.org/w/index.php?title=Raheem_Sterling&oldid=1378948244",
+      "birth_year": 1994,
+      "birth_place": "Kingston",
+      "height_cm": 172,
+      "position": "ailier",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Liverpool",
+          "years": "2012–2015"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2015–2022"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2022–2026"
+        },
+        {
+          "club": "Arsenal (prêt)",
+          "years": "2024–2025"
+        }
+      ],
+      "title": "Premier League",
+      "title_evidence": "*Premier League: 2017–18, 2018–19, 2020–21, 2021–22",
+      "teammate": {
+        "name": "Cole Palmer",
+        "shared_club": "Manchester City",
+        "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "Liverpool",
+          "start": 2012,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2015,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2022,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2024,
+          "end": 2025,
+          "loan": true
+        },
+        {
+          "club": "Feyenoord",
+          "start": 2026,
+          "end": 2026,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Jordan Henderson",
+      "wikipedia_title": "Jordan Henderson",
+      "revision": 1377103889,
+      "source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
+      "birth_year": 1990,
+      "birth_place": "Sunderland",
+      "height_cm": 183,
+      "position": "milieu",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Sunderland",
+          "years": "2008–2011"
+        },
+        {
+          "club": "Coventry City (prêt)",
+          "years": "2009"
+        },
+        {
+          "club": "Al-Ittifaq",
+          "years": "2023–2024"
+        },
+        {
+          "club": "Ajax",
+          "years": "2024–2025"
+        },
+        {
+          "club": "Brentford",
+          "years": "2025–2026"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "* UEFA Champions League: 2018–19; runner-up: 2017–18, 2021–22",
+      "teammate": {
+        "name": "Raheem Sterling",
+        "shared_club": "Liverpool",
+        "source": "https://en.wikipedia.org/w/index.php?title=Raheem_Sterling&oldid=1378948244",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "Sunderland",
+          "start": 2008,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Coventry City",
+          "start": 2009,
+          "end": 2009,
+          "loan": true
+        },
+        {
+          "club": "Liverpool",
+          "start": 2011,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Al-Ettifaq",
+          "start": 2023,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Ajax",
+          "start": 2024,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Brentford",
+          "start": 2025,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Kyle Walker",
+      "wikipedia_title": "Kyle Walker",
+      "revision": 1375425100,
+      "source": "https://en.wikipedia.org/w/index.php?title=Kyle_Walker&oldid=1375425100",
+      "birth_year": 1990,
+      "birth_place": "Sheffield",
+      "height_cm": 183,
+      "position": "arrière droit",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Northampton Town (prêt)",
+          "years": "2008"
+        },
+        {
+          "club": "Sheffield United",
+          "years": "2008–2010"
+        },
+        {
+          "club": "Aston Villa (prêt)",
+          "years": "2011"
+        },
+        {
+          "club": "AC Milan (prêt)",
+          "years": "2025"
+        },
+        {
+          "club": "Burnley",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2022–23; runner-up: 2020–21",
+      "teammate": {
+        "name": "Harry Kane",
+        "shared_club": "Tottenham",
+        "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+        "overlap_years": 5
+      },
+      "source_career": [
+        {
+          "club": "Sheffield United",
+          "start": 2008,
+          "end": 2009,
+          "loan": false
+        },
+        {
+          "club": "Northampton Town",
+          "start": 2008,
+          "end": 2008,
+          "loan": true
+        },
+        {
+          "club": "Tottenham Hotspur",
+          "start": 2009,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Sheffield United",
+          "start": 2009,
+          "end": 2010,
+          "loan": true
+        },
+        {
+          "club": "Queens Park Rangers",
+          "start": 2010,
+          "end": 2011,
+          "loan": true
+        },
+        {
+          "club": "Aston Villa",
+          "start": 2011,
+          "end": 2011,
+          "loan": true
+        },
+        {
+          "club": "Manchester City",
+          "start": 2017,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "AC Milan",
+          "start": 2025,
+          "end": 2025,
+          "loan": true
+        },
+        {
+          "club": "Burnley",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "John Stones",
+      "wikipedia_title": "John Stones",
+      "revision": 1378818851,
+      "source": "https://en.wikipedia.org/w/index.php?title=John_Stones&oldid=1378818851",
+      "birth_year": 1994,
+      "birth_place": "Barnsley",
+      "height_cm": 188,
+      "position": "défenseur central",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Barnsley",
+          "years": "2012–2013"
+        },
+        {
+          "club": "Everton",
+          "years": "2013–2016"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2016–2026"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "* UEFA Champions League: 2022–23; runner-up: 2020–21",
+      "teammate": {
+        "name": "Cole Palmer",
+        "shared_club": "Manchester City",
+        "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "Barnsley",
+          "start": 2012,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Everton",
+          "start": 2013,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2016,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Harry Maguire",
+      "wikipedia_title": "Harry Maguire",
+      "revision": 1375898955,
+      "source": "https://en.wikipedia.org/w/index.php?title=Harry_Maguire&oldid=1375898955",
+      "birth_year": 1993,
+      "birth_place": "Sheffield",
+      "height_cm": 194,
+      "position": "défenseur central",
+      "national_team": "England",
+      "career": [
+        {
+          "club": "Sheffield United",
+          "years": "2011–2014"
+        },
+        {
+          "club": "Hull City",
+          "years": "2014–2017"
+        },
+        {
+          "club": "Wigan Athletic (prêt)",
+          "years": "2015"
+        },
+        {
+          "club": "Leicester City",
+          "years": "2017–2019"
+        },
+        {
+          "club": "Manchester United",
+          "years": "2019–présent"
+        }
+      ],
+      "title": "FA Cup",
+      "title_evidence": "* FA Cup: 2023-24; runner-up: 2022–23",
+      "teammate": {
+        "name": "Marcus Rashford",
+        "shared_club": "Manchester United",
+        "source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+        "overlap_years": 6
+      },
+      "source_career": [
+        {
+          "club": "Sheffield United",
+          "start": 2011,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "Hull City",
+          "start": 2014,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Wigan Athletic",
+          "start": 2015,
+          "end": 2015,
+          "loan": true
+        },
+        {
+          "club": "Leicester City",
+          "start": 2017,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Manchester United",
+          "start": 2019,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Bruno Fernandes",
+      "wikipedia_title": "Bruno Fernandes",
+      "revision": 1378513291,
+      "source": "https://en.wikipedia.org/w/index.php?title=Bruno_Fernandes&oldid=1378513291",
+      "birth_year": 1994,
+      "birth_place": "Maia",
+      "height_cm": 179,
+      "position": "milieu offensif",
+      "national_team": "Portugal",
+      "career": [
+        {
+          "club": "Novara",
+          "years": "2012–2013"
+        },
+        {
+          "club": "Udinese",
+          "years": "2013–2016"
+        },
+        {
+          "club": "Sampdoria",
+          "years": "2016–2017"
+        },
+        {
+          "club": "Sporting CP",
+          "years": "2017–2020"
+        },
+        {
+          "club": "Manchester United",
+          "years": "2020–présent"
+        }
+      ],
+      "title": "FA Cup",
+      "title_evidence": "* FA Cup: 2023–24; runner-up: 2022–23",
+      "teammate": {
+        "name": "Marcus Rashford",
+        "shared_club": "Manchester United",
+        "source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+        "overlap_years": 5
+      },
+      "source_career": [
+        {
+          "club": "Novara",
+          "start": 2012,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Udinese",
+          "start": 2013,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Sampdoria",
+          "start": 2016,
+          "end": 2017,
+          "loan": true
+        },
+        {
+          "club": "Sampdoria",
+          "start": 2017,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Sporting CP",
+          "start": 2017,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Manchester United",
+          "start": 2020,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Bernardo Silva",
+      "wikipedia_title": "Bernardo Silva",
+      "revision": 1378925566,
+      "source": "https://en.wikipedia.org/w/index.php?title=Bernardo_Silva&oldid=1378925566",
+      "birth_year": 1994,
+      "birth_place": "Lisbon",
+      "height_cm": 173,
+      "position": "milieu",
+      "national_team": "Portugal",
+      "career": [
+        {
+          "club": "Benfica",
+          "years": "2013–2015"
+        },
+        {
+          "club": "Monaco",
+          "years": "2014–2017"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2017–2026"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2022–23",
+      "teammate": {
+        "name": "Cole Palmer",
+        "shared_club": "Manchester City",
+        "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "Benfica B",
+          "start": 2013,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Benfica",
+          "start": 2013,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Monaco",
+          "start": 2014,
+          "end": 2015,
+          "loan": true
+        },
+        {
+          "club": "Monaco",
+          "start": 2015,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2017,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Rúben Dias",
+      "wikipedia_title": "Rúben Dias",
+      "revision": 1379026004,
+      "source": "https://en.wikipedia.org/w/index.php?title=R%C3%BAben_Dias&oldid=1379026004",
+      "birth_year": 1997,
+      "birth_place": "Amadora",
+      "height_cm": 187,
+      "position": "défenseur central",
+      "national_team": "Portugal",
+      "career": [
+        {
+          "club": "Benfica",
+          "years": "2017–2020"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2020–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2022–23; runner-up: 2020–21",
+      "teammate": {
+        "name": "Cole Palmer",
+        "shared_club": "Manchester City",
+        "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "Benfica B",
+          "start": 2015,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Benfica",
+          "start": 2017,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2020,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Rodri",
+      "wikipedia_title": "Rodri",
+      "revision": 1379060570,
+      "source": "https://en.wikipedia.org/w/index.php?title=Rodri&oldid=1379060570",
+      "birth_year": 1996,
+      "birth_place": "Madrid",
+      "height_cm": 190,
+      "position": "milieu défensif",
+      "national_team": "Spain",
+      "career": [
+        {
+          "club": "Villarreal",
+          "years": "2015–2018"
+        },
+        {
+          "club": "Atlético Madrid",
+          "years": "2018–2019"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2019–2026"
+        }
+      ],
+      "title": "Euro",
+      "title_evidence": "*UEFA European Championship: 2024",
+      "teammate": {
+        "name": "Cole Palmer",
+        "shared_club": "Manchester City",
+        "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "Villarreal B",
+          "start": 2015,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Villarreal",
+          "start": 2015,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Atlético Madrid",
+          "start": 2018,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2019,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "João Cancelo",
+      "wikipedia_title": "João Cancelo",
+      "revision": 1378691140,
+      "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Cancelo&oldid=1378691140",
+      "birth_year": 1994,
+      "birth_place": "Barreiro",
+      "height_cm": 182,
+      "position": "défenseur",
+      "national_team": "Portugal",
+      "career": [
+        {
+          "club": "Benfica",
+          "years": "2014–2015"
+        },
+        {
+          "club": "Valencia",
+          "years": "2014–2018"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2019–2024"
+        },
+        {
+          "club": "FC Barcelone (prêt)",
+          "years": "2023–2024"
+        },
+        {
+          "club": "Al-Hilal",
+          "years": "2024–2026"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2022–23",
+      "teammate": {
+        "name": "Cole Palmer",
+        "shared_club": "Manchester City",
+        "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Benfica B",
+          "start": 2012,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "Benfica",
+          "start": 2014,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Valencia",
+          "start": 2014,
+          "end": 2015,
+          "loan": true
+        },
+        {
+          "club": "Valencia",
+          "start": 2015,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2017,
+          "end": 2018,
+          "loan": true
+        },
+        {
+          "club": "Juventus",
+          "start": 2018,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2019,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Bayern Munich",
+          "start": 2023,
+          "end": 2023,
+          "loan": true
+        },
+        {
+          "club": "Barcelona",
+          "start": 2023,
+          "end": 2024,
+          "loan": true
+        },
+        {
+          "club": "Al Hilal",
+          "start": 2024,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2026,
+          "end": 2026,
+          "loan": true
+        },
+        {
+          "club": "Barcelona",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "João Félix",
+      "wikipedia_title": "João Félix",
+      "revision": 1378692280,
+      "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_F%C3%A9lix&oldid=1378692280",
+      "birth_year": 1999,
+      "birth_place": "Viseu",
+      "height_cm": 181,
+      "position": "milieu offensif",
+      "national_team": "Portugal",
+      "career": [
+        {
+          "club": "Benfica",
+          "years": "2018–2019"
+        },
+        {
+          "club": "Atlético Madrid",
+          "years": "2019–2024"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2023–2025"
+        },
+        {
+          "club": "AC Milan (prêt)",
+          "years": "2025"
+        },
+        {
+          "club": "Al-Nassr",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "La Liga",
+      "title_evidence": "*La Liga: 2020–21",
+      "teammate": {
+        "name": "Rúben Dias",
+        "shared_club": "Benfica",
+        "source": "https://en.wikipedia.org/w/index.php?title=R%C3%BAben_Dias&oldid=1379026004",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Benfica B",
+          "start": 2016,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Benfica",
+          "start": 2018,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Atlético Madrid",
+          "start": 2019,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2023,
+          "end": 2023,
+          "loan": true
+        },
+        {
+          "club": "Barcelona",
+          "start": 2023,
+          "end": 2024,
+          "loan": true
+        },
+        {
+          "club": "Chelsea",
+          "start": 2024,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "AC Milan",
+          "start": 2025,
+          "end": 2025,
+          "loan": true
+        },
+        {
+          "club": "Al-Nassr",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Diogo Jota",
+      "wikipedia_title": "Diogo Jota",
+      "revision": 1378088120,
+      "source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120",
+      "birth_year": 1996,
+      "birth_place": "Porto",
+      "height_cm": 178,
+      "position": "attaquant",
+      "national_team": "Portugal",
+      "career": [
+        {
+          "club": "Paços de Ferreira",
+          "years": "2014–2016"
+        },
+        {
+          "club": "Porto (prêt)",
+          "years": "2016–2017"
+        },
+        {
+          "club": "Atlético Madrid",
+          "years": "2016–2018"
+        },
+        {
+          "club": "Wolverhampton",
+          "years": "2017–2020"
+        },
+        {
+          "club": "Liverpool",
+          "years": "2020–2025"
+        }
+      ],
+      "title": "Premier League",
+      "title_evidence": "*Premier League: 2024–25",
+      "teammate": {
+        "name": "Jordan Henderson",
+        "shared_club": "Liverpool",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "Paços de Ferreira",
+          "start": 2014,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Atlético Madrid",
+          "start": 2016,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Porto",
+          "start": 2016,
+          "end": 2017,
+          "loan": true
+        },
+        {
+          "club": "Wolverhampton Wanderers",
+          "start": 2017,
+          "end": 2018,
+          "loan": true
+        },
+        {
+          "club": "Wolverhampton Wanderers",
+          "start": 2018,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Liverpool",
+          "start": 2020,
+          "end": 2025,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "João Neves",
+      "wikipedia_title": "João Neves",
+      "revision": 1377917274,
+      "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+      "birth_year": 2004,
+      "birth_place": "Tavira",
+      "height_cm": 174,
+      "position": "milieu",
+      "national_team": "Portugal",
+      "career": [
+        {
+          "club": "Benfica",
+          "years": "2022–2024"
+        },
+        {
+          "club": "PSG",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2024–25, 2025–26",
+      "teammate": {
+        "name": "Vitinha",
+        "shared_club": "PSG",
+        "source": "https://en.wikipedia.org/w/index.php?title=Vitinha&oldid=1378691752",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Benfica B",
+          "start": 2022,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Benfica",
+          "start": 2022,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Vitinha",
+      "wikipedia_title": "Vitinha",
+      "revision": 1378691752,
+      "source": "https://en.wikipedia.org/w/index.php?title=Vitinha&oldid=1378691752",
+      "birth_year": 2000,
+      "birth_place": "Vila das Aves",
+      "height_cm": 172,
+      "position": "milieu central",
+      "national_team": "Portugal",
+      "career": [
+        {
+          "club": "Porto",
+          "years": "2019–2022"
+        },
+        {
+          "club": "Wolverhampton (prêt)",
+          "years": "2020–2021"
+        },
+        {
+          "club": "PSG",
+          "years": "2022–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2024–25, 2025–26",
+      "teammate": {
+        "name": "João Neves",
+        "shared_club": "PSG",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Porto B",
+          "start": 2019,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Porto",
+          "start": 2019,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Wolverhampton Wanderers",
+          "start": 2020,
+          "end": 2021,
+          "loan": true
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2022,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Achraf Hakimi",
+      "wikipedia_title": "Achraf Hakimi",
+      "revision": 1377795128,
+      "source": "https://en.wikipedia.org/w/index.php?title=Achraf_Hakimi&oldid=1377795128",
+      "birth_year": 1998,
+      "birth_place": "Madrid",
+      "height_cm": 181,
+      "position": "arrière droit",
+      "national_team": "Morocco",
+      "career": [
+        {
+          "club": "Real Madrid",
+          "years": "2017–2020"
+        },
+        {
+          "club": "Borussia Dortmund (prêt)",
+          "years": "2018–2020"
+        },
+        {
+          "club": "Inter Milan",
+          "years": "2020–2021"
+        },
+        {
+          "club": "PSG",
+          "years": "2021–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2017–18",
+      "teammate": {
+        "name": "João Neves",
+        "shared_club": "PSG",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Real Madrid B",
+          "start": 2016,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2017,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund",
+          "start": 2018,
+          "end": 2020,
+          "loan": true
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2020,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2021,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Ousmane Dembélé",
+      "wikipedia_title": "Ousmane Dembélé",
+      "revision": 1378965998,
+      "source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
+      "birth_year": 1997,
+      "birth_place": "Vernon",
+      "height_cm": 178,
+      "position": "attaquant",
+      "national_team": "France",
+      "career": [
+        {
+          "club": "Rennes",
+          "years": "2015–2016"
+        },
+        {
+          "club": "Borussia Dortmund",
+          "years": "2016–2017"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2017–2023"
+        },
+        {
+          "club": "PSG",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "Coupe du monde",
+      "title_evidence": "*FIFA World Cup: 2018;",
+      "teammate": {
+        "name": "João Neves",
+        "shared_club": "PSG",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Rennes II",
+          "start": 2014,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Rennes",
+          "start": 2015,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund",
+          "start": 2016,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2017,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Bradley Barcola",
+      "wikipedia_title": "Bradley Barcola",
+      "revision": 1378718832,
+      "source": "https://en.wikipedia.org/w/index.php?title=Bradley_Barcola&oldid=1378718832",
+      "birth_year": 2002,
+      "birth_place": "Villeurbanne",
+      "height_cm": 182,
+      "position": "attaquant",
+      "national_team": "France",
+      "career": [
+        {
+          "club": "Lyon",
+          "years": "2021–2023"
+        },
+        {
+          "club": "PSG",
+          "years": "2023–2026"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2024–25, 2025–26",
+      "teammate": {
+        "name": "João Neves",
+        "shared_club": "PSG",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Lyon II",
+          "start": 2020,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Lyon",
+          "start": 2021,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2023,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Liverpool",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Désiré Doué",
+      "wikipedia_title": "Désiré Doué",
+      "revision": 1378856338,
+      "source": "https://en.wikipedia.org/w/index.php?title=D%C3%A9sir%C3%A9_Dou%C3%A9&oldid=1378856338",
+      "birth_year": 2005,
+      "birth_place": "Angers",
+      "height_cm": 181,
+      "position": "milieu offensif",
+      "national_team": "France",
+      "career": [
+        {
+          "club": "Rennes",
+          "years": "2022–2024"
+        },
+        {
+          "club": "PSG",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2024–25, 2025–26",
+      "teammate": {
+        "name": "João Neves",
+        "shared_club": "PSG",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Rennes II",
+          "start": 2021,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Rennes",
+          "start": 2022,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Randal Kolo Muani",
+      "wikipedia_title": "Randal Kolo Muani",
+      "revision": 1374050113,
+      "source": "https://en.wikipedia.org/w/index.php?title=Randal_Kolo_Muani&oldid=1374050113",
+      "birth_year": 1998,
+      "birth_place": "Bondy",
+      "height_cm": 187,
+      "position": "attaquant",
+      "national_team": "France",
+      "career": [
+        {
+          "club": "Nantes",
+          "years": "2018–2022"
+        },
+        {
+          "club": "Boulogne (prêt)",
+          "years": "2019–2020"
+        },
+        {
+          "club": "PSG",
+          "years": "2023–2026"
+        },
+        {
+          "club": "Juventus (prêt)",
+          "years": "2025"
+        },
+        {
+          "club": "Tottenham (prêt)",
+          "years": "2025–2026"
+        }
+      ],
+      "title": "Ligue 1",
+      "title_evidence": "*Ligue 1: 2023–24, 2024–25",
+      "teammate": {
+        "name": "Vitinha",
+        "shared_club": "PSG",
+        "source": "https://en.wikipedia.org/w/index.php?title=Vitinha&oldid=1378691752",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Nantes B",
+          "start": 2016,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Nantes",
+          "start": 2018,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Boulogne",
+          "start": 2019,
+          "end": 2020,
+          "loan": true
+        },
+        {
+          "club": "Eintracht Frankfurt",
+          "start": 2022,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2023,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Juventus",
+          "start": 2025,
+          "end": 2025,
+          "loan": true
+        },
+        {
+          "club": "Tottenham Hotspur",
+          "start": 2025,
+          "end": 2026,
+          "loan": true
+        },
+        {
+          "club": "Juventus",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Khvicha Kvaratskhelia",
+      "wikipedia_title": "Khvicha Kvaratskhelia",
+      "revision": 1378843451,
+      "source": "https://en.wikipedia.org/w/index.php?title=Khvicha_Kvaratskhelia&oldid=1378843451",
+      "birth_year": 2001,
+      "birth_place": "Tbilisi",
+      "height_cm": 183,
+      "position": "ailier",
+      "national_team": "Georgia",
+      "career": [
+        {
+          "club": "Dinamo Tbilisi",
+          "years": "2017–2018"
+        },
+        {
+          "club": "Rustavi",
+          "years": "2018–2019"
+        },
+        {
+          "club": "Rubin Kazan",
+          "years": "2019–2022"
+        },
+        {
+          "club": "Napoli",
+          "years": "2022–2025"
+        },
+        {
+          "club": "PSG",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2024–25, 2025–26",
+      "teammate": {
+        "name": "Victor Osimhen",
+        "shared_club": "Napoli",
+        "source": "https://en.wikipedia.org/w/index.php?title=Victor_Osimhen&oldid=1378160614",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "Dinamo Tbilisi",
+          "start": 2017,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Rustavi",
+          "start": 2018,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Lokomotiv Moscow",
+          "start": 2019,
+          "end": 2019,
+          "loan": true
+        },
+        {
+          "club": "Rubin Kazan",
+          "start": 2019,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Dinamo Batumi",
+          "start": 2022,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Napoli",
+          "start": 2022,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Victor Osimhen",
+      "wikipedia_title": "Victor Osimhen",
+      "revision": 1378160614,
+      "source": "https://en.wikipedia.org/w/index.php?title=Victor_Osimhen&oldid=1378160614",
+      "birth_year": 1998,
+      "birth_place": "Lagos State",
+      "height_cm": 186,
+      "position": "attaquant",
+      "national_team": "Nigeria",
+      "career": [
+        {
+          "club": "VfL Wolfsburg",
+          "years": "2017–2019"
+        },
+        {
+          "club": "Charleroi",
+          "years": "2018–2019"
+        },
+        {
+          "club": "Lille",
+          "years": "2019–2020"
+        },
+        {
+          "club": "Napoli",
+          "years": "2020–2025"
+        },
+        {
+          "club": "Galatasaray",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "Serie A",
+      "title_evidence": "*Serie A: 2022–23",
+      "teammate": {
+        "name": "Khvicha Kvaratskhelia",
+        "shared_club": "Napoli",
+        "source": "https://en.wikipedia.org/w/index.php?title=Khvicha_Kvaratskhelia&oldid=1378843451",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "VfL Wolfsburg",
+          "start": 2017,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Charleroi",
+          "start": 2018,
+          "end": 2019,
+          "loan": true
+        },
+        {
+          "club": "Charleroi",
+          "start": 2019,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Lille",
+          "start": 2019,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Napoli",
+          "start": 2020,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Galatasaray",
+          "start": 2024,
+          "end": 2025,
+          "loan": true
+        },
+        {
+          "club": "Galatasaray",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Lautaro Martínez",
+      "wikipedia_title": "Lautaro Martínez",
+      "revision": 1378395150,
+      "source": "https://en.wikipedia.org/w/index.php?title=Lautaro_Mart%C3%ADnez&oldid=1378395150",
+      "birth_year": 1997,
+      "birth_place": "Bahía Blanca",
+      "height_cm": 174,
+      "position": "attaquant",
+      "national_team": "Argentina",
+      "career": [
+        {
+          "club": "Racing Club",
+          "years": "2015–2018"
+        },
+        {
+          "club": "Inter Milan",
+          "years": "2018–présent"
+        }
+      ],
+      "title": "Coupe du monde",
+      "title_evidence": "*FIFA World Cup: 2022; runner-up: 2026",
+      "teammate": {
+        "name": "Nicolò Barella",
+        "shared_club": "Inter Milan",
+        "source": "https://en.wikipedia.org/w/index.php?title=Nicol%C3%B2_Barella&oldid=1378863453",
+        "overlap_years": 7
+      },
+      "source_career": [
+        {
+          "club": "Racing Club",
+          "start": 2015,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2018,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Paulo Dybala",
+      "wikipedia_title": "Paulo Dybala",
+      "revision": 1376024136,
+      "source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136",
+      "birth_year": 1993,
+      "birth_place": "Laguna Larga",
+      "height_cm": 177,
+      "position": "milieu offensif",
+      "national_team": "Argentina",
+      "career": [
+        {
+          "club": "Instituto",
+          "years": "2011–2012"
+        },
+        {
+          "club": "Palermo",
+          "years": "2012–2015"
+        },
+        {
+          "club": "Juventus",
+          "years": "2015–2022"
+        },
+        {
+          "club": "AS Rome",
+          "years": "2022–présent"
+        }
+      ],
+      "title": "Coupe du monde",
+      "title_evidence": "* FIFA World Cup: 2022",
+      "teammate": {
+        "name": "Federico Chiesa",
+        "shared_club": "Juventus",
+        "source": "https://en.wikipedia.org/w/index.php?title=Federico_Chiesa&oldid=1378127004",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Instituto",
+          "start": 2011,
+          "end": 2012,
+          "loan": false
+        },
+        {
+          "club": "Palermo",
+          "start": 2012,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Juventus",
+          "start": 2015,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Roma",
+          "start": 2022,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Federico Chiesa",
+      "wikipedia_title": "Federico Chiesa",
+      "revision": 1378127004,
+      "source": "https://en.wikipedia.org/w/index.php?title=Federico_Chiesa&oldid=1378127004",
+      "birth_year": 1997,
+      "birth_place": "Genoa",
+      "height_cm": 175,
+      "position": "attaquant",
+      "national_team": "Italy",
+      "career": [
+        {
+          "club": "Fiorentina",
+          "years": "2016–2022"
+        },
+        {
+          "club": "Juventus",
+          "years": "2020–2024"
+        },
+        {
+          "club": "Liverpool",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "Euro",
+      "title_evidence": "*UEFA European Championship: 2020",
+      "teammate": {
+        "name": "Diogo Jota",
+        "shared_club": "Liverpool",
+        "source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Fiorentina",
+          "start": 2016,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Juventus",
+          "start": 2020,
+          "end": 2022,
+          "loan": true
+        },
+        {
+          "club": "Juventus",
+          "start": 2022,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Liverpool",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Sandro Tonali",
+      "wikipedia_title": "Sandro Tonali",
+      "revision": 1378863837,
+      "source": "https://en.wikipedia.org/w/index.php?title=Sandro_Tonali&oldid=1378863837",
+      "birth_year": 2000,
+      "birth_place": "Lodi",
+      "height_cm": 181,
+      "position": "milieu",
+      "national_team": "Italy",
+      "career": [
+        {
+          "club": "Brescia",
+          "years": "2017–2021"
+        },
+        {
+          "club": "AC Milan",
+          "years": "2020–2023"
+        },
+        {
+          "club": "Newcastle United",
+          "years": "2023–2026"
+        }
+      ],
+      "title": "Serie A",
+      "title_evidence": "* Serie A: 2021–22",
+      "teammate": {
+        "name": "Gianluigi Donnarumma",
+        "shared_club": "AC Milan",
+        "source": "https://en.wikipedia.org/w/index.php?title=Gianluigi_Donnarumma&oldid=1378863037",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Brescia",
+          "start": 2017,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "AC Milan",
+          "start": 2020,
+          "end": 2021,
+          "loan": true
+        },
+        {
+          "club": "AC Milan",
+          "start": 2021,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Newcastle United",
+          "start": 2023,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Tottenham Hotspur",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Nicolò Barella",
+      "wikipedia_title": "Nicolò Barella",
+      "revision": 1378863453,
+      "source": "https://en.wikipedia.org/w/index.php?title=Nicol%C3%B2_Barella&oldid=1378863453",
+      "birth_year": 1997,
+      "birth_place": "Cagliari",
+      "height_cm": 175,
+      "position": "milieu",
+      "national_team": "Italy",
+      "career": [
+        {
+          "club": "Cagliari",
+          "years": "2015–2020"
+        },
+        {
+          "club": "Como (prêt)",
+          "years": "2016"
+        },
+        {
+          "club": "Inter Milan",
+          "years": "2019–présent"
+        }
+      ],
+      "title": "Euro",
+      "title_evidence": "*UEFA European Championship: 2020",
+      "teammate": {
+        "name": "Lautaro Martínez",
+        "shared_club": "Inter Milan",
+        "source": "https://en.wikipedia.org/w/index.php?title=Lautaro_Mart%C3%ADnez&oldid=1378395150",
+        "overlap_years": 7
+      },
+      "source_career": [
+        {
+          "club": "Cagliari",
+          "start": 2015,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Como",
+          "start": 2016,
+          "end": 2016,
+          "loan": true
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2019,
+          "end": 2020,
+          "loan": true
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2020,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Federico Valverde",
+      "wikipedia_title": "Federico Valverde",
+      "revision": 1378063236,
+      "source": "https://en.wikipedia.org/w/index.php?title=Federico_Valverde&oldid=1378063236",
+      "birth_year": 1998,
+      "birth_place": "Montevideo",
+      "height_cm": 182,
+      "position": "milieu central",
+      "national_team": "Uruguay",
+      "career": [
+        {
+          "club": "Peñarol",
+          "years": "2015–2016"
+        },
+        {
+          "club": "Deportivo La Coruña (prêt)",
+          "years": "2017–2018"
+        },
+        {
+          "club": "Real Madrid",
+          "years": "2017–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2021–22, 2023–24",
+      "teammate": {
+        "name": "Jude Bellingham",
+        "shared_club": "Real Madrid",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Peñarol",
+          "start": 2015,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid B",
+          "start": 2016,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2017,
+          "end": null,
+          "loan": false
+        },
+        {
+          "club": "Deportivo La Coruña",
+          "start": 2017,
+          "end": 2018,
+          "loan": true
+        }
+      ]
+    },
+    {
+      "answer": "Rodrygo",
+      "wikipedia_title": "Rodrygo",
+      "revision": 1377563302,
+      "source": "https://en.wikipedia.org/w/index.php?title=Rodrygo&oldid=1377563302",
+      "birth_year": 2001,
+      "birth_place": "Osasco",
+      "height_cm": 174,
+      "position": "ailier",
+      "national_team": "Brazil",
+      "career": [
+        {
+          "club": "Santos",
+          "years": "2017–2019"
+        },
+        {
+          "club": "Real Madrid",
+          "years": "2019–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2021–22, 2023–24",
+      "teammate": {
+        "name": "Jude Bellingham",
+        "shared_club": "Real Madrid",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Santos",
+          "start": 2017,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid Castilla",
+          "start": 2019,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2019,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Vinícius Júnior",
+      "wikipedia_title": "Vinícius Júnior",
+      "revision": 1378404428,
+      "source": "https://en.wikipedia.org/w/index.php?title=Vin%C3%ADcius_J%C3%BAnior&oldid=1378404428",
+      "birth_year": 2000,
+      "birth_place": "São Gonçalo",
+      "height_cm": 176,
+      "position": "attaquant",
+      "national_team": "Brazil",
+      "career": [
+        {
+          "club": "Flamengo",
+          "years": "2017–2018"
+        },
+        {
+          "club": "Real Madrid",
+          "years": "2018–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2021–22, 2023–24",
+      "teammate": {
+        "name": "Jude Bellingham",
+        "shared_club": "Real Madrid",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Flamengo",
+          "start": 2017,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid B",
+          "start": 2018,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2018,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Éder Militão",
+      "wikipedia_title": "Éder Militão",
+      "revision": 1376297451,
+      "source": "https://en.wikipedia.org/w/index.php?title=%C3%89der_Milit%C3%A3o&oldid=1376297451",
+      "birth_year": 1998,
+      "birth_place": "Sertãozinho",
+      "height_cm": 186,
+      "position": "défenseur central",
+      "national_team": "Brazil",
+      "career": [
+        {
+          "club": "São Paulo",
+          "years": "2017–2018"
+        },
+        {
+          "club": "Porto",
+          "years": "2018–2019"
+        },
+        {
+          "club": "Real Madrid",
+          "years": "2019–présent"
+        }
+      ],
+      "title": "Copa América",
+      "title_evidence": "* Copa América: 2019",
+      "teammate": {
+        "name": "Jude Bellingham",
+        "shared_club": "Real Madrid",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "São Paulo",
+          "start": 2017,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Porto",
+          "start": 2018,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2019,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Casemiro",
+      "wikipedia_title": "Casemiro",
+      "revision": 1378707454,
+      "source": "https://en.wikipedia.org/w/index.php?title=Casemiro&oldid=1378707454",
+      "birth_year": 1992,
+      "birth_place": "São José dos Campos",
+      "height_cm": 185,
+      "position": "milieu défensif",
+      "national_team": "Brazil",
+      "career": [
+        {
+          "club": "São Paulo",
+          "years": "2010–2013"
+        },
+        {
+          "club": "Real Madrid (prêt)",
+          "years": "2013"
+        },
+        {
+          "club": "Porto (prêt)",
+          "years": "2014–2015"
+        },
+        {
+          "club": "Manchester United",
+          "years": "2022–2026"
+        }
+      ],
+      "title": "Copa América",
+      "title_evidence": "*Copa América: 2019",
+      "teammate": {
+        "name": "Marcus Rashford",
+        "shared_club": "Manchester United",
+        "source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "São Paulo",
+          "start": 2010,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid Castilla",
+          "start": 2013,
+          "end": 2013,
+          "loan": true
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2013,
+          "end": 2013,
+          "loan": true
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2013,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Porto",
+          "start": 2014,
+          "end": 2015,
+          "loan": true
+        },
+        {
+          "club": "Manchester United",
+          "start": 2022,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Inter Miami",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Édouard Mendy",
+      "wikipedia_title": "Édouard Mendy",
+      "revision": 1375739369,
+      "source": "https://en.wikipedia.org/w/index.php?title=%C3%89douard_Mendy&oldid=1375739369",
+      "birth_year": 1992,
+      "birth_place": "Montivilliers",
+      "height_cm": 194,
+      "position": "gardien de but",
+      "national_team": "Senegal",
+      "career": [
+        {
+          "club": "Cherbourg",
+          "years": "2011–2014"
+        },
+        {
+          "club": "Reims",
+          "years": "2016–2019"
+        },
+        {
+          "club": "Rennes",
+          "years": "2019–2020"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2020–2023"
+        },
+        {
+          "club": "Al-Ahli",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2020–21",
+      "teammate": {
+        "name": "Mason Mount",
+        "shared_club": "Chelsea",
+        "source": "https://en.wikipedia.org/w/index.php?title=Mason_Mount&oldid=1375897248",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "Cherbourg",
+          "start": 2011,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "Marseille II",
+          "start": 2015,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Reims",
+          "start": 2016,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Rennes",
+          "start": 2019,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2020,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Al-Ahli",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Jan Oblak",
+      "wikipedia_title": "Jan Oblak",
+      "revision": 1379021887,
+      "source": "https://en.wikipedia.org/w/index.php?title=Jan_Oblak&oldid=1379021887",
+      "birth_year": 1993,
+      "birth_place": "Škofja Loka",
+      "height_cm": 188,
+      "position": "gardien de but",
+      "national_team": "Slovenia",
+      "career": [
+        {
+          "club": "Olimpija Ljubljana",
+          "years": "2009–2010"
+        },
+        {
+          "club": "Beira-Mar (prêt)",
+          "years": "2010"
+        },
+        {
+          "club": "Olhanense (prêt)",
+          "years": "2011"
+        },
+        {
+          "club": "Rio Ave (prêt)",
+          "years": "2012–2013"
+        },
+        {
+          "club": "Atlético Madrid",
+          "years": "2014–présent"
+        }
+      ],
+      "title": "La Liga",
+      "title_evidence": "*La Liga: 2020–21",
+      "teammate": {
+        "name": "Rodri",
+        "shared_club": "Atlético Madrid",
+        "source": "https://en.wikipedia.org/w/index.php?title=Rodri&oldid=1379060570",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Olimpija Ljubljana",
+          "start": 2009,
+          "end": 2010,
+          "loan": false
+        },
+        {
+          "club": "Benfica",
+          "start": 2010,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "Beira-Mar",
+          "start": 2010,
+          "end": 2010,
+          "loan": true
+        },
+        {
+          "club": "Olhanense",
+          "start": 2011,
+          "end": 2011,
+          "loan": true
+        },
+        {
+          "club": "União de Leiria",
+          "start": 2011,
+          "end": 2012,
+          "loan": true
+        },
+        {
+          "club": "Rio Ave",
+          "start": 2012,
+          "end": 2013,
+          "loan": true
+        },
+        {
+          "club": "Benfica B",
+          "start": 2013,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Atlético Madrid",
+          "start": 2014,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Thibaut Courtois",
+      "wikipedia_title": "Thibaut Courtois",
+      "revision": 1378053557,
+      "source": "https://en.wikipedia.org/w/index.php?title=Thibaut_Courtois&oldid=1378053557",
+      "birth_year": 1992,
+      "birth_place": "Bree",
+      "height_cm": 201,
+      "position": "gardien de but",
+      "national_team": "Belgium",
+      "career": [
+        {
+          "club": "Genk",
+          "years": "2009–2011"
+        },
+        {
+          "club": "Atlético Madrid (prêt)",
+          "years": "2011–2014"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2011–2018"
+        },
+        {
+          "club": "Real Madrid",
+          "years": "2018–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2021–22, 2023–24",
+      "teammate": {
+        "name": "Jude Bellingham",
+        "shared_club": "Real Madrid",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Genk",
+          "start": 2009,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2011,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Atlético Madrid",
+          "start": 2011,
+          "end": 2014,
+          "loan": true
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2018,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Manuel Neuer",
+      "wikipedia_title": "Manuel Neuer",
+      "revision": 1378216051,
+      "source": "https://en.wikipedia.org/w/index.php?title=Manuel_Neuer&oldid=1378216051",
+      "birth_year": 1986,
+      "birth_place": "Gelsenkirchen",
+      "height_cm": 193,
+      "position": "gardien de but",
+      "national_team": "Germany",
+      "career": [
+        {
+          "club": "Schalke 04",
+          "years": "2005–2011"
+        },
+        {
+          "club": "Bayern Munich",
+          "years": "2011–présent"
+        }
+      ],
+      "title": "Coupe du monde",
+      "title_evidence": "* FIFA World Cup: 2014; third place: 2010",
+      "teammate": {
+        "name": "Harry Kane",
+        "shared_club": "Bayern Munich",
+        "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Schalke 04 II",
+          "start": 2004,
+          "end": 2006,
+          "loan": false
+        },
+        {
+          "club": "Schalke 04",
+          "start": 2005,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Bayern Munich",
+          "start": 2011,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Marc-André ter Stegen",
+      "wikipedia_title": "Marc-André ter Stegen",
+      "revision": 1376830446,
+      "source": "https://en.wikipedia.org/w/index.php?title=Marc-Andr%C3%A9_ter_Stegen&oldid=1376830446",
+      "birth_year": 1992,
+      "birth_place": "Mönchengladbach",
+      "height_cm": 187,
+      "position": "gardien de but",
+      "national_team": "Germany",
+      "career": [
+        {
+          "club": "Borussia Mönchengladbach",
+          "years": "2010–2014"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2014–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "* UEFA Champions League: 2014–15",
+      "teammate": {
+        "name": "Ousmane Dembélé",
+        "shared_club": "FC Barcelone",
+        "source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
+        "overlap_years": 7
+      },
+      "source_career": [
+        {
+          "club": "Borussia Mönchengladbach II",
+          "start": 2009,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Borussia Mönchengladbach",
+          "start": 2010,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2014,
+          "end": null,
+          "loan": false
+        },
+        {
+          "club": "Girona",
+          "start": 2026,
+          "end": 2026,
+          "loan": true
+        },
+        {
+          "club": "Ajax",
+          "start": 2026,
+          "end": null,
+          "loan": true
+        }
+      ]
+    },
+    {
+      "answer": "Gianluigi Donnarumma",
+      "wikipedia_title": "Gianluigi Donnarumma",
+      "revision": 1378863037,
+      "source": "https://en.wikipedia.org/w/index.php?title=Gianluigi_Donnarumma&oldid=1378863037",
+      "birth_year": 1999,
+      "birth_place": "Castellammare di Stabia",
+      "height_cm": 196,
+      "position": "gardien de but",
+      "national_team": "Italy",
+      "career": [
+        {
+          "club": "AC Milan",
+          "years": "2015–2021"
+        },
+        {
+          "club": "PSG",
+          "years": "2021–2025"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "Euro",
+      "title_evidence": "*UEFA European Championship: 2020",
+      "teammate": {
+        "name": "João Neves",
+        "shared_club": "PSG",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "AC Milan",
+          "start": 2015,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2021,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Alisson Becker",
+      "wikipedia_title": "Alisson Becker",
+      "revision": 1378681378,
+      "source": "https://en.wikipedia.org/w/index.php?title=Alisson_Becker&oldid=1378681378",
+      "birth_year": 1992,
+      "birth_place": "Novo Hamburgo",
+      "height_cm": 193,
+      "position": "gardien de but",
+      "national_team": "Brazil",
+      "career": [
+        {
+          "club": "Internacional",
+          "years": "2013–2016"
+        },
+        {
+          "club": "AS Rome",
+          "years": "2016–2018"
+        },
+        {
+          "club": "Liverpool",
+          "years": "2018–présent"
+        }
+      ],
+      "title": "Copa América",
+      "title_evidence": "*Copa América: 2019",
+      "teammate": {
+        "name": "Jordan Henderson",
+        "shared_club": "Liverpool",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
+        "overlap_years": 6
+      },
+      "source_career": [
+        {
+          "club": "Internacional",
+          "start": 2013,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Roma",
+          "start": 2016,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Liverpool",
+          "start": 2018,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Ederson",
+      "wikipedia_title": "Ederson (footballer, born 1993)",
+      "revision": 1378678767,
+      "source": "https://en.wikipedia.org/w/index.php?title=Ederson_%28footballer%2C_born_1993%29&oldid=1378678767",
+      "birth_year": 1993,
+      "birth_place": "Osasco",
+      "height_cm": 188,
+      "position": "gardien de but",
+      "national_team": "Brazil",
+      "career": [
+        {
+          "club": "Ribeirão",
+          "years": "2011–2013"
+        },
+        {
+          "club": "Rio Ave",
+          "years": "2013–2015"
+        },
+        {
+          "club": "Benfica",
+          "years": "2015–2017"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2017–2025"
+        },
+        {
+          "club": "Fenerbahçe",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "Copa América",
+      "title_evidence": "*Copa América: 2019; runner-up: 2021",
+      "teammate": {
+        "name": "Cole Palmer",
+        "shared_club": "Manchester City",
+        "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "Ribeirão",
+          "start": 2011,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Rio Ave",
+          "start": 2013,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Benfica",
+          "start": 2015,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2017,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Fenerbahçe",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Emiliano Martínez",
+      "wikipedia_title": "Emiliano Martínez",
+      "revision": 1378988069,
+      "source": "https://en.wikipedia.org/w/index.php?title=Emiliano_Mart%C3%ADnez&oldid=1378988069",
+      "birth_year": 1992,
+      "birth_place": "Mar del Plata",
+      "height_cm": 195,
+      "position": "gardien de but",
+      "national_team": "Argentina",
+      "career": [
+        {
+          "club": "Oxford United (prêt)",
+          "years": "2012"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2012–2020"
+        },
+        {
+          "club": "Wolverhampton (prêt)",
+          "years": "2015–2016"
+        },
+        {
+          "club": "Reading (prêt)",
+          "years": "2019"
+        },
+        {
+          "club": "Aston Villa",
+          "years": "2020–2026"
+        }
+      ],
+      "title": "Coupe du monde",
+      "title_evidence": "*FIFA World Cup: 2022",
+      "teammate": {
+        "name": "Jack Grealish",
+        "shared_club": "Aston Villa",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jack_Grealish&oldid=1379137658",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Arsenal",
+          "start": 2012,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Oxford United",
+          "start": 2012,
+          "end": 2012,
+          "loan": true
+        },
+        {
+          "club": "Sheffield Wednesday",
+          "start": 2013,
+          "end": 2014,
+          "loan": true
+        },
+        {
+          "club": "Rotherham United",
+          "start": 2015,
+          "end": 2015,
+          "loan": true
+        },
+        {
+          "club": "Wolverhampton Wanderers",
+          "start": 2015,
+          "end": 2016,
+          "loan": true
+        },
+        {
+          "club": "Getafe",
+          "start": 2017,
+          "end": 2018,
+          "loan": true
+        },
+        {
+          "club": "Reading",
+          "start": 2019,
+          "end": 2019,
+          "loan": true
+        },
+        {
+          "club": "Aston Villa",
+          "start": 2020,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "David Raya",
+      "wikipedia_title": "David Raya",
+      "revision": 1379075954,
+      "source": "https://en.wikipedia.org/w/index.php?title=David_Raya&oldid=1379075954",
+      "birth_year": 1995,
+      "birth_place": "Barcelona",
+      "height_cm": 183,
+      "position": "gardien de but",
+      "national_team": "Spain",
+      "career": [
+        {
+          "club": "Southport (prêt)",
+          "years": "2014–2015"
+        },
+        {
+          "club": "Blackburn Rovers",
+          "years": "2014–2019"
+        },
+        {
+          "club": "Brentford",
+          "years": "2019–2024"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "Euro",
+      "title_evidence": "*UEFA European Championship: 2024",
+      "teammate": {
+        "name": "Declan Rice",
+        "shared_club": "Arsenal",
+        "source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Blackburn Rovers",
+          "start": 2014,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Southport",
+          "start": 2014,
+          "end": 2015,
+          "loan": true
+        },
+        {
+          "club": "Brentford",
+          "start": 2019,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2023,
+          "end": 2024,
+          "loan": true
+        },
+        {
+          "club": "Arsenal",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Mike Maignan",
+      "wikipedia_title": "Mike Maignan",
+      "revision": 1378077337,
+      "source": "https://en.wikipedia.org/w/index.php?title=Mike_Maignan&oldid=1378077337",
+      "birth_year": 1995,
+      "birth_place": "Cayenne",
+      "height_cm": 191,
+      "position": "gardien de but",
+      "national_team": "France",
+      "career": [
+        {
+          "club": "Lille",
+          "years": "2015–2021"
+        },
+        {
+          "club": "AC Milan",
+          "years": "2021–présent"
+        }
+      ],
+      "title": "Ligue 1",
+      "title_evidence": "*Ligue 1: 2020–21",
+      "teammate": {
+        "name": "Victor Osimhen",
+        "shared_club": "Lille",
+        "source": "https://en.wikipedia.org/w/index.php?title=Victor_Osimhen&oldid=1378160614",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Paris Saint-Germain II",
+          "start": 2012,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Lille II",
+          "start": 2015,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Lille",
+          "start": 2015,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "AC Milan",
+          "start": 2021,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Hugo Lloris",
+      "wikipedia_title": "Hugo Lloris",
+      "revision": 1377001731,
+      "source": "https://en.wikipedia.org/w/index.php?title=Hugo_Lloris&oldid=1377001731",
+      "birth_year": 1986,
+      "birth_place": "Nice",
+      "height_cm": 188,
+      "position": "gardien de but",
+      "national_team": "France",
+      "career": [
+        {
+          "club": "Nice",
+          "years": "2005–2008"
+        },
+        {
+          "club": "Lyon",
+          "years": "2008–2012"
+        },
+        {
+          "club": "Tottenham",
+          "years": "2012–2024"
+        },
+        {
+          "club": "LAFC",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "Coupe du monde",
+      "title_evidence": "*FIFA World Cup: 2018; runner-up: 2022",
+      "teammate": {
+        "name": "Harry Kane",
+        "shared_club": "Tottenham",
+        "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+        "overlap_years": 10
+      },
+      "source_career": [
+        {
+          "club": "Nice II",
+          "start": 2005,
+          "end": 2006,
+          "loan": false
+        },
+        {
+          "club": "Nice",
+          "start": 2005,
+          "end": 2008,
+          "loan": false
+        },
+        {
+          "club": "Lyon",
+          "start": 2008,
+          "end": 2012,
+          "loan": false
+        },
+        {
+          "club": "Tottenham Hotspur",
+          "start": 2012,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Los Angeles FC",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Keylor Navas",
+      "wikipedia_title": "Keylor Navas",
+      "revision": 1378696436,
+      "source": "https://en.wikipedia.org/w/index.php?title=Keylor_Navas&oldid=1378696436",
+      "birth_year": 1986,
+      "birth_place": "San Isidro de El General",
+      "height_cm": 185,
+      "position": "gardien de but",
+      "national_team": "Costa Rica",
+      "career": [
+        {
+          "club": "Saprissa",
+          "years": "2005–2010"
+        },
+        {
+          "club": "Albacete",
+          "years": "2010–2012"
+        },
+        {
+          "club": "PSG",
+          "years": "2019–2024"
+        },
+        {
+          "club": "Newell's Old Boys",
+          "years": "2025"
+        },
+        {
+          "club": "Pumas UNAM",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2015–16, 2016–17, 2017–18",
+      "teammate": {
+        "name": "Vitinha",
+        "shared_club": "PSG",
+        "source": "https://en.wikipedia.org/w/index.php?title=Vitinha&oldid=1378691752",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Saprissa",
+          "start": 2005,
+          "end": 2010,
+          "loan": false
+        },
+        {
+          "club": "Albacete",
+          "start": 2010,
+          "end": 2012,
+          "loan": false
+        },
+        {
+          "club": "Levante",
+          "start": 2011,
+          "end": 2012,
+          "loan": true
+        },
+        {
+          "club": "Levante",
+          "start": 2012,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2014,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2019,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Nottingham Forest",
+          "start": 2023,
+          "end": 2023,
+          "loan": true
+        },
+        {
+          "club": "Newell's Old Boys",
+          "start": 2025,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Pumas UNAM",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Wojciech Szczęsny",
+      "wikipedia_title": "Wojciech Szczęsny",
+      "revision": 1376299225,
+      "source": "https://en.wikipedia.org/w/index.php?title=Wojciech_Szcz%C4%99sny&oldid=1376299225",
+      "birth_year": 1990,
+      "birth_place": "Warsaw",
+      "height_cm": 195,
+      "position": "gardien de but",
+      "national_team": "Poland",
+      "career": [
+        {
+          "club": "Brentford (prêt)",
+          "years": "2009–2010"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2009–2017"
+        },
+        {
+          "club": "AS Rome (prêt)",
+          "years": "2015–2017"
+        },
+        {
+          "club": "Juventus",
+          "years": "2017–2024"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "La Liga",
+      "title_evidence": "*La Liga: 2024–25, 2025–26",
+      "teammate": {
+        "name": "Paulo Dybala",
+        "shared_club": "Juventus",
+        "source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136",
+        "overlap_years": 5
+      },
+      "source_career": [
+        {
+          "club": "Arsenal",
+          "start": 2009,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Brentford",
+          "start": 2009,
+          "end": 2010,
+          "loan": true
+        },
+        {
+          "club": "Roma",
+          "start": 2015,
+          "end": 2017,
+          "loan": true
+        },
+        {
+          "club": "Juventus",
+          "start": 2017,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Petr Čech",
+      "wikipedia_title": "Petr Čech",
+      "revision": 1377254991,
+      "source": "https://en.wikipedia.org/w/index.php?title=Petr_%C4%8Cech&oldid=1377254991",
+      "birth_year": 1982,
+      "birth_place": "Plzeň",
+      "height_cm": 196,
+      "position": "gardien de but",
+      "national_team": "Czech Republic",
+      "career": [
+        {
+          "club": "Chmel Blšany",
+          "years": "1999–2001"
+        },
+        {
+          "club": "Sparta Prague",
+          "years": "2001–2002"
+        },
+        {
+          "club": "Rennes",
+          "years": "2002–2004"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2004–2015"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2015–2019"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2011–12; runner-up: 2007–08",
+      "teammate": {
+        "name": "Mesut Özil",
+        "shared_club": "Arsenal",
+        "source": "https://en.wikipedia.org/w/index.php?title=Mesut_%C3%96zil&oldid=1378668299",
+        "overlap_years": 5
+      },
+      "source_career": [
+        {
+          "club": "Chmel Blšany",
+          "start": 1999,
+          "end": 2001,
+          "loan": false
+        },
+        {
+          "club": "Sparta Prague",
+          "start": 2001,
+          "end": 2002,
+          "loan": false
+        },
+        {
+          "club": "Rennes",
+          "start": 2002,
+          "end": 2004,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2004,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2015,
+          "end": 2019,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Gianluigi Buffon",
+      "wikipedia_title": "Gianluigi Buffon",
+      "revision": 1378184897,
+      "source": "https://en.wikipedia.org/w/index.php?title=Gianluigi_Buffon&oldid=1378184897",
+      "birth_year": 1978,
+      "birth_place": "Carrara",
+      "height_cm": 192,
+      "position": "gardien de but",
+      "national_team": "Italy",
+      "career": [
+        {
+          "club": "Parma",
+          "years": "1995–2001"
+        },
+        {
+          "club": "Juventus",
+          "years": "2001–2021"
+        },
+        {
+          "club": "PSG",
+          "years": "2018–2019"
+        },
+        {
+          "club": "Parma",
+          "years": "2021–2023"
+        }
+      ],
+      "title": "Coupe du monde",
+      "title_evidence": "* FIFA World Cup: 2006",
+      "teammate": {
+        "name": "Paulo Dybala",
+        "shared_club": "Juventus",
+        "source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136",
+        "overlap_years": 7
+      },
+      "source_career": [
+        {
+          "club": "Parma",
+          "start": 1995,
+          "end": 2001,
+          "loan": false
+        },
+        {
+          "club": "Juventus",
+          "start": 2001,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2018,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Juventus",
+          "start": 2019,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "Parma",
+          "start": 2021,
+          "end": 2023,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Alexander Isak",
+      "wikipedia_title": "Alexander Isak",
+      "revision": 1378884340,
+      "source": "https://en.wikipedia.org/w/index.php?title=Alexander_Isak&oldid=1378884340",
+      "birth_year": 1999,
+      "birth_place": "Stockholm",
+      "height_cm": 190,
+      "position": "attaquant",
+      "national_team": "Sweden",
+      "career": [
+        {
+          "club": "AIK",
+          "years": "2016–2017"
+        },
+        {
+          "club": "Borussia Dortmund",
+          "years": "2017–2019"
+        },
+        {
+          "club": "Real Sociedad",
+          "years": "2019–2022"
+        },
+        {
+          "club": "Newcastle United",
+          "years": "2022–2025"
+        },
+        {
+          "club": "Liverpool",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "Copa del Rey",
+      "title_evidence": "*Copa del Rey: 2019–20",
+      "teammate": {
+        "name": "Jadon Sancho",
+        "shared_club": "Borussia Dortmund",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "AIK",
+          "start": 2016,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund II",
+          "start": 2017,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund",
+          "start": 2017,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Willem II",
+          "start": 2019,
+          "end": 2019,
+          "loan": true
+        },
+        {
+          "club": "Real Sociedad",
+          "start": 2019,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Newcastle United",
+          "start": 2022,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Liverpool",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Viktor Gyökeres",
+      "wikipedia_title": "Viktor Gyökeres",
+      "revision": 1378728629,
+      "source": "https://en.wikipedia.org/w/index.php?title=Viktor_Gy%C3%B6keres&oldid=1378728629",
+      "birth_year": 1998,
+      "birth_place": "Stockholm",
+      "height_cm": 189,
+      "position": "attaquant",
+      "national_team": "Sweden",
+      "career": [
+        {
+          "club": "IF Brommapojkarna",
+          "years": "2015–2017"
+        },
+        {
+          "club": "Brighton",
+          "years": "2018–2021"
+        },
+        {
+          "club": "Swansea City (prêt)",
+          "years": "2020–2021"
+        },
+        {
+          "club": "Sporting CP",
+          "years": "2023–2025"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "Primeira Liga",
+      "title_evidence": "*Primeira Liga: 2023–24,",
+      "teammate": {
+        "name": "Declan Rice",
+        "shared_club": "Arsenal",
+        "source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
+        "overlap_years": 1
+      },
+      "source_career": [
+        {
+          "club": "IF Brommapojkarna",
+          "start": 2015,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Brighton & Hove Albion",
+          "start": 2018,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "St. Pauli",
+          "start": 2019,
+          "end": 2020,
+          "loan": true
+        },
+        {
+          "club": "Swansea City",
+          "start": 2020,
+          "end": 2021,
+          "loan": true
+        },
+        {
+          "club": "Coventry City",
+          "start": 2021,
+          "end": 2021,
+          "loan": true
+        },
+        {
+          "club": "Coventry City",
+          "start": 2021,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Sporting CP",
+          "start": 2023,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Darwin Núñez",
+      "wikipedia_title": "Darwin Núñez",
+      "revision": 1378870420,
+      "source": "https://en.wikipedia.org/w/index.php?title=Darwin_N%C3%BA%C3%B1ez&oldid=1378870420",
+      "birth_year": 1999,
+      "birth_place": "Artigas",
+      "height_cm": 185,
+      "position": "attaquant",
+      "national_team": "Uruguay",
+      "career": [
+        {
+          "club": "Peñarol",
+          "years": "2017–2019"
+        },
+        {
+          "club": "Almería",
+          "years": "2019–2020"
+        },
+        {
+          "club": "Benfica",
+          "years": "2020–2022"
+        },
+        {
+          "club": "Liverpool",
+          "years": "2022–2025"
+        },
+        {
+          "club": "Al-Hilal",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "Premier League",
+      "title_evidence": "* Premier League: 2024–25",
+      "teammate": {
+        "name": "Jordan Henderson",
+        "shared_club": "Liverpool",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Peñarol",
+          "start": 2017,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Almería",
+          "start": 2019,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Benfica",
+          "start": 2020,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Liverpool",
+          "start": 2022,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Al-Hilal",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        },
+        {
+          "club": "Al-Diriyah",
+          "start": 2026,
+          "end": null,
+          "loan": true
+        }
+      ]
+    },
+    {
+      "answer": "Cody Gakpo",
+      "wikipedia_title": "Cody Gakpo",
+      "revision": 1378422733,
+      "source": "https://en.wikipedia.org/w/index.php?title=Cody_Gakpo&oldid=1378422733",
+      "birth_year": 1999,
+      "birth_place": "Eindhoven",
+      "height_cm": 193,
+      "position": "attaquant",
+      "national_team": "Netherlands",
+      "career": [
+        {
+          "club": "Jong PSV",
+          "years": "2016–2018"
+        },
+        {
+          "club": "PSV Eindhoven",
+          "years": "2018–2023"
+        },
+        {
+          "club": "Liverpool",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "Premier League",
+      "title_evidence": "*Premier League: 2024–25",
+      "teammate": {
+        "name": "Diogo Jota",
+        "shared_club": "Liverpool",
+        "source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Jong PSV",
+          "start": 2016,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "PSV",
+          "start": 2018,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Liverpool",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Dominik Szoboszlai",
+      "wikipedia_title": "Dominik Szoboszlai",
+      "revision": 1378719178,
+      "source": "https://en.wikipedia.org/w/index.php?title=Dominik_Szoboszlai&oldid=1378719178",
+      "birth_year": 2000,
+      "birth_place": "Székesfehérvár",
+      "height_cm": 186,
+      "position": "milieu",
+      "national_team": "Hungary",
+      "career": [
+        {
+          "club": "FC Liefering",
+          "years": "2017–2018"
+        },
+        {
+          "club": "Red Bull Salzburg",
+          "years": "2018–2021"
+        },
+        {
+          "club": "RB Leipzig",
+          "years": "2021–2023"
+        },
+        {
+          "club": "Liverpool",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "Premier League",
+      "title_evidence": "*Premier League: 2024–25",
+      "teammate": {
+        "name": "Diogo Jota",
+        "shared_club": "Liverpool",
+        "source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "FC Liefering",
+          "start": 2017,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Red Bull Salzburg",
+          "start": 2018,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "RB Leipzig",
+          "start": 2021,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Liverpool",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Florian Wirtz",
+      "wikipedia_title": "Florian Wirtz",
+      "revision": 1378684776,
+      "source": "https://en.wikipedia.org/w/index.php?title=Florian_Wirtz&oldid=1378684776",
+      "birth_year": 2003,
+      "birth_place": "Pulheim",
+      "height_cm": 176,
+      "position": "milieu offensif",
+      "national_team": "Germany",
+      "career": [
+        {
+          "club": "Bayer Leverkusen",
+          "years": "2020–2025"
+        },
+        {
+          "club": "Liverpool",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "Bundesliga",
+      "title_evidence": "* Bundesliga: 2023–24",
+      "teammate": {
+        "name": "Diogo Jota",
+        "shared_club": "Liverpool",
+        "source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120",
+        "overlap_years": 1
+      },
+      "source_career": [
+        {
+          "club": "Bayer Leverkusen",
+          "start": 2020,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Liverpool",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Kai Havertz",
+      "wikipedia_title": "Kai Havertz",
+      "revision": 1378177904,
+      "source": "https://en.wikipedia.org/w/index.php?title=Kai_Havertz&oldid=1378177904",
+      "birth_year": 1999,
+      "birth_place": "Aachen",
+      "height_cm": 193,
+      "position": "milieu offensif",
+      "national_team": "Germany",
+      "career": [
+        {
+          "club": "Bayer Leverkusen",
+          "years": "2016–2020"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2020–2023"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2020–21",
+      "teammate": {
+        "name": "Declan Rice",
+        "shared_club": "Arsenal",
+        "source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Bayer Leverkusen",
+          "start": 2016,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2020,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Timo Werner",
+      "wikipedia_title": "Timo Werner",
+      "revision": 1375927138,
+      "source": "https://en.wikipedia.org/w/index.php?title=Timo_Werner&oldid=1375927138",
+      "birth_year": 1996,
+      "birth_place": "Stuttgart",
+      "height_cm": 180,
+      "position": "attaquant",
+      "national_team": "Germany",
+      "career": [
+        {
+          "club": "VfB Stuttgart",
+          "years": "2013–2016"
+        },
+        {
+          "club": "RB Leipzig",
+          "years": "2016–2020"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2020–2022"
+        },
+        {
+          "club": "RB Leipzig",
+          "years": "2022–2026"
+        },
+        {
+          "club": "Tottenham (prêt)",
+          "years": "2024–2025"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2020–21",
+      "teammate": {
+        "name": "Mason Mount",
+        "shared_club": "Chelsea",
+        "source": "https://en.wikipedia.org/w/index.php?title=Mason_Mount&oldid=1375897248",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "VfB Stuttgart",
+          "start": 2013,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "VfB Stuttgart II",
+          "start": 2014,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "RB Leipzig",
+          "start": 2016,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2020,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "RB Leipzig",
+          "start": 2022,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Tottenham Hotspur",
+          "start": 2024,
+          "end": 2025,
+          "loan": true
+        },
+        {
+          "club": "San Jose Earthquakes",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Leroy Sané",
+      "wikipedia_title": "Leroy Sané",
+      "revision": 1371965372,
+      "source": "https://en.wikipedia.org/w/index.php?title=Leroy_San%C3%A9&oldid=1371965372",
+      "birth_year": 1996,
+      "birth_place": "Essen",
+      "height_cm": 183,
+      "position": "milieu offensif",
+      "national_team": "Germany",
+      "career": [
+        {
+          "club": "Schalke 04",
+          "years": "2014–2016"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2016–2020"
+        },
+        {
+          "club": "Bayern Munich",
+          "years": "2020–2025"
+        },
+        {
+          "club": "Galatasaray",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "Premier League",
+      "title_evidence": "*Premier League: 2017–18, 2018–19",
+      "teammate": {
+        "name": "Harry Kane",
+        "shared_club": "Bayern Munich",
+        "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Schalke 04",
+          "start": 2014,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2016,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Bayern Munich",
+          "start": 2020,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Galatasaray",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Serge Gnabry",
+      "wikipedia_title": "Serge Gnabry",
+      "revision": 1378649208,
+      "source": "https://en.wikipedia.org/w/index.php?title=Serge_Gnabry&oldid=1378649208",
+      "birth_year": 1995,
+      "birth_place": "Stuttgart",
+      "height_cm": 176,
+      "position": "ailier",
+      "national_team": "Germany",
+      "career": [
+        {
+          "club": "Arsenal",
+          "years": "2012–2016"
+        },
+        {
+          "club": "West Bromwich Albion (prêt)",
+          "years": "2015–2016"
+        },
+        {
+          "club": "Werder Bremen",
+          "years": "2016–2017"
+        },
+        {
+          "club": "TSG Hoffenheim (prêt)",
+          "years": "2017–2018"
+        },
+        {
+          "club": "Bayern Munich",
+          "years": "2017–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2019–20",
+      "teammate": {
+        "name": "Harry Kane",
+        "shared_club": "Bayern Munich",
+        "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Arsenal",
+          "start": 2012,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "West Bromwich Albion",
+          "start": 2015,
+          "end": 2016,
+          "loan": true
+        },
+        {
+          "club": "Werder Bremen",
+          "start": 2016,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Bayern Munich",
+          "start": 2017,
+          "end": null,
+          "loan": false
+        },
+        {
+          "club": "TSG Hoffenheim II",
+          "start": 2017,
+          "end": 2018,
+          "loan": true
+        },
+        {
+          "club": "TSG Hoffenheim",
+          "start": 2017,
+          "end": 2018,
+          "loan": true
+        }
+      ]
+    },
+    {
+      "answer": "Joshua Kimmich",
+      "wikipedia_title": "Joshua Kimmich",
+      "revision": 1377085904,
+      "source": "https://en.wikipedia.org/w/index.php?title=Joshua_Kimmich&oldid=1377085904",
+      "birth_year": 1995,
+      "birth_place": "Rottweil",
+      "height_cm": 177,
+      "position": "milieu défensif",
+      "national_team": "Germany",
+      "career": [
+        {
+          "club": "RB Leipzig",
+          "years": "2013–2015"
+        },
+        {
+          "club": "Bayern Munich",
+          "years": "2015–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "* UEFA Champions League: 2019–20",
+      "teammate": {
+        "name": "Harry Kane",
+        "shared_club": "Bayern Munich",
+        "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "RB Leipzig",
+          "start": 2013,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Bayern Munich",
+          "start": 2015,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Leon Goretzka",
+      "wikipedia_title": "Leon Goretzka",
+      "revision": 1372789405,
+      "source": "https://en.wikipedia.org/w/index.php?title=Leon_Goretzka&oldid=1372789405",
+      "birth_year": 1995,
+      "birth_place": "Bochum",
+      "height_cm": 189,
+      "position": "milieu",
+      "national_team": "Germany",
+      "career": [
+        {
+          "club": "VfL Bochum",
+          "years": "2012–2013"
+        },
+        {
+          "club": "Schalke 04",
+          "years": "2013–2018"
+        },
+        {
+          "club": "Bayern Munich",
+          "years": "2018–2026"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "* UEFA Champions League: 2019–20",
+      "teammate": {
+        "name": "Harry Kane",
+        "shared_club": "Bayern Munich",
+        "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "VfL Bochum",
+          "start": 2012,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Schalke 04",
+          "start": 2013,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Schalke 04 II",
+          "start": 2015,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Bayern Munich",
+          "start": 2018,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Aston Villa",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "İlkay Gündoğan",
+      "wikipedia_title": "İlkay Gündoğan",
+      "revision": 1372426668,
+      "source": "https://en.wikipedia.org/w/index.php?title=%C4%B0lkay_G%C3%BCndo%C4%9Fan&oldid=1372426668",
+      "birth_year": 1990,
+      "birth_place": "Gelsenkirchen",
+      "height_cm": 180,
+      "position": "milieu",
+      "national_team": "Germany",
+      "career": [
+        {
+          "club": "Nuremberg",
+          "years": "2009–2011"
+        },
+        {
+          "club": "Borussia Dortmund",
+          "years": "2011–2016"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2016–2025"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2023–2024"
+        },
+        {
+          "club": "Galatasaray",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2022–23; runner-up: 2020–21",
+      "teammate": {
+        "name": "Cole Palmer",
+        "shared_club": "Manchester City",
+        "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "VfL Bochum II",
+          "start": 2008,
+          "end": 2009,
+          "loan": false
+        },
+        {
+          "club": "1. FC Nürnberg",
+          "start": 2009,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund",
+          "start": 2011,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund II",
+          "start": 2012,
+          "end": 2012,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2016,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2023,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2024,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Galatasaray",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Mesut Özil",
+      "wikipedia_title": "Mesut Özil",
+      "revision": 1378668299,
+      "source": "https://en.wikipedia.org/w/index.php?title=Mesut_%C3%96zil&oldid=1378668299",
+      "birth_year": 1988,
+      "birth_place": "Gelsenkirchen",
+      "height_cm": 180,
+      "position": "milieu offensif",
+      "national_team": "Germany",
+      "career": [
+        {
+          "club": "Schalke 04",
+          "years": "2006–2008"
+        },
+        {
+          "club": "Werder Bremen",
+          "years": "2008–2010"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2013–2021"
+        },
+        {
+          "club": "Fenerbahçe",
+          "years": "2021–2022"
+        },
+        {
+          "club": "İstanbul Başakşehir",
+          "years": "2022–2023"
+        }
+      ],
+      "title": "Coupe du monde",
+      "title_evidence": "*FIFA World Cup: 2014; third place: 2010",
+      "teammate": {
+        "name": "Manuel Neuer",
+        "shared_club": "Schalke 04",
+        "source": "https://en.wikipedia.org/w/index.php?title=Manuel_Neuer&oldid=1378216051",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Schalke 04 II",
+          "start": 2005,
+          "end": 2005,
+          "loan": false
+        },
+        {
+          "club": "Schalke 04",
+          "start": 2006,
+          "end": 2008,
+          "loan": false
+        },
+        {
+          "club": "Werder Bremen",
+          "start": 2008,
+          "end": 2010,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2010,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2013,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "Fenerbahçe",
+          "start": 2021,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "İstanbul Başakşehir",
+          "start": 2022,
+          "end": 2023,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Alexis Sánchez",
+      "wikipedia_title": "Alexis Sánchez",
+      "revision": 1376713396,
+      "source": "https://en.wikipedia.org/w/index.php?title=Alexis_S%C3%A1nchez&oldid=1376713396",
+      "birth_year": 1988,
+      "birth_place": "Tocopilla",
+      "height_cm": 169,
+      "position": "attaquant",
+      "national_team": "Chile",
+      "career": [
+        {
+          "club": "Cobreloa",
+          "years": "2005–2006"
+        },
+        {
+          "club": "Colo-Colo (prêt)",
+          "years": "2006–2007"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2014–2018"
+        },
+        {
+          "club": "Udinese",
+          "years": "2024–2025"
+        },
+        {
+          "club": "Sevilla",
+          "years": "2025–2026"
+        }
+      ],
+      "title": "Copa América",
+      "title_evidence": "*Copa América: 2015, 2016",
+      "teammate": {
+        "name": "Marcus Rashford",
+        "shared_club": "Manchester United",
+        "source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Cobreloa",
+          "start": 2005,
+          "end": 2006,
+          "loan": false
+        },
+        {
+          "club": "Udinese",
+          "start": 2006,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Colo-Colo",
+          "start": 2006,
+          "end": 2007,
+          "loan": true
+        },
+        {
+          "club": "River Plate",
+          "start": 2007,
+          "end": 2008,
+          "loan": true
+        },
+        {
+          "club": "Barcelona",
+          "start": 2011,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2014,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Manchester United",
+          "start": 2018,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2019,
+          "end": 2020,
+          "loan": true
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2020,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Marseille",
+          "start": 2022,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2023,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Udinese",
+          "start": 2024,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Sevilla",
+          "start": 2025,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "CF Montréal",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Pierre-Emerick Aubameyang",
+      "wikipedia_title": "Pierre-Emerick Aubameyang",
+      "revision": 1378795116,
+      "source": "https://en.wikipedia.org/w/index.php?title=Pierre-Emerick_Aubameyang&oldid=1378795116",
+      "birth_year": 1989,
+      "birth_place": "Laval",
+      "height_cm": 187,
+      "position": "attaquant",
+      "national_team": "Gabon",
+      "career": [
+        {
+          "club": "Dijon (prêt)",
+          "years": "2008–2009"
+        },
+        {
+          "club": "AC Milan",
+          "years": "2008–2011"
+        },
+        {
+          "club": "Borussia Dortmund",
+          "years": "2013–2018"
+        },
+        {
+          "club": "Marseille",
+          "years": "2023–2026"
+        },
+        {
+          "club": "Al-Qadsiah",
+          "years": "2024–2025"
+        }
+      ],
+      "title": "La Liga",
+      "title_evidence": "*La Liga: 2022–23",
+      "teammate": {
+        "name": "Jadon Sancho",
+        "shared_club": "Borussia Dortmund",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "AC Milan",
+          "start": 2008,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Dijon",
+          "start": 2008,
+          "end": 2009,
+          "loan": true
+        },
+        {
+          "club": "Lille",
+          "start": 2009,
+          "end": 2010,
+          "loan": true
+        },
+        {
+          "club": "Monaco",
+          "start": 2010,
+          "end": 2011,
+          "loan": true
+        },
+        {
+          "club": "Saint-Étienne",
+          "start": 2011,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Saint-Étienne II",
+          "start": 2011,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund",
+          "start": 2013,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2018,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2022,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2022,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Marseille",
+          "start": 2023,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Al-Qadsiah",
+          "start": 2024,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Marseille",
+          "start": 2025,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Deportivo A Coruña",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Alexandre Lacazette",
+      "wikipedia_title": "Alexandre Lacazette",
+      "revision": 1378444573,
+      "source": "https://en.wikipedia.org/w/index.php?title=Alexandre_Lacazette&oldid=1378444573",
+      "birth_year": 1991,
+      "birth_place": "Lyon",
+      "height_cm": 175,
+      "position": "attaquant",
+      "national_team": "France",
+      "career": [
+        {
+          "club": "Lyon",
+          "years": "2010–2017"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2017–2022"
+        },
+        {
+          "club": "Lyon",
+          "years": "2022–2025"
+        },
+        {
+          "club": "Neom",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "FA Cup",
+      "title_evidence": "*FA Cup: 2019–20",
+      "teammate": {
+        "name": "Bradley Barcola",
+        "shared_club": "Lyon",
+        "source": "https://en.wikipedia.org/w/index.php?title=Bradley_Barcola&oldid=1378718832",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Lyon B",
+          "start": 2008,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Lyon",
+          "start": 2010,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2017,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Lyon",
+          "start": 2022,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Neom",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Memphis Depay",
+      "wikipedia_title": "Memphis Depay",
+      "revision": 1379096034,
+      "source": "https://en.wikipedia.org/w/index.php?title=Memphis_Depay&oldid=1379096034",
+      "birth_year": 1994,
+      "birth_place": "Moordrecht",
+      "height_cm": 178,
+      "position": "attaquant",
+      "national_team": "Netherlands",
+      "career": [
+        {
+          "club": "PSV Eindhoven",
+          "years": "2011–2015"
+        },
+        {
+          "club": "Manchester United",
+          "years": "2015–2017"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2021–2023"
+        },
+        {
+          "club": "Atlético Madrid",
+          "years": "2023–2024"
+        },
+        {
+          "club": "Corinthians",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "La Liga",
+      "title_evidence": "*La Liga: 2022–23",
+      "teammate": {
+        "name": "Marcus Rashford",
+        "shared_club": "Manchester United",
+        "source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "PSV Eindhoven",
+          "start": 2011,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Manchester United",
+          "start": 2015,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Lyon",
+          "start": 2017,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2021,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Atlético Madrid",
+          "start": 2023,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Corinthians",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Frenkie de Jong",
+      "wikipedia_title": "Frenkie de Jong",
+      "revision": 1376912222,
+      "source": "https://en.wikipedia.org/w/index.php?title=Frenkie_de_Jong&oldid=1376912222",
+      "birth_year": 1997,
+      "birth_place": "Gorinchem",
+      "height_cm": 181,
+      "position": "milieu",
+      "national_team": "Netherlands",
+      "career": [
+        {
+          "club": "Jong Ajax",
+          "years": "2015–2017"
+        },
+        {
+          "club": "Ajax",
+          "years": "2016–2019"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2019–présent"
+        }
+      ],
+      "title": "La Liga",
+      "title_evidence": "*La Liga: 2022–23, 2024–25, 2025–26",
+      "teammate": {
+        "name": "Ousmane Dembélé",
+        "shared_club": "FC Barcelone",
+        "source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
+        "overlap_years": 5
+      },
+      "source_career": [
+        {
+          "club": "Willem II",
+          "start": 2015,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Jong Ajax",
+          "start": 2015,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Willem II",
+          "start": 2015,
+          "end": 2015,
+          "loan": true
+        },
+        {
+          "club": "Ajax",
+          "start": 2016,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2019,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Matthijs de Ligt",
+      "wikipedia_title": "Matthijs de Ligt",
+      "revision": 1377871286,
+      "source": "https://en.wikipedia.org/w/index.php?title=Matthijs_de_Ligt&oldid=1377871286",
+      "birth_year": 1999,
+      "birth_place": "Leiderdorp",
+      "height_cm": 187,
+      "position": "défenseur central",
+      "national_team": "Netherlands",
+      "career": [
+        {
+          "club": "Jong Ajax",
+          "years": "2016–2017"
+        },
+        {
+          "club": "Ajax",
+          "years": "2016–2019"
+        },
+        {
+          "club": "Juventus",
+          "years": "2019–2022"
+        },
+        {
+          "club": "Bayern Munich",
+          "years": "2022–2024"
+        },
+        {
+          "club": "Manchester United",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "Bundesliga",
+      "title_evidence": "* Bundesliga: 2022–23",
+      "teammate": {
+        "name": "Harry Kane",
+        "shared_club": "Bayern Munich",
+        "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Jong Ajax",
+          "start": 2016,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Ajax",
+          "start": 2016,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Juventus",
+          "start": 2019,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Bayern Munich",
+          "start": 2022,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Manchester United",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Jordi Alba",
+      "wikipedia_title": "Jordi Alba",
+      "revision": 1376299257,
+      "source": "https://en.wikipedia.org/w/index.php?title=Jordi_Alba&oldid=1376299257",
+      "birth_year": 1989,
+      "birth_place": "L'Hospitalet de Llobregat",
+      "height_cm": 170,
+      "position": "arrière gauche",
+      "national_team": "Spain",
+      "career": [
+        {
+          "club": "Cornellà",
+          "years": "2006–2007"
+        },
+        {
+          "club": "Gimnàstic (prêt)",
+          "years": "2008–2009"
+        },
+        {
+          "club": "Valencia",
+          "years": "2009–2012"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2012–2023"
+        },
+        {
+          "club": "Inter Miami",
+          "years": "2023–2025"
+        }
+      ],
+      "title": "Euro",
+      "title_evidence": "*UEFA European Championship: 2012",
+      "teammate": {
+        "name": "Ousmane Dembélé",
+        "shared_club": "FC Barcelone",
+        "source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
+        "overlap_years": 7
+      },
+      "source_career": [
+        {
+          "club": "Cornellà",
+          "start": 2006,
+          "end": 2007,
+          "loan": false
+        },
+        {
+          "club": "Valencia B",
+          "start": 2007,
+          "end": 2009,
+          "loan": false
+        },
+        {
+          "club": "Gimnàstic",
+          "start": 2008,
+          "end": 2009,
+          "loan": true
+        },
+        {
+          "club": "Valencia",
+          "start": 2009,
+          "end": 2012,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2012,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Inter Miami",
+          "start": 2023,
+          "end": 2025,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Ivan Rakitić",
+      "wikipedia_title": "Ivan Rakitić",
+      "revision": 1376286041,
+      "source": "https://en.wikipedia.org/w/index.php?title=Ivan_Rakiti%C4%87&oldid=1376286041",
+      "birth_year": 1988,
+      "birth_place": "Rheinfelden",
+      "height_cm": 184,
+      "position": "milieu",
+      "national_team": "Croatia",
+      "career": [
+        {
+          "club": "Nordstern Basel",
+          "years": "2004"
+        },
+        {
+          "club": "Bâle",
+          "years": "2005–2007"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2014–2020"
+        },
+        {
+          "club": "Al-Shabab",
+          "years": "2024"
+        },
+        {
+          "club": "Hajduk Split",
+          "years": "2024–2025"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2014–15",
+      "teammate": {
+        "name": "Ousmane Dembélé",
+        "shared_club": "FC Barcelone",
+        "source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
+        "overlap_years": 4
+      },
+      "source_career": [
+        {
+          "club": "Nordstern Basel",
+          "start": 2004,
+          "end": 2004,
+          "loan": false
+        },
+        {
+          "club": "FC Basel II",
+          "start": 2005,
+          "end": 2006,
+          "loan": false
+        },
+        {
+          "club": "FC Basel",
+          "start": 2005,
+          "end": 2007,
+          "loan": false
+        },
+        {
+          "club": "Schalke 04",
+          "start": 2007,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Sevilla",
+          "start": 2011,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2014,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Sevilla",
+          "start": 2020,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Al-Shabab",
+          "start": 2024,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Hajduk Split",
+          "start": 2024,
+          "end": 2025,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Arturo Vidal",
+      "wikipedia_title": "Arturo Vidal",
+      "revision": 1378372285,
+      "source": "https://en.wikipedia.org/w/index.php?title=Arturo_Vidal&oldid=1378372285",
+      "birth_year": 1987,
+      "birth_place": "San Joaquin",
+      "height_cm": 180,
+      "position": "défenseur central",
+      "national_team": "Chile",
+      "career": [
+        {
+          "club": "Colo-Colo",
+          "years": "2005–2007"
+        },
+        {
+          "club": "Bayer Leverkusen",
+          "years": "2007–2011"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2018–2020"
+        },
+        {
+          "club": "Athletico Paranaense",
+          "years": "2023–2024"
+        },
+        {
+          "club": "Colo-Colo",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "Copa América",
+      "title_evidence": "* Copa América: 2015, 2016",
+      "teammate": {
+        "name": "Ousmane Dembélé",
+        "shared_club": "FC Barcelone",
+        "source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Colo-Colo",
+          "start": 2005,
+          "end": 2007,
+          "loan": false
+        },
+        {
+          "club": "Bayer Leverkusen",
+          "start": 2007,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Juventus",
+          "start": 2011,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Bayern Munich",
+          "start": 2015,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2018,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2020,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Flamengo",
+          "start": 2022,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Athletico Paranaense",
+          "start": 2023,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Colo-Colo",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Ivan Perišić",
+      "wikipedia_title": "Ivan Perišić",
+      "revision": 1379105301,
+      "source": "https://en.wikipedia.org/w/index.php?title=Ivan_Peri%C5%A1i%C4%87&oldid=1379105301",
+      "birth_year": 1989,
+      "birth_place": "Split",
+      "height_cm": 186,
+      "position": "ailier",
+      "national_team": "Croatia",
+      "career": [
+        {
+          "club": "Roeselare (prêt)",
+          "years": "2009"
+        },
+        {
+          "club": "Club Bruges",
+          "years": "2009–2011"
+        },
+        {
+          "club": "Inter Milan",
+          "years": "2015–2022"
+        },
+        {
+          "club": "Hajduk Split (prêt)",
+          "years": "2024"
+        },
+        {
+          "club": "PSV Eindhoven",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2019–20",
+      "teammate": {
+        "name": "Harry Kane",
+        "shared_club": "Tottenham",
+        "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Sochaux II",
+          "start": 2006,
+          "end": 2009,
+          "loan": false
+        },
+        {
+          "club": "Roeselare",
+          "start": 2009,
+          "end": 2009,
+          "loan": true
+        },
+        {
+          "club": "Club Brugge",
+          "start": 2009,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund",
+          "start": 2011,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "VfL Wolfsburg",
+          "start": 2013,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2015,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Bayern Munich",
+          "start": 2019,
+          "end": 2020,
+          "loan": true
+        },
+        {
+          "club": "Tottenham Hotspur",
+          "start": 2022,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Hajduk Split",
+          "start": 2024,
+          "end": 2024,
+          "loan": true
+        },
+        {
+          "club": "Hajduk Split",
+          "start": 2024,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "PSV",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Marcelo Brozović",
+      "wikipedia_title": "Marcelo Brozović",
+      "revision": 1374881693,
+      "source": "https://en.wikipedia.org/w/index.php?title=Marcelo_Brozovi%C4%87&oldid=1374881693",
+      "birth_year": 1992,
+      "birth_place": "Zagreb",
+      "height_cm": 181,
+      "position": "milieu défensif",
+      "national_team": "Croatia",
+      "career": [
+        {
+          "club": "Hrvatski Dragovoljac",
+          "years": "2010–2011"
+        },
+        {
+          "club": "Lokomotiva",
+          "years": "2011–2012"
+        },
+        {
+          "club": "Dinamo Zagreb",
+          "years": "2012–2015"
+        },
+        {
+          "club": "Inter Milan",
+          "years": "2015–2023"
+        },
+        {
+          "club": "Al-Nassr",
+          "years": "2023–2026"
+        }
+      ],
+      "title": "Serie A",
+      "title_evidence": "*Serie A: 2020–21",
+      "teammate": {
+        "name": "Lautaro Martínez",
+        "shared_club": "Inter Milan",
+        "source": "https://en.wikipedia.org/w/index.php?title=Lautaro_Mart%C3%ADnez&oldid=1378395150",
+        "overlap_years": 6
+      },
+      "source_career": [
+        {
+          "club": "Hrvatski Dragovoljac",
+          "start": 2010,
+          "end": 2011,
+          "loan": false
+        },
+        {
+          "club": "Lokomotiva",
+          "start": 2011,
+          "end": 2012,
+          "loan": false
+        },
+        {
+          "club": "Dinamo Zagreb",
+          "start": 2012,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2015,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Al-Nassr",
+          "start": 2023,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Al-Saad",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Hakan Çalhanoğlu",
+      "wikipedia_title": "Hakan Çalhanoğlu",
+      "revision": 1377835464,
+      "source": "https://en.wikipedia.org/w/index.php?title=Hakan_%C3%87alhano%C4%9Flu&oldid=1377835464",
+      "birth_year": 1994,
+      "birth_place": "Mannheim",
+      "height_cm": 178,
+      "position": "milieu",
+      "national_team": "Turkey",
+      "career": [
+        {
+          "club": "Karlsruher",
+          "years": "2011–2013"
+        },
+        {
+          "club": "Hambourg SV",
+          "years": "2013–2014"
+        },
+        {
+          "club": "Bayer Leverkusen",
+          "years": "2014–2017"
+        },
+        {
+          "club": "AC Milan",
+          "years": "2017–2021"
+        },
+        {
+          "club": "Inter Milan",
+          "years": "2021–présent"
+        }
+      ],
+      "title": "Serie A",
+      "title_evidence": "*Serie A: 2023–24, 2025–26",
+      "teammate": {
+        "name": "Son Heung-min",
+        "shared_club": "Bayer Leverkusen",
+        "source": "https://en.wikipedia.org/w/index.php?title=Son_Heung-min&oldid=1378990669",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Karlsruher",
+          "start": 2011,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Hamburger SV",
+          "start": 2013,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "Bayer Leverkusen",
+          "start": 2014,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "AC Milan",
+          "start": 2017,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "Inter Milan",
+          "start": 2021,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Lorenzo Insigne",
+      "wikipedia_title": "Lorenzo Insigne",
+      "revision": 1376555810,
+      "source": "https://en.wikipedia.org/w/index.php?title=Lorenzo_Insigne&oldid=1376555810",
+      "birth_year": 1991,
+      "birth_place": "Frattamaggiore",
+      "height_cm": 163,
+      "position": "milieu offensif",
+      "national_team": "Italy",
+      "career": [
+        {
+          "club": "Cavese (prêt)",
+          "years": "2010"
+        },
+        {
+          "club": "Foggia (prêt)",
+          "years": "2010–2011"
+        },
+        {
+          "club": "Napoli",
+          "years": "2010–2022"
+        },
+        {
+          "club": "Pescara (prêt)",
+          "years": "2011–2012"
+        },
+        {
+          "club": "Toronto FC",
+          "years": "2022–2025"
+        }
+      ],
+      "title": "Euro",
+      "title_evidence": "* UEFA European Championship: 2020",
+      "teammate": {
+        "name": "Victor Osimhen",
+        "shared_club": "Napoli",
+        "source": "https://en.wikipedia.org/w/index.php?title=Victor_Osimhen&oldid=1378160614",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Napoli",
+          "start": 2010,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Cavese",
+          "start": 2010,
+          "end": 2010,
+          "loan": true
+        },
+        {
+          "club": "Foggia",
+          "start": 2010,
+          "end": 2011,
+          "loan": true
+        },
+        {
+          "club": "Pescara",
+          "start": 2011,
+          "end": 2012,
+          "loan": true
+        },
+        {
+          "club": "Toronto FC",
+          "start": 2022,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Pescara",
+          "start": 2026,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Sampdoria",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Ciro Immobile",
+      "wikipedia_title": "Ciro Immobile",
+      "revision": 1375050845,
+      "source": "https://en.wikipedia.org/w/index.php?title=Ciro_Immobile&oldid=1375050845",
+      "birth_year": 1990,
+      "birth_place": "Torre Annunziata",
+      "height_cm": 185,
+      "position": "attaquant",
+      "national_team": "Italy",
+      "career": [
+        {
+          "club": "Sorrento",
+          "years": "2007"
+        },
+        {
+          "club": "Juventus",
+          "years": "2009–2012"
+        },
+        {
+          "club": "Torino",
+          "years": "2013–2014"
+        },
+        {
+          "club": "Beşiktaş",
+          "years": "2024–2025"
+        },
+        {
+          "club": "Bologna",
+          "years": "2025–2026"
+        }
+      ],
+      "title": "Euro",
+      "title_evidence": "*UEFA European Championship: 2020",
+      "teammate": {
+        "name": "İlkay Gündoğan",
+        "shared_club": "Borussia Dortmund",
+        "source": "https://en.wikipedia.org/w/index.php?title=%C4%B0lkay_G%C3%BCndo%C4%9Fan&oldid=1372426668",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Sorrento",
+          "start": 2007,
+          "end": 2007,
+          "loan": false
+        },
+        {
+          "club": "Juventus",
+          "start": 2009,
+          "end": 2012,
+          "loan": false
+        },
+        {
+          "club": "Siena",
+          "start": 2010,
+          "end": 2011,
+          "loan": true
+        },
+        {
+          "club": "Grosseto",
+          "start": 2011,
+          "end": 2011,
+          "loan": true
+        },
+        {
+          "club": "Pescara",
+          "start": 2011,
+          "end": 2012,
+          "loan": true
+        },
+        {
+          "club": "Genoa",
+          "start": 2012,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Torino",
+          "start": 2013,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "Borussia Dortmund",
+          "start": 2014,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Sevilla",
+          "start": 2015,
+          "end": 2016,
+          "loan": true
+        },
+        {
+          "club": "Sevilla",
+          "start": 2016,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Torino",
+          "start": 2016,
+          "end": 2016,
+          "loan": true
+        },
+        {
+          "club": "Lazio",
+          "start": 2016,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Beşiktaş",
+          "start": 2024,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Bologna",
+          "start": 2025,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Paris FC",
+          "start": 2026,
+          "end": 2026,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Dušan Vlahović",
+      "wikipedia_title": "Dušan Vlahović",
+      "revision": 1378123218,
+      "source": "https://en.wikipedia.org/w/index.php?title=Du%C5%A1an_Vlahovi%C4%87&oldid=1378123218",
+      "birth_year": 2000,
+      "birth_place": "Belgrade",
+      "height_cm": 190,
+      "position": "attaquant",
+      "national_team": "Serbia",
+      "career": [
+        {
+          "club": "Partizan",
+          "years": "2016–2018"
+        },
+        {
+          "club": "Fiorentina",
+          "years": "2018–2022"
+        },
+        {
+          "club": "Juventus",
+          "years": "2022–2026"
+        }
+      ],
+      "title": "Coppa Italia",
+      "title_evidence": "* Coppa Italia: 2023–24",
+      "teammate": {
+        "name": "Federico Chiesa",
+        "shared_club": "Fiorentina",
+        "source": "https://en.wikipedia.org/w/index.php?title=Federico_Chiesa&oldid=1378127004",
+        "overlap_years": 8
+      },
+      "source_career": [
+        {
+          "club": "Partizan",
+          "start": 2016,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Fiorentina",
+          "start": 2018,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Juventus",
+          "start": 2022,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Beşiktaş",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Benjamin Šeško",
+      "wikipedia_title": "Benjamin Šeško",
+      "revision": 1375592136,
+      "source": "https://en.wikipedia.org/w/index.php?title=Benjamin_%C5%A0e%C5%A1ko&oldid=1375592136",
+      "birth_year": 2003,
+      "birth_place": "Radeče",
+      "height_cm": 195,
+      "position": "attaquant",
+      "national_team": "Slovenia",
+      "career": [
+        {
+          "club": "FC Liefering (prêt)",
+          "years": "2019–2021"
+        },
+        {
+          "club": "Red Bull Salzburg",
+          "years": "2019–2023"
+        },
+        {
+          "club": "RB Leipzig",
+          "years": "2023–2025"
+        },
+        {
+          "club": "Manchester United",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "Championnat d’Autriche",
+      "title_evidence": "*Austrian Bundesliga: 2020–21, 2021–22, 2022–23",
+      "teammate": {
+        "name": "Xavi Simons",
+        "shared_club": "RB Leipzig",
+        "source": "https://en.wikipedia.org/w/index.php?title=Xavi_Simons&oldid=1376545620",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Red Bull Salzburg",
+          "start": 2019,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "FC Liefering",
+          "start": 2019,
+          "end": 2021,
+          "loan": true
+        },
+        {
+          "club": "RB Leipzig",
+          "start": 2023,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Manchester United",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Xavi Simons",
+      "wikipedia_title": "Xavi Simons",
+      "revision": 1376545620,
+      "source": "https://en.wikipedia.org/w/index.php?title=Xavi_Simons&oldid=1376545620",
+      "birth_year": 2003,
+      "birth_place": "Amsterdam",
+      "height_cm": 179,
+      "position": "milieu offensif",
+      "national_team": "Netherlands",
+      "career": [
+        {
+          "club": "PSG",
+          "years": "2021–2025"
+        },
+        {
+          "club": "PSV Eindhoven",
+          "years": "2022–2023"
+        },
+        {
+          "club": "RB Leipzig",
+          "years": "2023–2025"
+        },
+        {
+          "club": "Tottenham",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "Ligue 1",
+      "title_evidence": "* Ligue 1: 2021–22",
+      "teammate": {
+        "name": "João Neves",
+        "shared_club": "PSG",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2021,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "PSV",
+          "start": 2022,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2023,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "RB Leipzig",
+          "start": 2023,
+          "end": 2025,
+          "loan": true
+        },
+        {
+          "club": "RB Leipzig",
+          "start": 2025,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Tottenham Hotspur",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Dani Olmo",
+      "wikipedia_title": "Dani Olmo",
+      "revision": 1379060899,
+      "source": "https://en.wikipedia.org/w/index.php?title=Dani_Olmo&oldid=1379060899",
+      "birth_year": 1998,
+      "birth_place": "Terrassa",
+      "height_cm": 182,
+      "position": "milieu offensif",
+      "national_team": "Spain",
+      "career": [
+        {
+          "club": "Dinamo Zagreb",
+          "years": "2015–2020"
+        },
+        {
+          "club": "RB Leipzig",
+          "years": "2020–2024"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "Euro",
+      "title_evidence": "*UEFA European Championship: 2024",
+      "teammate": {
+        "name": "Marc-André ter Stegen",
+        "shared_club": "FC Barcelone",
+        "source": "https://en.wikipedia.org/w/index.php?title=Marc-Andr%C3%A9_ter_Stegen&oldid=1376830446",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Dinamo Zagreb II",
+          "start": 2015,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Dinamo Zagreb",
+          "start": 2015,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "RB Leipzig",
+          "start": 2020,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Ferran Torres",
+      "wikipedia_title": "Ferran Torres",
+      "revision": 1378053175,
+      "source": "https://en.wikipedia.org/w/index.php?title=Ferran_Torres&oldid=1378053175",
+      "birth_year": 2000,
+      "birth_place": "Foios",
+      "height_cm": 182,
+      "position": "attaquant",
+      "national_team": "Spain",
+      "career": [
+        {
+          "club": "Valencia Mestalla",
+          "years": "2016–2017"
+        },
+        {
+          "club": "Valencia",
+          "years": "2017–2020"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2020–2022"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2022–2026"
+        }
+      ],
+      "title": "Euro",
+      "title_evidence": "*UEFA European Championship: 2024",
+      "teammate": {
+        "name": "Cole Palmer",
+        "shared_club": "Manchester City",
+        "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Valencia Mestalla",
+          "start": 2016,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Valencia",
+          "start": 2017,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2020,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2022,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Christian Pulisic",
+      "wikipedia_title": "Christian Pulisic",
+      "revision": 1378909133,
+      "source": "https://en.wikipedia.org/w/index.php?title=Christian_Pulisic&oldid=1378909133",
+      "birth_year": 1998,
+      "birth_place": "Hershey",
+      "height_cm": 178,
+      "position": "ailier",
+      "national_team": "United States",
+      "career": [
+        {
+          "club": "Borussia Dortmund",
+          "years": "2016–2019"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2019–2023"
+        },
+        {
+          "club": "AC Milan",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "*UEFA Champions League: 2020–21",
+      "teammate": {
+        "name": "Jadon Sancho",
+        "shared_club": "Borussia Dortmund",
+        "source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Borussia Dortmund",
+          "start": 2016,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Chelsea",
+          "start": 2019,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "AC Milan",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Weston McKennie",
+      "wikipedia_title": "Weston McKennie",
+      "revision": 1378051450,
+      "source": "https://en.wikipedia.org/w/index.php?title=Weston_McKennie&oldid=1378051450",
+      "birth_year": 1998,
+      "birth_place": "Fort Lewis",
+      "height_cm": 180,
+      "position": "milieu",
+      "national_team": "United States",
+      "career": [
+        {
+          "club": "Schalke 04",
+          "years": "2017–2021"
+        },
+        {
+          "club": "Juventus",
+          "years": "2020–présent"
+        },
+        {
+          "club": "Leeds United (prêt)",
+          "years": "2023"
+        }
+      ],
+      "title": "Coppa Italia",
+      "title_evidence": "*Coppa Italia: 2020–21,",
+      "teammate": {
+        "name": "Paulo Dybala",
+        "shared_club": "Juventus",
+        "source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Schalke 04",
+          "start": 2017,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "Juventus",
+          "start": 2020,
+          "end": 2021,
+          "loan": true
+        },
+        {
+          "club": "Juventus",
+          "start": 2021,
+          "end": null,
+          "loan": false
+        },
+        {
+          "club": "Leeds United",
+          "start": 2023,
+          "end": 2023,
+          "loan": true
+        }
+      ]
+    },
+    {
+      "answer": "Yunus Musah",
+      "wikipedia_title": "Yunus Musah",
+      "revision": 1379020542,
+      "source": "https://en.wikipedia.org/w/index.php?title=Yunus_Musah&oldid=1379020542",
+      "birth_year": 2002,
+      "birth_place": "The Bronx",
+      "height_cm": 178,
+      "position": "milieu central",
+      "national_team": "United States",
+      "career": [
+        {
+          "club": "Valencia",
+          "years": "2020–2023"
+        },
+        {
+          "club": "AC Milan",
+          "years": "2023–présent"
+        },
+        {
+          "club": "Atalanta (prêt)",
+          "years": "2025–2026"
+        }
+      ],
+      "title": "Ligue des nations CONCACAF",
+      "title_evidence": "*CONCACAF Nations League: 2019–20, 2022–23, 2023–24",
+      "teammate": {
+        "name": "Mike Maignan",
+        "shared_club": "AC Milan",
+        "source": "https://en.wikipedia.org/w/index.php?title=Mike_Maignan&oldid=1378077337",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Valencia B",
+          "start": 2019,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Valencia",
+          "start": 2020,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "AC Milan",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        },
+        {
+          "club": "Atalanta",
+          "start": 2025,
+          "end": 2026,
+          "loan": true
+        }
+      ]
+    },
+    {
+      "answer": "Alphonso Davies",
+      "wikipedia_title": "Alphonso Davies",
+      "revision": 1378050851,
+      "source": "https://en.wikipedia.org/w/index.php?title=Alphonso_Davies&oldid=1378050851",
+      "birth_year": 2000,
+      "birth_place": "Buduburam",
+      "height_cm": 185,
+      "position": "arrière gauche",
+      "national_team": "Canada",
+      "career": [
+        {
+          "club": "Vancouver Whitecaps",
+          "years": "2016–2018"
+        },
+        {
+          "club": "Bayern Munich",
+          "years": "2019–présent"
+        }
+      ],
+      "title": "UEFA Champions League",
+      "title_evidence": "* UEFA Champions League: 2019–20",
+      "teammate": {
+        "name": "Harry Kane",
+        "shared_club": "Bayern Munich",
+        "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Whitecaps FC 2",
+          "start": 2015,
+          "end": 2016,
+          "loan": false
+        },
+        {
+          "club": "Vancouver Whitecaps FC",
+          "start": 2016,
+          "end": 2018,
+          "loan": false
+        },
+        {
+          "club": "Bayern Munich II",
+          "start": 2018,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Bayern Munich",
+          "start": 2019,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Jonathan David",
+      "wikipedia_title": "Jonathan David",
+      "revision": 1378948675,
+      "source": "https://en.wikipedia.org/w/index.php?title=Jonathan_David&oldid=1378948675",
+      "birth_year": 2000,
+      "birth_place": "Brooklyn",
+      "height_cm": 178,
+      "position": "attaquant",
+      "national_team": "Canada",
+      "career": [
+        {
+          "club": "KAA Gent",
+          "years": "2018–2020"
+        },
+        {
+          "club": "Lille",
+          "years": "2020–2025"
+        },
+        {
+          "club": "Juventus",
+          "years": "2025–présent"
+        }
+      ],
+      "title": "Ligue 1",
+      "title_evidence": "*Ligue 1: 2020–21",
+      "teammate": {
+        "name": "Mike Maignan",
+        "shared_club": "Lille",
+        "source": "https://en.wikipedia.org/w/index.php?title=Mike_Maignan&oldid=1378077337",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "KAA Gent",
+          "start": 2018,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Lille",
+          "start": 2020,
+          "end": 2025,
+          "loan": false
+        },
+        {
+          "club": "Juventus",
+          "start": 2025,
+          "end": null,
+          "loan": false
+        },
+        {
+          "club": "Atlético Madrid",
+          "start": 2026,
+          "end": null,
+          "loan": true
+        }
+      ]
+    },
+    {
+      "answer": "Folarin Balogun",
+      "wikipedia_title": "Folarin Balogun",
+      "revision": 1378434987,
+      "source": "https://en.wikipedia.org/w/index.php?title=Folarin_Balogun&oldid=1378434987",
+      "birth_year": 2001,
+      "birth_place": "Brooklyn",
+      "height_cm": 178,
+      "position": "attaquant",
+      "national_team": "United States",
+      "career": [
+        {
+          "club": "Arsenal",
+          "years": "2020–2023"
+        },
+        {
+          "club": "Middlesbrough (prêt)",
+          "years": "2022"
+        },
+        {
+          "club": "Reims (prêt)",
+          "years": "2022–2023"
+        },
+        {
+          "club": "Monaco",
+          "years": "2023–présent"
+        }
+      ],
+      "title": "Ligue des nations CONCACAF",
+      "title_evidence": "*CONCACAF Nations League: 2022–23, 2023–24",
+      "teammate": {
+        "name": "Mesut Özil",
+        "shared_club": "Arsenal",
+        "source": "https://en.wikipedia.org/w/index.php?title=Mesut_%C3%96zil&oldid=1378668299",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Arsenal",
+          "start": 2020,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Middlesbrough",
+          "start": 2022,
+          "end": 2022,
+          "loan": true
+        },
+        {
+          "club": "Reims",
+          "start": 2022,
+          "end": 2023,
+          "loan": true
+        },
+        {
+          "club": "Monaco",
+          "start": 2023,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Amadou Onana",
+      "wikipedia_title": "Amadou Onana",
+      "revision": 1376967098,
+      "source": "https://en.wikipedia.org/w/index.php?title=Amadou_Onana&oldid=1376967098",
+      "birth_year": 2001,
+      "birth_place": "Dakar",
+      "height_cm": 195,
+      "position": "milieu défensif",
+      "national_team": "Belgium",
+      "career": [
+        {
+          "club": "Hambourg SV",
+          "years": "2020–2021"
+        },
+        {
+          "club": "Lille",
+          "years": "2021–2022"
+        },
+        {
+          "club": "Everton",
+          "years": "2022–2024"
+        },
+        {
+          "club": "Aston Villa",
+          "years": "2024–présent"
+        }
+      ],
+      "title": "UEFA Europa League",
+      "title_evidence": "*UEFA Europa League: 2025–26",
+      "teammate": {
+        "name": "Emiliano Martínez",
+        "shared_club": "Aston Villa",
+        "source": "https://en.wikipedia.org/w/index.php?title=Emiliano_Mart%C3%ADnez&oldid=1378988069",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "TSG Hoffenheim II",
+          "start": 2019,
+          "end": 2020,
+          "loan": false
+        },
+        {
+          "club": "Hamburger SV",
+          "start": 2020,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "Lille",
+          "start": 2021,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Everton",
+          "start": 2022,
+          "end": 2024,
+          "loan": false
+        },
+        {
+          "club": "Aston Villa",
+          "start": 2024,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Youri Tielemans",
+      "wikipedia_title": "Youri Tielemans",
+      "revision": 1378173637,
+      "source": "https://en.wikipedia.org/w/index.php?title=Youri_Tielemans&oldid=1378173637",
+      "birth_year": 1997,
+      "birth_place": "Sint-Pieters-Leeuw",
+      "height_cm": 176,
+      "position": "milieu",
+      "national_team": "Belgium",
+      "career": [
+        {
+          "club": "Anderlecht",
+          "years": "2013–2017"
+        },
+        {
+          "club": "Monaco",
+          "years": "2017–2019"
+        },
+        {
+          "club": "Leicester City (prêt)",
+          "years": "2019"
+        },
+        {
+          "club": "Aston Villa",
+          "years": "2023–2026"
+        }
+      ],
+      "title": "FA Cup",
+      "title_evidence": "*FA Cup: 2020–21",
+      "teammate": {
+        "name": "Emiliano Martínez",
+        "shared_club": "Aston Villa",
+        "source": "https://en.wikipedia.org/w/index.php?title=Emiliano_Mart%C3%ADnez&oldid=1378988069",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Anderlecht",
+          "start": 2013,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Monaco",
+          "start": 2017,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Leicester City",
+          "start": 2019,
+          "end": 2019,
+          "loan": true
+        },
+        {
+          "club": "Leicester City",
+          "start": 2019,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Aston Villa",
+          "start": 2023,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Manchester United",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Leandro Trossard",
+      "wikipedia_title": "Leandro Trossard",
+      "revision": 1378815077,
+      "source": "https://en.wikipedia.org/w/index.php?title=Leandro_Trossard&oldid=1378815077",
+      "birth_year": 1994,
+      "birth_place": "Maasmechelen",
+      "height_cm": 172,
+      "position": "attaquant",
+      "national_team": "Belgium",
+      "career": [
+        {
+          "club": "Lommel United (prêt)",
+          "years": "2012–2015"
+        },
+        {
+          "club": "Genk",
+          "years": "2012–2019"
+        },
+        {
+          "club": "OH Leuven (prêt)",
+          "years": "2015–2016"
+        },
+        {
+          "club": "Brighton",
+          "years": "2019–2023"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2023–2026"
+        }
+      ],
+      "title": "championnat de Belgique",
+      "title_evidence": "*Belgian First Division A: 2018–19",
+      "teammate": {
+        "name": "Declan Rice",
+        "shared_club": "Arsenal",
+        "source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Genk",
+          "start": 2012,
+          "end": 2019,
+          "loan": false
+        },
+        {
+          "club": "Lommel United",
+          "start": 2012,
+          "end": 2013,
+          "loan": true
+        },
+        {
+          "club": "Westerlo",
+          "start": 2013,
+          "end": 2014,
+          "loan": true
+        },
+        {
+          "club": "Lommel United",
+          "start": 2014,
+          "end": 2015,
+          "loan": true
+        },
+        {
+          "club": "OH Leuven",
+          "start": 2015,
+          "end": 2016,
+          "loan": true
+        },
+        {
+          "club": "Brighton & Hove Albion",
+          "start": 2019,
+          "end": 2023,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2023,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Beşiktaş",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Martin Ødegaard",
+      "wikipedia_title": "Martin Ødegaard",
+      "revision": 1378631722,
+      "source": "https://en.wikipedia.org/w/index.php?title=Martin_%C3%98degaard&oldid=1378631722",
+      "birth_year": 1998,
+      "birth_place": "Drammen",
+      "height_cm": 178,
+      "position": "milieu",
+      "national_team": "Norway",
+      "career": [
+        {
+          "club": "Strømsgodset",
+          "years": "2014–2015"
+        },
+        {
+          "club": "Real Madrid",
+          "years": "2015–2021"
+        },
+        {
+          "club": "Vitesse (prêt)",
+          "years": "2018–2019"
+        },
+        {
+          "club": "Real Sociedad (prêt)",
+          "years": "2019–2020"
+        },
+        {
+          "club": "Arsenal (prêt)",
+          "years": "2021"
+        }
+      ],
+      "title": "Copa del Rey",
+      "title_evidence": "*Copa del Rey: 2019–20",
+      "teammate": {
+        "name": "Keylor Navas",
+        "shared_club": "Real Madrid",
+        "source": "https://en.wikipedia.org/w/index.php?title=Keylor_Navas&oldid=1378696436",
+        "overlap_years": 2
+      },
+      "source_career": [
+        {
+          "club": "Strømsgodset 3",
+          "start": 2013,
+          "end": 2013,
+          "loan": false
+        },
+        {
+          "club": "Strømsgodset 2",
+          "start": 2013,
+          "end": 2014,
+          "loan": false
+        },
+        {
+          "club": "Strømsgodset",
+          "start": 2014,
+          "end": 2015,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid Castilla",
+          "start": 2015,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Real Madrid",
+          "start": 2015,
+          "end": 2021,
+          "loan": false
+        },
+        {
+          "club": "Heerenveen",
+          "start": 2017,
+          "end": 2018,
+          "loan": true
+        },
+        {
+          "club": "Vitesse",
+          "start": 2018,
+          "end": 2019,
+          "loan": true
+        },
+        {
+          "club": "Real Sociedad",
+          "start": 2019,
+          "end": 2020,
+          "loan": true
+        },
+        {
+          "club": "Arsenal",
+          "start": 2021,
+          "end": 2021,
+          "loan": true
+        },
+        {
+          "club": "Arsenal",
+          "start": 2021,
+          "end": null,
+          "loan": false
+        }
+      ]
+    },
+    {
+      "answer": "Gabriel Jesus",
+      "wikipedia_title": "Gabriel Jesus",
+      "revision": 1378831885,
+      "source": "https://en.wikipedia.org/w/index.php?title=Gabriel_Jesus&oldid=1378831885",
+      "birth_year": 1997,
+      "birth_place": "São Paulo",
+      "height_cm": 175,
+      "position": "attaquant",
+      "national_team": "Brazil",
+      "career": [
+        {
+          "club": "Palmeiras",
+          "years": "2015–2017"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2017–2022"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2022–2026"
+        }
+      ],
+      "title": "Copa América",
+      "title_evidence": "*Copa América: 2019",
+      "teammate": {
+        "name": "Declan Rice",
+        "shared_club": "Arsenal",
+        "source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
+        "overlap_years": 3
+      },
+      "source_career": [
+        {
+          "club": "Palmeiras",
+          "start": 2015,
+          "end": 2017,
+          "loan": false
+        },
+        {
+          "club": "Manchester City",
+          "start": 2017,
+          "end": 2022,
+          "loan": false
+        },
+        {
+          "club": "Arsenal",
+          "start": 2022,
+          "end": 2026,
+          "loan": false
+        },
+        {
+          "club": "Barcelona",
+          "start": 2026,
+          "end": null,
+          "loan": false
+        }
+      ]
+    }
+  ]
+}
