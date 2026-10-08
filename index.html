@@ -1507,6 +1507,8 @@
   :lang(pt-PT) .vf-choice { font-size: clamp(22px, 6.6vw, 32px); letter-spacing: 0; }
 
   #next-card-zone .tr-btn-primary { margin-top: 2px; }
+  button.text-btn.solo-pass { display: block; margin: 8px auto 0; min-height: 44px; font-size: 15px; color: var(--chalk); }
+  button.text-btn.solo-pass.hidden-screen { display: none; }
   #next-card-zone .report-btn { display: block; margin: 10px auto 0; min-height: 44px; font-size: 13px; }
   #feedback-zone:empty { display: none; }
 
@@ -2403,6 +2405,7 @@
         <label class="tr-label" for="answer-input">Quel est le joueur ?</label>
         <input type="text" class="tr-input" id="answer-input" placeholder="Nom du joueur…" autocomplete="off" autocapitalize="words" enterkeyhint="done">
         <button type="button" class="tr-btn-primary" id="btn-submit-answer">Faire confirmer</button>
+        <button type="button" class="text-btn solo-pass hidden-screen" id="btn-solo-pass">Passer l'indice</button>
         <p class="tr-panel-note"><span id="type-stakes"></span><br>Temps limité : sans réponse validée à 0, c'est une mauvaise réponse</p>
       </div>
       <div class="tr-panel hidden-screen" id="confirm-box">
@@ -2542,6 +2545,7 @@
           <input type="text" id="qsj-answer-input" placeholder="Tape le nom ici" autocomplete="off">
         </div>
         <button class="primary" id="btn-qsj-submit-answer" style="margin-top:4px;">Valider</button>
+        <button type="button" class="text-btn solo-pass hidden-screen" id="btn-qsj-solo-pass">Passer l'indice</button>
       </div>
       <div class="confirm-box hidden-screen" id="qsj-confirm-box">
         <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">15 s</span></div>
@@ -2579,6 +2583,7 @@
           <input type="text" id="lm-answer-input-2" placeholder="Nom de l'équipe" autocomplete="off">
         </div>
         <button class="primary" id="btn-lm-submit-answer" style="margin-top:4px;">Valider</button>
+        <button type="button" class="text-btn solo-pass hidden-screen" id="btn-lm-solo-pass">Passer l'indice</button>
       </div>
       <div class="confirm-box hidden-screen" id="lm-confirm-box">
         <div class="answer-timer hidden-screen" aria-hidden="true"><span class="answer-timer-bar"><i></i></span><span class="answer-timer-text">15 s</span></div>
@@ -3408,7 +3413,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.06-1907";
+  var APP_VERSION = "2026.10.08-1049";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -5711,6 +5716,7 @@
     document.querySelector("#qsj-answer-zone .answer-btns").style.display = "none";
     el("qsj-answer-input").value = ""; // toujours un champ vide à chaque nouvelle réponse
     show("qsj-type-box");
+    el("btn-qsj-solo-pass").classList.toggle("hidden-screen", state.teams.length > 1);
     el("qsj-answer-input").focus();
     startAnswerTimer(function () {
       hide("qsj-type-box"); hide("qsj-confirm-box");
@@ -5731,6 +5737,7 @@
   el("btn-qsj-edit-answer").addEventListener("click", function () {
     hide("qsj-confirm-box");
     show("qsj-type-box");
+    el("btn-qsj-solo-pass").classList.toggle("hidden-screen", state.teams.length > 1);
     el("qsj-answer-input").focus();
   });
 
@@ -5872,6 +5879,7 @@
     el("lm-answer-input-1").value = ""; // toujours des champs vides à chaque nouvelle réponse
     el("lm-answer-input-2").value = "";
     show("lm-type-box");
+    el("btn-lm-solo-pass").classList.toggle("hidden-screen", state.teams.length > 1);
     el("lm-answer-input-1").focus();
     startAnswerTimer(function () {
       hide("lm-type-box"); hide("lm-confirm-box");
@@ -5894,6 +5902,7 @@
   el("btn-lm-edit-answer").addEventListener("click", function () {
     hide("lm-confirm-box");
     show("lm-type-box");
+    el("btn-lm-solo-pass").classList.toggle("hidden-screen", state.teams.length > 1);
     el("lm-answer-input-1").focus();
   });
 
@@ -6035,6 +6044,7 @@
     el("type-stakes").textContent = transfertStakesText();
     el("answer-input").value = ""; // toujours un champ vide à chaque nouvelle réponse
     show("type-box");
+    el("btn-solo-pass").classList.toggle("hidden-screen", state.teams.length > 1);
     el("answer-input").focus();
     startAnswerTimer(function () {
       hide("type-box"); hide("confirm-box");
@@ -6064,6 +6074,7 @@
   el("btn-edit-answer").addEventListener("click", function () {
     hide("confirm-box");
     show("type-box");
+    el("btn-solo-pass").classList.toggle("hidden-screen", state.teams.length > 1);
     el("answer-input").focus();
   });
 
@@ -6071,6 +6082,33 @@
     stopAnswerTimer();
     hide("confirm-box");
     checkAnswer(state.typedAnswer);
+  });
+
+  // En solo, pas de Tackle : on peut renoncer après « Répondre » et passer à l'indice suivant,
+  // sans pénalité (décision de David, 2026-10-08). À plusieurs, « Répondre » engage toujours.
+  el("btn-solo-pass").addEventListener("click", function () {
+    if (state.teams.length > 1 || state.cardEnded) return;
+    stopAnswerTimer();
+    hide("type-box"); hide("confirm-box");
+    show("tr-actions");
+    journalStep("passe après « Répondre »");
+    openPassTackle(advanceClue);
+  });
+  el("btn-qsj-solo-pass").addEventListener("click", function () {
+    if (state.teams.length > 1 || state.cardEnded) return;
+    stopAnswerTimer();
+    hide("qsj-type-box"); hide("qsj-confirm-box");
+    document.querySelector("#qsj-answer-zone .answer-btns").style.display = "flex";
+    journalStep("passe après « Répondre »");
+    openPassTackle(advanceQsjClue);
+  });
+  el("btn-lm-solo-pass").addEventListener("click", function () {
+    if (state.teams.length > 1 || state.cardEnded) return;
+    stopAnswerTimer();
+    hide("lm-type-box"); hide("lm-confirm-box");
+    document.querySelector("#lm-answer-zone .answer-btns").style.display = "flex";
+    journalStep("passe après « Répondre »");
+    openPassTackle(advanceLmClue);
   });
 
   el("btn-pass").addEventListener("click", function () {

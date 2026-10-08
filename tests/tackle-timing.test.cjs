@@ -271,6 +271,29 @@ advance(5000);
 assert.equal(state.revealedCount, 2);
 assert.equal(state.cardEnded, false);
 
+// Solo : après « Répondre », on peut renoncer et passer à l'indice suivant sans pénalité.
+reset('transfert');
+state.teams = [{name:'A', score:0}];
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'},{club:'Trois',years:'3'}]};
+state.revealedCount = 1;
+startTackleWindow();
+element('btn-answer').click();
+assert.equal(element('btn-solo-pass').classList.contains('hidden-screen'), false);
+element('btn-solo-pass').click();
+assert.equal(state.revealedCount, 2);
+assert.equal(state.teams[0].score, 0);
+assert.equal(state.cardEnded, false);
+assert.equal(element('type-box').classList.contains('hidden-screen'), true);
+// À plusieurs, le bouton reste caché et ne fait rien.
+reset('transfert');
+state.currentCard = {answer:'Joueur', variants:[], career:[{club:'Un',years:'1'},{club:'Deux',years:'2'}]};
+state.revealedCount = 1;
+startTackleWindow();
+element('btn-answer').click();
+assert.equal(element('btn-solo-pass').classList.contains('hidden-screen'), true);
+element('btn-solo-pass').click();
+assert.equal(state.revealedCount, 1);
+
 // Course au Tackle : après le sifflet, « Répondre »/« Passer » disparaissent (classe race) ;
 // si l'équipe qui a la main gagne la course, elle répond normalement avec ses points habituels.
 reset('transfert');

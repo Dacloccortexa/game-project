@@ -1,5 +1,8 @@
 # DECISIONS.md
 
+## [2026-10-08] Solo : renoncer après « Répondre »
+Retour d'un testeur qui joue seul : une fois « Répondre » appuyé, impossible de changer d'avis, et le temps écoulé coûte −1. À plusieurs, cet engagement empêche de bloquer le Tackle adverse ; en solo il n'y a pas de Tackle, donc il ne sert à rien. Décision de David : **en solo uniquement**, l'écran de réponse de Transfert, Qui suis-je ? et Le Match affiche « Passer l'indice » (même effet que « Passer » : indice suivant, sans pénalité). À plusieurs, rien ne change pour l'instant (réponse du testeur attendue). Tests ajoutés.
+
 ## [2026-10-06] Positionnement et phrases de TACKLE
 - Décision de David après comparaison des propositions dans [MARKETING.md](MARKETING.md) : **« Vos débats foot valent enfin des points. »** est la phrase principale des campagnes et de la page de présentation.
 - **« Le quiz foot entre potes »** reste le sous-titre de l'app et de l'image partagée. Il apporte une explication immédiate du produit ; la fiche App Store sera rédigée avant la sortie.
