@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-10-08] Cent joueurs supplémentaires pour trois défis
+- Demande de David : 100 nouveaux joueurs, faits contrôlés et cartes pour **Transfert, Qui suis-je ? et Vrai ou Faux**, sans ajouter de contenu à Plus ou Moins ni au Match.
+- Chaque fiche conserve la révision Wikipédia consultée, les faits de base et les passages de club source. Les cartes Transfert sont des extraits de cinq passages maximum ; Vrai ou Faux n'invente aucun club « jamais joué » à partir d'un extrait.
+- Ajout de 100 cartes Transfert, 100 cartes Qui suis-je ? et 598 affirmations Vrai ou Faux équilibrées en français et en portugais. Les indices Qui suis-je ? sont sourcés et ordonnés par carte ; leur difficulté et les réponses concurrentes restent à éprouver en partie.
+- Détails, contrôles et limites : [JOUEURS_2026-10-08.md](JOUEURS_2026-10-08.md).
+
 ## [2026-10-08] Solo : renoncer après « Répondre »
 Retour d'un testeur qui joue seul : une fois « Répondre » appuyé, impossible de changer d'avis, et le temps écoulé coûte −1. À plusieurs, cet engagement empêche de bloquer le Tackle adverse ; en solo il n'y a pas de Tackle, donc il ne sert à rien. Décision de David : **en solo uniquement**, l'écran de réponse de Transfert, Qui suis-je ? et Le Match affiche « Passer l'indice » (même effet que « Passer » : indice suivant, sans pénalité). À plusieurs, rien ne change pour l'instant (réponse du testeur attendue). Tests ajoutés.
 
