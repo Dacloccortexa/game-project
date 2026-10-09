@@ -3845,20 +3845,20 @@
       ],
       "career": [
         {
-          "club": "Tottenham",
-          "years": "2009–2023"
-        },
-        {
           "club": "Leyton Orient (prêt)",
           "years": "2011"
         },
         {
-          "club": "Norwich City (prêt)",
-          "years": "2012–2013"
+          "club": "Millwall (prêt)",
+          "years": "2012"
         },
         {
           "club": "Leicester City (prêt)",
           "years": "2013"
+        },
+        {
+          "club": "Tottenham",
+          "years": "2013–2023"
         },
         {
           "club": "Bayern Munich",
@@ -3870,7 +3870,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t115",
@@ -3959,7 +3959,7 @@
       "career": [
         {
           "club": "Manchester United",
-          "years": "2015–présent"
+          "years": "2015–2024"
         },
         {
           "club": "Aston Villa (prêt)",
@@ -3975,7 +3975,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t119",
@@ -3990,7 +3990,7 @@
         },
         {
           "club": "Manchester United",
-          "years": "2021–2026"
+          "years": "2021–2023"
         },
         {
           "club": "Borussia Dortmund (prêt)",
@@ -4010,7 +4010,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t120",
@@ -4025,11 +4025,11 @@
         },
         {
           "club": "Aston Villa",
-          "years": "2013–2021"
+          "years": "2014–2021"
         },
         {
           "club": "Manchester City",
-          "years": "2021–présent"
+          "years": "2021–2025"
         },
         {
           "club": "Everton (prêt)",
@@ -4041,7 +4041,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t121",
@@ -4055,12 +4055,12 @@
           "years": "2017–2018"
         },
         {
-          "club": "Chelsea",
-          "years": "2017–2023"
-        },
-        {
           "club": "Derby County (prêt)",
           "years": "2018–2019"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2019–2023"
         },
         {
           "club": "Manchester United",
@@ -4072,7 +4072,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t122",
@@ -4091,7 +4091,7 @@
         },
         {
           "club": "Chelsea",
-          "years": "2022–2026"
+          "years": "2022–2024"
         },
         {
           "club": "Arsenal (prêt)",
@@ -4103,7 +4103,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t123",
@@ -4113,16 +4113,16 @@
       ],
       "career": [
         {
-          "club": "Sunderland",
-          "years": "2008–2011"
-        },
-        {
           "club": "Coventry City (prêt)",
           "years": "2009"
         },
         {
-          "club": "Al-Ittifaq",
-          "years": "2023–2024"
+          "club": "Sunderland",
+          "years": "2009–2011"
+        },
+        {
+          "club": "Liverpool",
+          "years": "2011–2023"
         },
         {
           "club": "Ajax",
@@ -4138,7 +4138,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t124",
@@ -4148,10 +4148,6 @@
       ],
       "career": [
         {
-          "club": "Northampton Town (prêt)",
-          "years": "2008"
-        },
-        {
           "club": "Sheffield United",
           "years": "2008–2010"
         },
@@ -4160,8 +4156,12 @@
           "years": "2011"
         },
         {
-          "club": "AC Milan (prêt)",
-          "years": "2025"
+          "club": "Tottenham",
+          "years": "2011–2017"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2017–2025"
         },
         {
           "club": "Burnley",
@@ -4173,7 +4173,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t125",
@@ -4214,12 +4214,12 @@
           "years": "2011–2014"
         },
         {
-          "club": "Hull City",
-          "years": "2014–2017"
-        },
-        {
           "club": "Wigan Athletic (prêt)",
           "years": "2015"
+        },
+        {
+          "club": "Hull City",
+          "years": "2015–2017"
         },
         {
           "club": "Leicester City",
@@ -4235,7 +4235,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t127",
@@ -4279,7 +4279,7 @@
       "career": [
         {
           "club": "Benfica",
-          "years": "2013–2015"
+          "years": "2013–2014"
         },
         {
           "club": "Monaco",
@@ -4295,7 +4295,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t129",
@@ -4353,16 +4353,16 @@
       ],
       "career": [
         {
-          "club": "Benfica",
-          "years": "2014–2015"
-        },
-        {
           "club": "Valencia",
           "years": "2014–2018"
         },
         {
+          "club": "Juventus",
+          "years": "2018–2019"
+        },
+        {
           "club": "Manchester City",
-          "years": "2019–2024"
+          "years": "2019–2023"
         },
         {
           "club": "FC Barcelone (prêt)",
@@ -4378,7 +4378,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t132",
@@ -4393,15 +4393,15 @@
         },
         {
           "club": "Atlético Madrid",
-          "years": "2019–2024"
+          "years": "2019–2022"
+        },
+        {
+          "club": "FC Barcelone (prêt)",
+          "years": "2023–2024"
         },
         {
           "club": "Chelsea",
-          "years": "2023–2025"
-        },
-        {
-          "club": "AC Milan (prêt)",
-          "years": "2025"
+          "years": "2024–2025"
         },
         {
           "club": "Al-Nassr",
@@ -4413,7 +4413,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t133",
@@ -4431,10 +4431,6 @@
           "years": "2016–2017"
         },
         {
-          "club": "Atlético Madrid",
-          "years": "2016–2018"
-        },
-        {
           "club": "Wolverhampton",
           "years": "2017–2020"
         },
@@ -4448,7 +4444,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t134",
@@ -4480,11 +4476,15 @@
       "career": [
         {
           "club": "Porto",
-          "years": "2019–2022"
+          "years": "2019–2020"
         },
         {
           "club": "Wolverhampton (prêt)",
           "years": "2020–2021"
+        },
+        {
+          "club": "Porto",
+          "years": "2021–2022"
         },
         {
           "club": "PSG",
@@ -4496,7 +4496,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t136",
@@ -4507,7 +4507,7 @@
       "career": [
         {
           "club": "Real Madrid",
-          "years": "2017–2020"
+          "years": "2017–2018"
         },
         {
           "club": "Borussia Dortmund (prêt)",
@@ -4527,7 +4527,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t137",
@@ -4618,12 +4618,12 @@
           "years": "2018–2022"
         },
         {
-          "club": "Boulogne (prêt)",
-          "years": "2019–2020"
+          "club": "Eintracht Frankfurt",
+          "years": "2022–2023"
         },
         {
           "club": "PSG",
-          "years": "2023–2026"
+          "years": "2023–2024"
         },
         {
           "club": "Juventus (prêt)",
@@ -4639,7 +4639,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t141",
@@ -4685,10 +4685,10 @@
       "career": [
         {
           "club": "VfL Wolfsburg",
-          "years": "2017–2019"
+          "years": "2017–2018"
         },
         {
-          "club": "Charleroi",
+          "club": "Charleroi (prêt)",
           "years": "2018–2019"
         },
         {
@@ -4697,7 +4697,7 @@
         },
         {
           "club": "Napoli",
-          "years": "2020–2025"
+          "years": "2020–2024"
         },
         {
           "club": "Galatasaray",
@@ -4709,7 +4709,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t143",
@@ -4772,7 +4772,7 @@
       "career": [
         {
           "club": "Fiorentina",
-          "years": "2016–2022"
+          "years": "2016–2020"
         },
         {
           "club": "Juventus",
@@ -4788,7 +4788,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t146",
@@ -4799,7 +4799,7 @@
       "career": [
         {
           "club": "Brescia",
-          "years": "2017–2021"
+          "years": "2017–2020"
         },
         {
           "club": "AC Milan",
@@ -4815,7 +4815,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t147",
@@ -4826,11 +4826,15 @@
       "career": [
         {
           "club": "Cagliari",
-          "years": "2015–2020"
+          "years": "2015–2016"
         },
         {
           "club": "Como (prêt)",
           "years": "2016"
+        },
+        {
+          "club": "Cagliari",
+          "years": "2016–2019"
         },
         {
           "club": "Inter Milan",
@@ -4842,7 +4846,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t148",
@@ -4861,7 +4865,7 @@
         },
         {
           "club": "Real Madrid",
-          "years": "2017–présent"
+          "years": "2018–présent"
         }
       ],
       "sources": [
@@ -4869,7 +4873,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t149",
@@ -5020,16 +5024,16 @@
           "years": "2009–2010"
         },
         {
-          "club": "Beira-Mar (prêt)",
-          "years": "2010"
-        },
-        {
-          "club": "Olhanense (prêt)",
-          "years": "2011"
+          "club": "União de Leiria (prêt)",
+          "years": "2011–2012"
         },
         {
           "club": "Rio Ave (prêt)",
           "years": "2012–2013"
+        },
+        {
+          "club": "Benfica",
+          "years": "2013–2014"
         },
         {
           "club": "Atlético Madrid",
@@ -5041,7 +5045,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t155",
@@ -5060,7 +5064,7 @@
         },
         {
           "club": "Chelsea",
-          "years": "2011–2018"
+          "years": "2014–2018"
         },
         {
           "club": "Real Madrid",
@@ -5072,7 +5076,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t156",
@@ -5220,16 +5224,16 @@
           "years": "2012"
         },
         {
-          "club": "Arsenal",
-          "years": "2012–2020"
-        },
-        {
           "club": "Wolverhampton (prêt)",
           "years": "2015–2016"
         },
         {
           "club": "Reading (prêt)",
           "years": "2019"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2019–2020"
         },
         {
           "club": "Aston Villa",
@@ -5241,7 +5245,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t162",
@@ -5251,16 +5255,12 @@
       ],
       "career": [
         {
-          "club": "Southport (prêt)",
-          "years": "2014–2015"
-        },
-        {
           "club": "Blackburn Rovers",
           "years": "2014–2019"
         },
         {
           "club": "Brentford",
-          "years": "2019–2024"
+          "years": "2019–2023"
         },
         {
           "club": "Arsenal",
@@ -5272,7 +5272,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t163",
@@ -5376,7 +5376,7 @@
         },
         {
           "club": "Arsenal",
-          "years": "2009–2017"
+          "years": "2010–2015"
         },
         {
           "club": "AS Rome (prêt)",
@@ -5396,7 +5396,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t167",
@@ -5446,11 +5446,15 @@
         },
         {
           "club": "Juventus",
-          "years": "2001–2021"
+          "years": "2001–2018"
         },
         {
           "club": "PSG",
           "years": "2018–2019"
+        },
+        {
+          "club": "Juventus",
+          "years": "2019–2021"
         },
         {
           "club": "Parma",
@@ -5462,7 +5466,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t169",
@@ -5511,12 +5515,12 @@
           "years": "2015–2017"
         },
         {
-          "club": "Brighton",
-          "years": "2018–2021"
+          "club": "St. Pauli (prêt)",
+          "years": "2019–2020"
         },
         {
-          "club": "Swansea City (prêt)",
-          "years": "2020–2021"
+          "club": "Coventry City",
+          "years": "2021–2023"
         },
         {
           "club": "Sporting CP",
@@ -5532,7 +5536,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t171",
@@ -5698,7 +5702,7 @@
         },
         {
           "club": "RB Leipzig",
-          "years": "2022–2026"
+          "years": "2022–2024"
         },
         {
           "club": "Tottenham (prêt)",
@@ -5710,7 +5714,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t177",
@@ -5755,10 +5759,6 @@
           "years": "2012–2016"
         },
         {
-          "club": "West Bromwich Albion (prêt)",
-          "years": "2015–2016"
-        },
-        {
           "club": "Werder Bremen",
           "years": "2016–2017"
         },
@@ -5768,7 +5768,7 @@
         },
         {
           "club": "Bayern Munich",
-          "years": "2017–présent"
+          "years": "2018–présent"
         }
       ],
       "sources": [
@@ -5776,7 +5776,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t179",
@@ -5836,20 +5836,20 @@
       ],
       "career": [
         {
-          "club": "Nuremberg",
-          "years": "2009–2011"
-        },
-        {
           "club": "Borussia Dortmund",
           "years": "2011–2016"
         },
         {
           "club": "Manchester City",
-          "years": "2016–2025"
+          "years": "2016–2023"
         },
         {
           "club": "FC Barcelone",
           "years": "2023–2024"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2024–2025"
         },
         {
           "club": "Galatasaray",
@@ -5861,7 +5861,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t182",
@@ -5941,24 +5941,24 @@
       ],
       "career": [
         {
-          "club": "Dijon (prêt)",
-          "years": "2008–2009"
+          "club": "Lille (prêt)",
+          "years": "2009–2010"
         },
         {
-          "club": "AC Milan",
-          "years": "2008–2011"
+          "club": "Saint-Étienne",
+          "years": "2011–2013"
         },
         {
           "club": "Borussia Dortmund",
           "years": "2013–2018"
         },
         {
-          "club": "Marseille",
-          "years": "2023–2026"
+          "club": "Arsenal",
+          "years": "2018–2022"
         },
         {
-          "club": "Al-Qadsiah",
-          "years": "2024–2025"
+          "club": "Marseille",
+          "years": "2023–2024"
         }
       ],
       "sources": [
@@ -5966,7 +5966,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t185",
@@ -6042,10 +6042,6 @@
       ],
       "career": [
         {
-          "club": "Jong Ajax",
-          "years": "2015–2017"
-        },
-        {
           "club": "Ajax",
           "years": "2016–2019"
         },
@@ -6059,7 +6055,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t188",
@@ -6068,10 +6064,6 @@
         "Ligt"
       ],
       "career": [
-        {
-          "club": "Jong Ajax",
-          "years": "2016–2017"
-        },
         {
           "club": "Ajax",
           "years": "2016–2019"
@@ -6094,7 +6086,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t189",
@@ -6139,20 +6131,20 @@
       ],
       "career": [
         {
-          "club": "Nordstern Basel",
-          "years": "2004"
-        },
-        {
           "club": "Bâle",
           "years": "2005–2007"
         },
         {
-          "club": "FC Barcelone",
-          "years": "2014–2020"
+          "club": "Schalke 04",
+          "years": "2007–2011"
         },
         {
-          "club": "Al-Shabab",
-          "years": "2024"
+          "club": "Sevilla",
+          "years": "2011–2014"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2014–2020"
         },
         {
           "club": "Hajduk Split",
@@ -6164,7 +6156,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t191",
@@ -6209,20 +6201,20 @@
       ],
       "career": [
         {
-          "club": "Roeselare (prêt)",
-          "years": "2009"
-        },
-        {
           "club": "Club Bruges",
           "years": "2009–2011"
         },
         {
-          "club": "Inter Milan",
-          "years": "2015–2022"
+          "club": "Borussia Dortmund",
+          "years": "2011–2013"
         },
         {
-          "club": "Hajduk Split (prêt)",
-          "years": "2024"
+          "club": "VfL Wolfsburg",
+          "years": "2013–2015"
+        },
+        {
+          "club": "Inter Milan",
+          "years": "2015–2022"
         },
         {
           "club": "PSV Eindhoven",
@@ -6234,7 +6226,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t193",
@@ -6322,12 +6314,12 @@
           "years": "2010–2011"
         },
         {
-          "club": "Napoli",
-          "years": "2010–2022"
-        },
-        {
           "club": "Pescara (prêt)",
           "years": "2011–2012"
+        },
+        {
+          "club": "Napoli",
+          "years": "2012–2022"
         },
         {
           "club": "Toronto FC",
@@ -6339,7 +6331,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t196",
@@ -6349,24 +6341,24 @@
       ],
       "career": [
         {
-          "club": "Sorrento",
-          "years": "2007"
+          "club": "Juventus",
+          "years": "2009–2010"
         },
         {
-          "club": "Juventus",
-          "years": "2009–2012"
+          "club": "Pescara (prêt)",
+          "years": "2011–2012"
         },
         {
           "club": "Torino",
           "years": "2013–2014"
         },
         {
-          "club": "Beşiktaş",
-          "years": "2024–2025"
+          "club": "Lazio",
+          "years": "2016–2024"
         },
         {
-          "club": "Bologna",
-          "years": "2025–2026"
+          "club": "Beşiktaş",
+          "years": "2024–2025"
         }
       ],
       "sources": [
@@ -6374,7 +6366,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t197",
@@ -6416,7 +6408,7 @@
         },
         {
           "club": "Red Bull Salzburg",
-          "years": "2019–2023"
+          "years": "2021–2023"
         },
         {
           "club": "RB Leipzig",
@@ -6432,7 +6424,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t199",
@@ -6443,14 +6435,14 @@
       "career": [
         {
           "club": "PSG",
-          "years": "2021–2025"
+          "years": "2021–2022"
         },
         {
           "club": "PSV Eindhoven",
           "years": "2022–2023"
         },
         {
-          "club": "RB Leipzig",
+          "club": "RB Leipzig (prêt)",
           "years": "2023–2025"
         },
         {
@@ -6463,7 +6455,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t200",
@@ -6557,15 +6549,19 @@
       "career": [
         {
           "club": "Schalke 04",
-          "years": "2017–2021"
+          "years": "2017–2020"
         },
         {
           "club": "Juventus",
-          "years": "2020–présent"
+          "years": "2020–2022"
         },
         {
           "club": "Leeds United (prêt)",
           "years": "2023"
+        },
+        {
+          "club": "Juventus",
+          "years": "2023–présent"
         }
       ],
       "sources": [
@@ -6573,7 +6569,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t204",
@@ -6588,7 +6584,7 @@
         },
         {
           "club": "AC Milan",
-          "years": "2023–présent"
+          "years": "2023–2025"
         },
         {
           "club": "Atalanta (prêt)",
@@ -6661,7 +6657,7 @@
       "career": [
         {
           "club": "Arsenal",
-          "years": "2020–2023"
+          "years": "2020–2021"
         },
         {
           "club": "Middlesbrough (prêt)",
@@ -6681,7 +6677,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t208",
@@ -6754,15 +6750,11 @@
       "career": [
         {
           "club": "Lommel United (prêt)",
-          "years": "2012–2015"
+          "years": "2014–2015"
         },
         {
           "club": "Genk",
-          "years": "2012–2019"
-        },
-        {
-          "club": "OH Leuven (prêt)",
-          "years": "2015–2016"
+          "years": "2016–2019"
         },
         {
           "club": "Brighton",
@@ -6778,7 +6770,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t211",
@@ -6792,8 +6784,8 @@
           "years": "2014–2015"
         },
         {
-          "club": "Real Madrid",
-          "years": "2015–2021"
+          "club": "Heerenveen (prêt)",
+          "years": "2017–2018"
         },
         {
           "club": "Vitesse (prêt)",
@@ -6804,8 +6796,8 @@
           "years": "2019–2020"
         },
         {
-          "club": "Arsenal (prêt)",
-          "years": "2021"
+          "club": "Arsenal",
+          "years": "2021–présent"
         }
       ],
       "sources": [
@@ -6813,7 +6805,7 @@
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
-      "notes": "extrait — passages choisis parmi la carrière senior sourcée; les équipes réserves et les arrivées en 2026 ne figurent pas sur cette carte."
+      "notes": "extrait de carrière — saisons de jeu retenues et prêts affichés dans l’ordre chronologique ; passages sans match de championnat écartés."
     },
     {
       "id": "t212",

@@ -46150,7 +46150,7 @@
     },
     {
       "id": "lf-v-1041",
-      "affirmation": "Jan Oblak jogou no Olimpija Ljubljana antes do Beira-Mar.",
+      "affirmation": "Jan Oblak jogou no Olimpija Ljubljana antes do Rio Ave.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -46159,16 +46159,16 @@
       "groupe_exclusif": "ordre_clubs:Jan Oblak",
       "valeur_affirmee": [
         "Olimpija Ljubljana",
-        "Beira-Mar"
+        "Rio Ave"
       ],
       "valeur_source": {
         "Olimpija Ljubljana": [
           2009,
           2010
         ],
-        "Beira-Mar": [
-          2010,
-          2010
+        "Rio Ave": [
+          2012,
+          2013
         ]
       },
       "sources": [
@@ -46584,7 +46584,7 @@
     },
     {
       "id": "lf-v-1055",
-      "affirmation": "Gianluigi Buffon jogou no Parma antes da Juventus.",
+      "affirmation": "A primeira passagem de Gianluigi Buffon no Parma ocorreu antes da primeira passagem na Juventus.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -46611,6 +46611,7 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
+      "first_spell_order": true,
       "correction": ""
     },
     {
@@ -46646,7 +46647,7 @@
     },
     {
       "id": "lf-v-1057",
-      "affirmation": "Viktor Gyökeres jogou no IF Brommapojkarna antes do Brighton.",
+      "affirmation": "Viktor Gyökeres jogou no IF Brommapojkarna antes do Coventry City.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -46655,16 +46656,16 @@
       "groupe_exclusif": "ordre_clubs:Viktor Gyökeres",
       "valeur_affirmee": [
         "IF Brommapojkarna",
-        "Brighton"
+        "Coventry City"
       ],
       "valeur_source": {
         "IF Brommapojkarna": [
           2015,
           2017
         ],
-        "Brighton": [
-          2018,
-          2021
+        "Coventry City": [
+          2021,
+          2023
         ]
       },
       "sources": [
@@ -46708,7 +46709,7 @@
     },
     {
       "id": "lf-v-1059",
-      "affirmation": "Cody Gakpo jogou no Jong PSV antes do PSV Eindhoven.",
+      "affirmation": "Cody Gakpo jogou no PSV Eindhoven antes do Liverpool.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -46716,17 +46717,17 @@
       ],
       "groupe_exclusif": "ordre_clubs:Cody Gakpo",
       "valeur_affirmee": [
-        "Jong PSV",
-        "PSV Eindhoven"
+        "PSV Eindhoven",
+        "Liverpool"
       ],
       "valeur_source": {
-        "Jong PSV": [
-          2016,
-          2018
-        ],
         "PSV Eindhoven": [
           2018,
           2023
+        ],
+        "Liverpool": [
+          2023,
+          2026
         ]
       },
       "sources": [
@@ -47111,7 +47112,7 @@
     },
     {
       "id": "lf-v-1072",
-      "affirmation": "Alexandre Lacazette jogou no Lyon antes do Arsenal.",
+      "affirmation": "A primeira passagem de Alexandre Lacazette no Lyon ocorreu antes da primeira passagem no Arsenal.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -47138,6 +47139,7 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
+      "first_spell_order": true,
       "correction": ""
     },
     {
@@ -47173,7 +47175,7 @@
     },
     {
       "id": "lf-v-1074",
-      "affirmation": "Frenkie de Jong jogou no Jong Ajax antes do Barcelona.",
+      "affirmation": "Frenkie de Jong jogou no Ajax antes do Barcelona.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -47181,13 +47183,13 @@
       ],
       "groupe_exclusif": "ordre_clubs:Frenkie de Jong",
       "valeur_affirmee": [
-        "Jong Ajax",
+        "Ajax",
         "Barcelona"
       ],
       "valeur_source": {
-        "Jong Ajax": [
-          2015,
-          2017
+        "Ajax": [
+          2016,
+          2019
         ],
         "Barcelona": [
           2019,
@@ -47204,7 +47206,7 @@
     },
     {
       "id": "lf-v-1075",
-      "affirmation": "Matthijs de Ligt jogou no Jong Ajax antes da Juventus.",
+      "affirmation": "Matthijs de Ligt jogou no Ajax antes da Juventus.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -47212,13 +47214,13 @@
       ],
       "groupe_exclusif": "ordre_clubs:Matthijs de Ligt",
       "valeur_affirmee": [
-        "Jong Ajax",
+        "Ajax",
         "Juventus"
       ],
       "valeur_source": {
-        "Jong Ajax": [
+        "Ajax": [
           2016,
-          2017
+          2019
         ],
         "Juventus": [
           2019,
@@ -47266,7 +47268,7 @@
     },
     {
       "id": "lf-v-1077",
-      "affirmation": "Ivan Rakitić jogou no Nordstern Basel antes do Basileia.",
+      "affirmation": "Ivan Rakitić jogou no Basileia antes do Schalke 04.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -47274,17 +47276,17 @@
       ],
       "groupe_exclusif": "ordre_clubs:Ivan Rakitić",
       "valeur_affirmee": [
-        "Nordstern Basel",
-        "Basileia"
+        "Basileia",
+        "Schalke 04"
       ],
       "valeur_source": {
-        "Nordstern Basel": [
-          2004,
-          2004
-        ],
         "Basileia": [
           2005,
           2007
+        ],
+        "Schalke 04": [
+          2007,
+          2011
         ]
       },
       "sources": [
@@ -47297,7 +47299,7 @@
     },
     {
       "id": "lf-v-1078",
-      "affirmation": "Arturo Vidal jogou no Colo-Colo antes do Bayer Leverkusen.",
+      "affirmation": "A primeira passagem de Arturo Vidal no Colo-Colo ocorreu antes da primeira passagem no Bayer Leverkusen.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -47324,6 +47326,7 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
+      "first_spell_order": true,
       "correction": ""
     },
     {
@@ -47452,7 +47455,7 @@
     },
     {
       "id": "lf-v-1083",
-      "affirmation": "Ciro Immobile jogou no Sorrento antes da Juventus.",
+      "affirmation": "Ciro Immobile jogou no Pescara antes do Génova.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -47460,17 +47463,17 @@
       ],
       "groupe_exclusif": "ordre_clubs:Ciro Immobile",
       "valeur_affirmee": [
-        "Sorrento",
-        "Juventus"
+        "Pescara",
+        "Génova"
       ],
       "valeur_source": {
-        "Sorrento": [
-          2007,
-          2007
-        ],
-        "Juventus": [
-          2009,
+        "Pescara": [
+          2011,
           2012
+        ],
+        "Génova": [
+          2012,
+          2013
         ]
       },
       "sources": [
@@ -47607,7 +47610,7 @@
     },
     {
       "id": "lf-v-1088",
-      "affirmation": "Ferran Torres jogou no Valencia Mestalla antes do Valência.",
+      "affirmation": "Ferran Torres jogou no Valência antes do Manchester City.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -47615,17 +47618,17 @@
       ],
       "groupe_exclusif": "ordre_clubs:Ferran Torres",
       "valeur_affirmee": [
-        "Valencia Mestalla",
-        "Valência"
+        "Valência",
+        "Manchester City"
       ],
       "valeur_source": {
-        "Valencia Mestalla": [
-          2016,
-          2017
-        ],
         "Valência": [
           2017,
           2020
+        ],
+        "Manchester City": [
+          2020,
+          2022
         ]
       },
       "sources": [
@@ -50619,22 +50622,22 @@
     },
     {
       "id": "lf-v-1210",
-      "affirmation": "Jordan Henderson é mais alto do que Martin Ødegaard.",
+      "affirmation": "Jordan Henderson é mais alto do que João Neves.",
       "est_vraie": true,
       "categorie": "comparaison_taille",
       "joueurs": [
         "Jordan Henderson",
-        "Martin Ødegaard"
+        "João Neves"
       ],
-      "groupe_exclusif": "comparaison_taille:Jordan Henderson:Martin Ødegaard",
+      "groupe_exclusif": "comparaison_taille:Jordan Henderson:João Neves",
       "valeur_affirmee": "mais alto",
       "valeur_source": {
         "Jordan Henderson": 183,
-        "Martin Ødegaard": 178
+        "João Neves": 174
       },
       "sources": [
         "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
-        "https://en.wikipedia.org/w/index.php?title=Martin_%C3%98degaard&oldid=1378631722"
+        "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274"
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
@@ -50643,22 +50646,22 @@
     },
     {
       "id": "lf-v-1211",
-      "affirmation": "Kyle Walker é mais alto do que João Neves.",
+      "affirmation": "Kyle Walker é mais alto do que Jordi Alba.",
       "est_vraie": true,
       "categorie": "comparaison_taille",
       "joueurs": [
         "Kyle Walker",
-        "João Neves"
+        "Jordi Alba"
       ],
-      "groupe_exclusif": "comparaison_taille:Kyle Walker:João Neves",
+      "groupe_exclusif": "comparaison_taille:Kyle Walker:Jordi Alba",
       "valeur_affirmee": "mais alto",
       "valeur_source": {
         "Kyle Walker": 183,
-        "João Neves": 174
+        "Jordi Alba": 170
       },
       "sources": [
         "https://en.wikipedia.org/w/index.php?title=Kyle_Walker&oldid=1375425100",
-        "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274"
+        "https://en.wikipedia.org/w/index.php?title=Jordi_Alba&oldid=1376299257"
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
@@ -51483,22 +51486,22 @@
     },
     {
       "id": "lf-v-1246",
-      "affirmation": "Alisson Becker é mais alto do que Matthijs de Ligt.",
+      "affirmation": "Alisson Becker é mais alto do que Cole Palmer.",
       "est_vraie": true,
       "categorie": "comparaison_taille",
       "joueurs": [
         "Alisson Becker",
-        "Matthijs de Ligt"
+        "Cole Palmer"
       ],
-      "groupe_exclusif": "comparaison_taille:Alisson Becker:Matthijs de Ligt",
+      "groupe_exclusif": "comparaison_taille:Alisson Becker:Cole Palmer",
       "valeur_affirmee": "mais alto",
       "valeur_source": {
         "Alisson Becker": 193,
-        "Matthijs de Ligt": 187
+        "Cole Palmer": 185
       },
       "sources": [
         "https://en.wikipedia.org/w/index.php?title=Alisson_Becker&oldid=1378681378",
-        "https://en.wikipedia.org/w/index.php?title=Matthijs_de_Ligt&oldid=1377871286"
+        "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
@@ -51819,22 +51822,22 @@
     },
     {
       "id": "lf-v-1260",
-      "affirmation": "Dominik Szoboszlai é mais alto do que Achraf Hakimi.",
+      "affirmation": "Dominik Szoboszlai é mais baixo do que Harry Maguire.",
       "est_vraie": true,
       "categorie": "comparaison_taille",
       "joueurs": [
         "Dominik Szoboszlai",
-        "Achraf Hakimi"
+        "Harry Maguire"
       ],
-      "groupe_exclusif": "comparaison_taille:Dominik Szoboszlai:Achraf Hakimi",
-      "valeur_affirmee": "mais alto",
+      "groupe_exclusif": "comparaison_taille:Dominik Szoboszlai:Harry Maguire",
+      "valeur_affirmee": "mais baixo",
       "valeur_source": {
         "Dominik Szoboszlai": 186,
-        "Achraf Hakimi": 181
+        "Harry Maguire": 194
       },
       "sources": [
         "https://en.wikipedia.org/w/index.php?title=Dominik_Szoboszlai&oldid=1378719178",
-        "https://en.wikipedia.org/w/index.php?title=Achraf_Hakimi&oldid=1377795128"
+        "https://en.wikipedia.org/w/index.php?title=Harry_Maguire&oldid=1375898955"
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
@@ -54019,7 +54022,7 @@
     },
     {
       "id": "lf-f-1041",
-      "affirmation": "Jan Oblak jogou no Beira-Mar antes do Olimpija Ljubljana.",
+      "affirmation": "Jan Oblak jogou no Rio Ave antes do Olimpija Ljubljana.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -54027,7 +54030,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:Jan Oblak",
       "valeur_affirmee": [
-        "Beira-Mar",
+        "Rio Ave",
         "Olimpija Ljubljana"
       ],
       "valeur_source": {
@@ -54035,9 +54038,9 @@
           2009,
           2010
         ],
-        "Beira-Mar": [
-          2010,
-          2010
+        "Rio Ave": [
+          2012,
+          2013
         ]
       },
       "sources": [
@@ -54046,7 +54049,7 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
-      "correction": "Na verdade, Jan Oblak jogou no Olimpija Ljubljana antes do Beira-Mar."
+      "correction": "Na verdade, Jan Oblak jogou no Olimpija Ljubljana antes do Rio Ave."
     },
     {
       "id": "lf-f-1042",
@@ -54453,7 +54456,7 @@
     },
     {
       "id": "lf-f-1055",
-      "affirmation": "Gianluigi Buffon jogou na Juventus antes do Parma.",
+      "affirmation": "A primeira passagem de Gianluigi Buffon na Juventus ocorreu antes da primeira passagem no Parma.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -54480,7 +54483,8 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
-      "correction": "Na verdade, Gianluigi Buffon jogou no Parma antes da Juventus."
+      "first_spell_order": true,
+      "correction": "Na verdade, a primeira passagem de Gianluigi Buffon no Parma ocorreu antes da primeira passagem na Juventus."
     },
     {
       "id": "lf-f-1056",
@@ -54515,7 +54519,7 @@
     },
     {
       "id": "lf-f-1057",
-      "affirmation": "Viktor Gyökeres jogou no Brighton antes do IF Brommapojkarna.",
+      "affirmation": "Viktor Gyökeres jogou no Coventry City antes do IF Brommapojkarna.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -54523,7 +54527,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:Viktor Gyökeres",
       "valeur_affirmee": [
-        "Brighton",
+        "Coventry City",
         "IF Brommapojkarna"
       ],
       "valeur_source": {
@@ -54531,9 +54535,9 @@
           2015,
           2017
         ],
-        "Brighton": [
-          2018,
-          2021
+        "Coventry City": [
+          2021,
+          2023
         ]
       },
       "sources": [
@@ -54542,7 +54546,7 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
-      "correction": "Na verdade, Viktor Gyökeres jogou no IF Brommapojkarna antes do Brighton."
+      "correction": "Na verdade, Viktor Gyökeres jogou no IF Brommapojkarna antes do Coventry City."
     },
     {
       "id": "lf-f-1058",
@@ -54577,7 +54581,7 @@
     },
     {
       "id": "lf-f-1059",
-      "affirmation": "Cody Gakpo jogou no PSV Eindhoven antes do Jong PSV.",
+      "affirmation": "Cody Gakpo jogou no Liverpool antes do PSV Eindhoven.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -54585,17 +54589,17 @@
       ],
       "groupe_exclusif": "ordre_clubs:Cody Gakpo",
       "valeur_affirmee": [
-        "PSV Eindhoven",
-        "Jong PSV"
+        "Liverpool",
+        "PSV Eindhoven"
       ],
       "valeur_source": {
-        "Jong PSV": [
-          2016,
-          2018
-        ],
         "PSV Eindhoven": [
           2018,
           2023
+        ],
+        "Liverpool": [
+          2023,
+          2026
         ]
       },
       "sources": [
@@ -54604,7 +54608,7 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
-      "correction": "Na verdade, Cody Gakpo jogou no Jong PSV antes do PSV Eindhoven."
+      "correction": "Na verdade, Cody Gakpo jogou no PSV Eindhoven antes do Liverpool."
     },
     {
       "id": "lf-f-1060",
@@ -54980,7 +54984,7 @@
     },
     {
       "id": "lf-f-1072",
-      "affirmation": "Alexandre Lacazette jogou no Arsenal antes do Lyon.",
+      "affirmation": "A primeira passagem de Alexandre Lacazette no Arsenal ocorreu antes da primeira passagem no Lyon.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -55007,7 +55011,8 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
-      "correction": "Na verdade, Alexandre Lacazette jogou no Lyon antes do Arsenal."
+      "first_spell_order": true,
+      "correction": "Na verdade, a primeira passagem de Alexandre Lacazette no Lyon ocorreu antes da primeira passagem no Arsenal."
     },
     {
       "id": "lf-f-1073",
@@ -55042,7 +55047,7 @@
     },
     {
       "id": "lf-f-1074",
-      "affirmation": "Frenkie de Jong jogou no Barcelona antes do Jong Ajax.",
+      "affirmation": "Frenkie de Jong jogou no Barcelona antes do Ajax.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -55051,12 +55056,12 @@
       "groupe_exclusif": "ordre_clubs:Frenkie de Jong",
       "valeur_affirmee": [
         "Barcelona",
-        "Jong Ajax"
+        "Ajax"
       ],
       "valeur_source": {
-        "Jong Ajax": [
-          2015,
-          2017
+        "Ajax": [
+          2016,
+          2019
         ],
         "Barcelona": [
           2019,
@@ -55069,11 +55074,11 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
-      "correction": "Na verdade, Frenkie de Jong jogou no Jong Ajax antes do Barcelona."
+      "correction": "Na verdade, Frenkie de Jong jogou no Ajax antes do Barcelona."
     },
     {
       "id": "lf-f-1075",
-      "affirmation": "Matthijs de Ligt jogou na Juventus antes do Jong Ajax.",
+      "affirmation": "Matthijs de Ligt jogou na Juventus antes do Ajax.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -55082,12 +55087,12 @@
       "groupe_exclusif": "ordre_clubs:Matthijs de Ligt",
       "valeur_affirmee": [
         "Juventus",
-        "Jong Ajax"
+        "Ajax"
       ],
       "valeur_source": {
-        "Jong Ajax": [
+        "Ajax": [
           2016,
-          2017
+          2019
         ],
         "Juventus": [
           2019,
@@ -55100,7 +55105,7 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
-      "correction": "Na verdade, Matthijs de Ligt jogou no Jong Ajax antes da Juventus."
+      "correction": "Na verdade, Matthijs de Ligt jogou no Ajax antes da Juventus."
     },
     {
       "id": "lf-f-1076",
@@ -55135,7 +55140,7 @@
     },
     {
       "id": "lf-f-1077",
-      "affirmation": "Ivan Rakitić jogou no Basileia antes do Nordstern Basel.",
+      "affirmation": "Ivan Rakitić jogou no Schalke 04 antes do Basileia.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -55143,17 +55148,17 @@
       ],
       "groupe_exclusif": "ordre_clubs:Ivan Rakitić",
       "valeur_affirmee": [
-        "Basileia",
-        "Nordstern Basel"
+        "Schalke 04",
+        "Basileia"
       ],
       "valeur_source": {
-        "Nordstern Basel": [
-          2004,
-          2004
-        ],
         "Basileia": [
           2005,
           2007
+        ],
+        "Schalke 04": [
+          2007,
+          2011
         ]
       },
       "sources": [
@@ -55162,11 +55167,11 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
-      "correction": "Na verdade, Ivan Rakitić jogou no Nordstern Basel antes do Basileia."
+      "correction": "Na verdade, Ivan Rakitić jogou no Basileia antes do Schalke 04."
     },
     {
       "id": "lf-f-1078",
-      "affirmation": "Arturo Vidal jogou no Bayer Leverkusen antes do Colo-Colo.",
+      "affirmation": "A primeira passagem de Arturo Vidal no Bayer Leverkusen ocorreu antes da primeira passagem no Colo-Colo.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -55193,7 +55198,8 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
-      "correction": "Na verdade, Arturo Vidal jogou no Colo-Colo antes do Bayer Leverkusen."
+      "first_spell_order": true,
+      "correction": "Na verdade, a primeira passagem de Arturo Vidal no Colo-Colo ocorreu antes da primeira passagem no Bayer Leverkusen."
     },
     {
       "id": "lf-f-1079",
@@ -55321,7 +55327,7 @@
     },
     {
       "id": "lf-f-1083",
-      "affirmation": "Ciro Immobile jogou na Juventus antes do Sorrento.",
+      "affirmation": "Ciro Immobile jogou no Génova antes do Pescara.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -55329,17 +55335,17 @@
       ],
       "groupe_exclusif": "ordre_clubs:Ciro Immobile",
       "valeur_affirmee": [
-        "Juventus",
-        "Sorrento"
+        "Génova",
+        "Pescara"
       ],
       "valeur_source": {
-        "Sorrento": [
-          2007,
-          2007
-        ],
-        "Juventus": [
-          2009,
+        "Pescara": [
+          2011,
           2012
+        ],
+        "Génova": [
+          2012,
+          2013
         ]
       },
       "sources": [
@@ -55348,7 +55354,7 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
-      "correction": "Na verdade, Ciro Immobile jogou no Sorrento antes da Juventus."
+      "correction": "Na verdade, Ciro Immobile jogou no Pescara antes do Génova."
     },
     {
       "id": "lf-f-1084",
@@ -55476,7 +55482,7 @@
     },
     {
       "id": "lf-f-1088",
-      "affirmation": "Ferran Torres jogou no Valência antes do Valencia Mestalla.",
+      "affirmation": "Ferran Torres jogou no Manchester City antes do Valência.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -55484,17 +55490,17 @@
       ],
       "groupe_exclusif": "ordre_clubs:Ferran Torres",
       "valeur_affirmee": [
-        "Valência",
-        "Valencia Mestalla"
+        "Manchester City",
+        "Valência"
       ],
       "valeur_source": {
-        "Valencia Mestalla": [
-          2016,
-          2017
-        ],
         "Valência": [
           2017,
           2020
+        ],
+        "Manchester City": [
+          2020,
+          2022
         ]
       },
       "sources": [
@@ -55503,7 +55509,7 @@
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Deux passages en équipe première distincts et chronologiquement non chevauchants dans la fiche Wikipédia.",
-      "correction": "Na verdade, Ferran Torres jogou no Valencia Mestalla antes do Valência."
+      "correction": "Na verdade, Ferran Torres jogou no Valência antes do Manchester City."
     },
     {
       "id": "lf-f-1089",
@@ -58488,51 +58494,51 @@
     },
     {
       "id": "lf-f-1210",
-      "affirmation": "Jordan Henderson é mais baixo do que Martin Ødegaard.",
+      "affirmation": "Jordan Henderson é mais baixo do que João Neves.",
       "est_vraie": false,
       "categorie": "comparaison_taille",
       "joueurs": [
         "Jordan Henderson",
-        "Martin Ødegaard"
+        "João Neves"
       ],
-      "groupe_exclusif": "comparaison_taille:Jordan Henderson:Martin Ødegaard",
+      "groupe_exclusif": "comparaison_taille:Jordan Henderson:João Neves",
       "valeur_affirmee": "mais baixo",
       "valeur_source": {
         "Jordan Henderson": 183,
-        "Martin Ødegaard": 178
-      },
-      "sources": [
-        "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
-        "https://en.wikipedia.org/w/index.php?title=Martin_%C3%98degaard&oldid=1378631722"
-      ],
-      "verification_status": "vérifié",
-      "verified_date": "2026-10-08",
-      "notes": "Tailles des deux fiches Wikipédia ; écart d'au moins cinq centimètres.",
-      "correction": "Na verdade, Jordan Henderson é mais alto do que Martin Ødegaard."
-    },
-    {
-      "id": "lf-f-1211",
-      "affirmation": "Kyle Walker é mais baixo do que João Neves.",
-      "est_vraie": false,
-      "categorie": "comparaison_taille",
-      "joueurs": [
-        "Kyle Walker",
-        "João Neves"
-      ],
-      "groupe_exclusif": "comparaison_taille:Kyle Walker:João Neves",
-      "valeur_affirmee": "mais baixo",
-      "valeur_source": {
-        "Kyle Walker": 183,
         "João Neves": 174
       },
       "sources": [
-        "https://en.wikipedia.org/w/index.php?title=Kyle_Walker&oldid=1375425100",
+        "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
         "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274"
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Tailles des deux fiches Wikipédia ; écart d'au moins cinq centimètres.",
-      "correction": "Na verdade, Kyle Walker é mais alto do que João Neves."
+      "correction": "Na verdade, Jordan Henderson é mais alto do que João Neves."
+    },
+    {
+      "id": "lf-f-1211",
+      "affirmation": "Kyle Walker é mais baixo do que Jordi Alba.",
+      "est_vraie": false,
+      "categorie": "comparaison_taille",
+      "joueurs": [
+        "Kyle Walker",
+        "Jordi Alba"
+      ],
+      "groupe_exclusif": "comparaison_taille:Kyle Walker:Jordi Alba",
+      "valeur_affirmee": "mais baixo",
+      "valeur_source": {
+        "Kyle Walker": 183,
+        "Jordi Alba": 170
+      },
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Kyle_Walker&oldid=1375425100",
+        "https://en.wikipedia.org/w/index.php?title=Jordi_Alba&oldid=1376299257"
+      ],
+      "verification_status": "vérifié",
+      "verified_date": "2026-10-08",
+      "notes": "Tailles des deux fiches Wikipédia ; écart d'au moins cinq centimètres.",
+      "correction": "Na verdade, Kyle Walker é mais alto do que Jordi Alba."
     },
     {
       "id": "lf-f-1212",
@@ -59352,27 +59358,27 @@
     },
     {
       "id": "lf-f-1246",
-      "affirmation": "Alisson Becker é mais baixo do que Matthijs de Ligt.",
+      "affirmation": "Alisson Becker é mais baixo do que Cole Palmer.",
       "est_vraie": false,
       "categorie": "comparaison_taille",
       "joueurs": [
         "Alisson Becker",
-        "Matthijs de Ligt"
+        "Cole Palmer"
       ],
-      "groupe_exclusif": "comparaison_taille:Alisson Becker:Matthijs de Ligt",
+      "groupe_exclusif": "comparaison_taille:Alisson Becker:Cole Palmer",
       "valeur_affirmee": "mais baixo",
       "valeur_source": {
         "Alisson Becker": 193,
-        "Matthijs de Ligt": 187
+        "Cole Palmer": 185
       },
       "sources": [
         "https://en.wikipedia.org/w/index.php?title=Alisson_Becker&oldid=1378681378",
-        "https://en.wikipedia.org/w/index.php?title=Matthijs_de_Ligt&oldid=1377871286"
+        "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Tailles des deux fiches Wikipédia ; écart d'au moins cinq centimètres.",
-      "correction": "Na verdade, Alisson Becker é mais alto do que Matthijs de Ligt."
+      "correction": "Na verdade, Alisson Becker é mais alto do que Cole Palmer."
     },
     {
       "id": "lf-f-1247",
@@ -59688,27 +59694,27 @@
     },
     {
       "id": "lf-f-1260",
-      "affirmation": "Dominik Szoboszlai é mais baixo do que Achraf Hakimi.",
+      "affirmation": "Dominik Szoboszlai é mais alto do que Harry Maguire.",
       "est_vraie": false,
       "categorie": "comparaison_taille",
       "joueurs": [
         "Dominik Szoboszlai",
-        "Achraf Hakimi"
+        "Harry Maguire"
       ],
-      "groupe_exclusif": "comparaison_taille:Dominik Szoboszlai:Achraf Hakimi",
-      "valeur_affirmee": "mais baixo",
+      "groupe_exclusif": "comparaison_taille:Dominik Szoboszlai:Harry Maguire",
+      "valeur_affirmee": "mais alto",
       "valeur_source": {
         "Dominik Szoboszlai": 186,
-        "Achraf Hakimi": 181
+        "Harry Maguire": 194
       },
       "sources": [
         "https://en.wikipedia.org/w/index.php?title=Dominik_Szoboszlai&oldid=1378719178",
-        "https://en.wikipedia.org/w/index.php?title=Achraf_Hakimi&oldid=1377795128"
+        "https://en.wikipedia.org/w/index.php?title=Harry_Maguire&oldid=1375898955"
       ],
       "verification_status": "vérifié",
       "verified_date": "2026-10-08",
       "notes": "Tailles des deux fiches Wikipédia ; écart d'au moins cinq centimètres.",
-      "correction": "Na verdade, Dominik Szoboszlai é mais alto do que Achraf Hakimi."
+      "correction": "Na verdade, Harry Maguire é mais alto do que Dominik Szoboszlai."
     },
     {
       "id": "lf-f-1261",

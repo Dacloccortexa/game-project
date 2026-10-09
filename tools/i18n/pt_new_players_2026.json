@@ -367,6 +367,18 @@
     "İstanbul Başakşehir": {
       "pt": "Istambul Başakşehir",
       "g": "m"
+    },
+    "Heerenveen": {
+      "pt": "Heerenveen",
+      "g": "m"
+    },
+    "St. Pauli": {
+      "pt": "St. Pauli",
+      "g": "m"
+    },
+    "União de Leiria": {
+      "pt": "União de Leiria",
+      "g": "m"
     }
   },
   "countries": {
@@ -480,6 +492,10 @@
     },
     "championnat de Belgique": {
       "pt": "campeonato belga",
+      "g": "m"
+    },
+    "Eredivisie": {
+      "pt": "campeonato neerlandês",
       "g": "m"
     }
   }

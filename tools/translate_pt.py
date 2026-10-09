@@ -119,7 +119,8 @@ def do_quisuisje(d):
                 c["text"] = f"Sou {v}." if v else ""
             elif k == "teammate":
                 club(f["shared_club"], w)  # contrôle de couverture uniquement
-                c["text"] = f"Joguei com {f['name']}."
+                c["text"] = (f"Fui colega de equipa de {f['name']} num clube."
+                             if f.get("club_only") else f"Joguei com {f['name']}.")
             elif k == "nationality":
                 v = lookup("nationalities", f["national_team"], w)
                 lookup("countries", f["national_team"], w)
@@ -299,12 +300,18 @@ def do_vraifaux(d):
             s["valeur_source"] = {club(k, w)[0]: v for k, v in vs.items()}
             if len(s["valeur_source"]) != len(vs):
                 errors.append(f"{w}: collision de noms de clubs après traduction {list(vs)}")
-            s["affirmation"] = f"{P[0]} jogou {em(c1, g1)} antes {de(c2, g2)}."
+            if s.get("first_spell_order"):
+                s["affirmation"] = f"A primeira passagem de {P[0]} {em(c1, g1)} ocorreu antes da primeira passagem {em(c2, g2)}."
+            else:
+                s["affirmation"] = f"{P[0]} jogou {em(c1, g1)} antes {de(c2, g2)}."
             # ordre réel : tri par année de début dans valeur_source (clés FR)
             (f1, h1), (f2, h2) = [club(k, w) for k in sorted(vs, key=lambda k: (vs[k][0], vs[k][1]))]
             if len({v[0] for v in vs.values()}) < 2:
                 errors.append(f"{w}: années de début identiques, ordre réel indéterminé {vs}")
-            corr = f"Na verdade, {P[0]} jogou {em(f1, h1)} antes {de(f2, h2)}."
+            if s.get("first_spell_order"):
+                corr = f"Na verdade, a primeira passagem de {P[0]} {em(f1, h1)} ocorreu antes da primeira passagem {em(f2, h2)}."
+            else:
+                corr = f"Na verdade, {P[0]} jogou {em(f1, h1)} antes {de(f2, h2)}."
         elif cat in ("comparaison_age", "comparaison_taille"):
             a = lookup("comparisons", va, w)
             if a:

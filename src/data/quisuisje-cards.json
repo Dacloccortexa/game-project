@@ -6163,12 +6163,13 @@
         {
           "points": 3,
           "kind": "teammate",
-          "text": "J'ai joué avec Jadon Sancho.",
+          "text": "J'ai été coéquipier de Jadon Sancho en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
           "fact": {
             "name": "Jadon Sancho",
             "shared_club": "Borussia Dortmund",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
+            "club_only": true
           }
         },
         {
@@ -6213,12 +6214,13 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "J'ai joué avec Son Heung-min.",
+          "text": "J'ai été coéquipier de Son Heung-min en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
           "fact": {
             "name": "Son Heung-min",
             "shared_club": "Tottenham",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Son_Heung-min&oldid=1378990669"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Son_Heung-min&oldid=1378990669",
+            "club_only": true
           }
         },
         {
@@ -6302,12 +6304,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Harry Kane.",
+          "text": "J'ai été coéquipier de Harry Kane en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Son_Heung-min&oldid=1378990669",
           "fact": {
             "name": "Harry Kane",
             "shared_club": "Tottenham",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "club_only": true
           }
         }
       ],
@@ -6362,12 +6365,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec David Raya.",
+          "text": "J'ai été coéquipier de David Raya en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
           "fact": {
             "name": "David Raya",
             "shared_club": "Arsenal",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=David_Raya&oldid=1379075954"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=David_Raya&oldid=1379075954",
+            "club_only": true
           }
         }
       ],
@@ -6385,12 +6389,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Jack Grealish.",
+          "text": "J'ai été coéquipier de Jack Grealish en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
           "fact": {
             "name": "Jack Grealish",
             "shared_club": "Manchester City",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jack_Grealish&oldid=1379137658"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jack_Grealish&oldid=1379137658",
+            "club_only": true
           }
         },
         {
@@ -6445,12 +6450,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Jadon Sancho.",
+          "text": "J'ai été coéquipier de Jadon Sancho en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
           "fact": {
             "name": "Jadon Sancho",
             "shared_club": "Manchester United",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
+            "club_only": true
           }
         },
         {
@@ -6515,10 +6521,10 @@
         {
           "points": 4,
           "kind": "position",
-          "text": "Je suis milieu.",
+          "text": "Je suis ailier.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
           "fact": {
-            "position": "milieu"
+            "position": "ailier"
           }
         },
         {
@@ -6542,12 +6548,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Jude Bellingham.",
+          "text": "J'ai été coéquipier de Jude Bellingham en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
           "fact": {
             "name": "Jude Bellingham",
             "shared_club": "Borussia Dortmund",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+            "club_only": true
           }
         }
       ],
@@ -6565,12 +6572,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Cole Palmer.",
+          "text": "J'ai été coéquipier de Cole Palmer en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jack_Grealish&oldid=1379137658",
           "fact": {
             "name": "Cole Palmer",
             "shared_club": "Manchester City",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+            "club_only": true
           }
         },
         {
@@ -6625,12 +6633,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Marcus Rashford.",
+          "text": "J'ai été coéquipier de Marcus Rashford en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Mason_Mount&oldid=1375897248",
           "fact": {
             "name": "Marcus Rashford",
             "shared_club": "Manchester United",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+            "club_only": true
           }
         },
         {
@@ -6685,12 +6694,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Cole Palmer.",
+          "text": "J'ai été coéquipier de Cole Palmer en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Raheem_Sterling&oldid=1378948244",
           "fact": {
             "name": "Cole Palmer",
             "shared_club": "Manchester City",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+            "club_only": true
           }
         },
         {
@@ -6745,12 +6755,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Raheem Sterling.",
+          "text": "J'ai été coéquipier de Raheem Sterling en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
           "fact": {
             "name": "Raheem Sterling",
             "shared_club": "Liverpool",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Raheem_Sterling&oldid=1378948244"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Raheem_Sterling&oldid=1378948244",
+            "club_only": true
           }
         },
         {
@@ -6842,12 +6853,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Harry Kane.",
+          "text": "J'ai été coéquipier de Harry Kane en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Kyle_Walker&oldid=1375425100",
           "fact": {
             "name": "Harry Kane",
             "shared_club": "Tottenham",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "club_only": true
           }
         }
       ],
@@ -6865,12 +6877,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Cole Palmer.",
+          "text": "J'ai été coéquipier de Cole Palmer en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=John_Stones&oldid=1378818851",
           "fact": {
             "name": "Cole Palmer",
             "shared_club": "Manchester City",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+            "club_only": true
           }
         },
         {
@@ -6925,12 +6938,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Marcus Rashford.",
+          "text": "J'ai été coéquipier de Marcus Rashford en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Harry_Maguire&oldid=1375898955",
           "fact": {
             "name": "Marcus Rashford",
             "shared_club": "Manchester United",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+            "club_only": true
           }
         },
         {
@@ -6985,12 +6999,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Marcus Rashford.",
+          "text": "J'ai été coéquipier de Marcus Rashford en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Bruno_Fernandes&oldid=1378513291",
           "fact": {
             "name": "Marcus Rashford",
             "shared_club": "Manchester United",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+            "club_only": true
           }
         },
         {
@@ -7080,12 +7095,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Cole Palmer.",
+          "text": "J'ai été coéquipier de Cole Palmer en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Bernardo_Silva&oldid=1378925566",
           "fact": {
             "name": "Cole Palmer",
             "shared_club": "Manchester City",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+            "club_only": true
           }
         }
       ],
@@ -7121,12 +7137,13 @@
         {
           "points": 3,
           "kind": "teammate",
-          "text": "J'ai joué avec Cole Palmer.",
+          "text": "J'ai été coéquipier de Cole Palmer en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=R%C3%BAben_Dias&oldid=1379026004",
           "fact": {
             "name": "Cole Palmer",
             "shared_club": "Manchester City",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+            "club_only": true
           }
         },
         {
@@ -7180,12 +7197,13 @@
         {
           "points": 3,
           "kind": "teammate",
-          "text": "J'ai joué avec Cole Palmer.",
+          "text": "J'ai été coéquipier de Cole Palmer en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Rodri&oldid=1379060570",
           "fact": {
             "name": "Cole Palmer",
             "shared_club": "Manchester City",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+            "club_only": true
           }
         },
         {
@@ -7221,10 +7239,10 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à Benfica.",
+          "text": "J'ai joué à Juventus.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Cancelo&oldid=1378691140",
           "fact": {
-            "club": "Benfica"
+            "club": "Juventus"
           }
         },
         {
@@ -7239,12 +7257,13 @@
         {
           "points": 3,
           "kind": "teammate",
-          "text": "J'ai joué avec Cole Palmer.",
+          "text": "J'ai été coéquipier de Cole Palmer en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Cancelo&oldid=1378691140",
           "fact": {
             "name": "Cole Palmer",
             "shared_club": "Manchester City",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+            "club_only": true
           }
         },
         {
@@ -7281,12 +7300,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Rúben Dias.",
+          "text": "J'ai été coéquipier de Rúben Dias en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_F%C3%A9lix&oldid=1378692280",
           "fact": {
             "name": "Rúben Dias",
             "shared_club": "Benfica",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=R%C3%BAben_Dias&oldid=1379026004"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=R%C3%BAben_Dias&oldid=1379026004",
+            "club_only": true
           }
         },
         {
@@ -7360,21 +7380,22 @@
         {
           "points": 3,
           "kind": "teammate",
-          "text": "J'ai joué avec Jordan Henderson.",
+          "text": "J'ai été coéquipier de Jordan Henderson en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120",
           "fact": {
             "name": "Jordan Henderson",
             "shared_club": "Liverpool",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
+            "club_only": true
           }
         },
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Atlético Madrid.",
+          "text": "J'ai joué à Paços de Ferreira.",
           "source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120",
           "fact": {
-            "club": "Atlético Madrid"
+            "club": "Paços de Ferreira"
           }
         },
         {
@@ -7401,10 +7422,10 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à Benfica.",
+          "text": "J'ai joué à PSG.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
           "fact": {
-            "club": "Benfica"
+            "club": "PSG"
           }
         },
         {
@@ -7438,12 +7459,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Vitinha.",
+          "text": "J'ai été coéquipier de Vitinha en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
           "fact": {
             "name": "Vitinha",
             "shared_club": "PSG",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Vitinha&oldid=1378691752"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Vitinha&oldid=1378691752",
+            "club_only": true
           }
         }
       ],
@@ -7459,12 +7481,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec João Neves.",
+          "text": "J'ai été coéquipier de João Neves en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Vitinha&oldid=1378691752",
           "fact": {
             "name": "João Neves",
             "shared_club": "PSG",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+            "club_only": true
           }
         },
         {
@@ -7519,12 +7542,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec João Neves.",
+          "text": "J'ai été coéquipier de João Neves en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Achraf_Hakimi&oldid=1377795128",
           "fact": {
             "name": "João Neves",
             "shared_club": "PSG",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+            "club_only": true
           }
         },
         {
@@ -7579,12 +7603,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec João Neves.",
+          "text": "J'ai été coéquipier de João Neves en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
           "fact": {
             "name": "João Neves",
             "shared_club": "PSG",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+            "club_only": true
           }
         },
         {
@@ -7639,12 +7664,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec João Neves.",
+          "text": "J'ai été coéquipier de João Neves en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Bradley_Barcola&oldid=1378718832",
           "fact": {
             "name": "João Neves",
             "shared_club": "PSG",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+            "club_only": true
           }
         },
         {
@@ -7699,12 +7725,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec João Neves.",
+          "text": "J'ai été coéquipier de João Neves en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=D%C3%A9sir%C3%A9_Dou%C3%A9&oldid=1378856338",
           "fact": {
             "name": "João Neves",
             "shared_club": "PSG",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+            "club_only": true
           }
         },
         {
@@ -7787,12 +7814,13 @@
         {
           "points": 2,
           "kind": "teammate",
-          "text": "J'ai joué avec Vitinha.",
+          "text": "J'ai été coéquipier de Vitinha en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Randal_Kolo_Muani&oldid=1374050113",
           "fact": {
             "name": "Vitinha",
             "shared_club": "PSG",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Vitinha&oldid=1378691752"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Vitinha&oldid=1378691752",
+            "club_only": true
           }
         },
         {
@@ -7819,12 +7847,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Victor Osimhen.",
+          "text": "J'ai été coéquipier de Victor Osimhen en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Khvicha_Kvaratskhelia&oldid=1378843451",
           "fact": {
             "name": "Victor Osimhen",
             "shared_club": "Napoli",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Victor_Osimhen&oldid=1378160614"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Victor_Osimhen&oldid=1378160614",
+            "club_only": true
           }
         },
         {
@@ -7879,12 +7908,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Khvicha Kvaratskhelia.",
+          "text": "J'ai été coéquipier de Khvicha Kvaratskhelia en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Victor_Osimhen&oldid=1378160614",
           "fact": {
             "name": "Khvicha Kvaratskhelia",
             "shared_club": "Napoli",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Khvicha_Kvaratskhelia&oldid=1378843451"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Khvicha_Kvaratskhelia&oldid=1378843451",
+            "club_only": true
           }
         },
         {
@@ -7946,12 +7976,13 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "J'ai joué avec Nicolò Barella.",
+          "text": "J'ai été coéquipier de Nicolò Barella en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Lautaro_Mart%C3%ADnez&oldid=1378395150",
           "fact": {
             "name": "Nicolò Barella",
             "shared_club": "Inter Milan",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Nicol%C3%B2_Barella&oldid=1378863453"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Nicol%C3%B2_Barella&oldid=1378863453",
+            "club_only": true
           }
         },
         {
@@ -7997,12 +8028,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Federico Chiesa.",
+          "text": "J'ai été coéquipier de Federico Chiesa en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136",
           "fact": {
             "name": "Federico Chiesa",
             "shared_club": "Juventus",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Federico_Chiesa&oldid=1378127004"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Federico_Chiesa&oldid=1378127004",
+            "club_only": true
           }
         },
         {
@@ -8027,10 +8059,10 @@
         {
           "points": 2,
           "kind": "position",
-          "text": "Je suis milieu offensif.",
+          "text": "Je suis attaquant.",
           "source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136",
           "fact": {
-            "position": "milieu offensif"
+            "position": "attaquant"
           }
         },
         {
@@ -8094,12 +8126,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Diogo Jota.",
+          "text": "J'ai été coéquipier de Diogo Jota en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Federico_Chiesa&oldid=1378127004",
           "fact": {
             "name": "Diogo Jota",
             "shared_club": "Liverpool",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120",
+            "club_only": true
           }
         }
       ],
@@ -8127,12 +8160,13 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "J'ai joué avec Gianluigi Donnarumma.",
+          "text": "J'ai été coéquipier de Gianluigi Donnarumma en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Sandro_Tonali&oldid=1378863837",
           "fact": {
             "name": "Gianluigi Donnarumma",
             "shared_club": "AC Milan",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Gianluigi_Donnarumma&oldid=1378863037"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Gianluigi_Donnarumma&oldid=1378863037",
+            "club_only": true
           }
         },
         {
@@ -8186,12 +8220,13 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "J'ai joué avec Lautaro Martínez.",
+          "text": "J'ai été coéquipier de Lautaro Martínez en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Nicol%C3%B2_Barella&oldid=1378863453",
           "fact": {
             "name": "Lautaro Martínez",
             "shared_club": "Inter Milan",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Lautaro_Mart%C3%ADnez&oldid=1378395150"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Lautaro_Mart%C3%ADnez&oldid=1378395150",
+            "club_only": true
           }
         },
         {
@@ -8237,12 +8272,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Jude Bellingham.",
+          "text": "J'ai été coéquipier de Jude Bellingham en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Federico_Valverde&oldid=1378063236",
           "fact": {
             "name": "Jude Bellingham",
             "shared_club": "Real Madrid",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+            "club_only": true
           }
         },
         {
@@ -8295,12 +8331,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Jude Bellingham.",
+          "text": "J'ai été coéquipier de Jude Bellingham en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Rodrygo&oldid=1377563302",
           "fact": {
             "name": "Jude Bellingham",
             "shared_club": "Real Madrid",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+            "club_only": true
           }
         },
         {
@@ -8357,12 +8394,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Jude Bellingham.",
+          "text": "J'ai été coéquipier de Jude Bellingham en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Vin%C3%ADcius_J%C3%BAnior&oldid=1378404428",
           "fact": {
             "name": "Jude Bellingham",
             "shared_club": "Real Madrid",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+            "club_only": true
           }
         },
         {
@@ -8454,12 +8492,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Jude Bellingham.",
+          "text": "J'ai été coéquipier de Jude Bellingham en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=%C3%89der_Milit%C3%A3o&oldid=1376297451",
           "fact": {
             "name": "Jude Bellingham",
             "shared_club": "Real Madrid",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+            "club_only": true
           }
         }
       ],
@@ -8512,12 +8551,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Marcus Rashford.",
+          "text": "J'ai été coéquipier de Marcus Rashford en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Casemiro&oldid=1378707454",
           "fact": {
             "name": "Marcus Rashford",
             "shared_club": "Manchester United",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+            "club_only": true
           }
         }
       ],
@@ -8535,12 +8575,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Mason Mount.",
+          "text": "J'ai été coéquipier de Mason Mount en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=%C3%89douard_Mendy&oldid=1375739369",
           "fact": {
             "name": "Mason Mount",
             "shared_club": "Chelsea",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Mason_Mount&oldid=1375897248"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Mason_Mount&oldid=1375897248",
+            "club_only": true
           }
         },
         {
@@ -8632,12 +8673,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Rodri.",
+          "text": "J'ai été coéquipier de Rodri en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jan_Oblak&oldid=1379021887",
           "fact": {
             "name": "Rodri",
             "shared_club": "Atlético Madrid",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Rodri&oldid=1379060570"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Rodri&oldid=1379060570",
+            "club_only": true
           }
         }
       ],
@@ -8655,12 +8697,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Jude Bellingham.",
+          "text": "J'ai été coéquipier de Jude Bellingham en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Thibaut_Courtois&oldid=1378053557",
           "fact": {
             "name": "Jude Bellingham",
             "shared_club": "Real Madrid",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
+            "club_only": true
           }
         },
         {
@@ -8715,12 +8758,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Harry Kane.",
+          "text": "J'ai été coéquipier de Harry Kane en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Manuel_Neuer&oldid=1378216051",
           "fact": {
             "name": "Harry Kane",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "club_only": true
           }
         },
         {
@@ -8775,12 +8819,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Ousmane Dembélé.",
+          "text": "J'ai été coéquipier de Ousmane Dembélé en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Marc-Andr%C3%A9_ter_Stegen&oldid=1376830446",
           "fact": {
             "name": "Ousmane Dembélé",
             "shared_club": "FC Barcelone",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
+            "club_only": true
           }
         },
         {
@@ -8872,12 +8917,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec João Neves.",
+          "text": "J'ai été coéquipier de João Neves en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Gianluigi_Donnarumma&oldid=1378863037",
           "fact": {
             "name": "João Neves",
             "shared_club": "PSG",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
+            "club_only": true
           }
         }
       ],
@@ -8932,12 +8978,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Jordan Henderson.",
+          "text": "J'ai été coéquipier de Jordan Henderson en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alisson_Becker&oldid=1378681378",
           "fact": {
             "name": "Jordan Henderson",
             "shared_club": "Liverpool",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
+            "club_only": true
           }
         }
       ],
@@ -8990,12 +9037,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Cole Palmer.",
+          "text": "J'ai été coéquipier de Cole Palmer en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ederson_%28footballer%2C_born_1993%29&oldid=1378678767",
           "fact": {
             "name": "Cole Palmer",
             "shared_club": "Manchester City",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+            "club_only": true
           }
         }
       ],
@@ -9051,12 +9099,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Jack Grealish.",
+          "text": "J'ai été coéquipier de Jack Grealish en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Emiliano_Mart%C3%ADnez&oldid=1378988069",
           "fact": {
             "name": "Jack Grealish",
             "shared_club": "Aston Villa",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jack_Grealish&oldid=1379137658"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jack_Grealish&oldid=1379137658",
+            "club_only": true
           }
         }
       ],
@@ -9111,12 +9160,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Declan Rice.",
+          "text": "J'ai été coéquipier de Declan Rice en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=David_Raya&oldid=1379075954",
           "fact": {
             "name": "Declan Rice",
             "shared_club": "Arsenal",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
+            "club_only": true
           }
         }
       ],
@@ -9144,12 +9194,13 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "J'ai joué avec Victor Osimhen.",
+          "text": "J'ai été coéquipier de Victor Osimhen en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Mike_Maignan&oldid=1378077337",
           "fact": {
             "name": "Victor Osimhen",
             "shared_club": "Lille",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Victor_Osimhen&oldid=1378160614"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Victor_Osimhen&oldid=1378160614",
+            "club_only": true
           }
         },
         {
@@ -9213,12 +9264,13 @@
         {
           "points": 3,
           "kind": "teammate",
-          "text": "J'ai joué avec Harry Kane.",
+          "text": "J'ai été coéquipier de Harry Kane en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Hugo_Lloris&oldid=1377001731",
           "fact": {
             "name": "Harry Kane",
             "shared_club": "Tottenham",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "club_only": true
           }
         },
         {
@@ -9254,12 +9306,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Vitinha.",
+          "text": "J'ai été coéquipier de Vitinha en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Keylor_Navas&oldid=1378696436",
           "fact": {
             "name": "Vitinha",
             "shared_club": "PSG",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Vitinha&oldid=1378691752"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Vitinha&oldid=1378691752",
+            "club_only": true
           }
         },
         {
@@ -9351,12 +9404,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Paulo Dybala.",
+          "text": "J'ai été coéquipier de Paulo Dybala en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Wojciech_Szcz%C4%99sny&oldid=1376299225",
           "fact": {
             "name": "Paulo Dybala",
             "shared_club": "Juventus",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136",
+            "club_only": true
           }
         }
       ],
@@ -9374,12 +9428,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Mesut Özil.",
+          "text": "J'ai été coéquipier de Mesut Özil en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Petr_%C4%8Cech&oldid=1377254991",
           "fact": {
             "name": "Mesut Özil",
             "shared_club": "Arsenal",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Mesut_%C3%96zil&oldid=1378668299"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Mesut_%C3%96zil&oldid=1378668299",
+            "club_only": true
           }
         },
         {
@@ -9471,12 +9526,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Paulo Dybala.",
+          "text": "J'ai été coéquipier de Paulo Dybala en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Gianluigi_Buffon&oldid=1378184897",
           "fact": {
             "name": "Paulo Dybala",
             "shared_club": "Juventus",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136",
+            "club_only": true
           }
         }
       ],
@@ -9503,12 +9559,13 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "J'ai joué avec Jadon Sancho.",
+          "text": "J'ai été coéquipier de Jadon Sancho en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alexander_Isak&oldid=1378884340",
           "fact": {
             "name": "Jadon Sancho",
             "shared_club": "Borussia Dortmund",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
+            "club_only": true
           }
         },
         {
@@ -9554,12 +9611,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Declan Rice.",
+          "text": "J'ai été coéquipier de Declan Rice en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Viktor_Gy%C3%B6keres&oldid=1378728629",
           "fact": {
             "name": "Declan Rice",
             "shared_club": "Arsenal",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
+            "club_only": true
           }
         },
         {
@@ -9574,10 +9632,10 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Brighton.",
+          "text": "J'ai joué à Coventry City.",
           "source": "https://en.wikipedia.org/w/index.php?title=Viktor_Gy%C3%B6keres&oldid=1378728629",
           "fact": {
-            "club": "Brighton"
+            "club": "Coventry City"
           }
         },
         {
@@ -9633,12 +9691,13 @@
         {
           "points": 3,
           "kind": "teammate",
-          "text": "J'ai joué avec Jordan Henderson.",
+          "text": "J'ai été coéquipier de Jordan Henderson en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Darwin_N%C3%BA%C3%B1ez&oldid=1378870420",
           "fact": {
             "name": "Jordan Henderson",
             "shared_club": "Liverpool",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
+            "club_only": true
           }
         },
         {
@@ -9674,12 +9733,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Diogo Jota.",
+          "text": "J'ai été coéquipier de Diogo Jota en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Cody_Gakpo&oldid=1378422733",
           "fact": {
             "name": "Diogo Jota",
             "shared_club": "Liverpool",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120",
+            "club_only": true
           }
         },
         {
@@ -9695,10 +9755,10 @@
         {
           "points": 3,
           "kind": "position",
-          "text": "Je suis attaquant.",
+          "text": "Je suis ailier.",
           "source": "https://en.wikipedia.org/w/index.php?title=Cody_Gakpo&oldid=1378422733",
           "fact": {
-            "position": "attaquant"
+            "position": "ailier"
           }
         },
         {
@@ -9734,12 +9794,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Diogo Jota.",
+          "text": "J'ai été coéquipier de Diogo Jota en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Dominik_Szoboszlai&oldid=1378719178",
           "fact": {
             "name": "Diogo Jota",
             "shared_club": "Liverpool",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120",
+            "club_only": true
           }
         },
         {
@@ -9831,12 +9892,14 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Diogo Jota.",
+          "text": "J'ai été coéquipier de Dominik Szoboszlai en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Florian_Wirtz&oldid=1378684776",
           "fact": {
-            "name": "Diogo Jota",
+            "name": "Dominik Szoboszlai",
             "shared_club": "Liverpool",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Dominik_Szoboszlai&oldid=1378719178",
+            "match_source": "https://www.liverpoolfc.com/news/confirmed-liverpool-line-v-afc-bournemouth-4",
+            "club_only": true
           }
         }
       ],
@@ -9863,10 +9926,10 @@
         {
           "points": 4,
           "kind": "position",
-          "text": "Je suis milieu offensif.",
+          "text": "Je suis attaquant.",
           "source": "https://en.wikipedia.org/w/index.php?title=Kai_Havertz&oldid=1378177904",
           "fact": {
-            "position": "milieu offensif"
+            "position": "attaquant"
           }
         },
         {
@@ -9891,12 +9954,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Declan Rice.",
+          "text": "J'ai été coéquipier de Declan Rice en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Kai_Havertz&oldid=1378177904",
           "fact": {
             "name": "Declan Rice",
             "shared_club": "Arsenal",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
+            "club_only": true
           }
         }
       ],
@@ -9914,12 +9978,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Mason Mount.",
+          "text": "J'ai été coéquipier de Mason Mount en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Timo_Werner&oldid=1375927138",
           "fact": {
             "name": "Mason Mount",
             "shared_club": "Chelsea",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Mason_Mount&oldid=1375897248"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Mason_Mount&oldid=1375897248",
+            "club_only": true
           }
         },
         {
@@ -9974,12 +10039,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Harry Kane.",
+          "text": "J'ai été coéquipier de Harry Kane en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Leroy_San%C3%A9&oldid=1371965372",
           "fact": {
             "name": "Harry Kane",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "club_only": true
           }
         },
         {
@@ -10013,10 +10079,10 @@
         {
           "points": 1,
           "kind": "position",
-          "text": "Je suis milieu offensif.",
+          "text": "Je suis ailier.",
           "source": "https://en.wikipedia.org/w/index.php?title=Leroy_San%C3%A9&oldid=1371965372",
           "fact": {
-            "position": "milieu offensif"
+            "position": "ailier"
           }
         }
       ],
@@ -10034,12 +10100,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Harry Kane.",
+          "text": "J'ai été coéquipier de Harry Kane en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Serge_Gnabry&oldid=1378649208",
           "fact": {
             "name": "Harry Kane",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "club_only": true
           }
         },
         {
@@ -10094,12 +10161,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Harry Kane.",
+          "text": "J'ai été coéquipier de Harry Kane en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Joshua_Kimmich&oldid=1377085904",
           "fact": {
             "name": "Harry Kane",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "club_only": true
           }
         },
         {
@@ -10154,12 +10222,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Harry Kane.",
+          "text": "J'ai été coéquipier de Harry Kane en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Leon_Goretzka&oldid=1372789405",
           "fact": {
             "name": "Harry Kane",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "club_only": true
           }
         },
         {
@@ -10214,12 +10283,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Cole Palmer.",
+          "text": "J'ai été coéquipier de Cole Palmer en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=%C4%B0lkay_G%C3%BCndo%C4%9Fan&oldid=1372426668",
           "fact": {
             "name": "Cole Palmer",
             "shared_club": "Manchester City",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+            "club_only": true
           }
         },
         {
@@ -10274,12 +10344,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Manuel Neuer.",
+          "text": "J'ai été coéquipier de Manuel Neuer en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Mesut_%C3%96zil&oldid=1378668299",
           "fact": {
             "name": "Manuel Neuer",
             "shared_club": "Schalke 04",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Manuel_Neuer&oldid=1378216051"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Manuel_Neuer&oldid=1378216051",
+            "club_only": true
           }
         },
         {
@@ -10344,10 +10415,10 @@
         {
           "points": 4,
           "kind": "position",
-          "text": "Je suis attaquant.",
+          "text": "Je suis ailier.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alexis_S%C3%A1nchez&oldid=1376713396",
           "fact": {
-            "position": "attaquant"
+            "position": "ailier"
           }
         },
         {
@@ -10371,12 +10442,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Marcus Rashford.",
+          "text": "J'ai été coéquipier de Marcus Rashford en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alexis_S%C3%A1nchez&oldid=1376713396",
           "fact": {
             "name": "Marcus Rashford",
             "shared_club": "Manchester United",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+            "club_only": true
           }
         }
       ],
@@ -10394,22 +10466,24 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Jadon Sancho.",
+          "text": "J'ai été coéquipier de Jadon Sancho en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Pierre-Emerick_Aubameyang&oldid=1378795116",
           "fact": {
             "name": "Jadon Sancho",
             "shared_club": "Borussia Dortmund",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
+            "club_only": true
           }
         },
         {
           "points": 4,
           "kind": "trophy",
-          "text": "J'ai remporté la Liga.",
+          "text": "J'ai remporté la FA Cup.",
           "source": "https://en.wikipedia.org/w/index.php?title=Pierre-Emerick_Aubameyang&oldid=1378795116",
           "fact": {
-            "trophy": "La Liga",
-            "evidence": "*La Liga: 2022–23"
+            "trophy": "FA Cup",
+            "evidence": "*FA Cup: 2019–20",
+            "independent_source": "https://www.thefa.com/news/2020/aug/01/heads-up-fa-cup-final-arsenal-chelsea-match-report-010820"
           }
         },
         {
@@ -10424,10 +10498,10 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à AC Milan.",
+          "text": "J'ai joué à Saint-Étienne.",
           "source": "https://en.wikipedia.org/w/index.php?title=Pierre-Emerick_Aubameyang&oldid=1378795116",
           "fact": {
-            "club": "AC Milan"
+            "club": "Saint-Étienne"
           }
         },
         {
@@ -10454,12 +10528,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Bradley Barcola.",
+          "text": "J'ai été coéquipier de Bradley Barcola en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alexandre_Lacazette&oldid=1378444573",
           "fact": {
             "name": "Bradley Barcola",
             "shared_club": "Lyon",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Bradley_Barcola&oldid=1378718832"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Bradley_Barcola&oldid=1378718832",
+            "club_only": true
           }
         },
         {
@@ -10514,11 +10589,12 @@
         {
           "points": 5,
           "kind": "trophy",
-          "text": "J'ai remporté la Liga.",
+          "text": "J'ai remporté le championnat des Pays-Bas.",
           "source": "https://en.wikipedia.org/w/index.php?title=Memphis_Depay&oldid=1379096034",
           "fact": {
-            "trophy": "La Liga",
-            "evidence": "*La Liga: 2022–23"
+            "trophy": "Eredivisie",
+            "evidence": "*Eredivisie: 2014–15",
+            "independent_source": "https://www.psv.nl/en/media/article/fact-last-match-of-memphis-depay-in-the-shirt-of-psv"
           }
         },
         {
@@ -10533,12 +10609,13 @@
         {
           "points": 3,
           "kind": "teammate",
-          "text": "J'ai joué avec Marcus Rashford.",
+          "text": "J'ai été coéquipier de Marcus Rashford en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Memphis_Depay&oldid=1379096034",
           "fact": {
             "name": "Marcus Rashford",
             "shared_club": "Manchester United",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marcus_Rashford&oldid=1378545129",
+            "club_only": true
           }
         },
         {
@@ -10574,12 +10651,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Ousmane Dembélé.",
+          "text": "J'ai été coéquipier de Ousmane Dembélé en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Frenkie_de_Jong&oldid=1376912222",
           "fact": {
             "name": "Ousmane Dembélé",
             "shared_club": "FC Barcelone",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
+            "club_only": true
           }
         },
         {
@@ -10644,12 +10722,13 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "J'ai joué avec Harry Kane.",
+          "text": "J'ai été coéquipier de Harry Kane en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Matthijs_de_Ligt&oldid=1377871286",
           "fact": {
             "name": "Harry Kane",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "club_only": true
           }
         },
         {
@@ -10722,12 +10801,13 @@
         {
           "points": 2,
           "kind": "teammate",
-          "text": "J'ai joué avec Ousmane Dembélé.",
+          "text": "J'ai été coéquipier de Ousmane Dembélé en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jordi_Alba&oldid=1376299257",
           "fact": {
             "name": "Ousmane Dembélé",
             "shared_club": "FC Barcelone",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
+            "club_only": true
           }
         },
         {
@@ -10754,12 +10834,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Ousmane Dembélé.",
+          "text": "J'ai été coéquipier de Ousmane Dembélé en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ivan_Rakiti%C4%87&oldid=1376286041",
           "fact": {
             "name": "Ousmane Dembélé",
             "shared_club": "FC Barcelone",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
+            "club_only": true
           }
         },
         {
@@ -10824,10 +10905,10 @@
         {
           "points": 4,
           "kind": "position",
-          "text": "Je suis défenseur central.",
+          "text": "Je suis milieu défensif.",
           "source": "https://en.wikipedia.org/w/index.php?title=Arturo_Vidal&oldid=1378372285",
           "fact": {
-            "position": "défenseur central"
+            "position": "milieu défensif"
           }
         },
         {
@@ -10851,12 +10932,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Ousmane Dembélé.",
+          "text": "J'ai été coéquipier de Ousmane Dembélé en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Arturo_Vidal&oldid=1378372285",
           "fact": {
             "name": "Ousmane Dembélé",
             "shared_club": "FC Barcelone",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Ousmane_Demb%C3%A9l%C3%A9&oldid=1378965998",
+            "club_only": true
           }
         }
       ],
@@ -10874,12 +10956,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Harry Kane.",
+          "text": "J'ai été coéquipier de Harry Kane en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ivan_Peri%C5%A1i%C4%87&oldid=1379105301",
           "fact": {
             "name": "Harry Kane",
             "shared_club": "Tottenham",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "club_only": true
           }
         },
         {
@@ -10943,12 +11026,13 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "J'ai joué avec Lautaro Martínez.",
+          "text": "J'ai été coéquipier de Lautaro Martínez en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Marcelo_Brozovi%C4%87&oldid=1374881693",
           "fact": {
             "name": "Lautaro Martínez",
             "shared_club": "Inter Milan",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Lautaro_Mart%C3%ADnez&oldid=1378395150"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Lautaro_Mart%C3%ADnez&oldid=1378395150",
+            "club_only": true
           }
         },
         {
@@ -11031,12 +11115,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Son Heung-min.",
+          "text": "J'ai été coéquipier de Son Heung-min en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Hakan_%C3%87alhano%C4%9Flu&oldid=1377835464",
           "fact": {
             "name": "Son Heung-min",
             "shared_club": "Bayer Leverkusen",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Son_Heung-min&oldid=1378990669"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Son_Heung-min&oldid=1378990669",
+            "club_only": true
           }
         }
       ],
@@ -11091,12 +11176,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Victor Osimhen.",
+          "text": "J'ai été coéquipier de Victor Osimhen en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Lorenzo_Insigne&oldid=1376555810",
           "fact": {
             "name": "Victor Osimhen",
             "shared_club": "Napoli",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Victor_Osimhen&oldid=1378160614"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Victor_Osimhen&oldid=1378160614",
+            "club_only": true
           }
         }
       ],
@@ -11124,12 +11210,13 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "J'ai joué avec İlkay Gündoğan.",
+          "text": "J'ai été coéquipier de İlkay Gündoğan en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ciro_Immobile&oldid=1375050845",
           "fact": {
             "name": "İlkay Gündoğan",
             "shared_club": "Borussia Dortmund",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=%C4%B0lkay_G%C3%BCndo%C4%9Fan&oldid=1372426668"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=%C4%B0lkay_G%C3%BCndo%C4%9Fan&oldid=1372426668",
+            "club_only": true
           }
         },
         {
@@ -11144,10 +11231,10 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Sorrento.",
+          "text": "J'ai joué à Torino.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ciro_Immobile&oldid=1375050845",
           "fact": {
-            "club": "Sorrento"
+            "club": "Torino"
           }
         },
         {
@@ -11211,12 +11298,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Federico Chiesa.",
+          "text": "J'ai été coéquipier de Federico Chiesa en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Du%C5%A1an_Vlahovi%C4%87&oldid=1378123218",
           "fact": {
             "name": "Federico Chiesa",
             "shared_club": "Fiorentina",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Federico_Chiesa&oldid=1378127004"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Federico_Chiesa&oldid=1378127004",
+            "club_only": true
           }
         }
       ],
@@ -11234,12 +11322,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Xavi Simons.",
+          "text": "J'ai été coéquipier de Xavi Simons en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Benjamin_%C5%A0e%C5%A1ko&oldid=1375592136",
           "fact": {
             "name": "Xavi Simons",
             "shared_club": "RB Leipzig",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Xavi_Simons&oldid=1376545620"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Xavi_Simons&oldid=1376545620",
+            "club_only": true
           }
         },
         {
@@ -11294,12 +11383,14 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec João Neves.",
+          "text": "J'ai été coéquipier de Dani Olmo en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Xavi_Simons&oldid=1376545620",
           "fact": {
-            "name": "João Neves",
-            "shared_club": "PSG",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274"
+            "name": "Dani Olmo",
+            "shared_club": "RB Leipzig",
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Dani_Olmo&oldid=1379060899",
+            "match_source": "https://www.uefa.com/uefachampionsleague/news/028a-1a2cac0ebcfd-8d059c940a51-1000--highlights-report-real-madrid-edge-leipzig/",
+            "club_only": true
           }
         },
         {
@@ -11373,12 +11464,13 @@
         {
           "points": 3,
           "kind": "teammate",
-          "text": "J'ai joué avec Marc-André ter Stegen.",
+          "text": "J'ai été coéquipier de Marc-André ter Stegen en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Dani_Olmo&oldid=1379060899",
           "fact": {
             "name": "Marc-André ter Stegen",
             "shared_club": "FC Barcelone",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marc-Andr%C3%A9_ter_Stegen&oldid=1376830446"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Marc-Andr%C3%A9_ter_Stegen&oldid=1376830446",
+            "club_only": true
           }
         },
         {
@@ -11449,12 +11541,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Cole Palmer.",
+          "text": "J'ai été coéquipier de Cole Palmer en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ferran_Torres&oldid=1378053175",
           "fact": {
             "name": "Cole Palmer",
             "shared_club": "Manchester City",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Cole_Palmer&oldid=1376196058",
+            "club_only": true
           }
         }
       ],
@@ -11472,12 +11565,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Jadon Sancho.",
+          "text": "J'ai été coéquipier de Jadon Sancho en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Christian_Pulisic&oldid=1378909133",
           "fact": {
             "name": "Jadon Sancho",
             "shared_club": "Borussia Dortmund",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Jadon_Sancho&oldid=1378133925",
+            "club_only": true
           }
         },
         {
@@ -11542,12 +11636,13 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "J'ai joué avec Paulo Dybala.",
+          "text": "J'ai été coéquipier de Paulo Dybala en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Weston_McKennie&oldid=1378051450",
           "fact": {
             "name": "Paulo Dybala",
             "shared_club": "Juventus",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136",
+            "club_only": true
           }
         },
         {
@@ -11592,12 +11687,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Mike Maignan.",
+          "text": "J'ai été coéquipier de Mike Maignan en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Yunus_Musah&oldid=1379020542",
           "fact": {
             "name": "Mike Maignan",
             "shared_club": "AC Milan",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Mike_Maignan&oldid=1378077337"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Mike_Maignan&oldid=1378077337",
+            "club_only": true
           }
         },
         {
@@ -11652,12 +11748,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Harry Kane.",
+          "text": "J'ai été coéquipier de Harry Kane en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alphonso_Davies&oldid=1378050851",
           "fact": {
             "name": "Harry Kane",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "club_only": true
           }
         },
         {
@@ -11712,12 +11809,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Mike Maignan.",
+          "text": "J'ai été coéquipier de Mike Maignan en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jonathan_David&oldid=1378948675",
           "fact": {
             "name": "Mike Maignan",
             "shared_club": "Lille",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Mike_Maignan&oldid=1378077337"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Mike_Maignan&oldid=1378077337",
+            "club_only": true
           }
         },
         {
@@ -11772,12 +11870,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Mesut Özil.",
+          "text": "J'ai été coéquipier de Alexandre Lacazette en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Folarin_Balogun&oldid=1378434987",
           "fact": {
-            "name": "Mesut Özil",
+            "name": "Alexandre Lacazette",
             "shared_club": "Arsenal",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Mesut_%C3%96zil&oldid=1378668299"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Alexandre_Lacazette&oldid=1378444573",
+            "club_only": true
           }
         },
         {
@@ -11869,12 +11968,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Emiliano Martínez.",
+          "text": "J'ai été coéquipier de Emiliano Martínez en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Amadou_Onana&oldid=1376967098",
           "fact": {
             "name": "Emiliano Martínez",
             "shared_club": "Aston Villa",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Emiliano_Mart%C3%ADnez&oldid=1378988069"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Emiliano_Mart%C3%ADnez&oldid=1378988069",
+            "club_only": true
           }
         }
       ],
@@ -11911,12 +12011,13 @@
         {
           "points": 3,
           "kind": "teammate",
-          "text": "J'ai joué avec Emiliano Martínez.",
+          "text": "J'ai été coéquipier de Emiliano Martínez en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Youri_Tielemans&oldid=1378173637",
           "fact": {
             "name": "Emiliano Martínez",
             "shared_club": "Aston Villa",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Emiliano_Mart%C3%ADnez&oldid=1378988069"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Emiliano_Mart%C3%ADnez&oldid=1378988069",
+            "club_only": true
           }
         },
         {
@@ -11952,21 +12053,22 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Declan Rice.",
+          "text": "J'ai été coéquipier de Declan Rice en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Leandro_Trossard&oldid=1378815077",
           "fact": {
             "name": "Declan Rice",
             "shared_club": "Arsenal",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
+            "club_only": true
           }
         },
         {
           "points": 4,
           "kind": "position",
-          "text": "Je suis attaquant.",
+          "text": "Je suis ailier.",
           "source": "https://en.wikipedia.org/w/index.php?title=Leandro_Trossard&oldid=1378815077",
           "fact": {
-            "position": "attaquant"
+            "position": "ailier"
           }
         },
         {
@@ -12012,12 +12114,13 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai joué avec Keylor Navas.",
+          "text": "J'ai été coéquipier de Keylor Navas en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Martin_%C3%98degaard&oldid=1378631722",
           "fact": {
             "name": "Keylor Navas",
             "shared_club": "Real Madrid",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Keylor_Navas&oldid=1378696436"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Keylor_Navas&oldid=1378696436",
+            "club_only": true
           }
         },
         {
@@ -12109,12 +12212,13 @@
         {
           "points": 1,
           "kind": "teammate",
-          "text": "J'ai joué avec Declan Rice.",
+          "text": "J'ai été coéquipier de Declan Rice en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Gabriel_Jesus&oldid=1378831885",
           "fact": {
             "name": "Declan Rice",
             "shared_club": "Arsenal",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514"
+            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Declan_Rice&oldid=1378729514",
+            "club_only": true
           }
         }
       ],

@@ -39,21 +39,30 @@
           "club": "Birmingham City",
           "start": 2019,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 41
         },
         {
           "club": "Borussia Dortmund",
           "start": 2020,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 92
         },
         {
           "club": "Real Madrid",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 94
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q66241169",
+        "birth_year": 2003,
+        "height_cm": 186,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Harry Kane",
@@ -67,20 +76,20 @@
       "national_team": "England",
       "career": [
         {
-          "club": "Tottenham",
-          "years": "2009–2023"
-        },
-        {
           "club": "Leyton Orient (prêt)",
           "years": "2011"
         },
         {
-          "club": "Norwich City (prêt)",
-          "years": "2012–2013"
+          "club": "Millwall (prêt)",
+          "years": "2012"
         },
         {
           "club": "Leicester City (prêt)",
           "years": "2013"
+        },
+        {
+          "club": "Tottenham",
+          "years": "2013–2023"
         },
         {
           "club": "Bayern Munich",
@@ -100,39 +109,51 @@
           "club": "Tottenham Hotspur",
           "start": 2009,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 317
         },
         {
           "club": "Leyton Orient",
           "start": 2011,
           "end": 2011,
-          "loan": true
+          "loan": true,
+          "league_appearances": 18
         },
         {
           "club": "Millwall",
           "start": 2012,
           "end": 2012,
-          "loan": true
+          "loan": true,
+          "league_appearances": 22
         },
         {
           "club": "Norwich City",
           "start": 2012,
           "end": 2013,
-          "loan": true
+          "loan": true,
+          "league_appearances": 3
         },
         {
           "club": "Leicester City",
           "start": 2013,
           "end": 2013,
-          "loan": true
+          "loan": true,
+          "league_appearances": 13
         },
         {
           "club": "Bayern Munich",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 98
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q969725",
+        "birth_year": 1993,
+        "height_cm": 188,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Son Heung-min",
@@ -175,33 +196,44 @@
           "club": "Hamburger SV II",
           "start": 2010,
           "end": 2010,
-          "loan": false
+          "loan": false,
+          "league_appearances": 6
         },
         {
           "club": "Hamburger SV",
           "start": 2010,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 73
         },
         {
           "club": "Bayer Leverkusen",
           "start": 2013,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 62
         },
         {
           "club": "Tottenham Hotspur",
           "start": 2015,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 333
         },
         {
           "club": "Los Angeles FC",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 35
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q439722",
+        "birth_year": 1992,
+        "height_cm": 183,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Declan Rice",
@@ -236,15 +268,23 @@
           "club": "West Ham United",
           "start": 2015,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 204
         },
         {
           "club": "Arsenal",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 114
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q30007142",
+        "birth_year": 1999,
+        "height_cm": 188,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Cole Palmer",
@@ -279,15 +319,23 @@
           "club": "Manchester City",
           "start": 2020,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 19
         },
         {
           "club": "Chelsea",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 101
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q99760796",
+        "birth_year": 2002,
+        "height_cm": 185,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Marcus Rashford",
@@ -302,7 +350,7 @@
       "career": [
         {
           "club": "Manchester United",
-          "years": "2015–présent"
+          "years": "2015–2024"
         },
         {
           "club": "Aston Villa (prêt)",
@@ -326,21 +374,30 @@
           "club": "Manchester United",
           "start": 2015,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 292
         },
         {
           "club": "Aston Villa",
           "start": 2025,
           "end": 2025,
-          "loan": true
+          "loan": true,
+          "league_appearances": 10
         },
         {
           "club": "Barcelona",
           "start": 2025,
           "end": 2026,
-          "loan": true
+          "loan": true,
+          "league_appearances": 32
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q22951255",
+        "birth_year": 1997,
+        "height_cm": 188,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Jadon Sancho",
@@ -350,7 +407,7 @@
       "birth_year": 2000,
       "birth_place": "Camberwell",
       "height_cm": 180,
-      "position": "milieu",
+      "position": "ailier",
       "national_team": "England",
       "career": [
         {
@@ -359,7 +416,7 @@
         },
         {
           "club": "Manchester United",
-          "years": "2021–2026"
+          "years": "2021–2023"
         },
         {
           "club": "Borussia Dortmund (prêt)",
@@ -387,39 +444,51 @@
           "club": "Borussia Dortmund II",
           "start": 2017,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 3
         },
         {
           "club": "Borussia Dortmund",
           "start": 2017,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 104
         },
         {
           "club": "Manchester United",
           "start": 2021,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 58
         },
         {
           "club": "Borussia Dortmund",
           "start": 2024,
           "end": 2024,
-          "loan": true
+          "loan": true,
+          "league_appearances": 14
         },
         {
           "club": "Chelsea",
           "start": 2024,
           "end": 2025,
-          "loan": true
+          "loan": true,
+          "league_appearances": 31
         },
         {
           "club": "Aston Villa",
           "start": 2025,
           "end": 2026,
-          "loan": true
+          "loan": true,
+          "league_appearances": 23
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q30148558",
+        "birth_year": 2000,
+        "height_cm": 180,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Jack Grealish",
@@ -438,11 +507,11 @@
         },
         {
           "club": "Aston Villa",
-          "years": "2013–2021"
+          "years": "2014–2021"
         },
         {
           "club": "Manchester City",
-          "years": "2021–présent"
+          "years": "2021–2025"
         },
         {
           "club": "Everton (prêt)",
@@ -462,27 +531,37 @@
           "club": "Aston Villa",
           "start": 2013,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 185
         },
         {
           "club": "Notts County",
           "start": 2013,
           "end": 2014,
-          "loan": true
+          "loan": true,
+          "league_appearances": 37
         },
         {
           "club": "Manchester City",
           "start": 2021,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 95
         },
         {
           "club": "Everton",
           "start": 2025,
           "end": null,
-          "loan": true
+          "loan": true,
+          "league_appearances": 23
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q16056053",
+        "birth_year": 1995,
+        "height_cm": 180,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Mason Mount",
@@ -500,12 +579,12 @@
           "years": "2017–2018"
         },
         {
-          "club": "Chelsea",
-          "years": "2017–2023"
-        },
-        {
           "club": "Derby County (prêt)",
           "years": "2018–2019"
+        },
+        {
+          "club": "Chelsea",
+          "years": "2019–2023"
         },
         {
           "club": "Manchester United",
@@ -525,27 +604,37 @@
           "club": "Chelsea",
           "start": 2017,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 129
         },
         {
           "club": "Vitesse Arnhem",
           "start": 2017,
           "end": 2018,
-          "loan": true
+          "loan": true,
+          "league_appearances": 29
         },
         {
           "club": "Derby County",
           "start": 2018,
           "end": 2019,
-          "loan": true
+          "loan": true,
+          "league_appearances": 35
         },
         {
           "club": "Manchester United",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 55
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q38000669",
+        "birth_year": 1999,
+        "height_cm": 181,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Raheem Sterling",
@@ -568,7 +657,7 @@
         },
         {
           "club": "Chelsea",
-          "years": "2022–2026"
+          "years": "2022–2024"
         },
         {
           "club": "Arsenal (prêt)",
@@ -588,33 +677,44 @@
           "club": "Liverpool",
           "start": 2012,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 95
         },
         {
           "club": "Manchester City",
           "start": 2015,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 225
         },
         {
           "club": "Chelsea",
           "start": 2022,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 59
         },
         {
           "club": "Arsenal",
           "start": 2024,
           "end": 2025,
-          "loan": true
+          "loan": true,
+          "league_appearances": 17
         },
         {
           "club": "Feyenoord",
           "start": 2026,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 8
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q312157",
+        "birth_year": 1994,
+        "height_cm": 172,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Jordan Henderson",
@@ -628,16 +728,16 @@
       "national_team": "England",
       "career": [
         {
-          "club": "Sunderland",
-          "years": "2008–2011"
-        },
-        {
           "club": "Coventry City (prêt)",
           "years": "2009"
         },
         {
-          "club": "Al-Ittifaq",
-          "years": "2023–2024"
+          "club": "Sunderland",
+          "years": "2009–2011"
+        },
+        {
+          "club": "Liverpool",
+          "years": "2011–2023"
         },
         {
           "club": "Ajax",
@@ -661,45 +761,58 @@
           "club": "Sunderland",
           "start": 2008,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 71
         },
         {
           "club": "Coventry City",
           "start": 2009,
           "end": 2009,
-          "loan": true
+          "loan": true,
+          "league_appearances": 10
         },
         {
           "club": "Liverpool",
           "start": 2011,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 360
         },
         {
           "club": "Al-Ettifaq",
           "start": 2023,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 17
         },
         {
           "club": "Ajax",
           "start": 2024,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 37
         },
         {
           "club": "Brentford",
           "start": 2025,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 32
         },
         {
           "club": "Chelsea",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 1
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q273715",
+        "birth_year": 1990,
+        "height_cm": 182,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Kyle Walker",
@@ -713,10 +826,6 @@
       "national_team": "England",
       "career": [
         {
-          "club": "Northampton Town (prêt)",
-          "years": "2008"
-        },
-        {
           "club": "Sheffield United",
           "years": "2008–2010"
         },
@@ -725,8 +834,12 @@
           "years": "2011"
         },
         {
-          "club": "AC Milan (prêt)",
-          "years": "2025"
+          "club": "Tottenham",
+          "years": "2011–2017"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2017–2025"
         },
         {
           "club": "Burnley",
@@ -746,57 +859,72 @@
           "club": "Sheffield United",
           "start": 2008,
           "end": 2009,
-          "loan": false
+          "loan": false,
+          "league_appearances": 2
         },
         {
           "club": "Northampton Town",
           "start": 2008,
           "end": 2008,
-          "loan": true
+          "loan": true,
+          "league_appearances": 9
         },
         {
           "club": "Tottenham Hotspur",
           "start": 2009,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 183
         },
         {
           "club": "Sheffield United",
           "start": 2009,
           "end": 2010,
-          "loan": true
+          "loan": true,
+          "league_appearances": 26
         },
         {
           "club": "Queens Park Rangers",
           "start": 2010,
           "end": 2011,
-          "loan": true
+          "loan": true,
+          "league_appearances": 20
         },
         {
           "club": "Aston Villa",
           "start": 2011,
           "end": 2011,
-          "loan": true
+          "loan": true,
+          "league_appearances": 15
         },
         {
           "club": "Manchester City",
           "start": 2017,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 212
         },
         {
           "club": "AC Milan",
           "start": 2025,
           "end": 2025,
-          "loan": true
+          "loan": true,
+          "league_appearances": 11
         },
         {
           "club": "Burnley",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 42
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q59108",
+        "birth_year": 1990,
+        "height_cm": 178,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "John Stones",
@@ -835,27 +963,37 @@
           "club": "Barnsley",
           "start": 2012,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 24
         },
         {
           "club": "Everton",
           "start": 2013,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 77
         },
         {
           "club": "Manchester City",
           "start": 2016,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 180
         },
         {
           "club": "Inter Milan",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 3
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q2025900",
+        "birth_year": 1994,
+        "height_cm": 188,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Harry Maguire",
@@ -873,12 +1011,12 @@
           "years": "2011–2014"
         },
         {
-          "club": "Hull City",
-          "years": "2014–2017"
-        },
-        {
           "club": "Wigan Athletic (prêt)",
           "years": "2015"
+        },
+        {
+          "club": "Hull City",
+          "years": "2015–2017"
         },
         {
           "club": "Leicester City",
@@ -902,33 +1040,44 @@
           "club": "Sheffield United",
           "start": 2011,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 134
         },
         {
           "club": "Hull City",
           "start": 2014,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 54
         },
         {
           "club": "Wigan Athletic",
           "start": 2015,
           "end": 2015,
-          "loan": true
+          "loan": true,
+          "league_appearances": 16
         },
         {
           "club": "Leicester City",
           "start": 2017,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 69
         },
         {
           "club": "Manchester United",
           "start": 2019,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 195
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q165772",
+        "birth_year": 1993,
+        "height_cm": 194,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Bruno Fernandes",
@@ -975,39 +1124,51 @@
           "club": "Novara",
           "start": 2012,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 23
         },
         {
           "club": "Udinese",
           "start": 2013,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 86
         },
         {
           "club": "Sampdoria",
           "start": 2016,
           "end": 2017,
-          "loan": true
+          "loan": true,
+          "league_appearances": 33
         },
         {
           "club": "Sampdoria",
           "start": 2017,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 0
         },
         {
           "club": "Sporting CP",
           "start": 2017,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 83
         },
         {
           "club": "Manchester United",
           "start": 2020,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 235
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q4979316",
+        "birth_year": 1994,
+        "height_cm": 179,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Bernardo Silva",
@@ -1022,7 +1183,7 @@
       "career": [
         {
           "club": "Benfica",
-          "years": "2013–2015"
+          "years": "2013–2014"
         },
         {
           "club": "Monaco",
@@ -1046,39 +1207,51 @@
           "club": "Benfica B",
           "start": 2013,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 38
         },
         {
           "club": "Benfica",
           "start": 2013,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 1
         },
         {
           "club": "Monaco",
           "start": 2014,
           "end": 2015,
-          "loan": true
+          "loan": true,
+          "league_appearances": 15
         },
         {
           "club": "Monaco",
           "start": 2015,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 86
         },
         {
           "club": "Manchester City",
           "start": 2017,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 304
         },
         {
           "club": "Real Madrid",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 6
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q15521306",
+        "birth_year": 1994,
+        "height_cm": 173,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Rúben Dias",
@@ -1113,21 +1286,30 @@
           "club": "Benfica B",
           "start": 2015,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 55
         },
         {
           "club": "Benfica",
           "start": 2017,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 91
         },
         {
           "club": "Manchester City",
           "start": 2020,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 175
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q21621168",
+        "birth_year": 1997,
+        "height_cm": 186,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Rodri",
@@ -1166,33 +1348,44 @@
           "club": "Villarreal B",
           "start": 2015,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 39
         },
         {
           "club": "Villarreal",
           "start": 2015,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 63
         },
         {
           "club": "Atlético Madrid",
           "start": 2018,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 34
         },
         {
           "club": "Manchester City",
           "start": 2019,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 196
         },
         {
           "club": "Barcelona",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 6
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q20994118",
+        "birth_year": 1996,
+        "height_cm": 190,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "João Cancelo",
@@ -1206,16 +1399,16 @@
       "national_team": "Portugal",
       "career": [
         {
-          "club": "Benfica",
-          "years": "2014–2015"
-        },
-        {
           "club": "Valencia",
           "years": "2014–2018"
         },
         {
+          "club": "Juventus",
+          "years": "2018–2019"
+        },
+        {
           "club": "Manchester City",
-          "years": "2019–2024"
+          "years": "2019–2023"
         },
         {
           "club": "FC Barcelone (prêt)",
@@ -1239,75 +1432,93 @@
           "club": "Benfica B",
           "start": 2012,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 51
         },
         {
           "club": "Benfica",
           "start": 2014,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 1
         },
         {
           "club": "Valencia",
           "start": 2014,
           "end": 2015,
-          "loan": true
+          "loan": true,
+          "league_appearances": 10
         },
         {
           "club": "Valencia",
           "start": 2015,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 64
         },
         {
           "club": "Inter Milan",
           "start": 2017,
           "end": 2018,
-          "loan": true
+          "loan": true,
+          "league_appearances": 26
         },
         {
           "club": "Juventus",
           "start": 2018,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 25
         },
         {
           "club": "Manchester City",
           "start": 2019,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 98
         },
         {
           "club": "Bayern Munich",
           "start": 2023,
           "end": 2023,
-          "loan": true
+          "loan": true,
+          "league_appearances": 15
         },
         {
           "club": "Barcelona",
           "start": 2023,
           "end": 2024,
-          "loan": true
+          "loan": true,
+          "league_appearances": 32
         },
         {
           "club": "Al Hilal",
           "start": 2024,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 24
         },
         {
           "club": "Barcelona",
           "start": 2026,
           "end": 2026,
-          "loan": true
+          "loan": true,
+          "league_appearances": 16
         },
         {
           "club": "Barcelona",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 6
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q6298063",
+        "birth_year": 1994,
+        "height_cm": 182,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "João Félix",
@@ -1326,15 +1537,15 @@
         },
         {
           "club": "Atlético Madrid",
-          "years": "2019–2024"
+          "years": "2019–2022"
+        },
+        {
+          "club": "FC Barcelone (prêt)",
+          "years": "2023–2024"
         },
         {
           "club": "Chelsea",
-          "years": "2023–2025"
-        },
-        {
-          "club": "AC Milan (prêt)",
-          "years": "2025"
+          "years": "2024–2025"
         },
         {
           "club": "Al-Nassr",
@@ -1354,51 +1565,65 @@
           "club": "Benfica B",
           "start": 2016,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 30
         },
         {
           "club": "Benfica",
           "start": 2018,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 26
         },
         {
           "club": "Atlético Madrid",
           "start": 2019,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 96
         },
         {
           "club": "Chelsea",
           "start": 2023,
           "end": 2023,
-          "loan": true
+          "loan": true,
+          "league_appearances": 16
         },
         {
           "club": "Barcelona",
           "start": 2023,
           "end": 2024,
-          "loan": true
+          "loan": true,
+          "league_appearances": 30
         },
         {
           "club": "Chelsea",
           "start": 2024,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 12
         },
         {
           "club": "AC Milan",
           "start": 2025,
           "end": 2025,
-          "loan": true
+          "loan": true,
+          "league_appearances": 15
         },
         {
           "club": "Al-Nassr",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 39
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q27049064",
+        "birth_year": 1999,
+        "height_cm": 180,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Diogo Jota",
@@ -1418,10 +1643,6 @@
         {
           "club": "Porto (prêt)",
           "years": "2016–2017"
-        },
-        {
-          "club": "Atlético Madrid",
-          "years": "2016–2018"
         },
         {
           "club": "Wolverhampton",
@@ -1445,39 +1666,51 @@
           "club": "Paços de Ferreira",
           "start": 2014,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 41
         },
         {
           "club": "Atlético Madrid",
           "start": 2016,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 0
         },
         {
           "club": "Porto",
           "start": 2016,
           "end": 2017,
-          "loan": true
+          "loan": true,
+          "league_appearances": 27
         },
         {
           "club": "Wolverhampton Wanderers",
           "start": 2017,
           "end": 2018,
-          "loan": true
+          "loan": true,
+          "league_appearances": 44
         },
         {
           "club": "Wolverhampton Wanderers",
           "start": 2018,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 67
         },
         {
           "club": "Liverpool",
           "start": 2020,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 123
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q19518278",
+        "birth_year": 1996,
+        "height_cm": 178,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "João Neves",
@@ -1512,21 +1745,30 @@
           "club": "Benfica B",
           "start": 2022,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 11
         },
         {
           "club": "Benfica",
           "start": 2022,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 50
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 54
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q113551733",
+        "birth_year": 2004,
+        "height_cm": 174,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Vitinha",
@@ -1541,11 +1783,15 @@
       "career": [
         {
           "club": "Porto",
-          "years": "2019–2022"
+          "years": "2019–2020"
         },
         {
           "club": "Wolverhampton (prêt)",
           "years": "2020–2021"
+        },
+        {
+          "club": "Porto",
+          "years": "2021–2022"
         },
         {
           "club": "PSG",
@@ -1565,27 +1811,37 @@
           "club": "Porto B",
           "start": 2019,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 14
         },
         {
           "club": "Porto",
           "start": 2019,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 38
         },
         {
           "club": "Wolverhampton Wanderers",
           "start": 2020,
           "end": 2021,
-          "loan": true
+          "loan": true,
+          "league_appearances": 19
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2022,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 127
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q66818509",
+        "birth_year": 2000,
+        "height_cm": 172,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Achraf Hakimi",
@@ -1600,7 +1856,7 @@
       "career": [
         {
           "club": "Real Madrid",
-          "years": "2017–2020"
+          "years": "2017–2018"
         },
         {
           "club": "Borussia Dortmund (prêt)",
@@ -1628,33 +1884,44 @@
           "club": "Real Madrid B",
           "start": 2016,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 28
         },
         {
           "club": "Real Madrid",
           "start": 2017,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 9
         },
         {
           "club": "Borussia Dortmund",
           "start": 2018,
           "end": 2020,
-          "loan": true
+          "loan": true,
+          "league_appearances": 54
         },
         {
           "club": "Inter Milan",
           "start": 2020,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 37
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2021,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 132
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q26932598",
+        "birth_year": 1998,
+        "height_cm": 180,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Ousmane Dembélé",
@@ -1697,33 +1964,44 @@
           "club": "Rennes II",
           "start": 2014,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 22
         },
         {
           "club": "Rennes",
           "start": 2015,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 26
         },
         {
           "club": "Borussia Dortmund",
           "start": 2016,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 32
         },
         {
           "club": "Barcelona",
           "start": 2017,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 127
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 82
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q20851003",
+        "birth_year": 1997,
+        "height_cm": 179,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Bradley Barcola",
@@ -1758,27 +2036,37 @@
           "club": "Lyon II",
           "start": 2020,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 22
         },
         {
           "club": "Lyon",
           "start": 2021,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 40
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2023,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 88
         },
         {
           "club": "Liverpool",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 3
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q99670930",
+        "birth_year": 2002,
+        "height_cm": 182,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Désiré Doué",
@@ -1813,21 +2101,30 @@
           "club": "Rennes II",
           "start": 2021,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 11
         },
         {
           "club": "Rennes",
           "start": 2022,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 57
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 59
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q112170256",
+        "birth_year": 2005,
+        "height_cm": 181,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Randal Kolo Muani",
@@ -1845,12 +2142,12 @@
           "years": "2018–2022"
         },
         {
-          "club": "Boulogne (prêt)",
-          "years": "2019–2020"
+          "club": "Eintracht Frankfurt",
+          "years": "2022–2023"
         },
         {
           "club": "PSG",
-          "years": "2023–2026"
+          "years": "2023–2024"
         },
         {
           "club": "Juventus (prêt)",
@@ -1874,51 +2171,65 @@
           "club": "Nantes B",
           "start": 2016,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 62
         },
         {
           "club": "Nantes",
           "start": 2018,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 79
         },
         {
           "club": "Boulogne",
           "start": 2019,
           "end": 2020,
-          "loan": true
+          "loan": true,
+          "league_appearances": 14
         },
         {
           "club": "Eintracht Frankfurt",
           "start": 2022,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 34
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2023,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 36
         },
         {
           "club": "Juventus",
           "start": 2025,
           "end": 2025,
-          "loan": true
+          "loan": true,
+          "league_appearances": 16
         },
         {
           "club": "Tottenham Hotspur",
           "start": 2025,
           "end": 2026,
-          "loan": true
+          "loan": true,
+          "league_appearances": 30
         },
         {
           "club": "Juventus",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 2
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q59655998",
+        "birth_year": 1998,
+        "height_cm": 187,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Khvicha Kvaratskhelia",
@@ -1965,45 +2276,58 @@
           "club": "Dinamo Tbilisi",
           "start": 2017,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 4
         },
         {
           "club": "Rustavi",
           "start": 2018,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 18
         },
         {
           "club": "Lokomotiv Moscow",
           "start": 2019,
           "end": 2019,
-          "loan": true
+          "loan": true,
+          "league_appearances": 7
         },
         {
           "club": "Rubin Kazan",
           "start": 2019,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 69
         },
         {
           "club": "Dinamo Batumi",
           "start": 2022,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 11
         },
         {
           "club": "Napoli",
           "start": 2022,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 85
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 47
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q61780902",
+        "birth_year": 2001,
+        "height_cm": 183,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Victor Osimhen",
@@ -2018,10 +2342,10 @@
       "career": [
         {
           "club": "VfL Wolfsburg",
-          "years": "2017–2019"
+          "years": "2017–2018"
         },
         {
-          "club": "Charleroi",
+          "club": "Charleroi (prêt)",
           "years": "2018–2019"
         },
         {
@@ -2030,7 +2354,7 @@
         },
         {
           "club": "Napoli",
-          "years": "2020–2025"
+          "years": "2020–2024"
         },
         {
           "club": "Galatasaray",
@@ -2050,45 +2374,58 @@
           "club": "VfL Wolfsburg",
           "start": 2017,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 14
         },
         {
           "club": "Charleroi",
           "start": 2018,
           "end": 2019,
-          "loan": true
+          "loan": true,
+          "league_appearances": 25
         },
         {
           "club": "Charleroi",
           "start": 2019,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 0
         },
         {
           "club": "Lille",
           "start": 2019,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 27
         },
         {
           "club": "Napoli",
           "start": 2020,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 108
         },
         {
           "club": "Galatasaray",
           "start": 2024,
           "end": 2025,
-          "loan": true
+          "loan": true,
+          "league_appearances": 30
         },
         {
           "club": "Galatasaray",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 26
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q25253293",
+        "birth_year": 1998,
+        "height_cm": 186,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Lautaro Martínez",
@@ -2123,15 +2460,23 @@
           "club": "Racing Club",
           "start": 2015,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 48
         },
         {
           "club": "Inter Milan",
           "start": 2018,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 271
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q21484126",
+        "birth_year": 1997,
+        "height_cm": 174,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Paulo Dybala",
@@ -2141,7 +2486,7 @@
       "birth_year": 1993,
       "birth_place": "Laguna Larga",
       "height_cm": 177,
-      "position": "milieu offensif",
+      "position": "attaquant",
       "national_team": "Argentina",
       "career": [
         {
@@ -2174,27 +2519,37 @@
           "club": "Instituto",
           "start": 2011,
           "end": 2012,
-          "loan": false
+          "loan": false,
+          "league_appearances": 38
         },
         {
           "club": "Palermo",
           "start": 2012,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 89
         },
         {
           "club": "Juventus",
           "start": 2015,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 210
         },
         {
           "club": "Roma",
           "start": 2022,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 104
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q166317",
+        "birth_year": 1993,
+        "height_cm": 177,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Federico Chiesa",
@@ -2209,7 +2564,7 @@
       "career": [
         {
           "club": "Fiorentina",
-          "years": "2016–2022"
+          "years": "2016–2020"
         },
         {
           "club": "Juventus",
@@ -2233,27 +2588,37 @@
           "club": "Fiorentina",
           "start": 2016,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 137
         },
         {
           "club": "Juventus",
           "start": 2020,
           "end": 2022,
-          "loan": true
+          "loan": true,
+          "league_appearances": 44
         },
         {
           "club": "Juventus",
           "start": 2022,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 54
         },
         {
           "club": "Liverpool",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 32
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q26704703",
+        "birth_year": 1997,
+        "height_cm": 175,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Sandro Tonali",
@@ -2268,7 +2633,7 @@
       "career": [
         {
           "club": "Brescia",
-          "years": "2017–2021"
+          "years": "2017–2020"
         },
         {
           "club": "AC Milan",
@@ -2292,33 +2657,44 @@
           "club": "Brescia",
           "start": 2017,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 88
         },
         {
           "club": "AC Milan",
           "start": 2020,
           "end": 2021,
-          "loan": true
+          "loan": true,
+          "league_appearances": 25
         },
         {
           "club": "AC Milan",
           "start": 2021,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 70
         },
         {
           "club": "Newcastle United",
           "start": 2023,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 79
         },
         {
           "club": "Tottenham Hotspur",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 5
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q43402334",
+        "birth_year": 2000,
+        "height_cm": 182,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Nicolò Barella",
@@ -2333,11 +2709,15 @@
       "career": [
         {
           "club": "Cagliari",
-          "years": "2015–2020"
+          "years": "2015–2016"
         },
         {
           "club": "Como (prêt)",
           "years": "2016"
+        },
+        {
+          "club": "Cagliari",
+          "years": "2016–2019"
         },
         {
           "club": "Inter Milan",
@@ -2357,27 +2737,37 @@
           "club": "Cagliari",
           "start": 2015,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 105
         },
         {
           "club": "Como",
           "start": 2016,
           "end": 2016,
-          "loan": true
+          "loan": true,
+          "league_appearances": 16
         },
         {
           "club": "Inter Milan",
           "start": 2019,
           "end": 2020,
-          "loan": true
+          "loan": true,
+          "league_appearances": 27
         },
         {
           "club": "Inter Milan",
           "start": 2020,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 216
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q20090225",
+        "birth_year": 1997,
+        "height_cm": 175,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Federico Valverde",
@@ -2400,7 +2790,7 @@
         },
         {
           "club": "Real Madrid",
-          "years": "2017–présent"
+          "years": "2018–présent"
         }
       ],
       "title": "UEFA Champions League",
@@ -2416,27 +2806,37 @@
           "club": "Peñarol",
           "start": 2015,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 12
         },
         {
           "club": "Real Madrid B",
           "start": 2016,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 30
         },
         {
           "club": "Real Madrid",
           "start": 2017,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 251
         },
         {
           "club": "Deportivo La Coruña",
           "start": 2017,
           "end": 2018,
-          "loan": true
+          "loan": true,
+          "league_appearances": 24
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q19509544",
+        "birth_year": 1998,
+        "height_cm": 183,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Rodrygo",
@@ -2471,21 +2871,30 @@
           "club": "Santos",
           "start": 2017,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 41
         },
         {
           "club": "Real Madrid Castilla",
           "start": 2019,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 3
         },
         {
           "club": "Real Madrid",
           "start": 2019,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 191
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q42728914",
+        "birth_year": 2001,
+        "height_cm": 174,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Vinícius Júnior",
@@ -2520,21 +2929,30 @@
           "club": "Flamengo",
           "start": 2017,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 50
         },
         {
           "club": "Real Madrid B",
           "start": 2018,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 5
         },
         {
           "club": "Real Madrid",
           "start": 2018,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 249
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q28973866",
+        "birth_year": 2000,
+        "height_cm": 176,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Éder Militão",
@@ -2573,21 +2991,30 @@
           "club": "São Paulo",
           "start": 2017,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 49
         },
         {
           "club": "Porto",
           "start": 2018,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 29
         },
         {
           "club": "Real Madrid",
           "start": 2019,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 134
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q29950055",
+        "birth_year": 1998,
+        "height_cm": 186,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Casemiro",
@@ -2630,45 +3057,58 @@
           "club": "São Paulo",
           "start": 2010,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 92
         },
         {
           "club": "Real Madrid Castilla",
           "start": 2013,
           "end": 2013,
-          "loan": true
+          "loan": true,
+          "league_appearances": 15
         },
         {
           "club": "Real Madrid",
           "start": 2013,
           "end": 2013,
-          "loan": true
+          "loan": true,
+          "league_appearances": 1
         },
         {
           "club": "Real Madrid",
           "start": 2013,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 221
         },
         {
           "club": "Porto",
           "start": 2014,
           "end": 2015,
-          "loan": true
+          "loan": true,
+          "league_appearances": 28
         },
         {
           "club": "Manchester United",
           "start": 2022,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 111
         },
         {
           "club": "Inter Miami",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 11
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q616664",
+        "birth_year": 1992,
+        "height_cm": 188,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Édouard Mendy",
@@ -2715,39 +3155,51 @@
           "club": "Cherbourg",
           "start": 2011,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 26
         },
         {
           "club": "Marseille II",
           "start": 2015,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 8
         },
         {
           "club": "Reims",
           "start": 2016,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 80
         },
         {
           "club": "Rennes",
           "start": 2019,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 25
         },
         {
           "club": "Chelsea",
           "start": 2020,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 75
         },
         {
           "club": "Al-Ahli",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 93
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q27736107",
+        "birth_year": 1992,
+        "height_cm": 194,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Jan Oblak",
@@ -2765,16 +3217,16 @@
           "years": "2009–2010"
         },
         {
-          "club": "Beira-Mar (prêt)",
-          "years": "2010"
-        },
-        {
-          "club": "Olhanense (prêt)",
-          "years": "2011"
+          "club": "União de Leiria (prêt)",
+          "years": "2011–2012"
         },
         {
           "club": "Rio Ave (prêt)",
           "years": "2012–2013"
+        },
+        {
+          "club": "Benfica",
+          "years": "2013–2014"
         },
         {
           "club": "Atlético Madrid",
@@ -2794,51 +3246,65 @@
           "club": "Olimpija Ljubljana",
           "start": 2009,
           "end": 2010,
-          "loan": false
+          "loan": false,
+          "league_appearances": 34
         },
         {
           "club": "Benfica",
           "start": 2010,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 16
         },
         {
           "club": "Beira-Mar",
           "start": 2010,
           "end": 2010,
-          "loan": true
+          "loan": true,
+          "league_appearances": 0
         },
         {
           "club": "Olhanense",
           "start": 2011,
           "end": 2011,
-          "loan": true
+          "loan": true,
+          "league_appearances": 0
         },
         {
           "club": "União de Leiria",
           "start": 2011,
           "end": 2012,
-          "loan": true
+          "loan": true,
+          "league_appearances": 16
         },
         {
           "club": "Rio Ave",
           "start": 2012,
           "end": 2013,
-          "loan": true
+          "loan": true,
+          "league_appearances": 28
         },
         {
           "club": "Benfica B",
           "start": 2013,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 2
         },
         {
           "club": "Atlético Madrid",
           "start": 2014,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 406
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q2058682",
+        "birth_year": 1993,
+        "height_cm": 186,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Thibaut Courtois",
@@ -2861,7 +3327,7 @@
         },
         {
           "club": "Chelsea",
-          "years": "2011–2018"
+          "years": "2014–2018"
         },
         {
           "club": "Real Madrid",
@@ -2881,27 +3347,37 @@
           "club": "Genk",
           "start": 2009,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 41
         },
         {
           "club": "Chelsea",
           "start": 2011,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 126
         },
         {
           "club": "Atlético Madrid",
           "start": 2011,
           "end": 2014,
-          "loan": true
+          "loan": true,
+          "league_appearances": 111
         },
         {
           "club": "Real Madrid",
           "start": 2018,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 239
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q73360",
+        "birth_year": 1992,
+        "height_cm": 200,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Manuel Neuer",
@@ -2936,21 +3412,30 @@
           "club": "Schalke 04 II",
           "start": 2004,
           "end": 2006,
-          "loan": false
+          "loan": false,
+          "league_appearances": 26
         },
         {
           "club": "Schalke 04",
           "start": 2005,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 156
         },
         {
           "club": "Bayern Munich",
           "start": 2011,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 392
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q107365",
+        "birth_year": 1986,
+        "height_cm": 193,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Marc-André ter Stegen",
@@ -2985,33 +3470,44 @@
           "club": "Borussia Mönchengladbach II",
           "start": 2009,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 18
         },
         {
           "club": "Borussia Mönchengladbach",
           "start": 2010,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 108
         },
         {
           "club": "Barcelona",
           "start": 2014,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 291
         },
         {
           "club": "Girona",
           "start": 2026,
           "end": 2026,
-          "loan": true
+          "loan": true,
+          "league_appearances": 2
         },
         {
           "club": "Ajax",
           "start": 2026,
           "end": null,
-          "loan": true
+          "loan": true,
+          "league_appearances": 6
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q160472",
+        "birth_year": 1992,
+        "height_cm": 187,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Gianluigi Donnarumma",
@@ -3050,21 +3546,30 @@
           "club": "AC Milan",
           "start": 2015,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 215
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2021,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 104
         },
         {
           "club": "Manchester City",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 39
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q20830808",
+        "birth_year": 1999,
+        "height_cm": 196,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Alisson Becker",
@@ -3103,21 +3608,30 @@
           "club": "Internacional",
           "start": 2013,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 80
         },
         {
           "club": "Roma",
           "start": 2016,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 37
         },
         {
           "club": "Liverpool",
           "start": 2018,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 260
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q18237361",
+        "birth_year": 1992,
+        "height_cm": 193,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Ederson",
@@ -3164,33 +3678,44 @@
           "club": "Ribeirão",
           "start": 2011,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 29
         },
         {
           "club": "Rio Ave",
           "start": 2013,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 37
         },
         {
           "club": "Benfica",
           "start": 2015,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 37
         },
         {
           "club": "Manchester City",
           "start": 2017,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 276
         },
         {
           "club": "Fenerbahçe",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 29
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q17074511",
+        "birth_year": 1993,
+        "height_cm": 188,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Emiliano Martínez",
@@ -3208,16 +3733,16 @@
           "years": "2012"
         },
         {
-          "club": "Arsenal",
-          "years": "2012–2020"
-        },
-        {
           "club": "Wolverhampton (prêt)",
           "years": "2015–2016"
         },
         {
           "club": "Reading (prêt)",
           "years": "2019"
+        },
+        {
+          "club": "Arsenal",
+          "years": "2019–2020"
         },
         {
           "club": "Aston Villa",
@@ -3237,57 +3762,72 @@
           "club": "Arsenal",
           "start": 2012,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 15
         },
         {
           "club": "Oxford United",
           "start": 2012,
           "end": 2012,
-          "loan": true
+          "loan": true,
+          "league_appearances": 1
         },
         {
           "club": "Sheffield Wednesday",
           "start": 2013,
           "end": 2014,
-          "loan": true
+          "loan": true,
+          "league_appearances": 11
         },
         {
           "club": "Rotherham United",
           "start": 2015,
           "end": 2015,
-          "loan": true
+          "loan": true,
+          "league_appearances": 8
         },
         {
           "club": "Wolverhampton Wanderers",
           "start": 2015,
           "end": 2016,
-          "loan": true
+          "loan": true,
+          "league_appearances": 13
         },
         {
           "club": "Getafe",
           "start": 2017,
           "end": 2018,
-          "loan": true
+          "loan": true,
+          "league_appearances": 5
         },
         {
           "club": "Reading",
           "start": 2019,
           "end": 2019,
-          "loan": true
+          "loan": true,
+          "league_appearances": 18
         },
         {
           "club": "Aston Villa",
           "start": 2020,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 213
         },
         {
           "club": "Chelsea",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 4
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q3275904",
+        "birth_year": 1992,
+        "height_cm": 195,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "David Raya",
@@ -3301,16 +3841,12 @@
       "national_team": "Spain",
       "career": [
         {
-          "club": "Southport (prêt)",
-          "years": "2014–2015"
-        },
-        {
           "club": "Blackburn Rovers",
           "years": "2014–2019"
         },
         {
           "club": "Brentford",
-          "years": "2019–2024"
+          "years": "2019–2023"
         },
         {
           "club": "Arsenal",
@@ -3330,33 +3866,44 @@
           "club": "Blackburn Rovers",
           "start": 2014,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 98
         },
         {
           "club": "Southport",
           "start": 2014,
           "end": 2015,
-          "loan": true
+          "loan": true,
+          "league_appearances": 16
         },
         {
           "club": "Brentford",
           "start": 2019,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 150
         },
         {
           "club": "Arsenal",
           "start": 2023,
           "end": 2024,
-          "loan": true
+          "loan": true,
+          "league_appearances": 32
         },
         {
           "club": "Arsenal",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 80
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q19665907",
+        "birth_year": 1995,
+        "height_cm": 184,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Mike Maignan",
@@ -3391,27 +3938,37 @@
           "club": "Paris Saint-Germain II",
           "start": 2012,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 42
         },
         {
           "club": "Lille II",
           "start": 2015,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 10
         },
         {
           "club": "Lille",
           "start": 2015,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 149
         },
         {
           "club": "AC Milan",
           "start": 2021,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 162
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q17274709",
+        "birth_year": 1995,
+        "height_cm": 191,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Hugo Lloris",
@@ -3454,33 +4011,44 @@
           "club": "Nice II",
           "start": 2005,
           "end": 2006,
-          "loan": false
+          "loan": false,
+          "league_appearances": 20
         },
         {
           "club": "Nice",
           "start": 2005,
           "end": 2008,
-          "loan": false
+          "loan": false,
+          "league_appearances": 72
         },
         {
           "club": "Lyon",
           "start": 2008,
           "end": 2012,
-          "loan": false
+          "loan": false,
+          "league_appearances": 146
         },
         {
           "club": "Tottenham Hotspur",
           "start": 2012,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 361
         },
         {
           "club": "Los Angeles FC",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 89
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q1907",
+        "birth_year": 1986,
+        "height_cm": 188,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Keylor Navas",
@@ -3527,57 +4095,72 @@
           "club": "Saprissa",
           "start": 2005,
           "end": 2010,
-          "loan": false
+          "loan": false,
+          "league_appearances": 73
         },
         {
           "club": "Albacete",
           "start": 2010,
           "end": 2012,
-          "loan": false
+          "loan": false,
+          "league_appearances": 36
         },
         {
           "club": "Levante",
           "start": 2011,
           "end": 2012,
-          "loan": true
+          "loan": true,
+          "league_appearances": 1
         },
         {
           "club": "Levante",
           "start": 2012,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 46
         },
         {
           "club": "Real Madrid",
           "start": 2014,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 104
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2019,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 75
         },
         {
           "club": "Nottingham Forest",
           "start": 2023,
           "end": 2023,
-          "loan": true
+          "loan": true,
+          "league_appearances": 17
         },
         {
           "club": "Newell's Old Boys",
           "start": 2025,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 14
         },
         {
           "club": "Pumas UNAM",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 48
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q969423",
+        "birth_year": 1986,
+        "height_cm": 185,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Wojciech Szczęsny",
@@ -3596,7 +4179,7 @@
         },
         {
           "club": "Arsenal",
-          "years": "2009–2017"
+          "years": "2010–2015"
         },
         {
           "club": "AS Rome (prêt)",
@@ -3624,33 +4207,44 @@
           "club": "Arsenal",
           "start": 2009,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 132
         },
         {
           "club": "Brentford",
           "start": 2009,
           "end": 2010,
-          "loan": true
+          "loan": true,
+          "league_appearances": 28
         },
         {
           "club": "Roma",
           "start": 2015,
           "end": 2017,
-          "loan": true
+          "loan": true,
+          "league_appearances": 72
         },
         {
           "club": "Juventus",
           "start": 2017,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 200
         },
         {
           "club": "Barcelona",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 24
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q188997",
+        "birth_year": 1990,
+        "height_cm": 196,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Petr Čech",
@@ -3697,33 +4291,44 @@
           "club": "Chmel Blšany",
           "start": 1999,
           "end": 2001,
-          "loan": false
+          "loan": false,
+          "league_appearances": 27
         },
         {
           "club": "Sparta Prague",
           "start": 2001,
           "end": 2002,
-          "loan": false
+          "loan": false,
+          "league_appearances": 27
         },
         {
           "club": "Rennes",
           "start": 2002,
           "end": 2004,
-          "loan": false
+          "loan": false,
+          "league_appearances": 70
         },
         {
           "club": "Chelsea",
           "start": 2004,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 333
         },
         {
           "club": "Arsenal",
           "start": 2015,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 110
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q483137",
+        "birth_year": 1982,
+        "height_cm": 196,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Gianluigi Buffon",
@@ -3742,11 +4347,15 @@
         },
         {
           "club": "Juventus",
-          "years": "2001–2021"
+          "years": "2001–2018"
         },
         {
           "club": "PSG",
           "years": "2018–2019"
+        },
+        {
+          "club": "Juventus",
+          "years": "2019–2021"
         },
         {
           "club": "Parma",
@@ -3766,33 +4375,44 @@
           "club": "Parma",
           "start": 1995,
           "end": 2001,
-          "loan": false
+          "loan": false,
+          "league_appearances": 168
         },
         {
           "club": "Juventus",
           "start": 2001,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 509
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2018,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 17
         },
         {
           "club": "Juventus",
           "start": 2019,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 17
         },
         {
           "club": "Parma",
           "start": 2021,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 43
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q68060",
+        "birth_year": 1978,
+        "height_cm": 192,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Alexander Isak",
@@ -3839,45 +4459,58 @@
           "club": "AIK",
           "start": 2016,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 24
         },
         {
           "club": "Borussia Dortmund II",
           "start": 2017,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 12
         },
         {
           "club": "Borussia Dortmund",
           "start": 2017,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 5
         },
         {
           "club": "Willem II",
           "start": 2019,
           "end": 2019,
-          "loan": true
+          "loan": true,
+          "league_appearances": 16
         },
         {
           "club": "Real Sociedad",
           "start": 2019,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 105
         },
         {
           "club": "Newcastle United",
           "start": 2022,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 86
         },
         {
           "club": "Liverpool",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 19
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q23759917",
+        "birth_year": 1999,
+        "height_cm": 190,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Viktor Gyökeres",
@@ -3895,12 +4528,12 @@
           "years": "2015–2017"
         },
         {
-          "club": "Brighton",
-          "years": "2018–2021"
+          "club": "St. Pauli (prêt)",
+          "years": "2019–2020"
         },
         {
-          "club": "Swansea City (prêt)",
-          "years": "2020–2021"
+          "club": "Coventry City",
+          "years": "2021–2023"
         },
         {
           "club": "Sporting CP",
@@ -3924,51 +4557,65 @@
           "club": "IF Brommapojkarna",
           "start": 2015,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 56
         },
         {
           "club": "Brighton & Hove Albion",
           "start": 2018,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 0
         },
         {
           "club": "St. Pauli",
           "start": 2019,
           "end": 2020,
-          "loan": true
+          "loan": true,
+          "league_appearances": 26
         },
         {
           "club": "Swansea City",
           "start": 2020,
           "end": 2021,
-          "loan": true
+          "loan": true,
+          "league_appearances": 11
         },
         {
           "club": "Coventry City",
           "start": 2021,
           "end": 2021,
-          "loan": true
+          "loan": true,
+          "league_appearances": 19
         },
         {
           "club": "Coventry City",
           "start": 2021,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 91
         },
         {
           "club": "Sporting CP",
           "start": 2023,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 66
         },
         {
           "club": "Arsenal",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 38
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q47075606",
+        "birth_year": 1998,
+        "height_cm": 189,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Darwin Núñez",
@@ -4015,39 +4662,51 @@
           "club": "Peñarol",
           "start": 2017,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 14
         },
         {
           "club": "Almería",
           "start": 2019,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 30
         },
         {
           "club": "Benfica",
           "start": 2020,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 57
         },
         {
           "club": "Liverpool",
           "start": 2022,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 95
         },
         {
           "club": "Al-Hilal",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 16
         },
         {
           "club": "Al-Diriyah",
           "start": 2026,
           "end": null,
-          "loan": true
+          "loan": true,
+          "league_appearances": 5
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q46372260",
+        "birth_year": 1999,
+        "height_cm": 187,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Cody Gakpo",
@@ -4057,7 +4716,7 @@
       "birth_year": 1999,
       "birth_place": "Eindhoven",
       "height_cm": 193,
-      "position": "attaquant",
+      "position": "ailier",
       "national_team": "Netherlands",
       "career": [
         {
@@ -4086,21 +4745,30 @@
           "club": "Jong PSV",
           "start": 2016,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 26
         },
         {
           "club": "PSV",
           "start": 2018,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 106
         },
         {
           "club": "Liverpool",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 132
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q28801927",
+        "birth_year": 1999,
+        "height_cm": 193,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Dominik Szoboszlai",
@@ -4143,27 +4811,37 @@
           "club": "FC Liefering",
           "start": 2017,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 42
         },
         {
           "club": "Red Bull Salzburg",
           "start": 2018,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 56
         },
         {
           "club": "RB Leipzig",
           "start": 2021,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 62
         },
         {
           "club": "Liverpool",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 110
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q30134278",
+        "birth_year": 2000,
+        "height_cm": 182,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Florian Wirtz",
@@ -4188,25 +4866,34 @@
       "title": "Bundesliga",
       "title_evidence": "* Bundesliga: 2023–24",
       "teammate": {
-        "name": "Diogo Jota",
+        "name": "Dominik Szoboszlai",
         "shared_club": "Liverpool",
-        "source": "https://en.wikipedia.org/w/index.php?title=Diogo_Jota&oldid=1378088120",
-        "overlap_years": 1
+        "source": "https://en.wikipedia.org/w/index.php?title=Dominik_Szoboszlai&oldid=1378719178",
+        "overlap_years": 1,
+        "match_source": "https://www.liverpoolfc.com/news/confirmed-liverpool-line-v-afc-bournemouth-4"
       },
       "source_career": [
         {
           "club": "Bayer Leverkusen",
           "start": 2020,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 140
         },
         {
           "club": "Liverpool",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 37
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q94699949",
+        "birth_year": 2003,
+        "height_cm": 176,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Kai Havertz",
@@ -4216,7 +4903,7 @@
       "birth_year": 1999,
       "birth_place": "Aachen",
       "height_cm": 193,
-      "position": "milieu offensif",
+      "position": "attaquant",
       "national_team": "Germany",
       "career": [
         {
@@ -4245,21 +4932,30 @@
           "club": "Bayer Leverkusen",
           "start": 2016,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 118
         },
         {
           "club": "Chelsea",
           "start": 2020,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 91
         },
         {
           "club": "Arsenal",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 77
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q27310755",
+        "birth_year": 1999,
+        "height_cm": 193,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Timo Werner",
@@ -4286,7 +4982,7 @@
         },
         {
           "club": "RB Leipzig",
-          "years": "2022–2026"
+          "years": "2022–2024"
         },
         {
           "club": "Tottenham (prêt)",
@@ -4306,45 +5002,58 @@
           "club": "VfB Stuttgart",
           "start": 2013,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 95
         },
         {
           "club": "VfB Stuttgart II",
           "start": 2014,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 1
         },
         {
           "club": "RB Leipzig",
           "start": 2016,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 127
         },
         {
           "club": "Chelsea",
           "start": 2020,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 56
         },
         {
           "club": "RB Leipzig",
           "start": 2022,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 38
         },
         {
           "club": "Tottenham Hotspur",
           "start": 2024,
           "end": 2025,
-          "loan": true
+          "loan": true,
+          "league_appearances": 31
         },
         {
           "club": "San Jose Earthquakes",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 14
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q3529022",
+        "birth_year": 1996,
+        "height_cm": 180,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Leroy Sané",
@@ -4354,7 +5063,7 @@
       "birth_year": 1996,
       "birth_place": "Essen",
       "height_cm": 183,
-      "position": "milieu offensif",
+      "position": "ailier",
       "national_team": "Germany",
       "career": [
         {
@@ -4387,27 +5096,37 @@
           "club": "Schalke 04",
           "start": 2014,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 47
         },
         {
           "club": "Manchester City",
           "start": 2016,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 90
         },
         {
           "club": "Bayern Munich",
           "start": 2020,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 153
         },
         {
           "club": "Galatasaray",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 28
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q16499882",
+        "birth_year": 1996,
+        "height_cm": 183,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Serge Gnabry",
@@ -4425,10 +5144,6 @@
           "years": "2012–2016"
         },
         {
-          "club": "West Bromwich Albion (prêt)",
-          "years": "2015–2016"
-        },
-        {
           "club": "Werder Bremen",
           "years": "2016–2017"
         },
@@ -4438,7 +5153,7 @@
         },
         {
           "club": "Bayern Munich",
-          "years": "2017–présent"
+          "years": "2018–présent"
         }
       ],
       "title": "UEFA Champions League",
@@ -4454,39 +5169,51 @@
           "club": "Arsenal",
           "start": 2012,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 10
         },
         {
           "club": "West Bromwich Albion",
           "start": 2015,
           "end": 2016,
-          "loan": true
+          "loan": true,
+          "league_appearances": 1
         },
         {
           "club": "Werder Bremen",
           "start": 2016,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 27
         },
         {
           "club": "Bayern Munich",
           "start": 2017,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 215
         },
         {
           "club": "TSG Hoffenheim II",
           "start": 2017,
           "end": 2018,
-          "loan": true
+          "loan": true,
+          "league_appearances": 1
         },
         {
           "club": "TSG Hoffenheim",
           "start": 2017,
           "end": 2018,
-          "loan": true
+          "loan": true,
+          "league_appearances": 22
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q59490",
+        "birth_year": 1995,
+        "height_cm": 176,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Joshua Kimmich",
@@ -4521,15 +5248,23 @@
           "club": "RB Leipzig",
           "start": 2013,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 53
         },
         {
           "club": "Bayern Munich",
           "start": 2015,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 328
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q13865408",
+        "birth_year": 1995,
+        "height_cm": 177,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Leon Goretzka",
@@ -4568,33 +5303,44 @@
           "club": "VfL Bochum",
           "start": 2012,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 32
         },
         {
           "club": "Schalke 04",
           "start": 2013,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 116
         },
         {
           "club": "Schalke 04 II",
           "start": 2015,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 1
         },
         {
           "club": "Bayern Munich",
           "start": 2018,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 211
         },
         {
           "club": "Aston Villa",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 0
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q520721",
+        "birth_year": 1995,
+        "height_cm": 189,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "İlkay Gündoğan",
@@ -4608,20 +5354,20 @@
       "national_team": "Germany",
       "career": [
         {
-          "club": "Nuremberg",
-          "years": "2009–2011"
-        },
-        {
           "club": "Borussia Dortmund",
           "years": "2011–2016"
         },
         {
           "club": "Manchester City",
-          "years": "2016–2025"
+          "years": "2016–2023"
         },
         {
           "club": "FC Barcelone",
           "years": "2023–2024"
+        },
+        {
+          "club": "Manchester City",
+          "years": "2024–2025"
         },
         {
           "club": "Galatasaray",
@@ -4641,51 +5387,65 @@
           "club": "VfL Bochum II",
           "start": 2008,
           "end": 2009,
-          "loan": false
+          "loan": false,
+          "league_appearances": 2
         },
         {
           "club": "1. FC Nürnberg",
           "start": 2009,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 48
         },
         {
           "club": "Borussia Dortmund",
           "start": 2011,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 105
         },
         {
           "club": "Borussia Dortmund II",
           "start": 2012,
           "end": 2012,
-          "loan": false
+          "loan": false,
+          "league_appearances": 1
         },
         {
           "club": "Manchester City",
           "start": 2016,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 188
         },
         {
           "club": "Barcelona",
           "start": 2023,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 36
         },
         {
           "club": "Manchester City",
           "start": 2024,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 33
         },
         {
           "club": "Galatasaray",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 24
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q161089",
+        "birth_year": 1990,
+        "height_cm": 180,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Mesut Özil",
@@ -4732,45 +5492,58 @@
           "club": "Schalke 04 II",
           "start": 2005,
           "end": 2005,
-          "loan": false
+          "loan": false,
+          "league_appearances": 1
         },
         {
           "club": "Schalke 04",
           "start": 2006,
           "end": 2008,
-          "loan": false
+          "loan": false,
+          "league_appearances": 30
         },
         {
           "club": "Werder Bremen",
           "start": 2008,
           "end": 2010,
-          "loan": false
+          "loan": false,
+          "league_appearances": 71
         },
         {
           "club": "Real Madrid",
           "start": 2010,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 105
         },
         {
           "club": "Arsenal",
           "start": 2013,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 184
         },
         {
           "club": "Fenerbahçe",
           "start": 2021,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 32
         },
         {
           "club": "İstanbul Başakşehir",
           "start": 2022,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 4
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q83488",
+        "birth_year": 1988,
+        "height_cm": 180,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Alexis Sánchez",
@@ -4780,7 +5553,7 @@
       "birth_year": 1988,
       "birth_place": "Tocopilla",
       "height_cm": 169,
-      "position": "attaquant",
+      "position": "ailier",
       "national_team": "Chile",
       "career": [
         {
@@ -4817,87 +5590,107 @@
           "club": "Cobreloa",
           "start": 2005,
           "end": 2006,
-          "loan": false
+          "loan": false,
+          "league_appearances": 47
         },
         {
           "club": "Udinese",
           "start": 2006,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 95
         },
         {
           "club": "Colo-Colo",
           "start": 2006,
           "end": 2007,
-          "loan": true
+          "loan": true,
+          "league_appearances": 32
         },
         {
           "club": "River Plate",
           "start": 2007,
           "end": 2008,
-          "loan": true
+          "loan": true,
+          "league_appearances": 23
         },
         {
           "club": "Barcelona",
           "start": 2011,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 88
         },
         {
           "club": "Arsenal",
           "start": 2014,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 122
         },
         {
           "club": "Manchester United",
           "start": 2018,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 32
         },
         {
           "club": "Inter Milan",
           "start": 2019,
           "end": 2020,
-          "loan": true
+          "loan": true,
+          "league_appearances": 22
         },
         {
           "club": "Inter Milan",
           "start": 2020,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 57
         },
         {
           "club": "Marseille",
           "start": 2022,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 35
         },
         {
           "club": "Inter Milan",
           "start": 2023,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 23
         },
         {
           "club": "Udinese",
           "start": 2024,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 13
         },
         {
           "club": "Sevilla",
           "start": 2025,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 28
         },
         {
           "club": "CF Montréal",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 7
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q180553",
+        "birth_year": 1988,
+        "height_cm": 168,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Pierre-Emerick Aubameyang",
@@ -4911,28 +5704,28 @@
       "national_team": "Gabon",
       "career": [
         {
-          "club": "Dijon (prêt)",
-          "years": "2008–2009"
+          "club": "Lille (prêt)",
+          "years": "2009–2010"
         },
         {
-          "club": "AC Milan",
-          "years": "2008–2011"
+          "club": "Saint-Étienne",
+          "years": "2011–2013"
         },
         {
           "club": "Borussia Dortmund",
           "years": "2013–2018"
         },
         {
-          "club": "Marseille",
-          "years": "2023–2026"
+          "club": "Arsenal",
+          "years": "2018–2022"
         },
         {
-          "club": "Al-Qadsiah",
-          "years": "2024–2025"
+          "club": "Marseille",
+          "years": "2023–2024"
         }
       ],
-      "title": "La Liga",
-      "title_evidence": "*La Liga: 2022–23",
+      "title": "FA Cup",
+      "title_evidence": "*FA Cup: 2019–20",
       "teammate": {
         "name": "Jadon Sancho",
         "shared_club": "Borussia Dortmund",
@@ -4944,87 +5737,107 @@
           "club": "AC Milan",
           "start": 2008,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 0
         },
         {
           "club": "Dijon",
           "start": 2008,
           "end": 2009,
-          "loan": true
+          "loan": true,
+          "league_appearances": 34
         },
         {
           "club": "Lille",
           "start": 2009,
           "end": 2010,
-          "loan": true
+          "loan": true,
+          "league_appearances": 14
         },
         {
           "club": "Monaco",
           "start": 2010,
           "end": 2011,
-          "loan": true
+          "loan": true,
+          "league_appearances": 19
         },
         {
           "club": "Saint-Étienne",
           "start": 2011,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 87
         },
         {
           "club": "Saint-Étienne II",
           "start": 2011,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 2
         },
         {
           "club": "Borussia Dortmund",
           "start": 2013,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 144
         },
         {
           "club": "Arsenal",
           "start": 2018,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 128
         },
         {
           "club": "Barcelona",
           "start": 2022,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 18
         },
         {
           "club": "Chelsea",
           "start": 2022,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 15
         },
         {
           "club": "Marseille",
           "start": 2023,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 34
         },
         {
           "club": "Al-Qadsiah",
           "start": 2024,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 32
         },
         {
           "club": "Marseille",
           "start": 2025,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 30
         },
         {
           "club": "Deportivo A Coruña",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 7
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q44977",
+        "birth_year": 1989,
+        "height_cm": 187,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Alexandre Lacazette",
@@ -5067,33 +5880,44 @@
           "club": "Lyon B",
           "start": 2008,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 53
         },
         {
           "club": "Lyon",
           "start": 2010,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 203
         },
         {
           "club": "Arsenal",
           "start": 2017,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 158
         },
         {
           "club": "Lyon",
           "start": 2022,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 94
         },
         {
           "club": "Neom",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 39
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q13306",
+        "birth_year": 1991,
+        "height_cm": 175,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Memphis Depay",
@@ -5127,8 +5951,8 @@
           "years": "2024–présent"
         }
       ],
-      "title": "La Liga",
-      "title_evidence": "*La Liga: 2022–23",
+      "title": "Eredivisie",
+      "title_evidence": "*Eredivisie: 2014–15",
       "teammate": {
         "name": "Marcus Rashford",
         "shared_club": "Manchester United",
@@ -5140,39 +5964,51 @@
           "club": "PSV Eindhoven",
           "start": 2011,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 90
         },
         {
           "club": "Manchester United",
           "start": 2015,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 33
         },
         {
           "club": "Lyon",
           "start": 2017,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 139
         },
         {
           "club": "Barcelona",
           "start": 2021,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 30
         },
         {
           "club": "Atlético Madrid",
           "start": 2023,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 31
         },
         {
           "club": "Corinthians",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 62
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q1894",
+        "birth_year": 1994,
+        "height_cm": 178,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Frenkie de Jong",
@@ -5185,10 +6021,6 @@
       "position": "milieu",
       "national_team": "Netherlands",
       "career": [
-        {
-          "club": "Jong Ajax",
-          "years": "2015–2017"
-        },
         {
           "club": "Ajax",
           "years": "2016–2019"
@@ -5211,33 +6043,44 @@
           "club": "Willem II",
           "start": 2015,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 1
         },
         {
           "club": "Jong Ajax",
           "start": 2015,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 46
         },
         {
           "club": "Willem II",
           "start": 2015,
           "end": 2015,
-          "loan": true
+          "loan": true,
+          "league_appearances": 1
         },
         {
           "club": "Ajax",
           "start": 2016,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 57
         },
         {
           "club": "Barcelona",
           "start": 2019,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 202
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q19898898",
+        "birth_year": 1997,
+        "height_cm": 180,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Matthijs de Ligt",
@@ -5250,10 +6093,6 @@
       "position": "défenseur central",
       "national_team": "Netherlands",
       "career": [
-        {
-          "club": "Jong Ajax",
-          "years": "2016–2017"
-        },
         {
           "club": "Ajax",
           "years": "2016–2019"
@@ -5284,33 +6123,44 @@
           "club": "Jong Ajax",
           "start": 2016,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 17
         },
         {
           "club": "Ajax",
           "start": 2016,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 77
         },
         {
           "club": "Juventus",
           "start": 2019,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 87
         },
         {
           "club": "Bayern Munich",
           "start": 2022,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 53
         },
         {
           "club": "Manchester United",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 42
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q26259982",
+        "birth_year": 1999,
+        "height_cm": 189,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Jordi Alba",
@@ -5357,39 +6207,51 @@
           "club": "Cornellà",
           "start": 2006,
           "end": 2007,
-          "loan": false
+          "loan": false,
+          "league_appearances": 15
         },
         {
           "club": "Valencia B",
           "start": 2007,
           "end": 2009,
-          "loan": false
+          "loan": false,
+          "league_appearances": 18
         },
         {
           "club": "Gimnàstic",
           "start": 2008,
           "end": 2009,
-          "loan": true
+          "loan": true,
+          "league_appearances": 35
         },
         {
           "club": "Valencia",
           "start": 2009,
           "end": 2012,
-          "loan": false
+          "loan": false,
+          "league_appearances": 74
         },
         {
           "club": "Barcelona",
           "start": 2012,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 313
         },
         {
           "club": "Inter Miami",
           "start": 2023,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 65
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q187159",
+        "birth_year": 1989,
+        "height_cm": 170,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Ivan Rakitić",
@@ -5403,20 +6265,20 @@
       "national_team": "Croatia",
       "career": [
         {
-          "club": "Nordstern Basel",
-          "years": "2004"
-        },
-        {
           "club": "Bâle",
           "years": "2005–2007"
         },
         {
-          "club": "FC Barcelone",
-          "years": "2014–2020"
+          "club": "Schalke 04",
+          "years": "2007–2011"
         },
         {
-          "club": "Al-Shabab",
-          "years": "2024"
+          "club": "Sevilla",
+          "years": "2011–2014"
+        },
+        {
+          "club": "FC Barcelone",
+          "years": "2014–2020"
         },
         {
           "club": "Hajduk Split",
@@ -5436,57 +6298,72 @@
           "club": "Nordstern Basel",
           "start": 2004,
           "end": 2004,
-          "loan": false
+          "loan": false,
+          "league_appearances": 0
         },
         {
           "club": "FC Basel II",
           "start": 2005,
           "end": 2006,
-          "loan": false
+          "loan": false,
+          "league_appearances": 21
         },
         {
           "club": "FC Basel",
           "start": 2005,
           "end": 2007,
-          "loan": false
+          "loan": false,
+          "league_appearances": 34
         },
         {
           "club": "Schalke 04",
           "start": 2007,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 97
         },
         {
           "club": "Sevilla",
           "start": 2011,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 117
         },
         {
           "club": "Barcelona",
           "start": 2014,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 200
         },
         {
           "club": "Sevilla",
           "start": 2020,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 121
         },
         {
           "club": "Al-Shabab",
           "start": 2024,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 8
         },
         {
           "club": "Hajduk Split",
           "start": 2024,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 35
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q115453",
+        "birth_year": 1988,
+        "height_cm": 184,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Arturo Vidal",
@@ -5496,7 +6373,7 @@
       "birth_year": 1987,
       "birth_place": "San Joaquin",
       "height_cm": 180,
-      "position": "défenseur central",
+      "position": "milieu défensif",
       "national_team": "Chile",
       "career": [
         {
@@ -5533,57 +6410,72 @@
           "club": "Colo-Colo",
           "start": 2005,
           "end": 2007,
-          "loan": false
+          "loan": false,
+          "league_appearances": 36
         },
         {
           "club": "Bayer Leverkusen",
           "start": 2007,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 117
         },
         {
           "club": "Juventus",
           "start": 2011,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 124
         },
         {
           "club": "Bayern Munich",
           "start": 2015,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 79
         },
         {
           "club": "Barcelona",
           "start": 2018,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 66
         },
         {
           "club": "Inter Milan",
           "start": 2020,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 51
         },
         {
           "club": "Flamengo",
           "start": 2022,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 28
         },
         {
           "club": "Athletico Paranaense",
           "start": 2023,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 7
         },
         {
           "club": "Colo-Colo",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 59
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q192671",
+        "birth_year": 1987,
+        "height_cm": 180,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Ivan Perišić",
@@ -5597,20 +6489,20 @@
       "national_team": "Croatia",
       "career": [
         {
-          "club": "Roeselare (prêt)",
-          "years": "2009"
-        },
-        {
           "club": "Club Bruges",
           "years": "2009–2011"
         },
         {
-          "club": "Inter Milan",
-          "years": "2015–2022"
+          "club": "Borussia Dortmund",
+          "years": "2011–2013"
         },
         {
-          "club": "Hajduk Split (prêt)",
-          "years": "2024"
+          "club": "VfL Wolfsburg",
+          "years": "2013–2015"
+        },
+        {
+          "club": "Inter Milan",
+          "years": "2015–2022"
         },
         {
           "club": "PSV Eindhoven",
@@ -5630,69 +6522,86 @@
           "club": "Sochaux II",
           "start": 2006,
           "end": 2009,
-          "loan": false
+          "loan": false,
+          "league_appearances": 36
         },
         {
           "club": "Roeselare",
           "start": 2009,
           "end": 2009,
-          "loan": true
+          "loan": true,
+          "league_appearances": 17
         },
         {
           "club": "Club Brugge",
           "start": 2009,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 70
         },
         {
           "club": "Borussia Dortmund",
           "start": 2011,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 42
         },
         {
           "club": "VfL Wolfsburg",
           "start": 2013,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 70
         },
         {
           "club": "Inter Milan",
           "start": 2015,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 208
         },
         {
           "club": "Bayern Munich",
           "start": 2019,
           "end": 2020,
-          "loan": true
+          "loan": true,
+          "league_appearances": 22
         },
         {
           "club": "Tottenham Hotspur",
           "start": 2022,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 39
         },
         {
           "club": "Hajduk Split",
           "start": 2024,
           "end": 2024,
-          "loan": true
+          "loan": true,
+          "league_appearances": 7
         },
         {
           "club": "Hajduk Split",
           "start": 2024,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 1
         },
         {
           "club": "PSV",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 64
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q161054",
+        "birth_year": 1989,
+        "height_cm": 186,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Marcelo Brozović",
@@ -5739,39 +6648,51 @@
           "club": "Hrvatski Dragovoljac",
           "start": 2010,
           "end": 2011,
-          "loan": false
+          "loan": false,
+          "league_appearances": 22
         },
         {
           "club": "Lokomotiva",
           "start": 2011,
           "end": 2012,
-          "loan": false
+          "loan": false,
+          "league_appearances": 33
         },
         {
           "club": "Dinamo Zagreb",
           "start": 2012,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 64
         },
         {
           "club": "Inter Milan",
           "start": 2015,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 261
         },
         {
           "club": "Al-Nassr",
           "start": 2023,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 87
         },
         {
           "club": "Al-Saad",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 0
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q3845710",
+        "birth_year": 1992,
+        "height_cm": 181,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Hakan Çalhanoğlu",
@@ -5818,33 +6739,44 @@
           "club": "Karlsruher",
           "start": 2011,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 50
         },
         {
           "club": "Hamburger SV",
           "start": 2013,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 32
         },
         {
           "club": "Bayer Leverkusen",
           "start": 2014,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 79
         },
         {
           "club": "AC Milan",
           "start": 2017,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 135
         },
         {
           "club": "Inter Milan",
           "start": 2021,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 153
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q763465",
+        "birth_year": 1994,
+        "height_cm": 176,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Lorenzo Insigne",
@@ -5866,12 +6798,12 @@
           "years": "2010–2011"
         },
         {
-          "club": "Napoli",
-          "years": "2010–2022"
-        },
-        {
           "club": "Pescara (prêt)",
           "years": "2011–2012"
+        },
+        {
+          "club": "Napoli",
+          "years": "2012–2022"
         },
         {
           "club": "Toronto FC",
@@ -5891,45 +6823,58 @@
           "club": "Napoli",
           "start": 2010,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 337
         },
         {
           "club": "Cavese",
           "start": 2010,
           "end": 2010,
-          "loan": true
+          "loan": true,
+          "league_appearances": 10
         },
         {
           "club": "Foggia",
           "start": 2010,
           "end": 2011,
-          "loan": true
+          "loan": true,
+          "league_appearances": 33
         },
         {
           "club": "Pescara",
           "start": 2011,
           "end": 2012,
-          "loan": true
+          "loan": true,
+          "league_appearances": 37
         },
         {
           "club": "Toronto FC",
           "start": 2022,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 66
         },
         {
           "club": "Pescara",
           "start": 2026,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 13
         },
         {
           "club": "Sampdoria",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 4
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q1756086",
+        "birth_year": 1991,
+        "height_cm": 163,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Ciro Immobile",
@@ -5943,24 +6888,24 @@
       "national_team": "Italy",
       "career": [
         {
-          "club": "Sorrento",
-          "years": "2007"
+          "club": "Juventus",
+          "years": "2009–2010"
         },
         {
-          "club": "Juventus",
-          "years": "2009–2012"
+          "club": "Pescara (prêt)",
+          "years": "2011–2012"
         },
         {
           "club": "Torino",
           "years": "2013–2014"
         },
         {
-          "club": "Beşiktaş",
-          "years": "2024–2025"
+          "club": "Lazio",
+          "years": "2016–2024"
         },
         {
-          "club": "Bologna",
-          "years": "2025–2026"
+          "club": "Beşiktaş",
+          "years": "2024–2025"
         }
       ],
       "title": "Euro",
@@ -5976,93 +6921,114 @@
           "club": "Sorrento",
           "start": 2007,
           "end": 2007,
-          "loan": false
+          "loan": false,
+          "league_appearances": 0
         },
         {
           "club": "Juventus",
           "start": 2009,
           "end": 2012,
-          "loan": false
+          "loan": false,
+          "league_appearances": 3
         },
         {
           "club": "Siena",
           "start": 2010,
           "end": 2011,
-          "loan": true
+          "loan": true,
+          "league_appearances": 4
         },
         {
           "club": "Grosseto",
           "start": 2011,
           "end": 2011,
-          "loan": true
+          "loan": true,
+          "league_appearances": 16
         },
         {
           "club": "Pescara",
           "start": 2011,
           "end": 2012,
-          "loan": true
+          "loan": true,
+          "league_appearances": 37
         },
         {
           "club": "Genoa",
           "start": 2012,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 33
         },
         {
           "club": "Torino",
           "start": 2013,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 33
         },
         {
           "club": "Borussia Dortmund",
           "start": 2014,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 24
         },
         {
           "club": "Sevilla",
           "start": 2015,
           "end": 2016,
-          "loan": true
+          "loan": true,
+          "league_appearances": 8
         },
         {
           "club": "Sevilla",
           "start": 2016,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 0
         },
         {
           "club": "Torino",
           "start": 2016,
           "end": 2016,
-          "loan": true
+          "loan": true,
+          "league_appearances": 14
         },
         {
           "club": "Lazio",
           "start": 2016,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 270
         },
         {
           "club": "Beşiktaş",
           "start": 2024,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 30
         },
         {
           "club": "Bologna",
           "start": 2025,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 6
         },
         {
           "club": "Paris FC",
           "start": 2026,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 12
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q458101",
+        "birth_year": 1990,
+        "height_cm": 182,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Dušan Vlahović",
@@ -6101,27 +7067,37 @@
           "club": "Partizan",
           "start": 2016,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 21
         },
         {
           "club": "Fiorentina",
           "start": 2018,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 98
         },
         {
           "club": "Juventus",
           "start": 2022,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 123
         },
         {
           "club": "Beşiktaş",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 4
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q23762815",
+        "birth_year": 2000,
+        "height_cm": 190,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Benjamin Šeško",
@@ -6140,7 +7116,7 @@
         },
         {
           "club": "Red Bull Salzburg",
-          "years": "2019–2023"
+          "years": "2021–2023"
         },
         {
           "club": "RB Leipzig",
@@ -6164,27 +7140,37 @@
           "club": "Red Bull Salzburg",
           "start": 2019,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 55
         },
         {
           "club": "FC Liefering",
           "start": 2019,
           "end": 2021,
-          "loan": true
+          "loan": true,
+          "league_appearances": 44
         },
         {
           "club": "RB Leipzig",
           "start": 2023,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 64
         },
         {
           "club": "Manchester United",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 34
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q65950315",
+        "birth_year": 2003,
+        "height_cm": 195,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Xavi Simons",
@@ -6199,14 +7185,14 @@
       "career": [
         {
           "club": "PSG",
-          "years": "2021–2025"
+          "years": "2021–2022"
         },
         {
           "club": "PSV Eindhoven",
           "years": "2022–2023"
         },
         {
-          "club": "RB Leipzig",
+          "club": "RB Leipzig (prêt)",
           "years": "2023–2025"
         },
         {
@@ -6217,49 +7203,62 @@
       "title": "Ligue 1",
       "title_evidence": "* Ligue 1: 2021–22",
       "teammate": {
-        "name": "João Neves",
-        "shared_club": "PSG",
-        "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
-        "overlap_years": 2
+        "name": "Dani Olmo",
+        "shared_club": "RB Leipzig",
+        "source": "https://en.wikipedia.org/w/index.php?title=Dani_Olmo&oldid=1379060899",
+        "overlap_years": 2,
+        "match_source": "https://www.uefa.com/uefachampionsleague/news/028a-1a2cac0ebcfd-8d059c940a51-1000--highlights-report-real-madrid-edge-leipzig/"
       },
       "source_career": [
         {
           "club": "Paris Saint-Germain",
           "start": 2021,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 7
         },
         {
           "club": "PSV",
           "start": 2022,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 34
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2023,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 0
         },
         {
           "club": "RB Leipzig",
           "start": 2023,
           "end": 2025,
-          "loan": true
+          "loan": true,
+          "league_appearances": 43
         },
         {
           "club": "RB Leipzig",
           "start": 2025,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 15
         },
         {
           "club": "Tottenham Hotspur",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 41
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q65925174",
+        "birth_year": 2003,
+        "height_cm": 179,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Dani Olmo",
@@ -6298,27 +7297,37 @@
           "club": "Dinamo Zagreb II",
           "start": 2015,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 25
         },
         {
           "club": "Dinamo Zagreb",
           "start": 2015,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 80
         },
         {
           "club": "RB Leipzig",
           "start": 2020,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 107
         },
         {
           "club": "Barcelona",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 65
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q19560313",
+        "birth_year": 1998,
+        "height_cm": 176,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Ferran Torres",
@@ -6361,33 +7370,44 @@
           "club": "Valencia Mestalla",
           "start": 2016,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 12
         },
         {
           "club": "Valencia",
           "start": 2017,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 71
         },
         {
           "club": "Manchester City",
           "start": 2020,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 28
         },
         {
           "club": "Barcelona",
           "start": 2022,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 140
         },
         {
           "club": "Paris Saint-Germain",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 5
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q44297797",
+        "birth_year": 2000,
+        "height_cm": 184,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Christian Pulisic",
@@ -6426,21 +7446,30 @@
           "club": "Borussia Dortmund",
           "start": 2016,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 90
         },
         {
           "club": "Chelsea",
           "start": 2019,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 98
         },
         {
           "club": "AC Milan",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 102
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q22279773",
+        "birth_year": 1998,
+        "height_cm": 177,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Weston McKennie",
@@ -6455,15 +7484,19 @@
       "career": [
         {
           "club": "Schalke 04",
-          "years": "2017–2021"
+          "years": "2017–2020"
         },
         {
           "club": "Juventus",
-          "years": "2020–présent"
+          "years": "2020–2022"
         },
         {
           "club": "Leeds United (prêt)",
           "years": "2023"
+        },
+        {
+          "club": "Juventus",
+          "years": "2023–présent"
         }
       ],
       "title": "Coppa Italia",
@@ -6479,27 +7512,37 @@
           "club": "Schalke 04",
           "start": 2017,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 75
         },
         {
           "club": "Juventus",
           "start": 2020,
           "end": 2021,
-          "loan": true
+          "loan": true,
+          "league_appearances": 21
         },
         {
           "club": "Juventus",
           "start": 2021,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 153
         },
         {
           "club": "Leeds United",
           "start": 2023,
           "end": 2023,
-          "loan": true
+          "loan": true,
+          "league_appearances": 19
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q29998966",
+        "birth_year": 1998,
+        "height_cm": 185,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Yunus Musah",
@@ -6518,7 +7561,7 @@
         },
         {
           "club": "AC Milan",
-          "years": "2023–présent"
+          "years": "2023–2025"
         },
         {
           "club": "Atalanta (prêt)",
@@ -6538,27 +7581,37 @@
           "club": "Valencia B",
           "start": 2019,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 17
         },
         {
           "club": "Valencia",
           "start": 2020,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 94
         },
         {
           "club": "AC Milan",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 65
         },
         {
           "club": "Atalanta",
           "start": 2025,
           "end": 2026,
-          "loan": true
+          "loan": true,
+          "league_appearances": 19
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q99304192",
+        "birth_year": 2002,
+        "height_cm": 178,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Alphonso Davies",
@@ -6593,27 +7646,37 @@
           "club": "Whitecaps FC 2",
           "start": 2015,
           "end": 2016,
-          "loan": false
+          "loan": false,
+          "league_appearances": 11
         },
         {
           "club": "Vancouver Whitecaps FC",
           "start": 2016,
           "end": 2018,
-          "loan": false
+          "loan": false,
+          "league_appearances": 65
         },
         {
           "club": "Bayern Munich II",
           "start": 2018,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 6
         },
         {
           "club": "Bayern Munich",
           "start": 2019,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 171
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q23540953",
+        "birth_year": 2000,
+        "height_cm": 183,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Jonathan David",
@@ -6652,27 +7715,37 @@
           "club": "KAA Gent",
           "start": 2018,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 60
         },
         {
           "club": "Lille",
           "start": 2020,
           "end": 2025,
-          "loan": false
+          "loan": false,
+          "league_appearances": 178
         },
         {
           "club": "Juventus",
           "start": 2025,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 36
         },
         {
           "club": "Atlético Madrid",
           "start": 2026,
           "end": null,
-          "loan": true
+          "loan": true,
+          "league_appearances": 3
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q56085180",
+        "birth_year": 2000,
+        "height_cm": 178,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Folarin Balogun",
@@ -6687,7 +7760,7 @@
       "career": [
         {
           "club": "Arsenal",
-          "years": "2020–2023"
+          "years": "2020–2021"
         },
         {
           "club": "Middlesbrough (prêt)",
@@ -6705,9 +7778,9 @@
       "title": "Ligue des nations CONCACAF",
       "title_evidence": "*CONCACAF Nations League: 2022–23, 2023–24",
       "teammate": {
-        "name": "Mesut Özil",
+        "name": "Alexandre Lacazette",
         "shared_club": "Arsenal",
-        "source": "https://en.wikipedia.org/w/index.php?title=Mesut_%C3%96zil&oldid=1378668299",
+        "source": "https://en.wikipedia.org/w/index.php?title=Alexandre_Lacazette&oldid=1378444573",
         "overlap_years": 2
       },
       "source_career": [
@@ -6715,27 +7788,37 @@
           "club": "Arsenal",
           "start": 2020,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 2
         },
         {
           "club": "Middlesbrough",
           "start": 2022,
           "end": 2022,
-          "loan": true
+          "loan": true,
+          "league_appearances": 18
         },
         {
           "club": "Reims",
           "start": 2022,
           "end": 2023,
-          "loan": true
+          "loan": true,
+          "league_appearances": 37
         },
         {
           "club": "Monaco",
           "start": 2023,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 73
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q101035007",
+        "birth_year": 2001,
+        "height_cm": 178,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Amadou Onana",
@@ -6778,33 +7861,44 @@
           "club": "TSG Hoffenheim II",
           "start": 2019,
           "end": 2020,
-          "loan": false
+          "loan": false,
+          "league_appearances": 1
         },
         {
           "club": "Hamburger SV",
           "start": 2020,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 25
         },
         {
           "club": "Lille",
           "start": 2021,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 32
         },
         {
           "club": "Everton",
           "start": 2022,
           "end": 2024,
-          "loan": false
+          "loan": false,
+          "league_appearances": 63
         },
         {
           "club": "Aston Villa",
           "start": 2024,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 51
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q99328435",
+        "birth_year": 2001,
+        "height_cm": 192,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Youri Tielemans",
@@ -6847,39 +7941,51 @@
           "club": "Anderlecht",
           "start": 2013,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 139
         },
         {
           "club": "Monaco",
           "start": 2017,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 47
         },
         {
           "club": "Leicester City",
           "start": 2019,
           "end": 2019,
-          "loan": true
+          "loan": true,
+          "league_appearances": 13
         },
         {
           "club": "Leicester City",
           "start": 2019,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 138
         },
         {
           "club": "Aston Villa",
           "start": 2023,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 93
         },
         {
           "club": "Manchester United",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 5
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q14327453",
+        "birth_year": 1997,
+        "height_cm": 176,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Leandro Trossard",
@@ -6889,20 +7995,16 @@
       "birth_year": 1994,
       "birth_place": "Maasmechelen",
       "height_cm": 172,
-      "position": "attaquant",
+      "position": "ailier",
       "national_team": "Belgium",
       "career": [
         {
           "club": "Lommel United (prêt)",
-          "years": "2012–2015"
+          "years": "2014–2015"
         },
         {
           "club": "Genk",
-          "years": "2012–2019"
-        },
-        {
-          "club": "OH Leuven (prêt)",
-          "years": "2015–2016"
+          "years": "2016–2019"
         },
         {
           "club": "Brighton",
@@ -6926,51 +8028,65 @@
           "club": "Genk",
           "start": 2012,
           "end": 2019,
-          "loan": false
+          "loan": false,
+          "league_appearances": 83
         },
         {
           "club": "Lommel United",
           "start": 2012,
           "end": 2013,
-          "loan": true
+          "loan": true,
+          "league_appearances": 12
         },
         {
           "club": "Westerlo",
           "start": 2013,
           "end": 2014,
-          "loan": true
+          "loan": true,
+          "league_appearances": 17
         },
         {
           "club": "Lommel United",
           "start": 2014,
           "end": 2015,
-          "loan": true
+          "loan": true,
+          "league_appearances": 30
         },
         {
           "club": "OH Leuven",
           "start": 2015,
           "end": 2016,
-          "loan": true
+          "loan": true,
+          "league_appearances": 30
         },
         {
           "club": "Brighton & Hove Albion",
           "start": 2019,
           "end": 2023,
-          "loan": false
+          "loan": false,
+          "league_appearances": 116
         },
         {
           "club": "Arsenal",
           "start": 2023,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 123
         },
         {
           "club": "Beşiktaş",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 5
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q6509762",
+        "birth_year": 1994,
+        "height_cm": 172,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Martin Ødegaard",
@@ -6988,8 +8104,8 @@
           "years": "2014–2015"
         },
         {
-          "club": "Real Madrid",
-          "years": "2015–2021"
+          "club": "Heerenveen (prêt)",
+          "years": "2017–2018"
         },
         {
           "club": "Vitesse (prêt)",
@@ -7000,8 +8116,8 @@
           "years": "2019–2020"
         },
         {
-          "club": "Arsenal (prêt)",
-          "years": "2021"
+          "club": "Arsenal",
+          "years": "2021–présent"
         }
       ],
       "title": "Copa del Rey",
@@ -7017,63 +8133,79 @@
           "club": "Strømsgodset 3",
           "start": 2013,
           "end": 2013,
-          "loan": false
+          "loan": false,
+          "league_appearances": 11
         },
         {
           "club": "Strømsgodset 2",
           "start": 2013,
           "end": 2014,
-          "loan": false
+          "loan": false,
+          "league_appearances": 5
         },
         {
           "club": "Strømsgodset",
           "start": 2014,
           "end": 2015,
-          "loan": false
+          "loan": false,
+          "league_appearances": 23
         },
         {
           "club": "Real Madrid Castilla",
           "start": 2015,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 58
         },
         {
           "club": "Real Madrid",
           "start": 2015,
           "end": 2021,
-          "loan": false
+          "loan": false,
+          "league_appearances": 8
         },
         {
           "club": "Heerenveen",
           "start": 2017,
           "end": 2018,
-          "loan": true
+          "loan": true,
+          "league_appearances": 38
         },
         {
           "club": "Vitesse",
           "start": 2018,
           "end": 2019,
-          "loan": true
+          "loan": true,
+          "league_appearances": 31
         },
         {
           "club": "Real Sociedad",
           "start": 2019,
           "end": 2020,
-          "loan": true
+          "loan": true,
+          "league_appearances": 31
         },
         {
           "club": "Arsenal",
           "start": 2021,
           "end": 2021,
-          "loan": true
+          "loan": true,
+          "league_appearances": 14
         },
         {
           "club": "Arsenal",
           "start": 2021,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 167
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q16902219",
+        "birth_year": 1998,
+        "height_cm": 178,
+        "checked_at": "2026-10-09"
+      }
     },
     {
       "answer": "Gabriel Jesus",
@@ -7112,27 +8244,37 @@
           "club": "Palmeiras",
           "start": 2015,
           "end": 2017,
-          "loan": false
+          "loan": false,
+          "league_appearances": 67
         },
         {
           "club": "Manchester City",
           "start": 2017,
           "end": 2022,
-          "loan": false
+          "loan": false,
+          "league_appearances": 159
         },
         {
           "club": "Arsenal",
           "start": 2022,
           "end": 2026,
-          "loan": false
+          "loan": false,
+          "league_appearances": 84
         },
         {
           "club": "Barcelona",
           "start": 2026,
           "end": null,
-          "loan": false
+          "loan": false,
+          "league_appearances": 3
         }
-      ]
+      ],
+      "wikidata_crosscheck": {
+        "qid": "Q19708656",
+        "birth_year": 1997,
+        "height_cm": 177,
+        "checked_at": "2026-10-09"
+      }
     }
   ]
 }
