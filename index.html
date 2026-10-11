@@ -1786,7 +1786,7 @@
   .pom-btn-plus { background: linear-gradient(180deg, #3cb4ff, #1466d8); box-shadow: 0 5px 0 #0b3f8a, 0 0 18px rgba(60,180,255,.35); }
   .pom-btn-moins { background: linear-gradient(180deg, #ff7a62, #cf3326); box-shadow: 0 5px 0 #7c1a12, 0 0 18px rgba(255,110,90,.35); }
   .pom-btn:active { transform: translateY(3px); }
-  #pom-decision-zone:not(.hidden-screen) { display: flex; flex-direction: column; gap: 10px; }
+  #pom-decision-zone:not(.hidden-screen), #vf-decision-zone:not(.hidden-screen) { display: flex; flex-direction: column; gap: 10px; }
   .pom-pot {
     display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 14px;
     border: 2px solid var(--gold-ring); background: rgba(3,17,12,.85);
@@ -2513,14 +2513,14 @@
       </div>
     </div>
 
+    <!-- Mêmes boutons qu'en Plus ou Moins (2026-10-11) -->
     <div class="hidden-screen" id="vf-decision-zone">
-      <div class="confirm-box">
-        <div class="typed" id="vf-potential-points"></div>
-        <div class="confirm-actions">
-          <button class="secondary" id="vf-btn-encaisser">Encaisser</button>
-          <button class="primary" id="vf-btn-continuer">Continuer</button>
-        </div>
+      <div class="pom-pot" id="vf-potential-points">Cagnotte : 1 point</div>
+      <div class="pom-decide">
+        <button type="button" class="tr-btn-primary" id="vf-btn-encaisser">Encaisser</button>
+        <button type="button" class="tr-btn-secondary" id="vf-btn-continuer">Continuer</button>
       </div>
+      <p class="pom-risk">Une erreur fait perdre la cagnotte</p>
     </div>
 
     <!-- Qui suis-je ? (100 fiches sourcées) -->
@@ -3413,7 +3413,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.08-1049";
+  var APP_VERSION = "2026.10.11-1610";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -5623,7 +5623,8 @@
       endCard();
     } else {
       showVerdict("good", L("Bonne réponse", "Resposta certa"), { autoHide: true, note: [{ text: verdictText, strong: true }] });
-      el("vf-potential-points").textContent = state.vfPotential + L(" point", " ponto") + (state.vfPotential > 1 ? "s" : "") + L(" en jeu", " em jogo");
+      el("vf-potential-points").innerHTML = L("Cagnotte : <b>", "Pote: <b>") + state.vfPotential + L(" point", " ponto") + (state.vfPotential > 1 ? "s" : "") + "</b>";
+      el("vf-btn-encaisser").textContent = L("Encaisser ", "Arrecadar ") + state.vfPotential + " pt" + (state.vfPotential > 1 ? "s" : "");
       show("vf-decision-zone");
     }
   }

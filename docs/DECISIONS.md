@@ -1,5 +1,8 @@
 # DECISIONS.md
 
+## [2026-10-11] Vrai ou Faux : mêmes boutons Encaisser / Continuer qu'en Plus ou Moins
+Remarque de David. Vrai ou Faux avait ses propres boutons, avec l'accent inversé (Continuer en doré). Désormais identiques à Plus ou Moins : « Cagnotte : N points », « Encaisser N pts » en doré, « Continuer » en contour, et « Une erreur fait perdre la cagnotte ». Aucune règle ne change.
+
 ## [2026-10-08] Solo : renoncer après « Répondre »
 Retour d'un testeur qui joue seul : une fois « Répondre » appuyé, impossible de changer d'avis, et le temps écoulé coûte −1. À plusieurs, cet engagement empêche de bloquer le Tackle adverse ; en solo il n'y a pas de Tackle, donc il ne sert à rien. Décision de David : **en solo uniquement**, l'écran de réponse de Transfert, Qui suis-je ? et Le Match affiche « Passer l'indice » (même effet que « Passer » : indice suivant, sans pénalité). À plusieurs, rien ne change pour l'instant (réponse du testeur attendue). Tests ajoutés.
 
