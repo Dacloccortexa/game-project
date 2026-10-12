@@ -1,5 +1,8 @@
 # DECISIONS.md
 
+## [2026-10-12] Le Match : compétition affichée avant cinq indices
+David veut donner la compétition dès l'ouverture de la carte. Les cinq paliers restent à 5/4/3/2/1 points : score final, ville, phase, année, puis un dernier fait du match. Un entraîneur ou un buteur peut servir de dernier indice si sa présence est confirmée par une source. Pour ne pas inventer de nom sur les 203 fiches, les autres cartes donnent une des deux équipes au dernier palier, à partir du résultat déjà sourcé. Ce lot comprend 66 buteurs, un entraîneur et 136 noms d'équipe comme indices finaux. Les règles de réponse et de Tackle ne changent pas. Il faut tester la difficulté de ce nouvel ordre en partie et enrichir progressivement les 136 derniers indices.
+
 ## [2026-10-12] Mesure d'usage anonyme, sans suivi
 David veut savoir combien de parties sont jouées et à quel moment les joueurs répondent, sans « Autoriser le suivi » ni bandeau de consentement. Choix : TelemetryDeck (anonyme, identifiant aléatoire haché), pas Firebase ni kit TikTok. Code prêt, actif dès que l'App ID est renseigné ; politique de confidentialité mise à jour. Détail : `docs/APP_IOS.md`.
 

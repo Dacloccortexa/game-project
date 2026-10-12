@@ -1,13 +1,13 @@
 {
   "game_id": "lematch",
-  "version": "clues-2",
-  "prepared_at": "2026-10-06",
+  "version": "clues-3",
+  "prepared_at": "2026-10-12",
   "scope": {
     "world_cup": "Finales et demi-finales officielles 1954–2026 (1950 sans finale ni demi-finale ; 1974 et 1978 sans demi-finales)",
     "european_cup": "50 finales de 1977 à 2026, dont 16 Coupes des clubs champions avant 1993",
     "historic_100": "100 matchs marquants supplémentaires : 37 Coupes du monde, 13 Euros, 25 Ligues des champions et 25 championnats nationaux (Premier League, Liga, Serie A, Ligue 1)."
   },
-  "status": "203 fiches Le Match sourcées ; les 100 nouvelles sont identifiées par lm-hist-*",
+  "status": "203 fiches Le Match sourcées ; compétition affichée dès le départ, indice final sourcé par carte",
   "attribution": {
     "world_cup": "openfootball/worldcup.json, CC0 1.0; https://github.com/openfootball/worldcup.json",
     "european_cup": "Wikipédia + liens de feuilles de match UEFA quand présents",
@@ -91,7 +91,12 @@
         ]
       ],
       "city": "Bâle",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Ottmar Walter",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1954-semifinal-2",
@@ -162,7 +167,12 @@
         []
       ],
       "city": "Lausanne",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Sandor Kocsis",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1954-final-3",
@@ -241,7 +251,12 @@
         ]
       ],
       "city": "Berne",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Helmut Rahn",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1958-semifinal-1",
@@ -312,7 +327,12 @@
         []
       ],
       "city": "Solna",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1958/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1958/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Roger Piantoni",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1958-semifinal-2",
@@ -391,7 +411,12 @@
         ]
       ],
       "city": "Göteborg",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1958/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1958/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Kurt Hamrin",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1958-final-3",
@@ -465,7 +490,12 @@
         ]
       ],
       "city": "Solna",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1958/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1958/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Pelé",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1958/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1962-semifinal-1",
@@ -546,7 +576,12 @@
         ]
       ],
       "city": "Viña del Mar",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1962/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1962/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Adolf Scherer",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1962-semifinal-2",
@@ -619,7 +654,12 @@
         ]
       ],
       "city": "Santiago",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1962/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1962/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Leonel Sanchez",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1962-final-3",
@@ -697,7 +737,12 @@
         ]
       ],
       "city": "Santiago",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1962/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1962/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Vavá",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1962/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1966-semifinal-1",
@@ -780,7 +825,12 @@
         ]
       ],
       "city": "Liverpool",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Valeriy Porkuyan",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1966-semifinal-2",
@@ -851,7 +901,12 @@
         []
       ],
       "city": "Londres",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Eusébio",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1966-final-3",
@@ -930,7 +985,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Geoff Hurst",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1970-semifinal-1",
@@ -1001,7 +1061,12 @@
         []
       ],
       "city": "Guadalajara",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Rivelino",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1970-semifinal-2",
@@ -1080,7 +1145,12 @@
         ]
       ],
       "city": "Mexico",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Gianni Rivera",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1970-final-3",
@@ -1154,7 +1224,12 @@
         ]
       ],
       "city": "Mexico",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Carlos Alberto",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1974-final-1",
@@ -1236,7 +1311,12 @@
         ]
       ],
       "city": "Munich",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1974/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1974/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Gerd Müller",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1974/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1978-final-1",
@@ -1312,7 +1392,12 @@
         ]
       ],
       "city": "Buenos Aires",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1978/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1978/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Daniel Bertoni",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1978/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1982-semifinal-1",
@@ -1386,7 +1471,12 @@
         ]
       ],
       "city": "Barcelone",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Paolo Rossi",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1982-semifinal-2",
@@ -1462,7 +1552,12 @@
         []
       ],
       "city": "Séville",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Klaus Fischer",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1982-final-3",
@@ -1541,7 +1636,12 @@
         ]
       ],
       "city": "Madrid",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Paul Breitner",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1986-semifinal-1",
@@ -1617,7 +1717,12 @@
         ]
       ],
       "city": "Guadalajara",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Rudi Völler",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1986-semifinal-2",
@@ -1690,7 +1795,12 @@
         ]
       ],
       "city": "Mexico",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Diego Maradona",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1986-final-3",
@@ -1768,7 +1878,12 @@
         ]
       ],
       "city": "Mexico",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Jorge Burruchaga",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1990-semifinal-1",
@@ -1841,7 +1956,12 @@
         ]
       ],
       "city": "Naples",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1990-semifinal-2",
@@ -1920,7 +2040,12 @@
         ]
       ],
       "city": "Turin",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1990-final-3",
@@ -1998,7 +2123,12 @@
         ]
       ],
       "city": "Rome",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Andreas Brehme",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1994-semifinal-1",
@@ -2072,7 +2202,12 @@
         ]
       ],
       "city": "East Rutherford",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1994-semifinal-2",
@@ -2146,7 +2281,12 @@
         ]
       ],
       "city": "Pasadena",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Romário",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1994-final-3",
@@ -2220,7 +2360,12 @@
         ]
       ],
       "city": "Pasadena",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1998-semifinal-1",
@@ -2297,7 +2442,12 @@
         ]
       ],
       "city": "Marseille",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1998-semifinal-2",
@@ -2368,7 +2518,12 @@
         ]
       ],
       "city": "Saint-Denis",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-1998-final-3",
@@ -2439,7 +2594,12 @@
         []
       ],
       "city": "Saint-Denis",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Emmanuel Petit",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2002-semifinal-1",
@@ -2517,7 +2677,12 @@
         ]
       ],
       "city": "Séoul",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2002-semifinal-2",
@@ -2591,7 +2756,12 @@
         ]
       ],
       "city": "Saitama",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2002-final-3",
@@ -2666,7 +2836,12 @@
         ]
       ],
       "city": "Yokohama",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Ronaldo",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2006-semifinal-1",
@@ -2741,7 +2916,12 @@
         ]
       ],
       "city": "Dortmund",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Alessandro Del Piero",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2006-semifinal-2",
@@ -2809,7 +2989,12 @@
         []
       ],
       "city": "Munich",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2006-final-3",
@@ -2880,7 +3065,12 @@
         []
       ],
       "city": "Berlin",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2010-semifinal-1",
@@ -2954,7 +3144,12 @@
         ]
       ],
       "city": "Le Cap",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Maximiliano Pereira",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2010-semifinal-2",
@@ -3029,7 +3224,12 @@
         ]
       ],
       "city": "Durban",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2010-final-3",
@@ -3106,7 +3306,12 @@
         ]
       ],
       "city": "Johannesburg",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Andres Iniesta",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2014-semifinal-1",
@@ -3181,7 +3386,12 @@
         ]
       ],
       "city": "Belo Horizonte",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Oscar",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2014-semifinal-2",
@@ -3257,7 +3467,12 @@
         ]
       ],
       "city": "São Paulo",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2014-final-3",
@@ -3331,7 +3546,12 @@
         ]
       ],
       "city": "Rio de Janeiro",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Mario Goetze",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2018-semifinal-1",
@@ -3402,7 +3622,12 @@
         ]
       ],
       "city": "Saint-Pétersbourg",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2018-semifinal-2",
@@ -3476,7 +3701,12 @@
         ]
       ],
       "city": "Moscou",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Mario Mandzukic",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2018-final-3",
@@ -3547,7 +3777,12 @@
         ]
       ],
       "city": "Moscou",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Mario Mandzukic",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2022-semifinal-1",
@@ -3620,7 +3855,12 @@
         ]
       ],
       "city": "Lusail",
-      "city_source_url": "https://www.fifa.com/en/articles/argentina-croatia-semi-final-world-cup-qatar-2022-messi-alvarez-fans-video-reaction"
+      "city_source_url": "https://www.fifa.com/en/articles/argentina-croatia-semi-final-world-cup-qatar-2022-messi-alvarez-fans-video-reaction",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Julian Alvarez",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2022-semifinal-2",
@@ -3691,7 +3931,12 @@
         ]
       ],
       "city": "Al Khor",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Randal Kolo Muani",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2022-final-3",
@@ -3761,7 +4006,12 @@
         []
       ],
       "city": "Lusail",
-      "city_source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/argentina-france-2022-final-greatest-games"
+      "city_source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/argentina-france-2022-final-greatest-games",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Lionel Messi",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2026-semifinal-1",
@@ -3832,7 +4082,12 @@
         ]
       ],
       "city": "Dallas",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup-full.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2026-semifinal-2",
@@ -3905,7 +4160,12 @@
         ]
       ],
       "city": "Atlanta",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup-full.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup-full.json",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Lautaro Martinez",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json"
+      }
     },
     {
       "id": "lm-wc-2026-final-3",
@@ -3978,7 +4238,12 @@
         ]
       ],
       "city": "East Rutherford",
-      "city_source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/world-cup-2026-stadiums-fifa-soccer-football-mexico-usa-canada"
+      "city_source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/world-cup-2026-stadiums-fifa-soccer-football-mexico-usa-canada",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Ferran Torres",
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2026/worldcup-full.json"
+      }
     },
     {
       "id": "lm-ucl-1977-final",
@@ -4050,7 +4315,12 @@
         []
       ],
       "city": "Rome",
-      "city_source_url": "https://en.wikipedia.org/wiki/1977_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1977_European_Cup_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Neal",
+        "source_url": "https://en.wikipedia.org/wiki/1977_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1978-final",
@@ -4122,7 +4392,12 @@
         []
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/1978_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1978_European_Cup_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/1978_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1979-final",
@@ -4196,7 +4471,12 @@
         ]
       ],
       "city": "Munich",
-      "city_source_url": "https://en.wikipedia.org/wiki/1979_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1979_European_Cup_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/1979_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1980-final",
@@ -4273,7 +4553,12 @@
         ]
       ],
       "city": "Madrid",
-      "city_source_url": "https://en.wikipedia.org/wiki/1980_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1980_European_Cup_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/1980_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1981-final",
@@ -4344,7 +4629,12 @@
         []
       ],
       "city": "Paris",
-      "city_source_url": "https://en.wikipedia.org/wiki/1981_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1981_European_Cup_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "A. Kennedy",
+        "source_url": "https://en.wikipedia.org/wiki/1981_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1982-final",
@@ -4420,7 +4710,12 @@
         ]
       ],
       "city": "Rotterdam",
-      "city_source_url": "https://en.wikipedia.org/wiki/1982_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1982_European_Cup_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Withe",
+        "source_url": "https://en.wikipedia.org/wiki/1982_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1983-final",
@@ -4497,7 +4792,12 @@
         ]
       ],
       "city": "Athènes",
-      "city_source_url": "https://en.wikipedia.org/wiki/1983_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1983_European_Cup_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/1983_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1984-final",
@@ -4569,7 +4869,12 @@
         ]
       ],
       "city": "Rome",
-      "city_source_url": "https://en.wikipedia.org/wiki/1984_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1984_European_Cup_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/1984_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1985-final",
@@ -4641,7 +4946,12 @@
         ]
       ],
       "city": "Bruxelles",
-      "city_source_url": "https://en.wikipedia.org/wiki/1985_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1985_European_Cup_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Platini",
+        "source_url": "https://en.wikipedia.org/wiki/1985_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1986-final",
@@ -4719,7 +5029,12 @@
         ]
       ],
       "city": "Séville",
-      "city_source_url": "https://en.wikipedia.org/wiki/1986_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1986_European_Cup_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/1986_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1987-final",
@@ -4795,7 +5110,12 @@
         ]
       ],
       "city": "Vienne",
-      "city_source_url": "https://en.wikipedia.org/wiki/1987_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1987_European_Cup_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Juary",
+        "source_url": "https://en.wikipedia.org/wiki/1987_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1988-final",
@@ -4869,7 +5189,12 @@
         ]
       ],
       "city": "Stuttgart",
-      "city_source_url": "https://en.wikipedia.org/wiki/1988_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1988_European_Cup_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/1988_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1989-final",
@@ -4945,7 +5270,12 @@
         ]
       ],
       "city": "Barcelone",
-      "city_source_url": "https://en.wikipedia.org/wiki/1989_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1989_European_Cup_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Van Basten",
+        "source_url": "https://en.wikipedia.org/wiki/1989_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1990-final",
@@ -5020,7 +5350,12 @@
         ]
       ],
       "city": "Vienne",
-      "city_source_url": "https://en.wikipedia.org/wiki/1990_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1990_European_Cup_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Rijkaard",
+        "source_url": "https://en.wikipedia.org/wiki/1990_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1991-final",
@@ -5098,7 +5433,12 @@
         ]
       ],
       "city": "Bari",
-      "city_source_url": "https://en.wikipedia.org/wiki/1991_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1991_European_Cup_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/1991_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1992-final",
@@ -5174,7 +5514,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/1992_European_Cup_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1992_European_Cup_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Koeman",
+        "source_url": "https://en.wikipedia.org/wiki/1992_European_Cup_final"
+      }
     },
     {
       "id": "lm-ucl-1993-final",
@@ -5249,7 +5594,12 @@
         ]
       ],
       "city": "Munich",
-      "city_source_url": "https://en.wikipedia.org/wiki/1993_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1993_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/1993_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-1994-final",
@@ -5326,7 +5676,12 @@
         ]
       ],
       "city": "Athènes",
-      "city_source_url": "https://en.wikipedia.org/wiki/1994_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1994_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Desailly",
+        "source_url": "https://en.wikipedia.org/wiki/1994_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-1995-final",
@@ -5400,7 +5755,12 @@
         ]
       ],
       "city": "Vienne",
-      "city_source_url": "https://en.wikipedia.org/wiki/1995_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1995_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Kluivert",
+        "source_url": "https://en.wikipedia.org/wiki/1995_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-1996-final",
@@ -5474,7 +5834,12 @@
         ]
       ],
       "city": "Rome",
-      "city_source_url": "https://en.wikipedia.org/wiki/1996_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1996_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/1996_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-1997-final",
@@ -5549,7 +5914,12 @@
         ]
       ],
       "city": "Munich",
-      "city_source_url": "https://en.wikipedia.org/wiki/1997_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1997_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Ricken",
+        "source_url": "https://en.wikipedia.org/wiki/1997_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-1998-final",
@@ -5623,7 +5993,12 @@
         ]
       ],
       "city": "Amsterdam",
-      "city_source_url": "https://en.wikipedia.org/wiki/1998_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1998_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/1998_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-1999-final",
@@ -5703,7 +6078,12 @@
         ]
       ],
       "city": "Barcelone",
-      "city_source_url": "https://en.wikipedia.org/wiki/1999_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/1999_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Solskjær",
+        "source_url": "https://en.wikipedia.org/wiki/1999_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2000-final",
@@ -5777,7 +6157,12 @@
         ]
       ],
       "city": "Saint-Denis",
-      "city_source_url": "https://en.wikipedia.org/wiki/2000_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2000_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Raúl",
+        "source_url": "https://en.wikipedia.org/wiki/2000_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2001-final",
@@ -5854,7 +6239,12 @@
         ]
       ],
       "city": "Milan",
-      "city_source_url": "https://en.wikipedia.org/wiki/2001_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2001_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/2001_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2002-final",
@@ -5927,7 +6317,12 @@
         ]
       ],
       "city": "Glasgow",
-      "city_source_url": "https://en.wikipedia.org/wiki/2002_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2002_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/2002_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2003-final",
@@ -6002,7 +6397,12 @@
         ]
       ],
       "city": "Manchester",
-      "city_source_url": "https://en.wikipedia.org/wiki/2003_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2003_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/2003_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2004-final",
@@ -6075,7 +6475,12 @@
         ]
       ],
       "city": "Gelsenkirchen",
-      "city_source_url": "https://en.wikipedia.org/wiki/2004_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2004_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Alenichev",
+        "source_url": "https://en.wikipedia.org/wiki/2004_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2005-final",
@@ -6147,7 +6552,12 @@
         []
       ],
       "city": "Istanbul",
-      "city_source_url": "https://en.wikipedia.org/wiki/2005_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2005_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Alonso",
+        "source_url": "https://en.wikipedia.org/wiki/2005_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2006-final",
@@ -6221,7 +6631,12 @@
         []
       ],
       "city": "Saint-Denis",
-      "city_source_url": "https://en.wikipedia.org/wiki/2006_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2006_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Belletti",
+        "source_url": "https://en.wikipedia.org/wiki/2006_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2007-final",
@@ -6293,7 +6708,12 @@
         []
       ],
       "city": "Athènes",
-      "city_source_url": "https://en.wikipedia.org/wiki/2007_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2007_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Kuyt",
+        "source_url": "https://en.wikipedia.org/wiki/2007_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2008-final",
@@ -6368,7 +6788,12 @@
         []
       ],
       "city": "Moscou",
-      "city_source_url": "https://en.wikipedia.org/wiki/2008_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2008_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/2008_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2009-final",
@@ -6448,7 +6873,12 @@
         ]
       ],
       "city": "Rome",
-      "city_source_url": "https://en.wikipedia.org/wiki/2009_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2009_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/2009_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2010-final",
@@ -6528,7 +6958,12 @@
         ]
       ],
       "city": "Madrid",
-      "city_source_url": "https://en.wikipedia.org/wiki/2010_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2010_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Milito",
+        "source_url": "https://en.wikipedia.org/wiki/2010_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2011-final",
@@ -6608,7 +7043,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/2011_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2011_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Villa",
+        "source_url": "https://en.wikipedia.org/wiki/2011_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2012-final",
@@ -6682,7 +7122,12 @@
         []
       ],
       "city": "Munich",
-      "city_source_url": "https://en.wikipedia.org/wiki/2012_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2012_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Drogba",
+        "source_url": "https://en.wikipedia.org/wiki/2012_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2013-final",
@@ -6759,7 +7204,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/2013_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2013_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Robben",
+        "source_url": "https://en.wikipedia.org/wiki/2013_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2014-final",
@@ -6835,7 +7285,12 @@
         ]
       ],
       "city": "Lisbonne",
-      "city_source_url": "https://en.wikipedia.org/wiki/2014_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2014_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Ronaldo",
+        "source_url": "https://en.wikipedia.org/wiki/2014_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2015-final",
@@ -6912,7 +7367,12 @@
         ]
       ],
       "city": "Berlin",
-      "city_source_url": "https://en.wikipedia.org/wiki/2015_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2015_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Neymar",
+        "source_url": "https://en.wikipedia.org/wiki/2015_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2016-final",
@@ -6988,7 +7448,12 @@
         ]
       ],
       "city": "Milan",
-      "city_source_url": "https://en.wikipedia.org/wiki/2016_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2016_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/2016_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2017-final",
@@ -7062,7 +7527,12 @@
         ]
       ],
       "city": "Cardiff",
-      "city_source_url": "https://en.wikipedia.org/wiki/2017_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2017_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Asensio",
+        "source_url": "https://en.wikipedia.org/wiki/2017_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2018-final",
@@ -7133,7 +7603,12 @@
         []
       ],
       "city": "Kyiv",
-      "city_source_url": "https://en.wikipedia.org/wiki/2018_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2018_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Bale",
+        "source_url": "https://en.wikipedia.org/wiki/2018_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2019-final",
@@ -7205,7 +7680,12 @@
         []
       ],
       "city": "Madrid",
-      "city_source_url": "https://en.wikipedia.org/wiki/2019_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2019_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Origi",
+        "source_url": "https://en.wikipedia.org/wiki/2019_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2020-final",
@@ -7283,7 +7763,12 @@
         ]
       ],
       "city": "Lisbonne",
-      "city_source_url": "https://en.wikipedia.org/wiki/2020_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2020_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/2020_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2021-final",
@@ -7355,7 +7840,12 @@
         []
       ],
       "city": "Porto",
-      "city_source_url": "https://en.wikipedia.org/wiki/2021_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2021_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/2021_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2022-final",
@@ -7426,7 +7916,12 @@
         ]
       ],
       "city": "Saint-Denis",
-      "city_source_url": "https://en.wikipedia.org/wiki/2022_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2022_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/2022_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2023-final",
@@ -7504,7 +7999,12 @@
         ]
       ],
       "city": "Istanbul",
-      "city_source_url": "https://en.wikipedia.org/wiki/2023_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2023_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/2023_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2024-final",
@@ -7578,7 +8078,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/2024_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2024_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "scorer",
+        "name": "Vinícius",
+        "source_url": "https://en.wikipedia.org/wiki/2024_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-ucl-2025-final",
@@ -7657,7 +8162,12 @@
         ]
       ],
       "city": "Munich",
-      "city_source_url": "https://en.wikipedia.org/wiki/2025_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2025_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "coach",
+        "name": "Luis Enrique",
+        "source_url": "https://www.uefa.com/uefachampionsleague/news/0299-1de417608530-15b01ff7b150-1000--paris-win-champions-league-doue-double-helps-secure-reco/"
+      }
     },
     {
       "id": "lm-ucl-2026-final",
@@ -7730,7 +8240,12 @@
         []
       ],
       "city": "Budapest",
-      "city_source_url": "https://en.wikipedia.org/wiki/2026_UEFA_Champions_League_final"
+      "city_source_url": "https://en.wikipedia.org/wiki/2026_UEFA_Champions_League_final",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://en.wikipedia.org/wiki/2026_UEFA_Champions_League_final"
+      }
     },
     {
       "id": "lm-hist-001",
@@ -7760,7 +8275,12 @@
         ]
       ],
       "city": "Rio de Janeiro",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1950/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1950/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1950/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-002",
@@ -7793,7 +8313,12 @@
         ]
       ],
       "city": "Berne",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1954/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1954/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-003",
@@ -7826,7 +8351,12 @@
         ]
       ],
       "city": "Middlesbrough",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-004",
@@ -7856,7 +8386,12 @@
         ]
       ],
       "city": "Liverpool",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1966/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1966/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-005",
@@ -7889,7 +8424,12 @@
         ]
       ],
       "city": "Guadalajara",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-006",
@@ -7927,7 +8467,12 @@
         ]
       ],
       "city": "León",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1970/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1970/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-007",
@@ -7967,7 +8512,12 @@
         ]
       ],
       "city": "Hambourg",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1974/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1974/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1974/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-008",
@@ -7998,7 +8548,12 @@
         ]
       ],
       "city": "Rosario",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1978/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1978/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1978/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-009",
@@ -8031,7 +8586,12 @@
         ]
       ],
       "city": "Barcelone",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-010",
@@ -8069,7 +8629,12 @@
         ]
       ],
       "city": "Gijón",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1982/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1982/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-011",
@@ -8101,7 +8666,12 @@
         ]
       ],
       "city": "Mexico",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-012",
@@ -8138,7 +8708,12 @@
         ]
       ],
       "city": "León",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1986/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1986/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-013",
@@ -8170,7 +8745,12 @@
         ]
       ],
       "city": "Milan",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-014",
@@ -8203,7 +8783,12 @@
         ]
       ],
       "city": "Naples",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1990/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1990/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-015",
@@ -8238,7 +8823,12 @@
         ]
       ],
       "city": "East Rutherford",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-016",
@@ -8271,7 +8861,12 @@
         ]
       ],
       "city": "Washington",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-017",
@@ -8307,7 +8902,12 @@
         ]
       ],
       "city": "Dallas",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1994/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1994/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-018",
@@ -8337,7 +8937,12 @@
         []
       ],
       "city": "Nantes",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-019",
@@ -8364,7 +8969,12 @@
         []
       ],
       "city": "Lens",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/1998/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-020",
@@ -8400,7 +9010,12 @@
       "penalty_score": [
         4,
         3
-      ]
+      ],
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/1998/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-021",
@@ -8429,7 +9044,12 @@
         ]
       ],
       "city": "Séoul",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-022",
@@ -8465,7 +9085,12 @@
         ]
       ],
       "city": "Daejeon",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-023",
@@ -8498,7 +9123,12 @@
         ]
       ],
       "city": "Shizuoka",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2002/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2002/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-024",
@@ -8534,7 +9164,12 @@
       "penalty_score": [
         4,
         2
-      ]
+      ],
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-025",
@@ -8567,7 +9202,12 @@
         ]
       ],
       "city": "Nuremberg",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2006/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2006/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-026",
@@ -8600,7 +9240,12 @@
         ]
       ],
       "city": "Bloemfontein",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2010/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-027",
@@ -8631,7 +9276,12 @@
       "penalty_score": [
         4,
         2
-      ]
+      ],
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2010/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-028",
@@ -8667,7 +9317,12 @@
         ]
       ],
       "city": "Salvador",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-029",
@@ -8697,7 +9352,12 @@
         []
       ],
       "city": "Recife",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-030",
@@ -8730,7 +9390,12 @@
         ]
       ],
       "city": "Porto Alegre",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2014/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2014/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-031",
@@ -8759,7 +9424,12 @@
         ]
       ],
       "city": "Kazan",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-032",
@@ -8792,7 +9462,12 @@
         ]
       ],
       "city": "Rostov-sur-le-Don",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2018/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2018/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-033",
@@ -8824,7 +9499,12 @@
         ]
       ],
       "city": "Lusail",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-034",
@@ -8861,7 +9541,12 @@
       "penalty_score": [
         3,
         0
-      ]
+      ],
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-035",
@@ -8900,7 +9585,12 @@
       "penalty_score": [
         3,
         4
-      ]
+      ],
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-036",
@@ -8937,7 +9627,12 @@
       "penalty_score": [
         4,
         2
-      ]
+      ],
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-037",
@@ -8967,7 +9662,12 @@
         []
       ],
       "city": "Doha",
-      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup.json"
+      "city_source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2022/worldcup.json",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/worldcup.json/blob/master/2022/worldcup.json"
+      }
     },
     {
       "id": "lm-hist-038",
@@ -9007,7 +9707,12 @@
         ]
       ],
       "city": "Budapest",
-      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2020/euro.json"
+      }
     },
     {
       "id": "lm-hist-039",
@@ -9041,7 +9746,12 @@
         ]
       ],
       "city": "Copenhague",
-      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2020/euro.json"
+      }
     },
     {
       "id": "lm-hist-040",
@@ -9076,7 +9786,12 @@
       "penalty_score": [
         4,
         5
-      ]
+      ],
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2020/euro.json"
+      }
     },
     {
       "id": "lm-hist-041",
@@ -9110,7 +9825,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2020/euro.json"
+      }
     },
     {
       "id": "lm-hist-042",
@@ -9144,7 +9864,12 @@
         ]
       ],
       "city": "Munich",
-      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/"
+      "city_source_url": "https://www.uefa.com/uefaeuro/history/news/0254-0d41684d1216-06773df7faed-1000--uefa-euro-2020-fixtures-and-results/",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2020/euro.json"
+      }
     },
     {
       "id": "lm-hist-043",
@@ -9182,7 +9907,12 @@
       "penalty_score": [
         4,
         2
-      ]
+      ],
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2020/euro.json"
+      }
     },
     {
       "id": "lm-hist-044",
@@ -9220,7 +9950,12 @@
       "penalty_score": [
         3,
         2
-      ]
+      ],
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2020/euro.json"
+      }
     },
     {
       "id": "lm-hist-045",
@@ -9251,7 +9986,12 @@
         []
       ],
       "city": "Gelsenkirchen",
-      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2024/euro.json"
+      }
     },
     {
       "id": "lm-hist-046",
@@ -9285,7 +10025,12 @@
         ]
       ],
       "city": "Gelsenkirchen",
-      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2024/euro.json"
+      }
     },
     {
       "id": "lm-hist-047",
@@ -9319,7 +10064,12 @@
         ]
       ],
       "city": "Leipzig",
-      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2024/euro.json"
+      }
     },
     {
       "id": "lm-hist-048",
@@ -9353,7 +10103,12 @@
         ]
       ],
       "city": "Stuttgart",
-      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2024/euro.json"
+      }
     },
     {
       "id": "lm-hist-049",
@@ -9384,7 +10139,12 @@
         []
       ],
       "city": "Munich",
-      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2024/euro.json"
+      }
     },
     {
       "id": "lm-hist-050",
@@ -9418,7 +10178,12 @@
         ]
       ],
       "city": "Berlin",
-      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/"
+      "city_source_url": "https://www.uefa.com/news/0275-151eb1c333ea-d30deec67b13-1000--euro-2024-match-schedule/",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/euro.json/blob/master/2024/euro.json"
+      }
     },
     {
       "id": "lm-hist-051",
@@ -9453,7 +10218,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)"
+      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2011-12/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-052",
@@ -9490,7 +10260,12 @@
         ]
       ],
       "city": "Barcelone",
-      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2011-12/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-053",
@@ -9528,7 +10303,12 @@
         ]
       ],
       "city": "Barcelone",
-      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2012-13/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-054",
@@ -9567,7 +10347,12 @@
         ]
       ],
       "city": "Munich",
-      "city_source_url": "https://en.wikipedia.org/wiki/Allianz_Arena"
+      "city_source_url": "https://en.wikipedia.org/wiki/Allianz_Arena",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2012-13/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-055",
@@ -9601,7 +10386,12 @@
         ]
       ],
       "city": "Dortmund",
-      "city_source_url": "https://en.wikipedia.org/wiki/Westfalenstadion"
+      "city_source_url": "https://en.wikipedia.org/wiki/Westfalenstadion",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2012-13/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-056",
@@ -9636,7 +10426,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)"
+      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2013-14/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-057",
@@ -9671,7 +10466,12 @@
         ]
       ],
       "city": "Munich",
-      "city_source_url": "https://en.wikipedia.org/wiki/Allianz_Arena"
+      "city_source_url": "https://en.wikipedia.org/wiki/Allianz_Arena",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2013-14/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-058",
@@ -9710,7 +10510,12 @@
         ]
       ],
       "city": "Barcelone",
-      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2014-15/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-059",
@@ -9745,7 +10550,12 @@
         ]
       ],
       "city": "Munich",
-      "city_source_url": "https://en.wikipedia.org/wiki/Allianz_Arena"
+      "city_source_url": "https://en.wikipedia.org/wiki/Allianz_Arena",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2014-15/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-060",
@@ -9780,7 +10590,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)"
+      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2014-15/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-061",
@@ -9813,7 +10628,12 @@
         ]
       ],
       "city": "Madrid",
-      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2015-16/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-062",
@@ -9852,7 +10672,12 @@
         ]
       ],
       "city": "Barcelone",
-      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2016-17/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-063",
@@ -9885,7 +10710,12 @@
         ]
       ],
       "city": "Manchester",
-      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2016-17/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-064",
@@ -9918,7 +10748,12 @@
         ]
       ],
       "city": "Monaco",
-      "city_source_url": "https://en.wikipedia.org/wiki/Stade_Louis_II"
+      "city_source_url": "https://en.wikipedia.org/wiki/Stade_Louis_II",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2016-17/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-065",
@@ -9953,7 +10788,12 @@
         ]
       ],
       "city": "Madrid",
-      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2016-17/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-066",
@@ -9992,7 +10832,12 @@
         ]
       ],
       "city": "Rome",
-      "city_source_url": "https://en.wikipedia.org/wiki/Stadio_Olimpico"
+      "city_source_url": "https://en.wikipedia.org/wiki/Stadio_Olimpico",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2017-18/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-067",
@@ -10025,7 +10870,12 @@
         ]
       ],
       "city": "Liverpool",
-      "city_source_url": "https://en.wikipedia.org/wiki/Anfield"
+      "city_source_url": "https://en.wikipedia.org/wiki/Anfield",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2017-18/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-068",
@@ -10059,7 +10909,12 @@
         ]
       ],
       "city": "Madrid",
-      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2018-19/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-069",
@@ -10096,7 +10951,12 @@
         ]
       ],
       "city": "Paris",
-      "city_source_url": "https://en.wikipedia.org/wiki/Parc_des_Princes"
+      "city_source_url": "https://en.wikipedia.org/wiki/Parc_des_Princes",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2018-19/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-070",
@@ -10132,7 +10992,12 @@
         ]
       ],
       "city": "Turin",
-      "city_source_url": "https://en.wikipedia.org/wiki/Juventus_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/Juventus_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2018-19/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-071",
@@ -10169,7 +11034,12 @@
         ]
       ],
       "city": "Liverpool",
-      "city_source_url": "https://en.wikipedia.org/wiki/Anfield"
+      "city_source_url": "https://en.wikipedia.org/wiki/Anfield",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2018-19/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-072",
@@ -10204,7 +11074,12 @@
         ]
       ],
       "city": "Amsterdam",
-      "city_source_url": "https://en.wikipedia.org/wiki/Johan_Cruyff_Arena"
+      "city_source_url": "https://en.wikipedia.org/wiki/Johan_Cruyff_Arena",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2018-19/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-073",
@@ -10243,7 +11118,12 @@
         ]
       ],
       "city": "Lisbonne",
-      "city_source_url": "https://www.uefa.com/newsfiles/UCL/2020/2030146_TS.pdf"
+      "city_source_url": "https://www.uefa.com/newsfiles/UCL/2020/2030146_TS.pdf",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2019-20/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-074",
@@ -10281,7 +11161,12 @@
         ]
       ],
       "city": "Lisbonne",
-      "city_source_url": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Luz"
+      "city_source_url": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Luz",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2024-25/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-075",
@@ -10322,7 +11207,12 @@
         ]
       ],
       "city": "Milan",
-      "city_source_url": "https://en.wikipedia.org/wiki/San_Siro"
+      "city_source_url": "https://en.wikipedia.org/wiki/San_Siro",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2024-25/uefa.cl.json"
+      }
     },
     {
       "id": "lm-hist-076",
@@ -10356,7 +11246,12 @@
         ]
       ],
       "city": "Manchester",
-      "city_source_url": "https://en.wikipedia.org/wiki/Old_Trafford"
+      "city_source_url": "https://en.wikipedia.org/wiki/Old_Trafford",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2011-12/en.1.json"
+      }
     },
     {
       "id": "lm-hist-077",
@@ -10390,7 +11285,12 @@
         ]
       ],
       "city": "Manchester",
-      "city_source_url": "https://en.wikipedia.org/wiki/Old_Trafford"
+      "city_source_url": "https://en.wikipedia.org/wiki/Old_Trafford",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2011-12/en.1.json"
+      }
     },
     {
       "id": "lm-hist-078",
@@ -10422,7 +11322,12 @@
         ]
       ],
       "city": "Manchester",
-      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2011-12/en.1.json"
+      }
     },
     {
       "id": "lm-hist-079",
@@ -10454,7 +11359,12 @@
         ]
       ],
       "city": "Liverpool",
-      "city_source_url": "https://en.wikipedia.org/wiki/Anfield"
+      "city_source_url": "https://en.wikipedia.org/wiki/Anfield",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2013-14/en.1.json"
+      }
     },
     {
       "id": "lm-hist-080",
@@ -10486,7 +11396,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/Selhurst_Park"
+      "city_source_url": "https://en.wikipedia.org/wiki/Selhurst_Park",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2013-14/en.1.json"
+      }
     },
     {
       "id": "lm-hist-081",
@@ -10518,7 +11433,12 @@
         ]
       ],
       "city": "Manchester",
-      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2015-16/en.1.json"
+      }
     },
     {
       "id": "lm-hist-082",
@@ -10551,7 +11471,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)"
+      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2015-16/en.1.json"
+      }
     },
     {
       "id": "lm-hist-083",
@@ -10585,7 +11510,12 @@
         ]
       ],
       "city": "Manchester",
-      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2017-18/en.1.json"
+      }
     },
     {
       "id": "lm-hist-084",
@@ -10617,7 +11547,12 @@
         ]
       ],
       "city": "Manchester",
-      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2018-19/en.1.json"
+      }
     },
     {
       "id": "lm-hist-085",
@@ -10649,7 +11584,12 @@
         ]
       ],
       "city": "Liverpool",
-      "city_source_url": "https://en.wikipedia.org/wiki/Anfield"
+      "city_source_url": "https://en.wikipedia.org/wiki/Anfield",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2019-20/en.1.json"
+      }
     },
     {
       "id": "lm-hist-086",
@@ -10683,7 +11623,12 @@
         ]
       ],
       "city": "Manchester",
-      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/City_of_Manchester_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2021-22/en.1.json"
+      }
     },
     {
       "id": "lm-hist-087",
@@ -10718,7 +11663,12 @@
         ]
       ],
       "city": "Liverpool",
-      "city_source_url": "https://en.wikipedia.org/wiki/Anfield"
+      "city_source_url": "https://en.wikipedia.org/wiki/Anfield",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2022-23/en.1.json"
+      }
     },
     {
       "id": "lm-hist-088",
@@ -10752,7 +11702,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/Tottenham_Hotspur_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/Tottenham_Hotspur_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2023-24/en.1.json"
+      }
     },
     {
       "id": "lm-hist-089",
@@ -10787,7 +11742,12 @@
         ]
       ],
       "city": "Londres",
-      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)"
+      "city_source_url": "https://en.wikipedia.org/wiki/Stamford_Bridge_(stadium)",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2023-24/en.1.json"
+      }
     },
     {
       "id": "lm-hist-090",
@@ -10823,7 +11783,12 @@
         ]
       ],
       "city": "Barcelone",
-      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2012-13/es.1.json"
+      }
     },
     {
       "id": "lm-hist-091",
@@ -10862,7 +11827,12 @@
         ]
       ],
       "city": "Barcelone",
-      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou"
+      "city_source_url": "https://en.wikipedia.org/wiki/Camp_Nou",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2013-14/es.1.json"
+      }
     },
     {
       "id": "lm-hist-092",
@@ -10898,7 +11868,12 @@
         ]
       ],
       "city": "Madrid",
-      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2016-17/es.1.json"
+      }
     },
     {
       "id": "lm-hist-093",
@@ -10934,7 +11909,12 @@
         ]
       ],
       "city": "Madrid",
-      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2019-20/es.1.json"
+      }
     },
     {
       "id": "lm-hist-094",
@@ -10971,7 +11951,12 @@
         ]
       ],
       "city": "Madrid",
-      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2023-24/es.1.json"
+      }
     },
     {
       "id": "lm-hist-095",
@@ -11005,7 +11990,12 @@
         ]
       ],
       "city": "Turin",
-      "city_source_url": "https://en.wikipedia.org/wiki/Juventus_Stadium"
+      "city_source_url": "https://en.wikipedia.org/wiki/Juventus_Stadium",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2017-18/it.1.json"
+      }
     },
     {
       "id": "lm-hist-096",
@@ -11042,7 +12032,12 @@
         ]
       ],
       "city": "Milan",
-      "city_source_url": "https://en.wikipedia.org/wiki/San_Siro"
+      "city_source_url": "https://en.wikipedia.org/wiki/San_Siro",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2021-22/it.1.json"
+      }
     },
     {
       "id": "lm-hist-097",
@@ -11077,7 +12072,12 @@
         ]
       ],
       "city": "Naples",
-      "city_source_url": "https://en.wikipedia.org/wiki/Stadio_Diego_Armando_Maradona"
+      "city_source_url": "https://en.wikipedia.org/wiki/Stadio_Diego_Armando_Maradona",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2022-23/it.1.json"
+      }
     },
     {
       "id": "lm-hist-098",
@@ -11113,7 +12113,12 @@
         ]
       ],
       "city": "Marseille",
-      "city_source_url": "https://en.wikipedia.org/wiki/Stade_V%C3%A9lodrome"
+      "city_source_url": "https://en.wikipedia.org/wiki/Stade_V%C3%A9lodrome",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2014-15/fr.1.json"
+      }
     },
     {
       "id": "lm-hist-099",
@@ -11149,7 +12154,12 @@
         ]
       ],
       "city": "Paris",
-      "city_source_url": "https://en.wikipedia.org/wiki/Parc_des_Princes"
+      "city_source_url": "https://en.wikipedia.org/wiki/Parc_des_Princes",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2020-21/fr.1.json"
+      }
     },
     {
       "id": "lm-hist-100",
@@ -11184,7 +12194,12 @@
         ]
       ],
       "city": "Paris",
-      "city_source_url": "https://en.wikipedia.org/wiki/Parc_des_Princes"
+      "city_source_url": "https://en.wikipedia.org/wiki/Parc_des_Princes",
+      "final_clue": {
+        "type": "team",
+        "team_index": 0,
+        "source_url": "https://github.com/openfootball/football.json/blob/master/2020-21/fr.1.json"
+      }
     }
   ],
   "read_status_recorded_at": "2026-09-28",
