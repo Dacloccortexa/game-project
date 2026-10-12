@@ -1,5 +1,8 @@
 # DECISIONS.md
 
+## [2026-10-12] Fiche App Store prête (FR et PT)
+Textes de la fiche (nom, sous-titre « Le quiz foot entre potes », texte promotionnel repris de la phrase de campagne, description, mots-clés, catégorie Jeux → Quiz et Famille, âge 4+, données collectées) dans `docs/APP_STORE_FICHE.md`. Cinq captures par langue, avec une phrase en haut : Transfert pendant la course au Tackle, choix de l'équipe qui a tacklé, Le Match, Qui suis-je ?, cagnotte de Plus ou Moins. Scores et numéro de manche posés à la main pour l'image. À refaire si l'interface change avant la sortie.
+
 ## [2026-10-12] Réglages par défaut : 2 équipes, 5 manches
 Décision de David. À l'ouverture, « Créer une partie » propose 2 équipes et 5 manches (avant : 3 et 10). Le joueur peut toujours changer.
 
