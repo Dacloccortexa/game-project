@@ -1,5 +1,8 @@
 # DECISIONS.md
 
+## [2026-10-12] Fin du bouton « Envoyer le journal des parties »
+Demande de David : la mesure anonyme remplace le journal envoyé à la main par les testeurs. Le bouton est retiré des Réglages et le journal n'est plus gardé sur le téléphone (l'ancien est effacé). Le déroulé de la partie en cours reste en mémoire : il alimente « Signaler une erreur » (réponses tapées) et le résumé anonyme de chaque carte.
+
 ## [2026-10-12] Mesure d'usage anonyme, sans suivi
 David veut savoir combien de parties sont jouées et à quel moment les joueurs répondent, sans « Autoriser le suivi » ni bandeau de consentement. Choix : TelemetryDeck (anonyme, identifiant aléatoire haché), pas Firebase ni kit TikTok. Code prêt, actif dès que l'App ID est renseigné ; politique de confidentialité mise à jour. Détail : `docs/APP_IOS.md`.
 

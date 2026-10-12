@@ -2084,8 +2084,6 @@
     <div class="journal-link-box">
       <button type="button" class="text-btn" id="btn-contact">Nous contacter</button>
       <p class="journal-note" id="contact-status" role="status" aria-live="polite"></p>
-      <button type="button" class="text-btn hidden-screen" id="btn-share-journals">Envoyer le journal des parties</button>
-      <p class="journal-note" id="journals-status" role="status" aria-live="polite"></p>
     </div>
     <div class="cta-spacer"></div>
     <p class="settings-version" id="settings-version"></p>
@@ -3414,7 +3412,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.12-1221";
+  var APP_VERSION = "2026.10.12-1226";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3450,21 +3448,12 @@
   } catch (e) {}
 
   var JOURNAL_KEY = "tackle-journal-v1";
-  var JOURNAL_KEEP = 20;
   var GAME_LABELS = { transfert: "Transfert", plusoumoins: "Plus ou Moins", vraifaux: "Vrai ou Faux", quisuisje: "Qui suis-je ?", lematch: "Le Match" };
 
-  function journalLoadAll() {
-    try { return JSON.parse(localStorage.getItem(JOURNAL_KEY) || "[]") || []; } catch (e) { return []; }
-  }
-  function journalSave() {
-    try {
-      var j = state.journal;
-      if (!j) return;
-      var all = journalLoadAll().filter(function (x) { return x.id !== j.id; });
-      all.push(j);
-      localStorage.setItem(JOURNAL_KEY, JSON.stringify(all.slice(-JOURNAL_KEEP)));
-    } catch (e) { /* stockage indisponible : le journal reste en mémoire */ }
-  }
+  // Le journal de partie reste en mémoire pendant la partie : il sert au bouton « Signaler une erreur »
+  // (réponses tapées) et à la mesure anonyme. Il n'est plus enregistré ni envoyé (décision du 2026-10-12).
+  function journalSave() {}
+  try { localStorage.removeItem(JOURNAL_KEY); } catch (e) {}
   function journalStartGame() {
     try {
       state.journal = {
@@ -3655,66 +3644,7 @@
   }
 
   function fmtSigned(n) { return (n > 0 ? "+" : n < 0 ? "−" : "") + Math.abs(n); }
-  function fmtDate(ms) {
-    var d = new Date(ms);
-    return pad2(d.getDate()) + "/" + pad2(d.getMonth() + 1) + "/" + d.getFullYear() + " " + pad2(d.getHours()) + ":" + pad2(d.getMinutes());
-  }
-  function journalToText(j) {
-    var lines = [];
-    var mins = j.endedAt ? Math.round((j.endedAt - j.startedAt) / 60000) : null;
-    lines.push("TACKLE · journal de partie");
-    lines.push(fmtDate(j.startedAt) + " · " + j.teams.length + " équipe" + (j.teams.length > 1 ? "s" : "") + " · " + j.rounds + " manches" +
-      " · " + (j.status === "terminée" ? "terminée" : j.status === "abandonnée" ? "abandonnée à la manche " + ((j.roundsPlayed || 0) + 1) : "en cours") +
-      (mins !== null ? " · " + mins + " min" : ""));
-    lines.push("Défis : " + j.games.join(", "));
-    if (j.scores) {
-      lines.push("Scores : " + j.scores.slice().sort(function (a, b) { return b.score - a.score; })
-        .map(function (t) { return t.name + " " + fmtSigned(t.score).replace(/^\+/, ""); }).join(" · "));
-    } else {
-      lines.push("Équipes : " + j.teams.join(", "));
-    }
-    j.cards.forEach(function (c) {
-      lines.push("");
-      lines.push("M" + c.round + " · " + c.game + " · " + c.team + (c.card ? " — " + c.card : ""));
-      c.steps.forEach(function (st) { lines.push("  " + st); });
-      var pts = Object.keys(c.points).map(function (n) { return n + " " + fmtSigned(c.points[n]); });
-      lines.push("  → " + (pts.length ? pts.join(" · ") : "0 point") + (c.durationS !== undefined ? " · carte " + c.durationS + " s" : " · carte non terminée"));
-    });
-    return lines.join("\n");
-  }
   // Partage via le menu du téléphone (WhatsApp, Messages, e-mail…) ; sinon copie.
-  function shareJournalText(text, statusEl, onSent) {
-    function say(msg) { if (statusEl) statusEl.textContent = msg; }
-    function copyFallback() {
-      try {
-        navigator.clipboard.writeText(text).then(function () {
-          say(L("Journal copié : collez-le dans un message pour David.", "Registo copiado: cola-o numa mensagem para o David."));
-        }, function () { say(L("Impossible de partager ou de copier le journal sur cet appareil.", "Não foi possível partilhar nem copiar o registo neste aparelho.")); });
-      } catch (e) { say(L("Impossible de partager ou de copier le journal sur cet appareil.", "Não foi possível partilhar nem copiar o registo neste aparelho.")); }
-    }
-    var nativeShare = nativePlugin("Share");
-    if (nativeShare) {
-      nativeShare.share({ title: "TACKLE · journal de partie", text: text, dialogTitle: L("Envoyer le journal", "Enviar o registo") }).then(function (r) {
-        if (r && r.activityType === undefined) { say(""); return; }
-        say(L("Journal envoyé et effacé du téléphone. Merci !", "Registo enviado e apagado do telemóvel. Obrigado!"));
-        if (onSent) onSent();
-      }, function () { say(""); }); // partage annulé : rien n'est effacé
-      return;
-    }
-    try {
-      if (navigator.share) {
-        navigator.share({ title: "TACKLE · journal de partie", text: text }).then(function () {
-          say(L("Journal envoyé et effacé du téléphone. Merci !", "Registo enviado e apagado do telemóvel. Obrigado!"));
-          if (onSent) onSent();
-        }, function (err) {
-          if (err && err.name === "AbortError") { say(""); return; }
-          copyFallback();
-        });
-        return;
-      }
-    } catch (e) {}
-    copyFallback();
-  }
 
   // ---------- State ----------
   var state = {
@@ -3888,7 +3818,6 @@
     show(id);
     if (id === "screen-home") checkForUpdate();
     if (id === "screen-setup") refreshAccessUI();
-    if (id === "screen-settings") refreshJournalLink();
     else showUpdateBannerIfIdle();
     window.scrollTo(0, 0);
     if (moveFocus) {
@@ -6720,29 +6649,6 @@
   });
   el("btn-share-preview-close").addEventListener("click", function () { hide("share-preview"); });
   el("btn-final-home").addEventListener("click", function () { hide("screen-final"); showSetupScreen("screen-home", true); });
-
-  // Sur « Créer une partie » : envoyer les dernières parties gardées sur le téléphone
-  // (utile après une partie abandonnée).
-  function refreshJournalLink() {
-    var n = journalLoadAll().length;
-    el("btn-share-journals").textContent = L("Envoyer le journal des parties (", "Enviar o registo das partidas (") + n + ")";
-    el("btn-share-journals").classList.toggle("hidden-screen", n === 0);
-  }
-  el("btn-share-journals").addEventListener("click", function () {
-    var all = journalLoadAll();
-    if (!all.length) return;
-    var sentIds = all.map(function (x) { return x.id; });
-    shareJournalText(all.map(journalToText).join("\n\n————————————\n\n"), el("journals-status"), function () {
-      // Une fois envoyé, on efface du téléphone les parties envoyées (pas les nouvelles).
-      try {
-        var left = journalLoadAll().filter(function (x) { return sentIds.indexOf(x.id) === -1; });
-        if (left.length) localStorage.setItem(JOURNAL_KEY, JSON.stringify(left));
-        else localStorage.removeItem(JOURNAL_KEY);
-      } catch (e) {}
-      refreshJournalLink();
-    });
-  });
-  refreshJournalLink();
 
   el("btn-rematch").addEventListener("click", function () {
     // Revanche : retour à « Créer une partie », réglages et équipes conservés.
