@@ -1,5 +1,8 @@
 # DECISIONS.md
 
+## [2026-10-12] Réglages par défaut : 2 équipes, 5 manches
+Décision de David. À l'ouverture, « Créer une partie » propose 2 équipes et 5 manches (avant : 3 et 10). Le joueur peut toujours changer.
+
 ## [2026-10-12] Fin du bouton « Envoyer le journal des parties »
 Demande de David : la mesure anonyme remplace le journal envoyé à la main par les testeurs. Le bouton est retiré des Réglages et le journal n'est plus gardé sur le téléphone (l'ancien est effacé). Le déroulé de la partie en cours reste en mémoire : il alimente « Signaler une erreur » (réponses tapées) et le résumé anonyme de chaque carte.
 

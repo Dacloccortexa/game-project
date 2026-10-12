@@ -2210,8 +2210,8 @@
     <p class="setup-label" id="team-count-label">Équipes</p>
     <div class="round-choices" id="team-count-group" role="group" aria-labelledby="team-count-label">
       <button type="button" class="round-choice" data-value="1" aria-pressed="false">1</button>
-      <button type="button" class="round-choice" data-value="2" aria-pressed="false">2</button>
-      <button type="button" class="round-choice" data-value="3" aria-pressed="true">3</button>
+      <button type="button" class="round-choice" data-value="2" aria-pressed="true">2</button>
+      <button type="button" class="round-choice" data-value="3" aria-pressed="false">3</button>
       <button type="button" class="round-choice" data-value="4" aria-pressed="false">4</button>
     </div>
 
@@ -2219,8 +2219,8 @@
 
     <p class="setup-label" id="rounds-label">Manches</p>
     <div class="round-choices" id="rounds-group" role="group" aria-labelledby="rounds-label">
-      <button type="button" class="round-choice" data-value="5" aria-pressed="false">5</button>
-      <button type="button" class="round-choice" data-value="10" aria-pressed="true">10</button>
+      <button type="button" class="round-choice" data-value="5" aria-pressed="true">5</button>
+      <button type="button" class="round-choice" data-value="10" aria-pressed="false">10</button>
       <button type="button" class="round-choice" data-value="15" aria-pressed="false">15</button>
       <button type="button" class="round-choice" data-value="20" aria-pressed="false">20</button>
     </div>
@@ -3412,7 +3412,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.12-1226";
+  var APP_VERSION = "2026.10.12-2108";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3648,7 +3648,7 @@
 
   // ---------- State ----------
   var state = {
-    teamCount: 3,
+    teamCount: 2,
     teamStep: 0,     // équipe affichée sur « Personnaliser les équipes »
     teamSettings: [0, 1, 2, 3].map(function (i) {
       return {
@@ -3657,7 +3657,7 @@
         color: ["gold", "coral", "blue", "violet"][i]
       };
     }),
-    roundsTotal: 10,
+    roundsTotal: 5,
     minigamesSelected: ["transfert", "plusoumoins", "vraifaux", "quisuisje", "lematch"],
     teams: [],       // {name, score, logo, color}
     roundsPlayed: 0,
