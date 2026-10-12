@@ -31,6 +31,14 @@ Ces fonctions natives comptent aussi pour la relecture Apple (règle 4.2 « fonc
 - `ITSAppUsesNonExemptEncryption = NO` (pas de chiffrement propre : évite la question d'export à chaque envoi).
 - Politique de confidentialité : [`privacy.html`](../privacy.html), en ligne à `https://dacloccortexa.github.io/game-project/privacy.html` (adresse de contact à compléter).
 
+## Mesure d'usage anonyme (TelemetryDeck)
+
+Décision de David (2026-10-12) : savoir combien de parties sont jouées et à quel indice les cartes sont trouvées, **sans suivi** (pas de fenêtre « Autoriser le suivi », pas de consentement à demander selon l'éditeur). Code prêt dans `index.html` (`tdSignal`), désactivé tant que `TD_APP_ID` est vide.
+
+À faire par David : créer un compte gratuit sur [telemetrydeck.com](https://telemetrydeck.com) (100 000 événements/mois gratuits, environ 5 000 parties), créer l'app « TACKLE » et donner son **App ID** (pas secret) à Claude, qui le colle dans `TD_APP_ID`.
+
+Événements envoyés : `App.launched` (premier lancement ou non), `Game.started` (équipes, manches, défis, accès illimité ou non), `Game.completed` / `Game.abandoned` (durée en minutes dans la valeur numérique), `Card.ended` (défi, carte, issue `trouve` / `tackle_reussi` / `pas_trouve` / `encaisse` / `perdu`, indice atteint en valeur numérique, mauvaises réponses, Tackles, passes), `Paywall.shown` (raison), `Card.reported`. Aucun nom ni texte tapé. Le site web envoie en **mode test** : le tableau de bord normal ne montre que l'appli ; activer « Test Mode » pour voir les testeurs du site. Les installations se lisent dans App Store Connect, les ventes dans RevenueCat.
+
 ## Langues
 
 Français et portugais (Portugal). L'appli prend la langue du téléphone ; on la change dans **Réglages** (roue dentée de l'accueil). Questions portugaises : `src/data/pt/`, régénérées avec `python3 tools/translate_pt.py` après chaque ajout de cartes françaises (le script refuse de laisser du français). Voir `docs/DECISIONS.md` (2026-10-02).
@@ -99,6 +107,6 @@ Offrir l'abonnement à certaines personnes : **codes d'offre** Apple (App Store 
 - [x] Adresse de contact dans `privacy.html` (contact@lafamivy.com). URL de support pour la fiche App Store : **https://lafamivy.com/support/** (page FR/EN créée le 2026-10-09 après le mail d'Apple, dossier 102990583615)
 - [ ] Captures d'écran iPhone 6,9″ (1320 × 2868), au moins 3.
 - [ ] Description, sous-titre, mots-clés, catégorie **Jeux → Quiz** (et Jeux de société), classification par âge.
-- [ ] « Confidentialité de l'app » : déclarer **Achats → Historique d'achats** (finalités : Fonctionnalité de l'app + Analyse ; **non lié** à l'identité ; **pas de suivi**). Rien d'autre (identifiants RevenueCat anonymes). Source : [guide RevenueCat](https://www.revenuecat.com/docs/platform-resources/apple-platform-resources/apple-app-privacy). `privacy.html` le mentionne.
+- [ ] « Confidentialité de l'app » : déclarer **Utilisation des données → Interaction avec le produit** (finalité : Analyse ; **non lié** à l'identité ; **pas de suivi**) pour la mesure anonyme TelemetryDeck, et **Achats → Historique d'achats** (finalités : Fonctionnalité de l'app + Analyse ; **non lié** à l'identité ; **pas de suivi**). Rien d'autre (identifiants RevenueCat anonymes). Source : [guide RevenueCat](https://www.revenuecat.com/docs/platform-resources/apple-platform-resources/apple-app-privacy). `privacy.html` le mentionne.
 - [ ] Abonnement configuré (voir « Abonnement ») et prix choisis.
 - [ ] Vérifier les droits : noms réels de joueurs/clubs en texte (OK pour un quiz factuel), aucune photo, aucun logo de club ni de compétition.

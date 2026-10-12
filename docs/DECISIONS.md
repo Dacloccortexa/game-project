@@ -1,5 +1,8 @@
 # DECISIONS.md
 
+## [2026-10-12] Mesure d'usage anonyme, sans suivi
+David veut savoir combien de parties sont jouées et à quel moment les joueurs répondent, sans « Autoriser le suivi » ni bandeau de consentement. Choix : TelemetryDeck (anonyme, identifiant aléatoire haché), pas Firebase ni kit TikTok. Code prêt, actif dès que l'App ID est renseigné ; politique de confidentialité mise à jour. Détail : `docs/APP_IOS.md`.
+
 ## [2026-10-12] Fusion des 100 nouveaux joueurs (demande n° 6)
 Relue et fusionnée par Claude avec l'accord de David. Contrôles relancés (`audit_new_players_2026.py`, `translate_pt.py --check-only`) : OK. Aucune carte existante modifiée ; les textes portugais de Qui suis-je ? corrigés à la main par David sont intacts. Échantillon de parcours et d'indices vérifié sans erreur trouvée. Ajout des surnoms usuels manquants dans les réponses acceptées (Vinicius, Vini, Kvara, Lautaro, Alisson, Bernardo, Emi Martínez…). À observer en partie : difficulté des nouvelles fiches Qui suis-je ? et clubs « présent » à revoir avant chaque version.
 

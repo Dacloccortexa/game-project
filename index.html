@@ -3399,6 +3399,7 @@
     return lines.join("\n");
   }
   el("btn-report").addEventListener("click", function () {
+    tdSignal("Card.reported", { game: state.currentRoundMinigame });
     var c = state.currentRoundMinigame === "lematch" ? state.currentLmCard : state.currentCard;
     var id = (state.currentRoundMinigame === "transfert" || state.currentRoundMinigame === "quisuisje" || state.currentRoundMinigame === "lematch") && c && c.id ? " " + c.id : "";
     openMail(L("TACKLE · Erreur sur une question", "TACKLE · Erro numa pergunta") + id,
@@ -3413,7 +3414,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.12-1206";
+  var APP_VERSION = "2026.10.12-1215";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3476,6 +3477,8 @@
         status: "en cours"
       };
       journalSave();
+      tdSignal("Game.started", { teams: state.teams.length, rounds: state.roundsTotal,
+        games: state.minigamesSelected.join(","), premium: state.premium ? "oui" : "non" });
     } catch (e) {}
   }
   function journalCardInfo() {
@@ -3551,6 +3554,7 @@
       if (!card || card.durationS !== undefined) return;
       card.durationS = Math.round((Date.now() - card.startedAt) / 1000);
       journalSave();
+      tdCardEnded();
     } catch (e) {}
   }
   function journalFinish(status) {
@@ -3561,8 +3565,95 @@
       state.journal.roundsPlayed = state.roundsPlayed;
       state.journal.scores = state.teams.map(function (t) { return { name: t.name, score: t.score }; });
       journalSave();
+      var mins = (state.journal.endedAt - state.journal.startedAt) / 60000;
+      tdSignal(status === "terminée" ? "Game.completed" : "Game.abandoned",
+        { rounds: state.roundsTotal, roundsPlayed: state.roundsPlayed, teams: state.teams.length }, Math.round(mins * 10) / 10);
+      tdFlush();
     } catch (e) {}
   }
+
+  // ---------- Mesure d'usage anonyme (TelemetryDeck) ----------
+  // Décision de David (2026-10-12) : savoir combien de parties, à quel indice les cartes sont trouvées,
+  // sans suivi ni fenêtre de consentement. Aucun nom, aucun identifiant publicitaire, rien de ce qui est
+  // tapé. Un identifiant aléatoire créé sur le téléphone est haché (SHA-256 + sel) avant l'envoi : il sert
+  // seulement à compter les joueurs et leur retour. Le site web est envoyé en « mode test » (testeurs).
+  // Désactivé tant que TD_APP_ID est vide (identifiant fourni par TelemetryDeck).
+  var TD_APP_ID = "";
+  var TD_SALT = "tackle-lafamivy-2026";
+  var TD_ENDPOINT = "https://nom.telemetrydeck.com/v2/";
+  var tdQueue = [], tdTimer = null, tdUser = null;
+  var tdSession = Math.random().toString(36).slice(2) + Date.now().toString(36);
+  function tdEnabled() {
+    return !!TD_APP_ID && typeof fetch === "function" && !!(window.crypto && window.crypto.subtle) && typeof TextEncoder === "function";
+  }
+  function tdClientUser() {
+    if (tdUser) return tdUser;
+    var raw = null;
+    try { raw = localStorage.getItem("tackle-anon-v1"); } catch (e) {}
+    if (!raw) {
+      raw = window.crypto.randomUUID ? window.crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now().toString(36);
+      try { localStorage.setItem("tackle-anon-v1", raw); } catch (e) {}
+    }
+    tdUser = window.crypto.subtle.digest("SHA-256", new TextEncoder().encode(raw + TD_SALT)).then(function (buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ("0" + b.toString(16)).slice(-2); }).join("");
+    });
+    return tdUser;
+  }
+  function tdSignal(type, payload, floatValue) {
+    try {
+      if (!tdEnabled()) return;
+      var p = { "TACKLE.platform": NATIVE ? "ios" : "web", "TACKLE.lang": LANG, "TACKLE.version": APP_VERSION };
+      Object.keys(payload || {}).forEach(function (k) {
+        var v = payload[k];
+        if (v !== undefined && v !== null && v !== "") p["TACKLE." + k] = String(v);
+      });
+      var sig = { appID: TD_APP_ID, type: type, sessionID: tdSession, payload: p, telemetryClientVersion: "TACKLE " + APP_VERSION };
+      if (typeof floatValue === "number" && isFinite(floatValue)) sig.floatValue = floatValue;
+      if (!NATIVE) sig.isTestMode = true;
+      tdQueue.push(sig);
+      if (tdQueue.length > 200) tdQueue.shift();
+      clearTimeout(tdTimer);
+      tdTimer = setTimeout(tdFlush, 4000);
+    } catch (e) {}
+  }
+  function tdFlush() {
+    try {
+      clearTimeout(tdTimer); tdTimer = null;
+      if (!tdQueue.length || !tdEnabled()) return;
+      var batch = tdQueue.splice(0, 50);
+      tdClientUser().then(function (u) {
+        batch.forEach(function (sig) { sig.clientUser = u; });
+        return fetch(TD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(batch), keepalive: true });
+      }).then(function (r) { if (!r.ok) throw new Error("TelemetryDeck " + r.status); })
+        .catch(function () { tdQueue = batch.concat(tdQueue).slice(0, 200); }); // renvoyé au prochain envoi
+      if (tdQueue.length) tdTimer = setTimeout(tdFlush, 4000);
+    } catch (e) {}
+  }
+  try { document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") tdFlush(); }); } catch (e) {}
+
+  // Résumé d'une carte terminée, tiré du journal de partie : défi, carte, issue, indice atteint.
+  function tdCardEnded() {
+    try {
+      if (!tdEnabled()) return;
+      var g = state.currentRoundMinigame;
+      var jc = journalCurrentCard();
+      var texts = (jc ? jc.steps : []).map(function (st) { return st.split(" : ").slice(1).join(" : "); });
+      var has = function (re) { return texts.some(function (t) { return re.test(t); }); };
+      var count = function (re) { return texts.filter(function (t) { return re.test(t); }).length; };
+      var binary = g === "plusoumoins" || g === "vraifaux";
+      var outcome;
+      if (binary) outcome = has(/^encaisse|cagnotte encaissée/) ? "encaisse" : has(/^Tackle .* juste/) ? "tackle_reussi" : "perdu";
+      else outcome = has(/^Tackle .* juste/) ? "tackle_reussi" : has(/^réponse .* juste/) ? "trouve" : "pas_trouve";
+      var step = g === "lematch" ? state.lmRevealedCount : g === "plusoumoins" ? state.pomIndex + 1 : g === "vraifaux" ? state.vfIndex + 1 : state.revealedCount;
+      var cardId = (g === "lematch" ? (state.currentLmCard || {}).id : (g === "transfert" || g === "quisuisje") ? (state.currentCard || {}).id : g === "plusoumoins" ? (state.pomChain || {}).category : "") || "";
+      tdSignal("Card.ended", {
+        game: g, card: cardId, outcome: outcome, step: step,
+        wrongAnswers: count(/^réponse .* fausse/), tackles: count(/^Tackle (?!annulé)/), passes: count(/^passe/),
+        teams: state.teams.length, seconds: jc && jc.durationS
+      }, step);
+    } catch (e) {}
+  }
+
   function fmtSigned(n) { return (n > 0 ? "+" : n < 0 ? "−" : "") + Math.abs(n); }
   function fmtDate(ms) {
     var d = new Date(ms);
@@ -3961,6 +4052,7 @@
     menu: ""
   };
   function openPaywall(reason) {
+    tdSignal("Paywall.shown", { reason: reason });
     var visible = SETUP_SCREENS.filter(function (id) { return id !== "screen-paywall" && !el(id).classList.contains("hidden-screen"); })[0];
     paywallReturn = visible || "screen-setup";
     el("paywall-reason").textContent = PAYWALL_REASONS[reason] || "";
@@ -6674,6 +6766,13 @@
     else { logo.addEventListener("load", hide); logo.addEventListener("error", hide); }
     setTimeout(hide, 1500);
   })();
+
+  // Mesure anonyme : un lancement de l'appli (« first » = premier lancement sur ce téléphone).
+  try {
+    var tdFirst = false;
+    try { tdFirst = !localStorage.getItem("tackle-anon-v1"); } catch (e) {}
+    tdSignal("App.launched", { first: tdFirst ? "oui" : "non" });
+  } catch (e) {}
 
 })();
 </script>
