@@ -1,0 +1,502 @@
+{
+  "clubs": {
+    "AIK": {
+      "pt": "AIK",
+      "g": "m"
+    },
+    "Al-Qadsiah": {
+      "pt": "Al-Qadsiah",
+      "g": "m"
+    },
+    "Al-Shabab": {
+      "pt": "Al-Shabab",
+      "g": "m"
+    },
+    "Almería": {
+      "pt": "Almería",
+      "g": "m"
+    },
+    "Atalanta": {
+      "pt": "Atalanta",
+      "g": "f"
+    },
+    "Athletico Paranaense": {
+      "pt": "Athletico Paranaense",
+      "g": "m"
+    },
+    "Barnsley": {
+      "pt": "Barnsley",
+      "g": "m"
+    },
+    "Beira-Mar": {
+      "pt": "Beira-Mar",
+      "g": "m"
+    },
+    "Birmingham City": {
+      "pt": "Birmingham City",
+      "g": "m"
+    },
+    "Bologna": {
+      "pt": "Bologna",
+      "g": "m"
+    },
+    "Brentford": {
+      "pt": "Brentford",
+      "g": "m"
+    },
+    "Brescia": {
+      "pt": "Brescia",
+      "g": "m"
+    },
+    "Brighton": {
+      "pt": "Brighton",
+      "g": "m"
+    },
+    "Burnley": {
+      "pt": "Burnley",
+      "g": "m"
+    },
+    "Cagliari": {
+      "pt": "Cagliari",
+      "g": "m"
+    },
+    "Cavese": {
+      "pt": "Cavese",
+      "g": "m"
+    },
+    "Charleroi": {
+      "pt": "Charleroi",
+      "g": "m"
+    },
+    "Cherbourg": {
+      "pt": "Cherbourg",
+      "g": "m"
+    },
+    "Chmel Blšany": {
+      "pt": "Chmel Blšany",
+      "g": "m"
+    },
+    "Cobreloa": {
+      "pt": "Cobreloa",
+      "g": "m"
+    },
+    "Colo-Colo": {
+      "pt": "Colo-Colo",
+      "g": "m"
+    },
+    "Cornellà": {
+      "pt": "Cornellà",
+      "g": "m"
+    },
+    "Coventry City": {
+      "pt": "Coventry City",
+      "g": "m"
+    },
+    "Deportivo La Coruña": {
+      "pt": "Deportivo da Corunha",
+      "g": "m"
+    },
+    "Dijon": {
+      "pt": "Dijon",
+      "g": "m"
+    },
+    "Dinamo Tbilisi": {
+      "pt": "Dinamo Tbilisi",
+      "g": "m"
+    },
+    "Eintracht Frankfurt": {
+      "pt": "Eintracht Frankfurt",
+      "g": "m"
+    },
+    "FC Liefering": {
+      "pt": "Liefering",
+      "g": "m"
+    },
+    "Foggia": {
+      "pt": "Foggia",
+      "g": "m"
+    },
+    "Galatasaray": {
+      "pt": "Galatasaray",
+      "g": "m"
+    },
+    "Gimnàstic": {
+      "pt": "Gimnàstic",
+      "g": "m"
+    },
+    "Hajduk Split": {
+      "pt": "Hajduk Split",
+      "g": "m"
+    },
+    "Hrvatski Dragovoljac": {
+      "pt": "Hrvatski Dragovoljac",
+      "g": "m"
+    },
+    "Hull City": {
+      "pt": "Hull City",
+      "g": "m"
+    },
+    "IF Brommapojkarna": {
+      "pt": "IF Brommapojkarna",
+      "g": "m"
+    },
+    "Instituto": {
+      "pt": "Instituto",
+      "g": "m"
+    },
+    "Internacional": {
+      "pt": "Internacional",
+      "g": "m"
+    },
+    "Jong Ajax": {
+      "pt": "Jong Ajax",
+      "g": "m"
+    },
+    "Jong PSV": {
+      "pt": "Jong PSV",
+      "g": "m"
+    },
+    "KAA Gent": {
+      "pt": "Gent",
+      "g": "m"
+    },
+    "Karlsruher": {
+      "pt": "Karlsruher",
+      "g": "m"
+    },
+    "LAFC": {
+      "pt": "Los Angeles FC",
+      "g": "m"
+    },
+    "Leyton Orient": {
+      "pt": "Leyton Orient",
+      "g": "m"
+    },
+    "Lokomotiva": {
+      "pt": "Lokomotiva",
+      "g": "m"
+    },
+    "Lommel United": {
+      "pt": "Lommel United",
+      "g": "m"
+    },
+    "Neom": {
+      "pt": "Neom",
+      "g": "m"
+    },
+    "Newell's Old Boys": {
+      "pt": "Newell's Old Boys",
+      "g": "m"
+    },
+    "Nordstern Basel": {
+      "pt": "Nordstern Basel",
+      "g": "m"
+    },
+    "Northampton Town": {
+      "pt": "Northampton Town",
+      "g": "m"
+    },
+    "Norwich City": {
+      "pt": "Norwich City",
+      "g": "m"
+    },
+    "Notts County": {
+      "pt": "Notts County",
+      "g": "m"
+    },
+    "Novara": {
+      "pt": "Novara",
+      "g": "m"
+    },
+    "Nuremberg": {
+      "pt": "Nuremberga",
+      "g": "m"
+    },
+    "OH Leuven": {
+      "pt": "OH Leuven",
+      "g": "m"
+    },
+    "Olhanense": {
+      "pt": "Olhanense",
+      "g": "m"
+    },
+    "Olimpija Ljubljana": {
+      "pt": "Olimpija Ljubljana",
+      "g": "m"
+    },
+    "Oxford United": {
+      "pt": "Oxford United",
+      "g": "m"
+    },
+    "Palermo": {
+      "pt": "Palermo",
+      "g": "m"
+    },
+    "Partizan": {
+      "pt": "Partizan",
+      "g": "m"
+    },
+    "Paços de Ferreira": {
+      "pt": "Paços de Ferreira",
+      "g": "m"
+    },
+    "Pescara": {
+      "pt": "Pescara",
+      "g": "m"
+    },
+    "Peñarol": {
+      "pt": "Peñarol",
+      "g": "m"
+    },
+    "Pumas UNAM": {
+      "pt": "Pumas UNAM",
+      "g": "m"
+    },
+    "RB Leipzig": {
+      "pt": "RB Leipzig",
+      "g": "m"
+    },
+    "Racing Club": {
+      "pt": "Racing",
+      "g": "m"
+    },
+    "Reading": {
+      "pt": "Reading",
+      "g": "m"
+    },
+    "Ribeirão": {
+      "pt": "Ribeirão",
+      "g": "m"
+    },
+    "Rio Ave": {
+      "pt": "Rio Ave",
+      "g": "m"
+    },
+    "Roeselare": {
+      "pt": "Roeselare",
+      "g": "m"
+    },
+    "Rubin Kazan": {
+      "pt": "Rubin Kazan",
+      "g": "m"
+    },
+    "Rustavi": {
+      "pt": "Rustavi",
+      "g": "m"
+    },
+    "Saprissa": {
+      "pt": "Saprissa",
+      "g": "m"
+    },
+    "Sheffield United": {
+      "pt": "Sheffield United",
+      "g": "m"
+    },
+    "Sheffield Wednesday": {
+      "pt": "Sheffield Wednesday",
+      "g": "m"
+    },
+    "Sorrento": {
+      "pt": "Sorrento",
+      "g": "m"
+    },
+    "Southport": {
+      "pt": "Southport",
+      "g": "m"
+    },
+    "Sparta Prague": {
+      "pt": "Sparta Prague",
+      "g": "m"
+    },
+    "Strømsgodset": {
+      "pt": "Strømsgodset",
+      "g": "m"
+    },
+    "TSG Hoffenheim": {
+      "pt": "TSG Hoffenheim",
+      "g": "m"
+    },
+    "Torino": {
+      "pt": "Torino",
+      "g": "m"
+    },
+    "Toronto FC": {
+      "pt": "Toronto FC",
+      "g": "m"
+    },
+    "Valencia Mestalla": {
+      "pt": "Valencia Mestalla",
+      "g": "m"
+    },
+    "Vancouver Whitecaps": {
+      "pt": "Vancouver Whitecaps",
+      "g": "m"
+    },
+    "VfB Stuttgart": {
+      "pt": "Estugarda",
+      "g": "m"
+    },
+    "VfL Bochum": {
+      "pt": "Bochum",
+      "g": "m"
+    },
+    "VfL Wolfsburg": {
+      "pt": "Wolfsburgo",
+      "g": "m"
+    },
+    "Vitesse": {
+      "pt": "Vitesse",
+      "g": "m"
+    },
+    "Werder Bremen": {
+      "pt": "Werder Bremen",
+      "g": "m"
+    },
+    "West Bromwich Albion": {
+      "pt": "West Bromwich Albion",
+      "g": "m"
+    },
+    "Wigan Athletic": {
+      "pt": "Wigan Athletic",
+      "g": "m"
+    },
+    "Wolverhampton": {
+      "pt": "Wolverhampton",
+      "g": "m"
+    },
+    "İstanbul Başakşehir": {
+      "pt": "Istambul Başakşehir",
+      "g": "m"
+    },
+    "Heerenveen": {
+      "pt": "Heerenveen",
+      "g": "m"
+    },
+    "St. Pauli": {
+      "pt": "St. Pauli",
+      "g": "m"
+    },
+    "União de Leiria": {
+      "pt": "União de Leiria",
+      "g": "m"
+    }
+  },
+  "countries": {
+    "Canada": {
+      "pt": "Canadá",
+      "g": "m"
+    },
+    "Chile": {
+      "pt": "Chile",
+      "g": "m"
+    },
+    "Czech Republic": {
+      "pt": "Chéquia",
+      "g": "f"
+    },
+    "Gabon": {
+      "pt": "Gabão",
+      "g": "m"
+    },
+    "Georgia": {
+      "pt": "Geórgia",
+      "g": "f"
+    },
+    "Germany": {
+      "pt": "Alemanha",
+      "g": "f"
+    },
+    "Hungary": {
+      "pt": "Hungria",
+      "g": "f"
+    },
+    "Morocco": {
+      "pt": "Marrocos",
+      "g": "mp"
+    },
+    "Norway": {
+      "pt": "Noruega",
+      "g": "f"
+    },
+    "Serbia": {
+      "pt": "Sérvia",
+      "g": "f"
+    },
+    "Slovenia": {
+      "pt": "Eslovénia",
+      "g": "f"
+    },
+    "South Korea": {
+      "pt": "Coreia do Sul",
+      "g": "f"
+    },
+    "Sweden": {
+      "pt": "Suécia",
+      "g": "f"
+    },
+    "Turkey": {
+      "pt": "Turquia",
+      "g": "f"
+    },
+    "United States": {
+      "pt": "Estados Unidos",
+      "g": "mp"
+    }
+  },
+  "nationalities": {
+    "Canada": "canadiano",
+    "Chile": "chileno",
+    "Costa Rica": "costa-riquenho",
+    "Czech Republic": "checo",
+    "Gabon": "gabonês",
+    "Georgia": "georgiano",
+    "Germany": "alemão",
+    "Hungary": "húngaro",
+    "Morocco": "marroquino",
+    "Norway": "norueguês",
+    "Serbia": "sérvio",
+    "Slovenia": "esloveno",
+    "South Korea": "sul-coreano",
+    "Sweden": "sueco",
+    "Turkey": "turco",
+    "United States": "norte-americano"
+  },
+  "trophies": {
+    "Championnat d’Autriche": {
+      "pt": "campeonato austríaco",
+      "g": "m"
+    },
+    "Copa América": {
+      "pt": "Copa América",
+      "g": "f"
+    },
+    "Coppa Italia": {
+      "pt": "Taça de Itália",
+      "g": "f"
+    },
+    "Coupe du monde": {
+      "pt": "Mundial",
+      "g": "m"
+    },
+    "Euro": {
+      "pt": "Euro",
+      "g": "m"
+    },
+    "Ligue Conférence": {
+      "pt": "Liga Conferência",
+      "g": "f"
+    },
+    "Ligue des nations CONCACAF": {
+      "pt": "Liga das Nações da CONCACAF",
+      "g": "f"
+    },
+    "championnat de Belgique": {
+      "pt": "campeonato belga",
+      "g": "m"
+    },
+    "Eredivisie": {
+      "pt": "campeonato neerlandês",
+      "g": "m"
+    }
+  }
+}
