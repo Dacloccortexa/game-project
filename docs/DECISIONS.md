@@ -6,6 +6,9 @@ Décision de David. À l'ouverture, « Créer une partie » propose 2 équipes e
 ## [2026-10-12] Fin du bouton « Envoyer le journal des parties »
 Demande de David : la mesure anonyme remplace le journal envoyé à la main par les testeurs. Le bouton est retiré des Réglages et le journal n'est plus gardé sur le téléphone (l'ancien est effacé). Le déroulé de la partie en cours reste en mémoire : il alimente « Signaler une erreur » (réponses tapées) et le résumé anonyme de chaque carte.
 
+## [2026-10-12] Le Match : compétition affichée avant cinq indices
+David veut donner la compétition dès l'ouverture de la carte. Les cinq paliers restent à 5/4/3/2/1 points : score final, ville, phase, année, puis un dernier fait du match. Un entraîneur ou un buteur peut servir de dernier indice si sa présence est confirmée par une source. Pour ne pas inventer de nom sur les 203 fiches, les autres cartes donnent une des deux équipes au dernier palier, à partir du résultat déjà sourcé. Ce lot comprend 66 buteurs, un entraîneur et 136 noms d'équipe comme indices finaux. Les règles de réponse et de Tackle ne changent pas. Il faut tester la difficulté de ce nouvel ordre en partie et enrichir progressivement les 136 derniers indices.
+
 ## [2026-10-12] Mesure d'usage anonyme, sans suivi
 David veut savoir combien de parties sont jouées et à quel moment les joueurs répondent, sans « Autoriser le suivi » ni bandeau de consentement. Choix : TelemetryDeck (anonyme, identifiant aléatoire haché), pas Firebase ni kit TikTok. Code prêt, actif dès que l'App ID est renseigné ; politique de confidentialité mise à jour. Détail : `docs/APP_IOS.md`.
 
@@ -201,7 +204,6 @@ Suite de `docs/REVUE_CODE_2026-10-06.md` (validée par David). Testé (tests aut
 - L'équipe doit toujours trouver les deux équipes ; les règles de réponse, de passe, de pénalité et de Tackle restent celles du Match. Le chrono 30 + 15 secondes repart à chaque indice.
 - La compétition devient le premier indice à 5 points au lieu d'être affichée hors score avant cinq événements. L'année, auparavant cachée, devient le deuxième indice.
 - Mise en œuvre le 2 octobre : ville et lien source ajoutés aux 103 fiches ; écran et progression adaptés. Les anciens événements restent dans les données pour archivage, mais ne sont plus joués.
-
 
 ## [2026-10-01] Jamais deux manches de suite avec le même défi
 - Demande de David : le jeu suivant peut être n'importe lequel, mais pas le même que celui d'avant.

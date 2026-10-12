@@ -132,9 +132,10 @@ assert.equal(currentTackleStake(), 4);
 assert.equal(element('btn-tackle').disabled, true);
 
 reset('lematch');
-state.currentLmCard = {teams:['A','B'], clues:['Score final : 4–2','Ville : Moscou','Phase : Finale','Année : 2018','Coupe du monde']};
+state.currentLmCard = {competition:'Coupe du monde', teams:['A','B'], clues:['Score final : 4–2','Ville : Moscou','Phase : Finale','Année : 2018','Buteur du match : Kylian Mbappé']};
 state.lmRevealedCount = 1;
 renderLmClues();
+assert.equal(element('lm-competition').textContent, 'Coupe du monde');
 assert.equal(element('lm-event-list').children.length, 5);
 assert.equal(element('lm-event-list').children[0].children[2].children[0].textContent, 'Score final : 4–2');
 assert.equal(element('lm-event-list').children[1].children[2].children[0].textContent, 'Indice à venir');
@@ -530,6 +531,17 @@ for (const [file, key] of [['transfert-cards.json', 'cards'], ['quisuisje-cards.
   const matchKeys = new Set();
   for (const [index, card] of cards.entries()) {
     assert.ok(card.competition && Number.isInteger(card.year) && card.city && card.city_source_url, card.id);
+    assert.ok(card.final_clue && ['team', 'scorer', 'coach'].includes(card.final_clue.type), card.id);
+    assert.ok(/^https:\/\//.test(card.final_clue.source_url), card.id);
+    if (card.final_clue.type === 'team') {
+      assert.ok(card.teams[card.final_clue.team_index], card.id);
+      assert.ok(card.source_urls.includes(card.final_clue.source_url), card.id);
+    } else {
+      assert.ok(card.final_clue.name && card.final_clue.name.length > 3, card.id);
+      if (card.final_clue.type === 'scorer') {
+        assert.ok(card.events.some(event => event.source === card.final_clue.source_url), card.id);
+      }
+    }
     assert.equal(card.score.length, 2, card.id);
     assert.ok(['Final', 'Semi-final', 'Tour final', 'Phase de groupes', 'Deuxième tour', 'Huitième de finale', 'Quart de finale', 'Demi-finale', 'Finale', 'Phase de ligue'].includes(card.round) || /^Journée \d+$/.test(card.round), card.id);
     const signature = JSON.stringify([card.competition, card.year, card.score, card.city, card.round]);
@@ -545,6 +557,7 @@ for (const [file, key] of [['transfert-cards.json', 'cards'], ['quisuisje-cards.
     assert.equal(ptCards[index].id, card.id);
     assert.equal(ptCards[index].city, citiesPt[card.city].pt, card.id);
     assert.equal(ptCards[index].city_source_url, card.city_source_url, card.id);
+    assert.deepEqual(ptCards[index].final_clue, card.final_clue, card.id);
   }
   assert.equal(matchKeys.size, 100);
 }

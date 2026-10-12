@@ -96,13 +96,13 @@ Les cinq indices d'une carte sont préparés et sourcés **dans l'ordre propre �
 
 ## Cinquième mini-jeu : Le Match
 
-Une carte vise un match de football. Une seule équipe active cherche à nommer **les deux équipes du match**, acceptées dans n'importe quel ordre. Elle reçoit **cinq indices dans cet ordre fixe** :
+Une carte vise un match de football. Une seule équipe active cherche à nommer **les deux équipes du match**, acceptées dans n'importe quel ordre. **La compétition est affichée dès le départ**, sans année ni édition. Elle reçoit ensuite cinq indices :
 
 1. **Le score final** — 5 points, sans nom d'équipe ; après prolongation si elle a eu lieu, hors tirs au but.
 2. **La ville où le match s'est joué** — 4 points.
 3. **La phase de la compétition** — 3 points (finale, demi-finale, autre tour de coupe ou journée de championnat ; ce n'est pas le nom du stade).
 4. **L'année du match** — 2 points.
-5. **La compétition** — 1 point (par exemple « Coupe du monde »), sans édition.
+5. **Un fait identifiable du match** — 1 point : un buteur ou un entraîneur présent sur ce match, si une source le confirme ; sinon, le nom d'une des deux équipes. Ce dernier indice est renseigné et sourcé dans chaque fiche.
 
 L'équipe active peut répondre ou passer après chaque indice. Les autres équipes ne participent que par le Tackle. Le délai commun de 30 secondes de priorité puis 5 secondes de course repart (passer ouvre aussi 5 s de Tackle aux adversaires) à chaque nouvel indice.
 
@@ -110,7 +110,7 @@ L'équipe active peut répondre ou passer après chaque indice. Les autres équi
 
 Une mauvaise réponse de l'équipe active retire **1 point** de son score général puis révèle l'indice suivant ; une passe révèle l'indice suivant sans pénalité. Après une mauvaise réponse ou une passe au cinquième indice, la carte se termine et les deux équipes du match sont révélées. Les pénalités de mauvaises réponses se cumulent.
 
-**Statut au 6 octobre 2026 :** après les essais en famille puis entre amis, l'ordre des indices est score → ville → phase → année → compétition. Les 103 fiches initiales gardent leurs anciens événements en archive ; 100 matchs marquants supplémentaires issus des coupes et des championnats portent le total à 203 cartes. Chaque carte possède un score et une ville sourcés. Le Match reste sélectionné par défaut. La difficulté de ce nouvel ordre doit être retestée en partie.
+**Statut au 12 octobre 2026 :** après les essais en famille puis entre amis, la compétition est affichée dès le départ ; les indices sont score → ville → phase → année → fait du match. Les 103 fiches initiales gardent leurs anciens événements en archive ; 100 matchs marquants supplémentaires issus des coupes et des championnats portent le total à 203 cartes. Chaque carte possède un score, une ville et un cinquième indice sourcés. Le Match reste sélectionné par défaut. La difficulté de ce nouvel ordre doit être retestée en partie.
 
 ## Contenus et difficulté
 

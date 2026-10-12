@@ -1915,6 +1915,7 @@
   }
   .lm-title { display: grid; place-items: center; min-height: 50px; margin: 0 10% 4px; background: url("assets/ui/le-match/title-plate.svg") center / 100% 100% no-repeat; }
   .lm-title span { font-family: var(--font-cond); font-weight: 700; font-size: clamp(28px, 8vw, 36px); line-height: 1; letter-spacing: .04em; text-transform: uppercase; text-shadow: 0 2px 7px #000; }
+  .lm-competition { display: inline-block; max-width: 100%; margin: 0 auto 7px; padding: 4px 12px; border: 1px solid #e9bc5f; border-radius: 5px; background: rgba(7, 22, 39, .85); color: #ffdf8a; font-family: var(--font-cond); font-size: clamp(13px, 3.6vw, 17px); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
   .lm-unknown { display: flex; justify-content: center; align-items: center; gap: 12px; min-height: 36px; margin: 0 0 6px; }
   .lm-unknown b { color: #fff; font-family: var(--font-cond); font-weight: 700; font-size: 30px; line-height: 1; text-shadow: 0 0 14px #6ebdff; }
   .lm-unknown span { font-family: var(--font-cond); font-weight: 700; font-size: 16px; text-transform: uppercase; color: #c9d3de; text-shadow: 0 2px 6px #000; }
@@ -2128,7 +2129,7 @@
             <li>Les indices arrivent un par un : <b>5, 4, 3, 2 puis 1 point</b>.</li>
             <li>Erreur : <b>−1 point</b> et indice suivant. Passer ne coûte rien, mais ouvre le Tackle.</li>
             <li>Un adversaire qui tacle gagne ou perd les points de l'indice. Raté : la main revient, <b>un seul tackle par carte</b>.</li>
-            <li>Le Match : il faut trouver <b>les deux équipes</b>.</li>
+            <li>Le Match : la compétition est donnée, il faut trouver <b>les deux équipes</b>.</li>
           </ul>
         </article>
         <article class="rule-slide" aria-label="4 / 4">
@@ -2176,7 +2177,7 @@
             <li>As pistas aparecem uma a uma: <b>5, 4, 3, 2 e depois 1 ponto</b>.</li>
             <li>Erro: <b>−1 ponto</b> e pista seguinte. Saltar não custa nada, mas abre o tackle.</li>
             <li>Um adversário que faz tackle ganha ou perde os pontos da pista. Se falhar, a vez volta e <b>só há um tackle por carta</b>.</li>
-            <li>O Jogo: é preciso acertar nas <b>duas equipas</b>.</li>
+            <li>O Jogo: a competição é dada, é preciso acertar nas <b>duas equipas</b>.</li>
           </ul>
         </article>
         <article class="rule-slide" aria-label="4 / 4">
@@ -2559,6 +2560,7 @@
     <!-- Le Match : identité « tableau d'affichage » (assets/ui/le-match/, docs/UI_LE_MATCH_FLOW.md) -->
     <div class="lm-board hidden-screen" id="stage-lm">
       <h3 class="lm-title"><span>Le Match</span></h3>
+      <div class="lm-competition" id="lm-competition"></div>
       <div class="lm-unknown" id="lm-unknown"><b id="lm-team-1">?</b><span>vs</span><b id="lm-team-2">?</b></div>
       <ol class="lm-timeline" id="lm-event-list" aria-label="Indices du match"></ol>
     </div>
@@ -3112,7 +3114,7 @@
   }
 
   // ---------- Content: cartes Le Match ----------
-  // Les indices sont dérivés de cinq faits vérifiés pour chaque match.
+  // La compétition est visible dès le départ ; les cinq indices restent cachés par palier.
   // Voir docs/LE_MATCH_CARDS_REVIEW.md et docs/TODO.md.
   var LM_CARDS = [];
   var LM_READY = false;
@@ -3120,10 +3122,18 @@
   function loadLmCards() {
     return loadJson("src/data/lematch-cards.json", function (data) {
         LM_CARDS = (data.cards || []).map(function (c) {
-          if (!c.competition || !c.year || !Array.isArray(c.score) || c.score.length !== 2 || !c.city || !c.round) {
+          if (!c.competition || !c.year || !Array.isArray(c.score) || c.score.length !== 2 || !c.city || !c.round || !c.final_clue ||
+              ["team", "coach", "scorer"].indexOf(c.final_clue.type) === -1 ||
+              (c.final_clue.type === "team" ? !c.teams[c.final_clue.team_index] : !c.final_clue.name)) {
             throw new Error("Fiche Le Match incomplète : " + (c.id || "sans identifiant"));
           }
           var phase = c.round === "Final" ? L("Finale", "Final") : c.round === "Semi-final" ? L("Demi-finale", "Meia-final") : c.round;
+          var finalClue = c.final_clue;
+          var finalText = finalClue.type === "team"
+            ? L("Une des équipes : ", "Uma das equipas: ") + c.teams[finalClue.team_index]
+            : finalClue.type === "coach"
+              ? L("Entraîneur : ", "Treinador: ") + finalClue.name
+              : L("Buteur du match : ", "Marcador do jogo: ") + finalClue.name;
           return {
             id: c.id,
             competition: c.competition,
@@ -3134,7 +3144,7 @@
               L("Ville : ", "Cidade: ") + c.city,
               L("Phase : ", "Fase: ") + phase,
               L("Année : ", "Ano: ") + c.year,
-              c.competition
+              finalText
             ]
           };
         });
@@ -3412,7 +3422,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.12-2108";
+  var APP_VERSION = "2026.10.12-2116";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -5820,7 +5830,7 @@
     startTackleWindow();
   }
 
-  // ---------- Le Match : score, ville, phase, année, compétition ----------
+  // ---------- Le Match : compétition affichée, puis score, ville, phase, année et indice final ----------
   function beginLmTurn() {
     setActiveMinigameUI("lematch");
     state.cardEnded = false;
@@ -5841,6 +5851,7 @@
   // Les indices passés restent visibles ; le courant porte son palier, les suivants restent cachés.
   function renderLmClues() {
     var card = state.currentLmCard;
+    el("lm-competition").textContent = card.competition;
     if (!state.cardEnded) {
       el("lm-unknown").classList.remove("revealed");
       el("lm-team-1").textContent = "?";
