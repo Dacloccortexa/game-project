@@ -3414,7 +3414,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.12-1215";
+  var APP_VERSION = "2026.10.12-1221";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3578,7 +3578,7 @@
   // tapé. Un identifiant aléatoire créé sur le téléphone est haché (SHA-256 + sel) avant l'envoi : il sert
   // seulement à compter les joueurs et leur retour. Le site web est envoyé en « mode test » (testeurs).
   // Désactivé tant que TD_APP_ID est vide (identifiant fourni par TelemetryDeck).
-  var TD_APP_ID = "";
+  var TD_APP_ID = "D8242A45-B7F5-4685-8140-A01FB8EFB32F";
   var TD_SALT = "tackle-lafamivy-2026";
   var TD_ENDPOINT = "https://nom.telemetrydeck.com/v2/";
   var tdQueue = [], tdTimer = null, tdUser = null;

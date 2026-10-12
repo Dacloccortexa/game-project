@@ -33,7 +33,7 @@ Ces fonctions natives comptent aussi pour la relecture Apple (règle 4.2 « fonc
 
 ## Mesure d'usage anonyme (TelemetryDeck)
 
-Décision de David (2026-10-12) : savoir combien de parties sont jouées et à quel indice les cartes sont trouvées, **sans suivi** (pas de fenêtre « Autoriser le suivi », pas de consentement à demander selon l'éditeur). Code prêt dans `index.html` (`tdSignal`), désactivé tant que `TD_APP_ID` est vide.
+Décision de David (2026-10-12) : savoir combien de parties sont jouées et à quel indice les cartes sont trouvées, **sans suivi** (pas de fenêtre « Autoriser le suivi », pas de consentement à demander selon l'éditeur). Code dans `index.html` (`tdSignal`). **Actif depuis le 2026-10-12** (App ID TelemetryDeck renseigné dans `TD_APP_ID`).
 
 À faire par David : créer un compte gratuit sur [telemetrydeck.com](https://telemetrydeck.com) (100 000 événements/mois gratuits, environ 5 000 parties), créer l'app « TACKLE » et donner son **App ID** (pas secret) à Claude, qui le colle dans `TD_APP_ID`.
 
