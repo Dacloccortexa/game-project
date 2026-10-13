@@ -8769,12 +8769,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "Fui colega de equipa de Harry Kane num clube.",
+          "text": "Fui colega de equipa de Franck Ribéry num clube.",
           "source": "https://en.wikipedia.org/w/index.php?title=Manuel_Neuer&oldid=1378216051",
           "fact": {
-            "name": "Harry Kane",
+            "name": "Franck Ribéry",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "teammate_source": "https://en.wikipedia.org/wiki/Franck_Ribéry",
             "club_only": true
           }
         },
@@ -10052,12 +10052,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "Fui colega de equipa de Harry Kane num clube.",
+          "text": "Fui colega de equipa de Kevin De Bruyne num clube.",
           "source": "https://en.wikipedia.org/w/index.php?title=Leroy_San%C3%A9&oldid=1371965372",
           "fact": {
-            "name": "Harry Kane",
-            "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "name": "Kevin De Bruyne",
+            "shared_club": "Manchester City",
+            "teammate_source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
             "club_only": true
           }
         },
@@ -10113,12 +10113,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "Fui colega de equipa de Harry Kane num clube.",
+          "text": "Fui colega de equipa de Mesut Özil num clube.",
           "source": "https://en.wikipedia.org/w/index.php?title=Serge_Gnabry&oldid=1378649208",
           "fact": {
-            "name": "Harry Kane",
-            "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "name": "Mesut Özil",
+            "shared_club": "Arsenal",
+            "teammate_source": "https://en.wikipedia.org/wiki/Mesut_Özil",
             "club_only": true
           }
         },
@@ -10174,12 +10174,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "Fui colega de equipa de Harry Kane num clube.",
+          "text": "Fui colega de equipa de Thomas Müller num clube.",
           "source": "https://en.wikipedia.org/w/index.php?title=Joshua_Kimmich&oldid=1377085904",
           "fact": {
-            "name": "Harry Kane",
+            "name": "Thomas Müller",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "teammate_source": "https://en.wikipedia.org/wiki/Thomas_Müller",
             "club_only": true
           }
         },
@@ -10235,12 +10235,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "Fui colega de equipa de Harry Kane num clube.",
+          "text": "Fui colega de equipa de Sadio Mané num clube.",
           "source": "https://en.wikipedia.org/w/index.php?title=Leon_Goretzka&oldid=1372789405",
           "fact": {
-            "name": "Harry Kane",
+            "name": "Sadio Mané",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "teammate_source": "https://en.wikipedia.org/wiki/Sadio_Mané",
             "club_only": true
           }
         },
@@ -10735,12 +10735,12 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "Fui colega de equipa de Harry Kane num clube.",
+          "text": "Fui colega de equipa de Cristiano Ronaldo num clube.",
           "source": "https://en.wikipedia.org/w/index.php?title=Matthijs_de_Ligt&oldid=1377871286",
           "fact": {
-            "name": "Harry Kane",
-            "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "name": "Cristiano Ronaldo",
+            "shared_club": "Juventus",
+            "teammate_source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
             "club_only": true
           }
         },
@@ -10969,12 +10969,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "Fui colega de equipa de Harry Kane num clube.",
+          "text": "Fui colega de equipa de Lautaro Martínez num clube.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ivan_Peri%C5%A1i%C4%87&oldid=1379105301",
           "fact": {
-            "name": "Harry Kane",
-            "shared_club": "Tottenham",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "name": "Lautaro Martínez",
+            "shared_club": "Inter Milan",
+            "teammate_source": "https://en.wikipedia.org/wiki/Lautaro_Martínez",
             "club_only": true
           }
         },
@@ -11761,12 +11761,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "Fui colega de equipa de Harry Kane num clube.",
+          "text": "Fui colega de equipa de Robert Lewandowski num clube.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alphonso_Davies&oldid=1378050851",
           "fact": {
-            "name": "Harry Kane",
+            "name": "Robert Lewandowski",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "teammate_source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
             "club_only": true
           }
         },

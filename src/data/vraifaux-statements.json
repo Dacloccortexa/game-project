@@ -8319,7 +8319,7 @@
     },
     {
       "id": "lf-v-0458",
-      "affirmation": "Blaise Matuidi a joué pour Troyes avant Paris Saint-Germain.",
+      "affirmation": "Blaise Matuidi a joué pour Troyes avant PSG.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -8328,14 +8328,14 @@
       "groupe_exclusif": "ordre_clubs:Blaise Matuidi",
       "valeur_affirmee": [
         "Troyes",
-        "Paris Saint-Germain"
+        "PSG"
       ],
       "valeur_source": {
         "Troyes": [
           2004,
           2007
         ],
-        "Paris Saint-Germain": [
+        "PSG": [
           2011,
           2017
         ]
@@ -8409,7 +8409,7 @@
     },
     {
       "id": "lf-v-0461",
-      "affirmation": "Gary Lineker a joué pour Leicester City avant Barcelona.",
+      "affirmation": "Gary Lineker a joué pour Leicester City avant FC Barcelone.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -8418,14 +8418,14 @@
       "groupe_exclusif": "ordre_clubs:Gary Lineker",
       "valeur_affirmee": [
         "Leicester City",
-        "Barcelona"
+        "FC Barcelone"
       ],
       "valeur_source": {
         "Leicester City": [
           1978,
           1985
         ],
-        "Barcelona": [
+        "FC Barcelone": [
           1986,
           1989
         ]
@@ -8709,7 +8709,7 @@
     },
     {
       "id": "lf-v-0471",
-      "affirmation": "Pedro Rodríguez a joué pour Barcelona avant Lazio.",
+      "affirmation": "Pedro Rodríguez a joué pour FC Barcelone avant Lazio.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -8717,11 +8717,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:Pedro Rodríguez",
       "valeur_affirmee": [
-        "Barcelona",
+        "FC Barcelone",
         "Lazio"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2008,
           2015
         ],
@@ -8769,7 +8769,7 @@
     },
     {
       "id": "lf-v-0473",
-      "affirmation": "Gary Lineker a joué pour Leicester City avant Tottenham Hotspur.",
+      "affirmation": "Gary Lineker a joué pour Leicester City avant Tottenham.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -8778,14 +8778,14 @@
       "groupe_exclusif": "ordre_clubs:Gary Lineker",
       "valeur_affirmee": [
         "Leicester City",
-        "Tottenham Hotspur"
+        "Tottenham"
       ],
       "valeur_source": {
         "Leicester City": [
           1978,
           1985
         ],
-        "Tottenham Hotspur": [
+        "Tottenham": [
           1989,
           1992
         ]
@@ -9189,7 +9189,7 @@
     },
     {
       "id": "lf-v-0487",
-      "affirmation": "João Moutinho a joué pour Porto avant Wolverhampton Wanderers.",
+      "affirmation": "João Moutinho a joué pour Porto avant Wolverhampton.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -9198,14 +9198,14 @@
       "groupe_exclusif": "ordre_clubs:João Moutinho",
       "valeur_affirmee": [
         "Porto",
-        "Wolverhampton Wanderers"
+        "Wolverhampton"
       ],
       "valeur_source": {
         "Porto": [
           2010,
           2013
         ],
-        "Wolverhampton Wanderers": [
+        "Wolverhampton": [
           2018,
           2023
         ]
@@ -9249,7 +9249,7 @@
     },
     {
       "id": "lf-v-0489",
-      "affirmation": "Sergio Agüero a joué pour Independiente avant Barcelona.",
+      "affirmation": "Sergio Agüero a joué pour Independiente avant FC Barcelone.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -9258,14 +9258,14 @@
       "groupe_exclusif": "ordre_clubs:Sergio Agüero",
       "valeur_affirmee": [
         "Independiente",
-        "Barcelona"
+        "FC Barcelone"
       ],
       "valeur_source": {
         "Independiente": [
           2003,
           2006
         ],
-        "Barcelona": [
+        "FC Barcelone": [
           2021,
           2021
         ]
@@ -9579,7 +9579,7 @@
     },
     {
       "id": "lf-v-0500",
-      "affirmation": "Lionel Messi a joué pour Barcelona avant Inter Miami.",
+      "affirmation": "Lionel Messi a joué pour FC Barcelone avant Inter Miami.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -9587,11 +9587,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:Lionel Messi",
       "valeur_affirmee": [
-        "Barcelona",
+        "FC Barcelone",
         "Inter Miami"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2004,
           2021
         ],
@@ -9669,7 +9669,7 @@
     },
     {
       "id": "lf-v-0503",
-      "affirmation": "João Moutinho a joué pour Sporting CP avant Wolverhampton Wanderers.",
+      "affirmation": "João Moutinho a joué pour Sporting CP avant Wolverhampton.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -9678,14 +9678,14 @@
       "groupe_exclusif": "ordre_clubs:João Moutinho",
       "valeur_affirmee": [
         "Sporting CP",
-        "Wolverhampton Wanderers"
+        "Wolverhampton"
       ],
       "valeur_source": {
         "Sporting CP": [
           2004,
           2010
         ],
-        "Wolverhampton Wanderers": [
+        "Wolverhampton": [
           2018,
           2023
         ]
@@ -9699,7 +9699,7 @@
     },
     {
       "id": "lf-v-0504",
-      "affirmation": "Sergio Agüero a joué pour Atlético Madrid avant Barcelona.",
+      "affirmation": "Sergio Agüero a joué pour Atlético Madrid avant FC Barcelone.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -9708,14 +9708,14 @@
       "groupe_exclusif": "ordre_clubs:Sergio Agüero",
       "valeur_affirmee": [
         "Atlético Madrid",
-        "Barcelona"
+        "FC Barcelone"
       ],
       "valeur_source": {
         "Atlético Madrid": [
           2006,
           2011
         ],
-        "Barcelona": [
+        "FC Barcelone": [
           2021,
           2021
         ]
@@ -9759,7 +9759,7 @@
     },
     {
       "id": "lf-v-0506",
-      "affirmation": "Gary Lineker a joué pour Everton avant Tottenham Hotspur.",
+      "affirmation": "Gary Lineker a joué pour Everton avant Tottenham.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -9768,14 +9768,14 @@
       "groupe_exclusif": "ordre_clubs:Gary Lineker",
       "valeur_affirmee": [
         "Everton",
-        "Tottenham Hotspur"
+        "Tottenham"
       ],
       "valeur_source": {
         "Everton": [
           1985,
           1986
         ],
-        "Tottenham Hotspur": [
+        "Tottenham": [
           1989,
           1992
         ]
@@ -9999,7 +9999,7 @@
     },
     {
       "id": "lf-v-0514",
-      "affirmation": "Andrés Iniesta a joué pour Barcelona avant Emirates.",
+      "affirmation": "Andrés Iniesta a joué pour FC Barcelone avant Emirates.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -10007,11 +10007,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:Andrés Iniesta",
       "valeur_affirmee": [
-        "Barcelona",
+        "FC Barcelone",
         "Emirates"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2002,
           2018
         ],
@@ -10059,7 +10059,7 @@
     },
     {
       "id": "lf-v-0516",
-      "affirmation": "Cesc Fàbregas a joué pour Barcelona avant Como.",
+      "affirmation": "Cesc Fàbregas a joué pour FC Barcelone avant Como.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -10067,11 +10067,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:Cesc Fàbregas",
       "valeur_affirmee": [
-        "Barcelona",
+        "FC Barcelone",
         "Como"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2011,
           2014
         ],
@@ -10089,7 +10089,7 @@
     },
     {
       "id": "lf-v-0517",
-      "affirmation": "Joaquín Sánchez a joué pour Valencia avant Fiorentina.",
+      "affirmation": "Joaquín Sánchez a joué pour Valence avant Fiorentina.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -10097,11 +10097,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:Joaquín Sánchez",
       "valeur_affirmee": [
-        "Valencia",
+        "Valence",
         "Fiorentina"
       ],
       "valeur_source": {
-        "Valencia": [
+        "Valence": [
           2006,
           2011
         ],
@@ -10239,7 +10239,7 @@
     },
     {
       "id": "lf-v-0522",
-      "affirmation": "Neymar a joué pour Barcelona avant Al-Hilal.",
+      "affirmation": "Neymar a joué pour FC Barcelone avant Al-Hilal.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -10247,11 +10247,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:Neymar",
       "valeur_affirmee": [
-        "Barcelona",
+        "FC Barcelone",
         "Al-Hilal"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2013,
           2017
         ],
@@ -10449,7 +10449,7 @@
     },
     {
       "id": "lf-v-0529",
-      "affirmation": "Gary Lineker a joué pour Barcelona avant Nagoya Grampus.",
+      "affirmation": "Gary Lineker a joué pour FC Barcelone avant Nagoya Grampus.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -10457,11 +10457,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:Gary Lineker",
       "valeur_affirmee": [
-        "Barcelona",
+        "FC Barcelone",
         "Nagoya Grampus"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           1986,
           1989
         ],
@@ -10479,7 +10479,7 @@
     },
     {
       "id": "lf-v-0530",
-      "affirmation": "David Silva a joué pour Valencia avant Real Sociedad.",
+      "affirmation": "David Silva a joué pour Valence avant Real Sociedad.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -10487,11 +10487,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:David Silva",
       "valeur_affirmee": [
-        "Valencia",
+        "Valence",
         "Real Sociedad"
       ],
       "valeur_source": {
-        "Valencia": [
+        "Valence": [
           2004,
           2010
         ],
@@ -10629,7 +10629,7 @@
     },
     {
       "id": "lf-v-0535",
-      "affirmation": "Blaise Matuidi a joué pour Paris Saint-Germain avant Inter Miami.",
+      "affirmation": "Blaise Matuidi a joué pour PSG avant Inter Miami.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -10637,11 +10637,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:Blaise Matuidi",
       "valeur_affirmee": [
-        "Paris Saint-Germain",
+        "PSG",
         "Inter Miami"
       ],
       "valeur_source": {
-        "Paris Saint-Germain": [
+        "PSG": [
           2011,
           2017
         ],
@@ -10689,7 +10689,7 @@
     },
     {
       "id": "lf-v-0537",
-      "affirmation": "Gerard Piqué a joué pour Zaragoza avant Barcelona.",
+      "affirmation": "Gerard Piqué a joué pour Real Saragosse avant FC Barcelone.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -10697,15 +10697,15 @@
       ],
       "groupe_exclusif": "ordre_clubs:Gerard Piqué",
       "valeur_affirmee": [
-        "Zaragoza",
-        "Barcelona"
+        "Real Saragosse",
+        "FC Barcelone"
       ],
       "valeur_source": {
-        "Zaragoza": [
+        "Real Saragosse": [
           2006,
           2007
         ],
-        "Barcelona": [
+        "FC Barcelone": [
           2008,
           2022
         ]
@@ -10869,7 +10869,7 @@
     },
     {
       "id": "lf-v-0543",
-      "affirmation": "Pedro Rodríguez a joué pour Barcelona avant Roma.",
+      "affirmation": "Pedro Rodríguez a joué pour FC Barcelone avant AS Rome.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -10877,15 +10877,15 @@
       ],
       "groupe_exclusif": "ordre_clubs:Pedro Rodríguez",
       "valeur_affirmee": [
-        "Barcelona",
-        "Roma"
+        "FC Barcelone",
+        "AS Rome"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2008,
           2015
         ],
-        "Roma": [
+        "AS Rome": [
           2020,
           2021
         ]
@@ -29769,7 +29769,7 @@
     },
     {
       "id": "lf-f-0458",
-      "affirmation": "Blaise Matuidi a joué pour Paris Saint-Germain avant Troyes.",
+      "affirmation": "Blaise Matuidi a joué pour PSG avant Troyes.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -29777,7 +29777,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:Blaise Matuidi",
       "valeur_affirmee": [
-        "Paris Saint-Germain",
+        "PSG",
         "Troyes"
       ],
       "valeur_source": {
@@ -29785,7 +29785,7 @@
           2004,
           2007
         ],
-        "Paris Saint-Germain": [
+        "PSG": [
           2011,
           2017
         ]
@@ -29859,7 +29859,7 @@
     },
     {
       "id": "lf-f-0461",
-      "affirmation": "Gary Lineker a joué pour Barcelona avant Leicester City.",
+      "affirmation": "Gary Lineker a joué pour FC Barcelone avant Leicester City.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -29867,7 +29867,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:Gary Lineker",
       "valeur_affirmee": [
-        "Barcelona",
+        "FC Barcelone",
         "Leicester City"
       ],
       "valeur_source": {
@@ -29875,7 +29875,7 @@
           1978,
           1985
         ],
-        "Barcelona": [
+        "FC Barcelone": [
           1986,
           1989
         ]
@@ -30159,7 +30159,7 @@
     },
     {
       "id": "lf-f-0471",
-      "affirmation": "Pedro Rodríguez a joué pour Lazio avant Barcelona.",
+      "affirmation": "Pedro Rodríguez a joué pour Lazio avant FC Barcelone.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -30168,10 +30168,10 @@
       "groupe_exclusif": "ordre_clubs:Pedro Rodríguez",
       "valeur_affirmee": [
         "Lazio",
-        "Barcelona"
+        "FC Barcelone"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2008,
           2015
         ],
@@ -30219,7 +30219,7 @@
     },
     {
       "id": "lf-f-0473",
-      "affirmation": "Gary Lineker a joué pour Tottenham Hotspur avant Leicester City.",
+      "affirmation": "Gary Lineker a joué pour Tottenham avant Leicester City.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -30227,7 +30227,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:Gary Lineker",
       "valeur_affirmee": [
-        "Tottenham Hotspur",
+        "Tottenham",
         "Leicester City"
       ],
       "valeur_source": {
@@ -30235,7 +30235,7 @@
           1978,
           1985
         ],
-        "Tottenham Hotspur": [
+        "Tottenham": [
           1989,
           1992
         ]
@@ -30639,7 +30639,7 @@
     },
     {
       "id": "lf-f-0487",
-      "affirmation": "João Moutinho a joué pour Wolverhampton Wanderers avant Porto.",
+      "affirmation": "João Moutinho a joué pour Wolverhampton avant Porto.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -30647,7 +30647,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:João Moutinho",
       "valeur_affirmee": [
-        "Wolverhampton Wanderers",
+        "Wolverhampton",
         "Porto"
       ],
       "valeur_source": {
@@ -30655,7 +30655,7 @@
           2010,
           2013
         ],
-        "Wolverhampton Wanderers": [
+        "Wolverhampton": [
           2018,
           2023
         ]
@@ -30699,7 +30699,7 @@
     },
     {
       "id": "lf-f-0489",
-      "affirmation": "Sergio Agüero a joué pour Barcelona avant Independiente.",
+      "affirmation": "Sergio Agüero a joué pour FC Barcelone avant Independiente.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -30707,7 +30707,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:Sergio Agüero",
       "valeur_affirmee": [
-        "Barcelona",
+        "FC Barcelone",
         "Independiente"
       ],
       "valeur_source": {
@@ -30715,7 +30715,7 @@
           2003,
           2006
         ],
-        "Barcelona": [
+        "FC Barcelone": [
           2021,
           2021
         ]
@@ -31029,7 +31029,7 @@
     },
     {
       "id": "lf-f-0500",
-      "affirmation": "Lionel Messi a joué pour Inter Miami avant Barcelona.",
+      "affirmation": "Lionel Messi a joué pour Inter Miami avant FC Barcelone.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -31038,10 +31038,10 @@
       "groupe_exclusif": "ordre_clubs:Lionel Messi",
       "valeur_affirmee": [
         "Inter Miami",
-        "Barcelona"
+        "FC Barcelone"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2004,
           2021
         ],
@@ -31119,7 +31119,7 @@
     },
     {
       "id": "lf-f-0503",
-      "affirmation": "João Moutinho a joué pour Wolverhampton Wanderers avant Sporting CP.",
+      "affirmation": "João Moutinho a joué pour Wolverhampton avant Sporting CP.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -31127,7 +31127,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:João Moutinho",
       "valeur_affirmee": [
-        "Wolverhampton Wanderers",
+        "Wolverhampton",
         "Sporting CP"
       ],
       "valeur_source": {
@@ -31135,7 +31135,7 @@
           2004,
           2010
         ],
-        "Wolverhampton Wanderers": [
+        "Wolverhampton": [
           2018,
           2023
         ]
@@ -31149,7 +31149,7 @@
     },
     {
       "id": "lf-f-0504",
-      "affirmation": "Sergio Agüero a joué pour Barcelona avant Atlético Madrid.",
+      "affirmation": "Sergio Agüero a joué pour FC Barcelone avant Atlético Madrid.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -31157,7 +31157,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:Sergio Agüero",
       "valeur_affirmee": [
-        "Barcelona",
+        "FC Barcelone",
         "Atlético Madrid"
       ],
       "valeur_source": {
@@ -31165,7 +31165,7 @@
           2006,
           2011
         ],
-        "Barcelona": [
+        "FC Barcelone": [
           2021,
           2021
         ]
@@ -31209,7 +31209,7 @@
     },
     {
       "id": "lf-f-0506",
-      "affirmation": "Gary Lineker a joué pour Tottenham Hotspur avant Everton.",
+      "affirmation": "Gary Lineker a joué pour Tottenham avant Everton.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -31217,7 +31217,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:Gary Lineker",
       "valeur_affirmee": [
-        "Tottenham Hotspur",
+        "Tottenham",
         "Everton"
       ],
       "valeur_source": {
@@ -31225,7 +31225,7 @@
           1985,
           1986
         ],
-        "Tottenham Hotspur": [
+        "Tottenham": [
           1989,
           1992
         ]
@@ -31449,7 +31449,7 @@
     },
     {
       "id": "lf-f-0514",
-      "affirmation": "Andrés Iniesta a joué pour Emirates avant Barcelona.",
+      "affirmation": "Andrés Iniesta a joué pour Emirates avant FC Barcelone.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -31458,10 +31458,10 @@
       "groupe_exclusif": "ordre_clubs:Andrés Iniesta",
       "valeur_affirmee": [
         "Emirates",
-        "Barcelona"
+        "FC Barcelone"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2002,
           2018
         ],
@@ -31509,7 +31509,7 @@
     },
     {
       "id": "lf-f-0516",
-      "affirmation": "Cesc Fàbregas a joué pour Como avant Barcelona.",
+      "affirmation": "Cesc Fàbregas a joué pour Como avant FC Barcelone.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -31518,10 +31518,10 @@
       "groupe_exclusif": "ordre_clubs:Cesc Fàbregas",
       "valeur_affirmee": [
         "Como",
-        "Barcelona"
+        "FC Barcelone"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2011,
           2014
         ],
@@ -31539,7 +31539,7 @@
     },
     {
       "id": "lf-f-0517",
-      "affirmation": "Joaquín Sánchez a joué pour Fiorentina avant Valencia.",
+      "affirmation": "Joaquín Sánchez a joué pour Fiorentina avant Valence.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -31548,10 +31548,10 @@
       "groupe_exclusif": "ordre_clubs:Joaquín Sánchez",
       "valeur_affirmee": [
         "Fiorentina",
-        "Valencia"
+        "Valence"
       ],
       "valeur_source": {
-        "Valencia": [
+        "Valence": [
           2006,
           2011
         ],
@@ -31689,7 +31689,7 @@
     },
     {
       "id": "lf-f-0522",
-      "affirmation": "Neymar a joué pour Al-Hilal avant Barcelona.",
+      "affirmation": "Neymar a joué pour Al-Hilal avant FC Barcelone.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -31698,10 +31698,10 @@
       "groupe_exclusif": "ordre_clubs:Neymar",
       "valeur_affirmee": [
         "Al-Hilal",
-        "Barcelona"
+        "FC Barcelone"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2013,
           2017
         ],
@@ -31899,7 +31899,7 @@
     },
     {
       "id": "lf-f-0529",
-      "affirmation": "Gary Lineker a joué pour Nagoya Grampus avant Barcelona.",
+      "affirmation": "Gary Lineker a joué pour Nagoya Grampus avant FC Barcelone.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -31908,10 +31908,10 @@
       "groupe_exclusif": "ordre_clubs:Gary Lineker",
       "valeur_affirmee": [
         "Nagoya Grampus",
-        "Barcelona"
+        "FC Barcelone"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           1986,
           1989
         ],
@@ -31929,7 +31929,7 @@
     },
     {
       "id": "lf-f-0530",
-      "affirmation": "David Silva a joué pour Real Sociedad avant Valencia.",
+      "affirmation": "David Silva a joué pour Real Sociedad avant Valence.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -31938,10 +31938,10 @@
       "groupe_exclusif": "ordre_clubs:David Silva",
       "valeur_affirmee": [
         "Real Sociedad",
-        "Valencia"
+        "Valence"
       ],
       "valeur_source": {
-        "Valencia": [
+        "Valence": [
           2004,
           2010
         ],
@@ -32079,7 +32079,7 @@
     },
     {
       "id": "lf-f-0535",
-      "affirmation": "Blaise Matuidi a joué pour Inter Miami avant Paris Saint-Germain.",
+      "affirmation": "Blaise Matuidi a joué pour Inter Miami avant PSG.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -32088,10 +32088,10 @@
       "groupe_exclusif": "ordre_clubs:Blaise Matuidi",
       "valeur_affirmee": [
         "Inter Miami",
-        "Paris Saint-Germain"
+        "PSG"
       ],
       "valeur_source": {
-        "Paris Saint-Germain": [
+        "PSG": [
           2011,
           2017
         ],
@@ -32139,7 +32139,7 @@
     },
     {
       "id": "lf-f-0537",
-      "affirmation": "Gerard Piqué a joué pour Barcelona avant Zaragoza.",
+      "affirmation": "Gerard Piqué a joué pour FC Barcelone avant Real Saragosse.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -32147,15 +32147,15 @@
       ],
       "groupe_exclusif": "ordre_clubs:Gerard Piqué",
       "valeur_affirmee": [
-        "Barcelona",
-        "Zaragoza"
+        "FC Barcelone",
+        "Real Saragosse"
       ],
       "valeur_source": {
-        "Zaragoza": [
+        "Real Saragosse": [
           2006,
           2007
         ],
-        "Barcelona": [
+        "FC Barcelone": [
           2008,
           2022
         ]
@@ -32319,7 +32319,7 @@
     },
     {
       "id": "lf-f-0543",
-      "affirmation": "Pedro Rodríguez a joué pour Roma avant Barcelona.",
+      "affirmation": "Pedro Rodríguez a joué pour AS Rome avant FC Barcelone.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -32327,15 +32327,15 @@
       ],
       "groupe_exclusif": "ordre_clubs:Pedro Rodríguez",
       "valeur_affirmee": [
-        "Roma",
-        "Barcelona"
+        "AS Rome",
+        "FC Barcelone"
       ],
       "valeur_source": {
-        "Barcelona": [
+        "FC Barcelone": [
           2008,
           2015
         ],
-        "Roma": [
+        "AS Rome": [
           2020,
           2021
         ]
@@ -43749,7 +43749,7 @@
     },
     {
       "id": "lf-v-1029",
-      "affirmation": "Victor Osimhen a joué pour VfL Wolfsburg avant Lille.",
+      "affirmation": "Victor Osimhen a joué pour Wolfsburg avant Lille.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -43757,11 +43757,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:Victor Osimhen",
       "valeur_affirmee": [
-        "VfL Wolfsburg",
+        "Wolfsburg",
         "Lille"
       ],
       "valeur_source": {
-        "VfL Wolfsburg": [
+        "Wolfsburg": [
           2017,
           2019
         ],
@@ -43929,7 +43929,7 @@
     },
     {
       "id": "lf-v-1035",
-      "affirmation": "Federico Valverde a joué pour Peñarol avant Deportivo La Coruña.",
+      "affirmation": "Federico Valverde a joué pour Peñarol avant Deportivo La Corogne.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -43938,14 +43938,14 @@
       "groupe_exclusif": "ordre_clubs:Federico Valverde",
       "valeur_affirmee": [
         "Peñarol",
-        "Deportivo La Coruña"
+        "Deportivo La Corogne"
       ],
       "valeur_source": {
         "Peñarol": [
           2015,
           2016
         ],
-        "Deportivo La Coruña": [
+        "Deportivo La Corogne": [
           2017,
           2018
         ]
@@ -44680,7 +44680,7 @@
     },
     {
       "id": "lf-v-1060",
-      "affirmation": "Dominik Szoboszlai a joué pour FC Liefering avant Red Bull Salzburg.",
+      "affirmation": "Dominik Szoboszlai a joué pour FC Liefering avant RB Salzbourg.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -44689,14 +44689,14 @@
       "groupe_exclusif": "ordre_clubs:Dominik Szoboszlai",
       "valeur_affirmee": [
         "FC Liefering",
-        "Red Bull Salzburg"
+        "RB Salzbourg"
       ],
       "valeur_source": {
         "FC Liefering": [
           2017,
           2018
         ],
-        "Red Bull Salzburg": [
+        "RB Salzbourg": [
           2018,
           2021
         ]
@@ -45522,7 +45522,7 @@
     },
     {
       "id": "lf-v-1088",
-      "affirmation": "Ferran Torres a joué pour Valencia avant Manchester City.",
+      "affirmation": "Ferran Torres a joué pour Valence avant Manchester City.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -45530,11 +45530,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:Ferran Torres",
       "valeur_affirmee": [
-        "Valencia",
+        "Valence",
         "Manchester City"
       ],
       "valeur_source": {
-        "Valencia": [
+        "Valence": [
           2017,
           2020
         ],
@@ -45612,7 +45612,7 @@
     },
     {
       "id": "lf-v-1091",
-      "affirmation": "Yunus Musah a joué pour Valencia avant AC Milan.",
+      "affirmation": "Yunus Musah a joué pour Valence avant AC Milan.",
       "est_vraie": true,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -45620,11 +45620,11 @@
       ],
       "groupe_exclusif": "ordre_clubs:Yunus Musah",
       "valeur_affirmee": [
-        "Valencia",
+        "Valence",
         "AC Milan"
       ],
       "valeur_source": {
-        "Valencia": [
+        "Valence": [
           2020,
           2023
         ],
@@ -51322,7 +51322,7 @@
     },
     {
       "id": "lf-f-1029",
-      "affirmation": "Victor Osimhen a joué pour Lille avant VfL Wolfsburg.",
+      "affirmation": "Victor Osimhen a joué pour Lille avant Wolfsburg.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -51331,10 +51331,10 @@
       "groupe_exclusif": "ordre_clubs:Victor Osimhen",
       "valeur_affirmee": [
         "Lille",
-        "VfL Wolfsburg"
+        "Wolfsburg"
       ],
       "valeur_source": {
-        "VfL Wolfsburg": [
+        "Wolfsburg": [
           2017,
           2019
         ],
@@ -51502,7 +51502,7 @@
     },
     {
       "id": "lf-f-1035",
-      "affirmation": "Federico Valverde a joué pour Deportivo La Coruña avant Peñarol.",
+      "affirmation": "Federico Valverde a joué pour Deportivo La Corogne avant Peñarol.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -51510,7 +51510,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:Federico Valverde",
       "valeur_affirmee": [
-        "Deportivo La Coruña",
+        "Deportivo La Corogne",
         "Peñarol"
       ],
       "valeur_source": {
@@ -51518,7 +51518,7 @@
           2015,
           2016
         ],
-        "Deportivo La Coruña": [
+        "Deportivo La Corogne": [
           2017,
           2018
         ]
@@ -52253,7 +52253,7 @@
     },
     {
       "id": "lf-f-1060",
-      "affirmation": "Dominik Szoboszlai a joué pour Red Bull Salzburg avant FC Liefering.",
+      "affirmation": "Dominik Szoboszlai a joué pour RB Salzbourg avant FC Liefering.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -52261,7 +52261,7 @@
       ],
       "groupe_exclusif": "ordre_clubs:Dominik Szoboszlai",
       "valeur_affirmee": [
-        "Red Bull Salzburg",
+        "RB Salzbourg",
         "FC Liefering"
       ],
       "valeur_source": {
@@ -52269,7 +52269,7 @@
           2017,
           2018
         ],
-        "Red Bull Salzburg": [
+        "RB Salzbourg": [
           2018,
           2021
         ]
@@ -53095,7 +53095,7 @@
     },
     {
       "id": "lf-f-1088",
-      "affirmation": "Ferran Torres a joué pour Manchester City avant Valencia.",
+      "affirmation": "Ferran Torres a joué pour Manchester City avant Valence.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -53104,10 +53104,10 @@
       "groupe_exclusif": "ordre_clubs:Ferran Torres",
       "valeur_affirmee": [
         "Manchester City",
-        "Valencia"
+        "Valence"
       ],
       "valeur_source": {
-        "Valencia": [
+        "Valence": [
           2017,
           2020
         ],
@@ -53185,7 +53185,7 @@
     },
     {
       "id": "lf-f-1091",
-      "affirmation": "Yunus Musah a joué pour AC Milan avant Valencia.",
+      "affirmation": "Yunus Musah a joué pour AC Milan avant Valence.",
       "est_vraie": false,
       "categorie": "ordre_clubs",
       "joueurs": [
@@ -53194,10 +53194,10 @@
       "groupe_exclusif": "ordre_clubs:Yunus Musah",
       "valeur_affirmee": [
         "AC Milan",
-        "Valencia"
+        "Valence"
       ],
       "valeur_source": {
-        "Valencia": [
+        "Valence": [
           2020,
           2023
         ],

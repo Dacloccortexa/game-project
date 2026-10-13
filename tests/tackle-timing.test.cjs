@@ -47,7 +47,7 @@ function advance(ms) {
 }
 
 let script = fs.readFileSync('index.html', 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
-script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame, drawFromDeck, playerAnswers, matchesAnyAnswer, matchesBothTeams, renderLmClues};})();');
+script = script.replace(/\}\)\(\);\s*$/, 'globalThis.testApi = {state, startTackleWindow, pomGuess, vfAnswer, clearTackleTimer, currentTackleStake, pickNextMinigame, drawFromDeck, playerAnswers, matchesAnyAnswer, matchesBothTeams, renderLmClues, activeBankText};})();');
 const context = {
   document: { getElementById: element, createElement: tag => element(`created-${tag}-${Math.random()}`), querySelector: element, querySelectorAll: () => [] },
   fetch: () => Promise.resolve({ json: () => Promise.resolve({ cards: [], players: [], statements: [] }) }),
@@ -58,7 +58,7 @@ const context = {
 };
 vm.createContext(context);
 vm.runInContext(script, context);
-const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake, pickNextMinigame, drawFromDeck, playerAnswers, matchesAnyAnswer, matchesBothTeams, renderLmClues } = context.testApi;
+const { state, startTackleWindow, pomGuess, vfAnswer, currentTackleStake, pickNextMinigame, drawFromDeck, playerAnswers, matchesAnyAnswer, matchesBothTeams, renderLmClues, activeBankText } = context.testApi;
 
 function reset(game) {
   timers.clear();
@@ -560,6 +560,26 @@ for (const [file, key] of [['transfert-cards.json', 'cards'], ['quisuisje-cards.
     assert.deepEqual(ptCards[index].final_clue, card.final_clue, card.id);
   }
   assert.equal(matchKeys.size, 100);
+}
+
+// Retour de la partie test du 2026-10-13.
+state.teams = [{name:'Les Lions', score:0},{name:'Bleus', score:0}];
+state.currentTeamIndex = 0;
+assert.equal(activeBankText(true, 2), ' ; Les Lions perdent leur cagnotte.');
+state.currentTeamIndex = 1;
+assert.equal(activeBankText(true, 2), ' ; Bleus perd sa cagnotte.');
+{
+  const caps = JSON.parse(fs.readFileSync('src/data/stats-national-team-caps.json', 'utf8')).players.filter(p => p.jouable !== false);
+  assert.ok(caps.length >= 15 && new Set(caps.map(p => p.value)).size >= 6);
+  assert.ok(!caps.some(p => p.name === 'Soh Chin Ann'));
+  const qsj = fs.readFileSync('src/data/quisuisje-cards.json', 'utf8');
+  assert.ok((qsj.match(/coéquipier de Harry Kane/g) || []).length <= 3);
+  for (const f of ['transfert-cards.json', 'quisuisje-cards.json', 'vraifaux-statements.json']) {
+    const t = fs.readFileSync('src/data/' + f, 'utf8').replace(/https?:[^"]*/g, '');
+    for (const old of ['Barcelona', 'Sevilla', 'Valencia', 'Napoli', 'Paris Saint-Germain', 'Tottenham Hotspur', 'Red Bull Salzburg']) {
+      assert.ok(!new RegExp('"[^"]*\\b' + old + '\\b').test(t.replace(/"(source|sources|notes|teammate_source|shared_club)":\s*("[^"]*"|\[[^\]]*\])/g, '')), f + ' : ' + old);
+    }
+  }
 }
 
 // Empreintes des fichiers de questions à jour (tools/data-manifest.cjs, lancé par bump-version.sh).

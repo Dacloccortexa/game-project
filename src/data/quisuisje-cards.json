@@ -35,7 +35,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Sporting CP.",
+          "text": "J'ai joué au Sporting CP.",
           "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
           "fact": {
             "club": "Sporting CP"
@@ -281,7 +281,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Ajax.",
+          "text": "J'ai joué à l'Ajax.",
           "source": "https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez_%28Uruguayan_footballer%29",
           "fact": {
             "club": "Ajax"
@@ -342,7 +342,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Borussia Dortmund.",
+          "text": "J'ai joué au Borussia Dortmund.",
           "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
           "fact": {
             "club": "Borussia Dortmund"
@@ -404,10 +404,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Roma.",
+          "text": "J'ai joué à l'AS Rome.",
           "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
           "fact": {
-            "club": "Roma"
+            "club": "AS Rome"
           }
         },
         {
@@ -650,7 +650,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Juventus.",
+          "text": "J'ai joué à la Juventus.",
           "source": "https://en.wikipedia.org/wiki/Paul_Pogba",
           "fact": {
             "club": "Juventus"
@@ -896,10 +896,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à PSV.",
+          "text": "J'ai joué au PSV Eindhoven.",
           "source": "https://en.wikipedia.org/wiki/Arjen_Robben",
           "fact": {
-            "club": "PSV"
+            "club": "PSV Eindhoven"
           }
         },
         {
@@ -1204,7 +1204,7 @@
           "text": "J'ai joué au FC Barcelone.",
           "source": "https://en.wikipedia.org/wiki/Carles_Puyol",
           "fact": {
-            "club": "Barcelona"
+            "club": "FC Barcelone"
           }
         },
         {
@@ -1508,10 +1508,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Sevilla.",
+          "text": "J'ai joué à Séville.",
           "source": "https://en.wikipedia.org/wiki/Dani_Alves",
           "fact": {
-            "club": "Sevilla"
+            "club": "Séville"
           }
         },
         {
@@ -1607,10 +1607,10 @@
         {
           "kind": "club",
           "points": 1,
-          "text": "J'ai joué à Valencia.",
+          "text": "J'ai joué à Valence.",
           "source": "https://en.wikipedia.org/wiki/David_Silva",
           "fact": {
-            "club": "Valencia"
+            "club": "Valence"
           }
         }
       ],
@@ -1691,10 +1691,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Valencia.",
+          "text": "J'ai joué à Valence.",
           "source": "https://en.wikipedia.org/wiki/David_Villa",
           "fact": {
-            "club": "Valencia"
+            "club": "Valence"
           }
         },
         {
@@ -1934,7 +1934,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Atlético Madrid.",
+          "text": "J'ai joué à l'Atlético Madrid.",
           "source": "https://en.wikipedia.org/wiki/Diego_Costa",
           "fact": {
             "club": "Atlético Madrid"
@@ -2117,7 +2117,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Athletic Bilbao.",
+          "text": "J'ai joué à l'Athletic Bilbao.",
           "source": "https://en.wikipedia.org/wiki/Fernando_Llorente",
           "fact": {
             "club": "Athletic Bilbao"
@@ -2239,7 +2239,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Atlético Madrid.",
+          "text": "J'ai joué à l'Atlético Madrid.",
           "source": "https://en.wikipedia.org/wiki/Fernando_Torres",
           "fact": {
             "club": "Atlético Madrid"
@@ -2643,10 +2643,10 @@
         {
           "kind": "club",
           "points": 1,
-          "text": "J'ai joué à Napoli.",
+          "text": "J'ai joué à Naples.",
           "source": "https://en.wikipedia.org/wiki/Gonzalo_Higua%C3%ADn",
           "fact": {
-            "club": "Napoli"
+            "club": "Naples"
           }
         }
       ],
@@ -2971,10 +2971,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Valencia.",
+          "text": "J'ai joué à Valence.",
           "source": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_%28footballer%2C_born_1981%29",
           "fact": {
-            "club": "Valencia"
+            "club": "Valence"
           }
         },
         {
@@ -3337,7 +3337,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Atlético Madrid.",
+          "text": "J'ai joué à l'Atlético Madrid.",
           "source": "https://en.wikipedia.org/wiki/Juanfran_%28footballer%2C_born_1985%29",
           "fact": {
             "club": "Atlético Madrid"
@@ -3460,7 +3460,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à AC Milan.",
+          "text": "J'ai joué à l'AC Milan.",
           "source": "https://en.wikipedia.org/wiki/Kak%C3%A1",
           "fact": {
             "club": "AC Milan"
@@ -3582,7 +3582,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Sporting CP.",
+          "text": "J'ai joué au Sporting CP.",
           "source": "https://en.wikipedia.org/wiki/Lu%C3%ADs_Figo",
           "fact": {
             "club": "Sporting CP"
@@ -3643,7 +3643,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à AC Milan.",
+          "text": "J'ai joué à l'AC Milan.",
           "source": "https://en.wikipedia.org/wiki/Marcel_Desailly",
           "fact": {
             "club": "AC Milan"
@@ -3925,7 +3925,7 @@
         {
           "kind": "club",
           "points": 1,
-          "text": "J'ai joué à Juventus.",
+          "text": "J'ai joué à la Juventus.",
           "source": "https://en.wikipedia.org/wiki/Michel_Platini",
           "fact": {
             "club": "Juventus"
@@ -4070,10 +4070,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Paris Saint-Germain.",
+          "text": "J'ai joué au PSG.",
           "source": "https://en.wikipedia.org/wiki/Nicolas_Anelka",
           "fact": {
-            "club": "Paris Saint-Germain"
+            "club": "PSG"
           }
         },
         {
@@ -4192,7 +4192,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Juventus.",
+          "text": "J'ai joué à la Juventus.",
           "source": "https://en.wikipedia.org/wiki/Patrick_Vieira",
           "fact": {
             "club": "Juventus"
@@ -4314,7 +4314,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Lazio.",
+          "text": "J'ai joué à la Lazio.",
           "source": "https://en.wikipedia.org/wiki/Pedro_%28footballer%2C_born_1987%29",
           "fact": {
             "club": "Lazio"
@@ -4473,7 +4473,7 @@
         {
           "kind": "club",
           "points": 1,
-          "text": "J'ai joué à Bayern Munich.",
+          "text": "J'ai joué au Bayern Munich.",
           "source": "https://en.wikipedia.org/wiki/Pepe_Reina",
           "fact": {
             "club": "Bayern Munich"
@@ -4740,7 +4740,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Inter Milan.",
+          "text": "J'ai joué à l'Inter Milan.",
           "source": "https://en.wikipedia.org/wiki/Ricardo_Quaresma",
           "fact": {
             "club": "Inter Milan"
@@ -5105,7 +5105,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Inter Milan.",
+          "text": "J'ai joué à l'Inter Milan.",
           "source": "https://en.wikipedia.org/wiki/Roberto_Carlos",
           "fact": {
             "club": "Inter Milan"
@@ -5228,7 +5228,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Inter Milan.",
+          "text": "J'ai joué à l'Inter Milan.",
           "source": "https://en.wikipedia.org/wiki/Ronaldo_%28Brazilian_footballer%29",
           "fact": {
             "club": "Inter Milan"
@@ -5411,10 +5411,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Mallorca.",
+          "text": "J'ai joué à Majorque.",
           "source": "https://en.wikipedia.org/wiki/Samuel_Eto%27o",
           "fact": {
-            "club": "Mallorca"
+            "club": "Majorque"
           }
         },
         {
@@ -5535,7 +5535,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Atlético Madrid.",
+          "text": "J'ai joué à l'Atlético Madrid.",
           "source": "https://en.wikipedia.org/wiki/Sergio_Ag%C3%BCero",
           "fact": {
             "club": "Atlético Madrid"
@@ -5718,10 +5718,10 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Tottenham Hotspur.",
+          "text": "J'ai joué à Tottenham.",
           "source": "https://en.wikipedia.org/wiki/Teddy_Sheringham",
           "fact": {
-            "club": "Tottenham Hotspur"
+            "club": "Tottenham"
           }
         },
         {
@@ -5901,7 +5901,7 @@
         {
           "kind": "club",
           "points": 5,
-          "text": "J'ai joué à Real Sociedad.",
+          "text": "J'ai joué à la Real Sociedad.",
           "source": "https://en.wikipedia.org/wiki/Xabi_Alonso",
           "fact": {
             "club": "Real Sociedad"
@@ -6144,7 +6144,7 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à Borussia Dortmund.",
+          "text": "J'ai joué au Borussia Dortmund.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jude_Bellingham&oldid=1379046959",
           "fact": {
             "club": "Borussia Dortmund"
@@ -6286,7 +6286,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Bayer Leverkusen.",
+          "text": "J'ai joué au Bayer Leverkusen.",
           "source": "https://en.wikipedia.org/w/index.php?title=Son_Heung-min&oldid=1378990669",
           "fact": {
             "club": "Bayer Leverkusen"
@@ -6663,7 +6663,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Vitesse.",
+          "text": "J'ai joué au Vitesse.",
           "source": "https://en.wikipedia.org/w/index.php?title=Mason_Mount&oldid=1375897248",
           "fact": {
             "club": "Vitesse"
@@ -6795,7 +6795,7 @@
         {
           "points": 1,
           "kind": "club",
-          "text": "J'ai joué à Ajax.",
+          "text": "J'ai joué à l'Ajax.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jordan_Henderson&oldid=1377103889",
           "fact": {
             "club": "Ajax"
@@ -7021,7 +7021,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Udinese.",
+          "text": "J'ai joué à l'Udinese.",
           "source": "https://en.wikipedia.org/w/index.php?title=Bruno_Fernandes&oldid=1378513291",
           "fact": {
             "club": "Udinese"
@@ -7060,7 +7060,7 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à Benfica.",
+          "text": "J'ai joué au Benfica.",
           "source": "https://en.wikipedia.org/w/index.php?title=Bernardo_Silva&oldid=1378925566",
           "fact": {
             "club": "Benfica"
@@ -7121,7 +7121,7 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à Benfica.",
+          "text": "J'ai joué au Benfica.",
           "source": "https://en.wikipedia.org/w/index.php?title=R%C3%BAben_Dias&oldid=1379026004",
           "fact": {
             "club": "Benfica"
@@ -7213,7 +7213,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Atlético Madrid.",
+          "text": "J'ai joué à l'Atlético Madrid.",
           "source": "https://en.wikipedia.org/w/index.php?title=Rodri&oldid=1379060570",
           "fact": {
             "club": "Atlético Madrid"
@@ -7243,7 +7243,7 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à Juventus.",
+          "text": "J'ai joué à la Juventus.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Cancelo&oldid=1378691140",
           "fact": {
             "club": "Juventus"
@@ -7325,7 +7325,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Atlético Madrid.",
+          "text": "J'ai joué à l'Atlético Madrid.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_F%C3%A9lix&oldid=1378692280",
           "fact": {
             "club": "Atlético Madrid"
@@ -7426,7 +7426,7 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à PSG.",
+          "text": "J'ai joué au PSG.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jo%C3%A3o_Neves&oldid=1377917274",
           "fact": {
             "club": "PSG"
@@ -7568,7 +7568,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Inter Milan.",
+          "text": "J'ai joué à l'Inter Milan.",
           "source": "https://en.wikipedia.org/w/index.php?title=Achraf_Hakimi&oldid=1377795128",
           "fact": {
             "club": "Inter Milan"
@@ -7865,10 +7865,10 @@
         {
           "points": 4,
           "kind": "club",
-          "text": "J'ai joué à Napoli.",
+          "text": "J'ai joué à Naples.",
           "source": "https://en.wikipedia.org/w/index.php?title=Khvicha_Kvaratskhelia&oldid=1378843451",
           "fact": {
-            "club": "Napoli"
+            "club": "Naples"
           }
         },
         {
@@ -7975,7 +7975,7 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à Inter Milan.",
+          "text": "J'ai joué à l'Inter Milan.",
           "source": "https://en.wikipedia.org/w/index.php?title=Lautaro_Mart%C3%ADnez&oldid=1378395150",
           "fact": {
             "club": "Inter Milan"
@@ -8048,7 +8048,7 @@
         {
           "points": 4,
           "kind": "club",
-          "text": "J'ai joué à AS Rome.",
+          "text": "J'ai joué à l'AS Rome.",
           "source": "https://en.wikipedia.org/w/index.php?title=Paulo_Dybala&oldid=1376024136",
           "fact": {
             "club": "AS Rome"
@@ -8125,7 +8125,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Fiorentina.",
+          "text": "J'ai joué à la Fiorentina.",
           "source": "https://en.wikipedia.org/w/index.php?title=Federico_Chiesa&oldid=1378127004",
           "fact": {
             "club": "Fiorentina"
@@ -8180,7 +8180,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à AC Milan.",
+          "text": "J'ai joué à l'AC Milan.",
           "source": "https://en.wikipedia.org/w/index.php?title=Sandro_Tonali&oldid=1378863837",
           "fact": {
             "club": "AC Milan"
@@ -8219,7 +8219,7 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à Inter Milan.",
+          "text": "J'ai joué à l'Inter Milan.",
           "source": "https://en.wikipedia.org/w/index.php?title=Nicol%C3%B2_Barella&oldid=1378863453",
           "fact": {
             "club": "Inter Milan"
@@ -8302,7 +8302,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Peñarol.",
+          "text": "J'ai joué au Peñarol.",
           "source": "https://en.wikipedia.org/w/index.php?title=Federico_Valverde&oldid=1378063236",
           "fact": {
             "club": "Peñarol"
@@ -8665,7 +8665,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Atlético Madrid.",
+          "text": "J'ai joué à l'Atlético Madrid.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jan_Oblak&oldid=1379021887",
           "fact": {
             "club": "Atlético Madrid"
@@ -8729,7 +8729,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Atlético Madrid.",
+          "text": "J'ai joué à l'Atlético Madrid.",
           "source": "https://en.wikipedia.org/w/index.php?title=Thibaut_Courtois&oldid=1378053557",
           "fact": {
             "club": "Atlético Madrid"
@@ -8768,12 +8768,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai été coéquipier de Harry Kane en club.",
+          "text": "J'ai été coéquipier de Franck Ribéry en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Manuel_Neuer&oldid=1378216051",
           "fact": {
-            "name": "Harry Kane",
+            "name": "Franck Ribéry",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "teammate_source": "https://en.wikipedia.org/wiki/Franck_Ribéry",
             "club_only": true
           }
         },
@@ -8860,7 +8860,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Borussia Mönchengladbach.",
+          "text": "J'ai joué au Borussia Mönchengladbach.",
           "source": "https://en.wikipedia.org/w/index.php?title=Marc-Andr%C3%A9_ter_Stegen&oldid=1376830446",
           "fact": {
             "club": "Borussia Mönchengladbach"
@@ -8909,7 +8909,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à AC Milan.",
+          "text": "J'ai joué à l'AC Milan.",
           "source": "https://en.wikipedia.org/w/index.php?title=Gianluigi_Donnarumma&oldid=1378863037",
           "fact": {
             "club": "AC Milan"
@@ -8980,7 +8980,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à AS Rome.",
+          "text": "J'ai joué à l'AS Rome.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alisson_Becker&oldid=1378681378",
           "fact": {
             "club": "AS Rome"
@@ -9039,7 +9039,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Benfica.",
+          "text": "J'ai joué au Benfica.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ederson_%28footballer%2C_born_1993%29&oldid=1378678767",
           "fact": {
             "club": "Benfica"
@@ -9349,7 +9349,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Saprissa.",
+          "text": "J'ai joué au Saprissa.",
           "source": "https://en.wikipedia.org/w/index.php?title=Keylor_Navas&oldid=1378696436",
           "fact": {
             "club": "Saprissa"
@@ -9562,7 +9562,7 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à Borussia Dortmund.",
+          "text": "J'ai joué au Borussia Dortmund.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alexander_Isak&oldid=1378884340",
           "fact": {
             "club": "Borussia Dortmund"
@@ -9715,7 +9715,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Benfica.",
+          "text": "J'ai joué au Benfica.",
           "source": "https://en.wikipedia.org/w/index.php?title=Darwin_N%C3%BA%C3%B1ez&oldid=1378870420",
           "fact": {
             "club": "Benfica"
@@ -9776,7 +9776,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à PSV Eindhoven.",
+          "text": "J'ai joué au PSV Eindhoven.",
           "source": "https://en.wikipedia.org/w/index.php?title=Cody_Gakpo&oldid=1378422733",
           "fact": {
             "club": "PSV Eindhoven"
@@ -9837,7 +9837,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à RB Leipzig.",
+          "text": "J'ai joué au RB Leipzig.",
           "source": "https://en.wikipedia.org/w/index.php?title=Dominik_Szoboszlai&oldid=1378719178",
           "fact": {
             "club": "RB Leipzig"
@@ -9895,7 +9895,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Bayer Leverkusen.",
+          "text": "J'ai joué au Bayer Leverkusen.",
           "source": "https://en.wikipedia.org/w/index.php?title=Florian_Wirtz&oldid=1378684776",
           "fact": {
             "club": "Bayer Leverkusen"
@@ -9929,7 +9929,7 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à Bayer Leverkusen.",
+          "text": "J'ai joué au Bayer Leverkusen.",
           "source": "https://en.wikipedia.org/w/index.php?title=Kai_Havertz&oldid=1378177904",
           "fact": {
             "club": "Bayer Leverkusen"
@@ -10021,7 +10021,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à RB Leipzig.",
+          "text": "J'ai joué au RB Leipzig.",
           "source": "https://en.wikipedia.org/w/index.php?title=Timo_Werner&oldid=1375927138",
           "fact": {
             "club": "RB Leipzig"
@@ -10051,12 +10051,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai été coéquipier de Harry Kane en club.",
+          "text": "J'ai été coéquipier de Kevin De Bruyne en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Leroy_San%C3%A9&oldid=1371965372",
           "fact": {
-            "name": "Harry Kane",
-            "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "name": "Kevin De Bruyne",
+            "shared_club": "Manchester City",
+            "teammate_source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
             "club_only": true
           }
         },
@@ -10112,12 +10112,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai été coéquipier de Harry Kane en club.",
+          "text": "J'ai été coéquipier de Mesut Özil en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Serge_Gnabry&oldid=1378649208",
           "fact": {
-            "name": "Harry Kane",
-            "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "name": "Mesut Özil",
+            "shared_club": "Arsenal",
+            "teammate_source": "https://en.wikipedia.org/wiki/Mesut_Özil",
             "club_only": true
           }
         },
@@ -10143,7 +10143,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Werder Bremen.",
+          "text": "J'ai joué au Werder Bremen.",
           "source": "https://en.wikipedia.org/w/index.php?title=Serge_Gnabry&oldid=1378649208",
           "fact": {
             "club": "Werder Bremen"
@@ -10173,12 +10173,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai été coéquipier de Harry Kane en club.",
+          "text": "J'ai été coéquipier de Thomas Müller en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Joshua_Kimmich&oldid=1377085904",
           "fact": {
-            "name": "Harry Kane",
+            "name": "Thomas Müller",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "teammate_source": "https://en.wikipedia.org/wiki/Thomas_Müller",
             "club_only": true
           }
         },
@@ -10204,7 +10204,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à RB Leipzig.",
+          "text": "J'ai joué au RB Leipzig.",
           "source": "https://en.wikipedia.org/w/index.php?title=Joshua_Kimmich&oldid=1377085904",
           "fact": {
             "club": "RB Leipzig"
@@ -10234,12 +10234,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai été coéquipier de Harry Kane en club.",
+          "text": "J'ai été coéquipier de Sadio Mané en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Leon_Goretzka&oldid=1372789405",
           "fact": {
-            "name": "Harry Kane",
+            "name": "Sadio Mané",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "teammate_source": "https://en.wikipedia.org/wiki/Sadio_Mané",
             "club_only": true
           }
         },
@@ -10436,10 +10436,10 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Sevilla.",
+          "text": "J'ai joué à Séville.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alexis_S%C3%A1nchez&oldid=1376713396",
           "fact": {
-            "club": "Sevilla"
+            "club": "Séville"
           }
         },
         {
@@ -10633,7 +10633,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Atlético Madrid.",
+          "text": "J'ai joué à l'Atlético Madrid.",
           "source": "https://en.wikipedia.org/w/index.php?title=Memphis_Depay&oldid=1379096034",
           "fact": {
             "club": "Atlético Madrid"
@@ -10694,7 +10694,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Ajax.",
+          "text": "J'ai joué à l'Ajax.",
           "source": "https://en.wikipedia.org/w/index.php?title=Frenkie_de_Jong&oldid=1376912222",
           "fact": {
             "club": "Ajax"
@@ -10734,19 +10734,19 @@
         {
           "points": 4,
           "kind": "teammate",
-          "text": "J'ai été coéquipier de Harry Kane en club.",
+          "text": "J'ai été coéquipier de Cristiano Ronaldo en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Matthijs_de_Ligt&oldid=1377871286",
           "fact": {
-            "name": "Harry Kane",
-            "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "name": "Cristiano Ronaldo",
+            "shared_club": "Juventus",
+            "teammate_source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
             "club_only": true
           }
         },
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Ajax.",
+          "text": "J'ai joué à l'Ajax.",
           "source": "https://en.wikipedia.org/w/index.php?title=Matthijs_de_Ligt&oldid=1377871286",
           "fact": {
             "club": "Ajax"
@@ -10804,10 +10804,10 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Valencia.",
+          "text": "J'ai joué à Valence.",
           "source": "https://en.wikipedia.org/w/index.php?title=Jordi_Alba&oldid=1376299257",
           "fact": {
-            "club": "Valencia"
+            "club": "Valence"
           }
         },
         {
@@ -10877,7 +10877,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Hajduk Split.",
+          "text": "J'ai joué à l'Hajduk Split.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ivan_Rakiti%C4%87&oldid=1376286041",
           "fact": {
             "club": "Hajduk Split"
@@ -10926,7 +10926,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Bayer Leverkusen.",
+          "text": "J'ai joué au Bayer Leverkusen.",
           "source": "https://en.wikipedia.org/w/index.php?title=Arturo_Vidal&oldid=1378372285",
           "fact": {
             "club": "Bayer Leverkusen"
@@ -10968,12 +10968,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai été coéquipier de Harry Kane en club.",
+          "text": "J'ai été coéquipier de Lautaro Martínez en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ivan_Peri%C5%A1i%C4%87&oldid=1379105301",
           "fact": {
-            "name": "Harry Kane",
-            "shared_club": "Tottenham",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "name": "Lautaro Martínez",
+            "shared_club": "Inter Milan",
+            "teammate_source": "https://en.wikipedia.org/wiki/Lautaro_Martínez",
             "club_only": true
           }
         },
@@ -10999,7 +10999,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à PSV Eindhoven.",
+          "text": "J'ai joué au PSV Eindhoven.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ivan_Peri%C5%A1i%C4%87&oldid=1379105301",
           "fact": {
             "club": "PSV Eindhoven"
@@ -11029,7 +11029,7 @@
         {
           "points": 5,
           "kind": "club",
-          "text": "J'ai joué à Inter Milan.",
+          "text": "J'ai joué à l'Inter Milan.",
           "source": "https://en.wikipedia.org/w/index.php?title=Marcelo_Brozovi%C4%87&oldid=1374881693",
           "fact": {
             "club": "Inter Milan"
@@ -11109,7 +11109,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Bayer Leverkusen.",
+          "text": "J'ai joué au Bayer Leverkusen.",
           "source": "https://en.wikipedia.org/w/index.php?title=Hakan_%C3%87alhano%C4%9Flu&oldid=1377835464",
           "fact": {
             "club": "Bayer Leverkusen"
@@ -11170,10 +11170,10 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Napoli.",
+          "text": "J'ai joué à Naples.",
           "source": "https://en.wikipedia.org/w/index.php?title=Lorenzo_Insigne&oldid=1376555810",
           "fact": {
-            "club": "Napoli"
+            "club": "Naples"
           }
         },
         {
@@ -11243,7 +11243,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Torino.",
+          "text": "J'ai joué au Torino.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ciro_Immobile&oldid=1375050845",
           "fact": {
             "club": "Torino"
@@ -11292,7 +11292,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Fiorentina.",
+          "text": "J'ai joué à la Fiorentina.",
           "source": "https://en.wikipedia.org/w/index.php?title=Du%C5%A1an_Vlahovi%C4%87&oldid=1378123218",
           "fact": {
             "club": "Fiorentina"
@@ -11355,7 +11355,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à RB Leipzig.",
+          "text": "J'ai joué au RB Leipzig.",
           "source": "https://en.wikipedia.org/w/index.php?title=Benjamin_%C5%A0e%C5%A1ko&oldid=1375592136",
           "fact": {
             "club": "RB Leipzig"
@@ -11427,7 +11427,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à RB Leipzig.",
+          "text": "J'ai joué au RB Leipzig.",
           "source": "https://en.wikipedia.org/w/index.php?title=Xavi_Simons&oldid=1376545620",
           "fact": {
             "club": "RB Leipzig"
@@ -11488,7 +11488,7 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à RB Leipzig.",
+          "text": "J'ai joué au RB Leipzig.",
           "source": "https://en.wikipedia.org/w/index.php?title=Dani_Olmo&oldid=1379060899",
           "fact": {
             "club": "RB Leipzig"
@@ -11535,10 +11535,10 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Valencia.",
+          "text": "J'ai joué à Valence.",
           "source": "https://en.wikipedia.org/w/index.php?title=Ferran_Torres&oldid=1378053175",
           "fact": {
-            "club": "Valencia"
+            "club": "Valence"
           }
         },
         {
@@ -11599,7 +11599,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à AC Milan.",
+          "text": "J'ai joué à l'AC Milan.",
           "source": "https://en.wikipedia.org/w/index.php?title=Christian_Pulisic&oldid=1378909133",
           "fact": {
             "club": "AC Milan"
@@ -11730,10 +11730,10 @@
         {
           "points": 2,
           "kind": "club",
-          "text": "J'ai joué à Valencia.",
+          "text": "J'ai joué à Valence.",
           "source": "https://en.wikipedia.org/w/index.php?title=Yunus_Musah&oldid=1379020542",
           "fact": {
-            "club": "Valencia"
+            "club": "Valence"
           }
         },
         {
@@ -11760,12 +11760,12 @@
         {
           "points": 5,
           "kind": "teammate",
-          "text": "J'ai été coéquipier de Harry Kane en club.",
+          "text": "J'ai été coéquipier de Robert Lewandowski en club.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alphonso_Davies&oldid=1378050851",
           "fact": {
-            "name": "Harry Kane",
+            "name": "Robert Lewandowski",
             "shared_club": "Bayern Munich",
-            "teammate_source": "https://en.wikipedia.org/w/index.php?title=Harry_Kane&oldid=1378956672",
+            "teammate_source": "https://en.wikipedia.org/wiki/Robert_Lewandowski",
             "club_only": true
           }
         },
@@ -11782,7 +11782,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Vancouver Whitecaps.",
+          "text": "J'ai joué aux Vancouver Whitecaps.",
           "source": "https://en.wikipedia.org/w/index.php?title=Alphonso_Davies&oldid=1378050851",
           "fact": {
             "club": "Vancouver Whitecaps"
@@ -12148,7 +12148,7 @@
         {
           "points": 3,
           "kind": "club",
-          "text": "J'ai joué à Vitesse.",
+          "text": "J'ai joué au Vitesse.",
           "source": "https://en.wikipedia.org/w/index.php?title=Martin_%C3%98degaard&oldid=1378631722",
           "fact": {
             "club": "Vitesse"

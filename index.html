@@ -3247,7 +3247,8 @@
     return Promise.all(
       POM_REAL_CATEGORIES.map(function (cat) {
         return loadJson(cat.file, function (data) {
-            POM_REAL_POOLS.push({ key: cat.file, label: LANG === "pt" ? cat.label : (data.category_label || cat.label), players: data.players });
+            // « jouable »: false = joueur trop peu connu, gardé dans le fichier mais retiré du tirage.
+            POM_REAL_POOLS.push({ key: cat.file, label: LANG === "pt" ? cat.label : (data.category_label || cat.label), players: data.players.filter(function (p) { return p.jouable !== false; }) });
           })
           .catch(function (err) {
             console.error("Impossible de charger " + cat.file, err);
@@ -3422,7 +3423,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.12-2116";
+  var APP_VERSION = "2026.10.13-2146";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -4835,7 +4836,7 @@
       return correct ? "; " + name + (teamPlural(name) ? " perdem" : " perde") + " o pote."
         : "; " + name + (teamPlural(name) ? " arrecadam " : " arrecada ") + points + (points > 1 ? " pontos." : " ponto.");
     }
-    return correct ? " ; " + teamVerb(name, "perdent", "perd") + " sa cagnotte."
+    return correct ? " ; " + teamVerb(name, "perdent leur", "perd sa") + " cagnotte."
       : " ; " + teamVerb(name, "encaissent", "encaisse") + " " + points + " point" + (points > 1 ? "s" : "") + ".";
   }
 

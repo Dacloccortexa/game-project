@@ -3,18 +3,18 @@
   "src/data/lematch-cards.json": "156122f960d8",
   "src/data/players-2026-10-08.json": "61c92d1fab63",
   "src/data/pt/lematch-cards.json": "a78963e9f87e",
-  "src/data/pt/quisuisje-cards.json": "6c991dcdebeb",
+  "src/data/pt/quisuisje-cards.json": "9ed91434188f",
   "src/data/pt/transfert-cards.json": "c4f18ebe8eab",
   "src/data/pt/vraifaux-statements.json": "cc2b15e6b0e0",
-  "src/data/quisuisje-cards.json": "4243a54fa3a0",
+  "src/data/quisuisje-cards.json": "741e7ab598ee",
   "src/data/stats-champions-league-goals.json": "44ee9829a20f",
   "src/data/stats-la-liga-goals.json": "712cd4cd793a",
   "src/data/stats-ligue-1-goals.json": "37c689ba9679",
-  "src/data/stats-national-team-caps.json": "d3922db0443e",
+  "src/data/stats-national-team-caps.json": "6ad31e2430ed",
   "src/data/stats-premier-league-goals.json": "6ef16d9d38d8",
   "src/data/stats-serie-a-goals.json": "b4ac23241f78",
   "src/data/stats-world-cup-goals.json": "fb5131dc2f0a",
-  "src/data/transfert-cards.json": "ac0d09ab8e80",
-  "src/data/vraifaux-statements.json": "3c5fae8974b7"
+  "src/data/transfert-cards.json": "098f15cb1b61",
+  "src/data/vraifaux-statements.json": "86e0cf26a7e5"
  }
 }
