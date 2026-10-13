@@ -3,10 +3,9 @@
 ## [2026-10-13] Corrections après une partie test complète (3 équipes, 10 manches)
 Partie jouée en automatique par Claude, demandée par David. Corrigé :
 - « Les Lions perdent sa cagnotte » → « perdent leur cagnotte » (Tackle réussi sur Plus ou Moins / Vrai ou Faux).
-- Plus ou Moins, « Sélections en équipe nationale » : tri des joueurs peu connus essayé puis annulé à la demande de David ; les 50 joueurs restent en jeu.
+- Plus ou Moins, « Sélections en équipe nationale » : tri des joueurs peu connus essayé puis annulé à la demande de David ; les 50 joueurs restent en jeu. Règle : TACKLE vise aussi les gros connaisseurs, on ne retire pas un joueur parce qu'il est peu connu en France ; les joueurs « exotiques » font partie du défi.
 - Qui suis-je ? : « coéquipier de Harry Kane » apparaissait sur 11 cartes ; 8 remplacés par un autre coéquipier vérifiable (Ribéry, De Bruyne, Özil, Müller, Mané, Cristiano Ronaldo, Lautaro Martínez, Lewandowski), en français et en portugais. Kane reste pour Son, Walker et Lloris.
 - Noms de clubs harmonisés en français dans Transfert, Qui suis-je ? et Vrai ou Faux : FC Barcelone, Séville, Valence, Naples, AS Rome, PSG, PSV Eindhoven, Tottenham, RB Salzbourg, Wolfsburg, Wolverhampton, Majorque, Real Saragosse, Deportivo La Corogne. Articles corrigés dans les indices de club (« au PSG », « à l'AS Rome »…). Le fichier portugais et Le Match ne changent pas.
-Reste à voir : d'autres catégories de Plus ou Moins contiennent des joueurs anciens peu connus (ex. Nejedlý, Bassetto).
 
 ## [2026-10-12] Fiche App Store prête (FR et PT)
 Textes de la fiche (nom, sous-titre « Le quiz foot entre potes », texte promotionnel repris de la phrase de campagne, description, mots-clés, catégorie Jeux → Quiz et Famille, âge 4+, données collectées) dans `docs/APP_STORE_FICHE.md`. Cinq captures par langue, avec une phrase en haut : Transfert pendant la course au Tackle, choix de l'équipe qui a tacklé, Le Match, Qui suis-je ?, cagnotte de Plus ou Moins. Scores et numéro de manche posés à la main pour l'image. À refaire si l'interface change avant la sortie.
