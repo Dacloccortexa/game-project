@@ -3304,7 +3304,7 @@
       var j = Math.floor(Math.random() * (i + 1));
       var tmp = chosen[i]; chosen[i] = chosen[j]; chosen[j] = tmp;
     }
-    return { category: pool.label, chain: chosen };
+    return { category: pool.label, key: pool.key, chain: chosen };
   }
 
   function drawPomChain() {
@@ -3422,7 +3422,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.13-2151";
+  var APP_VERSION = "2026.10.13-2220";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3650,6 +3650,25 @@
         wrongAnswers: count(/^réponse .* fausse/), tackles: count(/^Tackle (?!annulé)/), passes: count(/^passe/),
         teams: state.teams.length, seconds: jc && jc.durationS
       }, step);
+    } catch (e) {}
+  }
+
+  // Une question de Plus ou Moins / Vrai ou Faux vient d'être tranchée : de quoi noter sa difficulté.
+  // by = "main" (équipe qui a la main, y compris course gagnée ou temps écoulé) ou "tackle" (adversaire).
+  function tdQuestion(correct, by) {
+    try {
+      if (!tdEnabled()) return;
+      var g = state.currentRoundMinigame, item = "", category = "";
+      if (g === "plusoumoins") {
+        var c = state.pomChain.chain;
+        category = (state.pomChain.key || "").replace(/^.*\/stats-|\.json$/g, "");
+        item = category + ":" + c[state.pomIndex].name + ">" + c[state.pomIndex + 1].name;
+      } else if (g === "vraifaux") {
+        var st = state.vfChain[state.vfIndex];
+        item = st.id; category = st.categorie;
+      } else return;
+      tdSignal("Question.answered", { game: g, item: item, category: category, result: correct ? "juste" : "faux", by: by,
+        step: g === "plusoumoins" ? state.pomIndex + 1 : state.vfIndex + 1, teams: state.teams.length }, correct ? 1 : 0);
     } catch (e) {}
   }
 
@@ -5187,6 +5206,7 @@
       ? choice === (state.pomChain.chain[state.pomIndex + 1].value > state.pomChain.chain[state.pomIndex].value ? "plus" : "moins")
       : choice === state.vfChain[state.vfIndex].est_vraie;
     var points = game === "plusoumoins" ? state.pomPotential : state.vfPotential;
+    tdQuestion(correct, "tackle");
     var team = state.teams[state.tackleTeamIndex];
     journalStep("Tackle " + teamDes(team.name) + " (" + (game === "plusoumoins" ? (choice === "plus" ? "PLUS" : "MOINS") : (choice ? "VRAI" : "FAUX")) + ") " + (correct ? "juste" : "faux"));
     awardPointsToTeam(state.tackleTeamIndex, correct ? currentTackleStake() : -currentTackleStake());
@@ -5468,6 +5488,7 @@
     var nextValue = chain[state.pomIndex + 1].value;
     var actualDirection = nextValue > refValue ? "plus" : "moins";
     var isActiveCorrect = state.pomPendingDirection === actualDirection;
+    tdQuestion(isActiveCorrect, "main");
     journalStep((state.pomPendingDirection === "plus" ? "PLUS" : "MOINS") + " " + (isActiveCorrect ? "juste" : "faux"));
     state.pomPendingDirection = null;
 
@@ -5623,6 +5644,7 @@
   function resolveVfStatement() {
     var statement = state.vfChain[state.vfIndex];
     var isActiveCorrect = (state.vfPendingAnswer === statement.est_vraie);
+    tdQuestion(isActiveCorrect, "main");
     journalStep((state.vfPendingAnswer ? "VRAI" : "FAUX") + " " + (isActiveCorrect ? "juste" : "faux"));
     state.vfPendingAnswer = null;
     var verdictText = L("C'était ", "Era ") + (statement.est_vraie ? L("VRAI", "VERDADEIRO") : L("FAUX", "FALSO")) + ".";

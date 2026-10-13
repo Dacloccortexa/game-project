@@ -1,7 +1,7 @@
 # DECISIONS.md
 
 ## [2026-10-13] Cible première : les joueurs chauds
-Décision de David : on lance d'abord auprès des vrais connaisseurs du foot ; les questions pointues et les joueurs peu connus restent dans le jeu. Le marketing ne change pas. Ensuite, leurs parties servent à noter la difficulté de chaque question (mesure anonyme : à quel indice la carte est trouvée, ratée ou tacklée), pour proposer plus tard des niveaux de difficulté.
+Décision de David : on lance d'abord auprès des vrais connaisseurs du foot ; les questions pointues et les joueurs peu connus restent dans le jeu. Le marketing ne change pas. Ensuite, leurs parties servent à noter la difficulté de chaque question (mesure anonyme : à quel indice la carte est trouvée, ratée ou tacklée), pour proposer plus tard des niveaux de difficulté. Pour Plus ou Moins et Vrai ou Faux, un signal `Question.answered` par comparaison ou affirmation a été ajouté (la carte seule ne suffisait pas).
 
 ## [2026-10-13] Corrections après une partie test complète (3 équipes, 10 manches)
 Partie jouée en automatique par Claude, demandée par David. Corrigé :
