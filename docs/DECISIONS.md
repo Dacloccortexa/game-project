@@ -1,7 +1,7 @@
 # DECISIONS.md
 
 ## [2026-10-13] Cible première : les joueurs chauds
-Décision de David : TACKLE vise d'abord les vrais connaisseurs du foot. Les questions pointues et les joueurs peu connus restent dans le jeu. Détail dans [MARKETING.md](MARKETING.md).
+Décision de David : on lance d'abord auprès des vrais connaisseurs du foot ; les questions pointues et les joueurs peu connus restent dans le jeu. Le marketing ne change pas. Ensuite, leurs parties servent à noter la difficulté de chaque question (mesure anonyme : à quel indice la carte est trouvée, ratée ou tacklée), pour proposer plus tard des niveaux de difficulté.
 
 ## [2026-10-13] Corrections après une partie test complète (3 équipes, 10 manches)
 Partie jouée en automatique par Claude, demandée par David. Corrigé :
