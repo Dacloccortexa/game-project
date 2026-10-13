@@ -6,6 +6,8 @@ Décision de positionnement du 6 octobre 2026. Les règles sont dans [GAME_DESIG
 
 **TACKLE transforme les débats foot entre amis en partie par équipes, sur un seul téléphone.** Chacun peut marquer pendant son tour ; les adversaires peuvent tenter de reprendre la main quand le Tackle s'ouvre. La promesse est une soirée qu'on a envie de prolonger par une revanche, avec du suspense et des occasions de se chambrer.
 
+**Cible première (décision de David, 2026-10-13) : les joueurs chauds**, les vrais connaisseurs du foot qui veulent prouver qu'ils en savent plus que leurs potes. Le contenu garde des questions pointues (joueurs peu connus, matchs anciens) ; on ne l'adoucit pas pour le grand public.
+
 Ce positionnement repose sur trois éléments concrets :
 
 1. **Le groupe** : de 1 à 4 équipes, réunies autour d'un téléphone. Le mode solo existe ; les messages de campagne qui parlent de rivalité s'adressent surtout aux parties à plusieurs équipes.
@@ -86,7 +88,7 @@ _(À compléter : phrases, idées de vidéos, réactions des testeurs…)_
 - **Piste écartée pour la promesse principale** : « Le jeu de foot où personne ne reste sur le banc. » Elle suggère que chaque adversaire intervient à chaque carte ; les journaux de parties ne le montrent pas encore.
 - **Piste de David** : « Vole la réponse aux footix. »
   - Bien pour TikTok et les pubs : ça chambre et ça fait commenter.
-  - Plutôt à éviter sur la fiche App Store, qui doit rester accueillante pour les joueurs occasionnels.
+  - Sur la fiche App Store : à décider par David (la cible première étant les joueurs chauds, l'argument « accueillante pour les occasionnels » ne tient plus).
   - Pas de traduction en portugais : trouver un équivalent local avec les testeurs portugais.
   - « Footix » était la mascotte de la Coupe du monde 1998 : l'utiliser comme mot d'argot, pas comme nom de produit ni avec un coq.
 

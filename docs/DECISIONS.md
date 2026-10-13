@@ -1,5 +1,8 @@
 # DECISIONS.md
 
+## [2026-10-13] Cible première : les joueurs chauds
+Décision de David : TACKLE vise d'abord les vrais connaisseurs du foot. Les questions pointues et les joueurs peu connus restent dans le jeu. Détail dans [MARKETING.md](MARKETING.md).
+
 ## [2026-10-13] Corrections après une partie test complète (3 équipes, 10 manches)
 Partie jouée en automatique par Claude, demandée par David. Corrigé :
 - « Les Lions perdent sa cagnotte » → « perdent leur cagnotte » (Tackle réussi sur Plus ou Moins / Vrai ou Faux).
