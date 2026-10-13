@@ -3,7 +3,7 @@
 ## [2026-10-13] Corrections après une partie test complète (3 équipes, 10 manches)
 Partie jouée en automatique par Claude, demandée par David. Corrigé :
 - « Les Lions perdent sa cagnotte » → « perdent leur cagnotte » (Tackle réussi sur Plus ou Moins / Vrai ou Faux).
-- Plus ou Moins, « Sélections en équipe nationale » : 30 joueurs peu connus du public français marqués `"jouable": false` (gardés dans le fichier, retirés du tirage) ; 20 joueurs restent (Ronaldo, Messi, Modrić, Ramos, Buffon…).
+- Plus ou Moins, « Sélections en équipe nationale » : tri des joueurs peu connus essayé puis annulé à la demande de David ; les 50 joueurs restent en jeu.
 - Qui suis-je ? : « coéquipier de Harry Kane » apparaissait sur 11 cartes ; 8 remplacés par un autre coéquipier vérifiable (Ribéry, De Bruyne, Özil, Müller, Mané, Cristiano Ronaldo, Lautaro Martínez, Lewandowski), en français et en portugais. Kane reste pour Son, Walker et Lloris.
 - Noms de clubs harmonisés en français dans Transfert, Qui suis-je ? et Vrai ou Faux : FC Barcelone, Séville, Valence, Naples, AS Rome, PSG, PSV Eindhoven, Tottenham, RB Salzbourg, Wolfsburg, Wolverhampton, Majorque, Real Saragosse, Deportivo La Corogne. Articles corrigés dans les indices de club (« au PSG », « à l'AS Rome »…). Le fichier portugais et Le Match ne changent pas.
 Reste à voir : d'autres catégories de Plus ou Moins contiennent des joueurs anciens peu connus (ex. Nejedlý, Bassetto).

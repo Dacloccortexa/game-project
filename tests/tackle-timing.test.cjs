@@ -569,9 +569,6 @@ assert.equal(activeBankText(true, 2), ' ; Les Lions perdent leur cagnotte.');
 state.currentTeamIndex = 1;
 assert.equal(activeBankText(true, 2), ' ; Bleus perd sa cagnotte.');
 {
-  const caps = JSON.parse(fs.readFileSync('src/data/stats-national-team-caps.json', 'utf8')).players.filter(p => p.jouable !== false);
-  assert.ok(caps.length >= 15 && new Set(caps.map(p => p.value)).size >= 6);
-  assert.ok(!caps.some(p => p.name === 'Soh Chin Ann'));
   const qsj = fs.readFileSync('src/data/quisuisje-cards.json', 'utf8');
   assert.ok((qsj.match(/coéquipier de Harry Kane/g) || []).length <= 3);
   for (const f of ['transfert-cards.json', 'quisuisje-cards.json', 'vraifaux-statements.json']) {
