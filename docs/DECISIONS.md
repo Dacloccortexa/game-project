@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-10-15] Le porteur du téléphone garde le droit de tackler, sans restriction
+
+- Question ouverte depuis le 25 septembre (voir TODO.md) : l'équipe qui tient le téléphone à un tour donné voit l'écran — donc les indices déjà révélés — et pourrait avoir un avantage d'information par rapport aux autres équipes adverses qui n'ont que ce qui est lu à voix haute, si elle a aussi le droit de tackler.
+- David tranche : cet avantage est anecdotique (quelques secondes tout au plus, le temps de lire l'indice avant de l'annoncer) face aux **30 secondes obligatoires** avant qu'un Tackle soit même possible. Le délai lave largement ce décalage.
+- Décision : aucune restriction. Le porteur du téléphone garde le droit de tackler comme n'importe quelle autre équipe adverse. L'état actuel du code (aucune équipe n'est exclue du Tackle à part l'équipe active) est donc déjà correct — aucun changement technique nécessaire.
+
 ## [2026-10-13] Cible première : les joueurs chauds
 Décision de David : on lance d'abord auprès des vrais connaisseurs du foot ; les questions pointues et les joueurs peu connus restent dans le jeu. Le marketing ne change pas. Ensuite, leurs parties servent à noter la difficulté de chaque question (mesure anonyme : à quel indice la carte est trouvée, ratée ou tacklée), pour proposer plus tard des niveaux de difficulté. Pour Plus ou Moins et Vrai ou Faux, un signal `Question.answered` par comparaison ou affirmation a été ajouté (la carte seule ne suffisait pas).
 

@@ -50,7 +50,7 @@
 - ✅ Tackle sur Transfert : 30 secondes réservées à l'équipe active puis 15 secondes de Tackle après le sifflet, à chaque indice ; la carte s'arrête après une tentative de Tackle. Voir DECISIONS.md du 2026-09-28.
 - ✅ Tackle sur Vrai ou Faux : bouton commun 30 + 15 secondes, fermé dès que l'équipe active a répondu (DECISIONS.md du 2026-09-29). Voir DECISIONS.md du 2026-09-28.
 - ✅ Vrai ou Faux : suit désormais le bouton Tackle commun (30 + 15 secondes), sans fenêtre séparée à part — voir la décision « Tackle commun uniquement » du 2026-09-28.
-- Tackle : décider si l'équipe qui tient le téléphone (et voit donc déjà les indices révélés sur Transfert) a le droit de tackler, vu l'avantage d'information que ça lui donnerait.
+- ✅ Tackle et porteur du téléphone : aucune restriction, il garde le droit de tackler comme les autres équipes. L'avantage d'information (voir l'indice avant de le lire à voix haute) est négligeable face aux 30 secondes obligatoires avant qu'un Tackle soit même possible. Décidé par David le 2026-10-15, voir DECISIONS.md.
 - ✅ Tackle sur Plus ou Moins : bouton commun 30 + 15 secondes, fermé dès que l'équipe active a répondu (DECISIONS.md du 2026-09-29) ; forfait ±3 et cagnotte selon GAME_DESIGN.md. Voir DECISIONS.md du 2026-09-28.
 - ✅ Le Match : mauvaise réponse active = −1 puis indice suivant ; passe = indice suivant sans pénalité ; après le cinquième indice sans bonne réponse, fin de carte et révélation du match. Décidé comme sur Qui suis-je.
 
