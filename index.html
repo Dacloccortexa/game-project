@@ -2346,7 +2346,7 @@
       <button type="button" class="text-btn" id="btn-paywall-restore">Restaurer mes achats</button>
       <button type="button" class="text-btn" id="btn-paywall-code">J'ai un code</button>
     </div>
-    <p class="paywall-legal">Pack soirée : achat unique, sans renouvellement, valable 24 h à partir de l'achat. Abonnement annuel à renouvellement automatique, annulable à tout moment dans Réglages › Identifiant Apple › Abonnements, au moins 24 h avant la fin de la période en cours. Le paiement est débité sur le compte Apple à la confirmation de l'achat.<br>
+    <p class="paywall-legal">Pack soirée : achat unique, sans renouvellement, valable 12 h à partir de l'achat. Abonnement annuel à renouvellement automatique, annulable à tout moment dans Réglages › Identifiant Apple › Abonnements, au moins 24 h avant la fin de la période en cours. Le paiement est débité sur le compte Apple à la confirmation de l'achat.<br>
       <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Conditions d'utilisation</a> · <a href="https://dacloccortexa.github.io/game-project/privacy.html" target="_blank" rel="noopener">Confidentialité</a></p>
   </section>
 
@@ -3422,7 +3422,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.13-2220";
+  var APP_VERSION = "2026.10.16-1621";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
@@ -3888,7 +3888,7 @@
   var REVENUECAT_IOS_KEY = ""; // clé publique iOS RevenueCat (« appl_… ») — à renseigner, voir docs/APP_IOS.md
   var FREE_KEY = "tackle-free-plays-v1";
   var PASS_PRODUCT_ID = "tackle_pack_soiree"; // produit « consommable » App Store Connect
-  var PASS_HOURS = 24;
+  var PASS_HOURS = 12;
   var PASS_KEY = "tackle-pass-until-v1";      // copie locale de la fin du pack (hors connexion)
   state.premium = !NATIVE;
   state.subscribed = false;
@@ -3976,7 +3976,7 @@
     var was = state.premium;
     state.subscribed = !!(info && info.entitlements && info.entitlements.active && info.entitlements.active[ENTITLEMENT_ID]);
     // Packs soirée achetés (gardés par RevenueCat : retrouvés après réinstallation, même compte Apple).
-    // Plusieurs packs : chacun ajoute 24 h à la suite du précédent s'il était encore actif.
+    // Plusieurs packs : chacun ajoute 12 h à la suite du précédent s'il était encore actif.
     var passEnd = 0;
     ((info && info.nonSubscriptionTransactions) || [])
       .filter(function (t) { return t.productIdentifier === PASS_PRODUCT_ID; })
@@ -4047,7 +4047,7 @@
         var left = document.createElement("span");
         var title = document.createElement("b"); title.textContent = lab[0]; left.appendChild(title);
         var sub = document.createElement("small");
-        if (isPassPackage(pkg)) sub.textContent = L("24 h illimitées, sans abonnement", "24 h ilimitadas, sem subscrição");
+        if (isPassPackage(pkg)) sub.textContent = L("12 h illimitées, sans abonnement", "12 h ilimitadas, sem subscrição");
         else if (pkg.packageType === "ANNUAL" && prod.price && prod.currencyCode) {
           try {
             sub.textContent = L("Soit ", "Ou seja, ") + new Intl.NumberFormat(LANG === "pt" ? "pt-PT" : "fr-FR", { style: "currency", currency: prod.currencyCode }).format(Math.floor(prod.price / 12 * 100) / 100) + L(" par mois", " por mês");

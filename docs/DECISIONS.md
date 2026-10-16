@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-10-16] Pack Soirée : 12 h au lieu de 24 h
+
+- Décision de David, en configurant l'achat intégré `tackle_pack_soiree` dans App Store Connect : le Pack Soirée passe de 24 h à **12 h** illimitées.
+- Appliqué dans le code (`PASS_HOURS = 12`, textes du paywall et commentaires) et dans la fiche App Store Connect (nom d'affichage, description).
+
 ## [2026-10-15] Le porteur du téléphone garde le droit de tackler, sans restriction
 
 - Question ouverte depuis le 25 septembre (voir TODO.md) : l'équipe qui tient le téléphone à un tour donné voit l'écran — donc les indices déjà révélés — et pourrait avoir un avantage d'information par rapport aux autres équipes adverses qui n'ont que ce qui est lu à voix haute, si elle a aussi le droit de tackler.
