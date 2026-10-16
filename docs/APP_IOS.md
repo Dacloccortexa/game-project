@@ -88,14 +88,19 @@ Offrir l'abonnement à certaines personnes : **codes d'offre** Apple (App Store 
 
 ## Envoyer une version sur TestFlight
 
+Décision de David (2026-10-16) : compiler et envoyer via **Xcode Cloud** plutôt qu'Archive/Upload manuel depuis Xcode. Les machines d'Apple compilent avec leur Xcode à jour — ça évite de dépendre pour toujours de la version de Xcode installée sur le Mac de David, qu'Apple relève chaque année (voir plus haut : build obligatoire avec Xcode 26+ depuis le 28 avril 2026).
+
 1. [App Store Connect](https://appstoreconnect.apple.com) → **Apps** → **+** → Nouvelle app : plateforme iOS, nom (TACKLE ou variante si pris), langue française, Bundle ID `com.lafamivy.tackle`, SKU `tackle`.
-2. Dans Xcode : en haut, choisir **Any iOS Device (arm64)** → menu **Product → Archive** → **Distribute App** → **App Store Connect** → **Upload**.
-3. Après le traitement (10 à 30 min), onglet **TestFlight** : ajouter des testeurs internes (jusqu'à 100, membres du compte) ou externes (jusqu'à 10 000 par e-mail ou lien public ; la première version passe une courte relecture Apple). Les testeurs installent l'appli **TestFlight** puis TACKLE.
+2. Dans Xcode (une seule fois, sur le Mac M2) : ouvrir le projet, menu **Product → Xcode Cloud → Create Workflow**. Autoriser Xcode Cloud à accéder au dépôt GitHub `Dacloccortexa/game-project`.
+3. Configurer le workflow : déclencheur sur push vers `main` (ou manuel), action **Archive**, puis distribution **TestFlight (internal testing)**.
+4. Après la compilation dans le cloud d'Apple (visible dans l'onglet **Xcode Cloud** d'App Store Connect), onglet **TestFlight** : ajouter des testeurs internes (jusqu'à 100, membres du compte) ou externes (jusqu'à 10 000 par e-mail ou lien public ; la première version passe une courte relecture Apple). Les testeurs installent l'appli **TestFlight** puis TACKLE.
+5. Gratuit jusqu'à 25 heures de compilation par mois (largement suffisant ici).
 
 ## Sortir une nouvelle version de l'appli
 
-1. `git pull` puis `npm run ios:sync` (reconstruit `www/` et le copie dans le projet iOS).
-2. Dans Xcode, augmenter **Build** (et **Version** pour une version publique), puis **Archive → Upload** comme ci-dessus.
+1. `git pull` puis `npm run ios:sync` (reconstruit `www/` et le copie dans le projet iOS), commit et push sur `main`.
+2. Dans Xcode, augmenter **Build** (et **Version** pour une version publique) dans les réglages du projet, commit et push.
+3. Xcode Cloud détecte le push et compile automatiquement (ou lancer manuellement depuis l'onglet Xcode Cloud d'App Store Connect).
 
 ## Avant la sortie publique sur l'App Store (liste à cocher)
 
