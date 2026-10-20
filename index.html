@@ -3395,9 +3395,9 @@
   // Repli automatique sur mailto: si EmailJS n'est pas configuré ou si l'envoi échoue.
   // Anti-spam : au plus REPORT_MAX_PER_DAY envois par appareil sur 24 h (protège le quota EmailJS gratuit).
   var CONTACT_EMAIL = "contact@lafamivy.com";
-  var EMAILJS_SERVICE_ID = ""; // voir docs/APP_IOS.md
-  var EMAILJS_TEMPLATE_ID = "";
-  var EMAILJS_PUBLIC_KEY = "";
+  var EMAILJS_SERVICE_ID = "service_vdocaok"; // voir docs/APP_IOS.md
+  var EMAILJS_TEMPLATE_ID = "rap03cr";
+  var EMAILJS_PUBLIC_KEY = "DpVFj1wAFa3HjsSIq";
   var REPORT_MAX_PER_DAY = 5;
   var REPORT_LOG_KEY = "tackle_report_log_v1";
 
@@ -3529,7 +3529,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.20-1649";
+  var APP_VERSION = "2026.10.20-1715";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
