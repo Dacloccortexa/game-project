@@ -3492,7 +3492,13 @@
   }
   function sendEmailJS(subject, message) {
     return loadEmailJSSdk().then(function () {
-      return window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { subject: subject, message: message });
+      return window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        subject: subject,
+        message: message,
+        to_email: CONTACT_EMAIL,
+        email: CONTACT_EMAIL,
+        reply_to: CONTACT_EMAIL
+      });
     });
   }
 
@@ -3552,7 +3558,7 @@
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.20-1732";
+  var APP_VERSION = "2026.10.20-1750";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
