@@ -1,5 +1,11 @@
 # DECISIONS.md
 
+## [2026-10-20] Signalement d'erreur : formulaire dans l'app, ouvert à tous, limité anti-spam
+
+- Constat de David en testant sur iPhone : ouvrir l'app Mail pour « Signaler une erreur » est une mauvaise expérience.
+- Décision : remplacer l'ouverture de l'app Mail par un petit formulaire **dans l'app** (texte + bouton Envoyer, via EmailJS, sans backend), rendre l'accès **plus visible** (accueil, menu pause, en plus de la carte et des Réglages).
+- Question soulevée : réserver le signalement aux abonnés ? Tranché **non** — resterait ouvert à tous (la majorité des joueurs sera gratuite, et ce sont eux qui remontent le plus d'erreurs de contenu). À la place : une **limite anti-spam** (ex. un signalement par carte par partie, ou un throttle par appareil) pour protéger le quota gratuit EmailJS (200 emails/mois).
+
 ## [2026-10-16] Pack Soirée : 12 h au lieu de 24 h
 
 - Décision de David, en configurant l'achat intégré `tackle_pack_soiree` dans App Store Connect : le Pack Soirée passe de 24 h à **12 h** illimitées.

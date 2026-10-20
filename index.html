@@ -1526,6 +1526,19 @@
     background: #06170f;
   }
 
+  /* ---------- Formulaire de signalement / contact, dans l'app (DECISIONS.md, 2026-10-20) ---------- */
+  .report-dialog { z-index: 60; }
+  .report-box { width: min(420px, 100%); max-height: 86vh; overflow-y: auto; }
+  .report-context { margin: 0; padding: 10px 12px; border-radius: 10px; background: rgba(4,31,23,.7); font-size: 12px; line-height: 1.5; color: var(--chalk-dim); white-space: pre-wrap; max-height: 110px; overflow-y: auto; }
+  textarea#report-input {
+    width: 100%; min-height: 110px; resize: vertical;
+    background: var(--pitch); border: 1px solid rgba(245,243,236,0.2); border-radius: 8px;
+    padding: 12px 14px; color: var(--chalk); font-size: 16px; font-family: inherit;
+  }
+  textarea#report-input::placeholder { color: rgba(245,243,236,.49); }
+  textarea#report-input:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+  .report-box .tr-btn-primary:disabled { opacity: .55; }
+
 
   /* ---------- Fin de partie : vainqueur, classement, partage (DECISIONS.md, 2026-10-03) ---------- */
   #screen-final:not(.hidden-screen) { display: flex; flex-direction: column; gap: 14px; padding-bottom: 24px; }
@@ -2083,7 +2096,7 @@
       </div>
     </div>
     <div class="journal-link-box">
-      <button type="button" class="text-btn" id="btn-contact">Nous contacter</button>
+      <button type="button" class="text-btn" id="btn-contact">Signaler un problème</button>
       <p class="journal-note" id="contact-status" role="status" aria-live="polite"></p>
     </div>
     <div class="cta-spacer"></div>
@@ -2663,6 +2676,21 @@
         <button type="button" class="tr-btn-secondary" id="btn-quit-cancel">Continuer</button>
         <button type="button" class="tr-btn-primary" id="btn-quit-confirm">Quitter</button>
       </div>
+      <button type="button" class="text-btn" id="btn-quit-report">Signaler un problème</button>
+    </div>
+  </div>
+
+  <!-- Signaler un problème / Nous contacter : formulaire dans l'app, sans quitter TACKLE (DECISIONS.md, 2026-10-20) -->
+  <div class="quit-dialog report-dialog hidden-screen" id="report-dialog" role="dialog" aria-modal="true" aria-labelledby="report-dialog-title">
+    <div class="quit-box report-box">
+      <h3 class="tr-panel-title" id="report-dialog-title">Signaler un problème</h3>
+      <p class="report-context hidden-screen" id="report-context"></p>
+      <textarea id="report-input" placeholder="Qu'est-ce qui ne va pas ?" maxlength="1000"></textarea>
+      <p class="journal-note" id="report-dialog-status" role="status" aria-live="polite"></p>
+      <div class="tr-confirm-actions">
+        <button type="button" class="tr-btn-secondary" id="btn-report-dialog-cancel">Annuler</button>
+        <button type="button" class="tr-btn-primary" id="btn-report-dialog-send">Envoyer</button>
+      </div>
     </div>
   </div>
 
@@ -2869,7 +2897,9 @@
     "Événements du match": "Acontecimentos do jogo",
     "Indices du match": "Pistas do jogo",
     "Signaler une erreur sur cette question": "Reportar um erro nesta pergunta",
-    "Nous contacter": "Contactar-nos"
+    "Signaler un problème": "Reportar um problema",
+    "Qu'est-ce qui ne va pas ?": "O que é que não está bem?",
+    "Envoyer": "Enviar"
     };
   (function translateStatic() {
     if (LANG !== "pt" || !document.createTreeWalker) return;
@@ -3360,10 +3390,17 @@
   // ---------- Journal de partie (pour les parties test) ----------
   // Tout reste sur le téléphone ; rien n'est envoyé sans un appui sur « Envoyer le journal ».
   // Chaque fonction est protégée : le journal ne doit jamais bloquer une partie.
-  // ---------- Signaler une erreur / Nous contacter (décision de David, 2026-10-06) ----------
-  // Pas de serveur : on ouvre l'appli mail du téléphone avec un message prérempli (carte,
-  // réponse, version) vers contact@lafamivy.com. Rien n'est envoyé sans que le joueur appuie sur Envoyer.
+  // ---------- Signaler un problème / Nous contacter (décision de David, 2026-10-20) ----------
+  // Formulaire dans l'app (pas d'app Mail à ouvrir), envoyé via EmailJS (pas de serveur à nous).
+  // Repli automatique sur mailto: si EmailJS n'est pas configuré ou si l'envoi échoue.
+  // Anti-spam : au plus REPORT_MAX_PER_DAY envois par appareil sur 24 h (protège le quota EmailJS gratuit).
   var CONTACT_EMAIL = "contact@lafamivy.com";
+  var EMAILJS_SERVICE_ID = ""; // voir docs/APP_IOS.md
+  var EMAILJS_TEMPLATE_ID = "";
+  var EMAILJS_PUBLIC_KEY = "";
+  var REPORT_MAX_PER_DAY = 5;
+  var REPORT_LOG_KEY = "tackle_report_log_v1";
+
   function openMail(subject, body) {
     var url = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     try {
@@ -3380,6 +3417,7 @@
   }
   function reportCardDetails() {
     var g = state.currentRoundMinigame;
+    if (!g) return "";
     var lines = [L("Défi : ", "Desafio: ") + (GAME_LABELS[g] || g)];
     if (g === "transfert" || g === "quisuisje") {
       var c = state.currentCard || {};
@@ -3406,23 +3444,92 @@
     if (typed.length) lines.push(L("Réponses données :", "Respostas dadas:") + "\n" + typed.map(function (t) { return "- " + t; }).join("\n"));
     return lines.join("\n");
   }
+
+  // Combien d'envois ce téléphone a fait dans les dernières 24 h.
+  function reportCountToday() {
+    try {
+      var log = JSON.parse(localStorage.getItem(REPORT_LOG_KEY) || "[]");
+      var cutoff = Date.now() - 86400000;
+      log = log.filter(function (t) { return t > cutoff; });
+      localStorage.setItem(REPORT_LOG_KEY, JSON.stringify(log));
+      return log.length;
+    } catch (e) { return 0; }
+  }
+  function reportLogSend() {
+    try {
+      var log = JSON.parse(localStorage.getItem(REPORT_LOG_KEY) || "[]");
+      log.push(Date.now());
+      localStorage.setItem(REPORT_LOG_KEY, JSON.stringify(log));
+    } catch (e) {}
+  }
+
+  function sendEmailJS(subject, message) {
+    return fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        service_id: EMAILJS_SERVICE_ID,
+        template_id: EMAILJS_TEMPLATE_ID,
+        user_id: EMAILJS_PUBLIC_KEY,
+        template_params: { subject: subject, message: message, to_email: CONTACT_EMAIL }
+      })
+    }).then(function (r) { if (!r.ok) throw new Error("emailjs " + r.status); });
+  }
+
+  // Fenêtre « Signaler un problème » : un seul formulaire pour la carte, les Réglages et Quitter.
+  var reportCtx = { subject: "TACKLE", context: "" };
+  function openReportDialog(subject, context) {
+    reportCtx = { subject: subject, context: context || "" };
+    el("report-input").value = "";
+    el("report-dialog-status").textContent = "";
+    var ctxEl = el("report-context");
+    if (context) { ctxEl.textContent = context; show("report-context"); } else { hide("report-context"); }
+    show("report-dialog");
+    el("report-input").focus();
+  }
+  function closeReportDialog() { hide("report-dialog"); }
+  el("btn-report-dialog-cancel").addEventListener("click", closeReportDialog);
+  el("btn-report-dialog-send").addEventListener("click", function () {
+    var text = el("report-input").value.trim();
+    var statusEl = el("report-dialog-status");
+    if (!text) { statusEl.textContent = L("Écris d'abord ce qui ne va pas.", "Escreve primeiro o que não está bem."); return; }
+    if (reportCountToday() >= REPORT_MAX_PER_DAY) {
+      statusEl.textContent = L("Trop de signalements envoyés aujourd'hui depuis cet appareil. Réessaie demain, ou écris à ", "Demasiados envios hoje a partir deste aparelho. Tenta amanhã, ou escreve para ") + CONTACT_EMAIL;
+      return;
+    }
+    var btn = el("btn-report-dialog-send");
+    btn.disabled = true;
+    statusEl.textContent = L("Envoi…", "A enviar…");
+    var body = text + "\n\n---\n" + (reportCtx.context ? reportCtx.context + "\n" : "") + mailFooter();
+    var useEmailJS = !!(EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY);
+    var send = useEmailJS ? sendEmailJS(reportCtx.subject, body) : Promise.reject(new Error("emailjs not configured"));
+    send.then(function () {
+      reportLogSend();
+      statusEl.textContent = L("Envoyé, merci !", "Enviado, obrigado!");
+      setTimeout(closeReportDialog, 1200);
+    }).catch(function () {
+      // Repli : ouvre l'app Mail avec le message prérempli, rien n'est perdu.
+      openMail(reportCtx.subject, body);
+      statusEl.textContent = L("Ton appli mail s'ouvre avec le message prérempli. Rien ne s'ouvre ? Écris à ", "A tua app de e-mail abre com a mensagem incluída. Nada abre? Escreve para ") + CONTACT_EMAIL;
+    }).finally(function () { btn.disabled = false; });
+  });
+
   el("btn-report").addEventListener("click", function () {
     tdSignal("Card.reported", { game: state.currentRoundMinigame });
     var c = state.currentRoundMinigame === "lematch" ? state.currentLmCard : state.currentCard;
     var id = (state.currentRoundMinigame === "transfert" || state.currentRoundMinigame === "quisuisje" || state.currentRoundMinigame === "lematch") && c && c.id ? " " + c.id : "";
-    openMail(L("TACKLE · Erreur sur une question", "TACKLE · Erro numa pergunta") + id,
-      L("Qu'est-ce qui ne va pas ? (réponse refusée, fait faux, faute…)", "O que está errado? (resposta recusada, facto errado, gralha…)") +
-      "\n\n\n---\n" + reportCardDetails() + "\n" + mailFooter());
-    el("report-status").textContent = L("Ton appli mail s'ouvre avec la question jointe. Rien ne s'ouvre ? Écris à ", "A tua app de e-mail abre com a pergunta incluída. Nada abre? Escreve para ") + CONTACT_EMAIL;
+    openReportDialog(L("TACKLE · Erreur sur une question", "TACKLE · Erro numa pergunta") + id, reportCardDetails());
   });
   el("btn-contact").addEventListener("click", function () {
-    openMail("TACKLE", "\n\n\n---\n" + mailFooter());
-    el("contact-status").textContent = CONTACT_EMAIL;
+    openReportDialog("TACKLE", reportCardDetails());
+  });
+  el("btn-quit-report").addEventListener("click", function () {
+    openReportDialog("TACKLE", reportCardDetails());
   });
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.19-1727";
+  var APP_VERSION = "2026.10.20-1649";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {

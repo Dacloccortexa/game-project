@@ -38,6 +38,18 @@ Décision de David (2026-10-12) : savoir combien de parties sont jouées et à q
 
 Événements envoyés : `App.launched` (premier lancement ou non), `Game.started` (équipes, manches, défis, accès illimité ou non), `Game.completed` / `Game.abandoned` (durée en minutes dans la valeur numérique), `Card.ended` (défi, carte, issue `trouve` / `tackle_reussi` / `pas_trouve` / `encaisse` / `perdu`, indice atteint en valeur numérique, mauvaises réponses, Tackles, passes), `Question.answered` (Plus ou Moins et Vrai ou Faux : une par comparaison ou affirmation tranchée — référence de l'affirmation ou paire de joueurs, catégorie, `juste` / `faux`, par l'équipe qui a la main ou par un Tackle adverse ; sert à noter la difficulté de chaque question), `Paywall.shown` (raison), `Card.reported`. Aucun nom ni texte tapé. Le site web envoie en **mode test** : le tableau de bord normal ne montre que l'appli ; activer « Test Mode » pour voir les testeurs du site. Les installations se lisent dans App Store Connect, les ventes dans RevenueCat.
 
+## Signaler un problème (EmailJS)
+
+Décision de David (2026-10-20) : « Signaler un problème » (carte, Réglages, menu Quitter) ouvre un **formulaire dans l'app** (texte + bouton Envoyer, sans jamais quitter TACKLE), envoyé via [EmailJS](https://www.emailjs.com) (gratuit, 200 emails/mois, pas de serveur à gérer) vers `contact@lafamivy.com`. Ouvert à tous les joueurs (gratuits compris), avec une limite anti-spam de **5 envois par jour et par appareil** (`REPORT_MAX_PER_DAY` dans `index.html`). Tant que les identifiants EmailJS sont vides, l'app se rabat automatiquement sur l'ouverture de l'app Mail (ancien comportement) — rien n'est perdu en attendant.
+
+À faire par David :
+1. Créer un compte gratuit sur [emailjs.com](https://www.emailjs.com).
+2. **Email Services** → **Add New Service** → connecter Gmail (ou le service derrière `contact@lafamivy.com`). Noter le **Service ID**.
+3. **Email Templates** → créer un template avec les variables `{{subject}}`, `{{message}}` et `{{to_email}}`. Noter le **Template ID**.
+4. **Account → General** → noter la **Public Key**.
+5. Dans les réglages du service (ou du compte) : vérifier/configurer les **origines autorisées** (Allowed origins) pour accepter les requêtes venant de l'app (`capacitor://localhost`) et du site (`https://dacloccortexa.github.io`) — sinon EmailJS refusera les envois.
+6. Donner Service ID, Template ID et Public Key à Claude, qui les colle dans `EMAILJS_SERVICE_ID`, `EMAILJS_TEMPLATE_ID` et `EMAILJS_PUBLIC_KEY` (`index.html`).
+
 ## Langues
 
 Français et portugais (Portugal). L'appli prend la langue du téléphone ; on la change dans **Réglages** (roue dentée de l'accueil). Questions portugaises : `src/data/pt/`, régénérées avec `python3 tools/translate_pt.py` après chaque ajout de cartes françaises (le script refuse de laisser du français). Voir `docs/DECISIONS.md` (2026-10-02).
