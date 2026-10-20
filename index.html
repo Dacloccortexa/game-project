@@ -229,6 +229,9 @@
     cursor: pointer;
     padding: 6px;
   }
+  button.text-btn.report-link { display: inline-flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; }
+  button.text-btn.report-link svg { flex: none; }
+  .home-report-link { display: flex; width: fit-content; margin: 14px auto 0; color: var(--chalk-dim); font-size: 13px; }
 
   .error-msg {
     color: var(--red);
@@ -1509,7 +1512,12 @@
   #next-card-zone .tr-btn-primary { margin-top: 2px; }
   button.text-btn.solo-pass { display: block; margin: 8px auto 0; min-height: 44px; font-size: 15px; color: var(--chalk); }
   button.text-btn.solo-pass.hidden-screen { display: none; }
-  #next-card-zone .report-btn { display: block; margin: 10px auto 0; min-height: 44px; font-size: 13px; }
+  #next-card-zone .report-btn {
+    display: flex; width: fit-content; align-items: center; justify-content: center; gap: 6px;
+    margin: 12px auto 0; min-height: 44px; padding: 8px 16px; font-size: 14px; font-weight: 600;
+    color: var(--gold); text-decoration: none;
+    border: 1.5px solid var(--gold-ring); border-radius: 999px; background: rgba(242,191,84,.08);
+  }
   #feedback-zone:empty { display: none; }
 
   .quit-dialog {
@@ -2068,6 +2076,7 @@
       <button type="button" class="home-btn" id="btn-home-shop">Boutique</button>
       <button type="button" class="home-btn" id="btn-home-rules">Règles</button>
     </div>
+    <button type="button" class="text-btn report-link home-report-link" id="btn-home-report"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22V3"/></svg>Signaler un problème</button>
     <div class="cta-spacer"></div>
   </section>
 
@@ -2096,7 +2105,7 @@
       </div>
     </div>
     <div class="journal-link-box">
-      <button type="button" class="text-btn" id="btn-contact">Signaler un problème</button>
+      <button type="button" class="text-btn report-link" id="btn-contact"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22V3"/></svg>Signaler un problème</button>
       <p class="journal-note" id="contact-status" role="status" aria-live="polite"></p>
     </div>
     <div class="cta-spacer"></div>
@@ -2610,7 +2619,7 @@
 
     <div class="hidden-screen" id="next-card-zone">
       <button type="button" class="tr-btn-primary" id="btn-next-card">Suivant</button>
-      <button type="button" class="text-btn report-btn" id="btn-report">Signaler une erreur sur cette question</button>
+      <button type="button" class="text-btn report-btn" id="btn-report"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22V3"/></svg>Signaler une erreur sur cette question</button>
       <p class="journal-note" id="report-status" role="status" aria-live="polite"></p>
     </div>
 
@@ -2676,7 +2685,7 @@
         <button type="button" class="tr-btn-secondary" id="btn-quit-cancel">Continuer</button>
         <button type="button" class="tr-btn-primary" id="btn-quit-confirm">Quitter</button>
       </div>
-      <button type="button" class="text-btn" id="btn-quit-report">Signaler un problème</button>
+      <button type="button" class="text-btn report-link" id="btn-quit-report"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22V3"/></svg>Signaler un problème</button>
     </div>
   </div>
 
@@ -3526,10 +3535,13 @@
   el("btn-quit-report").addEventListener("click", function () {
     openReportDialog("TACKLE", reportCardDetails());
   });
+  el("btn-home-report").addEventListener("click", function () {
+    openReportDialog("TACKLE", "");
+  });
 
   // ---------- Version et mise à jour ----------
   // APP_VERSION doit être identique à version.json : lancer tools/bump-version.sh avant chaque envoi.
-  var APP_VERSION = "2026.10.20-1715";
+  var APP_VERSION = "2026.10.20-1726";
   var updateVersion = null;     // version plus récente trouvée sur le serveur
   var lastUpdateCheck = 0;
   function showUpdateBannerIfIdle() {
