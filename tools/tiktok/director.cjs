@@ -71,7 +71,8 @@ body.ad-hide-clues #clue-list, body.ad-hide-clues #qsj-clue-list { opacity: 0 !i
 `;
 
 (async () => {
-  const b = await chromium.launch();
+  const execPath = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
+  const b = await chromium.launch(fs.existsSync(execPath) ? { executablePath: execPath } : {});
   const ctx = await b.newContext({ viewport: { width: 360, height: 640 }, deviceScaleFactor: 3 });
   const cards = JSON.parse(fs.readFileSync(ROOT + '/src/data/' + G.file, 'utf8'));
   const card = cards.cards.find(c => c.id === script.card);
