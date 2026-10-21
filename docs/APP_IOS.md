@@ -28,7 +28,7 @@ Ces fonctions natives comptent aussi pour la relecture Apple (règle 4.2 « fonc
 - Nom sous l'icône : **TACKLE**. iPhone uniquement, portrait uniquement, iOS 15 minimum.
 - Icône (logo or sur fond noir) et écran de lancement générés depuis `app-resources/` : `npm run icons`. L'écran de lancement est **l'accueil sans ses boutons** (stade + logo au même endroit), effacé en fondu dès que l'accueil est prêt (aucune attente artificielle). Si l'accueil change : `node tools/make-splash.cjs` puis `npm run icons`.
 - `ITSAppUsesNonExemptEncryption = NO` (pas de chiffrement propre : évite la question d'export à chaque envoi).
-- Politique de confidentialité : [`privacy.html`](../privacy.html), en ligne à `https://dacloccortexa.github.io/game-project/privacy.html` (adresse de contact à compléter).
+- Politique de confidentialité : [`privacy.html`](../privacy.html), en ligne à `https://lafamivy.com/privacy.html` (adresse de contact à compléter).
 
 ## Mesure d'usage anonyme (TelemetryDeck)
 
