@@ -64,7 +64,7 @@ FAIT POUR VOS SOIRÉES
 • En français et en portugais
 
 GRATUIT POUR COMMENCER
-2 parties gratuites de 5 manches par jour. Envie de prolonger ? Le Pack soirée débloque tout pendant 24 heures. L'abonnement annuel débloque tout, toute l'année ; il se renouvelle automatiquement et s'annule à tout moment dans les réglages de votre compte Apple.
+2 parties gratuites de 5 manches par jour. Envie de prolonger ? Le Pack soirée débloque tout pendant 12 heures. L'abonnement annuel débloque tout, toute l'année ; il se renouvelle automatiquement et s'annule à tout moment dans les réglages de votre compte Apple.
 
 Conditions d'utilisation : https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Confidentialité : https://dacloccortexa.github.io/game-project/privacy.html
@@ -114,7 +114,7 @@ FEITO PARA AS VOSSAS NOITES
 • Em português e em francês
 
 GRÁTIS PARA COMEÇAR
-2 jogos grátis de 5 rondas por dia. Querem mais? O Pack Noitada desbloqueia tudo durante 24 horas. A assinatura anual desbloqueia tudo durante o ano inteiro; renova-se automaticamente e pode ser cancelada a qualquer momento nas definições da vossa conta Apple.
+2 jogos grátis de 5 rondas por dia. Querem mais? O Pack Noitada desbloqueia tudo durante 12 horas. A assinatura anual desbloqueia tudo durante o ano inteiro; renova-se automaticamente e pode ser cancelada a qualquer momento nas definições da vossa conta Apple.
 
 Termos de utilização: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Privacidade: https://dacloccortexa.github.io/game-project/privacy.html
