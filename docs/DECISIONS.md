@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-10-21] Limite gratuite : pas de plafond d'équipes pour l'instant
+
+- Constat : une manche fait jouer **une carte par équipe** (`GAME_DESIGN.md`), donc le volume de cartes gratuites dépend du nombre d'équipes — 2 parties × 5 manches à 4 équipes = jusqu'à 40 cartes/jour, pas 10. Le palier gratuit ne limite aujourd'hui que les manches (5 max) et les parties par jour (2), jamais le nombre d'équipes (1 à 4 libres).
+- Décision de David : on laisse ainsi pour le lancement — privilégier le volume/la découverte du jeu. À revoir (plafonner les équipes en gratuit, par ex. 2 max) dans une prochaine version si ça entame trop la conversion vers le Pack Soirée / l'abonnement.
+
 ## [2026-10-20] Signalement d'erreur : formulaire dans l'app, ouvert à tous, limité anti-spam
 
 - Constat de David en testant sur iPhone : ouvrir l'app Mail pour « Signaler une erreur » est une mauvaise expérience.
