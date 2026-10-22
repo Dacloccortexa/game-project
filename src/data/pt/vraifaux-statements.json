@@ -5,7 +5,8 @@
   "meta": {
     "controle_origine": "2 000 énoncés uniques, 1 000 par vérité, catégories équilibrées, sources Wikipédia conservées par énoncé. Le groupe_exclusif empêche de réunir sur une même carte deux énoncés sur le même fait. Vérification automatique des faits extraits ; relecture éditoriale conseillée avant publication.",
     "regle_origine": "Utiliser uniquement les champs des fiches marqués ready_for_questions=true. Les villes de naissance non concordantes ou non comparables entre les pages françaises et anglaises sont exclues. Les affirmations sur les clubs comparent seulement l'ordre de deux passages prouvés ; aucune absence de club n'est traitée comme une preuve de fausseté.",
-    "lot_2026_10_08": "598 affirmations supplémentaires équilibrées (299 vraies, 299 fausses) : ordre confirmé de deux clubs, comparaison d’âge ou de taille ; 100 nouveaux joueurs, révisions Wikipédia indiquées par affirmation."
+    "lot_2026_10_08": "598 affirmations supplémentaires équilibrées (299 vraies, 299 fausses) : ordre confirmé de deux clubs, comparaison d’âge ou de taille ; 100 nouveaux joueurs, révisions Wikipédia indiquées par affirmation.",
+    "lot_2026_10_22": "5 affirmations sur l'ordre de deux clubs : 2 vraies, 3 fausses ; sources UEFA, chronologies non ambiguës."
   },
   "statements": [
     {
@@ -60651,6 +60652,163 @@
       "verified_date": "2026-10-08",
       "notes": "Tailles des deux fiches Wikipédia ; écart d'au moins cinq centimètres.",
       "correction": "Na verdade, Matthijs de Ligt é mais alto do que Gabriel Jesus."
+    },
+    {
+      "id": "lf-f-1300",
+      "affirmation": "Em 2013, David Beckham saiu do PSG para o LA Galaxy.",
+      "est_vraie": false,
+      "categorie": "ordre_clubs",
+      "joueurs": [
+        "David Beckham"
+      ],
+      "groupe_exclusif": "ordre_clubs:David Beckham",
+      "valeur_affirmee": [
+        "PSG",
+        "LA Galaxy"
+      ],
+      "valeur_source": {
+        "LA Galaxy": [
+          2007,
+          2012
+        ],
+        "PSG": [
+          2013,
+          2013
+        ]
+      },
+      "sources": [
+        "https://www.uefa.com/uefachampionsleague/news/0205-0ea577193698-ba3ac485bab7-1000--beckham-pens-five-month-deal-with-psg/"
+      ],
+      "verification_status": "vérifié",
+      "verified_date": "2026-10-22",
+      "notes": "Transfert daté et confirmé par l'UEFA ; la formulation précise l'année pour exclure toute ambiguïté liée à un éventuel retour ultérieur.",
+      "correction": "Na verdade, David Beckham jogou no LA Galaxy antes do PSG."
+    },
+    {
+      "id": "lf-v-1301",
+      "affirmation": "Em 2007, Diego Forlán saiu do Villarreal para o Atlético de Madrid.",
+      "est_vraie": true,
+      "categorie": "ordre_clubs",
+      "joueurs": [
+        "Diego Forlán"
+      ],
+      "groupe_exclusif": "ordre_clubs:Diego Forlán",
+      "valeur_affirmee": [
+        "Villarreal",
+        "Atlético Madrid"
+      ],
+      "valeur_source": {
+        "Villarreal": [
+          2004,
+          2007
+        ],
+        "Atlético Madrid": [
+          2007,
+          2011
+        ]
+      },
+      "sources": [
+        "https://www.uefa.com/news-media/news/0254-0d7baa1d0ee3-c01037697e50-1000--forlan-accepts-atletico-offer/",
+        "https://www.uefa.com/uefachampionsleague/news/01f4-0ea2a098b10d-8d04252d7dfa-1000--inter-complete-deals-for-forlan-poli-and-zarate/"
+      ],
+      "verification_status": "vérifié",
+      "verified_date": "2026-10-22",
+      "notes": "Transfert daté et confirmé par l'UEFA ; la formulation précise l'année pour exclure toute ambiguïté liée à un éventuel retour ultérieur.",
+      "correction": ""
+    },
+    {
+      "id": "lf-f-1302",
+      "affirmation": "Em 2013, Edinson Cavani saiu do PSG para o Nápoles.",
+      "est_vraie": false,
+      "categorie": "ordre_clubs",
+      "joueurs": [
+        "Edinson Cavani"
+      ],
+      "groupe_exclusif": "ordre_clubs:Edinson Cavani",
+      "valeur_affirmee": [
+        "PSG",
+        "Naples"
+      ],
+      "valeur_source": {
+        "Naples": [
+          2010,
+          2013
+        ],
+        "PSG": [
+          2013,
+          2020
+        ]
+      },
+      "sources": [
+        "https://www.uefa.com/uefachampionsleague/news/020b-0e855693399e-c897bc2da9b5-1000--psg-dig-deep-to-lure-cavani-from-napoli/"
+      ],
+      "verification_status": "vérifié",
+      "verified_date": "2026-10-22",
+      "notes": "Transfert daté et confirmé par l'UEFA ; la formulation précise l'année pour exclure toute ambiguïté liée à un éventuel retour ultérieur.",
+      "correction": "Na verdade, Edinson Cavani jogou no Nápoles antes do PSG."
+    },
+    {
+      "id": "lf-f-1303",
+      "affirmation": "Em 2014, Ángel Di María saiu do Manchester United para o Real Madrid.",
+      "est_vraie": false,
+      "categorie": "ordre_clubs",
+      "joueurs": [
+        "Ángel Di María"
+      ],
+      "groupe_exclusif": "ordre_clubs:Ángel Di María",
+      "valeur_affirmee": [
+        "Manchester United",
+        "Real Madrid"
+      ],
+      "valeur_source": {
+        "Real Madrid": [
+          2010,
+          2014
+        ],
+        "Manchester United": [
+          2014,
+          2015
+        ]
+      },
+      "sources": [
+        "https://www.uefa.com/news-media/news/0218-0e8bdb8b2163-245d525f47a5-1000--united-bound-di-maria-joins-record-breakers/"
+      ],
+      "verification_status": "vérifié",
+      "verified_date": "2026-10-22",
+      "notes": "Transfert daté et confirmé par l'UEFA ; la formulation précise l'année pour exclure toute ambiguïté liée à un éventuel retour ultérieur.",
+      "correction": "Na verdade, Ángel Di María jogou no Real Madrid antes do Manchester United."
+    },
+    {
+      "id": "lf-v-1304",
+      "affirmation": "Em 2007, Arjen Robben saiu do Chelsea para o Real Madrid.",
+      "est_vraie": true,
+      "categorie": "ordre_clubs",
+      "joueurs": [
+        "Arjen Robben"
+      ],
+      "groupe_exclusif": "ordre_clubs:Arjen Robben",
+      "valeur_affirmee": [
+        "Chelsea",
+        "Real Madrid"
+      ],
+      "valeur_source": {
+        "Chelsea": [
+          2004,
+          2007
+        ],
+        "Real Madrid": [
+          2007,
+          2009
+        ]
+      },
+      "sources": [
+        "https://www.uefa.com/uefachampionsleague/news/0254-0d7bab7a7dcb-3d2b2ab36a21-1000--robben-and-heinze-set-for-madrid/",
+        "https://www.uefa.com/uefachampionsleague/news/01dc-0e72b86ae652-87d56fdcf27f-1000--robben-wings-his-way-to-bayern/"
+      ],
+      "verification_status": "vérifié",
+      "verified_date": "2026-10-22",
+      "notes": "Transfert daté et confirmé par l'UEFA ; la formulation précise l'année pour exclure toute ambiguïté liée à un éventuel retour ultérieur.",
+      "correction": ""
     }
   ],
   "last_extended": "2026-10-08"

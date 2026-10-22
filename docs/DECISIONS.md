@@ -1,5 +1,10 @@
 # DECISIONS.md
 
+## [2026-10-22] Lot quotidien : cinq transferts datés dans Vrai ou Faux
+
+- Ajouter cinq affirmations Vrai ou Faux sur des transferts historiques précis (2007, 2013 et 2014), avec deux réponses vraies et trois fausses. La formulation datée écarte l'ambiguïté d'un éventuel retour ultérieur dans un club.
+- Les faits et les corrections ont été vérifiés par Codex dans les comptes rendus de transfert de l'UEFA ; la vérification du fonctionnement dans l'application et l'intégration restent à Claude. Détails et sources : [QUESTIONS_2026-10-22.md](QUESTIONS_2026-10-22.md).
+
 ## [2026-10-21] Limite gratuite : pas de plafond d'équipes pour l'instant
 
 - Constat : une manche fait jouer **une carte par équipe** (`GAME_DESIGN.md`), donc le volume de cartes gratuites dépend du nombre d'équipes — 2 parties × 5 manches à 4 équipes = jusqu'à 40 cartes/jour, pas 10. Le palier gratuit ne limite aujourd'hui que les manches (5 max) et les parties par jour (2), jamais le nombre d'équipes (1 à 4 libres).
