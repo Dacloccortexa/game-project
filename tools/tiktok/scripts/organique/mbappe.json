@@ -1,0 +1,88 @@
+{
+ "card": "t004",
+ "steps": [
+  {
+   "do": "hold",
+   "s": 1.5,
+   "caption": "Trouve le joueur <b>avant eux</b> 👀",
+   "sound": "kickoff",
+   "hideClues": true
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "J'ai joué à <b>Monaco</b>",
+   "hideClues": false
+  },
+  {
+   "do": "answer",
+   "text": "Henry",
+   "bubble": "<small>🦁 Les Lions</small>« Henry ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "<i>❌ Henry ?!</i>",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "J'ai joué au <b>PSG</b>"
+  },
+  {
+   "do": "answer",
+   "text": "Neymar",
+   "bubble": "<small>🦁 Les Lions</small>« Neymar ! »",
+   "think": 0.6
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "<i>❌ NEYMAR ?!</i> Il a joué avec lui 😩",
+   "sound": "wrong",
+   "flash": "#e2483c",
+   "flashMax": 0.35
+  },
+  {
+   "do": "cutTo"
+  },
+  {
+   "do": "count",
+   "s": 3,
+   "caption": "J'ai joué au <b>Real Madrid</b>"
+  },
+  {
+   "do": "hold",
+   "s": 1.0,
+   "caption": "Les Lions sèchent… 😶"
+  },
+  {
+   "do": "skipTo",
+   "ms": 25300
+  },
+  {
+   "do": "hold",
+   "s": 1.6,
+   "caption": "<i>TACKLE !</i> Les Renards tentent leur chance… 🦊",
+   "sound": "tackle",
+   "flash": "#e2483c",
+   "flashMax": 0.6
+  },
+  {
+   "do": "end",
+   "s": 3.2,
+   "q": "Tu penses que<br>c'est <b>qui</b> ? 👇",
+   "tag": "<b style='font-size:24px;color:#f5c542'>Réponse en commentaire</b><br><span style='font-size:14px;opacity:.8'>Le quiz foot entre potes</span>",
+   "small": true,
+   "sound": "end",
+   "cta": "Télécharge TACKLE<br>sur l'App&nbsp;Store"
+  }
+ ]
+}
